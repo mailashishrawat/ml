@@ -1,0 +1,19 @@
+category,sub_category,textIPC Section
+MUR,1,Property/Land Disputes,
+MUR,2,Family Dispute,
+MUR,3,Petty Quarrels,
+MUR,4,Money Disputes,
+MUR,5,Personal Vendetta,
+MUR,6,Love Affairs,
+MUR,7,Casteism,
+MUR,8,Unknown/other,
+CAW,1,Murder with Rape, 
+CAW,2,Dowry Deaths(Sec. 3048),3048
+CAW,3,Suicide(sec 305/306),305/306
+CAW,4,Kidnapping(All)
+CAW,5,Acid Attack(Sec. 326A IPC),326A
+CAW,6,Cruelty by Husband/in-laws((Sec.498 A IPC)),498A
+CAW,7,Rape only(Sec. 376 or 511 IPC),376/511
+CAW,8,Assault on Women with Intent to Outrage her Modesty (Sec. 354 IPC),354
+CAW,9,Cyber Crimes against Women,
+CAW,10,Protection of Children from Sexual Offences Act,
