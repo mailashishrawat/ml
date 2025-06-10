@@ -1,0 +1,40 @@
+2024-08-14 15:53:25,296 INFO    MainThread:1599 [wandb_setup.py:_flush():76] Current SDK version is 0.17.6
+2024-08-14 15:53:25,297 INFO    MainThread:1599 [wandb_setup.py:_flush():76] Configure stats pid to 1599
+2024-08-14 15:53:25,297 INFO    MainThread:1599 [wandb_setup.py:_flush():76] Loading settings from /Users/i038849/.config/wandb/settings
+2024-08-14 15:53:25,297 INFO    MainThread:1599 [wandb_setup.py:_flush():76] Loading settings from /Users/i038849/Documents/Ashish/github/iimb/ml/code/wandb/settings
+2024-08-14 15:53:25,297 INFO    MainThread:1599 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-08-14 15:53:25,297 INFO    MainThread:1599 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-08-14 15:53:25,297 INFO    MainThread:1599 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-08-14 15:53:25,297 INFO    MainThread:1599 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-08-14 15:53:25,297 INFO    MainThread:1599 [wandb_init.py:_log_setup():521] Logging user logs to /Users/i038849/Documents/Ashish/github/iimb/ml/code/wandb/run-20240814_155325-5ziujuja/logs/debug.log
+2024-08-14 15:53:25,297 INFO    MainThread:1599 [wandb_init.py:_log_setup():522] Logging internal logs to /Users/i038849/Documents/Ashish/github/iimb/ml/code/wandb/run-20240814_155325-5ziujuja/logs/debug-internal.log
+2024-08-14 15:53:25,297 INFO    MainThread:1599 [wandb_init.py:init():559] calling init triggers
+2024-08-14 15:53:25,297 INFO    MainThread:1599 [wandb_init.py:init():566] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.02, 'architecture': 'CNN', 'dataset': 'CIFAR-100', 'epochs': 10}
+2024-08-14 15:53:25,297 INFO    MainThread:1599 [wandb_init.py:init():584] re-initializing run, found existing run on stack: rogiuuqu
+2024-08-14 15:53:25,298 INFO    MainThread:1599 [wandb_run.py:_finish():2110] finishing run mailashishrawat-indian-institute-of-management-bangalore/my-carprice-prediction/rogiuuqu
+2024-08-14 15:53:25,299 INFO    MainThread:1599 [jupyter.py:save_history():444] not saving jupyter history
+2024-08-14 15:53:25,299 INFO    MainThread:1599 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-08-14 15:53:25,299 INFO    MainThread:1599 [wandb_init.py:_jupyter_teardown():449] cleaning up jupyter logic
+2024-08-14 15:53:25,299 INFO    MainThread:1599 [wandb_run.py:_atexit_cleanup():2377] got exitcode: 0
+2024-08-14 15:53:25,300 INFO    MainThread:1599 [wandb_run.py:_restore():2355] restore
+2024-08-14 15:53:25,300 INFO    MainThread:1599 [wandb_run.py:_restore():2361] restore done
+2024-08-14 15:53:30,311 INFO    MainThread:1599 [wandb_run.py:_footer_history_summary_info():4035] rendering history
+2024-08-14 15:53:30,312 INFO    MainThread:1599 [wandb_run.py:_footer_history_summary_info():4067] rendering summary
+2024-08-14 15:53:30,321 INFO    MainThread:1599 [wandb_run.py:_footer_sync_info():3994] logging synced files
+2024-08-14 15:53:30,579 INFO    MainThread:1599 [wandb_init.py:init():609] starting backend
+2024-08-14 15:53:30,579 INFO    MainThread:1599 [wandb_init.py:init():613] setting up manager
+2024-08-14 15:53:30,581 INFO    MainThread:1599 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2024-08-14 15:53:30,582 INFO    MainThread:1599 [wandb_init.py:init():621] backend started and connected
+2024-08-14 15:53:30,590 INFO    MainThread:1599 [wandb_run.py:_label_probe_notebook():1337] probe notebook
+2024-08-14 15:53:30,590 INFO    MainThread:1599 [wandb_run.py:_label_probe_notebook():1347] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2024-08-14 15:53:30,590 INFO    MainThread:1599 [wandb_init.py:init():716] updated telemetry
+2024-08-14 15:53:30,654 INFO    MainThread:1599 [wandb_init.py:init():749] communicating run to backend with 90.0 second timeout
+2024-08-14 15:53:32,118 INFO    MainThread:1599 [wandb_run.py:_on_init():2438] communicating current version
+2024-08-14 15:53:32,267 INFO    MainThread:1599 [wandb_run.py:_on_init():2447] got version response 
+2024-08-14 15:53:32,267 INFO    MainThread:1599 [wandb_init.py:init():800] starting run threads in backend
+2024-08-14 15:53:52,802 INFO    MainThread:1599 [wandb_run.py:_console_start():2416] atexit reg
+2024-08-14 15:53:52,803 INFO    MainThread:1599 [wandb_run.py:_redirect():2258] redirect: wrap_raw
+2024-08-14 15:53:52,803 INFO    MainThread:1599 [wandb_run.py:_redirect():2323] Wrapping output streams.
+2024-08-14 15:53:52,803 INFO    MainThread:1599 [wandb_run.py:_redirect():2348] Redirects installed.
+2024-08-14 15:53:52,804 INFO    MainThread:1599 [wandb_init.py:init():843] run started, returning control to user process

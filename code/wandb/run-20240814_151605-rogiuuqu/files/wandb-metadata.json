@@ -1,0 +1,44 @@
+{
+    "os": "macOS-10.16-x86_64-i386-64bit",
+    "python": "3.11.7",
+    "heartbeatAt": "2024-08-14T09:46:08.001115",
+    "startedAt": "2024-08-14T09:46:05.692534",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "<python with no main file>",
+    "codePathLocal": null,
+    "git": {
+        "remote": "https://github.com/mailashishrawat/ml",
+        "commit": "8e63e2f2c86078c83396dc28c71e650e8d7d009b"
+    },
+    "email": "ashish.rawat@sap.com",
+    "root": "/Users/i038849/Documents/Ashish/github/iimb/ml",
+    "host": "192.168.1.5",
+    "username": "i038849",
+    "executable": "/opt/anaconda3/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 2400,
+        "min": 2400,
+        "max": 2400
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2400,
+            "min": 2400,
+            "max": 2400
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 931.546989440918,
+            "used": 600.3638114929199
+        }
+    },
+    "memory": {
+        "total": 32.0
+    }
+}
