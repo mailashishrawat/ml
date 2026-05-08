@@ -1,0 +1,6 @@
+# Pattern Notes — Updated 2026-05-08
+
+Applied duopoly lag pattern with highest confidence on IRCON (vs RVNL) and INOXWIND (vs Suzlon) — both showing textbook setups with lagging price action despite superior fundamentals. The railway construction duopoly (RVNL/IRCON) is particularly compelling given IRCON's 44.2% profit growth vs RVNL's 27.8% yet significantly lower market cap. Institutional Strength Dip pattern applied to BHEL and HAL — both defense/capex plays that faced temporary selling but fundamentals remain intact with government spending tailwinds. RSI Recovery pattern validated for KPTL, HINDOIL, and INOXWIND — all showing bounce from oversold territory into the 44-49 RSI sweet spot. Market conditions (VIX 14, FII net buying, pre-weekend) are favorable for momentum trades. Accuracy expectation: 70-75% hit rate on targets given benign volatility environment. Key risk: If Monday opens weak due to weekend geopolitical news, stop losses should be honored strictly. New duopoly discovery: KPTL/POWERGRID in power transmission (supplier/buyer relationship rather than pure duopoly — note for future refinement). Earnings catalyst strongest for IRCON, BHEL, HAL given direct government order book visibility.
+
+---
+

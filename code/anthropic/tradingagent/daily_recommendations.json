@@ -1,0 +1,60 @@
+[
+  {
+    "date": "2026-05-08",
+    "recommendations": [
+      "IRCON",
+      "BHEL",
+      "INOXWIND",
+      "HAL",
+      "KPTL"
+    ],
+    "entry_prices": {
+      "IRCON": 89.45,
+      "BHEL": 245.3,
+      "INOXWIND": 98.75,
+      "HAL": 4200.5,
+      "KPTL": 145.2
+    },
+    "targets": {
+      "IRCON": 96.5,
+      "BHEL": 264.5,
+      "INOXWIND": 106.8,
+      "HAL": 4536.0,
+      "KPTL": 157.0
+    },
+    "stop_losses": {
+      "IRCON": 86.2,
+      "BHEL": 236.3,
+      "INOXWIND": 95.1,
+      "HAL": 4050.0,
+      "KPTL": 139.8
+    },
+    "patterns": {
+      "IRCON": [
+        "pattern_A",
+        "pattern_C",
+        "pattern_F"
+      ],
+      "BHEL": [
+        "pattern_D",
+        "pattern_E",
+        "pattern_F"
+      ],
+      "INOXWIND": [
+        "pattern_A",
+        "pattern_C",
+        "pattern_F"
+      ],
+      "HAL": [
+        "pattern_D",
+        "pattern_E",
+        "pattern_F"
+      ],
+      "KPTL": [
+        "pattern_C",
+        "pattern_F",
+        "pattern_E"
+      ]
+    }
+  }
+]

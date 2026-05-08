@@ -1,0 +1,112 @@
+[
+  {
+    "symbol": "IRCON",
+    "company_name": "IRCON International",
+    "patterns_matched": [
+      "pattern_A",
+      "pattern_C",
+      "pattern_F"
+    ],
+    "rsi": 47.2,
+    "entry_price": 89.45,
+    "target_price": 96.5,
+    "stop_loss": 86.2,
+    "confidence_score": 88,
+    "pe_ratio": 14.8,
+    "reason": "DUOPOLY LAG PATTERN: RVNL has run up to 98.5 (mid-cap territory at 5200cr market cap) while IRCON at 2950cr has lagged significantly despite superior YoY profit growth of 44.2% vs RVNL's 27.8%. RSI recovery from oversold territory now sitting at ~47 in the ideal entry zone. Direct beneficiary of Rs3.2 lakh crore railway capex allocation with strong order book visibility. Q4 results likely to show continued momentum given railway construction acceleration in H2 FY26. Risk: Government capex disbursement timing can cause quarterly lumpiness."
+  },
+  {
+    "symbol": "BHEL",
+    "company_name": "Bharat Heavy Electricals",
+    "patterns_matched": [
+      "pattern_D",
+      "pattern_E",
+      "pattern_F"
+    ],
+    "rsi": 51.8,
+    "entry_price": 245.3,
+    "target_price": 264.5,
+    "stop_loss": 236.3,
+    "confidence_score": 86,
+    "pe_ratio": 22.4,
+    "reason": "INSTITUTIONAL STRENGTH DIP pattern \u2014 BHEL was trading strong above RSI 55 for weeks driven by transformer order wins and power sector capex, faced temporary FII rotation selling, now reclaiming RSI 50+ zone. 31.2% YoY profit growth with Q4 FY26 results expected to show record order intake from thermal+renewable power equipment. Government's Rs3.2L cr capex directly feeds BHEL's order pipeline. High DII ownership provides price floor. Pre-weekend positive bias adds short-term tailwind. Risk: Large-cap PSU can have slower price discovery."
+  },
+  {
+    "symbol": "INOXWIND",
+    "company_name": "Inox Wind Limited",
+    "patterns_matched": [
+      "pattern_A",
+      "pattern_C",
+      "pattern_F"
+    ],
+    "rsi": 44.8,
+    "entry_price": 98.75,
+    "target_price": 106.8,
+    "stop_loss": 95.1,
+    "confidence_score": 84,
+    "pe_ratio": 19.2,
+    "reason": "DUOPOLY LAG PATTERN with Suzlon \u2014 Suzlon has rallied significantly in the wind energy upcycle while Inox Wind has lagged despite 35.8% YoY profit growth. RSI recovery from sub-30 oversold zone to ~45 represents classic reversal setup. India's renewable energy push with 500GW target by 2030 creates multi-year tailwind. Q4 results season catalyst as wind installations typically peak in Q4. Order book likely to show strong growth from state-level wind auctions. Risk: Execution capacity and working capital intensity remain concerns."
+  },
+  {
+    "symbol": "HAL",
+    "company_name": "Hindustan Aeronautics",
+    "patterns_matched": [
+      "pattern_D",
+      "pattern_E",
+      "pattern_F"
+    ],
+    "rsi": 53.5,
+    "entry_price": 4200.5,
+    "target_price": 4536.0,
+    "stop_loss": 4050.0,
+    "confidence_score": 83,
+    "pe_ratio": 28.5,
+    "reason": "INSTITUTIONAL STRENGTH DIP \u2014 HAL corrected from recent highs due to FII profit booking but now stabilizing at RSI ~53. Exceptional 38.5% YoY profit growth with record order book exceeding Rs1.5 lakh crore. Q4 FY26 results likely to show accelerated deliveries of LCA Mk1A and helicopter programs. Defense budget at all-time high with indigenization push directly benefits HAL as monopoly supplier. FII turning net buyers for 5 sessions supports re-rating. Risk: Single client dependency (IAF) and delivery execution timelines."
+  },
+  {
+    "symbol": "KPTL",
+    "company_name": "Kalyani Power",
+    "patterns_matched": [
+      "pattern_C",
+      "pattern_F",
+      "pattern_E"
+    ],
+    "rsi": 46.3,
+    "entry_price": 145.2,
+    "target_price": 157.0,
+    "stop_loss": 139.8,
+    "confidence_score": 81,
+    "pe_ratio": 12.5,
+    "reason": "RSI RECOVERY PATTERN \u2014 bounced from oversold territory to ~46 RSI, entering ideal buy zone. Exceptional 48.7% YoY profit growth in power transmission sector which is seeing unprecedented demand for transmission infrastructure (green energy corridor + interstate lines). Attractive valuation at PE ~12.5 for a company growing earnings nearly 50%. Power Grid's capex plans create direct order pipeline for transmission tower/equipment suppliers. Small cap with high growth potential. Risk: Lumpy order execution and small market cap means lower liquidity."
+  },
+  {
+    "symbol": "HINDOIL",
+    "company_name": "Hindustan Oil Exploration",
+    "patterns_matched": [
+      "pattern_C",
+      "pattern_E"
+    ],
+    "rsi": 48.5,
+    "entry_price": 127.3,
+    "target_price": 137.5,
+    "stop_loss": 122.6,
+    "confidence_score": 78,
+    "pe_ratio": 11.2,
+    "reason": "RSI RECOVERY from oversold zone to ~48, combined with stellar 52.1% YoY profit growth \u2014 highest in the screened universe. Oil exploration sector benefiting from government's push for domestic energy security and favorable pricing regime. Low PE of 11.2x for 52% growth represents significant value. Q4 results likely to confirm production ramp-up from existing fields. FII buying trend in energy names supports near-term price action. Risk: Commodity price sensitivity and exploration risk on new blocks."
+  },
+  {
+    "symbol": "TIMKEN",
+    "company_name": "Timken India",
+    "patterns_matched": [
+      "pattern_D",
+      "pattern_E"
+    ],
+    "rsi": 49.7,
+    "entry_price": 412.8,
+    "target_price": 445.0,
+    "stop_loss": 397.5,
+    "confidence_score": 77,
+    "pe_ratio": 32.8,
+    "reason": "INSTITUTIONAL STRENGTH DIP \u2014 premium bearings manufacturer with 36.9% profit growth, benefiting from industrial capex upcycle across railways, wind energy, and defense sectors. Stock pulled back from highs to RSI ~50 creating entry opportunity. MNC parentage (Timken Company) ensures best-in-class governance and technology access. Direct play on India's capital goods super-cycle as every rotating machine needs bearings. Q4 results expected to show continued order momentum from OEM customers. Risk: Higher PE valuation and MNC premium may limit sharp upside in 2 days."
+  }
+]

@@ -20,7 +20,15 @@
       "WebFetch(domain:www.moneycontrol.com)",
       "mcp__filesystem__get_file_info",
       "mcp__filesystem__read_text_file",
-      "mcp__ide__executeCode"
+      "mcp__ide__executeCode",
+      "Skill(claude-api)",
+      "Bash(pip show *)",
+      "Bash(pip3 install *)",
+      "Bash(pip3 --version)",
+      "Bash(pip --version)",
+      "Read(//Users/I038849/Library/Python/**)",
+      "Bash(python3.14 -m pip install anthropic --break-system-packages)",
+      "Bash(python3.14 -c \"import anthropic; print\\('anthropic:', anthropic.__version__\\)\")"
     ]
   }
 }
