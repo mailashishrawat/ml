@@ -1,1 +1,5 @@
-code/rag/Assets/*
+code/rag/Assets/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store

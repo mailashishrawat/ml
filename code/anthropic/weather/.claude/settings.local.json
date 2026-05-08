@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__weather__get_forecast"
+    ]
+  }
+}
