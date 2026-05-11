@@ -1,0 +1,86 @@
+[
+  {
+    "symbol": "DATAPATTERNS",
+    "negative_news": false,
+    "negative_news_reason": "No significant negative news found for Data Patterns as of May 11, 2026",
+    "us_market_status": "positive",
+    "industry_trend": "growing",
+    "gold_caution": false,
+    "ceasefire_impact": "neutral",
+    "final_recommendation": true,
+    "validation_note": "India-Pakistan ceasefire reduces geopolitical premium but doesn't impact defense modernization budgets or indigenous electronics spending. 41.2% YoY profit growth and order book visibility remain intact. RSI recovery zone supports entry.",
+    "adjusted_confidence": 81
+  },
+  {
+    "symbol": "PERSISTENT",
+    "negative_news": false,
+    "negative_news_reason": "No significant negative news found for Persistent Systems as of May 11, 2026",
+    "us_market_status": "positive",
+    "industry_trend": "growing",
+    "gold_caution": false,
+    "ceasefire_impact": "not_applicable",
+    "final_recommendation": true,
+    "validation_note": "Strong trade truce beneficiary with NASDAQ +3.5% tailwind. IT mid-caps expected to outperform Monday. 30.6% profit growth, RSI at 48.5 gives room to run. High institutional holding adds support.",
+    "adjusted_confidence": 83
+  },
+  {
+    "symbol": "KECINTL",
+    "negative_news": false,
+    "negative_news_reason": "No significant negative news found for KEC International as of May 11, 2026",
+    "us_market_status": "positive",
+    "industry_trend": "growing",
+    "gold_caution": false,
+    "ceasefire_impact": "not_applicable",
+    "final_recommendation": true,
+    "validation_note": "Power T&D sector rotation play with Rs 35,000+ crore order book. RBI rate cut tailwind reduces capex financing costs. RSI recovery from 44.8 zone is healthy. Sector momentum transfer from BHEL validates thesis.",
+    "adjusted_confidence": 79
+  },
+  {
+    "symbol": "CGPOWER",
+    "negative_news": false,
+    "negative_news_reason": "No significant negative news found for CG Power as of May 11, 2026",
+    "us_market_status": "positive",
+    "industry_trend": "growing",
+    "gold_caution": false,
+    "ceasefire_impact": "not_applicable",
+    "final_recommendation": true,
+    "validation_note": "Power equipment lag play with 32.1% profit growth. Data center boom and power infrastructure push provide structural tailwinds. RSI at 43.6 in recovery zone. Valuation reasonable at PE 32.5 for growth rate.",
+    "adjusted_confidence": 77
+  },
+  {
+    "symbol": "WAAREE",
+    "negative_news": false,
+    "negative_news_reason": "No significant negative news found for Waaree Energies as of May 11, 2026",
+    "us_market_status": "positive",
+    "industry_trend": "growing",
+    "gold_caution": false,
+    "ceasefire_impact": "not_applicable",
+    "final_recommendation": true,
+    "validation_note": "Solar manufacturing play benefits from trade truce reducing tariff uncertainty. Sector rotation from wind to solar in progress. 33.7% profit growth with largest solar module capacity in India. RSI 45.7 with volume building supports entry.",
+    "adjusted_confidence": 76
+  },
+  {
+    "symbol": "NAVINFLUORINE",
+    "negative_news": false,
+    "negative_news_reason": "No significant negative news found for Navin Fluorine as of May 11, 2026",
+    "us_market_status": "positive",
+    "industry_trend": "growing",
+    "gold_caution": false,
+    "ceasefire_impact": "not_applicable",
+    "final_recommendation": true,
+    "validation_note": "Direct trade truce beneficiary as China+1 sourcing accelerates with stable trade environment. 31.5% profit growth in CRAMS/HPP segments. RSI recovery from oversold 34 to 43.2. Specialty chemicals have structural pharma and EV battery demand.",
+    "adjusted_confidence": 80
+  },
+  {
+    "symbol": "ITDCEM",
+    "negative_news": false,
+    "negative_news_reason": "No significant negative news found for ITD Cementation as of May 11, 2026",
+    "us_market_status": "positive",
+    "industry_trend": "growing",
+    "gold_caution": false,
+    "ceasefire_impact": "not_applicable",
+    "final_recommendation": true,
+    "validation_note": "Infrastructure capex play with tunneling/marine specialization. 30.7% profit growth and order book visibility intact. Low PE 22.4 offers valuation comfort. RSI 46.8 neutral zone supports entry. Metro/port project pipeline remains strong.",
+    "adjusted_confidence": 74
+  }
+]

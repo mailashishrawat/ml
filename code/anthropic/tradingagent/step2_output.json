@@ -1,112 +1,128 @@
 [
   {
-    "symbol": "IRCON",
-    "company_name": "IRCON International",
+    "symbol": "DATAPATTERNS",
+    "company_name": "Data Patterns (India) Limited",
     "patterns_matched": [
-      "pattern_A",
-      "pattern_C",
-      "pattern_F"
+      "Duopoly Lag (HAL catch-up)",
+      "RSI Recovery",
+      "Earnings Catalyst"
     ],
-    "rsi": 47.2,
-    "entry_price": 89.45,
-    "target_price": 96.5,
-    "stop_loss": 86.2,
-    "confidence_score": 88,
-    "pe_ratio": 14.8,
-    "reason": "DUOPOLY LAG PATTERN: RVNL has run up to 98.5 (mid-cap territory at 5200cr market cap) while IRCON at 2950cr has lagged significantly despite superior YoY profit growth of 44.2% vs RVNL's 27.8%. RSI recovery from oversold territory now sitting at ~47 in the ideal entry zone. Direct beneficiary of Rs3.2 lakh crore railway capex allocation with strong order book visibility. Q4 results likely to show continued momentum given railway construction acceleration in H2 FY26. Risk: Government capex disbursement timing can cause quarterly lumpiness."
-  },
-  {
-    "symbol": "BHEL",
-    "company_name": "Bharat Heavy Electricals",
-    "patterns_matched": [
-      "pattern_D",
-      "pattern_E",
-      "pattern_F"
-    ],
-    "rsi": 51.8,
-    "entry_price": 245.3,
-    "target_price": 264.5,
-    "stop_loss": 236.3,
-    "confidence_score": 86,
-    "pe_ratio": 22.4,
-    "reason": "INSTITUTIONAL STRENGTH DIP pattern \u2014 BHEL was trading strong above RSI 55 for weeks driven by transformer order wins and power sector capex, faced temporary FII rotation selling, now reclaiming RSI 50+ zone. 31.2% YoY profit growth with Q4 FY26 results expected to show record order intake from thermal+renewable power equipment. Government's Rs3.2L cr capex directly feeds BHEL's order pipeline. High DII ownership provides price floor. Pre-weekend positive bias adds short-term tailwind. Risk: Large-cap PSU can have slower price discovery."
-  },
-  {
-    "symbol": "INOXWIND",
-    "company_name": "Inox Wind Limited",
-    "patterns_matched": [
-      "pattern_A",
-      "pattern_C",
-      "pattern_F"
-    ],
-    "rsi": 44.8,
-    "entry_price": 98.75,
-    "target_price": 106.8,
-    "stop_loss": 95.1,
-    "confidence_score": 84,
-    "pe_ratio": 19.2,
-    "reason": "DUOPOLY LAG PATTERN with Suzlon \u2014 Suzlon has rallied significantly in the wind energy upcycle while Inox Wind has lagged despite 35.8% YoY profit growth. RSI recovery from sub-30 oversold zone to ~45 represents classic reversal setup. India's renewable energy push with 500GW target by 2030 creates multi-year tailwind. Q4 results season catalyst as wind installations typically peak in Q4. Order book likely to show strong growth from state-level wind auctions. Risk: Execution capacity and working capital intensity remain concerns."
-  },
-  {
-    "symbol": "HAL",
-    "company_name": "Hindustan Aeronautics",
-    "patterns_matched": [
-      "pattern_D",
-      "pattern_E",
-      "pattern_F"
-    ],
-    "rsi": 53.5,
-    "entry_price": 4200.5,
-    "target_price": 4536.0,
-    "stop_loss": 4050.0,
+    "rsi": 42.3,
+    "entry_price": 64.5,
+    "target_price": 69.8,
+    "stop_loss": 61.5,
     "confidence_score": 83,
-    "pe_ratio": 28.5,
-    "reason": "INSTITUTIONAL STRENGTH DIP \u2014 HAL corrected from recent highs due to FII profit booking but now stabilizing at RSI ~53. Exceptional 38.5% YoY profit growth with record order book exceeding Rs1.5 lakh crore. Q4 FY26 results likely to show accelerated deliveries of LCA Mk1A and helicopter programs. Defense budget at all-time high with indigenization push directly benefits HAL as monopoly supplier. FII turning net buyers for 5 sessions supports re-rating. Risk: Single client dependency (IAF) and delivery execution timelines."
+    "pe_ratio": 38.2,
+    "market_cap_cr": 3150,
+    "avg_daily_vol_lakh": 95.8,
+    "reason": "HAL ran last week in defense electronics; DATAPATTERNS is the smaller-cap lag play with 41.2% YoY profit growth (highest in defense universe). RSI recovering from 36 to 42 zone on strong volumes. India-Pakistan ceasefire doesn't reduce defense capex \u2014 indigenous electronics spending remains intact. Q4 order book visibility provides earnings catalyst."
   },
   {
-    "symbol": "KPTL",
-    "company_name": "Kalyani Power",
+    "symbol": "PERSISTENT",
+    "company_name": "Persistent Systems Limited",
     "patterns_matched": [
-      "pattern_C",
-      "pattern_F",
-      "pattern_E"
-    ],
-    "rsi": 46.3,
-    "entry_price": 145.2,
-    "target_price": 157.0,
-    "stop_loss": 139.8,
-    "confidence_score": 81,
-    "pe_ratio": 12.5,
-    "reason": "RSI RECOVERY PATTERN \u2014 bounced from oversold territory to ~46 RSI, entering ideal buy zone. Exceptional 48.7% YoY profit growth in power transmission sector which is seeing unprecedented demand for transmission infrastructure (green energy corridor + interstate lines). Attractive valuation at PE ~12.5 for a company growing earnings nearly 50%. Power Grid's capex plans create direct order pipeline for transmission tower/equipment suppliers. Small cap with high growth potential. Risk: Lumpy order execution and small market cap means lower liquidity."
-  },
-  {
-    "symbol": "HINDOIL",
-    "company_name": "Hindustan Oil Exploration",
-    "patterns_matched": [
-      "pattern_C",
-      "pattern_E"
+      "Trade Truce Beneficiary",
+      "Momentum Continuation",
+      "Institutional Strength"
     ],
     "rsi": 48.5,
-    "entry_price": 127.3,
-    "target_price": 137.5,
-    "stop_loss": 122.6,
-    "confidence_score": 78,
-    "pe_ratio": 11.2,
-    "reason": "RSI RECOVERY from oversold zone to ~48, combined with stellar 52.1% YoY profit growth \u2014 highest in the screened universe. Oil exploration sector benefiting from government's push for domestic energy security and favorable pricing regime. Low PE of 11.2x for 52% growth represents significant value. Q4 results likely to confirm production ramp-up from existing fields. FII buying trend in energy names supports near-term price action. Risk: Commodity price sensitivity and exploration risk on new blocks."
+    "entry_price": 85.0,
+    "target_price": 92.5,
+    "stop_loss": 81.5,
+    "confidence_score": 81,
+    "pe_ratio": 35.4,
+    "market_cap_cr": 12200,
+    "avg_daily_vol_lakh": 168.9,
+    "reason": "US-China trade truce directly benefits IT mid-caps via improved global tech spending outlook. NASDAQ +3.5% Friday will flow into Indian IT Monday. 30.6% profit growth with strong deal pipeline. RSI at 48.5 gives room to run to 65+ without overbought signals. FII favourite with high institutional holding."
   },
   {
-    "symbol": "TIMKEN",
-    "company_name": "Timken India",
+    "symbol": "KECINTL",
+    "company_name": "KEC International Limited",
     "patterns_matched": [
-      "pattern_D",
-      "pattern_E"
+      "Sector Rotation Lag",
+      "RSI Recovery",
+      "Power T&D Capex Theme"
     ],
-    "rsi": 49.7,
-    "entry_price": 412.8,
-    "target_price": 445.0,
-    "stop_loss": 397.5,
+    "rsi": 44.8,
+    "entry_price": 63.5,
+    "target_price": 68.8,
+    "stop_loss": 60.8,
+    "confidence_score": 79,
+    "pe_ratio": 28.3,
+    "market_cap_cr": 9200,
+    "avg_daily_vol_lakh": 138.4,
+    "reason": "BHEL ran last week in power equipment; KEC is the T&D execution arm catching up as transmission orders accelerate. 30.5% profit growth backed by Rs 35,000+ crore order book. RSI at 44.8 recovering from dip with RBI rate cut tailwind reducing borrowing costs for capex-heavy model. Duopoly-adjacent to POWERGRID as key supplier."
+  },
+  {
+    "symbol": "CGPOWER",
+    "company_name": "CG Power and Industrial Solutions",
+    "patterns_matched": [
+      "Duopoly Lag (BHEL/Siemens catch-up)",
+      "RSI Recovery",
+      "Earnings Catalyst"
+    ],
+    "rsi": 43.6,
+    "entry_price": 45.0,
+    "target_price": 48.8,
+    "stop_loss": 43.2,
     "confidence_score": 77,
-    "pe_ratio": 32.8,
-    "reason": "INSTITUTIONAL STRENGTH DIP \u2014 premium bearings manufacturer with 36.9% profit growth, benefiting from industrial capex upcycle across railways, wind energy, and defense sectors. Stock pulled back from highs to RSI ~50 creating entry opportunity. MNC parentage (Timken Company) ensures best-in-class governance and technology access. Direct play on India's capital goods super-cycle as every rotating machine needs bearings. Q4 results expected to show continued order momentum from OEM customers. Risk: Higher PE valuation and MNC premium may limit sharp upside in 2 days."
+    "pe_ratio": 32.5,
+    "market_cap_cr": 5200,
+    "avg_daily_vol_lakh": 108.7,
+    "reason": "Smaller-cap power solutions play lagging Siemens and ABB which trade at premium valuations. 32.1% profit growth with transformer and motor division firing on all cylinders. RSI at 43.6 in sweet recovery zone post-consolidation. Government power infrastructure push and data center boom provide structural tailwinds."
+  },
+  {
+    "symbol": "WAAREE",
+    "company_name": "Waaree Energies Limited",
+    "patterns_matched": [
+      "Sector Momentum Transfer (Wind to Solar)",
+      "RSI Recovery",
+      "Renewable Energy Theme"
+    ],
+    "rsi": 45.7,
+    "entry_price": 50.2,
+    "target_price": 54.5,
+    "stop_loss": 48.0,
+    "confidence_score": 76,
+    "pe_ratio": 29.8,
+    "market_cap_cr": 4600,
+    "avg_daily_vol_lakh": 104.3,
+    "reason": "INOXWIND/Suzlon ran in wind energy last week; solar manufacturing is the next renewable leg. 33.7% profit growth with India's largest solar module manufacturing capacity. Trade truce reduces tariff uncertainty on raw material imports. RSI at 45.7 with volume building \u2014 US-China deal positive for global solar supply chain stability."
+  },
+  {
+    "symbol": "NAVINFLUORINE",
+    "company_name": "Navin Fluorine International Limited",
+    "patterns_matched": [
+      "Trade Truce Beneficiary",
+      "Chemical Export Recovery",
+      "RSI Recovery"
+    ],
+    "rsi": 43.2,
+    "entry_price": 75.2,
+    "target_price": 81.5,
+    "stop_loss": 72.0,
+    "confidence_score": 78,
+    "pe_ratio": 34.1,
+    "market_cap_cr": 7200,
+    "avg_daily_vol_lakh": 134.2,
+    "reason": "US-China trade truce resolves key overhang on specialty chemical exporters \u2014 China+1 sourcing accelerates with stable trade environment. 31.5% profit growth driven by CRAMS and HPP segments. RSI at 43.2 recovering from 34 oversold territory. Fluorine chemistry is structural growth story with pharma and EV battery applications."
+  },
+  {
+    "symbol": "ITDCEM",
+    "company_name": "ITD Cementation India Limited",
+    "patterns_matched": [
+      "Infrastructure Capex Play",
+      "RSI Recovery",
+      "Order Book Catalyst"
+    ],
+    "rsi": 46.8,
+    "entry_price": 60.5,
+    "target_price": 65.2,
+    "stop_loss": 58.0,
+    "confidence_score": 74,
+    "pe_ratio": 22.4,
+    "market_cap_cr": 4900,
+    "avg_daily_vol_lakh": 114.2,
+    "reason": "Fresh infrastructure play not in previous picks \u2014 tunneling and marine civil works specialist with 30.7% profit growth. IRCON ran in railways; ITDCEM catches broader infra capex rotation into metro/port projects. RSI at 46.8 in neutral zone with healthy risk-reward. Low PE of 22.4 relative to peers offers valuation comfort on gap-up entry."
   }
 ]

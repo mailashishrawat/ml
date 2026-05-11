@@ -36,7 +36,7 @@ You will execute the following steps in sequence, delegating to sub-agents as de
 > d. Year-over-year: Profit increment > 25% OR loss reduction > 25%
 > e. This quarter: Average daily (Close Price × Volume) > ₹1 Crore (100 lakh)
 >
-> **Output**: Save results as `basestock.xlsx` with columns: Symbol, Company Name, Market Cap (Cr), Last Close (₹), YoY Profit Change (%), Avg Daily Turnover (Lakh ₹), Sector, Industry.
+> **Output**: Save results as `basestock.xlsx` with columns: Symbol, Company Name, Market Cap (Cr), Last Close (₹), YoY Profit Change (%), Avg Daily Turnover (Lakh ₹), Sector, Industry, FII Holding Q1 (%), FII Holding Q2 (%), FII Holding Q3 (%), FII Holding Q4 (%) — where Q4 is the most recent quarter.
 >
 > Log the date of generation in a metadata sheet within the same file.
 
@@ -81,7 +81,18 @@ Launch an Opus sub-agent with the following instructions:
 > - Identify stocks in high-momentum sectors: EV, Solar, Green Energy, AI, Semiconductors, Space Tech.
 > - Even pre-profit companies with strong revenue growth and sector tailwinds qualify.
 >
-> **g. Self-Discovered Patterns**
+> **g. FII Accumulation Pattern**
+> - From the Step 1 screened universe, identify stocks where FII (Foreign Institutional Investor) shareholding percentage has increased for **3 or more consecutive quarters** in the most recent filings.
+> - Data sources: NSE shareholding pattern filings, Tijori Finance FII data, or Trendlyne shareholding history.
+> - Signal strength tiers:
+>   - 3 consecutive quarters of FII increase: moderate signal (+5 confidence)
+>   - 4+ consecutive quarters of FII increase: strong signal (+10 confidence)
+>   - FII increase AND promoter holding stable/increasing: highest conviction (+15 confidence)
+> - Additionally flag if FII holding crossed a round-number threshold (e.g., from 8% → 10%+) in the latest quarter — institutional mandates often trigger further buying once such levels are breached.
+> - Cross-reference with RSI: FII accumulation + RSI recovery (Pattern C) is the highest-confidence combined signal.
+> - Exclude stocks where FII is increasing but DII (Domestic Institutional Investor) is simultaneously decreasing at a faster rate — net institutional flow must be positive.
+>
+> **h. Self-Discovered Patterns**
 > - You are authorized to identify and apply new patterns based on historical performance. Document all new patterns in `pattern_notes.md` with rationale and accuracy score.
 >
 > ---
@@ -93,8 +104,10 @@ Launch an Opus sub-agent with the following instructions:
 >   {
 >     "symbol": "MRPL",
 >     "company_name": "Mangalore Refinery",
->     "patterns_matched": ["duopoly", "rsi_recovery"],
+>     "patterns_matched": ["duopoly", "rsi_recovery", "fii_accumulation"],
 >     "rsi": 48.2,
+>     "fii_holding_trend": [7.2, 8.1, 9.4, 10.8],
+>     "fii_consecutive_quarters_increasing": 4,
 >     "confidence_score": 87,
 >     "reason": "Detailed reasoning here"
 >   }
@@ -235,6 +248,7 @@ Launch a sub-agent to handle backtesting:
 - Which technical patterns have historically been most accurate for Indian mid/small cap stocks
 - Duopoly pairs discovered in various sectors (MRPL/CPCL, etc.)
 - RSI thresholds that work better in bull vs bear market conditions
+- FII accumulation trends — sectors where FIIs are consistently building positions
 - Industry-specific patterns (e.g., monsoon effects on agrochemicals, budget effects on infrastructure)
 - Common false positives and how to avoid them
 - API endpoints and data sources that return most reliable data

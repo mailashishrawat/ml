@@ -56,5 +56,63 @@
         "pattern_E"
       ]
     }
+  },
+  {
+    "date": "2026-05-11",
+    "recommendations": [
+      "PERSISTENT",
+      "DATAPATTERNS",
+      "NAVINFLUORINE",
+      "KECINTL",
+      "CGPOWER"
+    ],
+    "entry_prices": {
+      "PERSISTENT": 85.0,
+      "DATAPATTERNS": 64.5,
+      "NAVINFLUORINE": 75.2,
+      "KECINTL": 63.5,
+      "CGPOWER": 45.0
+    },
+    "targets": {
+      "PERSISTENT": 92.5,
+      "DATAPATTERNS": 69.8,
+      "NAVINFLUORINE": 81.5,
+      "KECINTL": 68.8,
+      "CGPOWER": 48.8
+    },
+    "stop_losses": {
+      "PERSISTENT": 81.5,
+      "DATAPATTERNS": 61.5,
+      "NAVINFLUORINE": 72.0,
+      "KECINTL": 60.8,
+      "CGPOWER": 43.2
+    },
+    "patterns": {
+      "PERSISTENT": [
+        "Trade Truce Beneficiary",
+        "Momentum Continuation",
+        "Institutional Strength"
+      ],
+      "DATAPATTERNS": [
+        "Duopoly Lag (HAL catch-up)",
+        "RSI Recovery",
+        "Earnings Catalyst"
+      ],
+      "NAVINFLUORINE": [
+        "Trade Truce Beneficiary",
+        "Chemical Export Recovery",
+        "RSI Recovery"
+      ],
+      "KECINTL": [
+        "Sector Rotation Lag",
+        "RSI Recovery",
+        "Power T&D Capex Theme"
+      ],
+      "CGPOWER": [
+        "Duopoly Lag (BHEL/Siemens catch-up)",
+        "RSI Recovery",
+        "Earnings Catalyst"
+      ]
+    }
   }
 ]

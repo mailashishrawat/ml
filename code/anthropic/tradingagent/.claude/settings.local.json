@@ -28,7 +28,9 @@
       "Bash(pip --version)",
       "Read(//Users/I038849/Library/Python/**)",
       "Bash(python3.14 -m pip install anthropic --break-system-packages)",
-      "Bash(python3.14 -c \"import anthropic; print\\('anthropic:', anthropic.__version__\\)\")"
+      "Bash(python3.14 -c \"import anthropic; print\\('anthropic:', anthropic.__version__\\)\")",
+      "mcp__filesystem__read_multiple_files",
+      "Autoapprove"
     ]
   }
 }
