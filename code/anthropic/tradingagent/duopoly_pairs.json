@@ -3,12 +3,20 @@
     {
       "sector": "Oil Refining PSU",
       "stock1": "MRPL",
-      "stock2": "CPCL"
+      "stock2": "CPCL",
+      "note": "AVOID BOTH when WTI oil > $95 \u2014 OMC margin compression"
     },
     {
       "sector": "Defense Electronics",
       "stock1": "BEL",
-      "stock2": "HAL"
+      "stock2": "HAL",
+      "small_cap_lag": "DATAPATTERNS, PARAS"
+    },
+    {
+      "sector": "Naval Defense",
+      "stock1": "MAZDOCK",
+      "stock2": "COCHINSHIP",
+      "note": "MAZDOCK = submarines only (higher strategic value); synchronized dips = institutional dip pattern confirmed"
     },
     {
       "sector": "Railway Construction",
@@ -26,9 +34,60 @@
       "stock2": "NSDL"
     },
     {
-      "sector": "Power Equipment",
+      "sector": "Power Equipment T&D",
       "stock1": "BHEL",
-      "stock2": "SIEMENS"
+      "stock2": "SIEMENS",
+      "rotation_chain": [
+        "BHEL",
+        "KECINTL",
+        "CGPOWER",
+        "APAR"
+      ]
+    },
+    {
+      "sector": "Solar Manufacturing",
+      "stock1": "WAAREEENER",
+      "stock2": "PREMIERENG"
+    },
+    {
+      "sector": "Upstream E&P (Oil)",
+      "stock1": "OILINDIA",
+      "stock2": "HINDOILEXP",
+      "note": "OILINDIA = large-cap safety; HINDOILEXP = small-cap high-beta lag play when oil > $95. New pair discovered May 12."
+    },
+    {
+      "sector": "IT Mid-Cap Services",
+      "stock1": "PERSISTENT",
+      "stock2": "COFORGE",
+      "peers": [
+        "MPHASIS",
+        "BIRLASOFT",
+        "KPIT"
+      ]
+    },
+    {
+      "sector": "Defense Drones",
+      "stock1": "IDEAFORGE",
+      "stock2": null,
+      "note": "Near-monopoly in Indian defense drone market. Benefits from defense capex, India-Pakistan tensions, and drone procurement urgency. No listed peer yet — treat as standalone. Catalyst: MoD drone orders, PLI for drones. Watch for SUZLON-style duopoly to emerge as sector matures.",
+      "watch_universe": true
+    },
+    {
+      "sector": "EV Two-Wheeler",
+      "stock1": "ATHERENERG",
+      "stock2": "OLAELEC",
+      "note": "ATHERENERG (Ather Energy) = premium EV scooter, recently listed. Pair with OLA Electric (OLAELEC) as the duopoly. High oil prices (WTI > $95) = structural EV tailwind. Pattern I extension: when war premium sustains oil > $95 for 5+ days, EV adoption urgency rises. Monitor FII accumulation as recently listed stock.",
+      "watch_universe": true,
+      "recently_listed": true
+    },
+    {
+      "sector": "Drone / Airspace Tech",
+      "stock1": "BBOX",
+      "stock2": "IDEAFORGE",
+      "note": "BBOX (Black Box) in drone airspace management / UTM. Pairs with IDEAFORGE in the broader drone ecosystem — IDEAFORGE makes the drone, BBOX manages airspace. Both benefit from the same defense and civil aviation drone policy tailwinds. Treat as ecosystem pair, not pure price-lag duopoly.",
+      "watch_universe": true
     }
-  ]
+  ],
+  "last_updated": "2026-05-19",
+  "notes": "Updated May 19: WAAREEENER confirmed FII 10x accumulation (0.70% to 7.06%). OMC refiner rule updated: 'avoid when WTI>$95' only applies when retail prices NOT raised. If petrol hike confirmed (Pattern Q), BPCL/HPCL/IOC become potential BUY candidates. HINDOILEXP struck due to B-80/HPCL dispute -- best leaderboard stock (4/5 = 80%) but negative corporate news takes precedence. HAL confirmed 2/2 = 100% win rate. PIIND confirmed 1/1 = 100% win rate. GRSE 1/1 = 100% win rate. May 18 batch: +2.03% (4/5 wins) -- best batch since May 8."
 }

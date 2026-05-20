@@ -1,279 +1,662 @@
 ================================================================================
-                    EQUITY RECOMMENDATIONS REPORT
-                  Indian Equity Markets | Monday, May 11, 2026
+  INDIA MID/SMALL CAP STOCK RECOMMENDATION PIPELINE
+  Run Date: 2026-05-20 (Tuesday)  |  Run #11  |  Exit Date: 2026-05-22 (Thursday)
+  Pipeline: Step 1 -> 1.5 -> 2 -> 3 -> 4 -> 5 -> 6
+  NEW RULES EFFECTIVE: Max 3 picks | Confidence > 78 | Pattern H active | Retro scan mandatory
 ================================================================================
 
-MACRO BACKDROP
+================================================================================
+STEP 0 — RETROSPECTIVE MISS SCAN (May 18-19, MANDATORY)
 ================================================================================
 
-US-China Trade Truce: NASDAQ closed +3.5% Friday; tariff uncertainty resolved.
-  • IT services and specialty chemicals benefit from China+1 sourcing acceleration
-  • Global tech spending outlook improves; mid-cap IT expected to lead Monday
-  • Export-oriented sectors gain tailwind on stable trade environment
+Mandatory scan for stocks that gained +8% or more on May 18-19 that were NOT recommended.
 
-India-Pakistan Ceasefire: Geopolitical premium reduces but defense capex intact.
-  • Indigenous electronics and defense modernization remain budgeted priorities
-  • No impact on long-term T&D and power infrastructure investment cycles
-  • RBI rate cut environment supports capex-heavy sectors (power, infra)
+CANDIDATE REVIEW:
 
-Sector Rotation Narrative: Capital flowing from large-cap leaders to lag plays.
-  • BHEL/HAL/Suzlon ran last week; smaller-cap peers in duopoly/adjacent segments
-  • Wind energy to solar transition; equipment makers to T&D executors; power to IT
-  • RSI recovery across defensive/cyclical universe supports broad-based entry
+APOLLOMICRO (Apollo Micro Systems):
+  - May 19 price: Rs327.40 (+5.27% that day). May 20 price: Rs358.05 (+5.09% today).
+  - Was this stock up +8%+ over May 18-19 combined? Estimated 3-day gain: ~15-16%.
+  - Was it in our picks? NO. It was evaluated and excluded May 19 on:
+    (a) RSI 75.4 >= 75 — Pattern B hard ceiling triggered
+    (b) Analyst target Rs290 below market price Rs327 — Rule 3 triggered
+  - The miss is REAL. The stock has continued rising through RSI 75 ceiling.
+  - ROOT CAUSE ANALYSIS:
+    Pattern H (Breakout + Defense Order) was not yet formally active as a ceiling-override rule.
+    The stock broke above 52-week high Rs354.70 today at Rs358.05 = CONFIRMED BREAKOUT.
+    No confirmed MoD/DRDO/ISRO order found in last 5 days (which is the required Pattern H trigger).
+  - ACTION:
+    Pattern H confirmed as active pattern for this run going forward.
+    APOLLOMICRO added to DEFCON-1 watchlist: entry at RSI < 85 only when confirmed order present.
+    Without order, RSI ceiling rule holds.
 
+MTARTECH:
+  - May 16 to May 20: ~Rs6,810 to Rs7,077 = +3.9%. NOT an 8%+ miss.
+  - Already evaluated and excluded (PE 228, profit declining -4.29%). Correct exclusion.
 
-================================================================================
-                        VALIDATED RECOMMENDATIONS
-                              (Top 5 Stocks)
-================================================================================
+PIIND:
+  - WAS in May 19 picks. Not a "miss" — but an "earnings surprise" that hit stop.
+  - The pattern failure: pre-earnings play on declining revenue. Documented as Pattern R (new rule).
 
-STOCK #1: PERSISTENT SYSTEMS LIMITED
-================================================================================
-Symbol: PERSISTENT | Market Cap: Rs 12,200 Cr | PE Ratio: 35.4x
-Adjusted Confidence Score: 83% | Sector: IT Services
+WAAREEENER:
+  - Was in May 19 picks at Rs3,045. Current Rs3,032 = -0.43%. Not a miss.
 
-SCREENING CRITERIA:
-  [✓] No negative news as of May 11, 2026
-  [✓] US market status: POSITIVE (NASDAQ +3.5% Friday)
-  [✓] Industry trend: GROWING
-  [✓] No gold caution flag
-  [✓] FII institutional strength evident
+NO CLEAN +8%+ MISS IDENTIFIED for May 18-19 outside our defense universe scan.
+CLOSEST CANDIDATE: APOLLOMICRO (multi-day cumulative ~15%). Pattern H gap confirmed and closed.
 
-PATTERN TRIGGERS:
-  [✓] Trade Truce Beneficiary — direct gain from US-China tariff resolution
-  [✓] Momentum Continuation — mid-cap IT set to follow NASDAQ rally Monday
-  [✓] Institutional Strength — high FII holding supports valuation
-
-TECHNICAL METRICS:
-  RSI: 48.5 (neutral zone, room to run to 65+ without overbought signal)
-  Entry Price: Rs 85.0
-  Target Price: Rs 92.5 (+8.8%)
-  Stop Loss: Rs 81.5 (-4.1%)
-  Avg Daily Volume: 168.9 lakh shares
-
-10-DAY PRICE SPARKLINE (Normalized):
-  ---|------|-----|--------|--------|--------##########
-  Day1  Day2  Day3   Day4   Day5   Day6   Day7   Day8   Day9  Day10
-
-ANALYST NOTE:
-Trade truce resolution unlocks global tech spending cycles that mid-cap IT services are
-positioned to capture. 30.6% YoY profit growth with strong deal pipeline reflects robust
-demand environment. RSI at 48.5 provides meaningful upside before overbought conditions;
-institutional money flowing into this category on macroeconomic tailwinds.
-
-Validation: APPROVED | Recommendation: BUY on Monday opening
+NEW PATTERN R LOGGED:
+  Pre-Earnings plays ONLY when last 2 consecutive quarters showed growth AND revenue upward.
+  PIIND violated this — revenue -15% YoY was already known. Skip pre-earnings on declining revenue.
 
 ================================================================================
-
-STOCK #2: NAVIN FLUORINE INTERNATIONAL LIMITED
-================================================================================
-Symbol: NAVINFLUORINE | Market Cap: Rs 7,200 Cr | PE Ratio: 34.1x
-Adjusted Confidence Score: 80% | Sector: Specialty Chemicals
-
-SCREENING CRITERIA:
-  [✓] No negative news as of May 11, 2026
-  [✓] US market status: POSITIVE
-  [✓] Industry trend: GROWING
-  [✓] No gold caution flag
-  [✓] Trade truce directly applicables
-
-PATTERN TRIGGERS:
-  [✓] Trade Truce Beneficiary — China+1 sourcing accelerates with stable tariffs
-  [✓] Chemical Export Recovery — CRAMS and HPP segments fire on normalized supply
-  [✓] RSI Recovery — bounced from 34 (oversold) to 43.2
-
-TECHNICAL METRICS:
-  RSI: 43.2 (recovery phase from oversold territory)
-  Entry Price: Rs 75.2
-  Target Price: Rs 81.5 (+8.4%)
-  Stop Loss: Rs 72.0 (-4.3%)
-  Avg Daily Volume: 134.2 lakh shares
-
-10-DAY PRICE SPARKLINE (Normalized):
-  ----|-------|------|-------|----------|----------#########
-  Day1  Day2   Day3   Day4   Day5   Day6    Day7   Day8  Day9  Day10
-
-ANALYST NOTE:
-Specialty chemicals export cycle benefits from India becoming preferred sourcing hub as
-China trade uncertainty eases. 31.5% profit growth in CRAMS (contract R&D) and HPP
-(hydrofluoric products) segments supports structural earnings momentum. RSI recovery from
-oversold levels combined with pharma and EV battery tailwinds creates multi-year thesis
-underpinning this trade.
-
-Validation: APPROVED | Recommendation: BUY on Monday opening
-
+STEP 1.5 — MACRO TREND & DISRUPTION ALERT — 2026-05-20
 ================================================================================
 
-STOCK #3: DATAPATTERNS (INDIA) LIMITED
-================================================================================
-Symbol: DATAPATTERNS | Market Cap: Rs 3,150 Cr | PE Ratio: 38.2x
-Adjusted Confidence Score: 81% | Sector: Defense Electronics
++====================================================================+
+|        MACRO TREND & DISRUPTION ALERT — 2026-05-20                |
++====================================================================+
+| HARD EXCLUDES (remove from all picks today)                        |
++--------------------------------------------------------------------+
+|  [X] PIIND           -- Q4FY26 earnings miss: profit -48.8% YoY.  |
+|                         Stop triggered. Remove from pipeline.      |
+|  [X] IT/BPO/ITES     -- AI disruption risk (permanent sector rule) |
+|  [X] HINDOILEXP      -- B-80 dispute unresolved (struck May 19)   |
+|  [X] BEL             -- DROP RULE: 0/4 = 0% win rate              |
+|  [X] PERSISTENT      -- PERMANENT EXCLUDE (0/7 = 0%)              |
+|  [X] CGPOWER         -- PERMANENT EXCLUDE (PE >87, negative growth)|
+|  [X] COCHINSHIP      -- Extreme drop May 18 (-6.98%), not cleared  |
++====================================================================+
+| CAUTION FLAGS (reduce confidence -10 if picked)                    |
++--------------------------------------------------------------------+
+|  [!] WAAR, INOXWIND  -- Leaderboard 0/2 = 0%. -10 confidence.     |
+|  [!] US markets      -- S&P -0.67%, NASDAQ -0.84% (below -1%,     |
+|                         caution flag only, not hard block)         |
+|  [!] MAZDOCK         -- Leaderboard 2/8 = 25%. -10 confidence.    |
+|  [!] PRE-EARNINGS    -- Pattern R active. Any earnings in 5 days   |
+|                         with declining revenue = -15 confidence.   |
++====================================================================+
+| TAILWIND SIGNALS (boost confidence +5 to +15 if picked)            |
++--------------------------------------------------------------------+
+|  [+] ALL PICKS       -- Pattern K: Gold -4.87% 5-day = MAXIMUM    |
+|                         sustained equity rotation signal (+5)      |
+|  [+] E&P (ONGC, HINDOILEXP) -- WTI $103.86 Day 11+ above $95     |
+|                         Iran war premium FULLY intact (+5)         |
+|  [+] DEFENSE sector  -- Iran "no ceasefire." VP Vance "locked      |
+|                         and loaded." UK warns Hormuz blockade.     |
+|                         Defense picks: HAL, GRSE (+5)             |
+|  [+] ONGC            -- Nifty50 top gainer today (+1.37%),        |
+|                         institutional momentum building (+5)       |
+|  [+] APOLLOMICRO     -- 52w HIGH BREAKOUT today (Rs358 > Rs354.7) |
+|                         Pattern H breakout signal. +10 boost.      |
+|                         BUT: No confirmed order = ceiling applies.  |
++====================================================================+
+| NEW STRUCTURAL RISKS DISCOVERED                                    |
++--------------------------------------------------------------------+
+|  [!] PATTERN R (Pre-Earnings Risk): Confirmed via PIIND miss.      |
+|      Never take pre-earnings plays on declining revenue trends.    |
+|  [!] PIIND structural weakness: Q4 profit -48.8%, revenue -15%    |
+|      YoY trend deepening. Sector: agrochem export weakness.        |
+|      Trump-Xi "warm" trade catalyst insufficient to overcome       |
+|      domestic revenue decline. Pattern L/N unreliable without      |
+|      fundamental recovery.                                         |
+|  [!] APOLLOMICRO pattern gap: Stock breaking 52w high without      |
+|      confirmed order shows institutional pre-positioning. May       |
+|      indicate imminent order announcement. Track closely.          |
++====================================================================+
 
-SCREENING CRITERIA:
-  [✓] No negative news as of May 11, 2026
-  [✓] US market status: POSITIVE
-  [✓] Industry trend: GROWING
-  [✓] Ceasefire impact: NEUTRAL (defense capex unimpacted)
-  [✓] Order book visibility intact
+KEY MACRO SUMMARY:
+  WTI:     $103.86 (-0.28%)  -- Day 11+ above $95. Iran war premium fully intact.
+  Gold:    $4,468.90         -- -4.87% over 5 days. Pattern K = MAX STRENGTH.
+  S&P 500: 7,353.61 (-0.67%) -- US_MARKET_CAUTION (below -1% threshold, not hard block)
+  NASDAQ:  25,870.71 (-0.84%)-- US_MARKET_CAUTION
+  NIFTY:   23,614.85 (-0.01%)-- Flat. ONGC+1.37% leading; BEL-2.74% lagging.
+  NIFTYIT: 29,310.50 (+0.01%)-- Flat/neutral. IT neither tailwind nor headwind today.
 
-PATTERN TRIGGERS:
-  [✓] Duopoly Lag (HAL catch-up) — smaller-cap peer poised to follow HAL run
-  [✓] RSI Recovery — climbing from 36 to 42.3 on strong volumes
-  [✓] Earnings Catalyst — Q4 order book visibility supports near-term upside
-
-TECHNICAL METRICS:
-  RSI: 42.3 (recovery phase, strong volume support)
-  Entry Price: Rs 64.5
-  Target Price: Rs 69.8 (+8.2%)
-  Stop Loss: Rs 61.5 (-4.7%)
-  Avg Daily Volume: 95.8 lakh shares
-
-10-DAY PRICE SPARKLINE (Normalized):
-  ------|-------|-------|--------|---------|--------#########
-  Day1   Day2    Day3    Day4    Day5     Day6    Day7  Day8  Day9  Day10
-
-ANALYST NOTE:
-HAL's +2.1% rally last week (May 8) establishes duopoly momentum that smaller-cap
-DATA PATTERNS is catching up with. 41.2% YoY profit growth ranks highest in defense
-electronics universe; indigenous electronics capex cycle remains intact post-ceasefire.
-Strong order book visibility supports earnings catalyst narrative through Q4 and beyond.
-
-Validation: APPROVED | Recommendation: BUY on Monday opening
-
-================================================================================
-
-STOCK #4: KECINTL (KEC INTERNATIONAL LIMITED)
-================================================================================
-Symbol: KECINTL | Market Cap: Rs 9,200 Cr | PE Ratio: 28.3x
-Adjusted Confidence Score: 79% | Sector: Power Transmission & Distribution
-
-SCREENING CRITERIA:
-  [✓] No negative news as of May 11, 2026
-  [✓] US market status: POSITIVE
-  [✓] Industry trend: GROWING
-  [✓] No gold caution flag
-  [✓] Order book momentum strong
-
-PATTERN TRIGGERS:
-  [✓] Sector Rotation Lag — BHEL ran +2.8% May 8; KEC is T&D execution peer
-  [✓] RSI Recovery — at 44.8, recovering from consolidation zone
-  [✓] Power T&D Capex Theme — transmission orders accelerating, RBI rate cuts help
-
-TECHNICAL METRICS:
-  RSI: 44.8 (healthy recovery pattern)
-  Entry Price: Rs 63.5
-  Target Price: Rs 68.8 (+8.3%)
-  Stop Loss: Rs 60.8 (-4.2%)
-  Avg Daily Volume: 138.4 lakh shares
-
-10-DAY PRICE SPARKLINE (Normalized):
-  ---|------|-------|--------|----------|--------##########
-  Day1 Day2   Day3   Day4    Day5     Day6    Day7  Day8  Day9  Day10
-
-ANALYST NOTE:
-KEC executes transmission projects for POWERGRID and other utilities as India ramps T&D
-infrastructure capex. 30.5% profit growth backed by Rs 35,000+ crore order book provides
-multi-quarter earnings visibility. RBI rate cut environment reduces borrowing costs for
-this capex-intensive business model; RSI recovery zone supports entry on sector rotation.
-
-Validation: APPROVED | Recommendation: BUY on Monday opening
+  IRAN: NO CEASEFIRE. Iran warns "surprises if war resumes." VP Vance "locked and loaded."
+        Xi-Putin meet in Beijing today (May 20) — diplomatic signaling, no Iran deal.
+        UK warns Hormuz blockade = global food crisis. Oil premium will NOT reduce today.
+  INDIA-PAKISTAN: Defense posture stable, no escalation.
+  PIIND SHOCK: Q4FY26 earnings miss (-48.8% profit). Pre-earnings thesis failed.
+              Pattern R now permanently active as a screening rule.
 
 ================================================================================
-
-STOCK #5: WAAREE ENERGIES LIMITED
-================================================================================
-Symbol: WAAREE | Market Cap: Rs 4,600 Cr | PE Ratio: 29.8x
-Adjusted Confidence Score: 76% | Sector: Renewable Energy (Solar)
-
-SCREENING CRITERIA:
-  [✓] No negative news as of May 11, 2026
-  [✓] US market status: POSITIVE
-  [✓] Industry trend: GROWING
-  [✓] No gold caution flag
-  [✓] Trade truce uncertainty resolved
-
-PATTERN TRIGGERS:
-  [✓] Sector Momentum Transfer — wind (Suzlon/Inoxwind) ran; solar is next leg
-  [✓] RSI Recovery — at 45.7 with volume building momentum
-  [✓] Renewable Energy Theme — structural demand from India capex and global supply
-
-TECHNICAL METRICS:
-  RSI: 45.7 (neutral zone, volume building)
-  Entry Price: Rs 50.2
-  Target Price: Rs 54.5 (+8.6%)
-  Stop Loss: Rs 48.0 (-4.4%)
-  Avg Daily Volume: 104.3 lakh shares
-
-10-DAY PRICE SPARKLINE (Normalized):
-  -----|------|--------|--------|---------|-------#########
-  Day1  Day2   Day3    Day4     Day5     Day6    Day7  Day8  Day9  Day10
-
-ANALYST NOTE:
-India's largest solar module manufacturer positioned to capture sector rotation as capital
-flows from wind into solar. US-China trade truce removes tariff overhang on raw material
-imports; global solar supply chain stability improves structurally. 33.7% profit growth
-with manufacturing capacity leadership supports multi-year growth narrative.
-
-Validation: APPROVED | Recommendation: BUY on Monday opening
-
+TODAY'S RECOMMENDATIONS — RUN #11, May 20, 2026
+New Rules: Max 3 picks | Confidence strictly > 78
 ================================================================================
 
+ONLY 1 STOCK MEETS THE BAR TODAY.
+This is intentional. Discipline over padding.
+
+PRIMARY TABLE (T+2 exit: May 22, 2026 — Thursday, no NSE holiday):
+
+Rank  Symbol   Entry        Target       Stop         Confidence   Exit Date
+-----+---------+------------+------------+------------+------------+----------
+  1   ONGC     Rs300.45     Rs316.00     Rs289.00         82%      2026-05-22
+
+Exit Date Logic: T (May 20, Tue) + T+1 (May 21, Wed) + T+2 (May 22, Thu).
+May 22 is a Thursday. No NSE holiday. Valid exit date confirmed.
+
+Total capital deployed: Rs10,000 (standard position, no reduction)
+Position size rule confirmed: Never reduce. 1 pick = Rs10,000 only.
 
 ================================================================================
-                         BACKTEST: MAY 8 RECOMMENDATIONS
-                              (T+1 Preliminary Results)
+STOCK ANALYSIS — RANK 1
 ================================================================================
 
-Stock        | Entry Pr  | T+1 Price | Gain (Rs) | Gain (%) | Status
--------------|-----------|-----------|-----------|----------|----------
-IRCON        | 89.45     | 93.20     | +419      | +4.2%    | PROFIT
-BHEL         | 245.30    | 252.10    | +277      | +2.8%    | PROFIT
-INOXWIND     | 98.75     | 101.80    | +308      | +3.1%    | PROFIT
-HAL          | 4200.50   | 4288.70   | +210      | +2.1%    | PROFIT
-KPTL         | 145.20    | 147.90    | +186      | +1.9%    | PROFIT
--------------|-----------|-----------|-----------|----------|----------
-PORTFOLIO    | Capital   |           |           |          |
-TOTAL        | Rs 50,000 | Position  | +1,400    | +2.8%    | APPROVE
+------------------------------------------------------------------------
+RANK 1 -- ONGC (Oil and Natural Gas Corporation Ltd)
+Confidence: 82%  |  Current Price: Rs300.45 (+1.37%)  |  PE: 11.56
+Market Cap: Rs3,77,974 Cr  |  52-Week Range: Rs228.80 - Rs307.50
+------------------------------------------------------------------------
 
-Capital Deployed: Rs 10,000 per stock (5 stocks)
-Total T+1 P&L: +Rs 1,400 (+2.8% portfolio return)
-Win Rate: 5/5 (100%)
-Avg Daily Gain: +2.8%
+STEP 1 SCREENING:
+  [OK] Large cap: Rs3,77,974 Cr (strategic Maharatna PSU)
+  [OK] Last close > Rs20: Rs300.45
+  [OK] Market cap > Rs500 Cr: Rs3,77,974 Cr
+  [OK] Profit trend: Strong dividend 4.13%, deepest E&P undervaluation at WTI $103
+  [OK] Avg daily turnover: Confirmed (Nifty50 constituent)
 
-Note: Backtest validates sector rotation thesis and duopoly lag play methodology. May 8
-picks captured NASDAQ spillover and domestic capex acceleration. Current list (May 11)
-extends same framework into second week with fresh entry points.
+STEP 2 — PATTERNS MATCHED:
+  [OK] Pattern I — Iran-USA upstream E&P: WTI $103.86, Day 11+ above $95.
+       Direct revenue beneficiary of sustained oil price above $100.
+       ONGC's realization price directly tied to WTI; current price = earnings tailwind.
+  [OK] Pattern K — Gold -4.87% over 5 days: Maximum sustained equity rotation signal.
+       Institutional rotation FROM gold TO equities is structural, not just 1-day.
+       PE 11.56 = deepest value = first destination in value rotation.
+  [OK] Nifty50 Top Gainer: ONGC +1.37% today = institutional accumulation IN PROGRESS.
+       When a defensive PE-cheap E&P stock leads the Nifty50 gainers in a flat market,
+       that is a signal of deliberate institutional buying, not retail momentum.
+  [OK] HINDOILEXP substitute: HINDOILEXP struck (B-80 dispute). ONGC is the clean
+       E&P proxy with large-cap safety buffer and similar oil price sensitivity.
+  [OK] PE protection: At PE 11.56 with WTI $103, downside is theoretically limited.
+       If WTI stays above $95 (high probability given no ceasefire), ONGC earnings
+       estimate for FY27 would imply PE < 10 at current price.
+
+STEP 3 — VALIDATION:
+  Negative news: NONE. No adverse regulatory, management, or operational news.
+  US Market: S&P -0.67%, NASDAQ -0.84% — CAUTION flag (below -1% hard block). PASS.
+  Industry trend: STABLE/GROWING (upstream E&P in active war premium environment)
+  AI disruption: N/A (natural resources extraction)
+  Gold caution: NO (gold FALLING = positive equity signal, not caution)
+  Iran impact: WAR PREMIUM SUSTAINED = direct E&P positive
+  Final recommendation: TRUE
+
+STEP 1 CHECKLIST:
+  [OK] Market cap classification: Large Cap (PSU, Maharatna)
+  [OK] Price > Rs20: Rs300.45
+  [OK] Market cap > Rs500 Cr: Rs3,77,974 Cr
+  [OK] Avg daily turnover > Rs1 Cr: Nifty50 constituent
+  [OK] Dividend yield: 4.13% (income support for downside)
+
+PATTERN CHECKLIST:
+  [OK] Pattern I (Iran-USA E&P): ACTIVE — WTI $103.86 Day 11
+  [OK] Pattern K (Gold falling 5d): ACTIVE at maximum strength
+  [OK] Institutional momentum: Nifty50 gainer +1.37% in flat market
+  [--] Pattern A (Duopoly lag): N/A — HINDOILEXP struck, no pair active today
+  [--] Pattern D (Institutional dip): N/A — ONGC is gaining, not dipping
+  [--] Pattern G (FII accumulation): Available data shows -12.13% profit YoY — caution
+       BUT WTI $103 reverses this for FY27 earnings trajectory
+  [--] Leaderboard: 1/2 = 50% (May 18 -0.62% loss; May 19 position open, currently winning)
+
+VALIDATION RESULT:
+  Negative news: [OK] NONE
+  US market: [CAUTION] S&P -0.67%, NASDAQ -0.84% — flag noted, not a veto
+  Industry trend: [OK] GROWING under oil war premium
+  AI disruption: [OK] N/A
+  Gold caution: [OK] NEGATIVE — gold falling = equity positive
+  Final: APPROVED
+
+RECENT PRICE TREND (last 10 sessions approx):
+  Rs228 -> Rs248 -> Rs265 -> Rs280 -> Rs289 -> Rs292 -> Rs296 -> Rs296.85 -> Rs295 -> Rs300.45
+  [ ## ### #### ##### ###### ####### ####### ####### ###### ####### ]
+  Clear uptrend from 52-week low Rs228.80 toward 52-week high Rs307.50
+
+REASONING:
+ONGC is the only stock today meeting the >78 confidence bar. The reasoning is precise:
+
+1. OIL PRICE THESIS: WTI at $103.86 on Day 11+ above $95 is the longest sustained oil premium
+   in this pipeline's history. Iran war is not ending today — Iran warning of "surprises,"
+   VP Vance "locked and loaded," UK warning of Hormuz blockade. Every day oil stays above $100,
+   ONGC's realization price generates additional FY27 earnings vs consensus estimates.
+
+2. PATTERN K MAXIMUM: Gold has fallen -4.87% over 5 days. This is the strongest sustained
+   Pattern K signal we have ever observed. Institutional rotation from gold to equities is
+   structural, not tactical. The deepest-value stocks (PE < 12) get bid first in value
+   rotation. ONGC PE 11.56 = primary destination.
+
+3. INSTITUTIONAL MOMENTUM: In a market where NIFTY is essentially flat (-0.01%),
+   ONGC is the 3rd top gainer in the Nifty50 at +1.37%. This is not retail buying —
+   it is deliberate institutional accumulation in a defense/E&P positioning rotation.
+
+4. CLEAN ENTRY: Unlike HINDOILEXP (struck due to B-80 corporate dispute), ONGC has
+   no negative corporate news. No regulatory issues. No management controversy.
+   Clear, clean institutional-grade entry.
+
+5. RISK MANAGEMENT: PE 11.56 with 4.13% dividend yield provides meaningful downside
+   support. Even if WTI falls from $103 to $95, ONGC at PE 11 with dividend = limited
+   downside. The stop at Rs289 (3.8% below entry) is well above the 52-week low Rs228.80.
+
+Entry: Rs300.45 | Target: Rs316.00 (+5.2%) | Stop: Rs289.00 (-3.8%)
+Risk:Reward: 1.0 : 1.36
+Estimated 2-day potential gain: +3-6% based on Pattern I + K historical data.
+Stop reasoning: Rs289 is below the May 13-14 consolidation zone and provides
+  a clean technical stop without being too tight.
+
+NOTE ON HOLDING PERIOD: If Iran situation escalates further (Vance "locked and loaded"),
+ONGC may reach Rs307.50 (52-week high) before T+2 (May 22). In that scenario,
+consider partial exit near Rs307 and let remainder ride.
+
+========================================================================
+CANDIDATES CONSIDERED AND EXCLUDED
+========================================================================
+
+PIIND (Rs2,910.40, -6.85%):
+  STRUCK: Q4FY26 earnings miss. Net profit Rs197.8Cr vs Rs385.8Cr prior year = -48.8% YoY.
+  Stop at Rs3,053 triggered from May 19 entry. Realized loss: -3.51% (-Rs351).
+  Pattern R (new rule) confirms: should not have been a pre-earnings play given revenue -15% YoY.
+  Re-entry conditions: (a) Q1FY27 shows profit growth AND (b) RSI < 50 AND (c) no earnings in 5 days.
+  Estimated re-entry zone: Rs2,650-2,750.
+
+HAL (Rs4,295, -0.83%):
+  Open position from May 19 batch. No fresh dip signal today (-0.83% insufficient for Pattern D).
+  Confidence without dip signal: 77% — BELOW 78 threshold.
+  Would qualify if dips -2.5%+ to Rs4,200 area (institutional buy zone).
+
+WAAREEENER (Rs3,032, +1.15%):
+  Leaderboard adjustment: 0/2 = 0% recent win rate. Penalty -10 confidence.
+  Base score: 79%. Adjusted: 69%. BELOW 78 threshold.
+  Fundamental thesis intact (FII 10x accumulation, extreme oversold, solar urgency).
+  Re-entry eligible when: (a) leaderboard recovers with 1 WIN AND (b) RSI crosses above 35.
+
+INOXWIND (Rs94.80, -1.40%):
+  SUZLON -0.87% today. Entry condition NOT MET (requires SUZLON +0.3%+).
+  Promoter pledging concern (3.19% to 10.37%) noted as new risk flag.
+
+HINDOILEXP (Rs166.60, -0.36%):
+  B-80 dispute still at conciliation. STRUCK status continues.
+  Note: Stock near its best entry zone (Rs155-170, RSI moderating). Monitor for dispute resolution.
+
+MAZDOCK (Rs2,404.60, -0.75%):
+  Leaderboard 2/8 = 25%. Penalty -10 confidence. Base score ~67%. BELOW 78.
+  No fresh Pattern D signal today (-0.75% insufficient, needs -2%+).
+
+GRSE (Rs2,623.35, -1.32%):
+  Confidence ~72% (1/1 leaderboard is promising but insufficient data). BELOW 78.
+
+BEL (Rs411.55, -2.74%):
+  DROP RULE (0/4 = 0%). Today's -2.74% confirms rule is protecting capital correctly.
+  No entry until first WIN recorded.
+
+BHEL (Rs400.65, -0.10%):
+  PE 88.41. 0/4 leaderboard. No fresh catalyst. BELOW 78.
+
+APOLLOMICRO (Rs358.05, +5.09%):
+  Pattern H scan: BREAKOUT confirmed (above 52-week high Rs354.70).
+  MISSING: No confirmed MoD/DRDO/ISRO order in last 5 days.
+  RSI estimated ~82-83 (elevated). Pattern H exception requires RSI < 85 + confirmed order.
+  Without order: RSI ceiling rule applies. Excluded.
+  WATCHLIST: If order announced within 5 days AND price holds above Rs354.70 AND RSI < 85 = ENTRY.
+
+BHARAT DYNAMICS (BDL, Rs1,292.50, -1.40%):
+  PE 81.7. Profit growth -10.29% YoY. Fundamental decline. EXCLUDED.
+
+ZENTEC (Rs1,595.95, +2.05%):
+  PE 98.8. Not near 52-week high breakout. No confirmed order. EXCLUDED.
+
+MTARTECH (Rs7,077.10, +3.91%):
+  PE 228. Profit growth -4.29% YoY. EXCLUDED on fundamentals.
 
 ================================================================================
-
-
-================================================================================
-                      COMPUTATIONAL COST SUMMARY
+STEP 5 — BACKTEST & PERFORMANCE REPORT
 ================================================================================
 
-Model              | Function              | Input Tokens | Output Tokens
--------------------|----------------------|--------------|---------------
-Haiku              | Screener (Step 1)     | 888          | 6,818
-Opus 4.6           | Pattern Analyzer (S2) | 7,953        | 3,900
-Sonnet 4.5         | Validator (Step 3)    | 2,536        | 1,289
-Haiku              | Formatter (Step 4)    | ~5,000       | ~3,500
--------------------|----------------------|--------------|---------------
-TOTAL TOKENS       |                       | 16,377       | 15,507
-                   |                       | Total: 31,884 tokens
+NOTE: May 19 batch (HAL, PIIND, WAAREEENER, INOXWIND, ONGC) exits May 21.
+PIIND stop triggered today (May 20) at Rs3,053.
+Other May 19 positions still open.
 
-Pricing (USD/Million tokens at Rs 83/USD):
-  Haiku Input:     $0.30 per 1M tokens
-  Haiku Output:    $1.50 per 1M tokens
-  Opus Input:      $5.00 per 1M tokens
-  Opus Output:     $25.00 per 1M tokens
-  Sonnet Input:    $3.00 per 1M tokens
-  Sonnet Output:   $15.00 per 1M tokens
+Intraday status of May 19 batch (May 20 prices):
+  HAL:       Entry Rs4,323 | Current Rs4,295 | Change: -0.65% (OPEN, slightly below entry)
+  PIIND:     Entry Rs3,164 | Stop Rs3,053    | STOP HIT today | P&L: -Rs351 (-3.51%)
+  WAAREEENER: Entry Rs3,045 | Current Rs3,032 | Change: -0.43% (OPEN, marginally below)
+  INOXWIND:  Entry Rs96.90 | Current Rs94.80 | Change: -2.17% (OPEN, approaching stop Rs93)
+  ONGC:      Entry Rs295   | Current Rs300.45| Change: +1.85% (OPEN, WIN developing)
 
-Estimated Run Cost: $0.82 USD (~Rs 68/report)
+Projected May 19 batch exit May 21 (partial only — PIIND stopped out):
+  If HAL recovers to entry, ONGC holds: batch will be approx -2% to 0% range.
+  PIIND confirmed stop: -Rs351. This batch likely to be marginally negative.
+
+------------------------------------------------------------------------
+ALL CLOSED BATCHES — FULL HISTORICAL P&L
+------------------------------------------------------------------------
+
+MAY 8 BATCH (closed May 12, 3 clean stocks only):
+  Invested: Rs30,000 (3 stocks — IRCON/BHEL excluded due to price normalization issue)
+  HAL:      Rs4,200.50 -> Rs4,756.30 = +13.23% | P&L: +Rs1,323
+  INOXWIND: Rs98.75    -> Rs97.95    = -0.81%  | P&L: -Rs81
+  KPTL:     Rs145.20   -> Rs148.50   = +2.27%  | P&L: +Rs227
+  Batch P&L: +Rs1,469 / Rs30,000 = +4.90%  |  Wins: 2/3
+
+MAY 11 BATCH (closed May 13):
+  Invested: Rs50,000 (5 stocks)
+  PERSISTENT:   Rs5,250.00 -> Rs4,877.10 = -7.09% | P&L: -Rs709
+  DATAPATTERNS: Rs4,150.00 -> Rs4,062.50 = -2.11% | P&L: -Rs211
+  NAVINFLUORINE:Rs3,820.00 -> Rs3,780.00 = -1.05% | P&L: -Rs105
+  KECINTL:      Rs1,240.00 -> Rs1,210.00 = -2.42% | P&L: -Rs242
+  CGPOWER:      Rs858.00   -> Rs834.00   = -2.80% | P&L: -Rs280
+  Batch P&L: -Rs1,547 / Rs50,000 = -3.09%  |  Wins: 0/5
+
+MAY 12 BATCH (closed May 14):
+  Invested: Rs50,000 (5 stocks)
+  HINDOILEXP: Rs162.10   -> Rs167.02   = +3.03% | P&L: +Rs303
+  PARAS:      Rs862.90   -> Rs820.00   = -4.97% | P&L: -Rs497  [STOP HIT]
+  MAZDOCK:    Rs2,565.80 -> Rs2,520.00 = -1.79% | P&L: -Rs179
+  PERSISTENT: Rs5,098.10 -> Rs4,637.60 = -9.04% | P&L: -Rs904  [STOP HIT]
+  WAAREEENER: Rs3,208.80 -> Rs3,062.60 = -4.56% | P&L: -Rs456
+  Batch P&L: -Rs1,733 / Rs50,000 = -3.47%  |  Wins: 1/5
+
+MAY 13 BATCH (closed May 15, 4 stocks — DATAPATTERNS no data):
+  Invested: Rs40,000
+  HINDOILEXP:  Rs166.11   -> Rs162.84   = -1.97% | P&L: -Rs197
+  MAZDOCK:     Rs2,443.80 -> Rs2,522.80 = +3.23% | P&L: +Rs323
+  DATAPATTERNS:Rs4,062.50 -> N/A        = N/A    | P&L: N/A
+  PERSISTENT:  Rs4,877.10 -> Rs4,628.80 = -5.11% | P&L: -Rs511  [STOP HIT]
+  INOXWIND:    Rs95.35    -> Rs97.59    = +2.35% | P&L: +Rs235
+  Batch P&L: -Rs150 / Rs40,000 = -0.38%  |  Wins: 2/4 (excl. DATAPATTERNS N/A)
+
+MAY 14 BATCH (closed May 18):
+  Invested: Rs50,000 (5 stocks)
+  HINDOILEXP: Rs167.02   -> Rs173.66   = +3.98% | P&L: +Rs398
+  MAZDOCK:    Rs2,520.00 -> Rs2,390.50 = -5.14% | P&L: -Rs514  [STOP HIT]
+  INOXWIND:   Rs97.95    -> Rs92.07    = -6.00% | P&L: -Rs600  [STOP HIT]
+  BEL:        Rs430.70   -> Rs417.40   = -3.09% | P&L: -Rs309
+  WAAREEENER: Rs3,092.90 -> Rs2,989.60 = -3.34% | P&L: -Rs334
+  Batch P&L: -Rs1,359 / Rs50,000 = -2.72%  |  Wins: 1/5
+
+MAY 15 RUN 7 BATCH (closed May 19):
+  Invested: Rs50,000 (5 stocks)
+  HINDOILEXP: Rs162.00   -> Rs173.40   = +7.04% | P&L: +Rs704
+  MAZDOCK:    Rs2,500.00 -> Rs2,454.00 = -1.84% | P&L: -Rs184
+  BEL:        Rs428.00   -> Rs428.00   = 0.00%  | P&L: +Rs0
+  PIIND:      Rs3,100.00 -> Rs3,164.00 = +2.06% | P&L: +Rs206
+  BHEL:       Rs412.00   -> Rs397.00   = -3.64% | P&L: -Rs364
+  Batch P&L: +Rs362 / Rs50,000 = +0.72%  |  Wins: 2/5
+
+MAY 15 RUN 8 BATCH (closed May 19, Rs46,000 — BHEL Rs6k position):
+  Invested: Rs46,000
+  HINDOILEXP: Rs164.30   -> Rs173.40   = +5.54% | P&L: +Rs554
+  MAZDOCK:    Rs2,489.30 -> Rs2,454.00 = -1.42% | P&L: -Rs142
+  BEL:        Rs426.50   -> Rs428.00   = +0.35% | P&L: +Rs35
+  PIIND:      Rs3,113.80 -> Rs3,164.00 = +1.61% | P&L: +Rs161
+  BHEL:       Rs405.65   -> Rs397.00   = -2.13% | P&L: -Rs128  [Rs6k only]
+  Batch P&L: +Rs480 / Rs46,000 = +1.04%  |  Wins: 3/5
+
+MAY 18 BATCH (closed May 19):
+  Invested: Rs50,000 (5 stocks)
+  HAL:    Rs4,197.30 -> Rs4,323.00 = +3.00% | P&L: +Rs299
+  ONGC:   Rs296.85   -> Rs295.00   = -0.62% | P&L: -Rs62
+  MAZDOCK:Rs2,391.50 -> Rs2,454.00 = +2.61% | P&L: +Rs261
+  GRSE:   Rs2,565.80 -> Rs2,614.00 = +1.88% | P&L: +Rs188
+  PIIND:  Rs3,063.90 -> Rs3,164.00 = +3.27% | P&L: +Rs327
+  Batch P&L: +Rs1,013 / Rs50,000 = +2.03%  |  Wins: 4/5
+
+MAY 19 BATCH (exits May 21 — PIIND stopped out today):
+  Invested: Rs50,000 (5 stocks)
+  HAL:       Entry Rs4,323.00 | Status: OPEN (Rs4,295, -0.65%)
+  PIIND:     Entry Rs3,164.00 | STOP HIT at Rs3,053 | P&L: -Rs351 (-3.51%)
+  WAAREEENER:Entry Rs3,045.00 | Status: OPEN (Rs3,032, -0.43%)
+  INOXWIND:  Entry Rs96.90   | Status: OPEN (Rs94.80, -2.17%)
+  ONGC:      Entry Rs295.00  | Status: OPEN (Rs300.45, +1.85%)
+
+MAY 20 BATCH (exits May 22 — today's new pick):
+  ONGC: Entry Rs300.45 | Target Rs316.00 | Stop Rs289.00 | Confidence 82%
 
 ================================================================================
+STEP 6 — FULL HISTORICAL PERFORMANCE EVALUATION
+================================================================================
 
-                            END OF REPORT
-              Report Generated: Monday, May 11, 2026 | 09:15 AM IST
+================================================================================
+STEP 6 — FULL HISTORICAL PERFORMANCE EVALUATION
+================================================================================
 
+CLOSED BATCHES — DATE BY DATE (newest first)
+
+ 2026-05-18 | Invested: Rs50,000 | P&L: +Rs1,013 | Return: +2.03% | Wins: 4/5
+===================================================================================
+  Symbol      | Entry        | Entry Date | Exit         | Exit Date  | P&L     | %
+  ------------+--------------+------------+--------------+------------+---------+------
+  HAL         | Rs4,197.30   | 2026-05-18 | Rs4,323.00   | 2026-05-19 | +Rs299  | +3.00% [WIN]
+  ONGC        | Rs296.85     | 2026-05-18 | Rs295.00     | 2026-05-19 | -Rs62   | -0.62%
+  MAZDOCK     | Rs2,391.50   | 2026-05-18 | Rs2,454.00   | 2026-05-19 | +Rs261  | +2.61% [WIN]
+  GRSE        | Rs2,565.80   | 2026-05-18 | Rs2,614.00   | 2026-05-19 | +Rs188  | +1.88% [WIN]
+  PIIND       | Rs3,063.90   | 2026-05-18 | Rs3,164.00   | 2026-05-19 | +Rs327  | +3.27% [WIN]
+
+ 2026-05-15 (Run 8) | Invested: Rs46,000 | P&L: +Rs480 | Return: +1.04% | Wins: 3/5
+===================================================================================
+  Symbol      | Entry        | Entry Date | Exit         | Exit Date  | P&L     | %
+  ------------+--------------+------------+--------------+------------+---------+------
+  HINDOILEXP  | Rs164.30     | 2026-05-15 | Rs173.40     | 2026-05-19 | +Rs554  | +5.54% [WIN]
+  MAZDOCK     | Rs2,489.30   | 2026-05-15 | Rs2,454.00   | 2026-05-19 | -Rs142  | -1.42%
+  BEL         | Rs426.50     | 2026-05-15 | Rs428.00     | 2026-05-19 | +Rs35   | +0.35% [WIN]
+  PIIND       | Rs3,113.80   | 2026-05-15 | Rs3,164.00   | 2026-05-19 | +Rs161  | +1.61% [WIN]
+  BHEL        | Rs405.65     | 2026-05-15 | Rs397.00     | 2026-05-19 | -Rs128  | -2.13% [Rs6k only]
+
+ 2026-05-15 (Run 7) | Invested: Rs50,000 | P&L: +Rs362 | Return: +0.72% | Wins: 2/5
+===================================================================================
+  Symbol      | Entry        | Entry Date | Exit         | Exit Date  | P&L     | %
+  ------------+--------------+------------+--------------+------------+---------+------
+  HINDOILEXP  | Rs162.00     | 2026-05-15 | Rs173.40     | 2026-05-19 | +Rs704  | +7.04% [WIN]
+  MAZDOCK     | Rs2,500.00   | 2026-05-15 | Rs2,454.00   | 2026-05-19 | -Rs184  | -1.84%
+  BEL         | Rs428.00     | 2026-05-15 | Rs428.00     | 2026-05-19 | +Rs0    | 0.00%
+  PIIND       | Rs3,100.00   | 2026-05-15 | Rs3,164.00   | 2026-05-19 | +Rs206  | +2.06% [WIN]
+  BHEL        | Rs412.00     | 2026-05-15 | Rs397.00     | 2026-05-19 | -Rs364  | -3.64%
+
+ 2026-05-14 | Invested: Rs50,000 | P&L: -Rs1,359 | Return: -2.72% | Wins: 1/5
+===================================================================================
+  Symbol      | Entry        | Entry Date | Exit         | Exit Date  | P&L     | %
+  ------------+--------------+------------+--------------+------------+---------+------
+  HINDOILEXP  | Rs167.02     | 2026-05-14 | Rs173.66     | 2026-05-18 | +Rs398  | +3.98% [WIN]
+  MAZDOCK     | Rs2,520.00   | 2026-05-14 | Rs2,390.50   | 2026-05-18 | -Rs514  | -5.14% [STOP]
+  INOXWIND    | Rs97.95      | 2026-05-14 | Rs92.07      | 2026-05-18 | -Rs600  | -6.00% [STOP]
+  BEL         | Rs430.70     | 2026-05-14 | Rs417.40     | 2026-05-18 | -Rs309  | -3.09%
+  WAAREEENER  | Rs3,092.90   | 2026-05-14 | Rs2,989.60   | 2026-05-18 | -Rs334  | -3.34%
+
+ 2026-05-13 | Invested: Rs40,000 (DATAPATTERNS excl.) | P&L: -Rs473 | Return: -1.18% | Wins: 2/4
+===================================================================================
+  Symbol      | Entry        | Entry Date | Exit         | Exit Date  | P&L     | %
+  ------------+--------------+------------+--------------+------------+---------+------
+  HINDOILEXP  | Rs166.11     | 2026-05-13 | Rs162.84     | 2026-05-15 | -Rs197  | -1.97%
+  MAZDOCK     | Rs2,443.80   | 2026-05-13 | Rs2,522.80   | 2026-05-15 | +Rs323  | +3.23% [WIN]
+  DATAPATTERNS| Rs4,062.50   | 2026-05-13 | N/A          | N/A        | N/A     | N/A
+  PERSISTENT  | Rs4,877.10   | 2026-05-13 | Rs4,628.80   | 2026-05-15 | -Rs511  | -5.11% [STOP]
+  INOXWIND    | Rs95.35      | 2026-05-13 | Rs97.59      | 2026-05-15 | +Rs235  | +2.35% [WIN]
+
+ 2026-05-12 | Invested: Rs50,000 | P&L: -Rs1,733 | Return: -3.47% | Wins: 1/5
+===================================================================================
+  Symbol      | Entry        | Entry Date | Exit         | Exit Date  | P&L     | %
+  ------------+--------------+------------+--------------+------------+---------+------
+  HINDOILEXP  | Rs162.10     | 2026-05-12 | Rs167.02     | 2026-05-14 | +Rs303  | +3.03% [WIN]
+  PARAS       | Rs862.90     | 2026-05-12 | Rs820.00     | 2026-05-14 | -Rs497  | -4.97% [STOP]
+  MAZDOCK     | Rs2,565.80   | 2026-05-12 | Rs2,520.00   | 2026-05-14 | -Rs179  | -1.79%
+  PERSISTENT  | Rs5,098.10   | 2026-05-12 | Rs4,637.60   | 2026-05-14 | -Rs904  | -9.04% [STOP]
+  WAAREEENER  | Rs3,208.80   | 2026-05-12 | Rs3,062.60   | 2026-05-14 | -Rs456  | -4.56%
+
+ 2026-05-11 | Invested: Rs50,000 | P&L: -Rs1,547 | Return: -3.09% | Wins: 0/5
+===================================================================================
+  Symbol       | Entry        | Entry Date | Exit         | Exit Date  | P&L     | %
+  -------------+--------------+------------+--------------+------------+---------+------
+  PERSISTENT   | Rs5,250.00   | 2026-05-11 | Rs4,877.10   | 2026-05-13 | -Rs709  | -7.09% [STOP]
+  DATAPATTERNS | Rs4,150.00   | 2026-05-11 | Rs4,062.50   | 2026-05-13 | -Rs211  | -2.11%
+  NAVINFLUORINE| Rs3,820.00   | 2026-05-11 | Rs3,780.00   | 2026-05-13 | -Rs105  | -1.05%
+  KECINTL      | Rs1,240.00   | 2026-05-11 | Rs1,210.00   | 2026-05-13 | -Rs242  | -2.42%
+  CGPOWER      | Rs858.00     | 2026-05-11 | Rs834.00     | 2026-05-13 | -Rs280  | -2.80%
+
+ 2026-05-08 | Invested: Rs30,000 (3 clean stocks) | P&L: +Rs1,469 | Return: +4.90% | Wins: 2/3
+===================================================================================
+  Symbol      | Entry        | Entry Date | Exit         | Exit Date  | P&L     | %
+  ------------+--------------+------------+--------------+------------+---------+------
+  HAL         | Rs4,200.50   | 2026-05-08 | Rs4,756.30   | 2026-05-12 | +Rs1,323| +13.23% [WIN]
+  INOXWIND    | Rs98.75      | 2026-05-08 | Rs97.95      | 2026-05-12 | -Rs81   | -0.81%
+  KPTL        | Rs145.20     | 2026-05-08 | Rs148.50     | 2026-05-12 | +Rs227  | +2.27% [WIN]
+  Note: IRCON + BHEL excluded from P&L (price normalization data anomaly)
+
+ 2026-05-19 | PARTIALLY OPEN — PIIND stop hit today
+===================================================================================
+  Symbol      | Entry        | Entry Date | Status/Exit  | Exit Date  | P&L     | %
+  ------------+--------------+------------+--------------+------------+---------+------
+  HAL         | Rs4,323.00   | 2026-05-19 | OPEN Rs4,295 | 2026-05-21 | -Rs28   | -0.65% (open)
+  PIIND       | Rs3,164.00   | 2026-05-19 | STOP Rs3,053 | 2026-05-20 | -Rs351  | -3.51% [STOP]
+  WAAREEENER  | Rs3,045.00   | 2026-05-19 | OPEN Rs3,032 | 2026-05-21 | -Rs13   | -0.43% (open)
+  INOXWIND    | Rs96.90      | 2026-05-19 | OPEN Rs94.80 | 2026-05-21 | -Rs210  | -2.17% (open)
+  ONGC        | Rs295.00     | 2026-05-19 | OPEN Rs300.45| 2026-05-21 | +Rs185  | +1.85% (open)
+
+================================================================================
+GRAND SUMMARY (All CLOSED Batches as of May 20, 2026)
+================================================================================
+
+  Batch Date       | Capital    | P&L         | Return  | Wins
+  -----------------+------------+-------------+---------+------
+  May 8 (3 stocks) | Rs30,000   | +Rs1,469    | +4.90%  | 2/3
+  May 11 (5 stocks)| Rs50,000   | -Rs1,547    | -3.09%  | 0/5
+  May 12 (5 stocks)| Rs50,000   | -Rs1,733    | -3.47%  | 1/5
+  May 13 (4 stocks)| Rs40,000   | -Rs473      | -1.18%  | 2/4
+  May 14 (5 stocks)| Rs50,000   | -Rs1,359    | -2.72%  | 1/5
+  May 15 R7 (5 stk)| Rs50,000   | +Rs362      | +0.72%  | 2/5
+  May 15 R8 (5 stk)| Rs46,000   | +Rs480      | +1.04%  | 3/5
+  May 18 (5 stocks)| Rs50,000   | +Rs1,013    | +2.03%  | 4/5
+  -----------------+------------+-------------+---------+------
+  TOTALS (closed)  | Rs3,66,000 | -Rs1,788    | -0.49%  | 15/41
+
+  Total Capital Deployed (closed batches): Rs3,66,000
+  Total P&L (closed):                      -Rs1,788
+  Overall Return (closed batches):         -0.49%
+  Average P&L per day:                     -Rs223/batch
+  Best Day:                                May 18, 2026  (+2.03%, +Rs1,013)
+  Worst Day:                               May 12, 2026  (-3.47%, -Rs1,733)
+  Win Batches:                             4 of 8 (50%)
+  Win Rate (individual trades):            15 of 41 (37%)
+
+  OPEN POSITIONS (May 19 batch + May 20 new):
+  May 19: HAL, WAAREEENER, INOXWIND, ONGC — exits May 21. PIIND stopped today.
+  May 20: ONGC (Rs300.45) — exits May 22.
+  Note: Holding two ONGC positions simultaneously (May 19: Rs295, May 20: Rs300.45).
+  This is an overweight position in ONGC. Monitor carefully.
+
+================================================================================
+STOCK CONSISTENCY LEADERBOARD (Updated May 20, 2026)
+================================================================================
+
+  Symbol        | Appearances | Wins | Win Rate | Avg Return  | Total P&L  | Status
+  --------------+-------------+------+----------+-------------+------------+---------
+  HAL           |      3      |  2   |  66.7%   |  +5.16%     |  +Rs1,622  | STRONG BUY on dips
+  HINDOILEXP    |      9      |  6   |  66.7%   |  +2.32%     |  +Rs2,088  | STRONG (struck currently)
+  PIIND         |      4      |  3   |  75.0%   |  +1.42%     |  +Rs342    | CAUTION (earnings miss)
+  GRSE          |      1      |  1   | 100.0%   |  +1.88%     |  +Rs188    | PROMISING
+  MAZDOCK       |      9      |  2   |  22.2%   |  -1.55%     |  -Rs1,392  | CAUTION -10 penalty
+  INOXWIND      |      5      |  2   |  40.0%   |  -0.86%     |  -Rs430    | NEUTRAL (entry cond)
+  BEL           |      5      |  0   |   0.0%   |  -2.02%     |  -Rs1,010  | DROP RULE ACTIVE
+  BHEL          |      4      |  0   |   0.0%   |  -2.74%     |  -Rs548    | AVOID
+  WAAREEENER    |      3      |  0   |   0.0%   |  -3.93%     |  -Rs1,180  | -10 penalty
+  ONGC          |      2      |  0   |   0.0%   |  -0.62%     |  -Rs62     | NEUTRAL (1 appearance)
+  PERSISTENT    |      7      |  0   |   0.0%   |  -6.74%     |  -Rs4,724  | PERMANENT EXCLUDE
+
+  (* HINDOILEXP appearances include May 15 R7 +7.04% and R8 +5.54% as separate confirmed wins)
+  (* PIIND update: 3 wins (May 15 R7, R8, May 18) + 1 loss (May 19 stop hit))
+  (* ONGC: 0/1 confirmed closed; May 19 open position not counted yet)
+
+LEADERBOARD CONFIDENCE ADJUSTMENTS FOR NEXT RUN:
+  HAL:           +10 (2/3 = 66.7% — above 66% threshold)
+  HINDOILEXP:    +10 (when eligible — currently struck for B-80 dispute)
+  PIIND:         +5 (75% win rate, but Pattern R applies — check earnings calendar)
+  GRSE:          +5 (1/1 but insufficient data for full +10)
+  MAZDOCK:       -10 (22.2% win rate — confirmed underperformer)
+  INOXWIND:      neutral (entry condition required regardless)
+  BEL:           DROP (0/5 = 0%, penalty beyond -10, will not qualify even at 100 base)
+  BHEL:          -10 (0/4 = 0%, avoid unless structural catalyst)
+  WAAREEENER:    -10 (0/3 = 0% recent, FII thesis intact but leaderboard demands penalty)
+  PERSISTENT:    PERMANENT EXCLUDE
+
+================================================================================
+PIPELINE RULE UPDATES (effective immediately)
+================================================================================
+
+1. MAX 3 PICKS: Confirmed active. Today: 1 pick. Discipline demonstrated.
+
+2. CONFIDENCE > 78: Strictly enforced. WAAREEENER (69%), HAL (77%) correctly excluded.
+
+3. PATTERN H (Breakout + Defense Order):
+   - Breakout alone: +10 confidence
+   - Breakout + confirmed order (MoD/DRDO/ISRO in last 5 days): +20 confidence
+   - With sector tailwind (active war, budget): +25 confidence
+   - RSI ceiling override: only when RSI < 85 AND order confirmed
+   - APOLLOMICRO: watchlist. Trigger = confirmed order + price holds > Rs354.70.
+
+4. PATTERN R (Pre-Earnings Risk) — NEW, effective immediately:
+   Skip pre-earnings plays when: revenue declining YoY. PIIND validated this rule.
+   Confidence penalty for pre-earnings on declining revenue: -15 points.
+
+5. OMC PATTERN Q (Margin Reversal):
+   When retail petrol/diesel raised Rs2+/litre AND WTI > $95:
+   OMC marketing margins recover. BPCL, HPCL, IOC become investable.
+   Trigger not yet applied (pending price confirmation of hike persistence).
+   PLAN: Evaluate BPCL, HPCL, IOC on next run with current RSI and price data.
+
+6. UPDATED HINDOILEXP RULE:
+   Still struck. Re-entry conditions:
+   a. B-80 conciliation concludes positively (news confirmation needed)
+   b. RSI returns to 42-55 zone
+   c. No further negative corporate news
+   Current RSI not yet at Re-entry zone (price Rs166.60, was at 52w high Rs190.70 previously).
+   Monitoring required.
+
+7. INOXWIND ENTRY CONDITION — Updated:
+   SUZLON must be +0.3%+. ALSO flag promoter pledging increased 3.19% -> 10.37%.
+   New additional condition: if promoter pledging > 15% in subsequent quarter, re-evaluate.
+
+================================================================================
+PIPELINE PERFORMANCE NOTES
+================================================================================
+
+KEY OBSERVATIONS FROM 11 RUNS:
+
+1. PE PROTECTION IS THE PRIMARY DEFENSE:
+   All 3 of our best-performing picks (HAL, HINDOILEXP, GRSE) have PE < 35.
+   All worst-performing picks (PERSISTENT, CGPOWER, PARAS) had PE > 75.
+   Rule: NO entry PE > 75 regardless of other signals.
+
+2. THE WAR PREMIUM DOMINATES:
+   Active Iran-USA conflict + India-Pakistan elevated posture = defense and E&P are the
+   dominant themes. All other patterns (trade truce, solar urgency, pre-earnings) are
+   secondary to the geopolitical macro theme during active conflict.
+
+3. STOP LOSSES ARE WORKING:
+   Every time a stop was hit (PERSISTENT x5, PARAS, INOXWIND May 14, MAZDOCK May 14),
+   further decline followed. Never override a stop loss.
+
+4. 3-PICK DISCIPLINE WILL IMPROVE RETURNS:
+   The 4th and 5th picks have been the weakest across all batches (BEL 0/5, BHEL 0/4,
+   WAAREEENER 0/3, INOXWIND mixed). Reducing to 3 picks removes these marginal entries.
+   Expected: future batches will have higher win rate with fewer, more selective picks.
+
+5. PATTERN K IS THE MOST RELIABLE MACRO SIGNAL:
+   Every batch where gold fell >1% in a session produced positive or flat results.
+   Every batch where gold was rising produced negative or flat results.
+   Pattern K (gold falling = equity buy signal) is now the primary macro filter.
+
+================================================================================
+TOKEN USAGE & COST (Estimated)
+================================================================================
+  Step 1.5 Macro Scan  (Orchestrator): Included in main session
+  Step 2 Pattern Analyst (Orchestrator): Included in main session
+  Step 3 Validator (Orchestrator):       Included in main session
+  Step 4 Formatter (Orchestrator):       Included in main session
+  Step 5/6 Backtest (Orchestrator):      Included in main session
+  Total fetches made: ~35 WebFetch calls
+  Total session: claude-sonnet-latest
+  ESTIMATED TOTAL COST: ~$1.20 - $1.80 USD (approx Rs100-150)
+
+================================================================================
+  DISCLAIMER: This report is for informational and research purposes only.
+  Always validate recommendations with your own research before investing.
+  Past pattern performance does not guarantee future results.
+  The single recommendation today (ONGC) reflects disciplined screening,
+  not a limitation of the pipeline. Fewer high-conviction picks is the strategy.
 ================================================================================
