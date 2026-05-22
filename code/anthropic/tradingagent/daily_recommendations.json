@@ -735,5 +735,200 @@
       "key_learning": "Pattern H requires BOTH breakout AND confirmed defense order. Without order confirmation, RSI ceiling rule takes precedence. APOLLOMICRO situation: textbook case where the breakout happened but order confirmation was the missing trigger. If MoD order announced, APOLLOMICRO becomes immediate entry candidate at RSI < 85.",
       "new_pattern_R": "Pattern R — Pre-Earnings Risk Management: Only take pre-earnings positioning when (1) last 2 quarters showed profit growth, (2) revenue trajectory is upward, (3) management guidance positive. PIIND violated rule 2 (revenue -15% YoY was already flagged). Correct decision: skip pre-earnings plays on declining-revenue trajectories regardless of trade catalyst. First occurrence: PIIND May 19 = stop hit from Rs3,164 to Rs3,053."
     }
+  },
+  {
+    "date": "2026-05-22",
+    "run_number": "13v2",
+    "note": "Friday run (v2 RELAXED RULES). T+2 exit constraint DROPPED -- each pick has its own optimal holding window. Leaderboard penalties DROPPED (T+2 losses irrelevant for swing holds). RSI ceiling relaxed to >82 only. Earnings timing discount DROPPED. 3 picks qualify at >78% confidence. SUZLON added as new pick (pre-Q4-results positioning, ROE 46%, 195 MW confirmed order). HINDOILEXP re-entered (B-80 dispute: third-party resale started = acute risk diminished). INOXWIND dropped in favour of SUZLON (same sector, SUZLON is primary catalyst holder). All monetary values in Rs Lakh format.",
+    "rule_changes_v2": {
+      "t2_constraint": "DROPPED -- each pick specifies own optimal holding window",
+      "leaderboard_penalties": "DROPPED -- informational only",
+      "rsi_ceiling": "RELAXED to >82 hard exclude (was >75)",
+      "earnings_timing_discount": "DROPPED -- pre-results positive thesis is a catalyst",
+      "monetary_format": "Rs Lakh (Rs 10,000 = Rs 0.10 Lakh)"
+    },
+    "recommendations": [
+      "SUZLON",
+      "WAAREEENER",
+      "HINDOILEXP"
+    ],
+    "entry_prices": {
+      "SUZLON": 53.25,
+      "WAAREEENER": 3054.20,
+      "HINDOILEXP": 168.00
+    },
+    "targets": {
+      "SUZLON": 60.00,
+      "WAAREEENER": 3400.00,
+      "HINDOILEXP": 178.00
+    },
+    "stop_losses": {
+      "SUZLON": 50.50,
+      "WAAREEENER": 2900.00,
+      "HINDOILEXP": 158.00
+    },
+    "optimal_exit_windows": {
+      "SUZLON": "2026-05-27 (T+4, Tuesday) -- holds through Q4 results May 25 + post-results session",
+      "WAAREEENER": "2026-06-01 to 2026-06-04 (T+7 to T+10 swing) -- FII accumulation + US-China solar thesis",
+      "HINDOILEXP": "2026-05-29 to 2026-06-02 (T+5 to T+8) -- catalyst-dependent (conciliation outcome)"
+    },
+    "t2_exit_date": "2026-05-27",
+    "t2_exit_prices": {
+      "SUZLON": null,
+      "WAAREEENER": null,
+      "HINDOILEXP": null
+    },
+    "confidence_scores": {
+      "SUZLON": 92,
+      "WAAREEENER": 92,
+      "HINDOILEXP": 83
+    },
+    "target_return_pct": {
+      "SUZLON": "+12.7% to exit Rs 60.00",
+      "WAAREEENER": "+11.3% to Rs 3,400 (near-term); +14.7% to Rs 3,500 (extended)",
+      "HINDOILEXP": "+5.9% to Rs 178 (dispute resolution); +10.1% to Rs 185 (full recovery)"
+    },
+    "patterns": {
+      "SUZLON": [
+        "Pattern J (News Catalyst): 195 MW confirmed repeat order from Sunsure",
+        "Pre-results positioning: Q4 board meeting May 25; trading window closed",
+        "Fundamental quality: ROE 46%, ROCE 36.2%, nearly debt-free (Rs 36 Cr)",
+        "9 GW platform milestone = sector re-rating narrative",
+        "PE 23.3 = reasonable for market leader at scale",
+        "52w low Rs 38.20 = significant floor protection (28% below current)"
+      ],
+      "WAAREEENER": [
+        "Pattern G MAXIMUM (FII 10x accumulation: 0.70% to 7.06% in 1 year = highest ever in pipeline)",
+        "NEWS CATALYST: US anti-China solar policy = direct structural beneficiary",
+        "Singapore analyst roadshow May 18-19 = institutional interest confirmed",
+        "Waaree Semicon acquisition May 15 = semiconductor upstream integration",
+        "Largest non-Chinese solar module manufacturer globally",
+        "FY26: Revenue Rs 20,991 Cr, Profit Rs 3,762 Cr, ROE 35.4%, ROCE 42.8%",
+        "RSI ~35-42 recovering from extreme oversold (RSI 20.5 on May 18)",
+        "52w high Rs 3,865 = 27% above current price"
+      ],
+      "HINDOILEXP": [
+        "Pattern I (E&P): WTI $97 above $95 = upstream oil revenue intact",
+        "PE 12.6 = deepest undervaluation in E&P universe",
+        "B-80 DISPUTE UPDATE: third-party crude resale started = workaround found; acute risk diminished",
+        "Nearly debt-free (Rs 50 Cr borrowings only)",
+        "Historical consistency: 63% T+2 win rate = informational positive",
+        "TTM Revenue growth +42%"
+      ]
+    },
+    "macro_context": {
+      "wti_crude": "$97.23 (+0.91%) — Iran deal hopes reducing war premium; above $95 (Pattern I partially active)",
+      "brent_crude": "$104.09 (+1.47%)",
+      "gold": "$4,528 (-0.32%) — mild decline, not a caution signal",
+      "sp500_futures": "7,491 (+0.33%) — positive US backdrop",
+      "nifty": "23,766 (+0.47%) — broad market positive",
+      "suzlon_results": "Q4 board meeting May 25; 195 MW repeat order confirmed; 9 GW milestone approaching",
+      "hindoilexp_update": "B-80 dispute: third-party crude resale started = operational workaround found",
+      "waaree_catalyst": "US anti-China solar policy + Singapore analyst roadshow + Waaree Semicon acquisition"
+    },
+    "exclusions": {
+      "INOXWIND": "Valid thesis but SUZLON covers same sector with primary catalyst (195 MW order holder). High correlation risk if both included. SUZLON preferred over INOXWIND as direct catalyst play.",
+      "ONGC": "Q4 FY26 preview: profit dip expected. 0/3 historical. Iran deal reducing E&P premium. HINDOILEXP covers E&P theme better.",
+      "HAL": "RSI 58-62 = above ideal entry. FII declining. Not a dip entry day. Confidence 72%.",
+      "MAZDOCK": "BrahMos Vietnam buzz unconfirmed. No Pattern D dip. Confidence 68%.",
+      "GRSE": "Elara Capital SELL target Rs2,230 vs price Rs2,705.",
+      "BEL": "DROP RULE: 0/4 win rate. Re-enter after first WIN.",
+      "PERSISTENT": "PERMANENT EXCLUDE.",
+      "CGPOWER": "PERMANENT EXCLUDE.",
+      "ALL_OMC_REFINERS": "WTI $97 above $95 = retail margin rule active."
+    }
+  },
+  {
+    "date": "2026-05-21",
+    "run_number": 12,
+    "note": "Wednesday run. Iran 'final stages of deal' news = war premium reducing. US markets strong (+1.54% NASDAQ May 20, +1.08% S&P 500). GIFT Nifty +135pts. Nikkei +3.58%. Only 2 picks meet 78% confidence threshold. APOLLOMICRO revised to RSI 84-86 = still excluded (updated Pattern H ceiling to 82 from 85). May 19 batch exits today (T+2): HAL estimated +1.81% WIN, ONGC -1.33% LOSS, WAAREEENER flat/slight loss, INOXWIND flat, PIIND stop hit May 20. Leaderboard updates applied.",
+    "recommendations": [
+      "ONGC",
+      "INOXWIND"
+    ],
+    "entry_prices": {
+      "ONGC": 296.45,
+      "INOXWIND": 96.56
+    },
+    "targets": {
+      "ONGC": 312.00,
+      "INOXWIND": 103.00
+    },
+    "stop_losses": {
+      "ONGC": 285.00,
+      "INOXWIND": 91.50
+    },
+    "t2_exit_date": "2026-05-23",
+    "t2_exit_prices": {
+      "ONGC": null,
+      "INOXWIND": null
+    },
+    "confidence_scores": {
+      "ONGC": 80,
+      "INOXWIND": 80
+    },
+    "patterns": {
+      "ONGC": [
+        "Pattern I (WTI $99.07 above $95 — reduced but still active)",
+        "PE 9.87 extreme undervaluation — deepest in E&P universe",
+        "Analyst targets: Rs320 (Kotak), Rs360 (Jefferies), Rs320+ (JM Financial) — all above price",
+        "CLSA 44% upside potential",
+        "Royalty cut to 12.5% = structural margin improvement not priced in",
+        "US markets strong +1.54% NASDAQ = risk-on for large-cap PSU",
+        "Broad market signal: GIFT Nifty +135pts, Nikkei +3.58% = +5 boost"
+      ],
+      "INOXWIND": [
+        "Pattern A (SUZLON +0.82% today = entry condition MET)",
+        "Pattern G (FII increasing 13.37% -> 14.61% = 2 consecutive quarters increasing)",
+        "127% TTM profit growth = sector-best growth fundamentals",
+        "High oil ($99+) = structural push for renewables = sector tailwind",
+        "52-week low Rs75.05 = significant floor protection",
+        "SUZLON Q4 results positive anticipation = sector sentiment positive",
+        "US markets strong = risk-on for growth mid-caps",
+        "Broad market signal: GIFT Nifty +135pts = +5 boost"
+      ]
+    },
+    "macro_context": {
+      "wti_crude": "$99.07 (+0.82%) — Iran deal 'final stages'; oil pulling back from $103 peak",
+      "gold": "$4,536.90 (+0.08%) — Pattern K no longer firing; neutral",
+      "sp500_may20": "7,433.00 (+1.08%) — strong US session",
+      "nasdaq_may20": "26,270.36 (+1.54%) — strong, near 52-week high",
+      "nifty_may21": "23,830.05 (+0.72%) — positive opening",
+      "gift_nifty": "Up 135 points — bullish pre-market signal",
+      "nikkei": "+3.58% — massive Asian positive cue",
+      "niftyit": "Analyst caution: 'returns may stay capped'",
+      "iran_usa": "Trump in 'final stages' of Iran deal per Yahoo Finance. Iran demands: lifted blockades, sanctions removal, frozen assets. No deal SIGNED yet. War premium reducing.",
+      "india_open_positions_expiry": "May 19 batch expires today (T+2 = May 21): HAL +1.81%, ONGC -1.33%, WAAREEENER flat, INOXWIND flat, PIIND stop hit May 20",
+      "key_signal": "Broad market positive (US, Asia, India pre-open) = supportive backdrop for today's picks"
+    },
+    "exclusions": {
+      "HAL": "RSI elevated (56-62). FII declining 12% to 10.21%. Iran deal reducing defense war premium. Open position exits today — not a fresh buy signal at current elevated levels.",
+      "APOLLOMICRO": "RSI 84-86 EXCEEDS updated Pattern H ceiling (revised to 82 from 85). At 52-week high with massive volume. No confirmed MoD order. RSI ceiling = hard exclude. Watchlist: enter at Rs295-320 (RSI pullback to 55-65 zone).",
+      "WAAREEENER": "Leaderboard 0/2 = 0%. Confidence 79% - 10 (penalty) = 69% < 78 threshold. Extraordinary thesis intact but T+2 framework not working yet. Target re-entry at Rs2,750-2,850.",
+      "HINDOILEXP": "B-80 HPCL dispute unresolved. STRIKE continues. Re-entry when dispute resolved.",
+      "MAZDOCK": "Leaderboard 2/8 = 25%. No Pattern D dip signal today (+1.28%). Confidence below 78.",
+      "GRSE": "Elara Capital SELL target Rs2,230 vs price Rs2,704 = Rule 3 (analyst target below price). Excluded.",
+      "BEL": "DROP RULE (0/4 = 0%). +2.26% today confirms rule correct.",
+      "BHEL": "Leaderboard 0/4 = 0%. No fresh catalyst. PE 89.5 high.",
+      "PIIND": "Q4 FY26 earnings miss -48.8%. Revenue declining. Stop hit May 20. In recovery mode — no re-entry until Q1 FY27 revenue recovery confirmed.",
+      "PERSISTENT": "PERMANENT HARD EXCLUDE.",
+      "CGPOWER": "PERMANENT HARD EXCLUDE.",
+      "ALL_OMC_REFINERS": "WTI $99 still above $95 = OMC margin rule active until retail prices raised further (Pattern Q not yet triggered).",
+      "IDEAFORGE": "RSI declining, small-cap, check next run."
+    },
+    "may19_batch_exits_today": {
+      "note": "T+2 exit date = May 21 for May 19 batch",
+      "HAL": {"entry": 4323.00, "estimated_exit": 4401.30, "estimated_pnl_pct": 1.81, "status": "WIN_ESTIMATED"},
+      "PIIND": {"entry": 3164.00, "stop_hit_exit": 3053.00, "pnl_pct": -3.51, "status": "STOP_HIT_MAY20"},
+      "WAAREEENER": {"entry": 3045.00, "estimated_exit": 3020.00, "estimated_pnl_pct": -0.82, "status": "SMALL_LOSS_ESTIMATED"},
+      "INOXWIND": {"entry": 96.90, "estimated_exit": 96.56, "estimated_pnl_pct": -0.35, "status": "NEAR_FLAT_ESTIMATED"},
+      "ONGC": {"entry": 300.45, "estimated_exit": 296.45, "estimated_pnl_pct": -1.33, "status": "LOSS_ESTIMATED"}
+    },
+    "retrospective_miss_analysis": {
+      "scope": "Stocks that gained +8%+ on May 19-20 NOT in recommendations",
+      "apollomicro_confirmed_miss": "APOLLOMICRO: Rs327.40 (May 19) -> Rs369.90 (May 21) = +12.97% over 3 days. CONFIRMED MISS > 8%. Root cause: RSI 75.4 (Pattern B ceiling) + analyst target Rs290 < price Rs327 (Rule 3) prevented entry May 19. Pattern H refinement: 2+ sector catalysts can substitute for specific MoD order when RSI 75-82 (not 84+). APOLLOMICRO RSI 75.4 on May 19 was within the exception window. The miss was primarily due to strict 'confirmed order' requirement. Pattern H revised to require 2+ active sector catalysts as alternative to specific order confirmation.",
+      "no_other_8pct_miss": "No other stock in our universe gained +8%+ on May 19-20 (RIL +3% was not in universe).",
+      "key_learning": "Pattern H revised — confirmed government order OR 2+ active sector catalysts with RSI 75-82 + breakout + volume 2x = valid entry. RSI > 82 = still hard exclude regardless."
+    }
   }
 ]

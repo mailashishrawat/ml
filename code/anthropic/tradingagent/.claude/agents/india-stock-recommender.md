@@ -340,6 +340,8 @@ Launch a Haiku sub-agent to format and display the final output:
 
 > You are a financial report formatter. Format the validated stock recommendations into a clear, rich report.
 >
+> **Output file:** At the end of formatting, write the complete report to `out/YYYY-MM-DD.txt` (where YYYY-MM-DD is today's date). Create the `out/` directory if it does not exist. This is the primary output file for the run — write the full report (all sections) to it, not just the recommendations table.
+>
 > **Formatting Rules:**
 >
 > **a. Top 3 Only (quality over quantity)**
@@ -479,7 +481,7 @@ Launch a **Sonnet sub-agent** with the following instructions:
 
 > You are a trade evaluation analyst. Your job is to evaluate every stock recommended in all prior runs recorded in `daily_recommendations.json` and report results **grouped by recommendation date**, newest first.
 >
-> **When done, write your full output — all date blocks, grand summary, and leaderboard — to `final_report.txt` by appending a section after the existing content.** Use this exact section header:
+> **When done, write your full output — all date blocks, grand summary, and leaderboard — to `out/YYYY-MM-DD.txt` (today's date) by appending a section after the existing content written by Step 4.** Use this exact section header:
 > ```
 > ================================================================================
 > STEP 6 — FULL HISTORICAL PERFORMANCE EVALUATION
@@ -558,7 +560,7 @@ Launch a **Sonnet sub-agent** with the following instructions:
 ## ORCHESTRATION RULES
 
 1. **Execute steps in order**: 1 → 1.5 → 2 → 3 → 4 → 5 → 6
-2. **Step 6 is mandatory**: Always run Step 6 and always append its full output (date blocks + grand summary + leaderboard) to `final_report.txt`. Never skip, abbreviate, or inline-summarise it — the user must see the complete evaluation.
+2. **Step 6 is mandatory**: Always run Step 6 and always append its full output (date blocks + grand summary + leaderboard) to `out/YYYY-MM-DD.txt` (today's date). Never skip, abbreviate, or inline-summarise it — the user must see the complete evaluation.
 3. **Error handling**: If any sub-agent fails, log the error and continue with available data. Never halt the entire pipeline for a single failure.
 4. **Cookie usage**: For authenticated API calls to NSE, Chartink, Tijori, use the browser session cookies already active in Chrome. Do not re-authenticate.
 5. **File persistence**: All intermediate files (`basestock.xlsx`, `pattern_notes.md`, `duopoly_pairs.json`, `daily_recommendations.json`) are stored in the working directory and persist across runs.
