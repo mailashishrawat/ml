@@ -1748,11 +1748,6 @@
       "BEL": "INVALID_RULE_26D + LOW_VOLATILITY_RULE_26E — downtrend not confirmed reversed AND 1-year return ~+3% indicates fewer than 40 high-volatility days in last 252 sessions; structurally incompatible with 5%/day target. V-bounce then sharp pullback, below all prior highs. Do not use entry price Rs 422.75. WATCHLIST only: enter above Rs 436 (prior swing high) on volume >= 1.5x avg AND after confirming High_Vol_Day_Count_252 >= 40.",
       "NTPCGREEN": "WATCH — double bottom at Rs 84 is consistent with Rule 26d Condition B (base formation). Verify on chart that Rs 84 low holds and higher lows are forming. If confirmed, entry zone Rs 100-105 remains valid."
     },
-    "recommendations": [
-      "BPCL",
-      "BEL",
-      "NTPCGREEN"
-    ],
     "entry_prices": {
       "BPCL": 304.6,
       "BEL": 422.75,
