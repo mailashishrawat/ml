@@ -1,6 +1,6 @@
 ---
 name: feedback-breakout-pattern
-description: Pattern H breakout/defense order momentum + Rule 26 chart confirmation — chart structure must validate fundamental thesis before entry; falling knife, distribution, and double-top rules
+description: Pattern H breakout/defense order momentum + Rule 26 chart confirmation — chart structure must validate fundamental thesis before entry; falling knife, distribution, double-top, and active downtrend rules
 type: feedback
 ---
 
@@ -41,14 +41,38 @@ A fundamental catalyst (FII accumulation, news catalyst, earnings growth) alone 
 - Confidence adjustment: double-top present = -15 confidence. Show as CONDITIONAL entry in report.
 - HINDOILEXP example: Strong uptrend Rs 120 -> Rs 172-173 (March-May 2026), then double-top rejection at Rs 172-173. Entry conditional: only valid if Rs 173 breaks on volume.
 
+### Sub-Rule 26d: Active Downtrend Disqualification (NEW — added 2026-05-27)
+
+**Why Rule 26d was added:** On May 27, 2026, the agent recommended BEL (84%) and BPCL (82%) based on fundamental narratives (BEL: Q4 PAT +41%, FII 19.5%; BPCL: PE 5.68, Pattern Q margin reversal, "cup-and-handle"). The user reviewed both charts and found active downtrends with no confirmed reversals. The agent had described pattern labels that fit a bullish narrative but were not accurate to the current price action. BEL showed a V-bounce off lows followed by sharp pullback — still below all prior highs. BPCL showed a staircase downtrend; the "cup" right rim (Rs 304) was 22% below the left rim (Rs 391) — that is a downtrend channel, not a cup. Both picks are retroactively invalidated.
+
+**The Rule:**
+Before recommending ANY stock as a buy, the price action must show AT MINIMUM ONE of:
+1. Price has closed above a prior swing high (trend change confirmation — first higher high after a downtrend).
+2. At least 2-3 weeks of sideways consolidation above support with no new lows (base formation).
+3. Higher lows AND higher highs sequence established on the daily chart (at least 2 higher lows + 1 higher high).
+
+If a stock is in an active downtrend (lower highs, lower lows) with NONE of the three conditions met: it MUST NOT be recommended. Label it "WAIT — downtrend not confirmed reversed" and add to WATCHLIST with the specific price that would confirm one condition.
+
+**Why:** (a) BEL/BPCL May 27 2026 — both in active downtrends, both recommended incorrectly. (b) Fundamental thesis (cheap PE, strong earnings, FII accumulation) does not create a buy signal if the price trend is still down. Institutions can have high holdings AND be reducing — the chart tells the truth about actual flow, not the percentage.
+
+**How to apply:**
+- Run this check AFTER Rule 26a/b/c, BEFORE confirming any pick.
+- Check 4: Is the stock making lower highs AND lower lows on the daily chart?
+  - If YES: Is Condition A met (closed above prior swing high)? If NO — disqualify.
+  - If YES: Is Condition B met (2-3 weeks sideways, no new lows)? If NO — disqualify.
+  - If YES: Is Condition C met (2 higher lows + 1 higher high confirmed)? If NO — disqualify.
+  - If ALL NO: Remove from picks, label "WAIT — downtrend not confirmed reversed."
+- Pattern label discipline: When using a chart pattern name (cup-and-handle, Wyckoff, recovery cycle), verify that (a) the CURRENT price is at the ideal entry point, not at the bottom of a downtrend labelled optimistically, and (b) the pattern has not failed (e.g., cup right rim > 10% below left rim = failed cup = downtrend channel).
+
 ### Application checklist (run before every recommendation):
 1. Has stock dropped >8% in last 5 sessions on above-avg volume? YES = Falling Knife = remove.
 2. Is volume pattern showing distribution (big vol on red days, small vol on green days)? YES = -20 confidence.
 3. Visible double-top or resistance rejection at known level? YES = conditional entry only (-15 confidence).
-4. Only confirm pick if all three answers are NO (or confirmed base after knife drop).
+4. Is stock in active downtrend (lower highs + lower lows) with NONE of conditions A/B/C met? YES = "WAIT — downtrend not confirmed reversed" = remove.
+Only confirm pick if all four answers are NO (or confirmed base after knife drop / confirmed trend reversal).
 
 **How to apply going forward:**
-- Before confirming any Pattern G or Pattern J pick: run Rule 26 checklist.
+- Before confirming any Pattern G or Pattern J pick: run Rule 26 checklist (all 4 sub-rules).
 - If falling knife detected: keep stock on WATCH LIST with note "wait for 3+ day base formation before re-entry."
-- WAAREEENER is on WATCH LIST as of May 22 — re-entry valid only after Rule 26a base confirmation (3+ days sideways, lower volume).
+- If active downtrend detected (Rule 26d): keep on WATCH LIST with note "WAIT — [specific price] above for Condition A, OR [number] weeks sideways for Condition B."
 - Double-top stocks get CONDITIONAL entry label in report with explicit breakout price and volume requirement.

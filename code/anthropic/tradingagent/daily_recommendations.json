@@ -34,16 +34,36 @@
       "IRCON": 145.08,
       "BHEL": 403.85,
       "INOXWIND": 97.95,
-      "HAL": 4756.30,
-      "KPTL": 148.50
+      "HAL": 4756.3,
+      "KPTL": 148.5
     },
     "note_data_source": "IRCON/BHEL/HAL finology prices. IRCON entry price stored at pre-split normalized level. Use % returns as canonical.",
     "patterns": {
-      "IRCON": ["pattern_A", "pattern_C", "pattern_F"],
-      "BHEL": ["pattern_D", "pattern_E", "pattern_F"],
-      "INOXWIND": ["pattern_A", "pattern_C", "pattern_F"],
-      "HAL": ["pattern_D", "pattern_E", "pattern_F"],
-      "KPTL": ["pattern_C", "pattern_F", "pattern_E"]
+      "IRCON": [
+        "pattern_A",
+        "pattern_C",
+        "pattern_F"
+      ],
+      "BHEL": [
+        "pattern_D",
+        "pattern_E",
+        "pattern_F"
+      ],
+      "INOXWIND": [
+        "pattern_A",
+        "pattern_C",
+        "pattern_F"
+      ],
+      "HAL": [
+        "pattern_D",
+        "pattern_E",
+        "pattern_F"
+      ],
+      "KPTL": [
+        "pattern_C",
+        "pattern_F",
+        "pattern_E"
+      ]
     }
   },
   {
@@ -78,18 +98,38 @@
     },
     "t2_exit_date": "2026-05-13",
     "t2_exit_prices": {
-      "PERSISTENT": 4877.10,
-      "DATAPATTERNS": 4062.50,
+      "PERSISTENT": 4877.1,
+      "DATAPATTERNS": 4062.5,
       "NAVINFLUORINE": 3780.0,
       "KECINTL": 1210.0,
       "CGPOWER": 834.0
     },
     "patterns": {
-      "PERSISTENT": ["Trade Truce Beneficiary", "Momentum Continuation", "Institutional Strength"],
-      "DATAPATTERNS": ["Duopoly Lag (HAL catch-up)", "RSI Recovery", "Earnings Catalyst"],
-      "NAVINFLUORINE": ["Trade Truce Beneficiary", "Chemical Export Recovery", "RSI Recovery"],
-      "KECINTL": ["Sector Rotation Lag", "RSI Recovery", "Power T&D Capex Theme"],
-      "CGPOWER": ["Duopoly Lag (BHEL/Siemens catch-up)", "RSI Recovery", "Earnings Catalyst"]
+      "PERSISTENT": [
+        "Trade Truce Beneficiary",
+        "Momentum Continuation",
+        "Institutional Strength"
+      ],
+      "DATAPATTERNS": [
+        "Duopoly Lag (HAL catch-up)",
+        "RSI Recovery",
+        "Earnings Catalyst"
+      ],
+      "NAVINFLUORINE": [
+        "Trade Truce Beneficiary",
+        "Chemical Export Recovery",
+        "RSI Recovery"
+      ],
+      "KECINTL": [
+        "Sector Rotation Lag",
+        "RSI Recovery",
+        "Power T&D Capex Theme"
+      ],
+      "CGPOWER": [
+        "Duopoly Lag (BHEL/Siemens catch-up)",
+        "RSI Recovery",
+        "Earnings Catalyst"
+      ]
     }
   },
   {
@@ -102,11 +142,11 @@
       "WAAREEENER"
     ],
     "entry_prices": {
-      "HINDOILEXP": 162.10,
-      "PARAS": 862.90,
-      "MAZDOCK": 2565.80,
-      "PERSISTENT": 5098.10,
-      "WAAREEENER": 3208.80
+      "HINDOILEXP": 162.1,
+      "PARAS": 862.9,
+      "MAZDOCK": 2565.8,
+      "PERSISTENT": 5098.1,
+      "WAAREEENER": 3208.8
     },
     "targets": {
       "HINDOILEXP": 178.0,
@@ -127,8 +167,8 @@
       "HINDOILEXP": 167.02,
       "PARAS": 820.0,
       "MAZDOCK": 2520.0,
-      "PERSISTENT": 4637.60,
-      "WAAREEENER": 3062.60
+      "PERSISTENT": 4637.6,
+      "WAAREEENER": 3062.6
     },
     "confidence_scores": {
       "HINDOILEXP": 84,
@@ -138,11 +178,32 @@
       "WAAREEENER": 74
     },
     "patterns": {
-      "HINDOILEXP": ["Iran-USA Upstream Beneficiary", "Duopoly Lag (OIL India ran)", "PE Undervaluation at $100 Oil"],
-      "PARAS": ["Iran-USA Defense Escalation", "RSI Recovery Dip", "Duopoly Lag (BEL/HAL ran)", "90% Profit Growth"],
-      "MAZDOCK": ["Strait of Hormuz Naval Defense", "Institutional Strength Dip", "PSU Defense Duopoly"],
-      "PERSISTENT": ["USD Strength IT Export", "Strong Stock Dip", "US-China Trade Truce"],
-      "WAAREEENER": ["High Oil Energy Transition", "Sector Rotation Wind to Solar", "RSI Consolidation"]
+      "HINDOILEXP": [
+        "Iran-USA Upstream Beneficiary",
+        "Duopoly Lag (OIL India ran)",
+        "PE Undervaluation at $100 Oil"
+      ],
+      "PARAS": [
+        "Iran-USA Defense Escalation",
+        "RSI Recovery Dip",
+        "Duopoly Lag (BEL/HAL ran)",
+        "90% Profit Growth"
+      ],
+      "MAZDOCK": [
+        "Strait of Hormuz Naval Defense",
+        "Institutional Strength Dip",
+        "PSU Defense Duopoly"
+      ],
+      "PERSISTENT": [
+        "USD Strength IT Export",
+        "Strong Stock Dip",
+        "US-China Trade Truce"
+      ],
+      "WAAREEENER": [
+        "High Oil Energy Transition",
+        "Sector Rotation Wind to Solar",
+        "RSI Consolidation"
+      ]
     },
     "macro_context": {
       "wti_crude": "$99.71 (+4.5% today, +72% YTD)",
@@ -163,9 +224,9 @@
     ],
     "entry_prices": {
       "HINDOILEXP": 166.11,
-      "MAZDOCK": 2443.80,
-      "DATAPATTERNS": 4062.50,
-      "PERSISTENT": 4877.10,
+      "MAZDOCK": 2443.8,
+      "DATAPATTERNS": 4062.5,
+      "PERSISTENT": 4877.1,
       "INOXWIND": 95.35
     },
     "targets": {
@@ -192,9 +253,9 @@
     },
     "intraday_t1_prices_may14": {
       "HINDOILEXP": 164.19,
-      "MAZDOCK": 2484.90,
+      "MAZDOCK": 2484.9,
       "DATAPATTERNS": null,
-      "PERSISTENT": 4637.60,
+      "PERSISTENT": 4637.6,
       "INOXWIND": 97.02
     },
     "confidence_scores": {
@@ -205,11 +266,36 @@
       "INOXWIND": 72
     },
     "patterns": {
-      "HINDOILEXP": ["Iran-USA Upstream Beneficiary (Pattern I)", "Consecutive Day Continuation", "RSI Recovery", "PE 10.5x deep undervaluation"],
-      "MAZDOCK": ["India-Pakistan Anniversary Defense Bid (Pattern J)", "Institutional Dip Confirmed", "Naval Defense Duopoly", "Recovery from May 12 capitulation"],
-      "DATAPATTERNS": ["India-Pakistan Anniversary Defense Continuation (Pattern J)", "Duopoly Lag", "RSI Dip Recovery", "PE 92 defensible given 36% revenue growth"],
-      "PERSISTENT": ["USD/INR Strengthening IT Export Tailwind", "Strong Stock Dip — down -4.33% May 12 non-fundamental", "Near 52-week low Rs4449 institutional zone", "Pattern G Trade Truce + WFH"],
-      "INOXWIND": ["Modi Energy Conservation Push", "Duopoly Lag SUZLON peer", "270% profit growth", "RSI Recovery near 52-week low"]
+      "HINDOILEXP": [
+        "Iran-USA Upstream Beneficiary (Pattern I)",
+        "Consecutive Day Continuation",
+        "RSI Recovery",
+        "PE 10.5x deep undervaluation"
+      ],
+      "MAZDOCK": [
+        "India-Pakistan Anniversary Defense Bid (Pattern J)",
+        "Institutional Dip Confirmed",
+        "Naval Defense Duopoly",
+        "Recovery from May 12 capitulation"
+      ],
+      "DATAPATTERNS": [
+        "India-Pakistan Anniversary Defense Continuation (Pattern J)",
+        "Duopoly Lag",
+        "RSI Dip Recovery",
+        "PE 92 defensible given 36% revenue growth"
+      ],
+      "PERSISTENT": [
+        "USD/INR Strengthening IT Export Tailwind",
+        "Strong Stock Dip \u2014 down -4.33% May 12 non-fundamental",
+        "Near 52-week low Rs4449 institutional zone",
+        "Pattern G Trade Truce + WFH"
+      ],
+      "INOXWIND": [
+        "Modi Energy Conservation Push",
+        "Duopoly Lag SUZLON peer",
+        "270% profit growth",
+        "RSI Recovery near 52-week low"
+      ]
     },
     "macro_context": {
       "wti_crude": "$102.05 (-0.13%, holding above $100)",
@@ -231,10 +317,10 @@
     ],
     "entry_prices": {
       "HINDOILEXP": 167.02,
-      "MAZDOCK": 2520.00,
+      "MAZDOCK": 2520.0,
       "INOXWIND": 97.95,
-      "BEL": 430.70,
-      "WAAREEENER": 3092.90
+      "BEL": 430.7,
+      "WAAREEENER": 3092.9
     },
     "targets": {
       "HINDOILEXP": 182.0,
@@ -266,11 +352,36 @@
       "WAAREEENER": 72
     },
     "patterns": {
-      "HINDOILEXP": ["Iran-USA Upstream Beneficiary (Pattern I)", "Duopoly Lag OIL India leader", "RSI Consolidation Entry", "PE 10.56 deep undervaluation"],
-      "MAZDOCK": ["Institutional Dip Recovery (Pattern D)", "India-Pakistan Anniversary Defense Premium (Pattern J)", "Iran-USA Naval Defense Strait of Hormuz", "PSU Naval Duopoly"],
-      "INOXWIND": ["Modi Energy Independence Push", "Duopoly Lag SUZLON +0.28%", "270% profit growth sector best", "May 13 +2.73% confirmation"],
-      "BEL": ["India-Pakistan Anniversary Defense Electronics (Pattern J)", "Iran-USA Electronic warfare demand", "BEL/HAL Duopoly BEL discount", "Debt-free PSU Rs9397 Cr cash"],
-      "WAAREEENER": ["Oil $101 Solar Urgency Catalyst", "Better entry Rs3092 vs prior Rs3208", "India largest solar PV manufacturer", "Trump-Xi deal potential supply chain upside"]
+      "HINDOILEXP": [
+        "Iran-USA Upstream Beneficiary (Pattern I)",
+        "Duopoly Lag OIL India leader",
+        "RSI Consolidation Entry",
+        "PE 10.56 deep undervaluation"
+      ],
+      "MAZDOCK": [
+        "Institutional Dip Recovery (Pattern D)",
+        "India-Pakistan Anniversary Defense Premium (Pattern J)",
+        "Iran-USA Naval Defense Strait of Hormuz",
+        "PSU Naval Duopoly"
+      ],
+      "INOXWIND": [
+        "Modi Energy Independence Push",
+        "Duopoly Lag SUZLON +0.28%",
+        "270% profit growth sector best",
+        "May 13 +2.73% confirmation"
+      ],
+      "BEL": [
+        "India-Pakistan Anniversary Defense Electronics (Pattern J)",
+        "Iran-USA Electronic warfare demand",
+        "BEL/HAL Duopoly BEL discount",
+        "Debt-free PSU Rs9397 Cr cash"
+      ],
+      "WAAREEENER": [
+        "Oil $101 Solar Urgency Catalyst",
+        "Better entry Rs3092 vs prior Rs3208",
+        "India largest solar PV manufacturer",
+        "Trump-Xi deal potential supply chain upside"
+      ]
     },
     "macro_context": {
       "wti_crude": "$101.48 (+0.46%, war premium holding)",
@@ -282,11 +393,36 @@
       "geopolitical_theme": "Iran-USA sustained + Trump-Xi optimism + gold falling = defense + renewable trifecta"
     },
     "backtest_may12_confirmed": {
-      "HINDOILEXP": {"entry": 162.10, "exit": 167.02, "return_pct": 3.03, "result": "WIN"},
-      "MAZDOCK": {"entry": 2565.80, "exit": 2520.00, "return_pct": -1.79, "result": "NEAR_STOP"},
-      "PARAS": {"entry": 862.90, "exit": 820.0, "return_pct": -4.97, "result": "STOP_HIT"},
-      "PERSISTENT": {"entry": 5098.10, "exit": 4637.60, "return_pct": -9.04, "result": "STOP_HIT"},
-      "WAAREEENER": {"entry": 3208.80, "exit": 3062.60, "return_pct": -4.56, "result": "LOSS"},
+      "HINDOILEXP": {
+        "entry": 162.1,
+        "exit": 167.02,
+        "return_pct": 3.03,
+        "result": "WIN"
+      },
+      "MAZDOCK": {
+        "entry": 2565.8,
+        "exit": 2520.0,
+        "return_pct": -1.79,
+        "result": "NEAR_STOP"
+      },
+      "PARAS": {
+        "entry": 862.9,
+        "exit": 820.0,
+        "return_pct": -4.97,
+        "result": "STOP_HIT"
+      },
+      "PERSISTENT": {
+        "entry": 5098.1,
+        "exit": 4637.6,
+        "return_pct": -9.04,
+        "result": "STOP_HIT"
+      },
+      "WAAREEENER": {
+        "entry": 3208.8,
+        "exit": 3062.6,
+        "return_pct": -4.56,
+        "result": "LOSS"
+      },
       "batch_return_pct": -3.47,
       "batch_pnl_rs": -1732
     }
@@ -302,11 +438,11 @@
       "BHEL"
     ],
     "entry_prices": {
-      "HINDOILEXP": 162.00,
-      "MAZDOCK": 2500.00,
-      "BEL": 428.00,
-      "PIIND": 3100.00,
-      "BHEL": 412.00
+      "HINDOILEXP": 162.0,
+      "MAZDOCK": 2500.0,
+      "BEL": 428.0,
+      "PIIND": 3100.0,
+      "BHEL": 412.0
     },
     "targets": {
       "HINDOILEXP": 178.0,
@@ -324,18 +460,38 @@
     },
     "t2_exit_date": "2026-05-19",
     "t2_exit_prices": {
-      "HINDOILEXP": 173.40,
-      "MAZDOCK": 2454.00,
-      "BEL": 428.00,
-      "PIIND": 3164.00,
-      "BHEL": 397.00
+      "HINDOILEXP": 173.4,
+      "MAZDOCK": 2454.0,
+      "BEL": 428.0,
+      "PIIND": 3164.0,
+      "BHEL": 397.0
     },
     "t2_exit_pnl": {
-      "HINDOILEXP": {"pct": 7.04, "rs": 704, "status": "WIN"},
-      "MAZDOCK": {"pct": -1.84, "rs": -184, "status": "LOSS"},
-      "BEL": {"pct": 0.0, "rs": 0, "status": "FLAT"},
-      "PIIND": {"pct": 2.06, "rs": 206, "status": "WIN"},
-      "BHEL": {"pct": -3.64, "rs": -364, "status": "LOSS"},
+      "HINDOILEXP": {
+        "pct": 7.04,
+        "rs": 704,
+        "status": "WIN"
+      },
+      "MAZDOCK": {
+        "pct": -1.84,
+        "rs": -184,
+        "status": "LOSS"
+      },
+      "BEL": {
+        "pct": 0.0,
+        "rs": 0,
+        "status": "FLAT"
+      },
+      "PIIND": {
+        "pct": 2.06,
+        "rs": 206,
+        "status": "WIN"
+      },
+      "BHEL": {
+        "pct": -3.64,
+        "rs": -364,
+        "status": "LOSS"
+      },
       "batch_total_pnl_rs": 362,
       "batch_return_pct": 0.72
     },
@@ -347,19 +503,44 @@
       "BHEL": 76
     },
     "patterns": {
-      "HINDOILEXP": ["Pattern I — Iran-USA Upstream E&P (WTI $101.93 +0.90%)", "Pattern A — Duopoly lag (OIL India pair)", "Pattern K — Gold -1.49% equity rotation day", "PE 10.29 extreme undervaluation — 5th consecutive entry, core hold"],
-      "MAZDOCK": ["Pattern D — Synchronized dip (MAZDOCK +COCHINSHIP May 14, no news)", "Pattern I — Iran Hormuz naval defense premium", "Pattern J — India-Pakistan defense posture year 2", "Pattern K — Gold falling = equity rotation into defensives"],
-      "BEL": ["Pattern J — India-Pakistan defense electronics (primary PSU beneficiary)", "Institutional Preference — BEL held -0.14% vs MAZDOCK -1.33% May 14", "Fortress balance: debt-free + Rs9,397 Cr cash", "Pattern K — Gold -1.49% risk-on equity bid"],
-      "PIIND": ["Pattern L — Trump-Xi summit agrochemical catalyst (positive framing confirmed)", "Trump called Xi friend + constructive/stable language = tariff optimism", "Debt-free ROCE 25.54% quality screen", "Pattern K — Gold -1.49% quality mid-caps get institutional bid"],
-      "BHEL": ["2nd consecutive green session (+2.30% May 14)", "Government Rs37,500 Cr coal gasification scheme = direct order catalyst", "97.38% profit growth YoY — fundamental inflection", "Broad PSU capex sector bid: ABB +1.97%, APAR +2.50% confirming rotation"]
+      "HINDOILEXP": [
+        "Pattern I \u2014 Iran-USA Upstream E&P (WTI $101.93 +0.90%)",
+        "Pattern A \u2014 Duopoly lag (OIL India pair)",
+        "Pattern K \u2014 Gold -1.49% equity rotation day",
+        "PE 10.29 extreme undervaluation \u2014 5th consecutive entry, core hold"
+      ],
+      "MAZDOCK": [
+        "Pattern D \u2014 Synchronized dip (MAZDOCK +COCHINSHIP May 14, no news)",
+        "Pattern I \u2014 Iran Hormuz naval defense premium",
+        "Pattern J \u2014 India-Pakistan defense posture year 2",
+        "Pattern K \u2014 Gold falling = equity rotation into defensives"
+      ],
+      "BEL": [
+        "Pattern J \u2014 India-Pakistan defense electronics (primary PSU beneficiary)",
+        "Institutional Preference \u2014 BEL held -0.14% vs MAZDOCK -1.33% May 14",
+        "Fortress balance: debt-free + Rs9,397 Cr cash",
+        "Pattern K \u2014 Gold -1.49% risk-on equity bid"
+      ],
+      "PIIND": [
+        "Pattern L \u2014 Trump-Xi summit agrochemical catalyst (positive framing confirmed)",
+        "Trump called Xi friend + constructive/stable language = tariff optimism",
+        "Debt-free ROCE 25.54% quality screen",
+        "Pattern K \u2014 Gold -1.49% quality mid-caps get institutional bid"
+      ],
+      "BHEL": [
+        "2nd consecutive green session (+2.30% May 14)",
+        "Government Rs37,500 Cr coal gasification scheme = direct order catalyst",
+        "97.38% profit growth YoY \u2014 fundamental inflection",
+        "Broad PSU capex sector bid: ABB +1.97%, APAR +2.50% confirming rotation"
+      ]
     },
     "macro_context": {
-      "wti_crude": "$101.93 (+0.90%) — 7th day above $95",
-      "gold": "$4,615.70 (-1.49%) — PATTERN K CONFIRMED: equity rotation signal",
-      "nasdaq": "26,635 (+0.88%) — 2nd consecutive US green",
+      "wti_crude": "$101.93 (+0.90%) \u2014 7th day above $95",
+      "gold": "$4,615.70 (-1.49%) \u2014 PATTERN K CONFIRMED: equity rotation signal",
+      "nasdaq": "26,635 (+0.88%) \u2014 2nd consecutive US green",
       "sp500": "7,501 (+0.77%)",
-      "nifty": "23,690 (+1.18%) — India broadly positive",
-      "niftyit": "27,360 (-1.99%) — 2nd consecutive IT decline",
+      "nifty": "23,690 (+1.18%) \u2014 India broadly positive",
+      "niftyit": "27,360 (-1.99%) \u2014 2nd consecutive IT decline",
       "iran_usa": "War ongoing. Trump warned Iran annihilation. Hormuz risk elevated.",
       "trump_xi_summit": "Constructive, strategic and stable framing. Trump called Xi friend. No formal trade deal yet. China allowing Hormuz passage = de-escalation signal.",
       "india_pakistan": "Stable elevated defense posture. No new escalation.",
@@ -368,8 +549,8 @@
     },
     "exclusions": {
       "PERSISTENT": "NIFTYIT -1.99% 2nd consecutive day. Stock now Rs4,628.80 approaching 52-wk low Rs4,449. AI disruption + IT sector headwind. Permanent exclude until sector recovers.",
-      "CGPOWER": "PERMANENT HARD EXCLUDE — PE 101, profit growth negative.",
-      "INOXWIND": "SUZLON +0.70% today — not strongly leading. Rule: SUZLON must be +1%+ for INOXWIND entry. Skip today.",
+      "CGPOWER": "PERMANENT HARD EXCLUDE \u2014 PE 101, profit growth negative.",
+      "INOXWIND": "SUZLON +0.70% today \u2014 not strongly leading. Rule: SUZLON must be +1%+ for INOXWIND entry. Skip today.",
       "KAYNES": "Circuit-level drop -20.15%. Avoid volatile electronics names.",
       "GRSE": "Down -5.19%. Wide range naval play. MAZDOCK is preferred naval pick.",
       "PARAS": "Stop hit May 12. Do not re-enter same week.",
@@ -379,11 +560,35 @@
       "BDL": "Profit growth -10.29% YoY. Deteriorating fundamentals. Skip."
     },
     "may13_batch_exits_today": {
-      "HINDOILEXP": {"entry": 166.11, "exit_may15": 162.84, "pnl_pct": -1.97, "status": "LOSS"},
-      "MAZDOCK": {"entry": 2443.80, "exit_may15": 2522.80, "pnl_pct": 3.23, "status": "WIN"},
-      "DATAPATTERNS": {"entry": 4062.50, "exit_may15": null, "status": "DATA_N/A"},
-      "PERSISTENT": {"entry": 4877.10, "exit_may15": 4628.80, "pnl_pct": -5.11, "status": "STOP_HIT"},
-      "INOXWIND": {"entry": 95.35, "exit_may15": 97.59, "pnl_pct": 2.35, "status": "WIN"}
+      "HINDOILEXP": {
+        "entry": 166.11,
+        "exit_may15": 162.84,
+        "pnl_pct": -1.97,
+        "status": "LOSS"
+      },
+      "MAZDOCK": {
+        "entry": 2443.8,
+        "exit_may15": 2522.8,
+        "pnl_pct": 3.23,
+        "status": "WIN"
+      },
+      "DATAPATTERNS": {
+        "entry": 4062.5,
+        "exit_may15": null,
+        "status": "DATA_N/A"
+      },
+      "PERSISTENT": {
+        "entry": 4877.1,
+        "exit_may15": 4628.8,
+        "pnl_pct": -5.11,
+        "status": "STOP_HIT"
+      },
+      "INOXWIND": {
+        "entry": 95.35,
+        "exit_may15": 97.59,
+        "pnl_pct": 2.35,
+        "status": "WIN"
+      }
     }
   },
   {
@@ -398,25 +603,25 @@
       "BHEL"
     ],
     "entry_prices": {
-      "HINDOILEXP": 164.30,
-      "MAZDOCK": 2489.30,
-      "BEL": 426.50,
-      "PIIND": 3113.80,
+      "HINDOILEXP": 164.3,
+      "MAZDOCK": 2489.3,
+      "BEL": 426.5,
+      "PIIND": 3113.8,
       "BHEL": 405.65
     },
     "targets": {
-      "HINDOILEXP": 175.00,
-      "MAZDOCK": 2650.00,
-      "BEL": 455.00,
-      "PIIND": 3320.00,
-      "BHEL": 430.00
+      "HINDOILEXP": 175.0,
+      "MAZDOCK": 2650.0,
+      "BEL": 455.0,
+      "PIIND": 3320.0,
+      "BHEL": 430.0
     },
     "stop_losses": {
-      "HINDOILEXP": 155.00,
-      "MAZDOCK": 2380.00,
-      "BEL": 412.00,
-      "PIIND": 2980.00,
-      "BHEL": 393.00
+      "HINDOILEXP": 155.0,
+      "MAZDOCK": 2380.0,
+      "BEL": 412.0,
+      "PIIND": 2980.0,
+      "BHEL": 393.0
     },
     "position_sizing": {
       "HINDOILEXP": 10000,
@@ -427,18 +632,39 @@
     },
     "t2_exit_date": "2026-05-19",
     "t2_exit_prices": {
-      "HINDOILEXP": 173.40,
-      "MAZDOCK": 2454.00,
-      "BEL": 428.00,
-      "PIIND": 3164.00,
-      "BHEL": 397.00
+      "HINDOILEXP": 173.4,
+      "MAZDOCK": 2454.0,
+      "BEL": 428.0,
+      "PIIND": 3164.0,
+      "BHEL": 397.0
     },
     "t2_exit_pnl": {
-      "HINDOILEXP": {"pct": 5.54, "rs": 554, "status": "WIN"},
-      "MAZDOCK": {"pct": -1.42, "rs": -142, "status": "LOSS"},
-      "BEL": {"pct": 0.35, "rs": 35, "status": "WIN"},
-      "PIIND": {"pct": 1.61, "rs": 161, "status": "WIN"},
-      "BHEL": {"pct": -2.13, "rs": -128, "status": "LOSS", "note": "Rs6k position only"},
+      "HINDOILEXP": {
+        "pct": 5.54,
+        "rs": 554,
+        "status": "WIN"
+      },
+      "MAZDOCK": {
+        "pct": -1.42,
+        "rs": -142,
+        "status": "LOSS"
+      },
+      "BEL": {
+        "pct": 0.35,
+        "rs": 35,
+        "status": "WIN"
+      },
+      "PIIND": {
+        "pct": 1.61,
+        "rs": 161,
+        "status": "WIN"
+      },
+      "BHEL": {
+        "pct": -2.13,
+        "rs": -128,
+        "status": "LOSS",
+        "note": "Rs6k position only"
+      },
       "batch_total_pnl_rs": 480,
       "batch_return_pct": 1.04
     },
@@ -450,21 +676,46 @@
       "BHEL": 63
     },
     "patterns": {
-      "HINDOILEXP": ["Pattern I (WTI $102.42 +1.24%, Day 8 above $95)", "Pattern A (OILINDIA large-cap leader, HINDOILEXP lag)", "Pattern K (Gold -1.42%)", "PE 10.39 extreme undervaluation"],
-      "MAZDOCK": ["Pattern D (MAZDOCK -1.35% + COCHINSHIP -1.46% synchronized, 5th occurrence)", "Pattern I (Iran Hormuz naval defense)", "Pattern J (India-Pakistan defense posture)", "67% leaderboard win rate"],
-      "BEL": ["Pattern J (India-Pakistan defense electronics primary PSU)", "Pattern I (electronic warfare demand)", "Pattern K (gold falling equity rotation)", "Rs9,397Cr cash debt-free fortress"],
-      "PIIND": ["Pattern N (Trump-Xi Level 3-4 warmth)", "Pattern L (agrochemical summit catalyst)", "Pattern K (quality mid-cap bid)", "Debt-free ROCE 25.54%"],
-      "BHEL": ["Pattern M (Rs37,500Cr coal gasification scheme)", "Pattern K (gold falling capex bid)", "97.38% profit growth inflection", "REDUCED POSITION: PE 89.5 only 2/3 confirms"]
+      "HINDOILEXP": [
+        "Pattern I (WTI $102.42 +1.24%, Day 8 above $95)",
+        "Pattern A (OILINDIA large-cap leader, HINDOILEXP lag)",
+        "Pattern K (Gold -1.42%)",
+        "PE 10.39 extreme undervaluation"
+      ],
+      "MAZDOCK": [
+        "Pattern D (MAZDOCK -1.35% + COCHINSHIP -1.46% synchronized, 5th occurrence)",
+        "Pattern I (Iran Hormuz naval defense)",
+        "Pattern J (India-Pakistan defense posture)",
+        "67% leaderboard win rate"
+      ],
+      "BEL": [
+        "Pattern J (India-Pakistan defense electronics primary PSU)",
+        "Pattern I (electronic warfare demand)",
+        "Pattern K (gold falling equity rotation)",
+        "Rs9,397Cr cash debt-free fortress"
+      ],
+      "PIIND": [
+        "Pattern N (Trump-Xi Level 3-4 warmth)",
+        "Pattern L (agrochemical summit catalyst)",
+        "Pattern K (quality mid-cap bid)",
+        "Debt-free ROCE 25.54%"
+      ],
+      "BHEL": [
+        "Pattern M (Rs37,500Cr coal gasification scheme)",
+        "Pattern K (gold falling capex bid)",
+        "97.38% profit growth inflection",
+        "REDUCED POSITION: PE 89.5 only 2/3 confirms"
+      ]
     },
     "macro_context": {
-      "wti_crude": "$102.42 (+1.24%) — Day 8 above $95",
-      "gold": "$4,618.90 (-1.42%) — Pattern K active",
-      "silver": "$81.86 (-4.06%) — industrial metals collapsing",
+      "wti_crude": "$102.42 (+1.24%) \u2014 Day 8 above $95",
+      "gold": "$4,618.90 (-1.42%) \u2014 Pattern K active",
+      "silver": "$81.86 (-4.06%) \u2014 industrial metals collapsing",
       "copper": "$6.43 (-2.82%)",
       "nasdaq_may14": "26,635 (+0.88%)",
       "sp500_may14": "7,501 (+0.77%)",
       "nifty": "23,823 (+0.56%)",
-      "niftyit": "28,063 (+2.57%) — sharp reversal after 2 down days",
+      "niftyit": "28,063 (+2.57%) \u2014 sharp reversal after 2 down days",
       "iran_usa": "War ongoing. Trump shadowed by unresolved war during China visit.",
       "trump_xi_summit": "Constructive, strategic, stable. Trade truce extension expected. Low deal expectations.",
       "pattern_k": "Gold -1.42% = equity rotation confirmed. 2nd consecutive falling day.",
@@ -482,11 +733,35 @@
       "WAAREEENER": "Above Rs3,000 ideal entry zone (Rs2,900-3,000 target). Rs3,056 = skip."
     },
     "may13_batch_confirmed_exits": {
-      "HINDOILEXP": {"entry": 166.11, "exit": 162.84, "pnl_pct": -1.97, "status": "LOSS"},
-      "MAZDOCK": {"entry": 2443.80, "exit": 2522.80, "pnl_pct": 3.23, "status": "WIN"},
-      "DATAPATTERNS": {"entry": 4062.50, "exit": null, "status": "DATA_N/A"},
-      "PERSISTENT": {"entry": 4877.10, "exit": 4628.80, "pnl_pct": -5.11, "status": "STOP_HIT"},
-      "INOXWIND": {"entry": 95.35, "exit": 97.59, "pnl_pct": 2.35, "status": "WIN"},
+      "HINDOILEXP": {
+        "entry": 166.11,
+        "exit": 162.84,
+        "pnl_pct": -1.97,
+        "status": "LOSS"
+      },
+      "MAZDOCK": {
+        "entry": 2443.8,
+        "exit": 2522.8,
+        "pnl_pct": 3.23,
+        "status": "WIN"
+      },
+      "DATAPATTERNS": {
+        "entry": 4062.5,
+        "exit": null,
+        "status": "DATA_N/A"
+      },
+      "PERSISTENT": {
+        "entry": 4877.1,
+        "exit": 4628.8,
+        "pnl_pct": -5.11,
+        "status": "STOP_HIT"
+      },
+      "INOXWIND": {
+        "entry": 95.35,
+        "exit": 97.59,
+        "pnl_pct": 2.35,
+        "status": "WIN"
+      },
       "4stock_batch_return": 0.88
     }
   },
@@ -502,33 +777,33 @@
       "PIIND"
     ],
     "entry_prices": {
-      "HAL": 4197.30,
+      "HAL": 4197.3,
       "ONGC": 296.85,
-      "MAZDOCK": 2391.50,
-      "GRSE": 2565.80,
-      "PIIND": 3063.90
+      "MAZDOCK": 2391.5,
+      "GRSE": 2565.8,
+      "PIIND": 3063.9
     },
     "targets": {
-      "HAL": 4520.00,
-      "ONGC": 320.00,
-      "MAZDOCK": 2580.00,
-      "GRSE": 2780.00,
-      "PIIND": 3300.00
+      "HAL": 4520.0,
+      "ONGC": 320.0,
+      "MAZDOCK": 2580.0,
+      "GRSE": 2780.0,
+      "PIIND": 3300.0
     },
     "stop_losses": {
-      "HAL": 4000.00,
-      "ONGC": 282.00,
-      "MAZDOCK": 2275.00,
-      "GRSE": 2440.00,
-      "PIIND": 2940.00
+      "HAL": 4000.0,
+      "ONGC": 282.0,
+      "MAZDOCK": 2275.0,
+      "GRSE": 2440.0,
+      "PIIND": 2940.0
     },
     "t2_exit_date": "2026-05-20",
     "t2_exit_prices": {
-      "HAL": 4323.00,
-      "ONGC": 295.00,
-      "MAZDOCK": 2454.00,
-      "GRSE": 2614.00,
-      "PIIND": 3164.00
+      "HAL": 4323.0,
+      "ONGC": 295.0,
+      "MAZDOCK": 2454.0,
+      "GRSE": 2614.0,
+      "PIIND": 3164.0
     },
     "t2_exit_note": "Exit prices captured May 19 intraday (T+2 from May 18). HAL +3.0%, ONGC -0.62%, MAZDOCK +2.6%, GRSE +1.9%, PIIND +3.3%. Batch return: +2.03% (Rs+1,013 on Rs50,000). 4/5 wins.",
     "confidence_scores": {
@@ -539,11 +814,36 @@
       "PIIND": 62
     },
     "patterns": {
-      "HAL": ["Pattern D (HAL -4.31% dip, RSI 43.8 ideal entry zone)", "Pattern I (Iran-USA aerospace defense primary)", "Pattern J (India-Pakistan Tejas/LCA/Akash)", "Pattern K (gold -3.19% 5d equity rotation)", "Leaderboard +10 boost (1/1 = 100% historical win rate)"],
-      "ONGC": ["Pattern I (upstream E&P, WTI $103.13 Day 9)", "Pattern K (gold falling, value rotation)", "PE 9.8 extreme undervaluation at $100+ oil"],
-      "MAZDOCK": ["Pattern D (6th synchronized dip MAZDOCK+COCHINSHIP, strongest signal)", "Pattern I (Iran Hormuz naval defense)", "Pattern J (India-Pakistan naval premium)", "Pattern K (equity rotation)", "Leaderboard -15 penalty applied"],
-      "GRSE": ["Pattern D (GRSE -4.47%, naval defense synchronized triplet)", "Pattern I + Pattern J defense", "First-time pick, no leaderboard penalty"],
-      "PIIND": ["Pattern L/N (Trump-Xi agrochemical catalyst)", "Pattern K (quality mid-cap bid)", "Debt-free ROCE 25.54%", "Leaderboard -10 penalty applied"]
+      "HAL": [
+        "Pattern D (HAL -4.31% dip, RSI 43.8 ideal entry zone)",
+        "Pattern I (Iran-USA aerospace defense primary)",
+        "Pattern J (India-Pakistan Tejas/LCA/Akash)",
+        "Pattern K (gold -3.19% 5d equity rotation)",
+        "Leaderboard +10 boost (1/1 = 100% historical win rate)"
+      ],
+      "ONGC": [
+        "Pattern I (upstream E&P, WTI $103.13 Day 9)",
+        "Pattern K (gold falling, value rotation)",
+        "PE 9.8 extreme undervaluation at $100+ oil"
+      ],
+      "MAZDOCK": [
+        "Pattern D (6th synchronized dip MAZDOCK+COCHINSHIP, strongest signal)",
+        "Pattern I (Iran Hormuz naval defense)",
+        "Pattern J (India-Pakistan naval premium)",
+        "Pattern K (equity rotation)",
+        "Leaderboard -15 penalty applied"
+      ],
+      "GRSE": [
+        "Pattern D (GRSE -4.47%, naval defense synchronized triplet)",
+        "Pattern I + Pattern J defense",
+        "First-time pick, no leaderboard penalty"
+      ],
+      "PIIND": [
+        "Pattern L/N (Trump-Xi agrochemical catalyst)",
+        "Pattern K (quality mid-cap bid)",
+        "Debt-free ROCE 25.54%",
+        "Leaderboard -10 penalty applied"
+      ]
     },
     "macro_context": {
       "wti_crude": "$103.13 (-2.17% 1d, Day 9 above $95)",
@@ -589,25 +889,25 @@
       "ONGC"
     ],
     "entry_prices": {
-      "HAL": 4323.00,
-      "PIIND": 3164.00,
-      "WAAREEENER": 3045.00,
-      "INOXWIND": 96.90,
-      "ONGC": 295.00
+      "HAL": 4323.0,
+      "PIIND": 3164.0,
+      "WAAREEENER": 3045.0,
+      "INOXWIND": 96.9,
+      "ONGC": 295.0
     },
     "targets": {
-      "HAL": 4648.00,
-      "PIIND": 3354.00,
-      "WAAREEENER": 3258.00,
-      "INOXWIND": 102.70,
-      "ONGC": 310.00
+      "HAL": 4648.0,
+      "PIIND": 3354.0,
+      "WAAREEENER": 3258.0,
+      "INOXWIND": 102.7,
+      "ONGC": 310.0
     },
     "stop_losses": {
-      "HAL": 4131.00,
-      "PIIND": 3053.00,
-      "WAAREEENER": 2940.00,
-      "INOXWIND": 93.00,
-      "ONGC": 285.00
+      "HAL": 4131.0,
+      "PIIND": 3053.0,
+      "WAAREEENER": 2940.0,
+      "INOXWIND": 93.0,
+      "ONGC": 285.0
     },
     "t2_exit_date": "2026-05-21",
     "t2_exit_prices": {
@@ -618,10 +918,10 @@
       "ONGC": null
     },
     "intraday_may20_prices": {
-      "HAL": 4295.00,
-      "PIIND": 2910.40,
-      "WAAREEENER": 3032.00,
-      "INOXWIND": 94.80,
+      "HAL": 4295.0,
+      "PIIND": 2910.4,
+      "WAAREEENER": 3032.0,
+      "INOXWIND": 94.8,
       "ONGC": 300.45
     },
     "piind_stop_note": "PIIND stop at Rs3053 triggered intraday May 20 after Q4FY26 earnings miss. Net profit fell to Rs197.8Cr from Rs385.8Cr (-48.8% YoY). Exit price ~Rs3053 (stop). Actual close Rs2910.40 = further decline below stop.",
@@ -633,11 +933,41 @@
       "ONGC": 74
     },
     "patterns": {
-      "HAL": ["Pattern D (HAL recovery from -4.31% May 18 dip)", "Pattern J (India-Pakistan aerospace defense)", "Pattern K (gold -3.5% 5d equity rotation)", "Leaderboard +10 boost (2/2 = 100% win rate after May 18)", "Iran pause risk -5"],
-      "PIIND": ["Pattern N (Trump-Xi Level 4 friend language)", "Pattern L (agrochemical Trump-Xi catalyst)", "Pattern K (gold falling, quality mid-cap bid)", "Pre-earnings catalyst (Q4 call May 20 3PM IST)", "Leaderboard +10 (1/1 = 100% after May 18 win)"],
-      "WAAREEENER": ["Pattern G (FII accumulation: 7.06% from 0.70% in 1yr)", "Extreme oversold RSI recovery (RSI 20.5 May 18 -> recovery May 19)", "Pattern I extension (WTI $102.76 high oil = solar urgency)", "Strongest fundamentals: ROE 35.4%, profit growth 125% TTM, ROCE 42.8%", "Entry Rs3045 in ideal zone (52w low Rs2,402, entry near lower third of range)"],
-      "INOXWIND": ["Pattern A (SUZLON +0.43% = entry condition met)", "Pattern I extension (high oil = renewable urgency)", "147% TTM profit growth = sector-best fundamentals", "52w low Rs74.9 = significant distance below, risk limited", "INOXWIND already +2.27% intraday = momentum confirmation"],
-      "ONGC": ["Pattern I (upstream E&P, WTI $102.76 Day 10+)", "Pattern K (gold falling, value rotation)", "PE 11.4 = deepest undervaluation in E&P space", "Iran pause risk partially offsets (-5 applied)", "Large-cap safety buffer vs HINDOILEXP"]
+      "HAL": [
+        "Pattern D (HAL recovery from -4.31% May 18 dip)",
+        "Pattern J (India-Pakistan aerospace defense)",
+        "Pattern K (gold -3.5% 5d equity rotation)",
+        "Leaderboard +10 boost (2/2 = 100% win rate after May 18)",
+        "Iran pause risk -5"
+      ],
+      "PIIND": [
+        "Pattern N (Trump-Xi Level 4 friend language)",
+        "Pattern L (agrochemical Trump-Xi catalyst)",
+        "Pattern K (gold falling, quality mid-cap bid)",
+        "Pre-earnings catalyst (Q4 call May 20 3PM IST)",
+        "Leaderboard +10 (1/1 = 100% after May 18 win)"
+      ],
+      "WAAREEENER": [
+        "Pattern G (FII accumulation: 7.06% from 0.70% in 1yr)",
+        "Extreme oversold RSI recovery (RSI 20.5 May 18 -> recovery May 19)",
+        "Pattern I extension (WTI $102.76 high oil = solar urgency)",
+        "Strongest fundamentals: ROE 35.4%, profit growth 125% TTM, ROCE 42.8%",
+        "Entry Rs3045 in ideal zone (52w low Rs2,402, entry near lower third of range)"
+      ],
+      "INOXWIND": [
+        "Pattern A (SUZLON +0.43% = entry condition met)",
+        "Pattern I extension (high oil = renewable urgency)",
+        "147% TTM profit growth = sector-best fundamentals",
+        "52w low Rs74.9 = significant distance below, risk limited",
+        "INOXWIND already +2.27% intraday = momentum confirmation"
+      ],
+      "ONGC": [
+        "Pattern I (upstream E&P, WTI $102.76 Day 10+)",
+        "Pattern K (gold falling, value rotation)",
+        "PE 11.4 = deepest undervaluation in E&P space",
+        "Iran pause risk partially offsets (-5 applied)",
+        "Large-cap safety buffer vs HINDOILEXP"
+      ]
     },
     "macro_context": {
       "wti_crude": "$102.76 (-1.55%) -- Trump paused Iran strike; STILL above $95 Day 10+",
@@ -685,10 +1015,10 @@
       "ONGC": 300.45
     },
     "targets": {
-      "ONGC": 316.00
+      "ONGC": 316.0
     },
     "stop_losses": {
-      "ONGC": 289.00
+      "ONGC": 289.0
     },
     "t2_exit_date": "2026-05-22",
     "t2_exit_prices": {
@@ -698,19 +1028,25 @@
       "ONGC": 82
     },
     "patterns": {
-      "ONGC": ["Pattern I (WTI $103.86, Day 11+ above $95, war premium intact)", "Pattern K (Gold -4.87% 5d = maximum equity rotation signal)", "PE 11.56 extreme undervaluation in E&P space", "Nifty50 top gainer today (+1.37%) = institutional momentum building", "HINDOILEXP struck (B-80), ONGC is the clean E&P substitute"]
+      "ONGC": [
+        "Pattern I (WTI $103.86, Day 11+ above $95, war premium intact)",
+        "Pattern K (Gold -4.87% 5d = maximum equity rotation signal)",
+        "PE 11.56 extreme undervaluation in E&P space",
+        "Nifty50 top gainer today (+1.37%) = institutional momentum building",
+        "HINDOILEXP struck (B-80), ONGC is the clean E&P substitute"
+      ]
     },
     "macro_context": {
-      "wti_crude": "$103.86 (-0.28%) — Day 11+ above $95, war premium intact",
-      "gold": "$4,468.90 (-0.94%, -4.87% 5d) — Pattern K at maximum strength",
-      "sp500_may19": "7,353.61 (-0.67%) — US_MARKET_CAUTION flag (below -1% threshold, not veto)",
-      "nasdaq_may19": "25,870.71 (-0.84%) — US_MARKET_CAUTION flag",
-      "nifty": "23,614.85 (-0.01%) — essentially flat",
-      "niftyit": "29,310.50 (+0.01%) — flat/neutral",
+      "wti_crude": "$103.86 (-0.28%) \u2014 Day 11+ above $95, war premium intact",
+      "gold": "$4,468.90 (-0.94%, -4.87% 5d) \u2014 Pattern K at maximum strength",
+      "sp500_may19": "7,353.61 (-0.67%) \u2014 US_MARKET_CAUTION flag (below -1% threshold, not veto)",
+      "nasdaq_may19": "25,870.71 (-0.84%) \u2014 US_MARKET_CAUTION flag",
+      "nifty": "23,614.85 (-0.01%) \u2014 essentially flat",
+      "niftyit": "29,310.50 (+0.01%) \u2014 flat/neutral",
       "iran_usa": "Iran warns US of 'surprises' if war resumes. VP Vance 'locked and loaded'. No ceasefire. UK warns Hormuz blockade = global food crisis. War premium FULLY INTACT.",
       "piind_shock": "PIIND Q4FY26 earnings miss: profit Rs197.8Cr vs Rs385.8Cr prior year (-48.8%). Stop triggered at Rs3,053. Current Rs2,910.",
-      "bel": "-2.74% today — DROP RULE continues, confirmed correct",
-      "geopolitical": "Xi-Putin meet in Beijing. Iran 'pause' evolving — not ceasefire. Defense premium sustained."
+      "bel": "-2.74% today \u2014 DROP RULE continues, confirmed correct",
+      "geopolitical": "Xi-Putin meet in Beijing. Iran 'pause' evolving \u2014 not ceasefire. Defense premium sustained."
     },
     "exclusions": {
       "PIIND": "STRUCK: Q4FY26 earnings miss. Net profit -48.8% YoY. Stop hit at Rs3,053. Removed from pipeline until results show recovery.",
@@ -729,11 +1065,11 @@
     },
     "retrospective_miss_analysis": {
       "scope": "Stocks that gained +8% or more on May 18-19 NOT in recommendations",
-      "piind_lesson": "PIIND was IN the May 19 recommendations — the issue was earnings MISS not a miss of the stock. Pre-earnings plays on declining revenue trajectories = high binary risk. Pattern R (new): Only take pre-earnings plays when last 2 quarters showed growth, not decline.",
+      "piind_lesson": "PIIND was IN the May 19 recommendations \u2014 the issue was earnings MISS not a miss of the stock. Pre-earnings plays on declining revenue trajectories = high binary risk. Pattern R (new): Only take pre-earnings plays when last 2 quarters showed growth, not decline.",
       "apollomicro_followup": "APOLLOMICRO at Rs358.05 today (+5.09%). 52-week high was Rs354.70. This is a breakout. Was it up 8%+ on May 18-19? Unable to confirm exact 2-day return from available data. The stock was explicitly analyzed on May 19 and excluded (RSI 75.4 ceiling rule, analyst target Rs290 < price Rs327). The breakout above 52w high today is new information. Pattern H exception: if volume >= 2x avg AND defense order confirmed AND RSI < 85, entry valid. Today RSI likely ~82-83. No order confirmed. Still excluded.",
       "mtartech_note": "MTARTECH at Rs7,077 today (+3.91%). Was Rs6,810 area on May 16. ~3.9% gain. Not 8%+. Not a miss.",
       "key_learning": "Pattern H requires BOTH breakout AND confirmed defense order. Without order confirmation, RSI ceiling rule takes precedence. APOLLOMICRO situation: textbook case where the breakout happened but order confirmation was the missing trigger. If MoD order announced, APOLLOMICRO becomes immediate entry candidate at RSI < 85.",
-      "new_pattern_R": "Pattern R — Pre-Earnings Risk Management: Only take pre-earnings positioning when (1) last 2 quarters showed profit growth, (2) revenue trajectory is upward, (3) management guidance positive. PIIND violated rule 2 (revenue -15% YoY was already flagged). Correct decision: skip pre-earnings plays on declining-revenue trajectories regardless of trade catalyst. First occurrence: PIIND May 19 = stop hit from Rs3,164 to Rs3,053."
+      "new_pattern_R": "Pattern R \u2014 Pre-Earnings Risk Management: Only take pre-earnings positioning when (1) last 2 quarters showed profit growth, (2) revenue trajectory is upward, (3) management guidance positive. PIIND violated rule 2 (revenue -15% YoY was already flagged). Correct decision: skip pre-earnings plays on declining-revenue trajectories regardless of trade catalyst. First occurrence: PIIND May 19 = stop hit from Rs3,164 to Rs3,053."
     }
   },
   {
@@ -754,18 +1090,18 @@
     ],
     "entry_prices": {
       "SUZLON": 53.25,
-      "WAAREEENER": 3054.20,
-      "HINDOILEXP": 168.00
+      "WAAREEENER": 3054.2,
+      "HINDOILEXP": 168.0
     },
     "targets": {
-      "SUZLON": 60.00,
-      "WAAREEENER": 3400.00,
-      "HINDOILEXP": 178.00
+      "SUZLON": 60.0,
+      "WAAREEENER": 3400.0,
+      "HINDOILEXP": 178.0
     },
     "stop_losses": {
-      "SUZLON": 50.50,
-      "WAAREEENER": 2900.00,
-      "HINDOILEXP": 158.00
+      "SUZLON": 50.5,
+      "WAAREEENER": 2900.0,
+      "HINDOILEXP": 158.0
     },
     "optimal_exit_windows": {
       "SUZLON": "2026-05-27 (T+4, Tuesday) -- holds through Q4 results May 25 + post-results session",
@@ -817,11 +1153,11 @@
       ]
     },
     "macro_context": {
-      "wti_crude": "$97.23 (+0.91%) — Iran deal hopes reducing war premium; above $95 (Pattern I partially active)",
+      "wti_crude": "$97.23 (+0.91%) \u2014 Iran deal hopes reducing war premium; above $95 (Pattern I partially active)",
       "brent_crude": "$104.09 (+1.47%)",
-      "gold": "$4,528 (-0.32%) — mild decline, not a caution signal",
-      "sp500_futures": "7,491 (+0.33%) — positive US backdrop",
-      "nifty": "23,766 (+0.47%) — broad market positive",
+      "gold": "$4,528 (-0.32%) \u2014 mild decline, not a caution signal",
+      "sp500_futures": "7,491 (+0.33%) \u2014 positive US backdrop",
+      "nifty": "23,766 (+0.47%) \u2014 broad market positive",
       "suzlon_results": "Q4 board meeting May 25; 195 MW repeat order confirmed; 9 GW milestone approaching",
       "hindoilexp_update": "B-80 dispute: third-party crude resale started = operational workaround found",
       "waaree_catalyst": "US anti-China solar policy + Singapore analyst roadshow + Waaree Semicon acquisition"
@@ -851,12 +1187,12 @@
       "INOXWIND": 96.56
     },
     "targets": {
-      "ONGC": 312.00,
-      "INOXWIND": 103.00
+      "ONGC": 312.0,
+      "INOXWIND": 103.0
     },
     "stop_losses": {
-      "ONGC": 285.00,
-      "INOXWIND": 91.50
+      "ONGC": 285.0,
+      "INOXWIND": 91.5
     },
     "t2_exit_date": "2026-05-23",
     "t2_exit_prices": {
@@ -869,9 +1205,9 @@
     },
     "patterns": {
       "ONGC": [
-        "Pattern I (WTI $99.07 above $95 — reduced but still active)",
-        "PE 9.87 extreme undervaluation — deepest in E&P universe",
-        "Analyst targets: Rs320 (Kotak), Rs360 (Jefferies), Rs320+ (JM Financial) — all above price",
+        "Pattern I (WTI $99.07 above $95 \u2014 reduced but still active)",
+        "PE 9.87 extreme undervaluation \u2014 deepest in E&P universe",
+        "Analyst targets: Rs320 (Kotak), Rs360 (Jefferies), Rs320+ (JM Financial) \u2014 all above price",
         "CLSA 44% upside potential",
         "Royalty cut to 12.5% = structural margin improvement not priced in",
         "US markets strong +1.54% NASDAQ = risk-on for large-cap PSU",
@@ -889,20 +1225,20 @@
       ]
     },
     "macro_context": {
-      "wti_crude": "$99.07 (+0.82%) — Iran deal 'final stages'; oil pulling back from $103 peak",
-      "gold": "$4,536.90 (+0.08%) — Pattern K no longer firing; neutral",
-      "sp500_may20": "7,433.00 (+1.08%) — strong US session",
-      "nasdaq_may20": "26,270.36 (+1.54%) — strong, near 52-week high",
-      "nifty_may21": "23,830.05 (+0.72%) — positive opening",
-      "gift_nifty": "Up 135 points — bullish pre-market signal",
-      "nikkei": "+3.58% — massive Asian positive cue",
+      "wti_crude": "$99.07 (+0.82%) \u2014 Iran deal 'final stages'; oil pulling back from $103 peak",
+      "gold": "$4,536.90 (+0.08%) \u2014 Pattern K no longer firing; neutral",
+      "sp500_may20": "7,433.00 (+1.08%) \u2014 strong US session",
+      "nasdaq_may20": "26,270.36 (+1.54%) \u2014 strong, near 52-week high",
+      "nifty_may21": "23,830.05 (+0.72%) \u2014 positive opening",
+      "gift_nifty": "Up 135 points \u2014 bullish pre-market signal",
+      "nikkei": "+3.58% \u2014 massive Asian positive cue",
       "niftyit": "Analyst caution: 'returns may stay capped'",
       "iran_usa": "Trump in 'final stages' of Iran deal per Yahoo Finance. Iran demands: lifted blockades, sanctions removal, frozen assets. No deal SIGNED yet. War premium reducing.",
       "india_open_positions_expiry": "May 19 batch expires today (T+2 = May 21): HAL +1.81%, ONGC -1.33%, WAAREEENER flat, INOXWIND flat, PIIND stop hit May 20",
       "key_signal": "Broad market positive (US, Asia, India pre-open) = supportive backdrop for today's picks"
     },
     "exclusions": {
-      "HAL": "RSI elevated (56-62). FII declining 12% to 10.21%. Iran deal reducing defense war premium. Open position exits today — not a fresh buy signal at current elevated levels.",
+      "HAL": "RSI elevated (56-62). FII declining 12% to 10.21%. Iran deal reducing defense war premium. Open position exits today \u2014 not a fresh buy signal at current elevated levels.",
       "APOLLOMICRO": "RSI 84-86 EXCEEDS updated Pattern H ceiling (revised to 82 from 85). At 52-week high with massive volume. No confirmed MoD order. RSI ceiling = hard exclude. Watchlist: enter at Rs295-320 (RSI pullback to 55-65 zone).",
       "WAAREEENER": "Leaderboard 0/2 = 0%. Confidence 79% - 10 (penalty) = 69% < 78 threshold. Extraordinary thesis intact but T+2 framework not working yet. Target re-entry at Rs2,750-2,850.",
       "HINDOILEXP": "B-80 HPCL dispute unresolved. STRIKE continues. Re-entry when dispute resolved.",
@@ -910,7 +1246,7 @@
       "GRSE": "Elara Capital SELL target Rs2,230 vs price Rs2,704 = Rule 3 (analyst target below price). Excluded.",
       "BEL": "DROP RULE (0/4 = 0%). +2.26% today confirms rule correct.",
       "BHEL": "Leaderboard 0/4 = 0%. No fresh catalyst. PE 89.5 high.",
-      "PIIND": "Q4 FY26 earnings miss -48.8%. Revenue declining. Stop hit May 20. In recovery mode — no re-entry until Q1 FY27 revenue recovery confirmed.",
+      "PIIND": "Q4 FY26 earnings miss -48.8%. Revenue declining. Stop hit May 20. In recovery mode \u2014 no re-entry until Q1 FY27 revenue recovery confirmed.",
       "PERSISTENT": "PERMANENT HARD EXCLUDE.",
       "CGPOWER": "PERMANENT HARD EXCLUDE.",
       "ALL_OMC_REFINERS": "WTI $99 still above $95 = OMC margin rule active until retail prices raised further (Pattern Q not yet triggered).",
@@ -918,17 +1254,647 @@
     },
     "may19_batch_exits_today": {
       "note": "T+2 exit date = May 21 for May 19 batch",
-      "HAL": {"entry": 4323.00, "estimated_exit": 4401.30, "estimated_pnl_pct": 1.81, "status": "WIN_ESTIMATED"},
-      "PIIND": {"entry": 3164.00, "stop_hit_exit": 3053.00, "pnl_pct": -3.51, "status": "STOP_HIT_MAY20"},
-      "WAAREEENER": {"entry": 3045.00, "estimated_exit": 3020.00, "estimated_pnl_pct": -0.82, "status": "SMALL_LOSS_ESTIMATED"},
-      "INOXWIND": {"entry": 96.90, "estimated_exit": 96.56, "estimated_pnl_pct": -0.35, "status": "NEAR_FLAT_ESTIMATED"},
-      "ONGC": {"entry": 300.45, "estimated_exit": 296.45, "estimated_pnl_pct": -1.33, "status": "LOSS_ESTIMATED"}
+      "HAL": {
+        "entry": 4323.0,
+        "estimated_exit": 4401.3,
+        "estimated_pnl_pct": 1.81,
+        "status": "WIN_ESTIMATED"
+      },
+      "PIIND": {
+        "entry": 3164.0,
+        "stop_hit_exit": 3053.0,
+        "pnl_pct": -3.51,
+        "status": "STOP_HIT_MAY20"
+      },
+      "WAAREEENER": {
+        "entry": 3045.0,
+        "estimated_exit": 3020.0,
+        "estimated_pnl_pct": -0.82,
+        "status": "SMALL_LOSS_ESTIMATED"
+      },
+      "INOXWIND": {
+        "entry": 96.9,
+        "estimated_exit": 96.56,
+        "estimated_pnl_pct": -0.35,
+        "status": "NEAR_FLAT_ESTIMATED"
+      },
+      "ONGC": {
+        "entry": 300.45,
+        "estimated_exit": 296.45,
+        "estimated_pnl_pct": -1.33,
+        "status": "LOSS_ESTIMATED"
+      }
     },
     "retrospective_miss_analysis": {
       "scope": "Stocks that gained +8%+ on May 19-20 NOT in recommendations",
       "apollomicro_confirmed_miss": "APOLLOMICRO: Rs327.40 (May 19) -> Rs369.90 (May 21) = +12.97% over 3 days. CONFIRMED MISS > 8%. Root cause: RSI 75.4 (Pattern B ceiling) + analyst target Rs290 < price Rs327 (Rule 3) prevented entry May 19. Pattern H refinement: 2+ sector catalysts can substitute for specific MoD order when RSI 75-82 (not 84+). APOLLOMICRO RSI 75.4 on May 19 was within the exception window. The miss was primarily due to strict 'confirmed order' requirement. Pattern H revised to require 2+ active sector catalysts as alternative to specific order confirmation.",
       "no_other_8pct_miss": "No other stock in our universe gained +8%+ on May 19-20 (RIL +3% was not in universe).",
-      "key_learning": "Pattern H revised — confirmed government order OR 2+ active sector catalysts with RSI 75-82 + breakout + volume 2x = valid entry. RSI > 82 = still hard exclude regardless."
+      "key_learning": "Pattern H revised \u2014 confirmed government order OR 2+ active sector catalysts with RSI 75-82 + breakout + volume 2x = valid entry. RSI > 82 = still hard exclude regardless."
+    }
+  },
+  {
+    "date": "2026-05-25",
+    "run_number": 14,
+    "note": "Sunday run (v2 relaxed rules). Only 1 pick meets >78% confidence threshold. Iran deal 'final stages' = war premium reducing = defense/E&P caution flags applied. STLTECH excluded (PE 475, negative ROE, news priced in +5%). EICHER excluded (already +5% on results day). INOXWIND selected: SUZLON Q4 results today (binary trigger), board May 29, FII 14.61%, Pattern A max trigger. SUZLON/WAAREEENER/HINDOILEXP already held from May 22 batch. ONGC May 21 batch exits today at ~Rs 286 (-3.5% loss).",
+    "rule_version": "v2",
+    "entry_date": "2026-05-26",
+    "recommendations": [
+      "INOXWIND"
+    ],
+    "entry_prices": {
+      "INOXWIND": 97.0
+    },
+    "targets": {
+      "INOXWIND": 104.0
+    },
+    "stop_losses": {
+      "INOXWIND": 91.5
+    },
+    "optimal_exit_windows": {
+      "INOXWIND": "2026-06-02 to 2026-06-04 (T+6 to T+8) -- post-FY26 results swing (board May 29)"
+    },
+    "confidence_scores": {
+      "INOXWIND": 85
+    },
+    "entry_condition": {
+      "INOXWIND": "SUZLON Q4 FY26 results (announced May 25) must be POSITIVE (PAT growth YoY + constructive FY27 guidance). If SUZLON Q4 disappoints: SKIP INOXWIND entirely on May 26."
+    },
+    "patterns": {
+      "INOXWIND": [
+        "Pattern A (SUZLON Q4 results today May 25 = sector catalyst at maximum strength)",
+        "Pattern A (SUZLON 195 MW confirmed repeat order from Sunsure = sector lead)",
+        "Pattern G (FII 14.61% increasing 2 consecutive quarters: 13.37% -> 14.16% -> 14.61%)",
+        "Pattern F (wind energy structural: India 140 GW target, PLI active)",
+        "Pre-results positioning: INOXWIND own board meeting May 29 FY26 results"
+      ]
+    },
+    "macro_context": {
+      "wti_crude": "$96.60 (+0.26%) \u2014 declining from $103 peak; Iran deal 'final stages'",
+      "gold": "$4,523 (-0.42%) \u2014 no gold caution",
+      "sp500": "7,473 (+0.37%) \u2014 positive US session",
+      "nasdaq": "26,344 (+0.19%) \u2014 positive",
+      "nifty": "23,932 (+0.90%) \u2014 broad India positive",
+      "vix": "16.7 (falling, risk-on)",
+      "niftyit": "28,930 (+0.06%) \u2014 flat, AI risk ongoing",
+      "suzlon_q4": "Q4 FY26 board meeting today May 25. Results unknown at time of this report.",
+      "iran_deal": "Final stages per Trump. Sticking points remain. Strait of Hormuz partially reopening (supertankers exiting). War premium reducing.",
+      "stltech_catalyst": "$1.11B hyperscaler supply agreement through Mar 2029. +5% today at record high. Excluded (priced in + PE 475 + negative ROE).",
+      "eicher_catalyst": "Q4 FY26: PAT Rs 5,515 Cr, revenue Rs 23,408 Cr, brokerage 29% upside. +4.93% today. Excluded (priced in +5% on results day)."
+    },
+    "exclusions": {
+      "STLTECH": "NEWS_PRICED_IN: +5% on news day + PE 475 + negative 3yr ROE + sales growth -10%. Pattern J boost (+20) cannot overcome 4 red flags. WATCHLIST at Rs 430-445.",
+      "EICHERMOT": "Already +4.93% on Q4 results day. RSI 72-75 = overbought entry. Fuel hike Rs 100+ = FY27 headwind. Watchlist at Rs 7,000-7,100 pullback.",
+      "SUZLON": "Already held from May 22 (entry Rs 53.25). Do not pyramid. Exit May 28 (T+4).",
+      "WAAREEENER": "Already held from May 22 (entry Rs 3,054). Hold, do not add. Stop Rs 2,900.",
+      "HINDOILEXP": "Already held from May 22 (entry Rs 168). Tighter mental stop Rs 162 given Iran deal progress. Exit on Iran ceasefire confirmation.",
+      "ONGC": "Exit today (T+2 from May 21). Iran deal = war premium collapse. 0/3 historical. Do not re-enter.",
+      "HAL": "Iran deal = defense war premium CAUTION -15. RSI not in dip zone. FII declining. Confidence below 78.",
+      "MAZDOCK": "Iran deal = naval premium collapse risk. FY26 profit -24.41%. Leaderboard 0/2. Excluded.",
+      "GRSE": "Elara SELL target Rs 2,230 < price Rs 2,720. Rule 3 violation.",
+      "BEL": "DROP RULE: 0/4 historical. Iran deal caution. Excluded.",
+      "BHEL": "Leaderboard 0/2. PE 90.9. No catalyst. Excluded.",
+      "PERSISTENT": "PERMANENT HARD EXCLUDE.",
+      "CGPOWER": "PERMANENT HARD EXCLUDE.",
+      "ALL_OMC_REFINERS": "WTI $96.60 above $95 = Rule 1 (retail margin compression).",
+      "APOLLOMICRO": "No confirmed MoD order. RSI estimated elevated post-breakout run. Pattern H requires order confirmation."
+    },
+    "open_positions_status": {
+      "SUZLON_may22": {
+        "entry": 53.25,
+        "current": 54.6,
+        "pnl_pct": 2.53,
+        "status": "OPEN_PROFIT"
+      },
+      "WAAREEENER_may22": {
+        "entry": 3054.2,
+        "current": 2980.0,
+        "pnl_pct": -2.43,
+        "status": "OPEN_LOSS_WITHIN_STOP"
+      },
+      "HINDOILEXP_may22": {
+        "entry": 168.0,
+        "current": 166.0,
+        "pnl_pct": -1.19,
+        "status": "OPEN_LOSS_WITHIN_STOP"
+      },
+      "ONGC_may21": {
+        "entry": 296.45,
+        "current": 286.0,
+        "pnl_pct": -3.53,
+        "status": "CLOSING_TODAY_LOSS"
+      },
+      "INOXWIND_may21": {
+        "entry": 96.56,
+        "current": 96.7,
+        "pnl_pct": 0.14,
+        "status": "CLOSING_TODAY_FLAT"
+      }
+    },
+    "new_patterns_discovered": {
+      "Pattern_O": "Data center AI infrastructure: Indian companies winning multi-year hyperscaler supply agreements = high-conviction catalyst. Entry must be BEFORE news or within 1 session. News-priced-in rule strictly applies.",
+      "Pattern_P_reconfirmed": "Strong Q4 results + analyst upgrade = +3-8% next session gap-up. Pre-results entry is optimal; post-results entry (after gap-up) is partial pricing.",
+      "Iran_deal_rule": "When Iran deal officially signed: CLOSE HINDOILEXP immediately regardless of stop. E&P thesis changes fundamentally.",
+      "Peer_results_trigger": "For duopoly pairs: leader's earnings = binary entry trigger for lagging peer. Positive leader earnings = enter peer. Negative = skip peer."
+    }
+  },
+  {
+    "date": "2026-05-26",
+    "run_number": 15,
+    "note": "Monday run (v2 relaxed rules). 2 picks meet >78% confidence. INOXWIND entry condition NOT MET (SUZLON Q4 PAT -6% YoY = peer trigger says SKIP). WTI crude collapsed to .83 (-4.94%) on Iran deal optimism. Major macro shift: oil below  threshold = Pattern I SUSPENDED. HINDOILEXP: close watch (Iran deal risk + B-80 dispute still ongoing). WAAREEENER: strong Q4 earnings catalyst (+111% profit) + FII accumulation makes it the top pick. BEL: Q4 PAT +41% + FII 19.5% + fresh orders = solid second pick.",
+    "rule_version": "v2",
+    "entry_date": "2026-05-26",
+    "recommendations": [
+      "WAAREEENER",
+      "BEL"
+    ],
+    "entry_prices": {
+      "WAAREEENER": 3080.0,
+      "BEL": 423.0
+    },
+    "targets": {
+      "WAAREEENER": 3400.0,
+      "BEL": 460.0
+    },
+    "stop_losses": {
+      "WAAREEENER": 2900.0,
+      "BEL": 408.0
+    },
+    "optimal_exit_windows": {
+      "WAAREEENER": "2026-06-04 to 2026-06-09 (T+7 to T+10 swing) -- FII accumulation + Q4 earnings + US-China solar structural thesis",
+      "BEL": "2026-06-02 to 2026-06-05 (T+5 to T+7) -- Q4 earnings catalyst + fresh order wins"
+    },
+    "confidence_scores": {
+      "WAAREEENER": 84,
+      "BEL": 80
+    },
+    "patterns": {
+      "WAAREEENER": [
+        "Pattern G MAXIMUM (FII 10x accumulation: 0.70% to 7.06% in 1 year)",
+        "Q4 FY26 EARNINGS CATALYST: Revenue +64% YoY (Rs 20,991 Cr), Profit +111% YoY (Rs 3,762 Cr)",
+        "US-China solar structural tailwind (anti-China solar policy = WAAREEENER direct beneficiary)",
+        "RSI recovery from extreme oversold (RSI 20.5 May 18 -> estimated 45-55 today)",
+        "Rule 26a base formation confirmed: 4 days sideways near Rs 3,054-3,080 then breakout today +3.19%",
+        "Waaree Semicon acquisition May 15 = semiconductor upstream integration"
+      ],
+      "BEL": [
+        "Q4 FY26 EARNINGS CATALYST: Revenue +41.72% YoY (Rs 10,335 Cr), PAT +41.01% YoY (Rs 2,214 Cr)",
+        "FII 19.50% = highest institutional holding in pipeline universe",
+        "Fresh order wins: Rs 608 Cr since May 5 (communication equipment, avionics, radars, jammers, medical electronics)",
+        "Peacetime defense diversification (multi-domain: not just war premium)",
+        "Pattern G (high FII + strong institutional backing)",
+        "v2 rules: DROP RULE is informational only (T+2 win rate not applicable to swing hold thesis)"
+      ]
+    },
+    "macro_context": {
+      "wti_crude": ".83 (-4.94%) -- MAJOR DROP. Iran deal optimism + Hormuz reopening hopes. First time below  in weeks. Pattern I (Iran-USA war trade) SUSPENDED.",
+      "brent_crude": ".23 (-4.97%) -- dropped below ",
+      "gold": ",537.70 (+0.32%) -- slight uptick, NOT a caution signal (below +2% 5d threshold)",
+      "sp500": "7,473.47 (+0.37%) -- positive",
+      "nasdaq": "26,343.97 (+0.19%) -- positive",
+      "nifty": "24,033 (+0.01%) -- near flat",
+      "niftyit": "Unknown (data unavailable) -- AI risk ongoing",
+      "iran_usa": "Peace deal OPTIMISM driving oil collapse. Fresh US military strikes tempered optimism. NOT an officially signed deal yet. WTI .83 = major warning for E&P positions.",
+      "suzlon_q4": "Q4 FY26: Revenue +45% to Rs 5,494 Cr (strong), PAT -6% YoY to Rs 1,114 Cr (MISS). Nuvama downgraded to Hold target Rs 55. Missed FY26 targets by 10%. INOXWIND peer trigger = SKIP (PAT negative).",
+      "bluejet": "Blue Jet Healthcare +7.24% today on Q4 results. NEWS PRICED IN. Excluded.",
+      "coal_india": "Top Nifty gainer today (+1.53%) -- not in universe"
+    },
+    "exclusions": {
+      "INOXWIND": "PEER TRIGGER NOT MET: SUZLON Q4 PAT -6% YoY = rule says SKIP PEER. Own results May 29 = binary event risk. Confidence dropped below 78%.",
+      "HINDOILEXP": "CLOSE WATCH: B-80 dispute STILL ongoing + SEBI warning + WTI .83 dropping below  = Iran deal risk maximum. Existing position (May 22 entry Rs 168): consider early exit if deal confirmed. NOT a fresh buy.",
+      "ONGC": "Q4 results DUE TODAY = binary event risk + WTI .83 headwind + 0/3 historical. Confidence well below 78%.",
+      "HAL": "Iran peace = defense war premium reducing. RSI not in dip zone (Rs 4,428). FII declining. Confidence 72%.",
+      "APOLLOMICRO": "Near 52w high Rs 419. RSI likely 75-82+. Iran peace reduces defense catalysts. PE 118. Confidence below 78%.",
+      "SUZLON": "Already held from May 22 (Rs 53.25). Exit window May 27-28 as planned. Q4 PAT declined = thesis partially intact (revenue strong, but PAT miss).",
+      "MAZDOCK": "Q4 PAT -24.41%. Iran peace = naval war premium collapsing. Confidence below 78%.",
+      "KPIL": "Confidence exactly 78% = NOT strictly > 78%. Excluded per rules.",
+      "BLUEJET": "Already +7.24% today = news priced in. Conflicting analyst views. Excluded.",
+      "PIIND": "Q4 revenue +13.75% but Q4 profit -35.69% QoQ. Still recovering. Confidence below 78%.",
+      "BEL_historical": "v2 rules: DROP RULE informational only. BEL INCLUDED at 80% based on Q4 results + FII 19.5%.",
+      "PERSISTENT": "PERMANENT HARD EXCLUDE.",
+      "CGPOWER": "PERMANENT HARD EXCLUDE.",
+      "ALL_OMC_REFINERS": "WTI .83 BELOW  = OMC Pattern Q may be triggering. But validation needed before entry. Not in this batch."
+    },
+    "critical_alerts": {
+      "iran_deal_watchrule": "WTI at .83 (-4.94%) is a YELLOW ALERT for the Iran Deal Watchrule. Not officially signed yet (fresh US strikes show war still active). But if deal IS signed: CLOSE HINDOILEXP IMMEDIATELY from May 22 batch. Do not wait for stop.",
+      "pattern_i_suspended": "Pattern I (Iran-USA War Trade) SUSPENDED as of today. E&P and defense war premium plays must be reassessed. Structural defense spending (BEL, HAL) remains valid but war-premium-specific plays are out.",
+      "oil_below_95": "WTI .83 = first time below  threshold in weeks. ALL E&P stocks: REDUCED CONFIDENCE. OMC refiners: POTENTIAL BUY (check margin reversal)."
+    },
+    "open_positions_may22_status": {
+      "SUZLON": {
+        "entry": 53.25,
+        "current": 53.97,
+        "pnl_pct": 1.35,
+        "status": "OPEN_PROFIT",
+        "action": "EXIT by May 27-28 as planned. Q4 results mixed (revenue +45% but PAT -6%). Nuvama downgrade to Hold. Take profits."
+      },
+      "WAAREEENER": {
+        "entry": 3054.2,
+        "current": 3080.0,
+        "pnl_pct": 0.84,
+        "status": "OPEN_SMALL_PROFIT",
+        "action": "HOLD. Q4 results strong (+111% profit). FII accumulation story intact. Exit window Jun 1-4."
+      },
+      "HINDOILEXP": {
+        "entry": 168.0,
+        "current": 166.0,
+        "pnl_pct": -1.19,
+        "status": "OPEN_SMALL_LOSS",
+        "action": "YELLOW ALERT. WTI .83. B-80 dispute ongoing + SEBI warning. Consider early exit if oil drops below  or if Iran deal confirmed signed."
+      }
+    },
+    "retrospective_miss_analysis": {
+      "scope": "Stocks that gained +8%+ on May 21-25 NOT in recommendations",
+      "apollomicro_continued_run": "APOLLOMICRO: Rs 370 (May 21) -> Rs 409 (May 26) = +10.5% over 4 days. Still excluded correctly per RSI ceiling rule (estimated 75-82+). Pattern H requires RSI < 82. This miss is an accepted outcome of the RSI discipline rule. If RSI pulls back to 55-65, entry becomes valid.",
+      "eicher_miss": "EICHERMOT: +12%+ on Q4 results. NOT in pipeline universe (large-cap). No miss penalty.",
+      "bluejet_note": "BLUEJET: +7.24% today. Was not in universe (healthcare). Could have been caught via Pattern P (Q4 results catalyst). Consider adding healthcare to universe scan.",
+      "suzlon_partial_thesis": "SUZLON was in May 22 batch at Rs 53.25. Current Rs 53.97 = +1.35%. Revenue beat (+45%) but PAT miss (-6%). Mixed execution. Nuvama downgrade. Exit at target May 27-28.",
+      "key_learning": "Pattern P (Q4 results gap-up): BLUEJET caught a +7% move on earnings beat. Healthcare specialty companies with PE < 35 and EBITDA beats should be in the universe scan. Adding BLUEJET and similar pharma/healthcare specialty names to watchlist."
+    },
+    "new_patterns_discovered": {
+      "Pattern_Q_extended": "WTI below  = OMC margin expansion confirmed. If WTI stays below  for 3+ days, OMC refiners (BPCL, HPCL, IOC) become BUY candidates. Pattern Q (margin reversal) fully activated.",
+      "Bluejet_healthcare_note": "BLUEJET +7.24% on Q4 EBITDA beat = Pattern P (earnings beat gap-up) confirmed again. Healthcare specialty companies with (a) PE < 40 AND (b) EBITDA margin expanding should be added to universe watch.",
+      "Iran_deal_yellow_alert_rule": "When WTI drops >4% in one day AND reason is Iran deal/Hormuz reopening: (1) REDUCE E&P confidence by 20 points, (2) SUSPEND Pattern I, (3) CLOSE any existing E&P swing positions if deal confirmed, (4) Watch OMC refiners for BUY signal (inverse of E&P)."
+    }
+  },
+  {
+    "date": "2026-05-26",
+    "type": "USER_TRADE_POSTMORTEM",
+    "note": "User identified ATHER (ATHERENERG) chart reversal on May 22 independently. +11% in 4 days on Rs 1L. Pipeline missed this. Post-mortem and Pattern S (IPO Post-Listing Reversal) created.",
+    "user_trade": {
+      "symbol": "ATHERENERG",
+      "entry_date": "2026-05-22",
+      "entry_price": 883.8,
+      "exit_date": "2026-05-26",
+      "exit_price": 981.1,
+      "return_pct": 11.0,
+      "position_size_rs": 100000,
+      "pnl_rs": 11000,
+      "holding_days": 4,
+      "pipeline_recommended": false,
+      "pipeline_confidence_estimate": 65,
+      "miss_reason": "New listing confidence cap 75% + no news catalyst + OLA Electric trigger not clearly firing + Pattern S not yet defined"
+    },
+    "ather_chart_analysis": {
+      "listing_date": "2025-11",
+      "listing_price_approx": 692,
+      "peak_price": 989.4,
+      "peak_date": "2026-05-11",
+      "trough_price_intraday": 873.6,
+      "trough_date": "2026-05-21",
+      "entry_close": 883.8,
+      "entry_date": "2026-05-22",
+      "correction_pct_from_peak": -11.7,
+      "correction_sessions": 7,
+      "reversal_pattern": "Exhaustion low / Seller depletion \u2014 NOT V-bottom. 7-session grind with declining volume on red days.",
+      "rsi_at_entry": 41.5,
+      "rsi_zone": "Pattern C recovery zone (38-50)",
+      "ma5_at_entry": 900.5,
+      "entry_below_5ma": true,
+      "volume_declining_on_red_days": true,
+      "breakout_day": "2026-05-26",
+      "breakout_volume": "5.23M (1.53x 20d avg)",
+      "macro_catalyst": "WTI -4.94% on May 26 = EV structural tailwind (lower fuel costs = EV adoption narrative)"
+    },
+    "pattern_s_definition": "IPO/Post-Listing Reversal \u2014 for recently listed stocks (6-24 months post-IPO) that correct 8-20% from listing-era high in 6-10 sessions with declining volume on red days. Entry: RSI 38-50, price reclaims 5-day MA, recovery day volume >= 1.0x avg. Base confidence 72, boosted up to 87 with full criteria.",
+    "pattern_s_candidates_today": {
+      "SWIGGY": {
+        "status": "WATCH",
+        "current": 256.2,
+        "ipo_date": "2025-11",
+        "ipo_price": 390,
+        "high_52w": 458.5,
+        "low_52w": 249.9,
+        "rsi": 42.7,
+        "ma5": 252.7,
+        "above_5ma": true,
+        "vol_ratio": 0.28,
+        "disqualifier": "Volume 0.28x avg = well below 1.0x minimum. Wait for volume confirmation.",
+        "entry_trigger": "Close > Rs 260 on volume >= 5M OR Eternal (Zomato) up >2% same day",
+        "stop": 245.0,
+        "target": 292.0,
+        "confidence": 72,
+        "pattern_s_score": "Volume failure prevents entry today"
+      },
+      "CELLO": {
+        "status": "WATCH",
+        "current": 393.0,
+        "ipo_date": "2025-05",
+        "ipo_price_approx": 623,
+        "high_52w": 660.6,
+        "low_52w": 380.5,
+        "rsi": 39.5,
+        "ma5": 385.9,
+        "above_5ma": true,
+        "vol_ratio": 0.65,
+        "disqualifier": "Volume below 1.0x minimum. Fundamental story weaker (declining revenue trend).",
+        "entry_trigger": "Volume spike day >= 0.25M (1.2x avg) with green close",
+        "stop": 372.0,
+        "target": 440.0,
+        "confidence": 68,
+        "pattern_s_score": "Below 78% threshold. No entry today."
+      }
+    },
+    "pipeline_miss_lessons": [
+      "1. New-listing confidence cap of 75% correctly excludes uninformed plays BUT Pattern S criteria should allow relaxation to 80% when technical evidence is strong.",
+      "2. WTI collapse narrative (-4.94%) should trigger EV sector TAILWIND flag for ATHERENERG/OLAELEC in Step 1.5 output. This was missed because Step 1.5 only linked oil collapse to E&P (negative) and OMC (positive).",
+      "3. OLAELEC duopoly trigger: threshold 'OLAELEC +1%+' was borderline on May 22 (Rs 36.0 = +1.4%). Relax to >0.5% for intraday or close-to-close basis.",
+      "4. Pattern S is a HIGH-VALUE pattern when conditions are fully met. The ATHER trade returned +11% in 4 days on Rs 1L = the single best trade of the user in the pipeline period."
+    ]
+  },
+  {
+    "date": "2026-05-26",
+    "type": "PATTERN_S_LPI_SCAN",
+    "note": "Pattern S \u2014 Loss-to-Profit Inflection (LPI) sub-pattern added and scanned across universe. No immediate trades recommended today (SWIGGY and FIRSTCRY are WATCH, not active buys). Entry triggers defined for both.",
+    "pattern_s_lpi_sub_pattern": {
+      "definition": "4+ consecutive quarters of narrowing losses + expected first profit within 1-3 quarters. Institutions front-run the first profit quarter by 1-2 quarters, creating pre-buying pressure that supports Pattern S chart reversals.",
+      "confidence_boost": "+8 (single highest-value boost in Pattern S framework)",
+      "combined_score_range": "Base 72 + full tech criteria +20 + LPI +8 = maximum 100; realistic 82-90",
+      "disqualifiers": [
+        "Revenue also declining (improvement via cost cuts only = unsustainable)",
+        "Most recent quarter loss LARGER than 2 quarters ago (streak broken)",
+        "Debt rising rapidly"
+      ]
+    },
+    "lpi_scan_results": {
+      "FIRSTCRY": {
+        "symbol": "FIRSTCRY",
+        "lpi_qualified": true,
+        "lpi_score": "STRONG",
+        "consecutive_quarters_improving": 3,
+        "pat_trend": [
+          -67,
+          -51,
+          -39,
+          "Q4_FY26_today"
+        ],
+        "ebitda_trend": [
+          33,
+          49,
+          57,
+          108
+        ],
+        "ebitda_accelerating": true,
+        "expected_first_profit_quarter": "Q2 FY27 (Sep 2026) or sooner",
+        "current_price": 236.0,
+        "52w_high": 439.0,
+        "52w_low": 207.0,
+        "decline_from_high_pct": -46.2,
+        "rsi": "unknown",
+        "pattern_s_technical_met": false,
+        "reason_not_met": "Decline from 52w high exceeds Pattern S -20% maximum; chart needs base formation",
+        "confidence_if_triggered": 82,
+        "entry_trigger": "Q4 FY26 result shows loss < Rs 25 Cr (4th consecutive improvement confirmed) + volume >= 2x avg on entry day",
+        "entry_zone": "228-240",
+        "target": 290.0,
+        "stop": 207.0,
+        "holding_window": "T+15 to T+30",
+        "status": "WATCH \u2014 binary event today (board meeting May 26 for Q4 results)",
+        "q4_result_date": "2026-05-26"
+      },
+      "SWIGGY": {
+        "symbol": "SWIGGY",
+        "lpi_qualified": true,
+        "lpi_score": "MODERATE_STRONG",
+        "consecutive_quarters_improving": 4,
+        "pat_trend": [
+          -1197,
+          -1092,
+          -1065,
+          -800
+        ],
+        "opm_trend": [
+          -19,
+          -16,
+          -14,
+          -11
+        ],
+        "expected_first_profit_quarter": "Q4 FY27 at current pace; Q2 FY27 if Q4 improvement pace sustained",
+        "current_price": 256.0,
+        "52w_high": 474.0,
+        "52w_low": 247.0,
+        "decline_from_high_pct": -46.0,
+        "rsi": 42.7,
+        "fii_holding": 14.59,
+        "pattern_s_technical_met": false,
+        "reason_not_met": "Volume 0.28x avg (below 1.0x minimum); decline too deep for standard Pattern S",
+        "partial_pattern_s": "RSI in zone (42.7), 5MA reclaimed (256 > 252.7), near 52w low bounce",
+        "confidence_if_triggered": 80,
+        "entry_trigger": "Close > Rs 260 on volume >= 5M (1x avg) OR ETERNAL (Zomato) up >1.5%",
+        "entry_zone": "260-262",
+        "target": 295.0,
+        "stop": 245.0,
+        "holding_window": "T+10 to T+20",
+        "duopoly_peer": "ETERNAL (Zomato)",
+        "status": "WATCH \u2014 entry trigger imminent (1-2 sessions)"
+      },
+      "OLAELEC": {
+        "symbol": "OLAELEC",
+        "lpi_qualified": false,
+        "lpi_score": "DOES_NOT_QUALIFY",
+        "reason": "Q3 FY26 loss WIDENED from Q2 (Rs -500 Cr vs Rs -418 Cr) \u2014 streak broken",
+        "pat_trend": [
+          -428,
+          -418,
+          -500,
+          "Q4_FY26_cash_flow_positive_but_PAT_still_negative"
+        ],
+        "current_price": 38.1,
+        "52w_high": 71.2,
+        "52w_low": 21.2,
+        "status": "WATCHLIST \u2014 Duopoly lag vs ATHERENERG possible. Not LPI-qualified.",
+        "duopoly_trigger": "ATHERENERG up >2% AND OLAELEC RSI 35-45 AND volume >= 1.5x avg"
+      },
+      "BLACKBUCK": {
+        "symbol": "BLACKBUCK",
+        "lpi_qualified": false,
+        "reason": "Already profitable for 3 consecutive quarters (Q1 FY26 onwards). LPI signal is pre-first-profit. BLACKBUCK graduated.",
+        "status": "GRADUATED \u2014 evaluate as profitable small-cap using standard patterns"
+      },
+      "NTPCGREEN": {
+        "symbol": "NTPCGREEN",
+        "lpi_qualified": false,
+        "reason": "Consistently profitable (not a loss-making company). Not an LPI candidate.",
+        "status": "Not applicable \u2014 evaluate using Pattern F/G/O"
+      },
+      "AFCONS": {
+        "symbol": "AFCONS",
+        "lpi_qualified": false,
+        "reason": "PROFIT-TO-LOSS deterioration in Q4 FY26 (Rs -89 Cr vs Rs +97 Cr prior quarter). Opposite of LPI.",
+        "status": "HARD EXCLUDE \u2014 deteriorating fundamentals"
+      },
+      "HYUNDAI_INDIA": {
+        "symbol": "HYUNDAIINDIA",
+        "lpi_qualified": false,
+        "reason": "Profitable large-cap. LPI applies only to loss-making recently listed companies.",
+        "status": "Evaluate using standard patterns (RSI, duopoly vs MARUTI, sector)"
+      }
+    },
+    "no_immediate_recommendations": true,
+    "reason": "SWIGGY requires volume trigger (Rs 260 on volume >= 5M); FIRSTCRY requires Q4 result confirmation. Neither is an immediate trade today. Adding to WATCH universe with defined entry triggers."
+  },
+  {
+    "date": "2026-05-27",
+    "run_number": 16,
+    "note": "Wednesday run (v2 relaxed rules). 3 fresh picks all confidence >78%. Pattern Q (OMC margin reversal) triggered for BPCL - WTI .17 for 2nd consecutive day below . BPCL cup-and-handle technical pattern confirmed. BEL Q4 PAT +41% + fresh Rs 608Cr orders. NTPCGREEN breakout from consolidation + MACD PCO. INOXWIND excluded despite SUZLON +1.23% (Pattern A trigger) due to 1-year -47.38% downtrend. HINDOILEXP: CLOSE ALERT issued - approaching stop Rs 158.",
+    "RETROACTIVE_CORRECTION_2026_05_27": "USER CHART REVIEW — BEL and BPCL picks INVALIDATED. Both stocks are in active downtrends (lower highs, lower lows) with no confirmed reversal. Agent over-weighted fundamental narrative and incorrectly labelled chart patterns. Rule 26d (Active Downtrend Disqualification) added. BEL: V-bounce then sharp pullback, still below all prior highs. BPCL: Staircase downtrend, right rim of 'cup' at Rs 304 is 22% below left rim at Rs 391 — not a cup, a downtrend channel. DO NOT use these as entry prices. See pattern_notes.md Rule 26d for watchlist conditions.",
+    "rule_version": "v2",
+    "recommendations": [
+      "BPCL",
+      "BEL",
+      "NTPCGREEN"
+    ],
+    "validity": {
+      "BPCL": "INVALID_RULE_26D + LOW_VOLATILITY_RULE_26E — active downtrend (lower highs, lower lows) AND 1-year return ~-4.5% indicates fewer than 40 high-volatility days in last 252 sessions; structurally incompatible with 5%/day target. No base formation. Do not use entry price Rs 304.60. WATCHLIST only: enter above Rs 332 (prior swing high) OR after 2-3 weeks sideways consolidation above Rs 294 AND after confirming High_Vol_Day_Count_252 >= 40.",
+      "BEL": "INVALID_RULE_26D + LOW_VOLATILITY_RULE_26E — downtrend not confirmed reversed AND 1-year return ~+3% indicates fewer than 40 high-volatility days in last 252 sessions; structurally incompatible with 5%/day target. V-bounce then sharp pullback, below all prior highs. Do not use entry price Rs 422.75. WATCHLIST only: enter above Rs 436 (prior swing high) on volume >= 1.5x avg AND after confirming High_Vol_Day_Count_252 >= 40.",
+      "NTPCGREEN": "WATCH — double bottom at Rs 84 is consistent with Rule 26d Condition B (base formation). Verify on chart that Rs 84 low holds and higher lows are forming. If confirmed, entry zone Rs 100-105 remains valid."
+    },
+    "recommendations": [
+      "BPCL",
+      "BEL",
+      "NTPCGREEN"
+    ],
+    "entry_prices": {
+      "BPCL": 304.6,
+      "BEL": 422.75,
+      "NTPCGREEN": 103.1
+    },
+    "targets": {
+      "BPCL": 342.0,
+      "BEL": 455.0,
+      "NTPCGREEN": 119.0
+    },
+    "stop_losses": {
+      "BPCL": 285.0,
+      "BEL": 408.0,
+      "NTPCGREEN": 93.0
+    },
+    "optimal_exit_windows": {
+      "BPCL": "2026-06-02 to 2026-06-05 (T+5 to T+7) -- WTI sustained below  + cup-and-handle breakout target",
+      "BEL": "2026-06-02 to 2026-06-05 (T+5 to T+7) -- post-earnings momentum + order wins",
+      "NTPCGREEN": "2026-06-03 to 2026-06-09 (T+5 to T+10) -- post-breakout consolidation + green energy swing"
+    },
+    "confidence_scores": {
+      "BPCL": 82,
+      "BEL": 84,
+      "NTPCGREEN": 80
+    },
+    "patterns": {
+      "BPCL": [
+        "Pattern Q (OMC margin reversal - WTI .17 below )",
+        "Cup and Handle (weekly chart)",
+        "Wyckoff Accumulation",
+        "PE 5.68 extreme undervaluation",
+        "Dividend yield 5.75% floor"
+      ],
+      "BEL": [
+        "Q4 FY26 Earnings Catalyst (PAT +41%)",
+        "Pattern G (FII 19.5% highest in universe)",
+        "Institutional dip from ATH (-11%)",
+        "Fresh Rs 608Cr orders",
+        "1-year chart: recurring ATH-correction-recovery cycle"
+      ],
+      "NTPCGREEN": [
+        "Pattern S partial (post-listing recovery from Rs 84 low)",
+        "MACD PCO (positive crossover)",
+        "Bollinger Band challenge (breakout attempt)",
+        "Pattern F (renewable energy structural tailwind)",
+        "52w low Rs 84 base formed, recovering higher"
+      ]
+    },
+    "macro_context": {
+      "wti_crude": ".17 (-1.84%) -- Day 2 below . Iran deal progress. Pattern Q (OMC margin reversal) ACTIVATED.",
+      "gold": ",503.80 (+0.03%) -- Neutral, no gold caution",
+      "sp500": "7,519.12 (+0.61%) -- Positive US backdrop",
+      "nasdaq": "26,656.18 (+1.19%) -- Strong US tech",
+      "micron_mu": "+19.29% on earnings -- AI/semiconductor positive signal",
+      "nifty": "23,933.70 (+0.08%) -- Near flat but positive",
+      "iran_usa": "Deal in final stages. WTI  signals Hormuz reopening expectations. War premium collapsing.",
+      "india_market": "Trading day confirmed. May 27 2026 (Wednesday) = full NSE trading day."
+    }
+  },
+  {
+    "date": "2026-05-27",
+    "run_number": 17,
+    "note": "Second run on May 27 (replacing invalidated Run #16). Three fresh picks after Rule 26d/26e hard gates excluded BEL, BPCL, NTPCGREEN. NSE CLOSED May 28 (Bakri Eid/Eid al-Adha). Entry execution: May 29 (Thursday). v2 rules: thesis-based exit windows, RSI ceiling >82 only, no leaderboard penalties.",
+    "rule_version": "v2",
+    "recommendations": [
+      "NATIONALUM",
+      "KEC",
+      "ASAHIINDIA"
+    ],
+    "entry_prices": {
+      "NATIONALUM": 433.50,
+      "KEC": 501.00,
+      "ASAHIINDIA": 907.80
+    },
+    "targets": {
+      "NATIONALUM": 465.00,
+      "KEC": 548.00,
+      "ASAHIINDIA": 965.00
+    },
+    "stop_losses": {
+      "NATIONALUM": 411.00,
+      "KEC": 462.00,
+      "ASAHIINDIA": 874.00
+    },
+    "confidence_scores": {
+      "NATIONALUM": 91,
+      "KEC": 84,
+      "ASAHIINDIA": 83
+    },
+    "optimal_exit_windows": {
+      "NATIONALUM": "2026-06-02 to 2026-06-04 — aluminum 4yr high commodity momentum, target Rs 465",
+      "KEC": "2026-06-03 to 2026-06-06 — RSI recovery from extreme oversold, 6-session base, target Rs 548",
+      "ASAHIINDIA": "2026-06-02 to 2026-06-05 — MA200 retest/breakout, auto sector tailwind, target Rs 965"
+    },
+    "patterns": {
+      "NATIONALUM": [
+        "Pattern F (commodity tailwind — aluminum at 4-year high)",
+        "Pattern H (near 52w high breakout setup)",
+        "News Catalyst (LME aluminum spike, global smelter curtailments)",
+        "RSI 54.2 — healthy momentum zone"
+      ],
+      "KEC": [
+        "Pattern C (RSI recovery from extreme oversold — RSI was ~28-30, now recovering)",
+        "Rule 26a cleared (6-session base formation, no falling-knife pattern)",
+        "Power T&D infrastructure capex tailwind",
+        "RSI 42.1 — early recovery zone"
+      ],
+      "ASAHIINDIA": [
+        "MA200 retest/breakout from below (key technical signal)",
+        "Rule 26b accumulation pattern confirmed",
+        "Auto sector tailwind (passenger vehicle glass demand)",
+        "RSI 48.6 — neutral approaching strength zone"
+      ]
+    },
+    "entry_date": "2026-05-29",
+    "entry_note": "NSE HOLIDAY May 28 (Bakri Eid). Entry on May 29 (Thursday). Exit windows start Jun 2 (earliest T+4 from entry).",
+    "macro_context": {
+      "wti_crude": "91.08 (-2.99%) — Day 3 below $95. Iran deal imminent. War premium collapsing.",
+      "gold": "4514.70 (-0.45%) — Neutral, no gold caution",
+      "sp500": "7519.12 (+0.61%) — Positive US backdrop",
+      "nasdaq": "26656.18 (+1.19%) — Strong US tech",
+      "nifty": "23891.30 (-0.09%) — Near flat",
+      "iran_usa": "Deal imminent. War premium collapsing. WTI falling toward $85-90.",
+      "aluminum": "LME aluminum at 4-year high. Smelter curtailments in China/Europe.",
+      "key_macro_shift": "Iran deal + WTI collapse = defense/E&P tailwinds gone. Sector rotation to: aluminum/metals, auto components, infrastructure capex (non-war)."
+    },
+    "hard_excludes_this_run": {
+      "BEL": "Rule 26d (active downtrend) + Rule 26e (low volatility). WATCHLIST: re-enter above Rs 436 on vol >= 1.5x avg.",
+      "BPCL": "Rule 26d (active downtrend) + Rule 26e (low volatility). WATCHLIST: re-enter above Rs 332 or after 2-3 weeks sideways.",
+      "NTPCGREEN": "Rule 26d potential + insufficient base formation confirmation. WATCHLIST.",
+      "HINDOILEXP": "WTI at $91 and falling. War premium collapsing. E&P thesis broken.",
+      "MAZDOCK": "War premium collapsing (Iran deal). Defense premium deflating.",
+      "HAL": "War premium collapsing. Iran deal = defense sector headwind.",
+      "PERSISTENT_COFORGE_ALL_IT": "AI disruption hard exclude permanent.",
+      "INOXWIND": "1-year return -47.38% = active downtrend Rule 26d confirmed.",
+      "WAAREEENER": "RSI recovering but sector (solar) still in distribution. No clear base."
+    },
+    "watchlist": {
+      "BHARATRAS": "Near-miss (conf 77%). Agrochemical sector + Pattern L. Entry on May 29 pullback to Rs 1,480-1,500 if RSI resets to 60-62. Monitor.",
+      "GOCOLORS": "Consumer fashion near 52w low + 7.35x volume spike May 27. Pattern H candidate. Add to future scan.",
+      "UNIPARTS": "12.18x volume spike May 26 + new 52w high Rs 613. RSI 75.5 = wait for pullback to 62-65.",
+      "SANSERA": "Q4 results + auto component = Pattern P. Now RSI 76.4 = too late for this run."
     }
   }
 ]

@@ -1,0 +1,716 @@
+================================================================================
+  INDIA STOCK MARKET RECOMMENDATION PIPELINE
+  Run Date: 2026-05-25 (Sunday — next trading day: Tuesday May 26)
+  Model: claude-sonnet-latest (orchestrator)
+  Rules Version: v2 (RELAXED RULES — T+2 dropped, RSI ceiling >82 only)
+================================================================================
+
+================================================================================
+  STEP 1.5 — MACRO TREND & DISRUPTION ALERT — 2026-05-25
+================================================================================
+
+╔══════════════════════════════════════════════════════════════════╗
+║        MACRO TREND & DISRUPTION ALERT — 2026-05-25              ║
+╠══════════════════════════════════════════════════════════════════╣
+║ HARD EXCLUDES (removed from all picks today)                     ║
+╠══════════════════════════════════════════════════════════════════╣
+║  X IT/SOFTWARE/BPO/ITES   — AI disruption risk; NIFTYIT flat    ║
+║                              +0.06% May 25; no sector recovery   ║
+║  X PERSISTENT              — PERMANENT EXCLUDE (0/7 all-time)    ║
+║  X CGPOWER                 — PERMANENT EXCLUDE (PE 101+)         ║
+║  X ALL OMC REFINERS        — WTI $96.60 still above $95 =        ║
+║                              retail margin compression rule       ║
+║                              (petrol crossed Rs 100 in Delhi;     ║
+║                              fourth hike in two weeks)           ║
+╠══════════════════════════════════════════════════════════════════╣
+║ CAUTION FLAGS (reduce confidence by 15 pts if matched)           ║
+╠══════════════════════════════════════════════════════════════════╣
+║  ! ONGC / E&P UPSTREAM     — Iran deal "final stages" per Trump; ║
+║                              WTI dropped to $91-96 range from    ║
+║                              $103 peak. War premium REDUCING.    ║
+║                              Strait of Hormuz reopening imminent.║
+║  ! DEFENSE SECTOR          — Iran deal progress = war premium    ║
+║                              collapsing. HAL, BEL, MAZDOCK,     ║
+║                              GRSE all face war premium reversal.  ║
+║                              NOT a hard exclude but reduce 15pts.║
+║  ! NIFTY AUTO              — Fuel price hike Rs 2.61/litre;      ║
+║                              petrol crossed Rs 100 in Delhi.     ║
+║                              4th hike in 2 weeks = demand worry. ║
+║                              EICHER +4.93% today (Q4 results)   ║
+║                              but FY27 margin headwind flagged.   ║
+╠══════════════════════════════════════════════════════════════════╣
+║ TAILWIND SIGNALS (boost confidence by 10 pts if matched)         ║
+╠══════════════════════════════════════════════════════════════════╣
+║  + WIND ENERGY / SUZLON-INOXWIND — Suzlon Q4 results TODAY;      ║
+║                                    195 MW confirmed order;       ║
+║                                    stock at Rs 54.6 (+1.64%);   ║
+║                                    Q4 results = catalyst event   ║
+║  + SOLAR ENERGY / WAAREEENER    — WTI $96.60 still elevated =    ║
+║                                   solar urgency structural;      ║
+║                                   FII 7.06% (10x in 1 yr);      ║
+║                                   US anti-China solar policy     ║
+║  + BROAD MARKET POSITIVE        — Nifty +0.90%, GIFT Nifty +215  ║
+║                                   pre-open; VIX falling to 16.7; ║
+║                                   S&P +0.37%, NASDAQ +0.19%     ║
+║  + OPTICAL FIBER / DATA CENTER  — STLTECH $1.11B hyperscaler    ║
+║                                   contract through Mar 2029;     ║
+║                                   AI infrastructure buildout;    ║
+║                                   stock +5% today at Rs 463      ║
+╠══════════════════════════════════════════════════════════════════╣
+║ NEWS CATALYSTS (force-include into Step 2)                       ║
+╠══════════════════════════════════════════════════════════════════╣
+║  >> SUZLON — Q4 FY26 board meeting TODAY May 25;                 ║
+║              195 MW repeat order from Sunsure confirmed;         ║
+║              Rs 54.6 (+1.64%); 9 GW milestone approaching.      ║
+║              Source: screener.in / BusinessToday, May 25 2026    ║
+║  >> STLTECH — STL subsidiary wins $1.11B multi-year hyperscaler  ║
+║               supply agreement through March 2029.               ║
+║               62% analyst price target hike. +5% today.         ║
+║               AI/data center optical fiber play.                 ║
+║               Source: BusinessToday, screener.in, May 25 2026    ║
+╠══════════════════════════════════════════════════════════════════╣
+║ KEY MACRO LEVELS (May 25 morning)                                ║
+╠══════════════════════════════════════════════════════════════════╣
+║  WTI Crude Oil : $96.60 (+0.26%) — above $95 but DECLINING      ║
+║                  from $103 peak. Iran deal reducing war premium. ║
+║  Gold           : $4,523 (-0.42%) — mild decline, no caution    ║
+║  S&P 500        : 7,473 (+0.37%) — positive US session           ║
+║  NASDAQ         : 26,344 (+0.19%) — positive, no caution         ║
+║  Nifty 50       : 23,932 (+0.90%) — broad India positive         ║
+║  VIX            : 16.7 (down from ~31 peak) — fear fading        ║
+║  Nifty IT       : 28,930 (+0.06%) — flat; AI risk ongoing        ║
+║  Nifty Auto     : 26,017 (+0.12%) — positive but fuel hike risk  ║
+║  Nifty Energy   : 40,237 (-0.10%) — slight decline; Iran deal    ║
+╠══════════════════════════════════════════════════════════════════╣
+║ OPEN POSITIONS STATUS (prior batches)                            ║
+╠══════════════════════════════════════════════════════════════════╣
+║  May 21 batch (T+2 = TODAY May 25):                              ║
+║    ONGC     : entry Rs 296.45 — current Rs 286 (-3.5%) = LOSS    ║
+║    INOXWIND : entry Rs 96.56  — current Rs 96.7 (+0.1%) = flat  ║
+║  May 22 batch (still OPEN — swing holds):                        ║
+║    SUZLON    : entry Rs 53.25 | stop Rs 50.50 | tgt Rs 60.00    ║
+║                exit window: May 28 (T+4, post-results session)   ║
+║    WAAREEENER: entry Rs 3054 | stop Rs 2900 | tgt Rs 3400        ║
+║                current Rs 2980 (-2.4% vs entry) — within stop   ║
+║                exit window: Jun 2-5 (T+7-T+10 swing)            ║
+║    HINDOILEXP: entry Rs 168.0 | stop Rs 158.0 | tgt Rs 178.0    ║
+║                current Rs 166 (-1.2% vs entry) — within stop    ║
+║                exit window: May 29-Jun 2 (T+5-T+8, dispute dep) ║
+╠══════════════════════════════════════════════════════════════════╣
+║ IRAN DEAL IMPACT ANALYSIS                                        ║
+╠══════════════════════════════════════════════════════════════════╣
+║  Iran deal at "final stages" per Trump. Sticking points remain. ║
+║  Strait of Hormuz: 3 supertankers (6M barrels) exited already.  ║
+║  Japan receiving first Saudi crude since conflict = reopening.   ║
+║  IEA: oil "red zone by July/Aug" if inventories depleted.        ║
+║  CONCLUSION: War premium REDUCING but not eliminated. Crude      ║
+║  $96.60 (down from $103 peak) = E&P plays now CAUTION not BUY.  ║
+║  HINDOILEXP remains viable only above Rs 158 (stop intact).      ║
+╚══════════════════════════════════════════════════════════════════╝
+
+================================================================================
+  STEP 2 — PATTERN ANALYSIS & RECOMMENDATION ENGINE
+  Run 14 (v2 relaxed rules) — 2026-05-25
+================================================================================
+
+--- RETROSPECTIVE MISS ANALYSIS (mandatory before new picks) ---
+
+Scope: Stocks gaining +8%+ on May 22-23 NOT in recommendations
+
+MISSED MOVE CHECK — May 22 batch vs May 23-25:
+1. STLTECH: $1.11B hyperscaler contract announcement (exact date uncertain but stock
+   +5% on May 25 reaching record high). 62% analyst target hike.
+   Root cause of miss: STLTECH was NOT in basestock.json (not a mid/small-cap defense
+   or energy play — optical fiber/telecom infrastructure). News catalyst class missed.
+   Pattern J lesson: AI/data center infrastructure plays (optical fiber, GPU cooling,
+   power grid for data centers) are emerging as a NEW catalyst class. STLTECH is the
+   first confirmed instance of a hyperscaler supply agreement moving an Indian stock.
+   Lesson recorded: Data center infrastructure plays should be monitored in Step 1.5.
+   Force-add STLTECH for today per Pattern J (news catalyst).
+
+2. SUZLON: stock at Rs 54.6 today vs Rs 53.25 entry May 22 = +2.5% so far.
+   Q4 results today = still playing out. NOT a miss; we are long SUZLON from May 22.
+
+3. EICHER MOTORS: +4.93% today. Q4 FY26 results May 22 (PAT Rs 5,515 Cr, FY26 revenue
+   Rs 23,408 Cr). Brokerages: 29% upside. Royal Enfield volumes +12%.
+   Miss analysis: EICHER was not in pipeline universe (large-cap auto). But the PATTERN
+   is clear: Q4 earnings beat + brokerage upgrades = next-session gap-up.
+   New pattern discovery: EICHER/M&M auto sector Q4 results catalyst = 4-5% pop.
+   Not actionable today (already ran) but note for future runs.
+
+4. APOLLOMICRO: was excluded every run (RSI 84-86 > 82 ceiling) despite breakout.
+   Pattern H requires confirmed MoD/DRDO order for RSI exception. Still no confirmed order.
+   Lesson stands: without confirmed order, RSI > 82 = hard exclude.
+
+--- PATTERN MATCHING vs CURRENT UNIVERSE ---
+
+TODAY'S MACRO CONTEXT:
+  - WTI $96.60 (declining from $103 peak — Iran deal "final stages")
+  - Gold $4,523 (-0.42%) — no gold caution
+  - US markets positive (S&P +0.37%, NASDAQ +0.19%)
+  - Nifty +0.90%, broad positive
+  - VIX 16.7 (low) — risk-on environment
+  - Iran deal approaching = war premium REDUCING for defense/E&P
+  - Key: Today is Sunday. Next trading day is TUESDAY May 26.
+    All prices from today are opening prices (early Monday data used as proxy).
+
+CANDIDATE POOL (from basestock.json + force-add NEWS_CATALYSTS):
+
+1. SUZLON (OPEN POSITION from May 22 — reassess hold/exit)
+   - Entry: Rs 53.25 | Current: Rs 54.6 (+2.5% from entry)
+   - Q4 FY26 results announced TODAY May 25
+   - ROE 46%, ROCE 36.2%, nearly debt-free
+   - Pattern J (confirmed 195 MW order + results catalyst)
+   - Pattern A (market leader with sector tailwind)
+   - Rule 26 checklist: No cliff drop, no distribution, no double-top. CLEAR.
+   - Iran deal = slightly reduces "energy urgency" narrative BUT wind energy is
+     a structural story independent of short-term oil moves
+   - ASSESSMENT: HOLD existing position (not a new BUY today — already entered)
+   - Exit: May 28 (T+4 from entry, post-results reaction day). Do not pyramid.
+
+2. STLTECH (FORCE-ADD via Pattern J — news catalyst)
+   - Symbol: STLTECH (Sterlite Technologies)
+   - Current Price: Rs 463 (+5% today) — AT RECORD HIGH
+   - Market Cap: Rs 22,610 Cr
+   - PE Ratio: 475 (CRITICAL CONCERN — extremely high PE)
+   - ROE: -2.39% (3-year) — NEGATIVE ROE = FUNDAMENTAL CONCERN
+   - Sales growth (5yr): -10% — NEGATIVE SALES GROWTH
+   - News Catalyst: $1.11B hyperscaler supply agreement through March 2029
+   - Catalyst check: AI/data center fiber infrastructure = structural theme
+   - RSI estimate: Stock is at record high today (+5%) — likely RSI > 80
+   - Rule 26a check: Stock is SURGING today +5% — this is AFTER the news,
+     not before. The news has likely been partially priced in intraday.
+   - Pattern J news_priced_in assessment: Stock +5% on the news day itself.
+     The 62% analyst target hike and $1.11B deal are strong catalysts but
+     entering AFTER a +5% day at record high = chasing.
+   - VERDICT: EXCLUDED. Reason: (a) PE 475 = extreme; (b) ROE negative 3yr;
+     (c) news_priced_in = true (+5% on news day at record high);
+     (d) sales growth -10% over 5 years = no fundamental earnings base.
+     Pattern J confidence boost (+20) cannot overcome these four red flags.
+     WATCHLIST: If stock consolidates for 2-3 days and RSI pulls back to 60-65
+     zone, reassess for entry on continuation thesis.
+
+3. INOXWIND (Open position May 21, exit today — reassess for NEW position)
+   - May 21 batch exits TODAY (T+2 from May 21 = May 25)
+   - Exit May 21 position at current: Rs 96.7 (+0.1% from entry Rs 96.56)
+   - Fresh position analysis for May 26 entry:
+   - Current Price: Rs 96.7 (+2.52% today May 25)
+   - SUZLON Q4 results today = sector catalyst
+   - Pattern A: SUZLON is the trigger stock. SUZLON +1.64% today = entry condition MET
+   - FII holding: 14.61% (2 consecutive quarters increasing)
+   - PE: 25.7 — reasonable for growth wind energy company
+   - 52-week low: Rs 75 — significant floor protection (22% below current)
+   - Board meeting May 29 for FY26 results = additional catalyst in 4 days
+   - Rule 26 checklist:
+     26a (falling knife): Stock is UP +2.52% today, no cliff drop. CLEAR.
+     26b (distribution): No large-volume down days visible. Volume up day = CLEAR.
+     26c (double-top): 52-week high Rs 198. Current Rs 96.7 = far below. No double-top. CLEAR.
+   - Iran deal caution flag for defense: INOXWIND is renewable energy, not defense.
+     Iran deal = OIL falling = TAILWIND for renewables (urgency argument reduces slightly
+     but structural argument intact). Net: neutral to mildly positive.
+   - Leaderboard: 1/4 = 25% (older data from T+2 era; T+2 penalties dropped in v2)
+   - Patterns matched: Pattern A (duopoly, SUZLON +1.64%), Pattern G (FII 14.61% Q2
+     increasing), Pattern F (trending renewable sector), Pre-results (board May 29 T+4)
+   - RSI estimate: ~50-55 (recovering from recent pullback, healthy zone)
+   - Confidence calculation:
+     Base: 70 (mid-cap renewable with confirmed sector catalyst)
+     + Pattern A confirmed order (SUZLON 195MW confirmed): +15
+     + Pattern G FII increasing 2 qtrs: +5
+     + Pre-results board May 29: +8
+     + Sector tailwind (wind, broad positive): +5
+     + Rule 26 compliant: 0 (no deductions)
+     - Leaderboard informational (25% WR): informational note only, no penalty in v2
+     = TOTAL: 103 -> capped at 88% given leaderboard history and execution risk
+   - VERDICT: STRONG BUY CANDIDATE. Confidence 85%.
+
+4. WAAREEENER (Open position May 22 — reassess hold status)
+   - Entry: Rs 3,054 | Current: Rs 2,980 (-2.4% from entry) — WITHIN STOP (Rs 2,900)
+   - Rule 26a check: Stock went from Rs 3,500 peak to Rs 3,054 entry to Rs 2,980 now.
+     The original cliff drop from Rs 3,500 was identified as falling knife (Rule 26a).
+     Current range Rs 2,900-3,054: this IS the base formation range we were waiting for.
+     Volume: declining on down days = accumulation pattern. RULE 26a BASE FORMING.
+   - Today +0% (Rs 2,980 vs Rs 2,986 open) = consolidation, not continuation of drop.
+   - FII thesis intact: 7.06% (10x in 1 year)
+   - Waaree Semicon acquisition May 15 = strategic upstream integration
+   - US anti-China solar policy = structural tailwind
+   - Exit window: Jun 2-5 (T+7-T+10 swing from May 22 entry)
+   - ASSESSMENT: HOLD existing position. Do not add to existing May 22 position.
+     Stop Rs 2,900 is still valid. Thesis intact. Patience required.
+
+5. HINDOILEXP (Open position May 22 — reassess hold status)
+   - Entry: Rs 168.0 | Current: Rs 166 (-1.2% from entry) — WITHIN STOP (Rs 158)
+   - B-80 dispute: Still at conciliation stage. Third-party resale started = workaround.
+   - WTI $96.60 (declining from $103) — CAUTION: Iran deal = oil war premium reducing.
+     If Iran deal signed, WTI could drop to $85-88 range = revenue impact for E&P.
+   - PE 12.4 (extremely cheap) but revenue quality at risk if B-80 not resolved.
+   - Rule 26 check: Stock declining -1.2% from entry. No cliff drop (no 8%+ in 5 days).
+   - CAUTION FLAG applied: Iran deal "final stages" = E&P caution flag -15 points.
+   - ASSESSMENT: HOLD existing position with tighter mental stop at Rs 162 (if stock
+     breaks Rs 162 on Iran ceasefire news, cut the position early before Rs 158 stop).
+     Do not add. Exit window May 29-Jun 2 still valid if conciliation resolves.
+
+6. ONGC (Open position May 21 — EXIT TODAY at T+2)
+   - Exit May 21 position today at current: Rs 286 (entry Rs 296.45 = -3.5% LOSS)
+   - Fresh position analysis: EXCLUDED. Iran deal = war premium collapsing.
+     ONGC already 0/3 in confirmed history. Leaderboard elevated penalty.
+     Do not re-enter ONGC today.
+
+7. HAL (Defense caution flag analysis)
+   - Current price: Rs 4,408 (+0% today relative to May 22 close ~Rs 4,401)
+   - Iran deal = defense war premium reducing = CAUTION FLAG (-15 pts)
+   - RSI estimate: ~55-60 (not in 42-50 dip zone for Pattern D entry)
+   - Pattern D requires: dip >3%, RSI 42-50. Not triggered today.
+   - FII declining from 12% to 10.21% = institutional selling signal.
+   - VERDICT: Excluded. No dip signal, Iran deal caution, FII declining.
+
+8. MAZDOCK (Naval defense caution)
+   - Current: Rs 2,482 | 52w high Rs 3,778 — down 34% from high
+   - Iran deal = DIRECT headwind (naval war premium collapses if Hormuz reopens)
+   - Leaderboard: 0/2 confirmed closed trades = 0% WR (historical context)
+   - FY26 profit DECLINE -24.41% — fails Step 1 screening
+   - VERDICT: Excluded. Multiple red flags (Iran deal, declining profit, caution flag).
+
+9. GRSE (Naval defense)
+   - Rs 2,720 (+0.97%) — Strong FY26 results (profit +77.55% YoY, Rs 748Cr)
+   - Elara Capital SELL target Rs 2,230 < current Rs 2,720 = Rule 3 violation
+   - Iran deal = naval war premium risk
+   - VERDICT: Excluded. Analyst target below current price.
+
+10. BEL (Defense electronics)
+    - DROP RULE ACTIVE: 0/4 confirmed historical win rate.
+    - Iran deal = war premium reduction.
+    - VERDICT: Excluded (DROP RULE).
+
+11. BHEL (Capital goods / power)
+    - Leaderboard: 0/2 = 0% confirmed WR | PE 90.9
+    - BHEL up +0% today = no fresh catalyst. Coal gasification priced in.
+    - VERDICT: Excluded.
+
+12. EICHER MOTORS (NEW — auto sector catalyst, post-Q4 results)
+    - Q4 FY26 results: Revenue Rs 23,408 Cr, PAT Rs 5,515 Cr, FY26 final dividend Rs 82
+    - Royal Enfield volumes +12% YoY, realisation +3%
+    - Brokerages: 29% upside potential (Elara target Rs 9,001 vs current Rs 7,326)
+    - Current: Rs 7,326 (+4.93%) — already up 5% today on the results
+    - RSI estimate: ~72-75 (surging on earnings day)
+    - Rule 26a check: Stock jumped +4.93% today = large up-move on results day.
+      This is NOT a falling knife (it's an up move), but entering after a +5% day
+      at RSI 72-75 is a momentum chase.
+    - PE: 39.8 — fair for quality two-wheeler company
+    - ROE 25.2%, ROCE 32.9% — excellent fundamentals
+    - FY27 concern: petrol Rs 100+ = demand headwind flagged by analysts
+    - Pattern F (trending sector): Auto positive today (+2%)
+    - Confidence check: Good fundamentals + strong results + 29% analyst upside.
+      BUT: (a) already +5% on announcement day = partial pricing-in;
+           (b) RSI 72-75 = approaching caution zone;
+           (c) fuel price hike = FY27 margin pressure narrative;
+           (d) CAUTION FLAG (auto sector fuel hike) -15 pts
+    - VERDICT: WATCHLIST only. Not a fresh buy entry after +5% news-day jump.
+      Would enter on a 3-5% pullback to Rs 6,950-7,100 range.
+
+--- FINAL CANDIDATE SELECTION (Step 2 output) ---
+
+Qualifying stocks (confidence > 78, Rule 26 compliant, not excluded):
+
+INOXWIND: 85% confidence — STRONG BUY
+  - Pattern A (SUZLON +1.64%, 195 MW confirmed order = maximum Pattern A trigger)
+  - Pattern G (FII 14.61% increasing 2 consecutive quarters)
+  - Pre-results catalyst (board meeting May 29 — 4 trading days away)
+  - Pattern F (wind energy sector tailwind, structural)
+  - RSI ~50-55 (healthy entry zone, not overbought)
+  - Rule 26 fully compliant
+  - Optimal hold: T+4 to T+6 (through May 29 results + post-results reaction)
+  - Entry: Rs 96.7 | Target: Rs 104.0 | Stop: Rs 91.5
+
+Only INOXWIND clears the 78% confidence threshold with sufficient conviction.
+
+Other candidates assessment:
+- STLTECH: Excluded (PE 475, negative ROE, news priced in +5% on news day)
+- EICHER: Excluded (already ran +5%, RSI 72-75, fuel price headwind)
+- SUZLON: Already held from May 22; not a fresh buy today (avoid pyramiding)
+- WAAREEENER: Already held from May 22; hold, not add
+- HINDOILEXP: Already held from May 22; hold with tighter stop
+- All defense: Iran deal caution flag drops confidence below 78
+- ONGC: Exit today; do not re-enter
+
+================================================================================
+  STEP 3 — VALIDATION
+================================================================================
+
+INOXWIND — Validation:
+
+a. Negative News Check:
+   - Board meeting May 29 for FY26 results = known catalyst (not negative)
+   - Rights issue proceeds "utilized with no deviations" = clean corporate governance
+   - High debtor days (263) = operational risk but known, not new news
+   - Working capital days increase 74→170 = worth monitoring but not a fresh negative
+   - Promoter holding declined 27.8% over 3 years = concern but not new negative
+   - No fraud, management changes, or regulatory issues found
+   RESULT: Negative news = false. No strike.
+
+b. US Market Check:
+   - S&P 500: 7,473 (+0.37%) — POSITIVE
+   - NASDAQ: 26,344 (+0.19%) — POSITIVE
+   - Both above 0%, no US_MARKET_CAUTION flag
+   RESULT: US market status = POSITIVE. No caution.
+
+c. Industry Trend Check:
+   - Wind energy in India: Government target 140 GW wind by 2030
+   - PLI scheme for wind energy active
+   - SUZLON 195 MW repeat order = industry pipeline healthy
+   - Inox Wind: 4.X MW WTG platform commercial launch = product upgrade cycle
+   - Structural demand from net-zero targets, PLI, and state DISCOMs
+   RESULT: Industry trend = GROWING. No removal.
+
+d. AI Disruption Check:
+   - INOXWIND is a wind turbine manufacturer. Not IT/software/BPO.
+   - AI disruption risk = NONE.
+   RESULT: AI disruption risk = false.
+
+e. Gold Price Check:
+   - Gold: $4,523 (-0.42% today, May 25)
+   - 5-day gold trend: mild decline from $4,536 May 21 to $4,523 May 25 = -0.28%
+   - Not above 2% threshold. GOLD_CAUTION = false.
+   RESULT: Gold caution = false. No flag.
+
+FINAL VALIDATION RESULT FOR INOXWIND:
+  negative_news: false
+  us_market_status: positive
+  industry_trend: growing
+  ai_disruption_risk: false
+  gold_caution: false
+  final_recommendation: TRUE
+
+Additional Step 3 notes:
+  - STLTECH validation would have flagged: PE 475 = extreme, ROE negative = red flag
+    for industry trend (sales -10% 5yr) + news_priced_in. Correct exclusion confirmed.
+  - EICHER validation: Not negative news, but +5% on earnings day = entry timing poor.
+  - All defense stocks: Iran deal = valid industry trend caution flag applied correctly.
+
+================================================================================
+  STEP 4 — FINAL RECOMMENDATIONS
+  Date: 2026-05-25 | Next trading day: Tuesday 2026-05-27
+  Note: Markets are CLOSED on Monday May 26 (no NSE holiday, but this is SUNDAY
+  today — next session is TUESDAY May 27 as per NSE calendar wait,
+  correction: May 26 is MONDAY which is a regular trading day.
+  Next trading day from today (Sunday): TUESDAY May 27 is WRONG.
+  Today is SUNDAY May 25. Monday May 26 is the NEXT trading day.
+  NSE holidays include May 1 (Maharashtra Day). May 26 is not a holiday.
+  ENTRY DATE: Monday May 26, 2026
+================================================================================
+
+CONFIDENCE THRESHOLD: Strictly > 78%
+MAXIMUM PICKS: 3
+QUALIFYING PICKS: 1
+
+NOTE: Today only 1 stock meets the >78% conviction threshold.
+This is intentional. Per our strategy: 1 high-conviction pick is better than
+3 mediocre ones. The Iran deal macro shift has reduced confidence in defense and
+E&P plays. STLTECH and EICHER are excluded on entry-timing grounds (both already ran).
+Only INOXWIND clears every filter at 85% confidence.
+
+================================================================================
+
+  FINAL RECOMMENDATIONS TABLE — Entry Date: 2026-05-26 (Monday)
+
+  Rank |   Symbol   |    Entry    |   Target    |    Stop     | Confidence |  Exit Window
+  -----+------------+-------------+-------------+-------------+------------+------------------
+   1   | INOXWIND   | Rs  97.00   | Rs 104.00   | Rs  91.50   |    85%     | Jun 2-4 (T+6-T+8)
+                                                                              post-results swing
+
+NOTE: Entry price Rs 97.00 is an estimate for Monday morning. SUZLON Q4 results
+(announced today May 25) will be the key overnight catalyst for the INOXWIND entry.
+If SUZLON Q4 results are POSITIVE (PAT growth, strong order guidance), enter INOXWIND
+at Monday open (Rs 95-98 range is acceptable entry zone).
+If SUZLON Q4 results DISAPPOINT, reduce position or skip entirely.
+
+================================================================================
+
+--- INOXWIND — DETAILED ANALYSIS ---
+
+Company       : Inox Wind Limited
+Symbol (NSE)  : INOXWIND
+Sector        : Renewable Energy — Wind Turbine Manufacturing
+Market Cap    : Rs 16,710 Cr
+Current Price : Rs 96.7 (May 25, 2026)
+52-Week Range : Rs 75.05 — Rs 198.13
+P/E Ratio     : 25.7 (reasonable for growth-stage renewable)
+RSI (estimate): ~50-55 (healthy entry zone)
+FII Holding   : 14.61% (Q4 FY26) — increasing from 13.37% (Q3), 14.16% (Q2), 13.78% (Q1)
+
+STEP 1 SCREENING CRITERIA:
+  [YES] Mid-cap classification: Rs 16,710 Cr — confirmed mid-cap
+  [YES] Price > Rs 20: Current Rs 96.7
+  [YES] Market cap > Rs 500 Cr: Rs 16,710 Cr
+  [YES] YoY profit growth > 25%: TTM profit growth ~127%
+  [YES] Avg daily turnover > Rs 1 Cr: Rs 375 Lakh daily (Rs 3.75 Cr)
+
+PATTERNS MATCHED:
+  [A] DUOPOLY PATTERN — SUZLON (leader) + INOXWIND (lagging peer)
+      SUZLON +1.64% today. 195 MW repeat order confirmed. Q4 results today.
+      INOXWIND Pattern A trigger: CONFIRMED at maximum strength (+15 conf bonus).
+  [G] FII ACCUMULATION — 4 quarters of data: 13.78% / 13.37% / 14.16% / 14.61%
+      Net direction: INCREASING over last 2 quarters. FII interest confirmed.
+  [F] TRENDING SECTOR — Wind energy + India's 140 GW target + PLI scheme active.
+  [J] NEWS CATALYST — Suzlon's 195 MW order = sector validation catalyst.
+      Board meeting May 29 for INOXWIND own FY26 results = pre-results positioning.
+
+VALIDATION:
+  Negative news      : None found
+  US markets         : Positive (S&P +0.37%, NASDAQ +0.19%)
+  Industry trend     : Growing
+  AI disruption risk : None (manufacturer, not IT)
+  Gold caution       : No (gold -0.42%, below 2% threshold)
+
+TRADE PARAMETERS:
+  Entry zone     : Rs 95-98 (Monday May 26 open; conditional on SUZLON Q4 positive)
+  Target         : Rs 104 (+7.5% from Rs 97) — near prior resistance at Rs 105-110
+  Stop-loss      : Rs 91.5 (-5.7% from Rs 97) — below May lows and 20-day MA area
+  Risk:Reward    : 1:1.3 (risk Rs 5.5 for Rs 7 gain) — acceptable given high conviction
+  Position size  : Rs 0.10 Lakh (Rs 10,000)
+  Exit window    : June 2-4 (T+6-T+8 from entry) — post-FY26 results reaction
+
+ENTRY CONDITION (MANDATORY — do not enter without this confirmation):
+  Suzlon Q4 FY26 results (announced today May 25) must show:
+  - PAT growth: positive YoY (Dec Q was Rs 445 Cr; Q4 FY26 should show seasonal strength)
+  - Order guidance for FY27: positive commentary or new order wins
+  - If results disappoint (PAT decline or guidance cut): SKIP INOXWIND. Do not enter.
+
+RISK FACTORS:
+  1. High debtor days (263 days) = cash flow execution risk
+  2. Promoter holding declined 27.8% over 3 years = some promoter-level concern
+  3. Working capital days increased 74→170 = operational stretch
+  4. Iran deal reducing oil prices may slightly reduce "renewable urgency" narrative
+  5. SUZLON Q4 results risk (binary event — unknown at time of this report)
+
+POTENTIAL UPSIDE:
+  Base case   : Rs 97 → Rs 104 = +7.2% (T+6-T+8 swing)
+  Bull case   : Rs 97 → Rs 108 = +11.3% (strong SUZLON Q4 + INOXWIND own results May 29)
+  Bear case   : Rs 97 → Rs 91.5 (stop hit) = -5.7% (SUZLON disappoints or Iran deal)
+
+PRICE TREND (last ~10 sessions, approximate):
+  May 08: Rs  95.00
+  May 11: Rs  98.00
+  May 12: Rs  97.95
+  May 13: Rs  95.35
+  May 14: Rs  97.95
+  May 15: Rs  97.59
+  May 18: Rs  94.80
+  May 19: Rs  96.90
+  May 21: Rs  96.56
+  May 25: Rs  96.70 (today)
+
+  Price range: Rs 94-98 over last 3 weeks = CONSOLIDATION base (10-15 sessions)
+  This consolidation CONFIRMS Rule 26a base formation after prior volatility.
+  Volume pattern: declining on down days = accumulation. FAVORABLE.
+
+  ASCII sparkline (Rs 94-99 range, scaled):
+  May 08 |=====| Rs 95
+  May 11 |=======| Rs 98
+  May 12 |=======| Rs 97.95
+  May 13 |=====| Rs 95.35
+  May 14 |=======| Rs 97.95
+  May 15 |=======| Rs 97.59
+  May 18 |====| Rs 94.80
+  May 19 |======| Rs 96.90
+  May 21 |======| Rs 96.56
+  May 25 |======| Rs 96.70  <- today
+
+  Pattern: Tight base formation. Range-bound Rs 94-98. Spring-loaded for breakout.
+  Board meeting May 29 is the catalyst trigger. SUZLON Q4 is the sector trigger.
+
+================================================================================
+  WATCH LIST (not buys today but monitor for next 2-3 days)
+================================================================================
+
+1. EICHER MOTORS (EICHERMOT) — Rs 7,326 (+4.93% today)
+   Catalyst: Q4 FY26 PAT Rs 5,515 Cr. Brokerage targets: Rs 9,001 (29% upside).
+   Do not enter today (priced in). Entry trigger: pullback to Rs 7,000-7,100 over 2-3 days.
+   Thesis: Royal Enfield volumes growing, exports recovering, margin recovery FY28.
+   Risk: Petrol Rs 100+ = near-term demand headwind.
+   Target entry: Rs 7,000-7,100 with stop Rs 6,800. Target Rs 7,800-8,000.
+
+2. STLTECH — Rs 463 (+5% today)
+   Catalyst: $1.11B hyperscaler supply agreement through March 2029.
+   Do not enter today (PE 475, negative ROE, +5% on news day = priced in).
+   Watch for 2-3 day consolidation. Enter at Rs 430-445 (RSI pullback to 60-65 zone).
+   Thesis: AI/data center optical fiber demand — structural long-term play.
+   Risk: Negative ROE and -10% 5yr sales means execution risk.
+
+3. WAAREEENER (already held) — Watch for base confirmation
+   Current: Rs 2,980 (stop Rs 2,900). Holding May 22 position.
+   If stock holds above Rs 2,950 for 2 sessions = base confirmed; add to position.
+   If stock drops below Rs 2,900 = STOP HIT, exit.
+
+4. SUZLON (already held) — Watch for Q4 results reaction
+   Current: Rs 54.6 (entry Rs 53.25). Exit window: May 28 (T+4).
+   If Q4 PAT positive + guidance upgrade → hold to Rs 60 target.
+   If Q4 disappoints → exit immediately at May 28 close regardless.
+
+================================================================================
+  STEP 5 — BACKTESTING & PERFORMANCE REPORT
+================================================================================
+
+NOTE: Today is Sunday, no new position closed today.
+May 21 batch positions exit today (ONGC and INOXWIND from May 21 batch).
+These are estimated at current prices.
+
+--- May 21 Batch (T+2 exits today May 25) ---
+
+  Entry date: May 21 | Exit date: May 25 (T+2 from May 21)
+  ONGC    : entry Rs 296.45 | exit Rs 286.00 (estimated) = -3.53% = -Rs 353
+  INOXWIND: entry Rs  96.56 | exit Rs  96.70 (current)   = +0.14% = +Rs  14
+
+  Batch P&L: -Rs 339 on Rs 20,000 invested (-1.70%)
+
+================================================================================
+  STEP 6 — FULL HISTORICAL PERFORMANCE EVALUATION
+================================================================================
+
+All confirmed closed batches (T+2 exit prices available):
+
+════════════════════════════════════════════════════════════════════════════
+  2026-05-15 (Run 8)  |  Invested: Rs 50,000 (5 stocks x Rs 10,000)
+                      |  Total P&L: Rs +395  |  Return: +0.79%
+════════════════════════════════════════════════════════════════════════════
+  Symbol       |    Entry    | Entry Date |    Exit     |  Exit Date  |  P&L Rs  |  P&L %
+  -------------+-------------+------------+-------------+-------------+----------+--------
+  HINDOILEXP   |  Rs 164.30  | 2026-05-15 |  Rs 173.40  | 2026-05-19  | +Rs  554 | +5.54% ROCKET
+  MAZDOCK      |  Rs 2489.30 | 2026-05-15 |  Rs 2454.00 | 2026-05-19  | -Rs  142 | -1.42% LOSS
+  BEL          |  Rs  426.50 | 2026-05-15 |  Rs  428.00 | 2026-05-19  | +Rs   35 | +0.35% WIN
+  PIIND        |  Rs 3113.80 | 2026-05-15 |  Rs 3164.00 | 2026-05-19  | +Rs  161 | +1.61% WIN
+  BHEL         |  Rs  405.65 | 2026-05-15 |  Rs  397.00 | 2026-05-19  | -Rs  213 | -2.13% LOSS
+
+════════════════════════════════════════════════════════════════════════════
+  2026-05-15 (Run 7)  |  Invested: Rs 50,000 (5 stocks x Rs 10,000)
+                      |  Total P&L: Rs +362  |  Return: +0.72%
+════════════════════════════════════════════════════════════════════════════
+  Symbol       |    Entry    | Entry Date |    Exit     |  Exit Date  |  P&L Rs  |  P&L %
+  -------------+-------------+------------+-------------+-------------+----------+--------
+  HINDOILEXP   |  Rs 162.00  | 2026-05-15 |  Rs 173.40  | 2026-05-19  | +Rs  704 | +7.04% ROCKET
+  MAZDOCK      |  Rs 2500.00 | 2026-05-15 |  Rs 2454.00 | 2026-05-19  | -Rs  184 | -1.84% LOSS
+  BEL          |  Rs  428.00 | 2026-05-15 |  Rs  428.00 | 2026-05-19  | +Rs    0 |  0.00% FLAT
+  PIIND        |  Rs 3100.00 | 2026-05-15 |  Rs 3164.00 | 2026-05-19  | +Rs  206 | +2.06% WIN
+  BHEL         |  Rs  412.00 | 2026-05-15 |  Rs  397.00 | 2026-05-19  | -Rs  364 | -3.64% LOSS
+
+════════════════════════════════════════════════════════════════════════════
+  2026-05-12 (Run 3)  |  Invested: Rs 50,000 (5 stocks x Rs 10,000)
+                      |  Total P&L: Rs -1,733  |  Return: -3.47%
+════════════════════════════════════════════════════════════════════════════
+  Symbol       |    Entry    | Entry Date |    Exit     |  Exit Date  |  P&L Rs  |  P&L %
+  -------------+-------------+------------+-------------+-------------+----------+--------
+  HINDOILEXP   |  Rs 162.10  | 2026-05-12 |  Rs 167.02  | 2026-05-14  | +Rs  303 | +3.03% WIN
+  MAZDOCK      |  Rs 2565.80 | 2026-05-12 |  Rs 2520.00 | 2026-05-14  | -Rs  179 | -1.79% LOSS
+  PARAS        |  Rs  862.90 | 2026-05-12 |  Rs  820.00 | 2026-05-14  | -Rs  497 | -4.97% STOP
+  PERSISTENT   |  Rs 5098.10 | 2026-05-12 |  Rs 4637.60 | 2026-05-14  | -Rs  904 | -9.04% STOP
+  WAAREEENER   |  Rs 3208.80 | 2026-05-12 |  Rs 3062.60 | 2026-05-14  | -Rs  456 | -4.56% LOSS
+
+════════════════════════════════════════════════════════════════════════════
+  OPEN POSITIONS (not yet at exit window — STILL OPEN)
+════════════════════════════════════════════════════════════════════════════
+
+  May 22 batch (exit windows May 28 - Jun 5):
+  Symbol       |    Entry    | Entry Date |   Current   |  Status     |  P&L Rs  |  P&L %
+  -------------+-------------+------------+-------------+-------------+----------+--------
+  SUZLON       |  Rs  53.25  | 2026-05-22 |  Rs  54.60  | OPEN (+)    | +Rs  253 | +2.53% OPEN
+  WAAREEENER   |  Rs 3054.20 | 2026-05-22 |  Rs 2980.00 | OPEN (-)    | -Rs  242 | -2.43% OPEN
+  HINDOILEXP   |  Rs 168.00  | 2026-05-22 |  Rs 166.00  | OPEN (-)    | -Rs  119 | -1.19% OPEN
+
+  May 21 batch (exiting TODAY May 25 at T+2):
+  Symbol       |    Entry    | Entry Date |   Current   |  Status     |  P&L Rs  |  P&L %
+  -------------+-------------+------------+-------------+-------------+----------+--------
+  ONGC         |  Rs 296.45  | 2026-05-21 |  Rs 286.00  | CLOSING     | -Rs  353 | -3.53% LOSS
+  INOXWIND     |  Rs  96.56  | 2026-05-21 |  Rs  96.70  | CLOSING     | +Rs   14 | +0.14% FLAT
+
+════════════════════════════════════════════════════════════════════════════
+  GRAND SUMMARY (Confirmed Closed Batches Only)
+════════════════════════════════════════════════════════════════════════════
+  Total Capital Deployed  : Rs 1,50,000 (3 confirmed batches)
+  Total P&L               : Rs -976
+  Overall Return          : -0.65%
+  Avg P&L per Day         : Rs -325
+  Best Day                : 2026-05-15 (Run 8)  (+0.79%  Rs+395)
+  Worst Day               : 2026-05-12 (Run 3)  (-3.47%  Rs-1,733)
+  Win Days / Total Days   : 2 / 3
+
+════════════════════════════════════════════════════════════════════════════
+  STOCK CONSISTENCY LEADERBOARD (confirmed closed trades only)
+════════════════════════════════════════════════════════════════════════════
+  Symbol       | Appearances | Wins | Win Rate | Avg Return | Total P&L
+  -------------+-------------+------+----------+------------+----------
+  HINDOILEXP   |      3      |  3   |  100%    |  +5.20%    | +Rs 1,561
+  PIIND        |      2      |  2   |  100%    |  +1.83%    | +Rs  367
+  BEL          |      2      |  1   |   50%    |  +0.17%    | +Rs   35
+  MAZDOCK      |      2      |  0   |    0%    |  -1.63%    | -Rs  505
+  BHEL         |      2      |  0   |    0%    |  -2.88%    | -Rs  577
+  PERSISTENT   |      1      |  0   |    0%    |  -9.04%    | -Rs  904
+  PARAS        |      1      |  0   |    0%    |  -4.97%    | -Rs  497
+  WAAREEENER   |      1      |  0   |    0%    |  -4.56%    | -Rs  456
+  SUZLON       |      1      |  --  |   n/a    |   OPEN     |   OPEN
+  INOXWIND     |      2      |  --  |   n/a    |   OPEN     |   OPEN
+
+  KEY LEADERBOARD INSIGHTS:
+  1. HINDOILEXP: 3/3 = 100% WIN RATE, avg +5.2% — best single stock in pipeline.
+     HOWEVER: B-80 dispute is ongoing negative news. Entry only with clear stop.
+  2. PIIND: 2/2 = 100% WIN RATE — but Q4 FY26 miss (-48.8%) now removes from universe.
+     Do not re-enter until Q1 FY27 revenue recovery confirmed.
+  3. MAZDOCK: 0/2 — DROP CAUTION. Iran deal further reduces thesis.
+  4. BHEL: 0/2 — HARD AVOID. No fresh catalyst, PE 90.9.
+  5. PERSISTENT: 0/1 — PERMANENT EXCLUDE (AI disruption + 0/7 extended history).
+
+  LEADERBOARD ADJUSTMENTS FOR STEP 2 (v2 policy — informational only, no penalties):
+  - HINDOILEXP 100% WR: informational positive (+5 conf consideration next entry)
+  - INOXWIND: insufficient closed data (open positions dominate) — neutral
+
+════════════════════════════════════════════════════════════════════════════
+  PIPELINE SELF-IMPROVEMENT NOTES (appended after Run 14)
+════════════════════════════════════════════════════════════════════════════
+
+NEW PATTERNS / LESSONS FROM THIS RUN:
+
+1. DATA CENTER / AI INFRASTRUCTURE CLASS (NEW — Pattern O):
+   STLTECH $1.11B hyperscaler contract = first confirmed instance of data-center
+   optical fiber supply agreement moving an Indian stock significantly (+5%).
+   Pattern O definition: Indian infrastructure companies (fiber, power, cooling, land)
+   winning multi-year supply agreements with global hyperscalers (AWS, Azure, Google,
+   Meta) = high-conviction medium-term play.
+   BUT: Entry must be BEFORE news or within 1 session of news (not after +5% day).
+   The news-priced-in rule must be strictly applied.
+   STLTECH fundamental concerns: PE 475, negative 3yr ROE = entry only on RSI pullback.
+
+2. Q4 RESULTS = GAP-UP PATTERN (Pattern P — re-confirmed):
+   EICHER MOTORS: Q4 PAT Rs 5,515 Cr + brokerage 29% upside = +4.93% next session.
+   SUZLON: Q4 results today = stock +1.64% in pre-open already.
+   Pattern P: Strong Q4 results announcement + analyst upgrades = typically +3-8%
+   next session. The optimal entry is PRE-RESULTS when fundamentals suggest a beat.
+   Post-results entry (after the gap-up) = partial pricing-in. RSI zone 55-65 is still
+   valid post-results if stock has not exceeded analyst targets yet.
+
+3. IRAN DEAL IMPACT ON PORTFOLIO (structural alert):
+   Three consecutive runs featured Iran war premium as a key catalyst. Now that
+   the deal is "in final stages," entire E&P and defense thesis requires recalibration.
+   Portfolio risk: May 22 batch held HINDOILEXP (E&P) and SUZLON (indirect).
+   HINDOILEXP is the most exposed: if WTI drops to $85-88 on deal signing, revenue
+   impact is direct. The Rs 158 stop must be respected religiously.
+   NEW RULE: When Iran deal signed (official announcement), CLOSE HINDOILEXP immediately
+   regardless of stop. The thesis changes fundamentally at that point.
+
+4. SUZLON Q4 RESULTS AS INOXWIND BINARY TRIGGER:
+   The INOXWIND recommendation is explicitly conditioned on SUZLON Q4 being positive.
+   If SUZLON Q4 disappoints: SKIP INOXWIND entirely on May 26.
+   This pattern (PEER RESULTS AS ENTRY TRIGGER) is a new structured rule:
+   "For duopoly pairs, the leader's earnings announcement is a binary trigger for
+   the lagging peer. Positive leader earnings = enter peer. Negative = skip peer."
+
+================================================================================
+  TOKEN USAGE & COST ESTIMATE
+================================================================================
+  Web fetches (data gathering)   :  ~14 fetches x 2K tokens each = ~28K tokens input
+  Pattern analysis (orchestrator):  ~15K tokens input / ~8K tokens output
+  Validation analysis             :  ~5K tokens input / ~3K tokens output
+  Formatting / output             :  ~10K tokens input / ~4K tokens output
+  TOTAL ESTIMATE                  :  ~58K input / ~15K output
+  Cost estimate (Sonnet-3.7)      :  ~$0.18 input + $0.045 output = ~$0.23 USD
+                                     = approx Rs 19.50 (at Rs 84/USD)
+================================================================================
+  END OF REPORT — 2026-05-25
+================================================================================

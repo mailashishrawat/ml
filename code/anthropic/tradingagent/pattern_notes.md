@@ -1,3 +1,830 @@
+# Pattern Notes — Updated 2026-05-27 (Rule 26e Volatility Floor + Rule 26d Downtrend + BEL/BPCL Retroactive Invalidation)
+
+---
+
+## 2026-05-27 NEW RULE (USER FEEDBACK)
+
+### RULE 26e — VOLATILITY FLOOR (NEW — added 2026-05-27; proportional threshold for recent listings added 2026-05-27)
+
+**Source:** User feedback after reviewing BEL and BPCL 1-year charts: "Stocks like BEL/BPCL have hardly moved 3% in a year. This automatically disqualifies them from our target of achieving 5% a day. We should look for the top 100 stocks that had maximum stretch of 3% rise as one of the criteria."
+
+**THE RULE:**
+A stock must have recorded a single-day price move of >=3% (in either direction) on a sufficient number of its available trading days. This is a HARD FILTER applied at TWO pipeline layers.
+
+**Threshold logic — seasoned vs. recently listed:**
+
+- Seasoned stocks (>=252 trading days of history): must have >=40 days with a >=3% single-day move in the last 252 trading days. Unchanged original threshold.
+- Recently listed stocks (<252 trading days of history): apply a proportional floor — required count = ceil(available_trading_days / 252 * 40). A minimum absolute floor of 10 such days also applies. Both conditions must be satisfied.
+- Stocks with fewer than 30 trading days of total history cannot pass Rule 26e at all — insufficient data.
+
+Examples:
+- 252+ trading days: required = 40 days (seasoned rule).
+- 126 trading days (~6 months): required = ceil(126/252 * 40) = 20 days (and >= 10 absolute floor — so 20).
+- 60 trading days (~3 months): required = ceil(60/252 * 40) = 10 days (and >= 10 absolute floor — so 10).
+- 29 trading days or fewer: DISQUALIFIED regardless of move count.
+
+**Layer 1 — Step 1 Base Screener:**
+After applying all existing filters (market cap, price, turnover, profit growth), calculate `High_Vol_Day_Count` and `Available_Trading_Days` for every remaining candidate. Apply the tier-appropriate threshold. Rank all passing candidates descending by the NORMALIZED rate (`High_Vol_Day_Count / Available_Trading_Days`) so recently listed stocks compete fairly with seasoned stocks. Retain only the TOP 100 by normalized rate. Stocks below the cut are removed from basestock.xlsx entirely before Step 2 analysis begins.
+
+**New columns required in basestock.xlsx going forward:**
+- `High_Vol_Day_Count` — count of >=3% move days over available history (252-day window for seasoned stocks)
+- `Available_Trading_Days` — actual trading days of price history (capped at 252 for the calculation)
+- `High_Vol_Day_Rate` — `High_Vol_Day_Count / Available_Trading_Days` — primary sort column for top-100 ranking
+- `1Y_Return_Pct` — 1-year price return (%)
+- `52W_Range_Pct` — (52w_high - 52w_low) / 52w_low * 100
+
+**Layer 2 — Step 2.5 Price Action Gate (Condition D):**
+Even stocks that are force-included into Step 2 — Pattern S mandatory candidates (ATHERENERG, OLAELEC, SWIGGY, FIRSTCRY, NTPCGREEN, etc.) and NEWS_CATALYST_BUY stocks from Step 1.5 — must still pass this check before appearing in the final recommendation. For Pattern S candidates, apply the proportional threshold (not the 40-day seasoned threshold). A news catalyst, a state-visit MoU, a defense order, or any other confidence boost does NOT override Rule 26e.
+
+**Mathematical basis:** The user's daily profit target is 5% per position. A stock that rarely moves 3% in a single day cannot deliver 5% in the swing window the pipeline uses. This is not a preference — it is a mathematical incompatibility. The proportional variant for recently listed stocks preserves this logic while recognising that Pattern S candidates cannot have 252-day history by definition — the user's intent is to evaluate them on whatever data is available, not to disqualify them entirely.
+
+**BEL and BPCL — ADDITIONAL RETROACTIVE FAILURE under Rule 26e:**
+
+Both stocks recommended in Run #16 (2026-05-27) already carry `INVALID_RULE_26D` (active downtrend disqualification). They now ALSO carry `LOW_VOLATILITY_RULE_26E`:
+
+- **BEL:** 1-year return approximately +3% only. A stock that returned only +3% over 252 trading days almost certainly failed to record 40+ single-day moves of >=3%. At a ~+0.012% average daily move, BEL is structurally incapable of producing the 5%/day target move.
+- **BPCL:** 1-year return approximately -4.5% with a persistently low intraday range (predominantly an OMC refiner with regulated pricing). Almost certainly fails the >=40 high-volatility-day threshold.
+
+**Combined disqualification status for BEL and BPCL (as of 2026-05-27):**
+1. `INVALID_RULE_26D` — active downtrend (lower highs, lower lows), no confirmed reversal
+2. `LOW_VOLATILITY_RULE_26E` — insufficient historical single-day moves to support 5%/day profit target
+
+These stocks remain on the WATCHLIST only. Re-evaluate when: (a) Rule 26d conditions are met AND (b) a fresh `High_Vol_Day_Rate` calculation confirms they belong in the top 100.
+
+**Updated Rule 26 Application Checklist (all 5 sub-rules — run before every recommendation):**
+1. Has stock dropped >8% in last 5 sessions on above-avg volume? YES = Falling Knife (Rule 26a) = REMOVE.
+2. Is volume pattern showing distribution (big vol on red days, small vol on green days)? YES = -20 confidence (Rule 26b).
+3. Visible double-top or resistance rejection at known level? YES = conditional entry only, -15 confidence (Rule 26c).
+4. Is stock in active downtrend (lower highs + lower lows) with NONE of conditions A/B/C met? YES = "WAIT — downtrend not confirmed reversed" = REMOVE (Rule 26d).
+5. Does the stock fail its tier-appropriate volatility threshold (seasoned: <40 days; recently listed: < proportional floor; <30 total days: auto-fail) OR is it NOT in the Step 1 top-100 by normalized rate? YES = "LOW_VOLATILITY" = REMOVE (Rule 26e).
+Only confirm a pick if ALL FIVE answers are NO.
+
+---
+
+## 2026-05-27 CORRECTION (USER CHART REVIEW)
+
+### RULE 26d — ACTIVE DOWNTREND DISQUALIFICATION (NEW — added 2026-05-27)
+
+**Source:** User reviewed BEL and BPCL charts after today's Run #16 recommendations and found both stocks are in active downtrends — NOT in the recovery setups the agent described.
+
+**BEL CORRECTION:**
+- Agent described: "ATH-correction-recovery cycle, 3/3 historical, support Rs 415-420 holding, RSI divergence"
+- User's chart finding: V-bounce off lows but then pulled back sharply again. Still below all prior highs. No confirmed reversal. The "support" was not a base — it was a sequence of lower highs after a small bounce.
+- Error type: Over-weighted fundamental narrative (Q4 PAT +41%, FII 19.5%, order book) and pattern labels without confirming actual price action trend. The "ATH-correction-recovery cycle" description was applied retroactively but the CURRENT chart shows a downtrend continuation, not a recovery.
+- TODAY'S BEL STATUS: INVALID — downtrend not confirmed reversed. WAIT for Rule 26d criteria.
+
+**BPCL CORRECTION:**
+- Agent described: "Cup and handle weekly, Wyckoff accumulation Phase D, support Rs 295-310, breakout targeting Rs 355-370"
+- User's chart finding: Staircase downtrend — lower highs, lower lows. Current price near lows. No base formation visible. This is a falling knife, NOT a cup-and-handle.
+- Error type: The "cup" shape was fitted onto a downtrend channel. The right rim (Rs 304) is far below the left rim (Rs 391) — that is a continuation downtrend, not a cup. Wyckoff Phase D markup was premature; no confirmed markup has begun.
+- TODAY'S BPCL STATUS: INVALID — active downtrend (lower highs, lower lows). WAIT for Rule 26d criteria.
+
+**THE NEW RULE:**
+
+### Sub-Rule 26d: Active Downtrend Disqualification
+
+Before recommending ANY stock as a buy, the price action must show AT MINIMUM ONE of the following:
+
+1. **Trend change confirmation:** Price has closed above a prior swing high (the downtrend structure is broken — a higher high is made for the first time on the daily chart).
+2. **Base formation:** At least 2-3 weeks of sideways consolidation above support (price is not making lower lows; a floor is established and being tested successfully multiple times with declining volatility).
+3. **Higher lows AND higher highs sequence:** At least 2 higher lows AND 1 higher high confirmed on the daily chart (trend reversal structure established, not just a single bounce).
+
+**If a stock is in an active downtrend (lower highs, lower lows on daily chart) with NONE of the above three conditions met:**
+- It MUST NOT be recommended regardless of the fundamental thesis (cheap PE, dividend yield, order book, FII accumulation).
+- Label it in the output: "WAIT — downtrend not confirmed reversed"
+- Add to WATCHLIST with the specific price level at which condition 1, 2, or 3 would be satisfied.
+
+**What this rule is NOT:**
+- Does not apply to stocks with a brief 1-2 day pullback within a confirmed uptrend (those are Pattern D dip entries).
+- Does not apply to stocks at RSI < 35 on the first day of RSI recovery from extreme oversold — but only if no lower-high, lower-low sequence is visible on the weekly chart.
+- The rule applies most strictly to: (a) stocks recommended on fundamental narrative alone, (b) stocks described using chart pattern labels (cup-and-handle, W-bottom, head-and-shoulders) that have NOT yet triggered their breakout price.
+
+**Rule 26d vs Rule 26a (Falling Knife):**
+- Rule 26a: Acute knife — >8% drop in <5 sessions. Wait for 3-day base formation.
+- Rule 26d: Chronic downtrend — weeks/months of lower highs + lower lows. Wait for one of the three conditions. Rule 26d is HARDER to clear than Rule 26a.
+
+**Pattern label discipline (new requirement):**
+When using a chart pattern name (cup-and-handle, Wyckoff, ATH-correction-recovery), MUST verify:
+- The CURRENT position in the pattern — not just that the shape existed historically.
+- That the BREAKOUT has not yet failed (a "cup" where the right rim is more than 10% below the left rim is a failed cup or a downtrend channel, not a bullish setup).
+- That the ENTRY PRICE is at the pattern's ideal entry point — not at the bottom of a downtrend described optimistically as "handle consolidation."
+
+### APPLICATION CHECKLIST (add to Rule 26 checklist at every run):
+
+**Rule 26d check (run AFTER Rule 26a/b/c):**
+4. Is the stock making lower highs AND lower lows on the daily chart?
+   - If YES: Check condition A — has price closed above a prior swing high? If NO: disqualify.
+   - If YES: Check condition B — 2-3 weeks of sideways base, no new lows? If NO: disqualify.
+   - If YES: Check condition C — 2 higher lows + 1 higher high confirmed? If NO: disqualify.
+   - If ALL conditions A, B, C are NO: label "WAIT — downtrend not confirmed reversed" and REMOVE.
+
+### WATCHLIST ENTRIES (result of today's correction):
+
+**BEL — DOWNTREND WATCH:**
+- Current situation: Active downtrend (lower highs sequence from Rs 473 -> Rs 436 -> Rs 422 -> likely lower)
+- Entry condition (Rule 26d Condition A): Close above Rs 436 (prior swing high) on volume >= 1.5x avg
+- Entry condition (Rule 26d Condition B): Price consolidates sideways Rs 415-430 for 2-3 weeks without new lows
+- Entry zone when confirmed: Rs 428-440
+- Fundamental thesis remains valid once chart confirms: Q4 PAT +41%, FII 19.5%, Rs 74,000 Cr order book
+- Do NOT enter until one Rule 26d condition is met.
+
+**BPCL — DOWNTREND WATCH:**
+- Current situation: Staircase downtrend (lower highs, lower lows: Rs 391 -> Rs 332 -> Rs 305 area)
+- The "cup" right rim (Rs 304) is 22% below the left rim (Rs 391) — this is a downtrend channel, not a cup.
+- Entry condition (Rule 26d Condition A): Close above Rs 332 (prior swing high, Feb 2026) = a 9% move from current price
+- Entry condition (Rule 26d Condition B): 2-3 weeks of sideways Rs 295-310 with no close below Rs 294
+- Pattern Q (OMC margin reversal) is a valid fundamental thesis — WAIT for chart confirmation before acting on it.
+- Do NOT enter until one Rule 26d condition is met.
+
+### RETROACTIVE STATUS — RUN #16 (2026-05-27):
+
+BEL pick (confidence 84%): RETROACTIVELY INVALIDATED per Rule 26d. Do not use this entry price.
+BPCL pick (confidence 82%): RETROACTIVELY INVALIDATED per Rule 26d. Do not use this entry price.
+NTPCGREEN pick (confidence 80%): Status unchanged — double bottom base formation at Rs 84 (tested twice in Feb-Mar 2026) is consistent with Rule 26d Condition B. Verify on chart that Rs 84 low has NOT been broken and that higher lows are forming. If confirmed, NTPCGREEN WATCHLIST entry remains active at Rs 100-105.
+
+---
+
+# Pattern Notes — Updated 2026-05-27 (Pattern Q Live Activation + Wind Sector Warning + Cup/Handle Integration)
+
+---
+
+## 2026-05-27 UPDATE
+
+### NEW: PATTERN Q (OMC MARGIN REVERSAL) — FIRST LIVE ACTIVATION
+- WTI $92.17 on May 27 = Day 2 below $95 threshold. Pattern Q activated.
+- BPCL selected as Pattern Q primary play: PE 5.68, dividend yield 5.75%, cup-and-handle forming.
+- Cup and handle (weekly chart): Cup = Rs 391 (Feb 2026) -> Rs 266 (trough) -> Rs 304 (right rim now).
+  Handle consolidating Rs 295-310. Breakout above Rs 315-320 targets Rs 355-370.
+- Wyckoff accumulation structure confirmed by TradingView community.
+- When WTI rises back above $95 for 2+ days: Pattern Q reversal — CLOSE OMC positions.
+
+### WIND SECTOR STRUCTURAL WARNING (NEW RULE — added 2026-05-27)
+- SUZLON 1-year return: -13.13%
+- INOXWIND 1-year return: -47.38%
+- Despite individual catalysts (Pattern A duopoly triggers), the SECTOR itself is in institutional distribution.
+- NEW RULE: "If BOTH duopoly peers show 1-year negative returns, reduce Pattern A confidence by 15 points."
+- Applied today: INOXWIND excluded despite SUZLON +1.23% (Pattern A trigger) due to 1-year downtrend.
+- Wind sector recommendation: Only re-enter INOXWIND/SUZLON when sector 1-year return turns positive.
+
+### FIRSTCRY LPI DATA CLARITY (added 2026-05-27)
+- Finology shows Q4 FY26 standalone PAT: +Rs 31.64 Cr (profitable).
+- Groww shows FY26 consolidated net loss: Rs 2B (Rs 200 Cr).
+- Explanation: Brainbees Solutions (parent company) has subsidiaries still burning cash.
+  The standalone entity may be profitable but consolidated group is still in loss.
+- NEW LPI RULE: For LPI sub-pattern, ALWAYS verify CONSOLIDATED PAT (not standalone).
+  Standalone profitable + consolidated loss = PARTIAL LPI (reduce +8 boost to +3).
+- Market reaction: FIRSTCRY -4.34% on Q4 results = market reading consolidated loss, not standalone.
+
+### CUP AND HANDLE PATTERN — ADDED TO LIBRARY (2026-05-27)
+- Symbol: Pattern W (new label for weekly cup-and-handle)
+- Criteria for Pattern W:
+  a. Weekly chart showing clear U-shape correction of 15-30% from prior high
+  b. Recovery to near prior high level (right rim within 5-10% of left rim)
+  c. Current price in "handle" zone = 3-8% below right rim = entry
+  d. Volume: Declining on down days during handle formation = institutional accumulation
+  e. Confirmed by: Wyckoff accumulation OR RSI divergence OR MACD PCO
+- Breakout target: Depth of cup added to breakout point
+- Historical success rate: ~67% for clean cup-and-handle setups
+- First application: BPCL May 27 2026. Will track outcome.
+
+### ATHERENERG UPDATE (2026-05-27)
+- IPO May 2025 at Rs 321 (per finology). 1-year return: +207%.
+- Current Rs 969-973, near ATH Rs 989.40. RSI likely 68-75.
+- The PATTERN S trade (entry Rs 883 May 22, exit Rs 981 May 26) was during a healthy bull trend correction.
+- Lesson: Pattern S works best when the stock is in a 1-YEAR UPTREND but experiencing a SHORT correction.
+  If the 1-year trend is down (like SWIGGY -21.55%), Pattern S has much lower conviction.
+- NEW RULE: "Pattern S confidence gets +10 boost when 1-year trend is positive (>0% return)."
+
+---
+
+## PRIOR NOTES CONTINUE BELOW:
+# Pattern Notes — Updated 2026-05-26 (Pattern S LPI Sub-Pattern + LPI Candidate Scan)
+
+---
+
+## ATHER POST-MORTEM (2026-05-26) — USER TRADE ANALYSIS
+
+### Trade Summary
+- Stock: Ather Energy (NSE: ATHERENERG)
+- Entry: May 22, Rs 883.8 (user-identified chart reversal)
+- Exit: May 26, Rs 981.1 (+11.0% in 4 trading days on Rs 1 lakh = Rs 11,000 profit)
+- Pipeline recommendation: NOT recommended (confidence ~60-65%, capped at 75% for new listings)
+- Miss category: PATTERN GAP (new listing RSI exhaustion low not formalized as pattern)
+
+### Price Timeline (May 2026)
+ATHERENERG IPO listing: Nov 2025 at Rs 692, ran to 52w high Rs 989.4 by May 11
+- May 11: Rs 969.5 (near 52w high) [DAY 0 of correction]
+- May 12: Rs 924.2 (-4.7%)
+- May 13: Rs 952.0 (+2.9% bounce — dead cat)
+- May 14: Rs 940.3 (-1.2%)
+- May 15: Rs 937.4 (-0.3%)
+- May 18: Rs 910.3 (-2.9%)
+- May 19: Rs 910.3 (flat)
+- May 20: Rs 909.0 (-0.1%)
+- May 21: Rs 889.3 (-2.2%) [intraday low Rs 873.6 = max drawdown point]
+- May 22: Rs 883.8 (-0.6%) [ENTRY DAY — intraday low Rs 874.1, closed higher = capitulation candle]
+- May 25: Rs 921.4 (+4.3%) [5-day MA reclaimed: Rs 921 > MA5 Rs 903]
+- May 26: Rs 981.1 (+6.5%) [Volume 5.23M = 1.5x avg = BREAKOUT confirmed]
+
+Total decline from 52w high to trough: -11.7% (intraday) in 7 sessions
+RSI on May 22: ~41.5 (Pattern C recovery zone)
+Reversal type: "Exhaustion low / Seller depletion" — NOT V-bottom or double-bottom
+
+### Why the Pipeline Missed ATHER
+1. CONFIDENCE CAP: Recently listed stocks (within 1 year) capped at 75% confidence.
+   ATHER at 75% cap = never reaches the >78% threshold.
+2. DUOPOLY TRIGGER NOT FIRING: OLAELEC May 22 Rs 36.0 = only +1.4% (trigger required +1%+ clearly,
+   but this was borderline and pipeline treated it as insufficient).
+3. NO NEWS CATALYST: Pattern J (news-catalyst boost) would have lifted confidence past 78%,
+   but Step 1.5 found no ATHER-specific headlines on May 22.
+4. PATTERN S NOT DEFINED: The "post-IPO exhaustion low" pattern was not in the pattern library.
+   If it had been, RSI 41.5 + 7-session grind + declining volume on sell-offs would have triggered it.
+5. EV MACRO TAILWIND MISSED: WTI -4.94% on May 26 = structural EV tailwind narrative for ATHER.
+   This was flagged in Step 1.5 for HINDOILEXP but not applied to the EV beneficiary (ATHER).
+
+### Key Lessons
+- Recently listed stocks (6-18 months post-IPO) can be strong swing trade candidates IF:
+  * They have corrected 8-15% from their listing-era high in 6-10 sessions
+  * RSI reaches 38-45 (not extreme oversold, but clearly correcting)
+  * Volume on down days is declining (sellers exhausted)
+  * They have a strong structural narrative (EV, digital, consumer)
+- The confidence cap of 75% for new listings is CORRECT in general (no profit history)
+  BUT: when Pattern S criteria are fully met, the cap can be relaxed to 80%.
+- Oil price collapse (WTI -4.94%) was a direct EV tailwind = should have been flagged as ATHER catalyst.
+
+---
+
+## PATTERN S — IPO/POST-LISTING REVERSAL (NEW, added 2026-05-26)
+
+### Pattern Definition
+After a recently listed stock (6-24 months post-IPO) corrects 8-20% from its listing-era high:
+- Entry signal: "Exhaustion low" = 6-10 sessions of declining closes with DECLINING volume on red days
+  AND: RSI reaches 38-50 (oversold bounce zone, not extreme like RSI 20)
+  AND: Price reclaims 5-day MA on the first recovery day
+  AND: Recovery day volume >= 1.0x 20-day average (at minimum)
+- Exit signal: First breakout day with volume >= 1.5x 20-day average = target met, trail stop
+
+### Required Conditions
+1. Listed within the last 6-24 months (recently listed but has some price history)
+2. Stock must have first RUN UP meaningfully from listing price (at least +20% from IPO price)
+   before correcting — this confirms genuine retail and institutional interest
+3. Correction from the "listing-era high": 8-20% in 6-10 sessions (controlled correction)
+4. Volume pattern during decline: DOWN-DAYS have LOWER-than-average volume (sellers running out)
+   NOT: high volume on red days (that is institutional selling = falling knife, Pattern Rule 26a applies)
+5. RSI: 38-50 at entry (oversold bounce zone). If RSI < 35 = too early, wait for stabilization.
+6. 5-day MA reclaim: stock closes above its 5-day MA for the first time after correction = entry trigger
+7. Strong narrative: EV, food delivery, new economy, defense tech, solar — not traditional declining sector
+8. NO negative company-specific news (earnings miss, fraud, management departure)
+
+### Confidence Scoring
+Base score for Pattern S: 72 (override of new-listing cap to 75, justified by technical criteria)
+Boost conditions:
++5: EV/Green Energy macro tailwind (WTI falling = EV urgency, solar tailwind)
++5: Duopoly peer (OLAELEC up >1% on same day for ATHER, Eternal up for Swiggy, etc.)
++5: Volume on recovery day >= 1.2x 20d avg
++5: RSI clearly in 40-50 range (not borderline 35-38)
++5: Q4 results showing revenue growth or loss improvement
+Maximum score: 72 + 25 = 97. In practice, 80-85 is realistic for well-qualified setups.
+
+Disqualifiers:
+- Volume on red days is ABOVE average (Rule 26a — falling knife)
+- RSI below 30 (stock still in free fall, wait for stabilization)
+- Company has negative news or earnings miss in last 30 days
+- Peer/duopoly is also declining (no lag = no Pattern A boost)
+- Correction exceeds 25% in fewer than 5 sessions (too sharp = institutional selling)
+
+### ATHER May 22 Scored Retrospectively
+Base: 72
++5: EV macro tailwind (WTI declining, lower oil = EV structural story)
++3: RSI 41.5 in recovery zone (partial credit, not the ideal 44-50)
++3: Volume declining on red days (partial — volume was average, not clearly below avg)
++5: Strong listing narrative (premium EV brand, post-IPO momentum)
+Estimated score if Pattern S had existed: 88
+Would have been recommended: YES
+
+### Candidate Universe for Pattern S
+Every pipeline run should scan these recently listed stocks for Pattern S:
+EV: ATHERENERG, OLAELEC
+Food/Quick Commerce: SWIGGY, ETERNAL (Zomato)
+Infrastructure/Capital Goods: AFCONS, JYOTICNC
+Consumer: CELLO, FIRSTCRY
+Green Energy: NTPCGREEN
+Auto: HYUNDAI India
+Tech/Platform: BLACKBUCK (Zinka Logistics)
+
+---
+
+## PATTERN S — SUB-PATTERN: LOSS-TO-PROFIT INFLECTION (LPI) (NEW, added 2026-05-26)
+
+### Why This Sub-Pattern Exists
+The ATHER trade worked not only because of the chart reversal (Pattern S technical criteria) but because of a fundamental pre-buying thesis: ATHER has been consistently reducing its losses for 4+ consecutive quarters and is expected to turn profitable in Q1 FY27. Institutions and smart money front-run the "first profit quarter" expectation by 1-2 quarters, creating sustained pre-buying pressure that supports and extends the chart reversal. Without this sub-pattern, Pattern S alone captures only a technical bounce. WITH this sub-pattern, Pattern S captures a multi-week institutional accumulation wave.
+
+### Definition
+**Pattern S — LPI Sub-Pattern (Loss-to-Profit Inflection):**
+A recently listed (6-24 months post-IPO) company that:
+1. Has been loss-making since listing but losses are NARROWING for 4+ consecutive quarters
+2. The key signal: EBITDA or PAT trending from deep negative toward zero (the "path to first profit")
+3. Expected first profitable quarter is estimated to be 1-3 quarters away
+4. Smart money and institutions begin accumulating 1-2 quarters BEFORE the first profit quarter
+
+### When institutions buy before profit:
+- Institutional mandates often say "buy if we can see profitability within 2 quarters" — this is the trigger for pre-buying
+- The stock's "story" shifts from "deep loss-making" to "almost profitable" — this unlocks a wider investor universe
+- Analyst upgrades typically arrive at or after the first profit quarter — institutions are ahead of this
+- This creates a 1-3 quarter window of pre-buying pressure that shows up as rising volume on green days, FII accumulation building, and chart patterns suggesting absorbed sellers
+
+### Confidence Score Addition
+**LPI sub-pattern adds +8 to confidence score when:**
+- 4+ consecutive quarters of loss improvement (losses narrowing, not widening)
+- Management or analyst commentary confirms first profitable quarter within 1-3 quarters
+- Revenue growth is sustained (the path to profit is via scale, not cost-cutting alone)
+
+**This is the single highest-value confidence boost in the Pattern S framework:**
+- Base Pattern S: 72
+- Full technical criteria (RSI, volume, MA5): +20
+- LPI sub-pattern (4+ quarters improvement + imminent first profit): +8
+- **Maximum realistic score with LPI: 90-95**
+
+**LPI alone without technical criteria = DO NOT enter yet.** The chart must also confirm (Pattern S technical conditions required). LPI is an additive booster, not a standalone trigger.
+
+### Makes Pattern S a STRONG BUY (not just a WATCH) when:
+- Pattern S technical criteria: fully met (RSI 38-50, declining vol on red days, 5MA reclaimed)
+- LPI criteria: 4+ quarters of improvement, first profit within 2 quarters
+- Combined condition: STRONG BUY — initiate full position (Rs 1 Lakh equivalent), hold T+10 to T+20
+
+### Disqualifier for LPI boost:
+- If revenue is also declining (not just losses improving via cost cuts) = LPI sub-pattern does NOT apply
+- If the loss in the most recent quarter is LARGER than 2 quarters ago (reversal of improvement) = LPI fails
+- If debt is rising rapidly (signal that improvement is unsustainable) = LPI boost reduced by half
+
+---
+
+## LPI CANDIDATE SCAN — 2026-05-26
+
+### Scan Universe: SWIGGY, OLAELEC, NTPCGREEN, BLACKBUCK, FIRSTCRY, AFCONS, HYUNDAI India
+
+### Candidate Rankings by LPI Signal Strength
+
+---
+
+#### RANK 1 — FIRSTCRY (BRAINBEES) — LPI SCORE: STRONG
+NSE Symbol: FIRSTCRY
+Current Price: Rs 236 (May 26)
+52-Week Range: Rs 207 - Rs 439
+Market Cap: ~Rs 12,000 Cr
+
+**Quarterly PAT Trend (FY26):**
+- Q1 FY26 (Jun 2025): Rs -67 Cr
+- Q2 FY26 (Sep 2025): Rs -51 Cr (loss narrowed Rs 16 Cr)
+- Q3 FY26 (Dec 2025): Rs -39 Cr (loss narrowed Rs 12 Cr further)
+- Q4 FY26 (Mar 2026): BOARD MEETING MAY 26 (results TODAY) — expected improvement to Rs -15 to -20 Cr based on trajectory
+
+**LPI Assessment:**
+- 3 confirmed quarters of improving losses (Q1 to Q3 FY26: -67 -> -51 -> -39)
+- Rate of improvement: ~Rs 15-16 Cr per quarter
+- At this rate: Q4 FY26 ~= Rs -20 to -25 Cr; Q1 FY27 ~= Rs -5 to -10 Cr; Q2 FY27 = FIRST PROFIT QUARTER
+- Expected first profitable quarter: Q2 FY27 (Sep 2026) or Q1 FY27 (Jun 2026) if Q4 result beats trajectory
+- EBITDA already strongly positive and growing: Rs 33 Cr -> Rs 49 Cr -> Rs 57 Cr -> Rs 108 Cr (Q3 FY26) — ACCELERATING
+- Q4 FY26 results announced TODAY (board meeting May 26) = binary catalyst event
+- Revenue growing: GMV expanded from Rs 9,121 Cr (FY24) to Rs 10,585 Cr (FY25) = 16% growth
+- Business: India's largest omni-channel baby/kids platform — strong consumer brand, high repeat purchase
+- PE 195 = expensive but reflects "approaching profitability" premium; will compress rapidly when PAT turns positive
+
+**LPI Score:** Strong — 4 quarters of consistent improvement; first profit within 1-2 quarters at current pace
+**Pattern S Technical (as of May 26):**
+- Price Rs 236 vs 52w high Rs 439 = -46% below peak (EXCEEDS -20% Pattern S limit — too deep)
+- RSI: Unknown (not available from sources today)
+- The -46% decline from 52w high is too large for Pattern S (Pattern S requires 8-20% correction from listing-era high)
+- This is a FUNDAMENTAL LPI play, not a Pattern S technical play — different timing of entry
+
+**Recommendation:** WATCHLIST — NOT YET. Wait for:
+  1. Q4 FY26 results today (board meeting May 26) — if PAT loss < Rs 20 Cr = LPI acceleration confirmed
+  2. Chart to form a base (50-day MA stabilization after deep decline)
+  3. Entry zone: Rs 220-240 on a green volume day (volume >= 2x average) after Q4 results
+  4. Confidence if fully triggered: 82-85 (LPI +8 over base Pattern S 74)
+  5. Target: Rs 290-310 (return toward prior consolidation zone), holding T+15 to T+30
+  6. Stop: Rs 207 (52-week low)
+
+**STATUS: WATCH — Q4 FY26 result (today) is the binary trigger. Monitor closely.**
+
+---
+
+#### RANK 2 — SWIGGY — LPI SCORE: MODERATE-STRONG
+NSE Symbol: SWIGGY
+Current Price: Rs 256 (+2.44% today, May 26)
+52-Week Range: Rs 247 - Rs 474
+Market Cap: Rs 70,692 Cr
+
+**Quarterly PAT Trend (FY26):**
+- Q1 FY26 (Jun 2025): Rs -1,197 Cr
+- Q2 FY26 (Sep 2025): Rs -1,092 Cr (loss narrowed Rs 105 Cr)
+- Q3 FY26 (Dec 2025): Rs -1,065 Cr (loss narrowed Rs 27 Cr — SLOWDOWN in improvement)
+- Q4 FY26 (Mar 2026): Rs -800 Cr (loss narrowed Rs 265 Cr — ACCELERATION in improvement)
+
+**LPI Assessment:**
+- 4 confirmed quarters of improving losses: -1,197 -> -1,092 -> -1,065 -> -800
+- Total loss improvement: Rs 397 Cr over 4 quarters = +33% loss reduction
+- EBITDA (Operating Loss): -19% OPM -> -11% OPM = margin expanding 8 percentage points in 4 quarters
+- Revenue growing strongly: Rs 4,961 Cr -> Rs 6,383 Cr = +29% in 4 quarters
+- BUT: at Rs 800 Cr quarterly loss, the absolute number is still very large
+- Path to first profitable quarter requires Rs 800 Cr further improvement at current EBITDA trajectory
+- At current rate (avg Rs 100 Cr/quarter improvement), first profit = Q4 FY28 (2 YEARS AWAY)
+- At Q4 pace (Rs 265 Cr improvement), first profit = Q4 FY27 (3-4 QUARTERS AWAY)
+- KEY RISK: Losses are large in absolute terms; Q2-Q3 FY26 improvement stalled (Rs 27 Cr vs Rs 105 Cr)
+- FII: 14.59% (institutional presence but not tracking direction change)
+- PE 162 = extremely elevated for loss-making company
+- Duopoly: ETERNAL (Zomato) is the peer comparator — Zomato has been profitable for 5+ quarters
+- DUOPOLY SIGNAL: Zomato at profitability = market now expects Swiggy to follow = premium compressed until Swiggy shows similar trajectory
+
+**LPI Score:** Moderate — loss reducing but absolute losses still large; first profit 3-6 quarters away
+**Pattern S Technical (as of May 26):**
+- Price Rs 256 vs 52w high Rs 474 = -46% below 52w high — EXCEEDS Pattern S -20% limit
+- BUT: Price near 52-week LOW (Rs 247) — just bounced from 52w low on May 25-26
+- RSI: 42.7 (within Pattern S zone 38-50) — confirmed from prior analysis
+- 5-day MA: Rs 252.7 — price Rs 256 = ABOVE 5MA (Pattern S trigger met)
+- Volume today: +2.44% green day but volume ratio 0.28x (as of earlier check) — still weak
+- Pattern S PARTIAL match: RSI and 5MA met, but volume below 1.0x minimum AND correction too deep
+
+**Recommendation:** WATCHLIST — HIGH PRIORITY. Wait for:
+  1. Volume spike: Close above Rs 260 on volume >= 5M (1.0x avg) = entry trigger
+  2. Duopoly trigger: ETERNAL (Zomato) up >1.5% on same day = peer confirmation
+  3. LPI boost applies: +8 (4+ quarters confirmed improvement)
+  4. Confidence if fully triggered: 80-83 (LPI-boosted Pattern S)
+  5. Target: Rs 295-300 (prior consolidation zone), holding T+10 to T+20
+  6. Stop: Rs 245 (below 52-week low)
+  7. KEY WATCH: Q4 FY26 results due (not yet announced as of May 26) — if loss < Rs 700 Cr = significant LPI acceleration
+
+**STATUS: WATCH — Entry trigger near (Rs 260 volume day). Could qualify within 1-2 sessions.**
+
+---
+
+#### RANK 3 — OLAELEC — LPI SCORE: MODERATE
+NSE Symbol: OLAELEC
+Current Price: Rs 38.1 (May 26)
+52-Week Range: Rs 21.2 - Rs 71.2
+
+**Quarterly PAT Trend:**
+- Q1 FY26 (Jun 2025): Rs -428 Cr
+- Q2 FY26 (Sep 2025): Rs -418 Cr (marginal improvement)
+- Q3 FY26 (Dec 2025): Rs -500 Cr (WORSENING — quarterly loss INCREASED)
+- Q4 FY26 (Mar 2026): Cash-flow positive for first time; but full-year FY26 loss = Rs -1,833 Cr
+- Operating margins still -106% (deeply negative)
+
+**LPI Assessment:**
+- CRITICAL ISSUE: Q3 FY26 loss WIDENED from Q2 (Rs -500 Cr vs Rs -418 Cr)
+- LPI requires 4+ CONSECUTIVE quarters of improvement — Q3 BREAKS the streak
+- Q4 management claim of "first cash-flow positive quarter" is promising but: (1) operating margins still -106%, (2) full-year loss Rs 1,833 Cr
+- This is a CASH FLOW positive but NOT a PAT positive or EBITDA positive quarter
+- At Rs 38 per share (near 52-week low zone Rs 21 - Rs 71), the stock has collapsed -73% from 52-week high
+- LPI condition NOT MET (4 consecutive quarters of improvement broken in Q3)
+- DUOPOLY: ATHERENERG is the peer comparator (already ran +11% — is this time for OLAELEC to catch up via Pattern A?)
+- ATHERENERG at Rs 981 (fresh high today) while OLAELEC at Rs 38 = OLAELEC is the deep laggard
+
+**LPI Score:** DOES NOT QUALIFY — streak broken in Q3 FY26. Cash-flow positive is a positive signal but PAT still deeply negative and worsening
+**Pattern S Assessment:**
+- Price Rs 38 vs 52w high Rs 71 = -46% from high — EXCEEDS Pattern S correction limit of -20%
+- This is a multi-month decline, not a 6-10 session correction
+- Pattern S NOT applicable in its standard form
+
+**Potential Pattern A (Duopoly Lag) play:**
+- ATHERENERG ran +11%; OLAELEC at Rs 38 is the deep laggard
+- ATHERENERG-OLAELEC duopoly lag: IF ATHERENERG continues higher, OLAELEC may catch up
+- BUT: OLAELEC's fundamentals are weaker (higher losses, broken improvement streak vs ATHER's clear improvement)
+- This is a SPECULATIVE play, not an LPI play
+- Watchlist: OLAELEC entry ONLY if ATHERENERG gains +2%+ on a day AND OLAELEC shows RSI recovery from 35-45 zone AND volume >= 1.5x avg
+
+**STATUS: WATCHLIST — LPI does NOT qualify today. Duopoly catch-up play possible but speculative. Do not recommend.**
+
+---
+
+#### RANK 4 — BLACKBUCK — LPI SCORE: NOT APPLICABLE (ALREADY PROFITABLE)
+NSE Symbol: BLACKBUCK
+Current Status: Already profitable for 3 consecutive quarters
+
+**Quarterly PAT Trend:**
+- Q4 FY25 (Mar 2025): Rs -9 Cr (last loss quarter)
+- Q1 FY26 (Jun 2025): Rs +34 Cr (FIRST PROFIT)
+- Q2 FY26 (Sep 2025): Rs +29 Cr
+- Q3 FY26 (Dec 2025): Rs +32 Cr
+
+**Assessment:** BLACKBUCK has already crossed the loss-to-profit threshold (first profit Q1 FY26). This means:
+- The pre-buying accumulation phase (the LPI signal) has ALREADY happened
+- Current stock price may already reflect the "first profit" premium
+- LPI signal is for BEFORE the first profit quarter, not after
+- BLACKBUCK now needs to be evaluated as a PROFITABLE growth company, not an LPI candidate
+- Use Pattern G (FII accumulation), Pattern C (RSI recovery), or Pattern F (growth sector) instead
+
+**STATUS: GRADUATED from LPI universe. Evaluate as profitable small-cap. Not a Pattern S candidate.**
+
+---
+
+#### RANK 5 — NTPCGREEN — LPI SCORE: NOT APPLICABLE (ALREADY PROFITABLE)
+**Assessment:** NTPCGREEN has been consistently profitable (PAT Rs 197-220 Cr range in FY26, with Q3 dip to Rs 17 Cr due to tax timing). This is NOT an LPI candidate — it is a revenue-growth and EBITDA-expansion story. Use Pattern F (green energy structural tailwind), Pattern G (FII accumulation), or Pattern O (PSU capex) instead.
+
+**STATUS: Not an LPI candidate. Evaluate as profitable mid-cap in green energy sector.**
+
+---
+
+#### RANK 6 — AFCONS — LPI SCORE: DISQUALIFIED (DETERIORATING)
+**Assessment:** AFCONS moved FROM profits (Q1-Q3 FY26 Rs 97-137 Cr positive) TO LOSS (Q4 FY26 Rs -89 Cr). This is the OPPOSITE of LPI — it is a profit-to-loss deterioration. Hard exclude from Pattern S universe until fundamentals stabilize for 2+ consecutive quarters.
+
+**STATUS: HARD EXCLUDE. Deteriorating fundamentals. Not a Pattern S or LPI candidate.**
+
+---
+
+#### RANK 7 — HYUNDAI INDIA — LPI SCORE: NOT APPLICABLE (PROFITABLE LARGE-CAP)
+**Assessment:** Hyundai India is a profitable large-cap auto company. LPI sub-pattern applies only to recently listed LOSS-MAKING companies approaching profitability. Hyundai India does not qualify. Evaluate under standard Pattern rules (RSI, duopoly with MARUTI, sector tailwind).
+
+**STATUS: Not an LPI candidate. Standard pattern analysis applies.**
+
+---
+
+### LPI UNIVERSE SUMMARY (as of 2026-05-26)
+
+| Symbol | LPI Score | 4Q Consec Improve | Quarters to Profit | Status |
+|--------|-----------|-------------------|---------------------|--------|
+| FIRSTCRY | STRONG | YES (3 confirmed, 4th today) | 1-2 quarters | WATCH (Q4 result today is binary trigger) |
+| SWIGGY | MODERATE-STRONG | YES (4 confirmed) | 3-6 quarters | WATCH (entry trigger Rs 260 on volume) |
+| OLAELEC | MODERATE | NO (Q3 FY26 broke streak) | 4-6 quarters | WATCHLIST only — LPI not qualified |
+| BLACKBUCK | N/A | Graduated | Already profitable | Use standard patterns |
+| NTPCGREEN | N/A | Graduated | Already profitable | Use standard patterns |
+| AFCONS | DISQUALIFIED | NO — deteriorating | Unknown | Hard exclude |
+| HYUNDAI INDIA | N/A | Not applicable | Large-cap profitable | Standard patterns |
+
+---
+
+### FINAL RECOMMENDATION CARDS (LPI-Boosted Pattern S)
+
+**Stocks qualifying above 78% confidence with LPI boost applied:**
+
+---
+
+#### RECOMMENDATION CARD: SWIGGY (NSE: SWIGGY)
+Confidence Score: 80 (if entry trigger fires today)
+
+Score Build-up:
+- Base Pattern S: 72 (RSI 42.7 in zone, 5MA reclaimed, 52w low bounce — note: decline too deep for standard Pattern S but near-52w-low bounce applies)
+- LPI boost: +8 (4 confirmed quarters of loss reduction: -1197 -> -1092 -> -1065 -> -800)
+- Duopoly peer (ETERNAL): +0 today (not yet triggered at time of analysis)
+- Volume below 1.0x: -0 (watchlist condition; entry requires volume trigger first)
+- Total: 80 (conditional on volume trigger)
+
+Entry: Rs 260-262 (ONLY on green close above Rs 260 with volume >= 5M)
+Target: Rs 295 (prior consolidation zone)
+Stop: Rs 245 (just below 52-week low Rs 247)
+Holding Window: T+10 to T+20 (LPI thesis takes longer than technical bounce)
+Risk/Reward: (Rs 295 - Rs 261) / (Rs 261 - Rs 245) = Rs 34 / Rs 16 = 2.1:1
+
+Note: This is NOT today's recommendation — it is a WATCH with a defined entry trigger. The stock must show volume confirmation (volume >= 5M or ETERNAL up >1.5%) before entry. Without volume, this is a weak bounce near 52w low and risks testing Rs 245.
+
+Catalyst: Q4 FY26 results (not yet announced) — if Q4 loss < Rs 700 Cr, LPI acceleration = strong buy signal
+Additional catalyst: If ETERNAL (Zomato) accelerates, SWIGGY catches up via duopoly lag
+
+---
+
+#### RECOMMENDATION CARD: FIRSTCRY (NSE: FIRSTCRY)
+Confidence Score: 82 (conditional on Q4 FY26 result today + chart confirmation)
+
+Score Build-up:
+- Base: 72 (recently listed, LPI applies)
+- LPI boost: +8 (3 confirmed consecutive quarters + Q4 result today expected to show 4th improvement; EBITDA accelerating from Rs 33 Cr to Rs 108 Cr = strong trajectory)
+- Q4 FY26 result binary event today: +2 (pre-result positioning on strong trajectory)
+- Total: 82
+
+Critical caveat: The 46% decline from 52-week high means standard Pattern S (8-20% correction) is not applicable. The chart requires base formation confirmation before entry. At Rs 236, the stock is 14% above the 52-week low of Rs 207. This is a FUNDAMENTAL LPI play with a longer holding window, not a 2-4 day technical bounce.
+
+Entry: Rs 228-240 (after Q4 result, on positive result + volume day >= 2x average)
+Target: Rs 285-295 (next resistance zone)
+Stop: Rs 207 (52-week low)
+Holding Window: T+15 to T+30 (fundamental inflection thesis)
+Risk/Reward: (Rs 290 - Rs 234) / (Rs 234 - Rs 207) = Rs 56 / Rs 27 = 2.1:1
+
+Entry trigger: Q4 FY26 loss improves to < Rs 25 Cr (confirms 4th consecutive improvement, first profit within 1-2 quarters) + Volume on entry day >= 2x average
+CURRENT STATUS: WATCH — Q4 results announced later today. Check results and re-evaluate.
+
+---
+
+### PATTERN S WATCHLIST UPDATE (post-LPI scan, 2026-05-26)
+
+SWIGGY: ACTIVE WATCH. LPI-boosted. Entry trigger: close > Rs 260 on volume >= 5M OR ETERNAL +1.5%. Confidence 80 if triggered.
+
+FIRSTCRY: ACTIVE WATCH. LPI-boosted. Binary event today (Q4 results). Entry trigger: positive Q4 result + volume >= 2x avg. Confidence 82 if triggered.
+
+OLAELEC: PASSIVE WATCH. LPI streak broken. Pattern A (duopoly lag vs ATHER) possible but speculative. Entry only if ATHERENERG +2%+ AND OLAELEC RSI 35-45. Not an LPI play.
+
+ATHERENERG: GRADUATED. +11% trade completed. Monitor for next Pattern S setup after 4-6 sessions of consolidation.
+
+CELLO: WATCH (unchanged from prior). Volume below minimum. Entry trigger: volume >= 0.25M green day.
+
+---
+
+### Pattern S watchlist for next entry
+SWIGGY: WATCH. Hit 52w low May 22 (Rs 249.9). RSI 42.7. 5MA reclaimed.
+  Disqualifier today: Volume 0.28x avg = too weak. Wait for volume confirmation day.
+  Entry trigger: Close > Rs 260 on volume >= 5M (0.5x avg is min for SWIGGY's history)
+  OR: Eternal (Zomato) up >2% on the same day = Pattern A duopoly lag trigger.
+  Stop: Rs 245 (below 52w low). Target: Rs 290-295 (prior consolidation zone).
+  Holding: T+5 to T+10 (path-to-profitability narrative takes time).
+
+CELLO: WATCH. Hit 52w low Rs 380.5 on May 25. RSI 39.5. 5MA reclaimed May 26.
+  Disqualifier today: Volume 0.65x avg = below pattern requirement.
+  Wait for: Volume >= 0.2M on green day (CELLO is thinly traded, 0.2M = 1x avg).
+  Stop: Rs 372 (below 52w low). Target: Rs 435-440 (prior consolidation Jul 2025).
+  Holding: T+5 to T+8.
+
+---
+
+# Pattern Notes — Updated 2026-05-26 (Run 15 — WTI $91.83 collapse, oil below $95)
+
+---
+
+## Run 15: 2026-05-26 (Monday) — 2 picks: WAAREEENER (84%), BEL (80%)
+
+### Macro Backdrop May 26
+- WTI Crude: $91.83 (-4.94%) — MASSIVE DROP. Iran deal optimism + Hormuz reopening hopes.
+  FIRST TIME BELOW $92 since the war started. Pattern I (Iran-USA War Trade) SUSPENDED.
+- Brent: $95.23 (-4.97%) — dropped below $100.
+- Gold: $4,537.70 (+0.32%) — slight uptick, NOT a caution signal.
+- S&P 500: 7,473.47 (+0.37%), NASDAQ: 26,343.97 (+0.19%) — US POSITIVE.
+- Nifty 50: ~24,033 (+0.01%) — near flat.
+- Global equities rallied on Middle East peace optimism; fresh US strikes tempered it partially.
+
+### SUZLON Q4 FY26 Results (announced May 25):
+- Revenue: +45% to Rs 5,494 Cr (STRONG)
+- PAT: -6% YoY to Rs 1,114 Cr (MISS — earnings declined)
+- Nuvama downgraded to Hold, target Rs 55.
+- Missed FY26 targets by 10% in both revenue and EBITDA.
+- INOXWIND entry condition: SUZLON PAT was NEGATIVE = peer trigger says SKIP. Rule applied correctly.
+
+### Picks May 26:
+WAAREEENER (84%), BEL (80%). Only 2 picks qualify above 78% threshold.
+
+### Key Exclusions Today:
+- INOXWIND: SUZLON Q4 PAT -6% = peer-results trigger says SKIP. Own results May 29 = binary risk. EXCLUDED.
+- HINDOILEXP: WTI $91.83 + B-80 dispute ongoing + SEBI warning. YELLOW ALERT. Close if deal signed.
+- ONGC: Q4 results today = binary risk + WTI headwind + 0/3 historical. EXCLUDED.
+- APOLLOMICRO: RSI likely 75-82+. Iran peace reducing defense catalysts. PE 118. EXCLUDED.
+- KPIL: Confidence exactly 78% = NOT strictly > 78%. EXCLUDED per threshold rule.
+
+### WAAREEENER Analysis:
+- FII accumulation: 0.70% (Mar 25) -> 7.06% (Mar 26) = 10x = Pattern G MAXIMUM
+- Q4 FY26: Revenue +64%, Profit +111% = exceptional earnings beat
+- Rule 26a base confirmed: 4 days sideways Rs 3,054-3,080 then +3.19% breakout today
+- RSI: Estimated 45-55 (recovering from extreme oversold 20.5 on May 18)
+- US-China solar structural tailwind independent of oil price
+- Entry: Rs 3,080 | Target: Rs 3,400 | Stop: Rs 2,900 | Exit: Jun 4-9
+
+### BEL Analysis:
+- Q4 FY26: Revenue +41.72%, PAT +41.01% = strong earnings beat
+- FII 19.50% = highest institutional holding in pipeline
+- Rs 608 Cr fresh orders since May 5
+- v2 rules: DROP RULE informational only. Historical T+2 losses in different framework.
+- Peacetime defense (multi-domain): communication, avionics, medical, radar, jammers
+- Iran peace: -5 confidence (reduced war premium) but non-war segments intact
+- Entry: Rs 423 | Target: Rs 460 | Stop: Rs 408 | Exit: Jun 2-5
+
+### IRAN DEAL WATCHRULE STATUS:
+NOT triggered (deal not officially signed). Fresh US military strikes = war still active.
+But WTI $91.83 = YELLOW ALERT. If WTI drops below $88 or deal signed: CLOSE HINDOILEXP immediately.
+
+### Open Positions (May 22 batch):
+- SUZLON (Rs 53.25): Rs 53.97 = +1.35%. EXIT by May 27-28. Q4 PAT missed. Nuvama downgrade. Take profits.
+- WAAREEENER (Rs 3,054): Rs 3,080 = +0.84%. HOLD. Exit window Jun 1-4.
+- HINDOILEXP (Rs 168): Rs 166 = -1.19%. YELLOW ALERT. Consider early exit if WTI drops below $88 or deal signed.
+
+### NEW PATTERNS / RULES (v2, May 26):
+
+#### IRAN DEAL YELLOW ALERT RULE (extended)
+When WTI drops >4% in one day AND reason is Iran deal/Hormuz reopening:
+1. SUSPEND Pattern I immediately (E&P and defense war premium plays)
+2. REDUCE E&P confidence by 20 points
+3. CLOSE existing E&P swing positions if deal officially confirmed
+4. WATCH OMC refiners for BUY signal (inverse of E&P — Pattern Q fully activated)
+WTI $91.83 = Pattern Q now valid: If WTI stays below $95 for 3+ days = BPCL/HPCL/IOC become BUY candidates.
+
+#### PATTERN Q ACTIVATION (updated)
+Now fully triggered: WTI $91.83 < $95 for first time in weeks.
+OMC refiners (BPCL, HPCL, IOC, MRPL): marketing margins EXPANDING at $91 oil.
+Petrol still ~Rs 99/litre Delhi = OMC marketing spread has recovered.
+Next run: check BPCL/HPCL/IOC RSI and add to candidate pool.
+
+#### BLUEJET HEALTHCARE NOTE (new)
+BLUEJET +7.24% on Q4 EBITDA beat. Pattern P (earnings beat gap-up) confirmed again.
+Healthcare specialty companies with PE < 40 AND EBITDA margin expanding = add to universe.
+Next run: scan BLUEJET, YATHARTH (despite -7% today), other specialty healthcare stocks.
+BLUEJET specific: wait for RSI pullback to 50-60 range (currently may be 65-70 post +7%).
+
+#### SUZLON PAT MISS LESSON
+SUZLON Q4: Revenue +45% but PAT -6% = "revenue growth ≠ earnings growth."
+In capital-intensive wind energy, rising costs (turbine materials, land, labor) can absorb revenue gains.
+Rule: For pre-results plays, check BOTH revenue AND PAT trajectory of the company, not just sector leader.
+SUZLON WATCH: Exit window May 27-28. Target Rs 55 (Nuvama downgrade). Take profits, do not hold for higher.
+
+### Leaderboard Update (as of May 26):
+- HINDOILEXP: 63% historical win rate. YELLOW ALERT status. Not a fresh buy.
+- PIIND: 75% historical win rate. Wait for Q1 FY27 recovery signal.
+- HAL: 100% (2/2). Watchlist for next dip RSI 42-55.
+- GRSE: 100% (1/1). Watch for next entry.
+- MAZDOCK: 25%. Avoid unless strong Pattern D signal.
+- BEL: 0/4 T+2 historical BUT v2 rules = informational. Today's fundamental case is strong.
+- INOXWIND: 40% (2/5 T+2). Entry conditional on SUZLON positive results.
+- ONGC: 0/3. Avoid.
+- BHEL: 0/4. Avoid unless structural catalyst.
+- PERSISTENT: PERMANENT EXCLUDE.
+- CGPOWER: PERMANENT EXCLUDE.
+
+---
+
+# Pattern Notes — Updated 2026-05-25 (Run 14 — Iran deal macro shift)
+
+---
+
+## Run 14: 2026-05-25 (Sunday) — 1 pick only: INOXWIND (85%)
+
+### Macro Backdrop May 25
+- WTI Crude: $96.60 (+0.26%) — declining from $103 peak. Iran deal "final stages".
+  Strait of Hormuz partially reopening (3 supertankers with 6M barrels exited).
+- Gold: $4,523 (-0.42%) — no gold caution signal.
+- S&P 500: 7,473 (+0.37%), NASDAQ: 26,344 (+0.19%) — US positive, no caution.
+- Nifty 50: 23,932 (+0.90%) — broad India positive.
+- VIX: 16.7 (falling sharply from ~31 peak) — risk-on environment.
+- SUZLON Q4 FY26 results announced today May 25 (results not yet available at run time).
+- STLTECH +5% at record high: $1.11B hyperscaler supply agreement through Mar 2029.
+- EICHER MOTORS +4.93%: Q4 FY26 PAT Rs 5,515 Cr + brokerage 29% upside.
+- Nifty Auto +0.12% (fuel hike caution), Nifty IT +0.06% (AI risk ongoing).
+
+### Pick: INOXWIND (85%)
+- Only stock clearing >78% threshold today.
+- Rationale: SUZLON Q4 = sector catalyst (Pattern A max). INOXWIND FII 14.61%.
+  Board meeting May 29 = pre-results positioning (T+4 from entry).
+- Entry condition: SUZLON Q4 results must be positive (PAT growth + guidance).
+- Entry: Rs 97.00 | Target: Rs 104.00 | Stop: Rs 91.50
+- Exit window: Jun 2-4 (T+6-T+8 swing)
+
+### Excluded Today (key exclusions):
+- STLTECH: PE 475, negative 3yr ROE, news priced in (+5% on news day). WATCHLIST.
+- EICHER: Already +5% on results day. RSI 72-75. Fuel hike headwind. WATCHLIST.
+- All defense (HAL/BEL/MAZDOCK/GRSE): Iran deal = war premium collapse risk (-15 conf).
+- ONGC: Exit today (T+2 from May 21 batch). 0/3 history. Iran deal = direct headwind.
+- HINDOILEXP/SUZLON/WAAREEENER: Already held from May 22 batch. No pyramiding.
+
+### NEW PATTERNS / RULES (v2, May 25):
+
+#### PATTERN O — Data Center AI Infrastructure (NEW)
+Indian infrastructure companies winning multi-year hyperscaler supply agreements
+(AWS, Azure, Google, Meta, Microsoft) = high-conviction medium-term catalyst.
+First confirmed instance: STLTECH $1.11B contract through Mar 2029 = +5% in 1 day.
+62% analyst target hike.
+KEY RULE: Entry must be BEFORE news OR within 1 session of news (RSI < 70).
+After-news entry (RSI 75+) = news_priced_in = wait for pullback to RSI 60-65.
+Next candidates to watch: HFCL, STLTECH, TEJAS NETWORKS (optical fiber / data center infra).
+Fundamental screen for Pattern O: revenue growing YoY (not shrinking) + debt manageable.
+
+#### PATTERN P (Q4 RESULTS GAP-UP — re-confirmed)
+Strong Q4 results + analyst upgrade = typically +3-8% gap-up next session.
+EICHER: PAT Rs 5,515Cr + 29% upside = +4.93%. SUZLON: results today, +1.64% pre-open.
+Optimal entry: PRE-RESULTS when fundamentals indicate a beat.
+Post-results entry (after gap-up): only valid if RSI < 65 and stock has not exceeded
+all analyst targets yet. Otherwise = partial pricing-in.
+
+#### IRAN DEAL WATCHRULE (NEW — critical for E&P positions)
+"When Iran deal officially signed (confirmed official announcement from both Iran and US
+governments): CLOSE HINDOILEXP immediately regardless of current P&L or stop.
+Do not wait for the stop to trigger. The upstream E&P thesis changes fundamentally."
+Rationale: A signed Iran deal = Hormuz open = oil supply surge = WTI drops to $80-88
+= HINDOILEXP revenue falls sharply (B-80 dispute + reduced oil price = double hit).
+Current status: Deal "in final stages" per Trump but sticking points remain. HOLD.
+When confirmed: EXIT immediately.
+
+#### PEER RESULTS AS BINARY ENTRY TRIGGER (NEW RULE)
+For duopoly pairs (SUZLON/INOXWIND, HAL/DATAPATTERNS, OILINDIA/HINDOILEXP):
+Leader's earnings announcement = binary trigger for lagging peer entry.
+- Leader beats estimates (PAT growth + positive guidance): ENTER PEER at open next day.
+- Leader misses estimates (PAT decline or guidance cut): SKIP PEER entirely.
+This formalizes what was an informal check into a structured rule.
+First formal application: INOXWIND conditioned on SUZLON Q4 FY26 results (May 25).
+
+### Open Positions Status (May 25 end-of-day):
+- SUZLON (entry Rs 53.25 May 22): Rs 54.60 = +2.53%. Hold to May 28 (T+4).
+- WAAREEENER (entry Rs 3,054 May 22): Rs 2,980 = -2.43%. Hold, stop Rs 2,900. Jun 2-5.
+- HINDOILEXP (entry Rs 168 May 22): Rs 166 = -1.19%. Mental stop Rs 162 (Iran deal).
+- ONGC (entry Rs 296.45 May 21): Rs 286 = -3.53%. CLOSING TODAY at T+2.
+- INOXWIND (entry Rs 96.56 May 21): Rs 96.70 = +0.14%. CLOSING TODAY at T+2.
+
+### Leaderboard Update (as of May 25):
+All confirmed closed batches:
+- HINDOILEXP: 3/3 = 100% WR, avg +5.2% — BEST STOCK in pipeline (when clear of dispute)
+- PIIND:       2/2 = 100% WR, avg +1.8% — excluded until Q1 FY27 revenue recovers
+- BEL:         1/2 = 50% WR — DROP RULE still active (0/4 full history)
+- MAZDOCK:     0/2 = 0% — CAUTION; Iran deal makes it worse
+- BHEL:        0/2 = 0% — AVOID
+- PERSISTENT:  0/1 = 0% — PERMANENT EXCLUDE (0/7 extended history)
+- WAAREEENER:  OPEN (May 22 batch); T+2 era showed 0/2 but swing thesis not yet tested
+- INOXWIND:    OPEN (multiple batches open or partially confirmed); T+2 era showed 1/4
+- SUZLON:      OPEN (first recommendation May 22); +2.53% currently
+
+---
+
 # Pattern Notes — Updated 2026-05-22 (v2 RELAXED RULES + Rule 26 CHART CONFIRMATION)
 
 ---
@@ -1279,4 +2106,78 @@ fundamentals during geopolitical-theme peaks. They are HIGH BETA plays that ampl
 both the upside and the correction. The correct entry is AFTER the peak excitement fades
 and RSI normalizes -- NOT at RSI 75+ when the news is hottest.
 PARAS precedent (May 12): entered at Rs862 near peak -> stop hit -4.97%. Same risk here.
+
+---
+
+## 2026-05-27 RUN #17 OBSERVATIONS (New Patterns + Watchlist + Sector Rotation Notes)
+
+### MACRO SHIFT: War Premium Collapse (Iran Deal Imminent)
+- WTI crude fell to $91.08 (-2.99%) on May 27, Day 3 below $95
+- Iran-USA deal reported "imminent" -- Hormuz naval risk pricing out
+- CONSEQUENCE: Defense/E&P/war-premium stocks (HAL, MAZDOCK, HINDOILEXP, BEL, ONGC) lost their primary thesis catalyst. DO NOT re-enter on old war-thesis. Wait for fresh catalyst.
+- SECTOR ROTATION: Institutional money rotating from defense/E&P into metals (aluminum), auto components, and non-war infrastructure capex.
+
+### NATIONALUM (NALCO) — Aluminum Commodity Play Confirmed
+- Aluminum at 4-year high (LME) due to smelter curtailments in China and Europe
+- NATIONALUM is India's primary listed pure-play aluminum producer
+- Pattern: commodity spike + near-52w-high breakout + RSI in healthy zone (54.2) = Pattern F + H combination
+- Confidence: 91%. Entry: Rs 433.50. Target: Rs 465. Stop: Rs 411.
+- Lesson: When a specific commodity spikes to multi-year highs, immediately look for the dominant Indian listed producer. NATIONALUM is to aluminum as HINDOILEXP is to oil upstream.
+- Other aluminum names to watch in future runs: HINDALCO (large cap, less beta), VEDL (diversified, less pure-play)
+
+### KEC INTERNATIONAL — RSI Recovery from Extreme Oversold
+- KEC had been in a painful correction (RSI touched ~28-30 region = extreme oversold for a quality infrastructure stock)
+- 6-session base formation with no new lows = Rule 26a cleared (not a falling knife)
+- RSI at 42.1 at entry = early recovery, significant room before overbought territory
+- Pattern: Pattern C (RSI recovery from extreme oversold) + Power T&D capex tailwind (NITI Aayog Rs 1,100 Cr transmission additions projection)
+- Confidence: 84%. Entry: Rs 501. Target: Rs 548. Stop: Rs 462.
+- LESSON: After extreme oversold conditions in a quality mid-cap (not a broken company), the RSI recovery trade is one of the highest-probability setups. KEC has strong fundamentals (order book, revenue growth). The "strong stock dip" pattern (Pattern D) is validated here for infra names, not just defense.
+
+### ASAHIINDIA GLASS — MA200 Retest/Breakout + Auto Sector Tailwind
+- Asahi India Glass (ASAHIINDIA): leading OEM auto glass supplier, duopoly-like position in India
+- Testing MA200 from below with accumulation (above-average volume on green days, below-average on red days)
+- Pattern: MA200 retest from below = institutional distribution zone or reversal zone. When accompanied by accumulation volume profile, it is a reversal.
+- Auto sector tailwind: passenger vehicle sales strong, FY27 models launching (summer = launch season)
+- RSI 48.6 = neutral, approaching strength zone. Room to run to 60+ before overbought.
+- Confidence: 83%. Entry: Rs 907.80. Target: Rs 965. Stop: Rs 874.
+- NEW PATTERN NOTE: Add "MA200 Retest with Accumulation" as a named sub-pattern under Pattern D (institutional dip recovery). When a fundamentally sound stock retests its 200-day MA from below with: (1) below-avg volume on red days, (2) above-avg volume on green days, (3) RSI 40-55 -- this is an institutional accumulation zone. High-conviction entry.
+
+### BHARATRAS — Near-Miss (Confidence 77%, Threshold 78%)
+- Agrochemical stock, Pattern L (Trump-Xi trade truce reduces tariff headwind on agrochem inputs)
+- BUT: gained +6.2% on May 27 on 5.56x volume = news_priced_in penalty applied (-10 confidence) -> dropped to 77%
+- WATCHLIST: If May 29 opens flat/down and RSI pulls from ~65 back to 60-62, entry at Rs 1,480-1,500 may reach 80%+ confidence
+- KEY LESSON: When a stock surges >5% on high volume the same day as the pipeline run, apply "news priced in" discount. The right play is to wait for a 1-2 day pullback/consolidation before entering. This is particularly true for agrochem/export names where the catalyst is macro (trade policy) rather than company-specific.
+
+### GOCOLORS — High-Volume Spike Near 52-Week Low (Add to Future Scan)
+- Consumer fashion brand. Hit near 52-week low with a 7.35x volume spike on May 27.
+- Extreme volume at lows = potential capitulation bottom or institutional accumulation
+- NOT entered this run (insufficient data for RSI/MA analysis at time of screening)
+- PATTERN TO WATCH: When a consumer brand with strong fundamentals records >5x volume at/near 52-week low, this often marks institutional positioning. Add GOCOLORS to scan universe for next run.
+- Monitor: check if RSI crosses above 35 from below 30 (Pattern C trigger for consumer fashion)
+
+### UNIPARTS INDIA — Institutional Block Purchase Signal
+- 12.18x volume spike on May 26 setting a new 52-week high (Rs 613)
+- RSI 75.5 at time of detection = too late to enter per RSI ceiling rule
+- CORRECT APPROACH: Flag when volume spike occurs at or near new highs. Wait for pullback to RSI 62-65. If RSI comes back to that zone with normal volume, this is a valid entry.
+- Add UNIPARTS to watchlist: entry target Rs 570-580 (pullback zone) if RSI normalizes to 62-65
+
+### SANSERA ENGINEERING — Earnings + Auto Component Miss
+- Q4 results released. Auto component play = Pattern P (earnings catalyst).
+- RSI 76.4 at time of detection = above RSI ceiling recommendation zone. Too late.
+- LESSON: For earnings catalyst plays, the entry must come BEFORE or ON the earnings date, not after the price has already moved. Set up a pre-earnings scan to catch these earlier.
+- Add SANSERA to next-run monitoring: if RSI pulls back to 58-62, evaluate for auto sector tailwind entry.
+
+### RULE APPLICATION SUMMARY — Run #17 Hard Excludes
+1. BEL: Rule 26d (active downtrend confirmed) + Rule 26e (low volatility). WATCHLIST: >Rs 436 on vol >= 1.5x avg.
+2. BPCL: Rule 26d (staircase downtrend) + Rule 26e (low volatility). WATCHLIST: >Rs 332 or 2-3 weeks sideways.
+3. NTPCGREEN: Insufficient base formation confirmation. WATCHLIST only.
+4. INOXWIND: 1-year return -47.38% = Rule 26d confirmed active downtrend. DO NOT ENTER until trend reversal with higher lows visible over 4+ weeks.
+5. MAZDOCK: War premium collapsing. Primary thesis (Iran naval risk) removed.
+6. HAL: War premium collapsing. Wait for fresh defense catalyst (MoD order, India-Pakistan event).
+7. HINDOILEXP: WTI at $91 and falling toward $85-90. E&P thesis broken.
+
+### SECTOR ROTATION MAP — Post-Iran-Deal World
+- EXIT thesis: Defense stocks (HAL, MAZDOCK, BEL, PARAS), E&P stocks (HINDOILEXP, ONGC, OILINDIA)
+- ENTER thesis: Metals (NATIONALUM, HINDALCO), Auto components (ASAHIINDIA, SANSERA on pullback), Infrastructure capex (KEC, KECINTL, BHEL on recovery), Consumer brands (GOCOLORS on capitulation bottom)
+- NEUTRAL/WATCH: Renewable energy (WAAREEENER, NTPCGREEN -- wait for base formation), Agrochemicals (BHARATRAS, PIIND -- wait for pullback after news-priced-in move)
 

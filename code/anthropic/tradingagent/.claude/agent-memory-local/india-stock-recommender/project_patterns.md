@@ -1,24 +1,110 @@
 ---
 name: Indian Market Patterns - Observations and Duopoly Pairs
-description: Technical patterns applied, known duopoly pairs, accuracy observations from 13 pipeline runs (updated May 22, 2026)
+description: Technical patterns applied, known duopoly pairs, accuracy observations from 17 pipeline runs (updated May 27, 2026)
 type: project
 ---
 
-## Confirmed Indian Market Duopoly / Sector Pairs (Updated May 22, 2026)
-- Oil Refining PSU: MRPL / CPCL -- AVOID when WTI > $95 AND retail price NOT raised. If petrol hike confirmed (Pattern Q), OMCs become BUY.
-- Defense Electronics: BEL / HAL / small-cap lags: DATAPATTERNS, APOLLOMICRO, PARAS
-- Naval Defense: MAZDOCK / COCHINSHIP / GRSE -- all three down simultaneously = Pattern P (maximum signal)
-- Railway Construction: RVNL / IRCON -- SKIP, both showing revenue declines
-- Wind Energy: Suzlon / INOXWIND -- only enter INOXWIND when SUZLON is +0.3%+ same day
-- Depository: CDSL / NSDL
-- Power Equipment T&D: BHEL / KEC International / CG Power (rotation chain)
-- Railway Finance: IRFC (near-monopoly)
-- Solar: Waaree Energies / Premier Energies -- WAAREEENER FII 10x accumulation (0.70% to 7.06%)
-- Upstream E&P: OILINDIA (large-cap) / ONGC (large-cap substitute) / HINDOILEXP (small-cap lag)
-- IT Mid-Cap: PERSISTENT permanently excluded; COFORGE / MPHASIS peers watchlist only
-- Agrochemicals: PIIND / RALLIS / AARTIIND (PI Industries = quality leader; exclude when earnings approaching on declining trajectory)
+## Run 17 Key Updates (May 27, 2026 — Second Run):
+- Run 16 (BPCL/BEL/NTPCGREEN) RETROACTIVELY INVALIDATED same day by user chart review.
+  Rule 26d (Active Downtrend) added. Both BPCL and BEL are in active downtrends.
+  BPCL "cup-and-handle" was a downtrend channel (right rim -22% below left rim).
+  BEL "ATH-correction-recovery cycle" was false (V-bounce then pullback, still below all prior highs).
+- Rule 26e (Volatility Floor) confirmed as gating criterion: BEL/BPCL failed because 1yr return ~3-5%.
+- WTI at $91.08 = Iran deal imminent. War premium collapsing. SECTOR ROTATION triggered:
+  OUT: Defense (HAL, MAZDOCK, BEL, PARAS), E&P (HINDOILEXP, ONGC)
+  IN: Metals (NATIONALUM), Auto components (ASAHIINDIA), Infrastructure capex (KEC)
+- Run 17 picks: NATIONALUM (91%), KEC (84%), ASAHIINDIA (83%). Entry May 29 (NSE holiday May 28).
+- NSE HOLIDAY: May 28, 2026 = Bakri Eid/Eid al-Adha. Next trading day: May 29.
+- BHARATRAS near-miss (77%) -- news_priced_in penalty after +6.2% on 5.56x volume same day.
+- NEW PATTERN: "MA200 Retest with Accumulation" added as sub-pattern under Pattern D.
+  Signal: fundamentally sound stock testing MA200 from below with below-avg volume on red days,
+  above-avg volume on green days, RSI 40-55. = institutional accumulation zone. High conviction.
+- NEW OBSERVATION: GOCOLORS 7.35x volume spike at 52w low = capitulation bottom signal. Add to scan.
+- NEW OBSERVATION: UNIPARTS 12.18x volume at 52w high (May 26) = institutional block purchase.
+  Entry signal: wait for RSI pullback to 62-65 (currently 75.5 = overbought).
 
-## Pattern Accuracy (13 Runs, Updated May 22, 2026)
+### New Rules (Run 17):
+34. NEWS_PRICED_IN PENALTY: When a stock surges >5% on >3x volume on the same day as pipeline run,
+    apply -10 confidence penalty (news already priced in). Correct strategy: wait 1-2 sessions for
+    pullback/consolidation before entering. Applied: BHARATRAS dropped from 87% to 77%.
+35. SECTOR ROTATION TRIGGER — IRAN DEAL: When WTI falls to $85-95 range AND Iran deal reported
+    "imminent", immediately rotate OUT of defense/E&P into: metals (aluminum primary), auto
+    components, non-war infra capex (power T&D, roads, rails). Do not re-enter defense until
+    fresh MoD order or geopolitical catalyst.
+36. ALUMINUM PLAY PATTERN: When LME aluminum hits multi-year high, primary Indian play is
+    NATIONALUM (NALCO) = pure-play aluminum producer. Secondary: HINDALCO (diversified,
+    less beta). Treat like HINDOILEXP for oil -- the dominant domestic producer of the commodity.
+37. MA200 RETEST ACCUMULATION (sub-pattern of D): When RSI 40-55 + below-avg vol on red days +
+    above-avg vol on green days + price approaching MA200 from below = high-conviction reversal.
+    First application: ASAHIINDIA May 27 2026. Confidence contribution: +10.
+
+## Run 16 Key Updates (May 27, 2026 — INVALIDATED):
+- WTI $92.17 (-1.84%) = Pattern Q FIRST LIVE ACTIVATION. Day 2 below $95. BPCL picked.
+- NEW PATTERN W: Cup and Handle (weekly) + Wyckoff accumulation = high conviction entry.
+  BPCL cup: Rs 391 (Feb 2026) -> Rs 266 (low) -> Rs 304 (current, handle phase).
+  NOTE: BPCL cup INVALIDATED -- right rim at Rs 304 is 22% below left rim at Rs 391 = NOT a cup.
+- NEW RULE: Wind sector -- if BOTH peers have 1-yr negative returns, reduce Pattern A by -15.
+  SUZLON 1yr -13.13%, INOXWIND 1yr -47.38%. Pattern A trigger still fired (SUZLON +1.23%) but
+  overridden by structural downtrend. INOXWIND excluded.
+- FIRSTCRY: Q4 standalone PAT +Rs 31.64 Cr (profitable). But consolidated FY26 net loss Rs 2B.
+  LPI rule updated: Always check CONSOLIDATED PAT. Standalone alone is insufficient.
+  Stock -4.34% on results = market reading consolidated. Rule updated.
+- ATHERENERG: 1-year return +207%. Pattern S works best in 1-year uptrends. New +10 boost rule.
+- BEL: INVALIDATED -- 1-year ATH-correction-recovery cycle claim was FALSE. Rule 26d added.
+- HINDOILEXP: CLOSE ALERT issued. Support Rs 162-165 broken. Revenue -37% YoY. Approaching stop.
+- Run 16 picks: BEL (84%), BPCL (82%), NTPCGREEN (80%) -- ALL INVALID (Rule 26d/26e).
+
+### New Rules (Run 16):
+30. WIND SECTOR STRUCTURAL OVERRIDE: If both peers in a duopoly have 1-year negative returns, reduce Pattern A confidence by 15 points (net result: duopoly trigger may be overridden if combined score drops below 78%).
+31. LPI CONSOLIDATED RULE: Always use CONSOLIDATED PAT (not standalone) for LPI sub-pattern qualification. Standalone profitable + consolidated loss = partial LPI (+3 max, not +8).
+32. PATTERN W (Cup and Handle + Wyckoff): Weekly cup-and-handle with Wyckoff accumulation = Pattern W. Entry at handle phase. Breakout = add. Target = depth of cup added to breakout. CAUTION: Verify left rim height vs right rim. Right rim must be within 5% of left rim. More than 10% gap = downtrend channel, not cup.
+33. PATTERN S 1-YEAR TREND BOOST: If Pattern S stock has 1-year return >0% = add +10 confidence. If 1-year return negative = subtract 10 (downtrend caution). Applied retroactively: SWIGGY 1yr -21.55% would score 70-65 (below threshold). ATHERENERG 1yr +207% would score 92+ (strong).
+
+## Run 15 Key Updates (May 26, 2026):
+- WTI $91.83 (-4.94%) = Pattern I SUSPENDED. Iran deal optimism + Hormuz reopening.
+- SUZLON Q4: Revenue +45% but PAT -6% YoY. PEER TRIGGER: INOXWIND SKIP (PAT negative).
+- WAAREEENER: Q4 Revenue +64%, Profit +111%. Entry Rs 3,080. Confidence 84%.
+- BEL: Q4 PAT +41%. FII 19.5%. Entry Rs 423. Confidence 80%. v2 DROP RULE informational.
+- NEW: IRAN DEAL YELLOW ALERT RULE (WTI -4% in one session = suspend E&P)
+- NEW: Pattern Q ACTIVATED (WTI < $95 = OMC refiners = BUY candidates)
+- NEW: BLUEJET and healthcare specialty added to universe watchlist (Pattern P)
+- NEW Rule 26: SUZLON exit by May 27-28 (Q4 PAT miss + Nuvama downgrade)
+- HINDOILEXP: YELLOW ALERT (WTI $91.83 + B-80 unresolved + SEBI warning)
+- Open May 22 swing batch: SUZLON +1.35%, WAAREEENER +0.84%, HINDOILEXP -1.19%
+
+### New Rules (Run 15):
+26. IRAN DEAL YELLOW ALERT: WTI drops >4% in single session on peace optimism = SUSPEND Pattern I, reduce all E&P confidence -20, activate Pattern Q
+27. SUZLON PAT RULE: INOXWIND peer entry requires SUZLON showing POSITIVE PAT growth (not just revenue growth). Revenue alone is insufficient.
+28. OMC PATTERN Q ACTIVATION: WTI < $95 sustained 3+ days = BPCL/HPCL/IOC = BUY candidates. Add to next screener run.
+29. HEALTHCARE UNIVERSE EXPANSION: Specialty pharma/healthcare with PE < 40 + EBITDA expanding = Pattern P candidates. BLUEJET added to watchlist.
+
+## Confirmed Indian Market Duopoly / Sector Pairs (Updated May 27, 2026)
+- Oil Refining PSU: MRPL / CPCL -- AVOID when WTI > $95 AND retail price NOT raised. If petrol hike confirmed (Pattern Q), OMCs become BUY.
+- Defense Electronics: BEL / HAL / small-cap lags: DATAPATTERNS, APOLLOMICRO, PARAS -- CAUTION: defense thesis weakened post-Iran deal. Wait for fresh MoD order.
+- Naval Defense: MAZDOCK / COCHINSHIP / GRSE -- all three down simultaneously = Pattern P (maximum signal). WAR PREMIUM COLLAPSING -- wait for next geopolitical event.
+- Railway Construction: RVNL / IRCON -- SKIP, both showing revenue declines
+- Wind Energy: Suzlon / INOXWIND -- only enter INOXWIND when SUZLON is +0.3%+ same day. INOXWIND 1yr -47.38% = Rule 26d active downtrend. DO NOT ENTER until higher lows confirmed over 4+ weeks.
+- Depository: CDSL / NSDL
+- Power Equipment T&D: BHEL / KEC International / CG Power (rotation chain). KEC oversold RSI recovery play active (Run 17).
+- Railway Finance: IRFC (near-monopoly)
+- Solar: Waaree Energies / Premier Energies -- WAAREEENER FII 10x accumulation (0.70% to 7.06%). Wait for base formation.
+- Upstream E&P: OILINDIA (large-cap) / ONGC (large-cap substitute) / HINDOILEXP (small-cap lag) -- ALL SUSPENDED post-Iran deal. WTI approaching $85-90.
+- IT Mid-Cap: PERSISTENT permanently excluded; COFORGE / MPHASIS peers watchlist only
+- Agrochemicals: PIIND / RALLIS / AARTIIND / BHARATRAS -- BHARATRAS active (news priced in May 27; wait for pullback to Rs 1480-1500)
+- Aluminum: NATIONALUM (NALCO) primary play / HINDALCO secondary -- Run 17 active pick at Rs 433.50.
+- Auto Components: ASAHIINDIA (glass OEM, duopoly-like) / SANSERA (precision components) -- Run 17: ASAHIINDIA active at Rs 907.80. SANSERA RSI 76.4 = wait for pullback.
+
+## Pattern Accuracy (17 Runs, Updated May 27, 2026)
+
+### Run 17 (May 27, 2026 — second run, entry May 29): NATIONALUM (91%), KEC (84%), ASAHIINDIA (83%)
+War premium collapsed (Iran deal). Fresh sector rotation picks. Rule 26d/26e excluded BEL/BPCL/NTPCGREEN.
+BHARATRAS near-miss (77%) -- news_priced_in penalty. GOCOLORS/UNIPARTS added to watchlist.
+Exit windows: Jun 2-6 (NSE closed May 28 Bakri Eid; entry May 29).
+
+### Run 16 (May 27, 2026 — INVALIDATED same day): BEL (84%), BPCL (82%), NTPCGREEN (80%)
+User chart review found both BEL and BPCL in active downtrends. Rule 26d added. All 3 picks marked INVALID.
+Key lesson: Fundamental narrative (BEL Q4 +41%, BPCL PE 5.68) does NOT override chart structure.
+Chart must confirm thesis BEFORE entry. This is Rule 26d.
 
 ### Run 13 (May 22, 2026): INOXWIND (87%), WAAREEENER (80%) -- 2 picks
 Suzlon 195 MW repeat order from Sunsure = confirmed news catalyst for INOXWIND Pattern A.
@@ -63,25 +149,28 @@ Lesson: PE < 15 = maximum protection. HINDOILEXP PE 10 = only consistent winner.
 ### Run 1 (May 8, 2026): IRCON, BHEL, INOXWIND, HAL, KPTL
 +4.3% batch (excluding data anomaly). HAL +13.2% = star. Defense at war onset.
 
-## Stock Leaderboard (All Runs, Updated May 22, 2026)
+## Stock Leaderboard (All Runs, Updated May 27, 2026)
 
   Stock        | Appearances | Wins | Win Rate | Avg Return | Status
   -------------+-------------+------+----------+------------+------------------
-  HAL          |     3       |  3   |  100%    |  +6.01%    | HIGHEST PERFORMER -- re-enter every dip RSI 42-55
-  HINDOILEXP   |     8       |  5   |   63%    |  +2.8%     | CORE PICK (B-80 dispute STRIKE active)
-  PIIND        |     4       |  3   |   75%    |  +0.9%     | Re-enter when revenue recovers Q1 FY27 + no earnings within 5 days
-  GRSE         |     1       |  1   |  100%    |  +1.9%     | PROMISING but Elara Capital Sell target caution
-  MAZDOCK      |     6       |  2   |   33%    |  -0.7%     | CAUTION -- 33% leaderboard fatigue rule
-  BEL          |     4       |  0   |    0%    |  -1.9%     | DROP RULE ACTIVE (0/4)
-  INOXWIND     |     4       |  1   |   25%    |  -1.2%     | Entry condition (SUZLON +0.3%+) required
-  ONGC         |     3       |  0   |    0%    |  -1.5%     | ELEVATED PENALTY -15 points (was -10)
-  BHEL         |     3       |  0   |    0%    |  -2.9%     | AVOID unless PE < 40 + confirmed catalyst
-  WAAREEENER   |     2       |  0   |    0%    |  -2.9%     | FII thesis intact; T+2 framework not working yet
+  HAL          |     3       |  3   |  100%    |  +6.01%    | HIGHEST PERFORMER -- re-enter every dip RSI 42-55. SUSPENDED: post-Iran deal, wait for fresh catalyst.
+  HINDOILEXP   |     8       |  5   |   63%    |  +2.8%     | SUSPENDED: WTI falling to $85-90, thesis broken. Re-enter when WTI recovers above $95.
+  PIIND        |     4       |  3   |   75%    |  +0.9%     | Re-enter when revenue recovers Q1 FY27 + no earnings within 5 days. BHARATRAS is active peer now.
+  GRSE         |     1       |  1   |  100%    |  +1.9%     | PROMISING but Elara Capital Sell target caution. Suspended post-Iran deal.
+  MAZDOCK      |     6       |  2   |   33%    |  -0.7%     | SUSPENDED post-Iran deal. 33% leaderboard fatigue rule still active.
+  BEL          |     4       |  0   |    0%    |  -1.9%     | DROP RULE ACTIVE (0/4). HARD EXCLUDE until above Rs 436 on vol >= 1.5x avg.
+  INOXWIND     |     4       |  1   |   25%    |  -1.2%     | Entry condition (SUZLON +0.3%+) required. ALSO: Rule 26d active (1yr -47.38%). Do NOT enter.
+  ONGC         |     3       |  0   |    0%    |  -1.5%     | SUSPENDED post-Iran deal. ELEVATED PENALTY -15 points.
+  BHEL         |     3       |  0   |    0%    |  -2.9%     | AVOID unless PE < 40 + confirmed catalyst. KEC preferred in Power T&D space.
+  WAAREEENER   |     2       |  0   |    0%    |  -2.9%     | FII thesis intact; wait for base formation. No entry until RSI confirms recovery.
   PERSISTENT   |     5+      |  0   |    0%    |  -7.1%     | PERMANENT EXCLUDE
   CGPOWER      |     1       |  0   |    0%    |  -2.8%     | PERMANENT EXCLUDE
   APOLLOMICRO  |     0       |  0   |   N/A    |   N/A      | Watchlist -- RSI pullback to 60-75 + order confirmation
+  NATIONALUM   |     1 (new) |  ?   |   N/A    |   N/A      | NEW ENTRY -- Run 17. Aluminum commodity play at 4yr high.
+  KEC          |     1 (new) |  ?   |   N/A    |   N/A      | NEW ENTRY -- Run 17. RSI recovery from extreme oversold. Power T&D capex.
+  ASAHIINDIA   |     1 (new) |  ?   |   N/A    |   N/A      | NEW ENTRY -- Run 17. MA200 retest/breakout. Auto sector tailwind.
 
-## Pattern Library (Updated May 22, 2026)
+## Pattern Library (Updated May 27, 2026)
 
 ### Pattern A -- Duopoly / Sector Rotation Lag
 When one stock in pair rallies, peer catches up within 2-3 sessions.
