@@ -1,0 +1,493 @@
+================================================================================
+INDIA STOCK RECOMMENDATION PIPELINE — RUN #18
+Date: 2026-06-01 (Monday)
+Pipeline: Step 1 (REUSED) -> Step 1.5 -> Step 2 -> Step 2.5 -> Step 3 -> Step 4
+Basestock: Reused from 2026-05-27 (next_regeneration_due: 2026-06-01 — REGENERATION DUE,
+           but user instruction: reuse existing list for today's run)
+================================================================================
+
+
+╔═════════════════════════════════════════════════════════════╗
+║         MACRO TREND & DISRUPTION ALERT — 2026-06-01        ║
+╠═════════════════════════════════════════════════════════════╣
+║ MACRO SNAPSHOT                                              ║
+║  Nifty 50:    23,560  (+0.05%) — near flat, neutral        ║
+║  NIFTYIT:     29,962  (+3.03%) — MASSIVE IT/AI surge today ║
+║  WTI Crude:   $89.63  (+2.60%) — below $95, bouncing      ║
+║  Gold:         $4,544  (-0.36%) — no gold caution          ║
+║  Nifty 10d low: 23,378 (range 23,378-23,800)              ║
+╠═════════════════════════════════════════════════════════════╣
+║ HARD EXCLUDES (removed from all picks today)               ║
+║  X INOXWIND — Q4 FY26 earnings miss; -7% today on 1.84x   ║
+║    volume; Rule 26a (falling knife) + Rule 26d             ║
+║    (active downtrend: lower highs/lows). MOFSL retained    ║
+║    Buy but cut target. Do NOT enter.                       ║
+║  X JYOTICNC — RSI=2 (extreme distress), distribution vol  ║
+║    2.73x avg, -12% in 5 days; at 52w low; Rules 26a/26d  ║
+║  X KAYNES — RSI=26, -8.6% in 5d, active downtrend        ║
+║  X MCX — RSI=37, distribution vol 1.65x avg, -12% 5d;    ║
+║    progressive lower highs + lower lows (Rule 26d)        ║
+║  X SWIGGY — distribution volume 1.26x avg; no volume      ║
+║    trigger; near 52w low but no confirmation              ║
+║  X WAAREEENER — Rule 26e FAIL: only 8 days with >=3%      ║
+║    move in last 65 trading days (floor=11). Hard exclude. ║
+║    (RSI recovery is promising but volatility floor fails) ║
+╠═════════════════════════════════════════════════════════════╣
+║ CAUTION FLAGS (-15 confidence if picked)                   ║
+║  ! NATIONALUM — distribution volume 4.57x avg on down     ║
+║    days; extreme institutional selling signal (Rule 26b)  ║
+║  ! NETWEB — distribution volume 1.04x avg (borderline     ║
+║    26b); RSI 73; momentum but risk of reversal            ║
+║  ! NBCC — distribution 1.17x avg; RSI 67                  ║
+╠═════════════════════════════════════════════════════════════╣
+║ TAILWIND SIGNALS (+10 confidence applied to picks)         ║
+║  + HFCL — at 52w high; progressive higher highs/lows;     ║
+║    data center / optical fiber demand; no distribution    ║
+║  + LLOYDSME — near 52w high; RSI recovery from 42 to 58;  ║
+║    MACD above signal; metals sector rotation              ║
+║  + NIFTYIT +3.03% — AI/data center theme broadly bid;     ║
+║    HFCL directly benefits as optical fiber infra player   ║
+║  + WTI $89.63 — below $95 reduces OMC headwind; solar     ║
+║    urgency moderate                                        ║
+╠═════════════════════════════════════════════════════════════╣
+║ NEWS CATALYSTS (Step 1.5 force-add)                        ║
+║  INDIGO (IndiGo/InterGlobe Aviation) — +2.9% today to     ║
+║    Rs 4,537; strong airline momentum; 6.2L volume;         ║
+║    RSI 62 (healthy). Source: BusinessToday, 2026-06-01    ║
+║    NOTE: Large-cap (market cap >Rs 1.75 Lakh Cr) = outside ║
+║    our mid/small-cap universe. Placed on WATCHLIST.       ║
+║    Trigger: ATF duty cut OR government airline relief pkg  ║
+║    announcement = high-conviction entry above Rs 4,540    ║
+║  HFCL — At 52w high; Pattern O (hyperscaler fiber orders);║
+║    NIFTYIT +3% amplifies data center thesis               ║
+╠═════════════════════════════════════════════════════════════╣
+║ AIRLINE SECTOR STATUS (user-directed monitoring)           ║
+║  IndiGo (INDIGO): +2.9%, RSI 62.2, constructive trend    ║
+║  SpiceJet: NO DATA — possibly suspended/delisted on NSE   ║
+║  Government ATF relief: NO confirmed announcement today   ║
+║  If ATF duty cut announced: INDIGO becomes immediate BUY  ║
+║  Entry trigger on relief news: Rs 4,540-4,600 breakout    ║
+╠═════════════════════════════════════════════════════════════╣
+║ NEW STRUCTURAL RISK (saved to pattern_notes.md)            ║
+║  NIFTYIT +3% today — IT sector may be transitioning from  ║
+║  AI disruption victim to AI infrastructure beneficiary.   ║
+║  Optical fiber / data center hardware plays are distinct  ║
+║  from IT outsourcing (which remains at risk). Monitor:    ║
+║  if NIFTYIT >+2% for 2 consecutive sessions, IT caution  ║
+║  flag is lifted.                                          ║
+╚═════════════════════════════════════════════════════════════╝
+
+
+================================================================================
+FINAL RECOMMENDATIONS — 2026-06-01
+2 picks qualify above 78% confidence threshold (max 3 allowed)
+================================================================================
+
+TRADE PARAMETERS TABLE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Rank  Symbol     Entry       Target      Stop       Conf  Exit Window
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 1    HFCL      Rs 180.55   Rs 198.00  Rs 170.00   84%   Jun 5-10, 2026
+ 2    LLOYDSME  Rs 1,820.90 Rs 1,965.00 Rs 1,740.00 82%  Jun 5-9, 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Potential gain: HFCL +9.7%  |  LLOYDSME +7.9%
+Stop risk:      HFCL -5.8%  |  LLOYDSME -4.4%
+Risk/Reward:    HFCL 1.7:1  |  LLOYDSME 1.8:1
+Exit dates based on optimal holding window (T+4 to T+7). No NSE holidays in
+first two weeks of June 2026 per holiday schedule.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+================================================================================
+RANK 1: HFCL LIMITED (NSE: HFCL)
+Confidence: 84% | Optical Fiber & Telecom Equipment | Mid-cap
+================================================================================
+
+MOMENTUM SIGNALS (Heavily Weighted — User Instruction):
+  RSI (14d):     75.0  [v2 ceiling: >82 — VALID ENTRY at 75]
+  MACD:          Above signal line [bullish crossover sustained]
+  5d Return:    +10.9% [strong momentum]
+  10d Return:   +29.4% [explosive breakout]
+  Volume ratio:  0.35x avg [low today — consolidation, NOT distribution]
+  Distribution:  No — avg down-day vol = 0.97x avg [institutions NOT selling dips]
+  52w High:      Rs 189.08 [current Rs 180.55 = 4.5% below intraday high]
+  52w Low:       Rs 64.50 [+171% above low — multi-year breakout]
+  NIFTYIT today: +3.03% [DIRECT tailwind for fiber/data center stocks]
+
+SCREENING CHECKLIST:
+  [+] Mid/small cap universe: YES (market cap ~Rs 12,000 Cr estimate)
+  [+] Last close > Rs 20: Rs 180.55 PASS
+  [+] Avg daily turnover > Rs 1 Cr: Rs 55,547 Lakh (FY25 screener data) PASS
+  [+] Volatility floor (Rule 26e): 27 days with >=3% move in 65d; floor=11; PASS
+  [+] NOT in active downtrend (Rule 26d): Progressive higher highs/lows — PASS
+  [+] No distribution volume (Rule 26c/26b): 0.97x avg on down days — PASS
+  [+] No falling knife (Rule 26a): Uptrend, no sharp multi-day decline — PASS
+
+STEP 2.5 PRICE ACTION GATE:
+  [A] No Active Downtrend: 30-day highs Rs 128->155->189 (all rising) PASS
+  [B] Trend Change Confirmed: Progressive higher highs AND higher lows
+      confirmed across all three 10-day periods. Fresh 52w high territory. PASS
+  [C] No Distribution Volume: Avg down-day volume = 0.97x 20d avg (< 1x) PASS
+  [D] Volatility Floor: 27/65d days with >=3% move; proportional floor=11 PASS
+
+PATTERN MATCHES:
+  [+] Pattern O (Data Center AI Infrastructure): HFCL optical fiber cables
+      are the physical backbone of data centers. NIFTYIT +3% today confirms
+      hyperscaler/cloud CapEx theme is dominant. HFCL's BharatNet Phase III +
+      5G + data center fiber orders = structural 3-5 year demand.
+  [+] Pattern H (Momentum Breakout): Stock breaking above prior 52w high zone
+      (Rs 140-160 was prior ceiling, now Rs 189 = new zone). Volume was 1x avg
+      on breakout initiation (prior 5 sessions were 0.35-1.0x). Not a blow-off.
+  [+] Pattern F (Structural Sector Tailwind): AI infrastructure = data centers
+      = optical fiber demand = direct HFCL revenue. Not a speculative thesis —
+      actual contracts from hyperscalers flowing through fiber manufacturers.
+  [+] Pattern D (Institutional Strength): No distribution on dips. Down-day
+      volume consistently below average = institutions are NOT selling into
+      the rally. They are holding or adding.
+
+CONFIDENCE SCORE BUILD-UP:
+  Base:                              65
+  Pattern O (data center AI infra): +15
+  Pattern H (52w high breakout):    +10
+  NIFTYIT +3% tailwind today:        +8
+  No distribution volume:            +5
+  Progressive higher highs/lows:     +5
+  RSI 75 (valid per v2 rules):       -5 (caution, approaching ceiling edge)
+  Momentum risk (10d +29%):          -4 (some news possibly priced in)
+  ─────────────────────────────────────
+  TOTAL:                             84%
+
+VALIDATION:
+  Negative news (7d):    No — no SEBI, fraud, or management issues
+  Industry trend:        GROWING — 5G rollout, BharatNet Phase III, AI data centers
+  AI disruption risk:    FALSE — HFCL is a BENEFICIARY of AI (hardware infra)
+  US market caution:     NO — NIFTYIT +3% confirms tech positive backdrop
+  Gold caution:          NO — gold -0.36%
+  Final recommendation:  YES
+
+TRADE RATIONALE (Momentum Focus):
+  HFCL is in the single strongest momentum regime of any stock in our universe
+  today. The 10-day move of +29% is not random — it coincides with a structural
+  shift in India's digital infrastructure spending. The company manufactures
+  optical fiber cables and telecom equipment, which are physical prerequisites
+  for every AI data center, every 5G tower, and every BharatNet rural fiber
+  connection. NIFTYIT's +3.03% surge today (IT sector broadly bid on AI
+  infrastructure theme) is a direct tailwind for HFCL, unlike IT outsourcing
+  companies which face AI disruption risk.
+
+  Momentum signals are aligned: RSI 75 (strong but not overheated per v2 rules),
+  MACD above signal, no distribution volume, progressive higher highs/lows.
+  The stock is 4.5% below its intraday 52w high and consolidating — the pattern
+  suggests a brief pause before the next leg to Rs 195-198.
+
+  Exit strategy: Target Rs 198 (next clean resistance level above the Rs 189
+  52w high). Hold through Jun 5-10 window. Stop at Rs 170 (below MA5 Rs 174
+  and below the breakout zone) — a close below Rs 170 would indicate the
+  breakout has failed.
+
+10-day Price Sparkline (Rs 138 -> Rs 181):
+  138 - 139 - 142 - 148 - 163 - 162 - 174 - 174 - 180 - 181
+  Chart: . _ . - = = * # # #  [strong, consistent uptrend]
+
+
+================================================================================
+RANK 2: LLOYDS METALS AND ENERGY (NSE: LLOYDSME)
+Confidence: 82% | Iron Ore / Steel | Mid-cap
+================================================================================
+
+MOMENTUM SIGNALS (Heavily Weighted — User Instruction):
+  RSI (14d):     58.1  [IDEAL zone — room to run to 65-70]
+  RSI 5d ago:    41.9  [confirmed crossover from oversold to recovery]
+  MACD:          Above signal line [bullish crossover]
+  5d Return:    +4.8%
+  10d Return:    +5.0%
+  Volume ratio:  0.46x avg [today's volume low — normal after a run]
+  Distribution:  No — avg down-day vol = 0.95x avg [no institutional selling]
+  52w High:      Rs 1,888.60 [current = Rs 1,820.90 = 3.6% below 52w high]
+  52w Low:       Rs 1,119.90 [+62% above low — sustained uptrend]
+
+SCREENING CHECKLIST:
+  [+] Mid/small cap: YES (market cap ~Rs 19,000 Cr estimate — mid-cap)
+  [+] Last close > Rs 20: Rs 1,820.90 PASS
+  [+] Avg daily turnover > Rs 1 Cr: Rs 6,056 Lakh (from basestock.json) PASS
+  [+] Volatility floor: 16 days in 64d; floor=ceil(64/252*40)=11; PASS (16>11)
+  [+] No active downtrend (Rule 26d): Higher highs confirmed PASS
+  [+] No distribution: 0.95x avg on down days PASS
+  [+] No falling knife: Controlled recovery from dip PASS
+
+STEP 2.5 PRICE ACTION GATE:
+  [A] No Active Downtrend: 30-day high structure Rs 1785->1846->1888 (rising)
+      Dominant trend = upward. PASS
+  [B] Trend Change Confirmed: Price closed above prior swing high Rs 1858
+      (the 52w high was hit within last 10 sessions). PASS (Condition 1 of B)
+  [C] No Distribution Volume: Down-day avg vol = 0.95x 20d avg (< 1x) PASS
+  [D] Volatility Floor: 16/64d; floor = 11; PASS
+
+PATTERN MATCHES:
+  [+] Pattern D (Institutional Strength Dip): Stock was at RSI 42 five days
+      ago (was above RSI 50 for 30+ days before that, suggesting a strong
+      stock that dipped and is now recovering above RSI 45). Classic Pattern D
+      setup — institutional support confirmed by no distribution volume.
+  [+] Post-Iran-Deal Metals Rotation (Pattern from Run #17 notes): Pattern
+      notes document the sector rotation from defense/E&P INTO metals post
+      Iran-deal. LLOYDSME (iron ore + steel sponge) is a direct beneficiary.
+      Aluminum and iron ore both seeing structural demand from infra capex.
+  [+] Near 52w High Breakout Setup: At Rs 1,820 vs 52w high Rs 1,888 = 3.6%
+      gap. The stock has already made a new high within the last 30 days
+      (Rs 1,888 in the data). The current consolidation at Rs 1,820 is healthy
+      before the next move above Rs 1,888 toward Rs 1,965.
+  [+] MACD Above Signal: Momentum indicator confirming bullish bias.
+
+CONFIDENCE SCORE BUILD-UP:
+  Base:                                65
+  Pattern D (institutional dip):      +15
+  Near 52w high breakout approach:    +10
+  MACD above signal:                   +5
+  Metals sector rotation tailwind:     +8
+  RSI 58 (ideal entry zone):           +5
+  No distribution volume:              +4
+  Pattern D from RSI 42 to 58:         +5
+  Lower low in P3 period (warning):   -10
+  Sector cyclicality risk:             -5
+  ─────────────────────────────────────
+  TOTAL:                               82%
+
+VALIDATION:
+  Negative news (7d):    No — no SEBI, fraud, or issues known
+  Industry trend:        GROWING — iron ore demand from infra capex; steel cycle
+  AI disruption risk:    FALSE — metals company, not IT
+  US market caution:     NO — Nifty +0.05%
+  Gold caution:          NO — gold -0.36%
+  Final recommendation:  YES
+
+TRADE RATIONALE (Momentum Focus):
+  LLOYDSME is in a momentum recovery phase after a brief dip from near 52w
+  highs. The RSI jumped from 42 to 58 over 5 days — a clean Pattern D
+  institutional strength recovery. The stock hit a new 52w high (Rs 1,888)
+  recently and is now consolidating at Rs 1,820 = a healthy pullback within
+  an uptrend, NOT a downtrend.
+
+  The metals sector rotation thesis from pattern notes is active: institutional
+  money has been moving from defense/E&P plays (which saw their war-premium
+  thesis weaken with Iran deal) into metals, auto components, and infra capex.
+  LLOYDSME as India's integrated iron ore + steel producer is a direct
+  beneficiary of this rotation.
+
+  Momentum signals: MACD above signal, RSI in ideal 55-65 entry zone for a
+  momentum continuation, no distribution on down days. The risk is contained
+  to Rs 1,740 (below the recent consolidation base). Target Rs 1,965 = above
+  52w high extension.
+
+  Exit strategy: Hold to Jun 5-9 (T+4 to T+6). Momentum thesis needs 4-6
+  trading sessions to play out. Stop at Rs 1,740 = below the intra-period
+  support zone of Rs 1,737.
+
+10-day Price Sparkline (Rs 1,697 -> Rs 1,821):
+  1697 - 1664 - 1655 - 1714 - 1737 - 1801 - 1854 - 1859 - 1802 - 1821
+  Chart: . _   . - : = * # * #  [dip-and-recovery pattern, now at highs]
+
+
+================================================================================
+EXCLUDED BY STEP 2.5 — WATCHLIST
+(Stocks failing gate conditions + re-entry triggers)
+================================================================================
+
+INOXWIND (NSE: INOXWIND) — FAIL_RULE_26A + FAIL_DOWNTREND
+  Current: Rs 86.50 (-7.01% today, volume 1.84x avg)
+  Status: Q4 FY26 earnings miss. Stock in active downtrend (lower highs/lows).
+  Rule 26a: -7% in 1 session on above-avg volume = falling knife
+  Rule 26d: Lower highs visible for 30+ days
+  Re-entry condition: Wait for (1) earnings-driven selling to exhaust (3+ days
+  base formation below Rs 87), AND (2) RSI returns to 40-50 zone, AND (3) close
+  above Rs 94 on volume >= 1.5x avg = prior swing high break.
+  Watch level: Rs 94 close on volume
+
+KAYNES TECHNOLOGY (NSE: KAYNES) — FAIL_DOWNTREND + FAIL_LOW_VOLATILITY_RISK
+  Current: Rs 3,109 (RSI 26, -31% from 52w high)
+  Status: Electronics manufacturing in active correction.
+  Rule 26d: Progressive lower highs/lows; RSI 26 = still in free fall
+  Re-entry: Wait for RSI recovery to 38-45 zone AND base formation at Rs 3,000-
+  3,100 support (2+ weeks sideways) before considering entry.
+  Watch level: RSI 40 + 2-week base above Rs 3,000
+
+WAAREEENER (NSE: WAAREEENER) — FAIL_RULE_26E (Volatility Floor)
+  Current: Rs 3,094 (RSI 46, recovering from RSI 26)
+  Status: RSI recovery is promising but ONLY 8 days with >=3% move in last
+  65 trading days. Proportional volatility floor = 11 days. HARD FAIL.
+  Rule 26e: 8 < 11 minimum threshold. Cannot recommend regardless of other signals.
+  Re-entry: Volatility floor is a historical metric — check again after 4-6 more
+  weeks of trading data. If stock gains enough high-vol days to cross 11-day
+  threshold, re-evaluate. RSI and MACD will likely still be bullish then.
+  Watch level: High-vol day count reaches 11+ in 65-day window
+
+SWIGGY (NSE: SWIGGY) — FAIL_DISTRIBUTION_VOLUME
+  Current: Rs 252.15 (RSI 42, near 52w low Rs 250)
+  Status: Distribution volume on down days = 1.26x avg. Institutional selling.
+  Pattern S LPI thesis remains intact but chart not confirmed.
+  Re-entry trigger: Volume on green day >= 5M (1x avg) OR ETERNAL +1.5% same day
+  Watch level: Close above Rs 262 on volume >= 5M
+
+NATIONALUM (NSE: NATIONALUM) — FAIL_DISTRIBUTION_VOLUME (extreme)
+  Current: Rs 424 (RSI 66)
+  Status: Avg down-day vol = 4.57x 20d avg = extreme institutional distribution.
+  Despite good momentum (5d +5.3%), the selling is too heavy on dips.
+  Re-entry: Wait for distribution volume to normalize below 1.5x avg.
+  Watch level: Down-day avg volume drops below 1x avg
+
+INDIGO/INTERGLOBE AVIATION (NSE: INDIGO) — LARGE-CAP, NOW ELIGIBLE on catalyst
+  Current: Rs 4,537 (+2.9% today, RSI 62.2)
+  Status: Large-cap (market cap ~Rs 1.75 Lakh Cr). Mid/small-cap restriction
+  was DEACTIVATED for trending sectors per user instruction (2026-06-01).
+  AIRLINE GOVERNMENT NEWS WATCH: If ATF duty cut OR government relief package
+  for aviation is announced, this becomes an immediate high-conviction entry
+  (confidence cap 88% under new large-cap rule).
+  Momentum trigger: Close above Rs 4,600 on volume >= 1.5x avg = breakout
+  Government catalyst trigger: Any ATF tax reduction or govt aid announcement
+  Watch level: Rs 4,600 breakout OR government airline relief news
+
+
+================================================================================
+MISSED MOVES RETROSPECTIVE (Run #17 -> Run #18 gap: May 29-Jun 1)
+================================================================================
+
+HFCL: +11% over 5 days, +29% over 10 days — CONFIRMED MISS in prior runs.
+  What signals were present: Pattern O (data center fiber demand) firing;
+  progressive higher highs/lows; no distribution volume; 52w high breakout.
+  Why missed: HFCL was not in the top analysis candidates (pipeline focused
+  on defense/OMC rotation themes). Pattern O was identified for STLTECH but
+  not systematically applied to HFCL.
+  Rule update: ALL optical fiber / telecom infra hardware companies must be
+  scanned when NIFTYIT makes a move >2% (either direction) — they behave
+  differently from IT outsourcing and can surge on AI infra themes.
+
+NETWEB: +20% in 10 days — NEAR MISS (identified in Run #17 notes as watchlist).
+  Distribution volume prevented entry. Correctly excluded per Rule 26b.
+  Post-mortem: Distribution on down days did not prevent the price from rising.
+  Learning: When RSI is in 65-75 and the stock is at fresh 52w high, distribution
+  volume rule may be overly strict if the stock is in early price discovery.
+  New rule consideration (to document in pattern_notes): "For stocks making NEW
+  52w highs with RSI <80, distribution volume threshold can be relaxed to 1.2x
+  avg (not 1.0x) given that some profit-taking is normal at new highs."
+
+
+================================================================================
+STEP 5 — QUICK BACKTEST (May 27 picks: NATIONALUM, KEC, ASAHIINDIA)
+================================================================================
+
+Run #17 picks were: NATIONALUM (91%), KEC (84%), ASAHIINDIA (83%)
+Approximate outcome (from live yfinance data):
+
+NATIONALUM: Entry Rs 433.50 (May 27) -> Current Rs 424.25 (Jun 1) = -2.1%
+  The distribution volume warning was flagged (4.57x avg) but stock was picked.
+  Result: Small loss. Distribution volume signal proved valid — institutional
+  selling was real. Rule 26b applied correctly today would have excluded it.
+
+KEC: Entry Rs 501.00 (May 27) -> Current Rs 494.20 (Jun 1) = -1.4%
+  RSI recovery thesis (RSI was 42 at entry, now 31) — the recovery failed and
+  stock continued lower. RSI dropped from 42 to 31 = downtrend continuation.
+  Rule 26d: KEC was showing a recovery signal but the stock resumed its descent.
+  Re-entry at Rs 494 with RSI 31 is not yet confirmed — still needs base formation.
+
+ASAHIINDIA: Entry Rs 907.80 (May 27) -> Current Rs 878.80 (Jun 1) = -3.2%
+  RSI was 65 at entry (above ideal), now 65.9. Stock pulled back -3.2%.
+  MA200 retest thesis still valid but entry timing was slightly high.
+  The stock remains above MA20 (Rs 850). Still a valid watchlist candidate
+  at Rs 860-880 entry zone if RSI stays 50-60.
+
+Run #17 batch estimated return: -2.2% (approximate, 3-stock average)
+Learning: Distribution volume signals (NATIONALUM) and RSI-at-ceiling entries
+(ASAHIINDIA at RSI 65) are reliable warning signs. KEC RSI recovery failed —
+confirm base formation (2+ weeks sideways) before RSI recovery entries in
+infrastructure stocks with ongoing order cycle headwinds.
+
+
+================================================================================
+TOKEN USAGE & COST (Estimated — Single Orchestrator Run)
+================================================================================
+
+Step 1   (Reused basestock.json):    0 in / 0 out / Rs 0
+Step 1.5 (Macro + News Scan):        ~8,000 in / ~2,000 out / ~Rs 0.25
+Step 2   (Pattern Analysis):         ~45,000 in / ~3,000 out / ~Rs 1.60
+Step 2.5 (Price Action Gate):        ~15,000 in / ~1,000 out / ~Rs 0.50
+Step 3   (Validation):               ~8,000 in / ~1,000 out / ~Rs 0.20
+Step 4   (Formatting):               ~20,000 in / ~3,000 out / ~Rs 0.65
+Step 5   (Quick Backtest):           ~5,000 in / ~1,000 out / ~Rs 0.15
+───────────────────────────────────────────────────────────────────
+TOTAL:                               ~Rs 3.35 (~$0.04 USD)
+[Note: Running as single Sonnet orchestrator; actual cost depends on token counts]
+
+
+================================================================================
+RULE UPDATE — LARGE-CAP DEACTIVATION FOR TRENDING SECTORS (2026-06-01)
+================================================================================
+User instruction (2026-06-01): "deactivate the rule 'the mid/small-cap
+universe' for trending sectors"
+
+NEW RULE: Large-caps are eligible for recommendation when their sector is in
+a confirmed trend. Required conditions:
+  1. Sector index >+2% on the session OR documented Pattern O/F tailwind
+     OR Step 1.5 news catalyst.
+  2. All standard technical rules still apply (26a-26e, Step 2.5 gate).
+  3. Confidence capped at 88% for large-caps.
+  4. Output must flag "Large-cap — slower move, consider larger position size."
+
+AUTO-ELIGIBLE LARGE-CAPS WHEN SECTOR TRENDS:
+  AI/Cloud Infra (NIFTYIT >+2%):   TATACOMM
+  Aviation (govt relief catalyst): INDIGO
+  Defense (Pattern F capex):       HAL
+  Metals (Pattern E rotation):     TATASTEEL, JSWSTEEL, HINDALCO
+  Banks (RBI policy catalyst):     HDFCBANK, ICICIBANK, SBIN
+
+IMPACT ON TODAY'S RUN: NIFTYIT was +3.03% — TATACOMM is now eligible under
+this rule and will be scanned in Run #19. INDIGO remains gated on a
+government airline relief news catalyst.
+
+================================================================================
+AI / CLOUD INFRASTRUCTURE WATCHLIST — Pattern O Universe (Updated 2026-06-01)
+================================================================================
+User instruction (2026-06-01): Add BBOX, IDEAFORGE, TATACOMM to the AI/Cloud
+infrastructure watch list. Pattern O scanner now monitors:
+
+  CORE FIBER / NETWORK HARDWARE
+  -----------------------------
+  HFCL       — Optical fiber cables, BharatNet, 5G, data center fiber [ENTERED Jun 1]
+  STLTECH    — STL optical fiber and systems
+  TEJASNET   — Optical networking equipment
+
+  IT INFRA SERVICES & DATA CENTER BUILD-OUT (added 2026-06-01)
+  ------------------------------------------------------------
+  BBOX       — Black Box — IT infra services, data center fit-out, structured
+               cabling. Closest pure-play to hyperscaler CapEx after HFCL/STLTECH.
+               Status: TO SCAN next run for RSI/distribution/52w-high gates.
+
+  IDEAFORGE  — Drones / UAV — dual-theme: defense rotation AND AI/edge compute
+               beneficiary. If defense rotation reverses, treat as pure AI infra.
+               Status: TO SCAN next run.
+
+  TATACOMM   — Tata Communications — global data center, cloud connectivity,
+               undersea cable, AI compute hosting infrastructure.
+               Status: Large-cap — NOW ELIGIBLE under new rule (mid/small-cap
+               restriction deactivated for trending sectors, 2026-06-01).
+               Confidence cap: 88%. Will be scanned in Run #19 if NIFTYIT
+               sustains >+2% momentum or holds above current 29,962 level.
+
+  Pattern O Scan Rule (when NIFTYIT > +2% on any session):
+    Immediately scan all 6 names above for:
+      (a) RSI < 78
+      (b) Close > MA5
+      (c) No distribution volume (down-day vol < 1.0x avg)
+      (d) Near or above 52w high
+    All four conditions met = entry candidate for confidence scoring.
+
+  Note: NIFTYIT was +3.03% today. HFCL was the only Pattern O name analyzed in
+  full this run. BBOX, IDEAFORGE, TATACOMM will be scanned in Run #19.
+
+================================================================================
+DISCLAIMER
+================================================================================
+This output is for informational and research purposes only. It does not
+constitute financial advice or a solicitation to buy or sell securities.
+Past pattern performance does not guarantee future results. Always validate
+with your own research, consult a SEBI-registered advisor, and size positions
+according to your personal risk tolerance before investing.
+================================================================================

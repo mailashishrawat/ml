@@ -3,7 +3,7 @@
 - [Pipeline Project Context](project_pipeline.md) — Pipeline architecture, model IDs, working dir, first run date
 - [Market Pattern Notes](project_patterns.md) — Patterns identified, duopoly pairs, accuracy observations
 - [User Profile](user_profile.md) — User goals and collaboration preferences
-- [Position Sizing & Count Rule](feedback_position_sizing.md) — Max 3 picks, confidence > 78, never reduce position size, drop the stock instead
+- [Position Sizing & Count Rule](feedback_position_sizing.md) — Max 3 picks, confidence > 90 (raised from 78), never reduce position size, drop the stock instead
 - [Holding Period & Rule Relaxations](feedback_holding_period.md) — T+2 dropped; use optimal window per thesis; leaderboard penalties dropped; RSI ceiling at >82 only; earnings discount dropped
 - [Monetary Format](feedback_lakh_format.md) — All monetary values in Rs Lakh format (Rs 10,000 = Rs 0.10 Lakh)
 - [Output Format](feedback_output_format.md) — Final recommendations always in: Rank │ Symbol │ Entry │ Target │ Stop │ Confidence │ Exit Window
@@ -12,3 +12,4 @@
 - [News Catalyst Scanning](feedback_news_catalysts.md) — Pattern J + Step 1.5 must scan ET/BS/Mint/MC daily for state-visit MoUs, govt orders, USFDA; added after TATACOMM-ASML miss
 - [Pattern S — IPO/Post-Listing Reversal + LPI Sub-Pattern](pattern_S_ipo_reversal.md) — ATHER trade (May 22-26 2026); exhaustion low on recently listed stocks; LPI sub-pattern +8 boost when 4+ quarters of loss narrowing; SWIGGY (80) and FIRSTCRY (82) are active WATCH candidates
 - [Basestock cadence + no-cap rule](feedback_basestock_cadence.md) — basestock.json regenerates monthly (not weekly); read as-is until next_regeneration_due; no top-N cap, keep every stock passing all rules
+- [Mandatory Chart Read + 90% Threshold](feedback_chart_read_and_90pct_threshold.md) — Step 2.7 chart read gate (Sub-Rule 26f, Rule 46b, range/vol trajectory, MA5, resistance distance, R:R >= 1.5:1); confidence threshold raised to >90%; 88% large-cap cap superseded; 0-pick days expected

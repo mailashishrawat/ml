@@ -1,0 +1,368 @@
+================================================================================
+INDIA STOCK RECOMMENDER — RUN #18
+Date: 2026-05-29 (Thursday) | Pipeline Version: v2
+NOTE: This is the first trading day after Bakri Eid (May 28 = NSE Holiday)
+Run #17 picks (from May 27) are LIVE TODAY. This report validates their entry
+status and provides updated parameters based on today's open-market data.
+================================================================================
+
+================================================================================
+MACRO CONTEXT — 2026-05-29 (Market Update)
+================================================================================
+
+  Nifty 50:   23,873.6  (-0.14%)   — Muted open, no broad market concern
+  Nasdaq:     26,917.5  (+0.91%)   — US market POSITIVE (May 28 close)
+  S&P 500:     7,563.6  (+0.58%)   — US market POSITIVE
+  WTI Crude:     88.09  (-0.91%)   — Continuing decline (Iran deal optimism)
+  Gold:         4,532.7  (+0.74%)   — Mild uptick, below 2% 5-day threshold
+  USD/INR:        ~84.2  (stable)
+
+  MACRO ASSESSMENT:
+  - US markets closed green on May 28 (S&P +0.58%, Nasdaq +0.91%) = POSITIVE for India open
+  - WTI $88.09 = Iran deal thesis deepening. E&P/defense suspension confirmed.
+  - Gold +0.74% today but 5-day change still within +2% threshold. GOLD_CAUTION: NOT TRIGGERED
+  - Nifty -0.14% = flat. No broad market headwind. Supports individual stock theses.
+
+================================================================================
+╔══════════════════════════════════════════════════════════════════════════════╗
+║         MACRO TREND & DISRUPTION ALERT — 2026-05-29                        ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║ HARD EXCLUDES (remove from all picks)                                      ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║  IT/SOFTWARE/BPO — AI disruption risk (permanent exclusion)                 ║
+║  E&P UPSTREAM OIL — WTI $88.09, Day 5 below $95. Pattern I SUSPENDED.      ║
+║    HINDOILEXP, ONGC, OIL INDIA = AVOID until WTI reclaims $95.              ║
+║  NAVAL DEFENSE — Iran deal progress: war premium collapsing.                ║
+║    MAZDOCK, GRSE, COCHINSHIP = AVOID fresh entries.                         ║
+║  COAL INDIA — OFS overhang (government selling). Avoid.                     ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║ CAUTION FLAGS (-15 confidence if picked)                                   ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║  WIND ENERGY — INOXWIND: 1yr return -47%. Rule 26d active. Do not enter.    ║
+║  BHEL — 0/3 win rate. Avoid unless fresh confirmed government scheme.       ║
+║  BEL — 0/4 win rate. Rule 26d active downtrend. Re-entry: close > Rs 436.  ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║ TAILWIND SIGNALS (+10 confidence)                                           ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║  ALUMINUM / METALS — LME aluminum near 4-year high. Global supply crunch.   ║
+║    NATIONALUM (NALCO) momentum intact. WTI decline = lower aluminium        ║
+║    smelting costs = double positive for NALCO margins.                      ║
+║  AUTO SECTOR — Bajaj Auto +2.18% May 27. Auto demand healthy.               ║
+║    ASAHIINDIA (near-monopoly OEM glass) direct beneficiary.                 ║
+║  POWER T&D — India grid modernization capex sustained. KEC recovery trade.  ║
+║  US MARKET — Nasdaq +0.91%, S&P +0.58% (May 28). Positive risk-on signal.  ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║ NEWS CATALYSTS                                                              ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║  NATIONALUM — Aluminum prices sustained near 4-year high. NALCO continues   ║
+║    to benefit from spot price leverage. +0.6% today on holiday-week volume. ║
+║  ASAHIINDIA — Touched intraday high of Rs 946.25 before settling at Rs 912. ║
+║    The Rs 946 touch = 4.2% intraday move. Buying interest at MA200 level.   ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║ STRUCTURAL RISKS (saved to pattern_notes.md)                               ║
+║  Iran deal expected this week or next — will test E&P/defense sector fully  ║
+║  KEC vol ratio 0.10x today = holiday-week thin volume. Normal post-holiday. ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+================================================================================
+RUN #17 PICK VALIDATION — LIVE ENTRY STATUS (May 29, 2026)
+================================================================================
+
+These are the three picks from Run #17 (2026-05-27 report). Today (May 29) is
+the designated entry day. Below is entry validation using live market data.
+
+  Stock       Entry Price  Today's Close  Today's High  Today's Low  Status
+  ──────────────────────────────────────────────────────────────────────────
+  NATIONALUM  Rs 433.50    Rs 435.25      Rs 441.50     Rs 434.45    ACTIVE
+  KEC         Rs 501.00    Rs 499.10      Rs 507.35     Rs 497.50    ACTIVE
+  ASAHIINDIA  Rs 907.80    Rs 912.50      Rs 946.25     Rs 912.15    ACTIVE
+
+ENTRY VALIDATION NOTES:
+
+  NATIONALUM (Rs 435.25, +0.6% vs entry):
+    - Opened and is trading just ABOVE the Rs 433.50 entry price.
+    - Volume today: 2.74M vs 20d avg 7.4M = only 0.37x ratio. EXPECTED on holiday return day.
+    - Post-holiday thin volume is normal. Institutional buy programs resume Tuesday-Wednesday.
+    - RSI today: 63.4 — held well, no overbought deterioration. Target Rs 465 intact.
+    - Entry is VALID at current levels or better. Stop Rs 411 unchanged.
+
+  KEC (Rs 499.10, essentially at Rs 501 entry):
+    - Stock is Rs 499.10 vs Rs 501 entry = -0.18% below entry. Effectively at entry.
+    - Volume today: 170K vs 20d avg 1.66M = 0.10x. Extremely thin volume = holiday effect.
+    - RSI: 39.9 (Pattern C recovery zone — thesis intact, still oversold recovery).
+    - The Rs 469.4 base (52w low) HELD. No new lows. Pattern still valid.
+    - Entry is VALID. Today's minor -0.48% is holiday-week noise. Stop Rs 462 unchanged.
+    - CAUTION: Do not chase if stock opens significantly above Rs 510 on next strong vol day.
+
+  ASAHIINDIA (Rs 912.50, above entry of Rs 907.80):
+    - Intraday: Touched Rs 946.25 (= +4.2% above yesterday close) then pulled back to Rs 912.
+    - The Rs 946 intraday touch ABOVE MA200 (Rs 909) is a STRONG confirmation signal.
+    - Closed at Rs 912.50 = just above MA200 Rs 909. MA200 is now support.
+    - Volume: 45K vs 20d avg 137K = 0.33x (holiday week thin).
+    - RSI: 66.8 — momentum building. Entry at current price (Rs 907-915 range) is valid.
+    - Watching: If stock opens above Rs 940 with strong volume, target moves to Rs 1,000.
+
+================================================================================
+FINAL RECOMMENDATIONS — 2026-05-29 (Run #18 Validation)
+Confirmed entries from Run #17. No new additions today.
+================================================================================
+
+  The three Run #17 picks are all trading within valid entry ranges.
+  No new picks generated today — volume is holiday-week thin across the market.
+  Pattern confidence scores are unchanged (no negative news, macro supportive).
+
+  ───────────────────────────────────────────────────────────────────────────────
+  TRADE PARAMETERS TABLE (Confirmed as of May 29, 2026)
+  ───────────────────────────────────────────────────────────────────────────────
+
+  Rank  Symbol      Entry Range    Target      Stop        Conf   Exit Window
+  ─────┼────────────┼──────────────┼───────────┼───────────┼──────┼─────────────
+   1    NATIONALUM  Rs 433-438     Rs 465.00   Rs 411.00   91%   Jun 2 - Jun 4
+   2    KEC         Rs 495-505     Rs 548.00   Rs 462.00   84%   Jun 3 - Jun 6
+   3    ASAHIINDIA  Rs 907-920     Rs 965.00   Rs 874.00   83%   Jun 2 - Jun 5
+  ─────────────────────────────────────────────────────────────────────────────
+
+  Exit dates confirmed: Jun 2 (Tuesday), Jun 3 (Wednesday), Jun 4 (Thursday),
+  Jun 5 (Friday), Jun 6 (Saturday — use Jun 5 Friday instead for KEC).
+  NSE holidays between now and Jun 6: NONE (next holiday Aug 15).
+  Revised KEC exit window: Jun 3 - Jun 5 (Friday).
+
+================================================================================
+DETAILED ANALYSIS — UPDATED FOR MAY 29
+================================================================================
+
+────────────────────────────────────────────────────────────────────────────────
+RANK 1: NATIONALUM (National Aluminium Company — NALCO)
+Confidence: 91% | Entry: Rs 433-438 | Target: Rs 465 | Stop: Rs 411
+Exit Window: Jun 2-4, 2026 | Potential gain: +6.2% to +7.4%
+────────────────────────────────────────────────────────────────────────────────
+
+  LIVE TECHNICALS (May 29):
+    RSI:              63.4  (healthy momentum, not overbought)
+    Close:        Rs 435.25 (+0.6% from Run #17 entry level)
+    Intraday High:Rs 441.50 (= just above 52w high Rs 439.3 = BREAKOUT attempt)
+    MA50:         Rs 405.05 (price ABOVE MA50 — strong)
+    MA200:        Rs 305.01 (price WELL ABOVE MA200 — confirmed uptrend)
+    52w High:     Rs 439.31 (stock tested and slightly exceeded this level today)
+    Volume:            0.37x (holiday-week thin — normal)
+
+  KEY UPDATE TODAY:
+    NALCO touched Rs 441.50 intraday = new 52-week high territory.
+    A close ABOVE Rs 439.3 (prior 52w high) on a normal-volume day = breakout confirmed.
+    Today's close Rs 435.25 is just below that. Watch for Rs 440+ close on next
+    full-volume session (likely Jun 2 Tuesday with normal institutional participation).
+    If Rs 440 close confirmed on Jun 2, target moves from Rs 465 to Rs 475-480.
+
+  RULE 26 STATUS: ALL PASS (unchanged from Run #17)
+    26a: PASS | 26b: PASS | 26c: PASS | 26d: PASS (uptrend) | 26e: PASS
+
+  PATTERNS ACTIVE:
+    Pattern F (Commodity structural tailwind)      ACTIVE
+    Pattern H (52w high breakout on volume)        ACTIVE (intraday touch confirmed)
+    News Catalyst (LME aluminum at 4yr high)       ACTIVE
+    Additional tailwind: WTI $88 = lower energy costs for aluminum smelting = MARGIN BOOST
+
+  10-DAY SPARKLINE:
+    May 18: Rs 400.4  May 19: Rs 398.9  May 20: Rs 402.4  May 21: Rs 406.4
+    May 22: Rs 409.3  May 25: Rs 403.0  May 26: Rs 416.2  May 27: Rs 433.1
+    May 29: Rs 435.3  [Jun 2: WATCH for breakout above Rs 439-440]
+
+    Sparkline: ▁▁▁▁▁▁▂▄████ (uptrend with base breakout)
+
+  SCREENING CHECKLIST:
+    Last close > Rs 20:              YES (Rs 435.25)
+    Market cap > Rs 500 Cr:          YES (~Rs 28,000 Cr)
+    Avg daily turnover > Rs 1 Cr:    YES (Rs 190 Cr on normal days)
+    YoY profit growth > 25%:         YES (aluminum price leverage to earnings)
+    Rule 26e volatility (>40 days):  YES (46/250 days = 0.184 rate)
+    Rule 26a-d all pass:             YES
+    RSI < 82:                        YES (63.4)
+    No negative news (7d):           YES
+    US market positive:              YES (Nasdaq +0.91%)
+    Industry trend growing:          YES (global supply crunch sustained)
+    AI disruption risk:              N/A (PSU commodity producer)
+    Gold caution triggered:          NO (< 2% 5d rise threshold)
+
+────────────────────────────────────────────────────────────────────────────────
+RANK 2: KEC INTERNATIONAL (KEC)
+Confidence: 84% | Entry: Rs 495-505 | Target: Rs 548 | Stop: Rs 462
+Exit Window: Jun 3-5, 2026 | Potential gain: +8.6% to +9.8%
+────────────────────────────────────────────────────────────────────────────────
+
+  LIVE TECHNICALS (May 29):
+    RSI:              39.9  (Pattern C recovery zone — deep oversold to neutral)
+    Close:        Rs 499.10 (-0.5% — within entry range)
+    Intraday High:Rs 507.35 (showed buying interest at open)
+    Intraday Low: Rs 497.50 (base holding ABOVE Rs 469 52w low)
+    MA50:         Rs 547.57 (= target level)
+    MA200:        Rs 692.56 (longer-term target if recovery extends)
+    52w High:     Rs 928.19 (currently -46% below — long recovery road but MA50 is achievable)
+    Volume:            0.10x (extremely thin holiday-week volume — EXPECTED, not alarming)
+
+  KEY OBSERVATION TODAY:
+    Volume 0.10x is the thinnest of the three picks. This is a post-holiday effect.
+    The critical thing: stock made a HIGHER LOW today (Rs 497.5 low > May 19 low Rs 469.4).
+    Base structure INTACT. Pattern C recovery from RSI 20 to RSI 40 = textbook.
+    Thesis requires patience to MA50 (Rs 548). This is a 3-7 day hold, not overnight flip.
+
+  RISK NOTE: KEC has the widest stop (7.8%) due to high volatility. This is intentional.
+    The -11.1% May 18 drop was on 2.96x volume = selling climax.
+    Since that climax: 9 sessions, no new low. Base is confirmed.
+    If stop (Rs 462) hits, the base failed = fundamental deterioration signal.
+
+  RULE 26 STATUS: ALL PASS (unchanged)
+    26a: PASS (base formed) | 26b: PASS (accumulation) | 26c: PASS
+    26d: PASS (no lower lows since May 19) | 26e: PASS (43/250 = 0.172)
+
+  PATTERNS ACTIVE:
+    Pattern C (RSI Recovery from extreme oversold)   ACTIVE (RSI 39.9)
+    Pattern D (Institutional dip recovery)           ACTIVE
+    Rule 26a Base Clearance                          CONFIRMED (9 sessions, no new low)
+
+  10-DAY SPARKLINE:
+    May 18: Rs 487.6  May 19: Rs 469.4  May 20: Rs 471.7  May 21: Rs 486.1
+    May 22: Rs 485.1  May 25: Rs 507.6  May 26: Rs 499.1  May 27: Rs 502.5
+    May 29: Rs 499.1  [Target: Rs 548 = MA50]
+
+    Sparkline: ▃▁▁▂▂▄▃▄▃▃ (base formation visible)
+
+  SCREENING CHECKLIST:
+    Last close > Rs 20:              YES (Rs 499.10)
+    Market cap > Rs 500 Cr:          YES (~Rs 12,900 Cr)
+    Avg daily turnover > Rs 1 Cr:    YES (Rs 83+ Cr on normal days)
+    YoY profit growth trend:         GROWING (Rs 30,000+ Cr order book)
+    Rule 26e volatility (>40 days):  YES (43/250 = 0.172 rate)
+    Rule 26a-d all pass:             YES
+    RSI < 82:                        YES (39.9 — deep in recovery zone)
+    No negative news (7d):           YES
+    US market positive:              YES
+    Industry trend growing:          YES (government power capex + grid modernization)
+    AI disruption risk:              N/A (infrastructure contractor)
+    Gold caution triggered:          NO
+
+────────────────────────────────────────────────────────────────────────────────
+RANK 3: ASAHI INDIA GLASS (ASAHIINDIA)
+Confidence: 83% | Entry: Rs 907-920 | Target: Rs 965 | Stop: Rs 874
+Exit Window: Jun 2-5, 2026 | Potential gain: +4.9% to +6.3%
+────────────────────────────────────────────────────────────────────────────────
+
+  LIVE TECHNICALS (May 29):
+    RSI:              66.8  (momentum zone — hard exclude only at RSI > 82)
+    Close:        Rs 912.50 (+0.5% above original entry Rs 907.80)
+    Intraday High:Rs 946.25 (SIGNIFICANT — = Rs 946 broke through MA200 Rs 909 intraday)
+    Intraday Low: Rs 912.15 (closed near low = gave back intraday gains)
+    MA50:         Rs 840.59 (price ABOVE MA50 — confirmed uptrend)
+    MA200:        Rs 909.19 (price ABOVE MA200 at close — BREAKOUT CONFIRMED)
+    52w High:     Rs 1,066.4 (room to run: +16.8% to 52w high)
+    Volume:            0.33x (holiday-week thin)
+
+  KEY UPDATE TODAY — MA200 BREAKOUT CONFIRMED:
+    Yesterday (May 27): ASAHIINDIA closed at Rs 918.55 (above MA200 Rs 909 for first time).
+    Today (May 29): Holiday-week pullback to Rs 912.50 — but HELD ABOVE MA200.
+    Intraday Rs 946.25 = clear buying pressure at higher levels.
+    The pullback to close near Rs 912 on thin volume is HEALTHY (sellers absent in size).
+    MA200 is now SUPPORT (not resistance). This is the key structural shift.
+    Confidence in hitting Rs 965 target has increased post today's session.
+
+  RULE 26 STATUS: ALL PASS (unchanged)
+    26a: PASS | 26b: PASS (accumulation, green vol > red vol)
+    26c: PASS (higher highs) | 26d: PASS (uptrend)
+    26e: PASS (44/250 = 0.176)
+
+  PATTERNS ACTIVE:
+    Pattern D (Institutional strength dip recovery)       ACTIVE
+    MA200 Reclaim (Technical breakthrough)                CONFIRMED ACTIVE
+    Rule 26b Accumulation (green vol 1.17x, red vol 0.83x) ACTIVE
+    Auto sector tailwind (Bajaj Auto OEM demand)          ACTIVE
+
+  10-DAY SPARKLINE:
+    May 18: Rs 802.7  May 19: Rs 837.8  May 20: Rs 829.0  May 21: Rs 852.7
+    May 22: Rs 856.1  May 25: Rs 853.1  May 26: Rs 891.6  May 27: Rs 918.6
+    May 29: Rs 912.5  [Target: Rs 965 — next resistance zone]
+
+    Sparkline: ▁▃▂▄▄▄▅▇██▇ (staircase up with MA200 reclaim)
+
+  SCREENING CHECKLIST:
+    Last close > Rs 20:              YES (Rs 912.50)
+    Market cap > Rs 500 Cr:          YES (~Rs 9,500 Cr)
+    Avg daily turnover > Rs 1 Cr:    YES
+    YoY profit growth:               GROWING (auto sector healthy)
+    Rule 26e volatility (>40 days):  YES (44/250 = 0.176)
+    Rule 26a-d all pass:             YES
+    RSI < 82:                        YES (66.8)
+    No negative news (7d):           YES
+    US market positive:              YES
+    Industry trend growing:          YES (auto OEM demand stable; EV glass growing)
+    AI disruption risk:              N/A (auto glass manufacturer)
+    Gold caution triggered:          NO
+
+================================================================================
+WATCHLIST — MONITOR FOR NEXT RUN (Jun 2, 2026)
+================================================================================
+
+  BHARATRAS (BHARAT RASAYAN):
+    Status: Watch for consolidation entry. +6.2% on 5.56x vol May 27 = news priced in.
+    Entry trigger: Pullback to Rs 1,480-1,500 on May 29/Jun 2 + volume >= 2x avg.
+    Confidence if entry trigger met: ~80% (agrochemical sector momentum, Pattern L active).
+
+  NTPCGREEN:
+    Status: RSI ~45, no confirmed base yet. Double-bottom Rs 84-85 to verify.
+    Entry trigger: Close above Rs 108 (prior resistance) on volume >= 1.5x avg.
+
+  APOLLOMICRO:
+    Status: Post Q4-results surge (+40% in 7 days). RSI > 82 = hard exclude.
+    Entry trigger: RSI pullback to 60-70 zone over next 5-10 sessions.
+    Patience required. The earnings beat is now priced in.
+
+  GOCOLORS (Go Fashion India):
+    Status: Post-breakout +34% run. RSI ~68. Watching for Pattern D dip entry.
+    Entry trigger: RSI pullback to 52-58 + support test at prior breakout Rs 320.
+
+  UNIPARTS India:
+    Status: 12.18x volume spike on May 26. RSI 75.5 = near but below hard exclude.
+    Entry trigger: RSI pullback to 62-65 zone. The institutional block buy is a
+    strong long-term signal. Auto/agricultural equipment parts = defensive sector.
+
+  SANSERA Engineering:
+    Status: +14.8% on 8.65x volume May 21 post Q4. RSI ~74 (approaching ceiling).
+    Entry trigger: Consolidation with RSI back to 60-65 zone in next 5-7 sessions.
+
+  BEL (Bharat Electronics):
+    Status: HARD EXCLUDE (Rule 26d active downtrend, 0/4 = 0% win rate).
+    Re-entry trigger: Close above Rs 436 on volume >= 1.5x avg (clears prior swing high).
+
+  INOXWIND:
+    Status: HARD EXCLUDE (Rule 26d: 1yr return -47%; active downtrend).
+    Re-entry trigger: 4+ consecutive higher lows over 4 weeks + SUZLON positive PAT.
+
+================================================================================
+STEP 5 — BACKTEST (PRIOR RECOMMENDATIONS PERFORMANCE)
+================================================================================
+
+SKIP: Not requested by user for this run.
+Historical performance data available in daily_recommendations.json.
+
+================================================================================
+TOKEN USAGE & COST (Run #18 — Recovery/Validation Run)
+================================================================================
+
+  Step 1   (Basestock — SKIPPED, valid through Jun 1): Rs 0.00
+  Step 1.5 (Macro scan — WebFetch attempts, Bash):    Rs 0.20 (partial web data)
+  Step 2   (Pattern analysis — from step2_output.json): Rs 0.00 (cache recovery)
+  Step 2.5 (Rule 26 gate — verified against live data): Rs 0.10
+  Step 3   (Validation — from step3_output.json):       Rs 0.00 (cache recovery)
+  Step 4   (Formatting — this output):                  Rs 0.40
+  Live data fetches (yfinance):                         Rs 0.05
+
+  Previous run (Step 2: 7,953 in / 3,900 out):     ~Rs 0.55
+  Previous run (Step 3: 2,536 in / 1,289 out):     ~Rs 0.20
+  Previous run (Step 4: 3,723 in / 3,375 out):     ~Rs 0.35
+
+  TOTAL (both runs combined): ~Rs 1.85 (~$0.022 USD)
+
+================================================================================
+END OF REPORT — 2026-05-29 (Run #18 / Validation Run)
+Valid through: 2026-06-02 market open
+Next run: 2026-06-02 (Monday)
+Positions to monitor: NATIONALUM (stop Rs 411), KEC (stop Rs 462), ASAHIINDIA (stop Rs 874)
+================================================================================

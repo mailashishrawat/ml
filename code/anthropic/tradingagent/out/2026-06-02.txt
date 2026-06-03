@@ -1,0 +1,630 @@
+================================================================================
+INDIA STOCK RECOMMENDATION PIPELINE — RUN #19
+Date: 2026-06-02 (Tuesday) | Market: OPEN
+Pipeline: Step 1 (REUSED*) -> 1.5 -> 2 -> 2.5 -> 3 -> 4
+*basestock.json next_regeneration_due was 2026-06-01; using existing list today.
+ Full regeneration will run on next pipeline call.
+================================================================================
+
+
+╔══════════════════════════════════════════════════════════════════╗
+║           MACRO TREND & DISRUPTION ALERT — 2026-06-02           ║
+╠══════════════════════════════════════════════════════════════════╣
+║ MACRO SNAPSHOT (live data)                                       ║
+║  Nifty 50:     23,283  (-0.43%) -- 4th consecutive down session ║
+║  NIFTYIT:      30,446  (+1.98%) -- just under Pattern O trigger  ║
+║  NiftyMetal:   13,524  (+0.13%) -- flat / consolidating          ║
+║  WTI Crude:     $91.49  (+4.73%) -- sharp bounce, WATCH $95      ║
+║  Gold:          $4,525  (-0.79%) -- falling; Pattern K mild      ║
+║  Nasdaq:        27,087  (+0.42%) -- US positive backdrop         ║
+║  S&P 500:        7,600  (+0.26%) -- US positive backdrop         ║
+║  DXY:             99.19 (+0.28%) -- dollar slightly firmer       ║
+╠══════════════════════════════════════════════════════════════════╣
+║ HARD EXCLUDES (removed from all picks today)                     ║
+║  X STLTECH -- RSI 89.4 exceeds hard ceiling of 82.              ║
+║    Despite +44% 10d run and Pattern O qualifying thesis,         ║
+║    RSI 89.4 is a HARD EXCLUDE regardless of catalysts.           ║
+║  X LLOYDSME (Run #18 pick from Jun 1) -- Rule 26e FAIL.         ║
+║    Full 252-day check: only 39 high-vol days vs floor of 40.     ║
+║    One day short. FAIL_LOW_VOLATILITY. Remove from active pick.  ║
+║    NOTE: If entered Jun 1 at Rs 1,820.90, this is a             ║
+║    forced exit signal. Immediate stop management required.       ║
+║  X BEL -- RSI 27.1, active downtrend, Rule 26e FAIL (4/40),    ║
+║    distribution volume 1.08x. All 3 disqualifiers active.        ║
+║  X PIIND -- RSI 31.2, distribution vol 1.45x, -14.2% 10d.      ║
+║    Rule 26e FAIL (10/40). Active selling underway.               ║
+║  X SWIGGY -- below MA5, distribution vol 1.07x, -9.1% 5d.      ║
+║    Pattern S entry trigger (Rs 262 + vol) not activated.         ║
+║  X TRENT -- Rule 26e FAIL (29/40 vs floor of 40). Disqualified  ║
+║    from standard recommendation. See Event-Driven watchlist.     ║
+║  X WAAREEENER -- Rule 26e FAIL (7/40; was 8 yesterday).        ║
+║    Monitor: needs 33+ more high-volatility days to pass.         ║
+╠══════════════════════════════════════════════════════════════════╣
+║ CAUTION FLAGS (-10 to -15 confidence if picked)                  ║
+║  ! Nifty 4th consecutive down session -- broad market            ║
+║    weakness signal. Apply -4 confidence to all picks today.      ║
+║  ! WTI +4.73% to $91.49 -- approaching $95 risk zone.           ║
+║    If WTI closes above $95, Pattern I defense/E&P re-activation ║
+║    may begin. Monitor for Day 1 above $95.                       ║
+║  ! NATIONALUM -- distribution vol 1.9x avg. Extreme             ║
+║    institutional selling continues. Hard caution.                ║
+║  ! MOTILALOFS -- initial intraday surge, but closed on thin      ║
+║    volume (0.09x avg). Confidence drops to threshold level.      ║
+╠══════════════════════════════════════════════════════════════════╣
+║ TAILWIND SIGNALS (+5 to +10 confidence applied to picks)         ║
+║  + NIFTYIT +1.98% -- effectively at Pattern O trigger            ║
+║    threshold. AI / cloud infra hardware theme bid.               ║
+║    HFCL and NETWEB are direct AI infra hardware plays.           ║
+║  + Gold -0.79% -- Pattern K (mild): equity rotation signal.     ║
+║    Apply +3 confidence to all picks today.                       ║
+║  + US markets positive (Nasdaq +0.42%, S&P +0.26%) --           ║
+║    US_MARKET_CAUTION flag NOT triggered.                         ║
+║  + HFCL: Run #18 entry thesis intact. No distribution.          ║
+║    RSI consolidating at 73.5 (below prior session high).         ║
+╠══════════════════════════════════════════════════════════════════╣
+║ NEWS CATALYSTS (Step 1.5 force-add)                              ║
+║  No new government orders or defense contracts identified        ║
+║  in accessible news sources for June 2, 2026.                   ║
+║  BusinessToday confirms: 3 AGMs, 7 results scheduled today.     ║
+║  ACME Solar: QIP at Rs 294.13 floor. Watch for solar sector bid.║
+║  NHPC: OFS at 8% discount -- watch for sector fund rotation.    ║
+║  Pharma sector: Aurobindo noted as breakout candidate by         ║
+║  analyst. Not in our universe (large-cap).                       ║
+╠══════════════════════════════════════════════════════════════════╣
+║ WTI CRUDE WATCH -- NEW SIGNAL                                    ║
+║  WTI +4.73% to $91.49. This is Day 1 of a potential crude       ║
+║  bounce. Rules:                                                  ║
+║  - If WTI closes above $95 for 3 consecutive days:              ║
+║    Pattern I re-activates for E&P stocks (HINDOILEXP).           ║
+║  - Today ($91.49) is NOT above the $95 threshold yet.           ║
+║  - Do NOT pre-empt. Wait for $95 confirmation.                   ║
+╠══════════════════════════════════════════════════════════════════╣
+║ NEW STRUCTURAL RISK (saved to pattern_notes.md)                  ║
+║  Nifty 4 consecutive down sessions with broad weakness may       ║
+║  signal institutional de-risking before June quarter-end.        ║
+║  FII selling into quarter-end is a seasonal pattern.             ║
+║  Monitor: If Nifty falls below 22,900 (strong support),         ║
+║  reduce conviction on all picks; hold cash.                      ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+================================================================================
+MISSED MOVES RETROSPECTIVE (Run #18 -> Run #19: Jun 1-2 gap)
+================================================================================
+
+STLTECH: +4.8% today (Jun 2), +44.5% 10d -- MISSED ENTIRELY.
+  What signals were present: Pattern O (optical fiber systems for AI/data centers);
+  NIFTYIT +3.03% on Jun 1; 26e PASS (99/40 = strongest in universe); no distribution.
+  Why missed: STLTECH was not separately analyzed from HFCL in Run #18 despite being
+  in the Pattern O universe. Pipeline analyzed only HFCL.
+  RSI today is 89.4 = HARD EXCLUDE NOW, but RSI on Jun 1 was likely 75-80 (within window).
+  RULE UPDATE: Next run when NIFTYIT >+2%, scan ALL 6 Pattern O names individually before
+  selecting best entry. Do not default to HFCL only.
+
+LLOYDSME: Rule 26e retroactive re-check shows FAIL (39/40). Jun 1 recommendation
+  should have been excluded. However, stock +0.5% on Jun 2 (small gain). No major damage.
+  LESSON: Always run the FULL 252-day Rule 26e check, not just the shorter window.
+  The 64-day check (16/11 PASS) was not sufficient for a seasoned stock.
+
+
+================================================================================
+FINAL RECOMMENDATIONS — 2026-06-02
+[REVISED post-user chart review x2 — NETWEB removed (Rule 46 / Sub-Rule 26f),
+ HFCL downgraded below 78% threshold (decelerating-staircase exhaustion, Rule 46b)]
+0 picks qualify above 78% confidence threshold today.
+================================================================================
+
+NO NEW ENTRIES TODAY — 0-PICK DAY
+
+Both surviving candidates from the Run #19 pipeline have been removed on honest
+chart re-evaluation. This is the correct answer. Do not pad to reach any minimum.
+
+NETWEB: Removed earlier (vertical one-bar spike + 2-day stall, Sub-Rule 26f).
+HFCL:   Downgraded to 76% (below threshold) after decelerating-staircase
+        exhaustion re-read. See full assessment below.
+
+        For RUN #18 HOLDERS (entry Rs 180.55, Jun 1): HOLD with revised
+        parameters. See position guidance section below.
+
+TRADE PARAMETERS TABLE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Rank  Symbol      Entry        Target       Stop        Conf   Exit Window
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ --   (none)      --           --           --          --     --
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+No picks meet the >78% confidence threshold after honest chart re-evaluation.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+NOTE — NETWEB REMOVED (post-user chart review, Jun 2, 2026):
+  Original Rank 2 at 84% confidence has been REMOVED from recommendations.
+  Chart structure: Gap-up of +15% in ONE session (Rs 4,072 -> Rs 4,671) followed
+  by two sessions of flat-to-slight-down closes (Rs 4,620, Rs 4,666) with volume
+  at 0.20x avg. This is a vertical climax bar + stall pattern, NOT a breakout
+  consolidating above support. Asking for Rs 5,100 (+9.2% more) from the TOP of
+  a vertical spike with no continuation is statistically low-probability.
+  Mean reversion to Rs 4,300-4,400 is the higher-probability path.
+  See WATCHLIST section below for precise re-entry trigger.
+
+NOTE — HFCL DOWNGRADED (post-user chart review #2, Jun 2, 2026):
+  Original Rank 1 at 87% confidence has been DOWNGRADED to 76% (below threshold).
+  This means NO new entry in HFCL today. For existing Run #18 holders, see the
+  position guidance section below — it is a separate question from new entry.
+  See full chart re-assessment in the HFCL section below.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+================================================================================
+HFCL LIMITED (NSE: HFCL) — DOWNGRADED, NOT RECOMMENDED FOR NEW ENTRY TODAY
+Revised Confidence: 76% (below >78% threshold) | Optical Fiber & Telecom
+Reason: Decelerating-staircase exhaustion signature. See analysis below.
+================================================================================
+
+LIVE DATA (Jun 2, 2026):
+  Last Close:    Rs 182.73 (intraday range Rs 179-184 approx)
+  RSI (14d):     73.6   [elevated; rising into a flattening top]
+  MA5:           Rs 178.6  [close > MA5 = bullish, but gap compressing to 2.3%]
+  MA20:          Rs 155.1  [close >> MA20 = strong uptrend -- thesis still intact]
+  Vol Ratio:     0.08x 20d avg  [extremely thin -- thinner than NETWEB's 0.20x]
+  Distribution:  0.82x avg on down days  [still no distribution; institutions holding]
+  1d Return:     +0.05% (flat -- decelerating staircase, NOT a resumption day)
+  5d Return:     +4.9%
+  10d Return:    +30.9%
+  52w High:      Rs 189.08  [intermediate resistance before Rs 200]
+  52w Low:       Rs 59.82
+
+HONEST CHART RE-ASSESSMENT (decelerating-staircase read):
+
+  10-day sparkline re-examined by daily increment:
+    Session:   1    2    3    4    5    6    7    8    9    10
+    Close:   139  142  148  163  162  174  174  180  182  183
+    Daily:        +3   +6   +15  -1   +12   0   +6   +2   +1
+
+  Sessions 1-7 (launch phase): Strong daily prints. +3, +6, +15, +12, +6.
+  Sessions 8-10 (last 3 closes): 180 / 182 / 183 = +2, +1, narrowing fast.
+  The staircase that was printing +12-15 per session is now printing +1.
+  Daily increment deceleration ratio: 15x to 1x = 93% deceleration in range.
+
+  1. FLATTENING CONFIRMED:
+     The last 3 closes (180, 182, 183) show shrinking daily range: +2, +1.
+     This is the "decelerating staircase" signature -- not a vertical climax
+     (which NETWEB was), but the same exhaustion family. The momentum that
+     drove the stock from Rs 139 to Rs 183 is running out of fuel.
+
+  2. VOLUME 0.08x TODAY:
+     This is even thinner than NETWEB's 0.20x. NETWEB was removed partly because
+     0.20x volume meant "no fresh buyers." HFCL at 0.08x has essentially zero
+     new demand present. A controlled pause resumes on >1x volume. At 0.08x,
+     there is no resumption signal -- only absence of sellers (which is different
+     from presence of buyers).
+
+  3. RSI RISING INTO A FLAT TOP:
+     RSI 73.6 continues to be fed by prior momentum. But price increments are
+     shrinking. When RSI rises while daily price range compresses, that is a
+     bearish divergence forming at the top -- the oscillator is still pointing up
+     but the price engine has stalled.
+
+  4. MA5 GAP COMPRESSING:
+     At peak momentum, the stock was likely 8-12% above MA5. Today it is 2.3%
+     above MA5 (Rs 182.73 vs Rs 178.6). The compression of this gap means
+     the stock's energy is fading. If tomorrow prints flat or -0.5%, the stock
+     will touch or break below MA5. That is the key risk.
+
+  5. RS 200 TARGET IS TOO AGGRESSIVE:
+     Rs 200 (+9.3%) requires:
+     (a) Breaking through 52w high at Rs 189 (+3.5%) -- an intermediate resistance
+         that takes buyers to push through.
+     (b) Then an additional +5.8% to Rs 200 beyond that.
+     At +1/session (today's print rate) the stock would reach Rs 188 in 5 sessions
+     -- still below the 52w high. Rs 200 in 5 sessions requires +1.9% per session.
+     On 0.08x volume, that is not realistic today.
+
+  CONTROLLING PAUSE vs EXHAUSTION STALL:
+  - Controlled pause: price holds, volume drops <0.5x, THEN resumes on >1x volume.
+    The defining feature is the RESUMPTION -- buyers return with volume.
+  - Exhaustion stall: price flattens at top, volume stays thin, no resumption comes.
+    The defining feature is the ABSENCE of returning buyers.
+  Today's data point (0.08x, +0.05%) alone does not resolve which this is.
+  But combined with 3 consecutive shrinking-range closes, the balance of probability
+  shifts toward exhaustion stall. A controlled pause after a 12-session run typically
+  shows a single day of thin volume then resumes. Three consecutive shrinking closes
+  is a signal, not noise.
+
+REVISED PARAMETERS (if the resumption trigger fires in a future session):
+  Revised Target:     Rs 189 (52w high retest, +3.5% from current)
+  Tightened Stop:     Rs 176 (below MA5 support level; MA5 break = momentum broken)
+  Revised Confidence: 76% (below >78% threshold -- NO new entry today)
+  Potential Gain:     +3.5% vs prior +9.3%
+  Risk/Reward:        (Rs 189 - Rs 183) / (Rs 183 - Rs 176) = Rs 6 / Rs 7 = 0.86:1
+  R:R < 1:1 is a HARD NO for new entry.
+
+  The revised parameters confirm the downgrade independently via R:R logic:
+  Rs 189 target / Rs 176 stop = 0.86:1 risk/reward. Below the 1.5:1 minimum.
+  Do NOT enter at current levels with these revised parameters.
+
+WHAT TO WATCH FOR -- RE-ENTRY TRIGGER:
+  Condition A (resumption from current level):
+    HFCL closes above Rs 185 on volume >= 0.8x 20d avg within next 3 sessions.
+    This confirms buyers returned after the pause. Revised target then Rs 192-195
+    (approaching 52w high), stop Rs 178, R:R approximately 1.7:1.
+    Confidence on this trigger: 80-82%.
+
+  Condition B (MA5 pullback and reclaim):
+    If stock pulls back to MA5 zone (Rs 178-180) on thin volume (no distribution),
+    then reclaims above Rs 182 with volume >= 0.8x avg:
+    Entry Rs 179-181, target Rs 192-195, stop Rs 174. R:R approximately 2:1.
+    Confidence on this trigger: 82-84%.
+
+  Condition C (wait for a stronger resumption):
+    Stock consolidates flat Rs 180-185 for 2-3 more sessions, then breaks above
+    Rs 186 (approaching 52w high) with volume >= 1.2x avg. That break IS the
+    signal. Enter at Rs 186-188, target Rs 196-200, stop Rs 181.
+    Confidence on this trigger: 84%.
+
+  In all cases: DO NOT enter unless volume confirms the move. 0.08x = no signal.
+
+VALIDATION (Step 3 -- carried forward from Run #19):
+  Negative news:     No SEBI, fraud, or management issues found
+  US market status:  POSITIVE (Nasdaq +0.42%, S&P +0.26%)
+  Industry trend:    GROWING -- AI data centers, 5G, BharatNet all expanding
+  AI disruption:     FALSE -- HFCL is a hardware beneficiary
+  Final new-entry:   NO (confidence 76% < 78% threshold + R:R < 1:1)
+
+10-day ASCII Sparkline (Rs 139 -> Rs 183):
+  Rs 139 / 142 / 148 / 163 / 162 / 174 / 174 / 180 / 182 / 183
+  Chart: _ . - = = * * # # #  [staircase flattening in last 3 bars]
+  The staircase is losing altitude gain per step. Three steps of +6, +2, +1.
+  Next step needs to be +3 or more on volume to confirm the run continues.
+
+
+================================================================================
+NETWEB TECHNOLOGIES INDIA LTD (NSE: NETWEB) — REMOVED FROM RECOMMENDATIONS
+[Post-user chart review, Jun 2, 2026 — moved to WATCHLIST]
+================================================================================
+
+CHART STRUCTURE HONEST ASSESSMENT:
+  The run from Rs 4,072 -> Rs 4,671 (+14.7%) occurred in essentially ONE session —
+  a single vertical gap bar. The next two sessions (Rs 4,620, Rs 4,666) showed NO
+  continuation: price consolidated flat-to-slightly-down, with volume at only 0.20x
+  the 20-day average. This is NOT "pullback to prior resistance as support." It is
+  a classic climax / blow-off bar followed by seller-buyer exhaustion stall.
+
+  Distinguishing characteristics of THIS move vs a genuine breakout:
+  - Genuine breakout: Stock grinds above resistance over 2-4 sessions, pulls back
+    on low volume, then resumes. Each session adds to the thesis.
+  - This move: Single vertical bar. Two sessions of going nowhere. No buyers
+    returning to push higher. RSI 78.6 built in one session, not a multi-day grind.
+    Volume 0.20x on both post-spike sessions = zero fresh demand.
+
+  RSI 78.6 on a one-bar move is a MUCH weaker signal than RSI 78.6 after a
+  multi-day grind. In a multi-day grind, each session of accumulation confirms
+  buyers are present. In a one-bar spike, RSI 78.6 reflects the spike itself,
+  not sustained conviction.
+
+WHY THE ORIGINAL 84% WAS WRONG:
+  The confidence score credited "Breakout from accumulation base +8" and
+  "Pattern H adjacent momentum." These credits were valid for the BREAKOUT SESSION
+  (when the stock moved from Rs 4,072 to Rs 4,671). They are NOT valid two sessions
+  later when the stock has produced zero follow-through. The 84% was correctly
+  computed for entry on the breakout day itself; it was incorrectly applied to a
+  stalled stock two days after the vertical bar with 0.20x volume.
+
+  The catalysts (NIFTYIT, AI infra, Pattern O) remain valid as a SECTOR THESIS.
+  They do not make the chart structure safer. A good sector thesis at the top of
+  a vertical spike without volume continuation is a low-probability entry.
+
+WHAT THE CHART SAYS:
+  - Highest-probability outcome: reversion to Rs 4,300-4,400 (MA5 was Rs 4,420 at
+    the time of original recommendation). This is where real support sits — the
+    base from which the spike launched.
+  - Second-probability: tight sideways chop Rs 4,550-4,700 for 5-10 sessions while
+    RSI digests. This would be the base formation that justifies re-entry.
+  - Lowest-probability: immediate extension to Rs 5,100 (+9.2% from current) without
+    any base formation. The volume tells us buyers are not chasing.
+
+DECISION: REMOVE from recommendations. Add to WATCHLIST with re-entry trigger below.
+
+WATCHLIST RE-ENTRY TRIGGER:
+  Option A (pullback and reclaim):
+    Price pulls back to Rs 4,300-4,400 zone (MA5 reclaim area) AND THEN:
+    - Two consecutive closes above Rs 4,450 on volume >= 0.8x 20d avg
+    - RSI back in 52-65 range (digested the spike)
+    - No distribution volume on down days during pullback (down days < 1.0x avg)
+    Confidence on trigger: 82-84 (entry at a stronger point with volume confirmation)
+    Target on re-entry: Rs 4,800-4,850 (retest of spike high = first realistic target)
+    Stop on re-entry: Rs 4,150 (below base support)
+
+  Option B (base formation above support):
+    If stock does NOT pull back to Rs 4,300 but instead:
+    - Holds Rs 4,550-4,700 range for 5+ sessions with no new lows
+    - Volume on down days consistently below 0.7x 20d avg (no distribution)
+    - Then breaks above Rs 4,700 on volume >= 1.2x 20d avg
+    Confidence on trigger: 80 (base formation less established than Option A)
+    Target: Rs 4,920-4,960 (prior 52w high area)
+    Stop: Rs 4,480 (below range low)
+
+  NEVER re-enter at current levels (Rs 4,620-4,700) with 0.20x volume.
+  The lack of follow-through volume is the disqualifier. Wait for one of the
+  two triggers above before any entry.
+
+
+================================================================================
+EXCLUDED BY STEP 2.5 — WATCHLIST
+(Stocks excluded today + specific re-entry triggers)
+================================================================================
+
+HFCL (NSE: HFCL) -- DOWNGRADED (Decelerating-Staircase Exhaustion, Rule 46b)
+  Current: Rs 182.73 (RSI 73.6, volume 0.08x avg, 3 closes with shrinking range)
+  Status: The multi-day staircase from Rs 139 to Rs 183 (+31.7%) has visibly
+  decelerated. Last 3 closes: 180 / 182 / 183 = daily increments of +2, +1.
+  Compare to launch-phase increments of +15, +12 per session.
+  Volume 0.08x today = no fresh buyers stepping in. This is NOT a controlled pause
+  that is about to resume -- it is momentum deceleration. Rs 200 (+9.3%) requires
+  breaking 52w high at Rs 189 as an intermediate step, then an additional +5.8%.
+  On decelerating daily prints and 0.08x volume, that path is low-probability.
+  The sector thesis (Pattern O, AI infra, BharatNet, 5G) remains fully valid.
+  The chart structure does NOT support a new entry at current levels today.
+  Existing Run #18 holders (entry Rs 180.55): HOLD with tightened parameters (see above).
+  Re-entry Option A (resumption from here -- lower conviction):
+    HFCL closes above Rs 185 within 3 sessions on volume >= 0.8x avg.
+    This confirms buyers returned after the pause.
+    Target: Rs 192-195 (approaching 52w high). Stop: Rs 178. R:R approx 1.7:1.
+    Confidence on trigger: 80-82%.
+  Re-entry Option B (MA5 pullback and reclaim -- higher conviction):
+    Price pulls back to Rs 178-180 (MA5 zone) on thin volume (no distribution),
+    then reclaims Rs 182 with volume >= 0.8x avg.
+    Target: Rs 192-195. Stop: Rs 174 (below pullback low). R:R approx 2:1.
+    Confidence on trigger: 82-84%.
+  Re-entry Option C (base and breakout -- highest conviction):
+    Stock consolidates Rs 180-185 for 2-3 sessions, then breaks above Rs 186
+    (approaching 52w high) with volume >= 1.2x avg.
+    Target: Rs 196-200. Stop: Rs 181. R:R approx 2.4:1.
+    Confidence on trigger: 84%.
+  NEVER re-enter at current levels with 0.08x volume and +1 daily increment.
+  Learning note: "Decelerating-staircase exhaustion (3+ closes with shrinking daily
+  range + volume < 0.2x) is the same exhaustion FAMILY as the one-bar climax spike.
+  Different shape, same outcome -- do not project the prior momentum target forward."
+  Current: Rs 4,666 (RSI 78.6, volume 0.20x avg, 2 sessions flat after +15% vertical bar)
+  Status: The move from Rs 4,072 -> Rs 4,671 was a single-session +15% gap bar. The next
+  two sessions (Rs 4,620, Rs 4,666) showed ZERO continuation with 0.20x avg volume. This
+  is a climax/blow-off bar that has stalled, NOT a breakout consolidating above support.
+  Asking for Rs 5,100 (+9.2% more) from the top of a vertical spike without buyers
+  stepping up is a low-probability trade. Mean reversion to Rs 4,300-4,400 is more likely.
+  The sector thesis (Pattern O, AI infra, NIFTYIT tailwind) remains fully valid.
+  The chart structure does NOT support entry at current price.
+  Re-entry Option A (pullback + reclaim -- higher conviction):
+    Pullback to Rs 4,300-4,400 (MA5 support zone) then close above Rs 4,450 on
+    volume >= 0.8x 20d avg + RSI in 52-65 range. Confidence 82-84 on trigger.
+    Target: Rs 4,800-4,850 (first-bar retest of spike high). Stop: Rs 4,150.
+  Re-entry Option B (base above support -- lower conviction):
+    5+ sessions sideways Rs 4,550-4,700 with no new lows + down-day vol < 0.7x avg,
+    THEN break above Rs 4,700 on volume >= 1.2x avg.
+    Confidence: 80. Target: Rs 4,920-4,960. Stop: Rs 4,480.
+  Learning note: "Vertical one-bar move + 2-day stall = exhaustion, not breakout.
+  Do NOT project +5%+ target from top of spike. Reset target to first-bar retest."
+
+LLOYDSME (NSE: LLOYDSME) -- FAIL_LOW_VOLATILITY (Rule 26e full check: 39/40)
+  Current: Rs 1,828 (RSI 64, near 52w high Rs 1,888)
+  Status: Run #18 entry at Rs 1,820.90 (Jun 1). Rule 26e passes with 64-day window
+  check (16/11) but FAILS with full 252-day seasoned check (39/40).
+  Strict rule: Seasoned stocks require >=40 days in 252-day window. FAIL.
+  If entered Jun 1: Current price Rs 1,828 = +Rs 7 gain vs entry. Thin margin.
+  Re-entry condition: Stock needs 1 more high-volatility day (>=3% move) in the
+  trailing 252-day window to cross the 40-day threshold. At current RSI 64 with
+  no distribution, that could happen on any strong session.
+  Watch level: Rule 26e count crosses 40/252 AND RSI remains 55-70 (no overbought)
+
+STLTECH (NSE: STLTECH) -- FAIL_RSI_CEILING (RSI 89.4)
+  Current: Rs 585 (+3.9% today, RSI 89.4, 26e PASS 99/40)
+  Status: RSI 89.4 is a HARD EXCLUDE per v2 rules. Ceiling = 82. No exceptions.
+  Despite being the strongest Pattern O candidate by fundamentals and 26e score,
+  RSI 89.4 means the stock is deeply overbought and reversal risk is high.
+  This was a major missed opportunity on Jun 1 (RSI was likely 82-84 at close).
+  Re-entry condition: RSI pulls back to 65-75 zone. That may require a 3-7 day
+  correction phase. Stock must retrace to Rs 480-520 zone before re-entry.
+  Watch level: RSI pullback to 70 + close above Rs 540 on volume >= 1.0x avg
+
+TATACOMM (NSE: TATACOMM) -- FAIL_RSI (RSI 79.5) + FAIL_TREND (below MA5)
+  Current: Rs 1,934 (RSI 79.5, below MA5 Rs 1,963, 26e PASS 8/? days)
+  Status: RSI 79.5 is in the exception window (75-82), but the stock is BELOW
+  its MA5 (Rs 1,963). Rule: for a stock in the exception window, MUST be above MA5.
+  Below MA5 = near-term momentum is negative. FAIL_TREND.
+  Re-entry condition: RSI 79.5 + close ABOVE MA5 (Rs 1,963) on volume >= 1.0x avg.
+  This is the cleanest entry setup for TATACOMM when it recovers.
+  Watch level: Close above Rs 1,963 (MA5 reclaim) on average+ volume
+
+MOTILALOFS (NSE: MOTILALOFS) -- NEAR MISS (confidence ~78%, not strictly >78%)
+  Current: Rs 857 (RSI 54.3, 26e PASS 42/40, DistVol 0.63x, below MA5 Rs 875)
+  Status: Intraday showed strong relative strength (+3.1% when Nifty was -0.43%).
+  However, final volume came in at 0.09x avg (very thin). The early strength was
+  not confirmed by volume on close. Confidence drops to ~78% (below strict >78% rule).
+  The stock is also below MA5 at close.
+  Re-entry condition: Close above MA5 Rs 875 on volume >= 0.5x avg.
+  If that happens alongside a Nifty recovery day, confidence would cross 79-80%.
+  Watch level: Rs 880 close on volume >= 0.5x 20d avg
+
+KEC INTERNATIONAL (NSE: KEC) -- FAIL_NO_REVERSAL_CONFIRMED
+  Current: Rs 493 (RSI 30.6, below MA5, 26e PASS 16/40)
+  Status: RSI recovery from 31 (pattern C territory) but stock shows no higher
+  closes from RSI bottom (consecutive sessions). Pattern C rule for infra stocks:
+  requires 3+ consecutive higher closes from RSI bottom before entry.
+  Re-entry condition: 3+ consecutive closing sessions above the previous close
+  starting from this RSI bottom. Current count = 0 (today Rs 493 < yesterday Rs 498).
+  Watch level: 3 consecutive closes each above the prior day, from RSI base ~30
+
+GRSE (NSE: GRSE) -- FAIL_DOWNTREND + FAIL_LOW_VOLATILITY
+  Current: Rs 2,585 (RSI 24.3, below MA5, 26e = 9 days check only)
+  Status: RSI 24.3 is extreme distress. Post-Iran-deal defense sector weakness
+  continues. No sign of base formation. Rule 26d: active downtrend.
+  Watch level: RSI recovery to 38+ and close above prior swing high Rs 2,800
+
+BEL (NSE: BEL) -- PERMANENT CAUTION (0/4 win rate; Rule 26d + 26e both FAIL)
+  Current: Rs 401 (RSI 27.1, -1.5% today, distribution vol 1.08x)
+  Re-entry: Close above Rs 436 on vol >= 1.5x avg (prior swing high break)
+
+SWIGGY (NSE: SWIGGY) -- Pattern S WATCH (LPI boost intact)
+  Current: Rs 246 (RSI 44.9, -1.5% today, -9.1% 5d)
+  Status: Continued decline below trigger zone. LPI thesis (4+ quarters of loss
+  improvement) is intact but chart not confirming. Distribution vol 1.07x.
+  Re-entry trigger: Close > Rs 262 on volume >= 5M + ETERNAL up >1%
+  Watch: ETERNAL (Zomato) performance as proxy
+
+INDIGO/INTERGLOBE AVIATION (NSE: INDIGO) -- EVENT-DRIVEN WATCH (Large-Cap)
+  Current: Rs 4,406 (-1.1% today, RSI 62.1, UPTREND, 26e PASS 16/40)
+  Status: Large-cap. Eligible under new sector-trend rule if aviation catalyst fires.
+  No ATF duty cut or government airline relief announced today.
+  WTI +4.73% to $91.49 is modestly NEGATIVE for airlines (jet fuel costs).
+  Watch level: Government ATF duty cut announcement = immediate BUY trigger
+  Entry on catalyst: Rs 4,400-4,450 zone, target Rs 4,800, stop Rs 4,200, conf 86%
+
+
+================================================================================
+EVENT-DRIVEN WATCHLIST: TRENT — PRE-AGM POSITIONAL ANALYSIS
+================================================================================
+
+TRENT LIMITED (NSE: TRENT)
+AGM Date: June 23, 2026
+Days to AGM: 21 calendar days / ~15 trading days
+
+LIVE DATA (Jun 2, 2026):
+  Close:    Rs 4,152  |  RSI: 58.2  |  MA5: Rs 4,204  |  MA20: Rs 4,175
+  52w High: Rs 6,261  |  52w Low: Rs 3,276
+  1d: -0.6% | 5d: -2.5% | 10d: +1.6% | 30d: -5.9% | 1y: -26.4%
+
+RULE 26e CHECK -- DISQUALIFIER FOR STANDARD RECOMMENDATION:
+  High-vol days in 252d: 29 out of required 40 = FAIL
+  Trent's 1y return is -26.4% and 30d is -5.9%. The stock has not been generating
+  the >=3% daily swings needed to pass Rule 26e for a short-term trading pick.
+  Conclusion: TRENT does NOT qualify for a standard pipeline recommendation today.
+
+AGM PRE-RUN HISTORICAL EVIDENCE:
+  June 2024 (TRENT): Rs 4,534 to Rs 5,475 = +17.5% gain during June month
+  June 2025 (TRENT): Rs 5,502 to Rs 6,218 = +10.7% gain during June month
+  Both years show a significant pre-AGM run-up in June.
+  Pattern appears robust over 2 consecutive years.
+
+CURRENT SETUP ASSESSMENT:
+  POSITIVE:
+  - RSI 58.2 is in healthy territory (not overbought, not oversold)
+  - Historical pre-AGM run-up (+10.7% to +17.5%) is well-documented
+  - Stock is above MA50 (Rs 4,006) = medium-term support intact
+  - Below MA200 (Rs 4,341) -- if MA200 is reclaimed, strong signal
+  - Trent's fundamentals are intact: Tata Group, Westside, Star Bazaar, Zudio
+  - Zudio's rapid expansion is a structural growth story
+  - Volume on close: 0.08x avg -- not panicked selling (holders staying put)
+
+  NEGATIVE:
+  - Below MA5 (Rs 4,204) and MA20 (Rs 4,175) -- near-term trend is down
+  - -26.4% 1y return -- the stock has been in a secular decline from the Rs 6,261 high
+  - Rule 26e FAIL (29/40) -- not a volatile-enough stock for our standard T+5-T+10 picks
+  - Broad market weakness (Nifty -0.43% 4th consecutive day) is headwind
+  - WTI +4.73% is modestly negative (inflation risk = consumer discretionary headwind)
+
+POSITIONAL AGM TRADE SUGGESTION (event-driven, not standard recommendation):
+  Thesis: TRENT historically runs +10-18% in June before its AGM. The stock is
+  at a historically low level relative to where these prior June runs started
+  (Rs 4,534 in June 2024 and Rs 5,502 in June 2025). The current Rs 4,152 entry
+  is BELOW both prior June starting prices -- meaning the upside potential is
+  substantial IF the AGM pre-run pattern holds.
+
+  ENTRY ZONE:     Rs 4,100 - Rs 4,200 (current zone; ideal if stock tests MA20
+                  support at Rs 4,175 and holds intraday)
+  BETTER ENTRY:   Rs 4,050 - Rs 4,100 (if there is a further 1-2% dip in next
+                  2 trading days, this would be a stronger accumulation zone)
+  TARGET:         Rs 4,600 - Rs 4,750 (conservative; prior June run +10-17%)
+  STOP:           Rs 3,900 (below the 52w low Rs 3,276 support zone; aggressive
+                  stop giving the positional trade room to breathe)
+  HOLDING:        T+15 to T+20 (hold to June 20-22 for pre-AGM maximum heat)
+
+  CONFIDENCE ESTIMATE (event-driven, bypassing Rule 26e):
+  If this were evaluated as a standard pick: ~72-74% (Rule 26e failure is the
+  primary deduction). As an event-driven positional trade with a specific June 23
+  catalyst and 2 years of confirming history: 76-78% is achievable.
+  Below the >78% hard threshold for a standard recommendation.
+
+  VERDICT: WATCHLIST -- EVENT-DRIVEN. Not a standard recommendation.
+  User should evaluate based on their own risk appetite for a positional AGM trade.
+  The base thesis is valid. The chart is weak but not broken. If Nifty stabilizes
+  and TRENT reclaims MA5 (Rs 4,204) on volume >= 1.0x avg in the next 2 sessions,
+  that would be the specific entry trigger with confidence approaching 79-80%.
+
+  AGM ENTRY TRIGGER: TRENT close > Rs 4,200 on volume >= 0.5x avg = entry signal
+  AGM WATCH TRIGGER: MA200 reclaim (Rs 4,341) = position doubling opportunity
+
+================================================================================
+RUN #18 POSITIONS STATUS (Jun 1 entries: HFCL, LLOYDSME)
+================================================================================
+
+HFCL (Entry Jun 1: Rs 180.55 | Original Target Rs 198 | Stop Rs 170):
+  Current: Rs 182.73 = +Rs 2.18 / +1.2% from entry
+  Status: IN THIN PROFIT. Thesis intact. Stop not threatened.
+  REVISED PARAMETERS FOR EXISTING POSITION:
+    Revised Target: Rs 189 (52w high retest; the chart says Rs 200 is now too far)
+    Tightened Stop: Rs 176 (below MA5 Rs 178.6 -- if MA5 breaks, exit immediately)
+    Hold window:   T+3 to T+5 from Jun 1 = Jun 5-6 at latest
+  Action: HOLD but tighten parameters. The 10-day run is decelerating but NOT broken.
+  No distribution selling. MA5 intact as support. The 52w high at Rs 189 is the
+  realistic next target from this entry.
+  NEW-ENTRY STATUS: DO NOT add to position or start fresh today. Confidence for
+  new entry has dropped to 76% (below >78% threshold) AND R:R on revised target
+  is 0.86:1 (below minimum). Hold only because entry was at Rs 180.55 with a
+  better cost basis.
+  EARLY EXIT TRIGGER: Close below MA5 (Rs 178.6) on any session = immediate exit.
+  Lock the +1.2% gain rather than let it become a loss.
+
+LLOYDSME (Entry Jun 1: Rs 1,820.90 | Target Rs 1,965 | Stop Rs 1,740):
+  Current: Rs 1,828 = +Rs 7.10 / +0.4% from entry
+  Status: THIN PROFIT. Rule 26e retroactive FAIL (39/40 full check).
+  Action: RISK MANAGEMENT REQUIRED. The Rule 26e retroactive failure means this pick
+  should not have been recommended on Jun 1. Current position is barely profitable.
+  Options:
+  (a) CONSERVATIVE: Exit at current Rs 1,828 (lock Rs 7.10 gain; ~+0.4%)
+  (b) AGGRESSIVE: Hold to target Rs 1,965 with tight stop Rs 1,780 (moved up from Rs 1,740)
+      Rationale: Stock is near 52w high; if one more high-volatility day occurs, Rule 26e
+      passes and the position becomes rule-compliant. RSI 64 is healthy.
+  Recommended: Option (a) for risk-adjusted exit. Rule violation = exit.
+  LLOYDSME re-entry: when Rule 26e passes (40/252 confirmed) + close above MA5
+
+================================================================================
+STEP 5 — BACKTEST (Run #18: Jun 1 picks)
+================================================================================
+
+HFCL (Jun 1 entry Rs 180.55 -> Jun 2 current Rs 182.73):
+  Return: +1.2% so far (1 day hold)
+  REVISED Target Rs 189 = 3.4% remaining upside from current (not Rs 200)
+  Stop Rs 176 = 3.7% remaining downside (tightened from Rs 170)
+  Status: ON TRACK but decelerating. Revised parameters applied.
+  Exit signal: Rs 189 zone OR MA5 break (Rs 178.6) whichever comes first.
+
+LLOYDSME (Jun 1 entry Rs 1,820.90 -> Jun 2 current Rs 1,828):
+  Return: +0.4% so far (1 day hold)
+  Target Rs 1,965 = 7.5% remaining upside
+  Stop Rs 1,740 = 4.9% remaining downside
+  Status: RULE VIOLATION (26e retroactive fail). See position management above.
+
+
+================================================================================
+TOKEN USAGE & COST (Estimated Run #19)
+================================================================================
+
+Step 1   (Basestock reused):                0 in / 0 out / Rs 0
+Step 1.5 (Macro scan + web fetch attempts): ~6,000 in / ~2,000 out / ~Rs 0.20
+Step 2   (Pattern analysis -- all stocks):  ~55,000 in / ~4,000 out / ~Rs 1.80
+Step 2.5 (Price action gate):               ~15,000 in / ~1,000 out / ~Rs 0.50
+Step 3   (Validation):                      ~8,000 in / ~1,000 out / ~Rs 0.20
+Step 4   (Formatting):                      ~22,000 in / ~4,000 out / ~Rs 0.75
+Step 5   (Backtest):                        ~3,000 in / ~500 out / ~Rs 0.10
+yfinance data fetches:                      ~Rs 0.00 (free API)
+───────────────────────────────────────────────────────────────────────────────
+TOTAL:                                      ~Rs 3.55 (~$0.04 USD)
+[Running as single Sonnet orchestrator; actual cost varies with token counts]
+
+
+================================================================================
+DISCLAIMER
+================================================================================
+This output is for informational and research purposes only. It does not
+constitute financial advice or a solicitation to buy or sell any security.
+Past pattern performance does not guarantee future results. Always validate
+with your own research, consult a SEBI-registered financial advisor, and size
+positions according to your personal risk tolerance before investing.
+================================================================================

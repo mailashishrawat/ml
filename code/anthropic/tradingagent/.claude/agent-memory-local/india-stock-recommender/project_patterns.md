@@ -1,8 +1,130 @@
 ---
 name: Indian Market Patterns - Observations and Duopoly Pairs
-description: Technical patterns applied, known duopoly pairs, accuracy observations from 17 pipeline runs (updated May 27, 2026)
+description: Technical patterns applied, known duopoly pairs, accuracy observations from 20 pipeline runs (updated June 3, 2026 -- Run #20 0-pick day; R:R rule at 52w high, Pattern O single-session, WTI $95 early alert, pre-results accumulation scan added)
 type: project
 ---
+
+## *** PINNED RULE CHANGES (effective 2026-06-02, permanent) ***
+
+### STEP 2.7 — MANDATORY CHART READ (new hard gate, pipeline position: after Step 2.5, before Step 3)
+
+Every candidate that passes Step 2.5 must pass an explicit chart read before entering the
+recommendation list. No exceptions for any pattern, catalyst type, or universe membership.
+
+Required evaluations in Step 2.7:
+  (a) Sub-Rule 26f check: single-session +10%+ followed by 1-2 sessions flat/down, vol < 0.4x
+      = CLIMAX EXHAUSTION. FAIL.
+  (b) Rule 46b check: 3+ consecutive closes with shrinking daily range + vol < 0.2x throughout
+      = DECELERATING-STAIRCASE EXHAUSTION. FAIL.
+  (c) Daily range trajectory (last 3 closes): EXPANDING / STEADY / COMPRESSING.
+  (d) Volume trajectory (last 3 sessions): RISING / FLAT / DRYING UP.
+      EXCEPTION: confidence > 90% -- drying volume alone NOT auto-FAIL. Flag it, weigh vs setup quality.
+  (e) Distance from MA5 + whether momentum is ACCELERATING or COOLING.
+  (f) Distance to nearest resistance vs. proposed target. If target requires 2+ additional +5%
+      resistance breaks, revise target to nearest realistic resistance.
+  (g) R:R on the REVISED realistic target >= 1.5:1. Below 1.5:1 = FAIL, no exceptions.
+
+Output: PASS/FAIL flag + one-paragraph honest tape read. FAIL = watchlist only.
+Cannot be overridden by confidence score, news catalyst, or any other factor.
+
+### CONFIDENCE THRESHOLD: RAISED TO >90% (effective 2026-06-02, permanent)
+
+Final recommendation threshold is now STRICTLY > 90%. Stocks at 78-90% = watchlist only.
+
+Applies universally:
+  - Standard picks
+  - Large-cap trending-sector picks (the prior 88% cap is superseded -- >90% required)
+  - Pattern O AI/Cloud Infra Universe picks
+  - Event-driven notes (TRENT AGM etc.) -- watchlist if below 90%, never main picks
+
+The 0-pick day is the EXPECTED outcome on most days. Ship 0 if nothing clears 90%.
+
+---
+
+## Run 19 Post-Review Update #2 (June 2, 2026): HFCL DOWNGRADED, 0-PICK DAY
+
+- HFCL (originally Rank 1, 87%) DOWNGRADED to 76% (below >78% threshold) after honest chart re-read.
+- User correctly identified "decelerating staircase" signature: last 3 closes 180/182/183 = +2/+1 daily
+  increments (from peak +15/+12). Volume 0.08x = thinner than NETWEB (0.20x) which was removed earlier.
+- Rs 200 target requires breaking 52w high Rs 189 first, then +5.8% more. Two separate moves on
+  a decelerating base with 0.08x volume = low probability. R:R on revised Rs 189 target = 0.86:1 (< 1.5:1 minimum).
+- Run #18 holders (entry Rs 180.55): HOLD with revised params (target Rs 189, stop Rs 176, early exit if
+  MA5 Rs 178.6 breaks). Do NOT add to position.
+- RESULT: 0-PICK DAY. Zero picks is the correct answer. Do not pad.
+
+### NEW RULE 46b -- Decelerating-Staircase Exhaustion (added 2026-06-02):
+"3+ consecutive closes with shrinking daily range (e.g., +6, +2, +1) AND volume < 0.2x
+on deceleration sessions = DECELERATING-STAIRCASE EXHAUSTION.
+Same exhaustion family as Sub-Rule 26f (one-bar climax spike). Different shape, same outcome.
+Do NOT project prior momentum target forward. Reset target to nearest resistance (52w high,
+prior swing high). Tighten stop to below MA5. R:R on revised target must be >= 1.5:1.
+Re-entry requires volume confirmation (>= 0.8x) on a resumption session."
+
+Re-entry triggers after decelerating-staircase exhaustion:
+  A: Close above deceleration-zone high (Rs 185 for HFCL) within 3 sessions on vol >= 0.8x avg.
+     Target = approach to 52w high. Conf 80-82%.
+  B: MA5 pullback on thin volume (no distribution), then reclaim on vol >= 0.8x avg.
+     Better R:R. Conf 82-84%.
+  C: 2-3 session base, then break above prior high on vol >= 1.2x avg. Conf 84%.
+
+## Run 19 Post-Review Update #1 (June 2, 2026): NETWEB REMOVED
+
+- NETWEB (originally Rank 2, 84%) REMOVED after user chart review.
+- Chart structure: Rs 4,072 -> Rs 4,671 (+14.7%) in ONE session. Sessions 8-9: Rs 4,620 and Rs 4,666
+  with 0.20x avg volume. Vertical climax/blow-off bar followed by 2-day stall.
+- Original error: Pipeline applied "breakout continuation" credits 2 sessions after the spike without
+  re-evaluating volume. Volume 0.20x = no buyers present.
+- Re-entry Option A: Pullback to Rs 4,300-4,400 base, reclaim Rs 4,450 on vol >= 0.8x avg, RSI 52-65. Conf 82-84.
+- Re-entry Option B: 5+ sessions sideways Rs 4,550-4,700, break above Rs 4,700 on vol >= 1.2x avg. Conf 80.
+- HFCL (Rank 1, 87% originally) held through post-review #1 but then downgraded in post-review #2.
+
+### NEW RULE 46 -- Sub-Rule 26f: Vertical One-Bar Spike Stall (added 2026-06-02):
+"Vertical one-bar move (+10%+ in one session) with 2-day stall (flat/down) AND volume < 0.4x = CLIMAX.
+Remove from recommendations. Move to watchlist. Reset target to first-bar retest, not beyond.
+Re-entry requires base formation BELOW the spike high."
+
+### RULE 46 FAMILY SUMMARY (complete as of June 2, 2026):
+Both sub-signatures fall under Rule 46 (exhaustion at top). Apply to any stock at top of move:
+  Sub-Rule 26f: Single session +10%+ followed by 2 sessions flat/down with vol < 0.4x.
+  Rule 46b:     3+ consecutive closes with shrinking daily range AND vol < 0.2x throughout.
+Action for both: Remove from new-entry recommendations. Existing positions: revise target to nearest
+resistance, tighten stop to below MA5, hold only if not breaking early exit trigger.
+
+
+
+- Basestock reused (user instruction: do not regenerate).
+- NIFTYIT +3.03% = AI/data center infrastructure theme dominant. Key insight: optical fiber/hardware stocks are NOT IT outsourcing stocks — they are AI BENEFICIARIES, not victims.
+- WTI $89.63 (below $95, bouncing). Iran-deal world continues.
+- 2 picks: HFCL (84%) and LLOYDSME (82%).
+- HFCL: At 52w high, +29% in 10 days, Pattern O (data center AI infra), progressive higher highs/lows, no distribution. RSI 75 (valid per v2 rules, ceiling = 82). All Rule 26 checks: PASS.
+- LLOYDSME: RSI recovery from 42 to 58 in 5 days (Pattern D), near 52w high, no distribution, MACD above signal, metals sector rotation. All Rule 26 checks: PASS.
+- WAAREEENER: Excluded by Rule 26e — only 8 days with >=3% move in 65d; proportional floor = 11. Hard fail despite RSI recovery.
+- INOXWIND: Excluded by Rule 26a (Q4 earnings miss; -7% on 1.84x vol) + Rule 26d (active downtrend).
+- JYOTICNC: RSI=2, extreme distress. Excluded.
+- Run #17 batch (NATIONALUM/KEC/ASAHIINDIA): approximately -2.2% loss. Distribution volume on NATIONALUM (4.57x avg) was a valid warning. KEC RSI recovery failed — need 3+ consecutive recovery sessions before Pattern C entry in infra stocks.
+
+### New Rules (Run 18):
+38. PATTERN O SCAN RULE: When NIFTYIT moves >+2% on any day, immediately scan HFCL, STLTECH, TEJAS NETWORKS for (a) RSI < 78, (b) no distribution volume, (c) above MA5, (d) near/above 52w high. These are AI data center hardware plays that benefit DIFFERENTLY from NIFTYIT moves vs IT outsourcing.
+39. PATTERN C INFRA RULE: For infrastructure/capex stocks (KEC, BHEL, NBCC, IRCON), Pattern C requires 3+ consecutive sessions of higher closes from RSI bottom — not just a single day of RSI crossing 42. These stocks bounce-and-fail more frequently.
+40. MOMENTUM CONTINUATION RULE: When a stock shows 10d return >15% with progressive higher highs/lows AND no distribution, enter on momentum continuation (do NOT wait for pullback). The pullback may not come before the next leg.
+41. AIRLINE MONITORING: INDIGO (IndiGo/InterGlobe Aviation) is the only active NSE airline. SpiceJet appears suspended/delisted. Trigger for INDIGO entry (large-cap, outside standard universe): ATF duty cut OR government airline relief package announcement. Entry trigger: Rs 4,600 close on vol >= 1.5x avg after government news.
+
+## Run 18 Key Updates (May 29, 2026 — First trading day post Bakri Eid):
+- Validation run: Run #17 picks (NATIONALUM/KEC/ASAHIINDIA) all confirmed at valid entry levels.
+- NATIONALUM: Rs 435.25 close, RSI 63.4. Intraday Rs 441.50 = touched new 52w high territory.
+  Next session watch: Close above Rs 439.3 (52w high) on normal volume = breakout confirmed.
+  If confirmed Jun 2, target upgrades from Rs 465 to Rs 475-480.
+- KEC: Rs 499.1 close, RSI 39.9. Volume 0.10x = holiday-week thin (expected). Base intact.
+  Rs 469.4 low (52w low) held. Pattern C recovery thesis unchanged. Target Rs 548 = MA50.
+- ASAHIINDIA: Rs 912.5 close, RSI 66.8. MA200 (Rs 909) now CONFIRMED SUPPORT after close above.
+  Intraday high Rs 946.25 = 4.2% above close = strong buying interest. Accumulation pattern active.
+- WTI $88.09 (-0.91%) = Day 5 below $95. Pattern I (E&P/defense) SUSPENDED, confirmed.
+- US markets positive: Nasdaq +0.91%, S&P +0.58% (May 28 close).
+- Gold $4,532.7 (+0.74%) = mild uptick, below 2% 5-day threshold. GOLD_CAUTION not triggered.
+- Macro: Nifty -0.14% flat. No broad market concern.
+- No new picks generated: holiday-week thin volume prevents pattern confirmation.
+- NEW OBSERVATION: Post-Bakri Eid return volumes are 0.10x to 0.37x of 20d average = normal.
+  Do not penalize confidence for holiday-week thin volume. Patterns remain valid.
 
 ## Run 17 Key Updates (May 27, 2026 — Second Run):
 - Run 16 (BPCL/BEL/NTPCGREEN) RETROACTIVELY INVALIDATED same day by user chart review.
@@ -279,314 +401,3 @@ SUZLON exempted (May 22 earnings May 25 -- revenue +38% trajectory = Pattern R c
 25. UNCONFIRMED DEAL BUZZ = +5 only: "Buzz around" an unconfirmed deal is NOT a Pattern J/H trigger.
     Only confirmed, signed, or officially announced contracts count for full Pattern H/J activation.
 
-
-
-## Confirmed Indian Market Duopoly / Sector Pairs (Updated May 21, 2026)
-- Oil Refining PSU: MRPL / CPCL -- AVOID when WTI > $95 AND retail price NOT raised. If petrol hike confirmed (Pattern Q), OMCs become BUY.
-- Defense Electronics: BEL / HAL / small-cap lags: DATAPATTERNS, APOLLOMICRO, PARAS
-- Naval Defense: MAZDOCK / COCHINSHIP / GRSE -- all three down simultaneously = Pattern P (maximum signal)
-- Railway Construction: RVNL / IRCON -- SKIP, both showing revenue declines
-- Wind Energy: Suzlon / INOXWIND -- only enter INOXWIND when SUZLON is +0.3%+ same day
-- Depository: CDSL / NSDL
-- Power Equipment T&D: BHEL / KEC International / CG Power (rotation chain)
-- Railway Finance: IRFC (near-monopoly)
-- Solar: Waaree Energies / Premier Energies -- WAAREEENER FII 10x accumulation (0.70% to 7.06%)
-- Upstream E&P: OILINDIA (large-cap) / ONGC (large-cap substitute) / HINDOILEXP (small-cap lag)
-- IT Mid-Cap: PERSISTENT permanently excluded; COFORGE / MPHASIS peers watchlist only
-- Agrochemicals: PIIND / RALLIS / AARTIIND (PI Industries = quality leader; exclude when earnings approaching)
-
-## Pattern Accuracy (12 Runs, Updated May 21, 2026)
-
-### Run 12 (May 21, 2026): ONGC, INOXWIND — 2 picks only
-Iran deal "final stages" = war premium reducing. Only 2 picks qualified at 80% confidence.
-APOLLOMICRO: RSI 83-87 = above revised Pattern H ceiling. Excluded despite 13% 3-day gain miss.
-Pattern H REVISED: RSI ceiling lowered from 85 to 82 for Pattern H exception window.
-Also: 2+ active sector catalysts can substitute for specific MoD order confirmation (RSI 75-82 only).
-
-### Run 11 (May 20, 2026): ONGC only — 1 pick
-PIIND struck (Q4 earnings miss -48.8%). WAAREEENER below 78% (leaderboard penalty).
-Max 3 picks rule, confidence > 78 — correctly produced 1 pick only.
-
-### Run 10 (May 19, 2026): HAL, PIIND, WAAREEENER, INOXWIND, ONGC
-HINDOILEXP struck (B-80/HPCL dispute). Pattern G max signal for WAAREEENER (FII 10x).
-May 19 batch exits May 21: estimated -0.84% (HAL +1.81% only winner; PIIND stop hit May 20).
-
-### Run 9 (May 18, 2026): HAL, ONGC, MAZDOCK, GRSE, PIIND
-HAL re-entry after -4.31% dip (RSI 43.8). Pattern P: Naval triplet dip.
-BEL dropped (0/3 = 0% win rate). May 18 batch: +2.03% (4/5 wins).
-
-### Run 7/8 (May 15, 2026): HINDOILEXP, MAZDOCK, BEL, PIIND, BHEL
-Gold -1.49% = Pattern K max signal. NIFTYIT -1.99% 2nd consecutive = IT structural exit.
-Coal gasification scheme Rs37,500Cr = Pattern M (BHEL catalyst).
-
-### Run 5/6 (May 14, 2026): HINDOILEXP, MAZDOCK, INOXWIND, BEL, WAAREEENER
-Iran-USA war premium sustained. Gold falling = Pattern K.
-May 14 batch closed May 18: -2.72% (only HINDOILEXP won).
-
-### Run 3/4 (May 12-13, 2026): HINDOILEXP, PARAS, MAZDOCK, PERSISTENT, WAAREEENER
-Over-concentration in defense at peak. PERSISTENT -9.04% stop.
-Lesson: PE < 15 = maximum protection. HINDOILEXP PE 10 = only consistent winner.
-
-### Run 2 (May 11, 2026): PERSISTENT, DATAPATTERNS, NAVINFLUORINE, KECINTL, CGPOWER
--3.1% batch. IT macro catalyst trade. CGPOWER PE 102 confirmed loser.
-
-### Run 1 (May 8, 2026): IRCON, BHEL, INOXWIND, HAL, KPTL
-+4.3% batch (excluding data anomaly). HAL +13.2% = star. Defense at war onset.
-
-## Stock Leaderboard (All Runs, Updated May 21, 2026)
-
-  Stock        | Appearances | Wins | Win Rate | Avg Return | Status
-  -------------+-------------+------+----------+------------+------------------
-  HAL          |     3       |  3   |  100%    |  +6.01%    | HIGHEST PERFORMER — re-enter every dip RSI 42-55
-  HINDOILEXP   |     5       |  4   |   80%    |  +3.52%    | CORE PICK (B-80 dispute still active May 21)
-  PIIND        |     4       |  3   |   75%    |  +0.86%    | Re-enter when revenue recovers + no earnings in 5 days
-  GRSE         |     1       |  1   |  100%    |  +1.88%    | PROMISING but analyst Sell target (downside risk)
-  MAZDOCK      |     6       |  2   |   33%    |  -0.72%    | CAUTION — 33% leaderboard, fatigue rule
-  BEL          |     3       |  1   |   33%    |  -0.91%    | DROP RULE (0/4 = 0% on last 4 runs specifically)
-  INOXWIND     |     4       |  1   |   25%    |  -1.20%    | Entry condition (SUZLON trigger) must be met
-  ONGC         |     2       |  0   |    0%    |  -0.98%    | 0/2 = -10 leaderboard penalty; thesis intact
-  BHEL         |     3       |  0   |    0%    |  -2.89%    | AVOID unless PE < 40 and fresh catalyst
-  WAAREEENER   |     2       |  0   |    0%    |  -2.91%    | Leaderboard penalty; thesis intact; re-entry Rs2750-2850
-  PERSISTENT   |     3       |  0   |    0%    |  -7.08%    | PERMANENT EXCLUDE
-  CGPOWER      |     1       |  0   |    0%    |  -2.80%    | PERMANENT EXCLUDE
-  APOLLOMICRO  |     0       |  0   |   N/A    |   N/A      | Never entered; add to leaderboard on first trade
-
-## Pattern Library (Updated May 21, 2026)
-
-### Pattern A -- Duopoly / Sector Rotation Lag
-When one stock in pair rallies, peer catches up within 2-3 sessions.
-Accuracy: 5/6 validated. BEST PATTERN overall.
-Key rule: For INOXWIND, SUZLON must be +0.3%+ same day.
-
-### Pattern C -- RSI Recovery
-Entry zone: RSI 42-52 (ideal). Never above RSI 65 (without Pattern H exception).
-
-### Pattern D -- Institutional Strength Dip
-2+ stocks in same sector dip same day with no news = buy next session.
-Upgrade: Naval triplet (MAZDOCK+COCHINSHIP+GRSE all down) = Pattern P (maximum signal).
-
-### Pattern G -- FII Accumulation
-3 consecutive quarters FII increase: moderate (+5). 4+ quarters: strong (+10).
-FII 5x+ increase in 1 year: MAXIMUM activation (+15). WAAREEENER 10x = highest ever seen.
-Crossed round number thresholds (5%, 6%, 7%) = further institutional mandate buying likely.
-
-### Pattern H -- Defense Breakout/Order Momentum (REVISED May 21)
-ORIGINAL: Required BOTH (a) breakout above 52w/6m high + volume >= 2x avg + (b) confirmed MoD order.
-REVISED: Can be triggered by EITHER:
-  (a) Specific confirmed MoD/DRDO/ISRO contract announcement, OR
-  (b) 2+ simultaneous active defense sector catalysts (e.g., Iran war + India-Pakistan tensions)
-RSI EXCEPTION WINDOW: RSI 75 to 82 (REVISED DOWN from 85 to 82 — more conservative)
-RSI > 82: HARD EXCLUDE regardless of order or catalysts
-Volume requirement: >= 2x 20-day average (unchanged)
-MISSED MISS: APOLLOMICRO May 19-21 gained +13% while excluded at RSI 75.4. Under revised rule,
-  RSI 75.4 is within the 75-82 window — would have been included if 2+ catalysts confirmed.
-  Lesson: When RSI is 75-82 AND 2+ sector catalysts AND volume 2x+ AND near breakout, INCLUDE.
-
-### Pattern I -- Iran-USA / Middle East War Trade (UPDATED May 21)
-WTI > $95 + active conflict: BUY E&P and defense. AVOID OMC refiners.
-Confidence levels:
-  Active war (no ceasefire/deal talks): Full Pattern I (+10 to E&P, +8 to defense)
-  Trump "paused" strike: Reduce by 5 (-5)
-  Trump "final stages of deal": Reduce by 10 (-10) -- Iran transitioning from war to deal phase
-  Deal SIGNED: Pattern I DEACTIVATES for E&P and defense; OMC rule also lifts
-
-### Pattern I Extension -- Renewable Energy as Iran War Play
-When WTI > $95 sustained 5+ days: high oil = political urgency for renewable alternatives.
-INOXWIND, WAAREEENER benefit from "energy independence" sentiment.
-Persists even as Iran deal approaches (structural renewable theme is independent of Iran).
-
-### Pattern J -- India-Pakistan Military Defense Premium
-Elevated tensions = defense procurement urgency. BUY HAL, BEL, MAZDOCK, GRSE.
-Currently: Stable posture, no fresh escalation. Pattern J at reduced activation.
-
-### Pattern K -- Falling Gold + Equity Rotation
-Gold falling > 0.5% in session = equity rotation. > 1% = aggressive rotation. > 3% over 5d = structural.
-Apply +5 confidence bonus to all equity picks on Pattern K days.
-STATUS May 21: Gold flat (+0.08%). Pattern K NOT firing today.
-
-### Pattern L/N -- Trump-Xi Diplomatic Warmth (Agrochemical Catalyst)
-Level 3 "Constructive": +10 for PIIND. Level 4 "Friend": +15 for PIIND and specialty chemicals.
-STATUS May 21: Trump-Xi summit concluded. Watch for formal trade deal.
-
-### Pattern M -- Government Scheme PSU Catalyst
-Rs10,000+ Cr scheme announced: BHEL direct beneficiary. Responds within 2 sessions.
-
-### Pattern P -- Naval Defense Triplet Synchronization
-All 3 of MAZDOCK/COCHINSHIP/GRSE dip simultaneously = maximum Pattern D signal.
-Best recovery pick: GRSE (1/1 = 100% win rate). Note: Elara Capital Sell target = caution.
-
-### Pattern Q -- OMC Margin Reversal
-When Indian govt raises retail petrol/diesel price significantly:
-If WTI > $95 AND retail fuel is raised = OMC margin compression ENDS.
-BPCL, HPCL, IOC, MRPL become potential BUY candidates.
-NOT YET VALIDATED. Add to watch universe.
-
-### Pattern R -- Pre-Earnings Risk Management (NEW May 20)
-Only take pre-earnings plays when ALL 3 are met:
-  (1) Last 2 consecutive quarters showed profit GROWTH
-  (2) Revenue trajectory is UPWARD
-  (3) Management guidance was positive/neutral
-PIIND violated rule 2 (revenue -15% YoY declining trajectory).
-Result: PIIND stop hit May 20 (-3.51%) after Q4 earnings miss (-48.8%).
-Pattern R penalty: -15 confidence for any pre-earnings play on declining revenue.
-
-## Critical Rules (Updated May 21, 2026)
-1. WTI > $95 + retail NOT raised: AVOID all OMC refiners
-2. WTI > $95 + retail IS raised (Pattern Q): OMCs become potential BUY -- evaluate
-3. MS/Goldman/Elara analyst target < current price = institutional upside exhausted = avoid
-4. PE < 15 = maximum downside protection (HINDOILEXP PE 10-12 = best floor)
-5. NIFTYIT -1.5%+ for 2 consecutive sessions: STRUCTURAL IT exit signal = no IT for 1 week
-6. IT re-entry requires: 3 consecutive NIFTYIT green sessions
-7. PERSISTENT: PERMANENT EXCLUDE (only re-enter via: 52-wk low Rs4,449 test + RSI < 35)
-8. CGPOWER: PERMANENT EXCLUDE
-9. BEL: DROP RULE (0/4 specific = 0%). Re-enter only after first WIN.
-10. INOXWIND: Only enter when SUZLON is +0.3%+ same day
-11. HINDOILEXP: Re-enter only when (1) B-80 dispute resolved AND (2) RSI 42-55 AND (3) no negative news
-12. Iran "paused" strike: reduce E&P/defense confidence by 5 only
-13. Iran "final stages deal": reduce E&P/defense confidence by 10
-14. Iran deal SIGNED: Pattern I fully deactivates
-15. FII 5x+ annual accumulation = Pattern G maximum (+15 confidence)
-16. Negative corporate news = MANDATORY STEP 3 STRIKE regardless of leaderboard win rate
-17. HAL: Re-enter every dip to RSI 42-55 in active defense theme (3/3 = 100%)
-18. MAZDOCK: Max 2 consecutive entries; then 1-week rest period
-19. PE > 90: Require 3+ pattern confirmations for full position size
-20. Gold -3.5% over 5 days = Pattern K structural: apply +5 to all picks
-21. Pattern H revised: RSI ceiling = 82 (not 85). 2+ sector catalysts = can replace specific order.
-22. Pattern R: Pre-earnings plays only on growing revenue + profit trajectory. Decline = -15 confidence.
-23. APOLLOMICRO watchlist: Enter at RSI pullback to 55-68 zone (current RSI ~84 = wait for pullback)
-
-
-## Confirmed Indian Market Duopoly / Sector Pairs (Updated May 19, 2026)
-- Oil Refining PSU: MRPL / CPCL -- AVOID when WTI > $95 AND retail price NOT raised. If petrol hike confirmed (Pattern Q), OMCs become BUY.
-- Defense Electronics: BEL / HAL / small-cap lags: DATAPATTERNS, PARAS
-- Naval Defense: MAZDOCK / COCHINSHIP / GRSE -- all three down simultaneously = Pattern P (maximum signal)
-- Railway Construction: RVNL / IRCON -- SKIP, both showing revenue declines
-- Wind Energy: Suzlon / INOXWIND -- only enter INOXWIND when SUZLON is +0.3%+ same day
-- Depository: CDSL / NSDL
-- Power Equipment T&D: BHEL / KEC International / CG Power (rotation chain)
-- Railway Finance: IRFC (near-monopoly)
-- Solar: Waaree Energies / Premier Energies -- WAAREEENER FII 10x accumulation (0.70% to 7.06%)
-- Upstream E&P: OILINDIA (large-cap) / ONGC (large-cap substitute) / HINDOILEXP (small-cap lag)
-- IT Mid-Cap: PERSISTENT permanently excluded; COFORGE / MPHASIS peers watchlist only
-- Agrochemicals: PIIND / RALLIS / AARTIIND (PI Industries = quality leader)
-
-## Pattern Accuracy (10 Runs, Updated May 19, 2026)
-
-### Run 10 (May 19, 2026): HAL, PIIND, WAAREEENER, INOXWIND, ONGC
-HINDOILEXP struck (B-80/HPCL dispute). Iran strike paused. IT caution fully lifted.
-New entry: WAAREEENER (FII 10x + extreme oversold recovery). PIIND pre-earnings.
-May 18 batch exits confirmed today: +2.03% (4/5 wins). HAL 2/2, PIIND 1/1, GRSE 1/1.
-
-### Run 9 (May 18, 2026): HAL, ONGC, MAZDOCK, GRSE, PIIND
-HAL re-entry after -4.31% dip (RSI 43.8). Pattern P: Naval triplet dip (MAZDOCK/COCHINSHIP/GRSE all down).
-BEL dropped (0/3 = 0% win rate). Leaderboard adjustments applied.
-May 14 batch exits: -2.72% (1/5 wins, HINDOILEXP only winner +3.98%).
-May 15 batches: Run 7 +0.18%, Run 8 +0.46%.
-May 18 batch confirmed today: +2.03% (4/5 wins).
-
-### Run 7/8 (May 15, 2026): HINDOILEXP, MAZDOCK, BEL, PIIND, BHEL
-Gold -1.49% = Pattern K max signal. NIFTYIT -1.99% 2nd consecutive = IT structural exit.
-Coal gasification scheme Rs37,500Cr = Pattern M (BHEL catalyst).
-Trump "friend" language = Pattern N Level 4 (PIIND catalyst).
-Pattern P discovered: Naval triplet synchronization.
-
-### Run 5/6 (May 14, 2026): HINDOILEXP, MAZDOCK, INOXWIND, BEL, WAAREEENER
-Iran-USA war premium sustained. Gold falling = Pattern K.
-May 12 batch exits confirmed: -3.07% (HINDOILEXP only winner +3.03%).
-May 14 batch subsequently closed May 18: -2.72%.
-
-### Run 3/4 (May 12-13, 2026): HINDOILEXP, PARAS, MAZDOCK, PERSISTENT, WAAREEENER
-Over-concentration in defense at peak. PERSISTENT -9.04% stop.
-Lesson: PE < 15 = maximum protection. HINDOILEXP PE 10 = only consistent winner.
-
-### Run 2 (May 11, 2026): PERSISTENT, DATAPATTERNS, NAVINFLUORINE, KECINTL, CGPOWER
--3.1% batch. IT macro catalyst trade. CGPOWER PE 102 confirmed loser.
-PERSISTENT first stop hit. CGPOWER PERMANENT EXCLUDE confirmed.
-
-### Run 1 (May 8, 2026): IRCON, BHEL, INOXWIND, HAL, KPTL
-+4.3% batch. HAL +13.2% = star. Iran war first week = defense supercharge.
-Lesson: Enter defense at war onset, not after rally.
-
-## Stock Leaderboard (All Runs, Updated May 19, 2026)
-
-  Stock        | Appearances | Wins | Win Rate | Avg Return | Status
-  -------------+-------------+------+----------+------------+------------------
-  HINDOILEXP   |     7       |  5   |   71%    |  +1.72%    | CORE PICK (B-80 dispute active)
-  HAL          |     2       |  2   |  100%    |  +8.11%    | HIGHEST PERFORMER - core
-  PIIND        |     2       |  2   |  100%    |  +2.67%    | NEW STAR - add to core picks
-  GRSE         |     1       |  1   |  100%    |  +1.88%    | PROMISING - expand watch
-  MAZDOCK      |     6       |  2   |   33%    |  -0.91%    | CAUTION - fatigue + Iran pause
-  INOXWIND     |     4       |  2   |   50%    |  +0.47%    | NEUTRAL - entry condition required
-  BHEL         |     2       |  0   |    0%    |  -2.89%    | AVOID unless PE < 40
-  BEL          |     4       |  0   |    0%    |  -1.88%    | DROP RULE (0/4)
-  ONGC         |     1       |  0   |    0%    |  -0.62%    | NEUTRAL - too early
-  WAAREEENER   |     2       |  0   |    0%    |  -3.95%    | New entry May 19 (FII signal)
-  PERSISTENT   |     6+      |  0   |    0%    |  -6.74%    | PERMANENT EXCLUDE
-  CGPOWER      |     2       |  0   |    0%    |  -2.80%    | PERMANENT EXCLUDE
-
-## Pattern Library (Updated May 19, 2026)
-
-### Pattern A -- Duopoly / Sector Rotation Lag
-When one stock in pair rallies, peer catches up within 2-3 sessions.
-Accuracy: 5/6 validated. BEST PATTERN overall.
-Key rule: For INOXWIND, SUZLON must be +0.3%+ same day.
-
-### Pattern C -- RSI Recovery
-Entry zone: RSI 42-52 (ideal). Never above RSI 65.
-
-### Pattern D -- Institutional Strength Dip
-2+ stocks in same sector dip same day with no news = buy next session.
-Upgrade: Naval triplet (MAZDOCK+COCHINSHIP+GRSE all down) = Pattern P (maximum signal).
-
-### Pattern G -- FII Accumulation
-3 consecutive quarters FII increase: moderate (+5). 4+ quarters: strong (+10).
-FII 5x+ increase in 1 year: MAXIMUM activation (+15). WAAREEENER 10x = highest ever seen.
-
-### Pattern I -- Iran-USA / Middle East War Trade
-WTI > $95 + active conflict: BUY E&P and defense. AVOID OMC refiners.
-NOTE: Paused conflict (Trump "hold") = reduce defense/E&P confidence by 5, not 10.
-
-### Pattern J -- India-Pakistan Military Defense Premium
-Elevated tensions = defense procurement urgency. BUY HAL, BEL, MAZDOCK, GRSE.
-
-### Pattern K -- Falling Gold + Equity Rotation
-Gold falling > 0.5% in session = equity rotation. > 1% = aggressive rotation. > 3% over 5d = structural.
-Apply +5 confidence bonus to all equity picks on Pattern K days.
-
-### Pattern L/N -- Trump-Xi Diplomatic Warmth (Agrochemical Catalyst)
-Level 3 "Constructive": +10 for PIIND. Level 4 "Friend": +15 for PIIND and specialty chemicals.
-
-### Pattern M -- Government Scheme PSU Catalyst
-Rs10,000+ Cr scheme announced: BHEL direct beneficiary. Responds within 2 sessions.
-
-### Pattern P -- Naval Defense Triplet Synchronization (NEW May 18)
-All 3 of MAZDOCK/COCHINSHIP/GRSE dip simultaneously = maximum Pattern D signal.
-Best recovery pick: GRSE (1/1 = 100% win rate, fresh pick).
-
-### Pattern Q -- OMC Margin Reversal (NEW May 19)
-When Indian govt raises retail petrol/diesel price significantly:
-If WTI > $95 AND retail fuel is raised = OMC margin compression ENDS.
-BPCL, HPCL, IOC, MRPL become potential BUY candidates (Pattern Q trigger).
-Condition: Retail hike > Rs2/litre within 30 days of high crude.
-First observation: May 19, 2026. Not yet validated. Add to watch universe next run.
-
-## Critical Rules (Updated May 19, 2026)
-1. WTI > $95 + retail NOT raised: AVOID all OMC refiners
-2. WTI > $95 + retail IS raised (Pattern Q): OMCs become potential BUY -- evaluate next run
-3. MS/Goldman target < current price = institutional upside exhausted = avoid
-4. PE < 15 = maximum downside protection (HINDOILEXP PE 10-12 = best floor)
-5. NIFTYIT -1.5%+ for 2 consecutive sessions: STRUCTURAL IT exit signal = no IT for 1 week
-6. IT re-entry requires: 3 consecutive NIFTYIT green sessions (updated from 2)
-7. PERSISTENT: PERMANENT EXCLUDE (only re-enter via: 52-wk low Rs4,449 test + RSI < 35)
-8. CGPOWER: PERMANENT EXCLUDE
-9. BEL: DROP RULE (0/4 = 0%). Re-enter only after first WIN.
-10. INOXWIND: Only enter when SUZLON is +0.3%+ same day
-11. HINDOILEXP: Re-enter only when (1) no material negative corporate news AND (2) RSI 42-55
-12. Iran "paused" strike =/= ceasefire: reduce defense/E&P confidence by 5 only
-13. FII 5x+ annual accumulation = Pattern G maximum (+15 confidence)
-14. Pre-earnings catalyst (call within 24hrs, intact thesis): +7 confidence
-15. Negative corporate news = MANDATORY STEP 3 STRIKE regardless of leaderboard win rate
-16. HAL: Re-enter every dip to RSI 42-55 in active defense theme (2/2 = 100%)
-17. MAZDOCK: Max 2 consecutive entries; then 1-week rest period (fatigue management)
-18. PE > 90: Require 3+ pattern confirmations for full position size
-19. Gold -3.5% over 5 days = Pattern K structural: apply +5 to all picks

@@ -1736,7 +1736,7 @@
     "date": "2026-05-27",
     "run_number": 16,
     "note": "Wednesday run (v2 relaxed rules). 3 fresh picks all confidence >78%. Pattern Q (OMC margin reversal) triggered for BPCL - WTI .17 for 2nd consecutive day below . BPCL cup-and-handle technical pattern confirmed. BEL Q4 PAT +41% + fresh Rs 608Cr orders. NTPCGREEN breakout from consolidation + MACD PCO. INOXWIND excluded despite SUZLON +1.23% (Pattern A trigger) due to 1-year -47.38% downtrend. HINDOILEXP: CLOSE ALERT issued - approaching stop Rs 158.",
-    "RETROACTIVE_CORRECTION_2026_05_27": "USER CHART REVIEW — BEL and BPCL picks INVALIDATED. Both stocks are in active downtrends (lower highs, lower lows) with no confirmed reversal. Agent over-weighted fundamental narrative and incorrectly labelled chart patterns. Rule 26d (Active Downtrend Disqualification) added. BEL: V-bounce then sharp pullback, still below all prior highs. BPCL: Staircase downtrend, right rim of 'cup' at Rs 304 is 22% below left rim at Rs 391 — not a cup, a downtrend channel. DO NOT use these as entry prices. See pattern_notes.md Rule 26d for watchlist conditions.",
+    "RETROACTIVE_CORRECTION_2026_05_27": "USER CHART REVIEW \u2014 BEL and BPCL picks INVALIDATED. Both stocks are in active downtrends (lower highs, lower lows) with no confirmed reversal. Agent over-weighted fundamental narrative and incorrectly labelled chart patterns. Rule 26d (Active Downtrend Disqualification) added. BEL: V-bounce then sharp pullback, still below all prior highs. BPCL: Staircase downtrend, right rim of 'cup' at Rs 304 is 22% below left rim at Rs 391 \u2014 not a cup, a downtrend channel. DO NOT use these as entry prices. See pattern_notes.md Rule 26d for watchlist conditions.",
     "rule_version": "v2",
     "recommendations": [
       "BPCL",
@@ -1744,9 +1744,9 @@
       "NTPCGREEN"
     ],
     "validity": {
-      "BPCL": "INVALID_RULE_26D + LOW_VOLATILITY_RULE_26E — active downtrend (lower highs, lower lows) AND 1-year return ~-4.5% indicates fewer than 40 high-volatility days in last 252 sessions; structurally incompatible with 5%/day target. No base formation. Do not use entry price Rs 304.60. WATCHLIST only: enter above Rs 332 (prior swing high) OR after 2-3 weeks sideways consolidation above Rs 294 AND after confirming High_Vol_Day_Count_252 >= 40.",
-      "BEL": "INVALID_RULE_26D + LOW_VOLATILITY_RULE_26E — downtrend not confirmed reversed AND 1-year return ~+3% indicates fewer than 40 high-volatility days in last 252 sessions; structurally incompatible with 5%/day target. V-bounce then sharp pullback, below all prior highs. Do not use entry price Rs 422.75. WATCHLIST only: enter above Rs 436 (prior swing high) on volume >= 1.5x avg AND after confirming High_Vol_Day_Count_252 >= 40.",
-      "NTPCGREEN": "WATCH — double bottom at Rs 84 is consistent with Rule 26d Condition B (base formation). Verify on chart that Rs 84 low holds and higher lows are forming. If confirmed, entry zone Rs 100-105 remains valid."
+      "BPCL": "INVALID_RULE_26D + LOW_VOLATILITY_RULE_26E \u2014 active downtrend (lower highs, lower lows) AND 1-year return ~-4.5% indicates fewer than 40 high-volatility days in last 252 sessions; structurally incompatible with 5%/day target. No base formation. Do not use entry price Rs 304.60. WATCHLIST only: enter above Rs 332 (prior swing high) OR after 2-3 weeks sideways consolidation above Rs 294 AND after confirming High_Vol_Day_Count_252 >= 40.",
+      "BEL": "INVALID_RULE_26D + LOW_VOLATILITY_RULE_26E \u2014 downtrend not confirmed reversed AND 1-year return ~+3% indicates fewer than 40 high-volatility days in last 252 sessions; structurally incompatible with 5%/day target. V-bounce then sharp pullback, below all prior highs. Do not use entry price Rs 422.75. WATCHLIST only: enter above Rs 436 (prior swing high) on volume >= 1.5x avg AND after confirming High_Vol_Day_Count_252 >= 40.",
+      "NTPCGREEN": "WATCH \u2014 double bottom at Rs 84 is consistent with Rule 26d Condition B (base formation). Verify on chart that Rs 84 low holds and higher lows are forming. If confirmed, entry zone Rs 100-105 remains valid."
     },
     "entry_prices": {
       "BPCL": 304.6,
@@ -1818,19 +1818,19 @@
       "ASAHIINDIA"
     ],
     "entry_prices": {
-      "NATIONALUM": 433.50,
-      "KEC": 501.00,
-      "ASAHIINDIA": 907.80
+      "NATIONALUM": 433.5,
+      "KEC": 501.0,
+      "ASAHIINDIA": 907.8
     },
     "targets": {
-      "NATIONALUM": 465.00,
-      "KEC": 548.00,
-      "ASAHIINDIA": 965.00
+      "NATIONALUM": 465.0,
+      "KEC": 548.0,
+      "ASAHIINDIA": 965.0
     },
     "stop_losses": {
-      "NATIONALUM": 411.00,
-      "KEC": 462.00,
-      "ASAHIINDIA": 874.00
+      "NATIONALUM": 411.0,
+      "KEC": 462.0,
+      "ASAHIINDIA": 874.0
     },
     "confidence_scores": {
       "NATIONALUM": 91,
@@ -1838,38 +1838,38 @@
       "ASAHIINDIA": 83
     },
     "optimal_exit_windows": {
-      "NATIONALUM": "2026-06-02 to 2026-06-04 — aluminum 4yr high commodity momentum, target Rs 465",
-      "KEC": "2026-06-03 to 2026-06-06 — RSI recovery from extreme oversold, 6-session base, target Rs 548",
-      "ASAHIINDIA": "2026-06-02 to 2026-06-05 — MA200 retest/breakout, auto sector tailwind, target Rs 965"
+      "NATIONALUM": "2026-06-02 to 2026-06-04 \u2014 aluminum 4yr high commodity momentum, target Rs 465",
+      "KEC": "2026-06-03 to 2026-06-06 \u2014 RSI recovery from extreme oversold, 6-session base, target Rs 548",
+      "ASAHIINDIA": "2026-06-02 to 2026-06-05 \u2014 MA200 retest/breakout, auto sector tailwind, target Rs 965"
     },
     "patterns": {
       "NATIONALUM": [
-        "Pattern F (commodity tailwind — aluminum at 4-year high)",
+        "Pattern F (commodity tailwind \u2014 aluminum at 4-year high)",
         "Pattern H (near 52w high breakout setup)",
         "News Catalyst (LME aluminum spike, global smelter curtailments)",
-        "RSI 54.2 — healthy momentum zone"
+        "RSI 54.2 \u2014 healthy momentum zone"
       ],
       "KEC": [
-        "Pattern C (RSI recovery from extreme oversold — RSI was ~28-30, now recovering)",
+        "Pattern C (RSI recovery from extreme oversold \u2014 RSI was ~28-30, now recovering)",
         "Rule 26a cleared (6-session base formation, no falling-knife pattern)",
         "Power T&D infrastructure capex tailwind",
-        "RSI 42.1 — early recovery zone"
+        "RSI 42.1 \u2014 early recovery zone"
       ],
       "ASAHIINDIA": [
         "MA200 retest/breakout from below (key technical signal)",
         "Rule 26b accumulation pattern confirmed",
         "Auto sector tailwind (passenger vehicle glass demand)",
-        "RSI 48.6 — neutral approaching strength zone"
+        "RSI 48.6 \u2014 neutral approaching strength zone"
       ]
     },
     "entry_date": "2026-05-29",
     "entry_note": "NSE HOLIDAY May 28 (Bakri Eid). Entry on May 29 (Thursday). Exit windows start Jun 2 (earliest T+4 from entry).",
     "macro_context": {
-      "wti_crude": "91.08 (-2.99%) — Day 3 below $95. Iran deal imminent. War premium collapsing.",
-      "gold": "4514.70 (-0.45%) — Neutral, no gold caution",
-      "sp500": "7519.12 (+0.61%) — Positive US backdrop",
-      "nasdaq": "26656.18 (+1.19%) — Strong US tech",
-      "nifty": "23891.30 (-0.09%) — Near flat",
+      "wti_crude": "91.08 (-2.99%) \u2014 Day 3 below $95. Iran deal imminent. War premium collapsing.",
+      "gold": "4514.70 (-0.45%) \u2014 Neutral, no gold caution",
+      "sp500": "7519.12 (+0.61%) \u2014 Positive US backdrop",
+      "nasdaq": "26656.18 (+1.19%) \u2014 Strong US tech",
+      "nifty": "23891.30 (-0.09%) \u2014 Near flat",
       "iran_usa": "Deal imminent. War premium collapsing. WTI falling toward $85-90.",
       "aluminum": "LME aluminum at 4-year high. Smelter curtailments in China/Europe.",
       "key_macro_shift": "Iran deal + WTI collapse = defense/E&P tailwinds gone. Sector rotation to: aluminum/metals, auto components, infrastructure capex (non-war)."
@@ -1890,6 +1890,392 @@
       "GOCOLORS": "Consumer fashion near 52w low + 7.35x volume spike May 27. Pattern H candidate. Add to future scan.",
       "UNIPARTS": "12.18x volume spike May 26 + new 52w high Rs 613. RSI 75.5 = wait for pullback to 62-65.",
       "SANSERA": "Q4 results + auto component = Pattern P. Now RSI 76.4 = too late for this run."
+    }
+  },
+  {
+    "date": "2026-05-29",
+    "type": "validation_run",
+    "note": "Run #18 \u2014 validation of Run #17 picks on first trading day post Bakri Eid holiday (May 28 closed)",
+    "recommendations": [
+      "NATIONALUM",
+      "KEC",
+      "ASAHIINDIA"
+    ],
+    "live_prices_may29": {
+      "NATIONALUM": {
+        "close": 435.25,
+        "high": 441.5,
+        "low": 434.45,
+        "vol_ratio": 0.37
+      },
+      "KEC": {
+        "close": 499.1,
+        "high": 507.35,
+        "low": 497.5,
+        "vol_ratio": 0.1
+      },
+      "ASAHIINDIA": {
+        "close": 912.5,
+        "high": 946.25,
+        "low": 912.15,
+        "vol_ratio": 0.33
+      }
+    },
+    "entry_prices": {
+      "NATIONALUM": 433.5,
+      "KEC": 501.0,
+      "ASAHIINDIA": 907.8
+    },
+    "entry_ranges": {
+      "NATIONALUM": "433-438",
+      "KEC": "495-505",
+      "ASAHIINDIA": "907-920"
+    },
+    "targets": {
+      "NATIONALUM": 465.0,
+      "KEC": 548.0,
+      "ASAHIINDIA": 965.0
+    },
+    "stop_losses": {
+      "NATIONALUM": 411.0,
+      "KEC": 462.0,
+      "ASAHIINDIA": 874.0
+    },
+    "exit_windows": {
+      "NATIONALUM": "Jun 2 - Jun 4",
+      "KEC": "Jun 3 - Jun 5",
+      "ASAHIINDIA": "Jun 2 - Jun 5"
+    },
+    "confidence_scores": {
+      "NATIONALUM": 91,
+      "KEC": 84,
+      "ASAHIINDIA": 83
+    },
+    "rsi_may29": {
+      "NATIONALUM": 63.4,
+      "KEC": 39.9,
+      "ASAHIINDIA": 66.8
+    },
+    "entry_status": {
+      "NATIONALUM": "ACTIVE \u2014 trading above entry, Rs 441.5 intraday (52w high test)",
+      "KEC": "ACTIVE \u2014 within entry range, base holding above Rs 469 low",
+      "ASAHIINDIA": "ACTIVE \u2014 MA200 breakout confirmed, holding Rs 909 support"
+    },
+    "macro_context": {
+      "nifty": "23873.6 (-0.14%)",
+      "nasdaq_may28": "26917.5 (+0.91%)",
+      "sp500_may28": "7563.6 (+0.58%)",
+      "wti": ".09 (-0.91%)",
+      "gold": ".7 (+0.74%)",
+      "pattern_i_status": "SUSPENDED (WTI day 5 below )",
+      "holiday_note": "NSE closed May 28 (Bakri Eid). Volume thin across market on return."
+    },
+    "patterns": {
+      "NATIONALUM": [
+        "pattern_F",
+        "pattern_H",
+        "news_catalyst_aluminum_4yr_high"
+      ],
+      "KEC": [
+        "pattern_C",
+        "pattern_D",
+        "rule_26a_base_cleared"
+      ],
+      "ASAHIINDIA": [
+        "pattern_D",
+        "ma200_reclaim",
+        "rule_26b_accumulation",
+        "auto_sector_tailwind"
+      ]
+    }
+  },
+  {
+    "date": "2026-06-01",
+    "run_number": 18,
+    "note": "Monday run. Basestock reused (user instruction). NIFTYIT +3.03% = AI/data center theme dominant. WTI $89.63 (below $95, bouncing). 2 picks qualify >78% threshold. HFCL: optical fiber at 52w high, Pattern O data center AI infra, +29% in 10d, RSI 75, no distribution. LLOYDSME: Pattern D recovery from RSI 42 to 58, near 52w high, metals sector rotation post-Iran-deal. WAAREEENER excluded by Rule 26e (only 8/65 high-vol days, floor=11). INOXWIND excluded by Rule 26a (earnings miss, -7% on 1.84x vol). JYOTICNC excluded (RSI=2, extreme distress). Airline monitoring: INDIGO +2.9% but large-cap outside universe; no ATF relief news confirmed.",
+    "recommendations": [
+      "HFCL",
+      "LLOYDSME"
+    ],
+    "entry_prices": {
+      "HFCL": 180.55,
+      "LLOYDSME": 1820.90
+    },
+    "targets": {
+      "HFCL": 198.00,
+      "LLOYDSME": 1965.00
+    },
+    "stop_losses": {
+      "HFCL": 170.00,
+      "LLOYDSME": 1740.00
+    },
+    "exit_windows": {
+      "HFCL": "2026-06-05 to 2026-06-10 (T+4 to T+7 — data center momentum)",
+      "LLOYDSME": "2026-06-05 to 2026-06-09 (T+4 to T+6 — Pattern D recovery)"
+    },
+    "confidence_scores": {
+      "HFCL": 84,
+      "LLOYDSME": 82
+    },
+    "potential_gain_pct": {
+      "HFCL": 9.7,
+      "LLOYDSME": 7.9
+    },
+    "stop_risk_pct": {
+      "HFCL": -5.8,
+      "LLOYDSME": -4.4
+    },
+    "risk_reward": {
+      "HFCL": "1.7:1",
+      "LLOYDSME": "1.8:1"
+    },
+    "patterns": {
+      "HFCL": [
+        "pattern_O (data center AI infrastructure — optical fiber)",
+        "pattern_H (momentum breakout near 52w high)",
+        "pattern_F (structural sector tailwind: AI, 5G, BharatNet)",
+        "pattern_D (no distribution volume = institutional holding)"
+      ],
+      "LLOYDSME": [
+        "pattern_D (institutional strength dip recovery: RSI 42 -> 58)",
+        "sector_rotation_metals (post-Iran-deal metals bid)",
+        "near_52w_high_breakout",
+        "macd_above_signal"
+      ]
+    },
+    "macro_context": {
+      "nifty": "23,560 (+0.05%)",
+      "niftyit": "29,962 (+3.03%) — MASSIVE IT/AI surge",
+      "wti": "$89.63 (+2.60%) — below $95, bouncing",
+      "gold": "$4,544 (-0.36%) — no gold caution",
+      "inoxwind_miss": "INOXWIND Q4 FY26 earnings miss; -7% on 1.84x volume. Hard exclude.",
+      "indigo_airline": "INDIGO +2.9% to Rs 4,537. Large-cap; no ATF relief news confirmed. Watchlist.",
+      "hfcl_context": "At 52w high Rs 189; +29% in 10 days; optical fiber data center demand; NIFTYIT +3% direct tailwind",
+      "lloydsme_context": "Near 52w high Rs 1,888; RSI recovery from 42 to 58; metals rotation; MACD above signal"
+    },
+    "exclusions": {
+      "INOXWIND": "Rule 26a (falling knife: -7% on 1.84x volume) + Rule 26d (active downtrend). Hard exclude.",
+      "JYOTICNC": "RSI=2, distribution 2.73x avg, -12% 5d, at 52w low. Rules 26a/26d/26e all fail.",
+      "KAYNES": "RSI=26, -8.6% 5d, active downtrend. Rule 26d.",
+      "MCX": "Distribution 1.65x avg, -12% 5d, progressive lower highs/lows. Rules 26b+26d.",
+      "WAAREEENER": "Rule 26e HARD FAIL: only 8 days >=3% move in 65d; proportional floor = 11. Cannot recommend regardless of RSI recovery.",
+      "NATIONALUM": "Rule 26b: distribution volume 4.57x avg = extreme institutional selling. Hard exclude.",
+      "NETWEB": "Rule 26b: distribution volume 1.04x avg + RSI 73. News priced in after +20% run.",
+      "SWIGGY": "Distribution 1.26x avg; no volume trigger; still near 52w low.",
+      "INDIGO": "Large-cap (market cap >Rs 1.75 Lakh Cr) = outside mid/small-cap universe. WATCHLIST.",
+      "KFINTECH": "Rule 26d: lower highs in 30d structure (Rs 1006->938->877). Active downtrend.",
+      "PERSISTENT": "PERMANENT EXCLUDE.",
+      "CGPOWER": "PERMANENT EXCLUDE."
+    },
+    "run17_backtest_estimates": {
+      "NATIONALUM": {"entry": 433.50, "current_jun1": 424.25, "pct": -2.1, "status": "LOSS"},
+      "KEC": {"entry": 501.00, "current_jun1": 494.20, "pct": -1.4, "status": "LOSS"},
+      "ASAHIINDIA": {"entry": 907.80, "current_jun1": 878.80, "pct": -3.2, "status": "LOSS"},
+      "batch_return_pct": -2.2,
+      "note": "Run 17 batch underperformed. Distribution volume signal on NATIONALUM (4.57x) was a valid warning. KEC RSI recovery failed — stock resumed downtrend. ASAHIINDIA entry at RSI 65 was slightly high."
+    },
+    "run18_backtest_day1": {
+      "HFCL": {"entry": 180.55, "current_jun2": 182.73, "pct": 1.2, "status": "WIN_IN_PROGRESS"},
+      "LLOYDSME": {"entry": 1820.90, "current_jun2": 1828.0, "pct": 0.4, "status": "RULE_VIOLATION_EXIT_RECOMMENDED", "note": "Rule 26e retroactive fail (39/40 in full 252d check). Recommended exit at market."}
+    }
+  },
+  {
+    "date": "2026-06-02",
+    "run_number": 19,
+    "note": "Market open run. REVISED TWICE post-user chart review. Original: 2 picks (HFCL 87%, NETWEB 84%). Revision 1: NETWEB removed (vertical one-bar spike Rule 46/Sub-Rule 26f). Revision 2: HFCL downgraded to 76% (below threshold) -- decelerating-staircase exhaustion (3 consecutive closes with shrinking daily range +2/+1 AND volume 0.08x = no returning buyers). FINAL RESULT: 0-PICK DAY. Run #18 holders of HFCL advised HOLD with revised target Rs 189 (not Rs 200) and tightened stop Rs 176 (below MA5). LLOYDSME exit recommended (Rule 26e 39/40 retroactive fail). STLTECH missed on Jun 1 (RSI 89.4 on Jun 2 = cannot enter). TRENT AGM thesis documented as event-driven watchlist. WTI +4.73% to $91.49 = approaching $95 reactivation zone.",
+    "recommendations": [],
+    "zero_pick_reason": "HFCL downgraded from 87% to 76% (below >78% threshold) after honest chart re-evaluation: decelerating-staircase signature (3 closes: 180/182/183 = +2/+1 daily increments + volume 0.08x = no fresh buyers). Rs 200 target requires breaking 52w high Rs 189 then +5.8% more; R:R on revised Rs 189 target = 0.86:1 (below minimum). NETWEB already removed for one-bar-spike-stall (Sub-Rule 26f). No remaining picks above 78% confidence.",
+    "removed_post_chart_review": ["NETWEB", "HFCL"],
+    "hfcl_downgrade": {
+      "symbol": "HFCL",
+      "original_confidence": 87,
+      "revised_confidence": 76,
+      "original_target": 200.0,
+      "revised_target": 189.0,
+      "original_stop": 171.0,
+      "revised_stop": 176.0,
+      "downgrade_reason": "Decelerating-staircase exhaustion. Last 3 closes: Rs 180/182/183 = +2/+1 daily increments (from +15/+12 at peak). Volume 0.08x (thinner than NETWEB 0.20x). No fresh buyers confirmed. Rs 200 target (+9.3%) requires first breaking 52w high Rs 189 as intermediate resistance -- two separate moves from a decelerating base. R:R on revised Rs 189 target = (189-183)/(183-176) = Rs 6/Rs 7 = 0.86:1, below minimum 1.5:1.",
+      "chart_signature": "Decelerating-staircase top. Not a one-bar climax (NETWEB was). Same exhaustion family, different shape.",
+      "run18_holder_guidance": {
+        "entry": 180.55,
+        "action": "HOLD with revised parameters (do not add to position)",
+        "revised_target": 189.0,
+        "tightened_stop": 176.0,
+        "early_exit_trigger": "Close below MA5 (Rs 178.6) on any session",
+        "hold_window": "T+3 to T+5 from Jun 1 entry = Jun 5-6 at latest"
+      },
+      "reentry_option_a": "Close above Rs 185 within 3 sessions on vol >= 0.8x avg. Target Rs 192-195. Stop Rs 178. R:R 1.7:1. Confidence 80-82%.",
+      "reentry_option_b": "Pullback to Rs 178-180 (MA5) on no distribution, then reclaim Rs 182 on vol >= 0.8x avg. Target Rs 192-195. Stop Rs 174. R:R 2:1. Confidence 82-84%.",
+      "reentry_option_c": "2-3 sessions base Rs 180-185, then break above Rs 186 on vol >= 1.2x avg. Target Rs 196-200. Stop Rs 181. R:R 2.4:1. Confidence 84%."
+    },
+    "netweb_removal_reason": {
+      "symbol": "NETWEB",
+      "original_confidence": 84,
+      "original_target": 5100.0,
+      "original_stop": 4360.0,
+      "removal_reason": "Vertical one-bar climax spike. Price went from Rs 4,072 to Rs 4,671 (+14.7%) in ONE session. Next two sessions: Rs 4,620 and Rs 4,666 with volume 0.20x avg. No continuation buyers. Asking for Rs 5,100 (+9.2% more) from top of vertical spike without follow-through volume = low-probability entry.",
+      "chart_signature": "Climax/blow-off bar + stall. NOT a breakout consolidating above support.",
+      "reentry_option_a": "Pullback to Rs 4,300-4,400 then 2 consecutive closes above Rs 4,450 on vol >= 0.8x 20d avg + RSI 52-65. Confidence 82-84. Target Rs 4,800-4,850. Stop Rs 4,150.",
+      "reentry_option_b": "5+ sessions sideways Rs 4,550-4,700, no new lows, down-day vol < 0.7x avg, then break above Rs 4,700 on vol >= 1.2x avg. Confidence 80. Target Rs 4,920-4,960. Stop Rs 4,480."
+    },
+    "entry_prices": {},
+    "targets": {},
+    "stop_losses": {},
+    "exit_window": {},
+    "confidence_scores": {},
+    "patterns": {},
+    "macro_context": {
+      "nifty": "23,283 (-0.43%) -- 4th consecutive down session",
+      "niftyit": "30,446 (+1.98%) -- effectively at Pattern O trigger",
+      "nifty_metal": "13,524 (+0.13%) -- flat",
+      "wti_crude": "$91.49 (+4.73%) -- sharp bounce; approaching $95 watch zone",
+      "gold": "$4,525 (-0.79%) -- Pattern K mild",
+      "nasdaq": "27,087 (+0.42%) -- US positive",
+      "sp500": "7,600 (+0.26%) -- US positive",
+      "dxy": "99.19 (+0.28%)",
+      "key_risk": "Nifty 4th consecutive down session. WTI bounce to $91.49 -- watch $95.",
+      "key_tailwind": "NIFTYIT +1.98% confirms AI infra theme. US markets positive."
+    },
+    "exclusions": {
+      "HFCL": "Downgraded to 76% (below threshold). Decelerating-staircase exhaustion: last 3 closes 180/182/183 (+2/+1 increments) + volume 0.08x. R:R on Rs 189 target = 0.86:1 (below minimum). No new entry.",
+      "NETWEB": "Removed by Sub-Rule 26f: vertical one-bar spike + 2-day stall + 0.20x volume.",
+      "STLTECH": "RSI 89.4 -- HARD EXCLUDE per RSI ceiling rule (>82).",
+      "LLOYDSME": "Rule 26e retroactive FAIL: 39/40 in full 252d check. Exit recommended.",
+      "BEL": "RSI 27.1, Rule 26e FAIL (4/40), distribution vol 1.08x.",
+      "PIIND": "RSI 31.2, distribution vol 1.45x, -14.2% 10d, Rule 26e FAIL (10/40).",
+      "SWIGGY": "Distribution vol 1.07x. Pattern S trigger not activated.",
+      "TRENT": "Rule 26e FAIL (29/40). EVENT-DRIVEN watchlist only.",
+      "WAAREEENER": "Rule 26e FAIL (7/40).",
+      "MOTILALOFS": "Confidence ~78% (not strictly >78%). Thin close volume.",
+      "KEC": "Pattern C infra rule: 0 consecutive higher closes from RSI bottom.",
+      "NATIONALUM": "Distribution vol 1.9x avg.",
+      "PERSISTENT": "PERMANENT EXCLUDE.",
+      "CGPOWER": "PERMANENT EXCLUDE."
+    },
+    "event_driven_watchlist": {
+      "TRENT_AGM": {
+        "event": "AGM June 23, 2026",
+        "historical_evidence": "Jun 2024 +17.5%, Jun 2025 +10.7%",
+        "entry_trigger": "Close > Rs 4,200 on vol >= 0.5x avg",
+        "entry_zone": "Rs 4,050-4,200",
+        "target": "Rs 4,600-4,750",
+        "stop": "Rs 3,900",
+        "confidence_event_driven": "76-78%",
+        "rule_26e_status": "FAIL (29/40)"
+      }
+    },
+    "run18_positions_status": {
+      "HFCL": {
+        "entry": 180.55,
+        "current_jun2": 182.73,
+        "pct": 1.2,
+        "status": "HOLD_REVISED_PARAMS",
+        "revised_target": 189.0,
+        "tightened_stop": 176.0,
+        "early_exit_trigger": "Close below MA5 Rs 178.6"
+      },
+      "LLOYDSME": {
+        "entry": 1820.90,
+        "current_jun2": 1828.0,
+        "pct": 0.4,
+        "status": "EXIT_RECOMMENDED_RULE_VIOLATION",
+        "note": "Rule 26e retroactive fail (39/40 in full 252d check). Recommended exit at market."
+      }
+    },
+    "rule_updates": {
+      "rule_42": "FULL 252-DAY RULE 26e CHECK: For seasoned stocks (>252d history), always use full 252d window (>= 40 days).",
+      "rule_43": "PATTERN O FULL SCAN: When NIFTYIT >+2%, scan ALL 6 Pattern O names individually.",
+      "rule_44": "WTI $95 REACTIVATION: If WTI > $95 for 3 consecutive days, Pattern I re-activates.",
+      "rule_45": "TRENT AGM PRE-RUN: Confirmed +10-17% in June over 2 years.",
+      "rule_46": "VERTICAL ONE-BAR SPIKE STALL (Sub-Rule 26f): Single session >=10% gain followed by 2 sessions flat/down + vol <0.4x = CLIMAX MOVE. Remove. Reset target to first-bar retest.",
+      "rule_46b": "DECELERATING-STAIRCASE EXHAUSTION (new sub-signature of Rule 46 family): 3+ consecutive closes with shrinking daily range AND volume < 0.2x = same exhaustion family as one-bar climax. Different shape (multi-day deceleration vs single spike) but same outcome. Do NOT project prior momentum target forward. Lower target to nearest resistance (52w high or prior swing high). Tighten stop to below MA5. Re-entry requires volume confirmation (>0.8x) on a resumption session."
+    }
+  },
+  {
+    "date": "2026-06-03",
+    "run_number": 20,
+    "recommendations": [],
+    "result": "0-PICK DAY",
+    "reason": "No stock passes all gates: confidence >90% + R:R >= 1.5:1 + Step 2.7 chart gates",
+    "market_context": {
+      "nifty50": "23271 (-0.90%) -- 5th consecutive down session",
+      "niftyit": "29809 (-4.20%) -- Pattern O INACTIVE; heavy IT selling reversal",
+      "wti": "$94.76 (+1.07%) -- Day 0 approaching $95 threshold, NOT yet above $95",
+      "gold": "$4514 (+0.57%) -- mild; no GOLD_CAUTION",
+      "nasdaq": "27094 (+0.03%) -- flat",
+      "sp500": "7610 (+0.13%) -- slightly positive"
+    },
+    "candidates_evaluated": {
+      "HFCL": "FAIL Step 2.7: R:R 0.69:1 on realistic target (Rs 200 target, MA5 stop Rs 183). RSI 79.9. Broke 52w high but no valid new entry.",
+      "TEJASNET": "FAIL Step 2.7: R:R 1.47:1 (marginally below 1.5:1). Volume drying 1.42x->0.23x. Range compressing. RSI 81.8.",
+      "PARAS": "FAIL confidence: 72% (chart passes R:R 1.78:1 but below >90% threshold). Pattern D recovery.",
+      "AEROFLEX": "FAIL confidence: ~60%. +8% on 0.60x volume = no institutional backing. No catalyst.",
+      "NEWGEN": "FAIL Step 2.7: R:R 1.35:1 (below 1.5:1 minimum). +17.3% spike Jun 2 = news priced in (-10 conf). RSI 72.3, 10.3% above MA5.",
+      "HINDOILEXP": "FAIL Step 2.7: R:R 1.36:1 to 52w high. Pattern I not activated (WTI $94.76, needs 3 days above $95).",
+      "HINDWAREAP": "FAIL Step 2.5 (active downtrend: 14/19 sessions with lower highs)",
+      "NATIONALUM": "FAIL Step 2.5 (distribution vol 4.56x avg on down days)",
+      "KFINTECH": "FAIL Step 2.5 (Rule 26e: HV 35/40, 5 days short)",
+      "STLTECH": "HARD EXCLUDE (RSI ~90.5, above ceiling 82)",
+      "NETWEB": "HARD EXCLUDE (RSI 83+, above ceiling 82, distribution vol 2.31x)",
+      "BBOX": "HARD EXCLUDE (RSI 92.5)"
+    },
+    "positions_status": {
+      "HFCL": {
+        "entry_date": "2026-06-01",
+        "entry_price": 180.55,
+        "jun3_close": 194.72,
+        "pct_gain": 7.8,
+        "status": "HOLD",
+        "revised_target": 200.0,
+        "tightened_stop": 184.0,
+        "note": "Broke above prior 52w high Rs 191.39. In price discovery. HOLD with stop Rs 184 (MA5)."
+      },
+      "LLOYDSME": {
+        "entry_date": "2026-06-01",
+        "entry_price": 1820.90,
+        "jun3_close": 1802.50,
+        "pct_gain": -1.0,
+        "status": "EXIT_CONFIRMED",
+        "note": "Rule 26e retroactive fail (39/40). Exit recommended Jun 2 was correct. Jun 3 confirms -1%."
+      }
+    },
+    "new_rules": {
+      "rule_47": "PRE-RESULTS ACCUMULATION SCAN (June Q4 season): In June, scan for software-infrastructure stocks within 10% of 52w low + PE < 30 + RSI < 45 + volume declining on down days. If board meeting within 7 days, elevate to Pattern P watch. Entry on quiet base day before results. Stop: 52w low. Exit immediately on miss. R:R to post-results target must be >= 2:1. (Added after NEWGEN Rs 401->Rs 526 miss.)",
+      "rule_48": "WTI $95 EARLY ALERT: WTI progression May 29=$87, Jun 1=$92, Jun 2=$94, Jun 3=$95 (approaching). When WTI is within $1 of the $95 threshold for 3+ consecutive sessions, begin HINDOILEXP pre-positioning analysis (not entry). Wait for 3 consecutive closes above $95 before any entry. Even then, check R:R independently.",
+      "rule_49": "PATTERN O IS SINGLE-SESSION: NIFTYIT >+2% trigger day is a single-session trade opportunity, NOT a multi-day holding thesis. NIFTYIT gave +4.23% Jun 2 then reversed -4.20% Jun 3 = exhaustion whipsaw. Pattern O re-activates only when NIFTYIT AGAIN shows >+2%.",
+      "rule_50": "R:R AT 52W HIGH ENTRY: When a stock is at or near its 52w high (within 2%), the stop (below MA5) is typically 5-8% away but the realistic first target is only 2-4% away. This almost always produces R:R < 1.0. Do NOT enter at 52w high unless the thesis is price discovery with the next target at least 8-10% away AND R:R >= 1.5:1."
+    },
+    "wti_watch": {
+      "threshold": "$95 for 3 consecutive days",
+      "progression": {
+        "2026-05-29": "$87.36",
+        "2026-06-01": "$92.16",
+        "2026-06-02": "$93.76",
+        "2026-06-03": "$94.76"
+      },
+      "status": "Day 0 (not yet above $95). Monitor Jun 4 close.",
+      "candidate_when_activated": "HINDOILEXP",
+      "activation_entry_note": "Even at activation, HINDOILEXP R:R fails at current Rs 173. Need pullback to Rs 168-172 for valid R:R."
+    },
+    "missed_moves": {
+      "NEWGEN": {
+        "move": "+17.3% Jun 2 on 14x volume",
+        "cause": "Q4 FY26 earnings beat",
+        "why_missed": "Not in active scans; no pre-results accumulation scan in place",
+        "new_rule": "rule_47 (Pre-Results Accumulation Scan for June)"
+      },
+      "JMFINANCIL": {
+        "move": "+8.8% Jun 2 (after -8.9% Jun 1)",
+        "cause": "Post-falling-knife overshoot recovery",
+        "why_missed": "Rule 26a correctly excluded on Jun 1; Jun 2 was speculative catch",
+        "lesson": "No rule change. Current Rule 26a framework is correct."
+      },
+      "AEROFLEX": {
+        "move": "+8.0% Jun 2 on 0.60x volume",
+        "cause": "Unknown / thin volume bounce",
+        "why_missed": "Not a miss -- 0.60x volume means no institutional backing. Not a valid breakout.",
+        "lesson": "Pattern H requires vol >= 1.5x avg. 0.60x = skip."
+      }
     }
   }
 ]
