@@ -1,6 +1,6 @@
 ---
 name: feedback-chart-read-and-90pct-threshold
-description: Mandatory Step 2.7 chart read gate before final list; confidence threshold raised from >78% to >90%; 88% large-cap cap superseded; 0-pick days are the expected outcome
+description: Mandatory Step 2.7 chart read gate before final list; confidence threshold raised from >78% to >90%, then relaxed to >85% (Jun 5 2026); 88% large-cap cap superseded; 0-pick days are the expected outcome
 metadata:
   type: feedback
 ---
@@ -42,27 +42,24 @@ stock joins the watchlist with a specific re-entry trigger.
 
 ---
 
-## Rule: Confidence Threshold Raised to >90%
+## Rule: Confidence Threshold Relaxed to >85% (Jun 5 2026)
 
-Only stocks with confidence STRICTLY GREATER THAN 90% qualify for the final recommendation list.
-Stocks at 78-90% are watchlist-only, never main picks.
+Only stocks with confidence STRICTLY GREATER THAN 85% qualify for the final recommendation list.
+Stocks at 78-85% are watchlist-only, never main picks.
 
 This supersedes ALL prior threshold rules and caps:
 - The >78% threshold used in runs 1-19: superseded.
-- The 88% large-cap cap from the Large-Cap Rule for trending sectors ([[large-cap-rule-trending-sectors]]): superseded. Large-cap picks also need >90%.
-- Pattern O AI/Cloud Infra Universe ([[pattern-o-ai-cloud-infra-universe]]) picks: >90% required.
-- Event-driven notes (TRENT AGM, etc.): watchlist if below 90%, never main picks.
+- The >90% threshold used in runs 20-22: superseded. Relaxed by 5% on Jun 5 2026.
+- The 88% large-cap cap from the Large-Cap Rule for trending sectors ([[large-cap-rule-trending-sectors]]): superseded. Large-cap picks also need >85%.
+- Pattern O AI/Cloud Infra Universe ([[pattern-o-ai-cloud-infra-universe]]) picks: >85% required.
+- Event-driven notes (TRENT AGM, etc.): watchlist if below 85%, never main picks.
 
-The 0-pick day is the EXPECTED outcome on most days. Ship 0 if nothing clears 90%.
-Do not pad. Do not lower confidence to fit. Do not "round up" an 89% to qualify.
+The 0-pick day is the EXPECTED outcome on most days. Ship 0 if nothing clears 85%.
+Do not pad. Do not lower confidence to fit. Do not "round up" an 84% to qualify.
 
-**Why:** After 19 runs, the pipeline was generating marginal picks at 78-87% that failed
-post-entry chart review. HFCL at 87% failed the chart read on Jun 2 (Rule 46b + R:R 0.86:1).
-NETWEB at 84% failed the chart read (Sub-Rule 26f). Both would have been recommended under
-the >78% rule. The threshold raise, combined with the mandatory chart read gate, means only
-stocks that are BOTH high-conviction AND showing clean tape action reach the list.
-False positives are costly. Zero picks is not a failure -- it is the system working correctly.
+**Why:** After 22 runs at the >90% gate, the pipeline was producing too many 0-pick days.
+The 5% relaxation to >85% is intended to surface more qualifying setups while the mandatory
+Step 2.7 chart read (R:R >= 1.5:1, no Sub-Rule 26f / Rule 46b exhaustion) remains as
+the quality backstop.
 
-**How to apply:** At Step 4 (Result Formatting), filter to confidence > 90 AND chart_read = PASS.
-If the filtered list is empty, output 0 picks with a brief explanation of why no stock
-cleared both gates. Never state "no picks today" apologetically -- state it as expected.
+**How to apply:** At Step 4 (Result Formatting), filter to confidence > 85 AND chart_read = PASS.

@@ -1,8 +1,168 @@
 ---
 name: Indian Market Patterns - Observations and Duopoly Pairs
-description: Technical patterns applied, known duopoly pairs, accuracy observations from 20 pipeline runs (updated June 3, 2026 -- Run #20 0-pick day; R:R rule at 52w high, Pattern O single-session, WTI $95 early alert, pre-results accumulation scan added)
+description: Technical patterns applied, known duopoly pairs, accuracy observations from 23 pipeline runs (updated June 5, 2026 -- Run #23 0-pick day; PARAS new 52wH Rs 954, HFCL trail stop triggered +4.3%, RBI day Rule 54, Rules 54-57 added)
 type: project
 ---
+
+## Run #23 Update — 2026-06-05 (Thu)
+
+### MARKET CONTEXT
+- Nifty50: 23,459.70 (+0.23%) — UP on RBI policy day
+- NiftyIT: 29,327.05 (-0.20%) — slight underperform; AI_TAILWIND counter: 1/3, ACTIVE
+- WTI: $93.04 (Jun4) — BELOW $95; Pattern I DEACTIVATED
+- RBI Policy Day: Systemic thin volumes (<0.5x across NSE)
+- HFCL trail stop Rs 199 triggered. Exit Jun 6 at market open.
+
+### KEY STOCK UPDATES
+- PARAS: New 52w high Rs 954. RSI 82.0, 9.5% above MA5. Rule 49 FAIL.
+  Updated trigger: MA5 pullback Rs 870-895. R:R 5.2:1. Conf 91-93% when triggered.
+- GOCOLORS: Rs 403.80, RSI 84.3, vol 0.12x. Hard exclude. MA5 reset Rs 355-370 needed.
+- TEJASNET: Rs 608.70, RSI 95.8. Hard exclude.
+- IDEAFORGE: Upper circuit locked Jun5 (Rs 945, zero range). Cannot transact.
+- TVSSCS: +10.1% in 2d on 2.14x+1.83x vol, RSI 71.4. BLOCKED — 26e FAIL (19<40).
+- SCHNEIDER: 5 consecutive circuit-down + 1.37x DistVol. REJECT.
+- ATHERENERG: Rs 1,002, RSI 67.2, vol 0.11x. Pattern D valid but vol absent.
+- HINDOILEXP: Pattern I deactivated (WTI < $95). Rs 166, below MA5.
+
+### 0-PICK DAY (5th consecutive: Runs 19-23)
+All 5 are correct. Quality gate functioning as designed.
+
+### NEW RULES (#54-57)
+54. RBI POLICY DAY FLAG: Systemic thin vol on MPC days. -15 conf to all picks.
+    Do NOT enter on RBI day. Dates: ~Jun5, Aug8, Oct10, Dec5.
+55. TRENT SPLIT CORRUPTION: Two 3:2 splits in 7 days broke yfinance RSI.
+    No automated signals for TRENT until data verified. 26e FAIL (30/40).
+56. IDEAFORGE CIRCUIT PROTOCOL: Upper circuit = skip session. Re-enter first free day.
+57. PARAS UPDATED TRIGGER: MA5 reset Rs 870-895. R:R 5.2:1. Target Rs 1,100.
+
+### ACTIVE WATCHLIST (post-Run #23)
+1. PARAS: MA5 pullback Rs 870-895, vol <=0.8x → 91-93% conf → MAIN PICK
+2. GOCOLORS: MA5 reset Rs 355-370 + RSI 55-65 → ~88-90% conf
+3. ATHERENERG: Vol >=1.2x on green day >Rs 1,000 → ~82-85%
+4. IDEAFORGE: First free circuit day + vol >=1.0x → ~82-84%
+5. NEWGEN: Close >Rs 510 on vol >=1.0x → ~82-85%
+6. HINDOILEXP: WTI >$95 for 3d AND MA5 reclaim → ~82-84%
+7. OLAELEC: Pullback Rs 37-41 + RSI <68 → ~82-85%
+8. FIRSTCRY: RSI pullback to 40-50 + vol >=1.5x → ~80-83%
+9. TRENT: 26e FAIL ongoing. AGM Jun23. Manual verification needed.
+
+## Run #22 Update — 2026-06-05
+
+### MARKET CONTEXT
+- Nifty50: 23,384 (-0.09%) — range-bound near 23,400 for 6th session
+- NiftyIT: 29,280 (+0.16%) — slight recovery; outperformed Nifty50 by +0.25%
+  AI_TAILWIND counter: 1/3 sessions. ACTIVE. Pattern O INACTIVE (need >+2%).
+- WTI: $95.16 = Day 2 above $95. Pattern I watch.
+- Nasdaq prev: -0.89% = US_MARKET_CAUTION active
+- HFCL existing (Jun 1 entry Rs 180.55): +15.0%, trail stop Rs 199
+
+### 0-PICK DAY ANALYSIS
+All major candidates fail Step 2.7 R:R gate:
+  PARAS: +7.54% today moved past entry zone. R:R 0.68:1. Wait for MA5 pullback Rs 855.
+  GOCOLORS: +19.8% in 2 sessions. RSI 76, 14.63% above MA5. R:R 0.73-1.36:1. All fail.
+  TEJASNET: RSI 79.4 near ceiling, 9.98% above MA5. R:R 0.78:1. Fails.
+  HINDOILEXP: Conf 83-85% — below >90% threshold. Pattern I needs both Day 3 AND extra catalyst.
+  ATHERENERG: Conf 78% — below threshold. Watch for base.
+
+### GOCOLORS SYSTEMIC MISS — DOCUMENTED
+- May 27: Watchlisted at Rs 254 (7.35x vol capitulation spike at 52w low)
+- Jun 1: Watchlist trigger FIRED: Rs 325 close (RM-3 Support Test + Hold)
+          Vol 0.56x (low vol on support = healthy non-distribution pullback)
+- Jun 4: Rs 402.60 = +23.9% in 3 sessions from Jun1 trigger
+- Root cause: Step 2.2 (Watchlist Re-evaluation) was not formalized
+- Correction: Rule 51 (Watchlist Persistence) now active every session
+- Pattern confirmed: RM-3 (Support Test + Hold) = high-accuracy template
+
+### GOCOLORS POWER LEG PATTERN (new observation)
+Three-leg breakout structure: May21 (4.6x vol), Jun3 (5.98x vol), future leg
+Each leg resets to MA5 before next leg fires. 
+Optimal entry: MA5 reset days (not power-leg days).
+Example: Jun1 Rs 325 was MA5 reset after May21 leg = correct entry = +23.9% in 3d.
+Next entry: Rs 350-365 (MA5 reset after Jun3 leg).
+
+### NEW RULES (Run #22)
+
+51. WATCHLIST PERSISTENCE (formalized 2026-06-05):
+Step 2.2 runs BEFORE every organic pattern analysis. All prior watchlist items
+evaluated against machine-readable trigger specs. Fired triggers get first-priority
+routing into Step 2.7. Carry forward <= 10 sessions. Triggered by: GOCOLORS miss.
+
+52. RM-2 BREAKOUT DAY 2 REFINED ENTRY:
+Valid Day 2 entry requires ALL:
+  (a) R:R >= 1.5:1 against realistic target
+  (b) RSI < 75 (not approaching 82 ceiling)
+  (c) Price < 8% above MA5 (not extended)
+  (d) Prior breakout vol >= 2x avg (institutional confirmation)
+GOCOLORS Jun4 failed on (b) and (c) -- correctly rejected.
+
+53. GOCOLORS/POWER-LEG ENTRY RULE (added 2026-06-05):
+For stocks with 3-leg breakout structure: enter on MA5 resets between legs.
+Do NOT enter on the power-leg day itself. The power-leg day is the SIGNAL,
+the MA5 reset (2-5 sessions later) is the ENTRY.
+Applied: GOCOLORS Rs 325 Jun1 (MA5 reset after May21 leg) = correct.
+         GOCOLORS Rs 402 Jun4 (power-leg day) = incorrect (R:R fails).
+
+### CURRENT WATCHLIST PRIORITIES
+1. PARAS: Re-entry at MA5 pullback Rs 845-865. At Rs 855: R:R 9.48:1. Conf ~91%.
+2. GOCOLORS: Re-entry at Rs 350-365 (MA5 reset). R:R 2.5:1+. Conf ~88-90%.
+3. HINDOILEXP: Day 3 WTI + extra catalyst needed. Conf 85% max (insufficient alone).
+4. ATHERENERG: Base formation at Rs 930-960. Conf 83%.
+5. TEJASNET: Pullback to Rs 545-555. Conf 87%.
+6. TRENT AGM: Close > Rs 2850 trigger. AGM Jun 23. Conf 80%.
+
+### PATTERN O STATUS
+INACTIVE (NiftyIT +0.16%). All Pattern O names still extended:
+HFCL RSI 88.5, STLTECH ~93, BBOX 90.4, TEJASNET 79.4 (approaching ceiling).
+Pattern O will not trigger until NiftyIT >+2% AND these RSIs have pulled back.
+
+### AI_TAILWIND STATUS
+ACTIVE. Counter: 1/3 qualifying sessions (Jun3 only; Jun4 NiftyIT outperformed).
+Monitor Jun 5 for Session 2 if NiftyIT underperforms Nifty50 by >2%.
+
+### HFCL POSITION (Jun 1 entry Rs 180.55)
+Current: Rs 207.64. P&L: +15.0%.
+Trail stop: Rs 199 (protecting 10% gain floor).
+Target: Rs 220-225.
+Volume Jun4: 0.43x (consolidation — no exit signal).
+Range trajectory: Jun2 +9.47, Jun3 +8.23 (EXPANDING — no staircase exhaustion yet).
+
+
+
+### NEW RULE 46: RESISTANCE PROXIMITY RULE
+When a stock's price is within 2% of a known resistance, R:R using SECOND resistance as target.
+The immediate resistance cannot be counted as meaningful upside.
+Applied: PARAS Rs 882 vs Rs 888 resistance = R:R 1.43:1 FAIL. At Rs 850 entry = 11.2:1.
+
+### NEW RULE 47: PATTERN A MODIFIED ENTRY (DUOPOLY LAG)
+For lag plays: when LEADER makes new 10d high AND laggard RSI 60-68 AND vol >= 0.8x avg
+= Pattern A entry candidate. Do NOT require 1.5x volume for lag plays.
+Evidence: OLAELEC missed on Jun 2. Would have caught +10.1% 2-day gain.
+ATHER making new highs was the signal. OLAELEC volume was 0.95x = sufficient.
+
+### CURRENT WATCHLIST PRIORITIES
+1. PARAS: Re-entry at MA5 pullback Rs 840-855. At Rs 850: R:R 11.2:1. Conf ~91%.
+2. HINDOILEXP: Pattern I re-activates if WTI > $95 Jun 5 (Day 3). R:R 2.20:1.
+3. IDEAFORGE: Volume >= 0.8x needed. Defense/AI dual theme. R:R 3.25:1 at Rs 860 entry.
+4. OLAELEC: Post-pullback entry Rs 38-41 after 2-3 sessions of cool-down.
+
+### PATTERN O STATUS
+INACTIVE today (NiftyIT -0.45%). RSI ceiling hit on all 4 candidates.
+HFCL: RSI 86.1 (hard exclude). STLTECH: RSI 92.3 (hard exclude).
+TEJASNET: RSI 89.4 (hard exclude). BBOX: RSI 92.7 (hard exclude).
+Pattern O will not trigger until NiftyIT has a > +2% session AND these
+RSI values have pulled back to below 75.
+
+### AI_TAILWIND STATUS
+ACTIVE. NiftyIT underperformed Nifty50 by >2% only on Jun 3 (1/3 sessions needed).
+Jun 4: NiftyIT -0.45% vs Nifty50 +0.02% = diff -0.47% (does NOT count).
+Need 2 more qualifying sessions (>2% differential) to deactivate AI_TAILWIND.
+
+### HFCL EXISTING POSITION (Jun 1 entry Rs 180.55)
+Current: Rs 203.69. P&L: +12.8%. HOLD.
+Trail stop: Rs 191 (below MA5). Target: Rs 220-225.
+Volume today: 0.32x (consolidation phase). No exit signal yet.
+
+
 
 ## *** PINNED RULE CHANGES (effective 2026-06-02, permanent) ***
 

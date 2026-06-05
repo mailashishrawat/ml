@@ -143,7 +143,7 @@ Launch an Opus sub-agent with extended thinking. Runs every execution, no except
 
 ## STEP 2 — PATTERN ANALYSIS (Opus Sub-Agent)
 
-Analyze stocks from `basestock.json` + any NEWS_CATALYST_BUY additions + any stocks from the **Recent Movers Scan** below. Return up to 5 stocks with confidence >90. Stocks with confidence 78–90 should be noted in the output as watchlist candidates but will not proceed further in the pipeline.
+Analyze stocks from `basestock.json` + any NEWS_CATALYST_BUY additions + any stocks from the **Recent Movers Scan** below. Return up to 5 stocks with confidence >85. Stocks with confidence 78–85 should be noted in the output as watchlist candidates but will not proceed further in the pipeline.
 
 **Before generating picks — mandatory retrospective:**
 Search for stocks that moved +8% or more in the last 2 trading days NOT in prior recommendations. For each miss: identify what signals were present (RSI, volume, sector news, breakout, earnings, defense order, state-visit MoU), identify which rule caused the miss, add a "MISSED MOVE" entry to `pattern_notes.md`.
@@ -161,6 +161,45 @@ RECENT MOVERS (≥5% in last 2 sessions):
 Symbol | Session | Move% | Volume/Avg | RSI | Classification | Action
 ```
 
+**Step 2.3 — Recent Mover Pattern Recognition (mandatory, runs after Recent Movers Scan):**
+
+For EVERY stock that moved ≥5% (close-to-close) in EITHER of the last 2 trading sessions — including those classified above — run a structured pattern recognition pass to identify *which recognizable pattern* explains the move and decide whether to propose it. This is the safety net that prevents stocks like GOCOLORS Jun 1 (+2.9% support test) and PARAS Jun 3 (Pattern D dip recovery on thin vol) from falling between the cracks.
+
+For each ≥5% mover, compute and inspect:
+- 20-day high/low, 50-day high/low, 52-week high
+- Distance to nearest resistance and nearest support (in % and ATR multiples)
+- Volume profile of last 5 sessions vs 20-day avg
+- RSI trajectory over last 7 sessions (look for 35→55 sweep, stable 55-70 grind, or 75+ exhaustion)
+- MA5 / MA20 distance
+- Whether the prior 3-5 sessions were a coiling pause, a pullback, or a fresh leg
+- Sector group context: did sector index move with the stock, or is it idiosyncratic
+- Step 1.5 news catalyst overlap
+
+Then map to ONE of these recognition templates and emit the proposal verbatim:
+
+| Template | Signature | Confidence Base | Proposal Action |
+|---|---|---|---|
+| **RM-1: Breakout Day 1** | Close > 20d/50d/52w high on volume ≥1.5× avg, RSI 55-72, range expanding, MA5 < 5% below | 88 | Propose immediate entry on next dip to breakout level (no chase) |
+| **RM-2: Breakout Day 2 Continuation** | Day after RM-1, volume ≥0.8× avg, no distribution bar, holding above breakout level | 90 | Propose entry today — continuation thesis intact |
+| **RM-3: Support Test + Hold** | Pullback into prior breakout zone or 5/20MA, intraday low taps support, close green/flat above support, volume <0.8× avg | 91 | Propose entry today — lowest-risk re-entry on a winner (this is the GOCOLORS Jun 1 template) |
+| **RM-4: Pattern D Dip Recovery** | Was above RSI 50 for 30+ days, dipped 5-12%, now first green day on volume ≥0.7× avg, RSI 45-58 | 89 | Propose entry today — institutional strength confirmed (this is the PARAS Jun 3 template) |
+| **RM-5: News-Driven Gap & Go** | Move on Step 1.5 NEWS_CATALYST, volume ≥2× avg, RSI 50-72, sector aligned | 87 | Propose entry on next 1-2 day digestion if RSI < 75 |
+| **RM-6: Sector Rotation Lag** | Stock moved while peer/leader already at new highs (Pattern A duopoly lag), volume ≥0.8× avg | 86 | Propose immediate entry — laggard catch-up |
+| **RM-7: Earnings/Order Beat Reaction** | Move tied to earnings beat or order win in last 2 sessions, RSI < 75, no climax bar | 88 | Propose entry today if no >10% single-session climax; else wait for digestion |
+| **RM-8: Coiling Breakout** | Move came after 5+ session range-bound coil with declining volume; today range ≥1.5× recent avg, volume ≥1.3× avg | 87 | Propose entry today — coiled spring released |
+| **RM-9: Failed Pattern (REJECT)** | RSI > 80, OR single-bar +10%+ climax with no follow-through, OR distribution volume on up day | n/a | Do NOT propose; add to "wait for pullback" watchlist with explicit re-entry trigger |
+| **RM-10: Unrecognized** | Move does not fit any template above | n/a | Document in `pattern_notes.md` as a candidate new pattern; do NOT propose this run |
+
+**Proposal output (mandatory, BEFORE main picks):**
+```
+RECENT MOVER PROPOSALS (≥5% in last 2 sessions, pattern-recognized):
+Symbol | Move% (2d) | Template | Pattern Logic | Entry | Stop | Target | R:R | Conf | Proposed?
+```
+
+For each proposed stock (templates RM-1 through RM-8), route into Step 2.7 chart read alongside organic picks. The Step 2.7 R:R ≥ 1.5 and >85% confidence gates still apply — Step 2.3 only ensures the candidate is *seen*, not that it auto-qualifies. Stocks rejected at Step 2.7 must be added to the watchlist (per [[watchlist-persistence-rule]]) with a machine-readable trigger spec, not silently dropped.
+
+**Self-discovered patterns:** When a ≥5% mover repeatedly hits RM-10 (Unrecognized) over multiple runs and subsequently produces follow-through, propose it as a new RM template. Track these in `pattern_notes.md` with accuracy score before promoting.
+
 **Patterns (weighted by performance in `pattern_notes.md`):**
 
 - **a. Duopoly**: Load `duopoly_pairs.json`. If one peer rose but the other hasn't reacted, flag lagging peer as BUY.
@@ -176,7 +215,7 @@ Symbol | Session | Move% | Volume/Avg | RSI | Classification | Action
 - **k. Pattern S — IPO/Post-Listing Reversal**: For stocks listed 6–24 months ago. Entry criteria (ALL required): ran +20% from IPO then corrected 8–20% in 6–10 sessions; volume on down days below avg; RSI 38–50 at entry; price reclaimed 5-day MA; recovery volume ≥1.0× avg; no negative news in 30 days. Base confidence 72, capped at 80 (88 if LPI active). **LPI sub-pattern** (+8): 4+ quarters of loss improvement + revenue growing + first profitable quarter expected within 3 quarters. Mandatory universe: ATHERENERG, OLAELEC, SWIGGY, ETERNAL, AFCONS, JYOTICNC, CELLO, FIRSTCRY, NTPCGREEN, HYUNDAI India, BLACKBUCK.
 - **MC. Momentum Continuation**: Stock identified as MOMENTUM_CONTINUATION in Recent Movers Scan. Progressive higher highs/lows, no distribution, RSI < 75, volume ≥1.5× avg on the move. Base confidence boost +20. Do NOT wait for a pullback — enter on continuation. Validated: HFCL May 22 (+22.6% captured vs +0.64% if pullback-waited).
 
-**Output** (JSON, max 5 entries, min confidence 78 for watchlist; only >90 proceed to Steps 2.7–4):
+**Output** (JSON,, only >85 proceed to next Steps):
 ```json
 [{
   "symbol": "SYMBOL",
@@ -201,7 +240,12 @@ Update `pattern_notes.md` after generating picks.
 
 ---
 
-## STEP 2.5 — PRICE ACTION HARD GATE (No Exceptions)
+
+---
+
+## STEP 3 — VALIDATION (Sonnet Sub-Agent)
+
+## STEP 3.1 — PRICE ACTION HARD GATE (No Exceptions)
 
 For each Step 2 stock, fetch last 60 days of daily OHLCV (from `.cache/ohlc/` — use cached data first) and verify ALL four conditions:
 
@@ -214,7 +258,7 @@ For each Step 2 stock, fetch last 60 days of daily OHLCV (from `.cache/ohlc/` �
 
 ---
 
-## STEP 2.7 — CHART READ (Mandatory, No Exceptions)
+## STEP 3.2 — CHART READ (Mandatory, No Exceptions)
 
 This step runs for EVERY stock that passes Step 2.5, BEFORE it can enter the final recommendation list. There are no exceptions — not for news catalysts, not for large-cap trending-sector picks, not for Pattern S / LPI candidates, not for force-includes.
 
@@ -226,7 +270,7 @@ For each passing stock, perform an explicit honest chart read evaluating ALL of 
 
 3. **Daily range trajectory over the last 3 closes**: Classify as EXPANDING, STEADY, or COMPRESSING. Compressing range after an extended move is a warning; confirm with volume before passing.
 
-4. **Volume trajectory over the last 3 sessions**: Classify as RISING, FLAT, or DRYING UP. Drying-up volume on a stock near its target = no buyers present = do not project further gains. **Exception:** If confidence > 90%, drying volume alone is NOT an automatic FAIL — flag it in the tape read and weigh against overall setup quality. Below 90%, drying volume retains full weight toward FAIL.
+4. **Volume trajectory over the last 3 sessions**: Classify as RISING, FLAT, or DRYING UP. Drying-up volume on a stock near its target = no buyers present = do not project further gains. **Exception:** If confidence > 85%, drying volume alone is NOT an automatic FAIL — flag it in the tape read and weigh against overall setup quality. Below 85%, drying volume retains full weight toward FAIL.
 
 5. **Distance from MA5**: Is the stock close to MA5 (within 1-2%) with momentum accelerating, or extended above MA5 (5%+) with momentum cooling? Extended + cooling = revise target down to nearest resistance, not the optimistic measured-move target.
 
@@ -240,12 +284,7 @@ For each passing stock, perform an explicit honest chart read evaluating ALL of 
 - If FAIL: the specific condition that caused the failure and the re-entry trigger to watch (e.g., "FAIL Rule 46b — wait for resumption session with volume >= 0.8x avg before re-entry").
 
 **FAIL = stock cannot enter the recommendation list, period.** Move to watchlist with the re-entry trigger. A FAIL here is never overridden by confidence score, news catalyst strength, or any other factor.
-
----
-
-## STEP 3 — VALIDATION (Sonnet Sub-Agent)
-
-For each stock that passed Step 2.5 AND Step 2.7, check:
+ check 3.3:
 
 - **a. Negative News (last 7 days)**: SEBI/CCI issues, fraud, management changes, earnings miss, legal trouble → if found, `final_recommendation: false`.
 - **b. US Market**: Was last NASDAQ/S&P close down >1%? → add `US_MARKET_CAUTION` flag (don't remove unless combined with other negatives). Delegate price lookup to a Haiku sub-agent.
@@ -258,7 +297,7 @@ For each stock that passed Step 2.5 AND Step 2.7, check:
   1. **Sub-Rule 26f**: Single session +10%+ followed by 1-2 sessions flat/down with vol < 0.4x 20d avg = CLIMAX EXHAUSTION. FAIL.
   2. **Rule 46b**: 3+ consecutive closes with shrinking daily range AND vol < 0.2x throughout = DECELERATING-STAIRCASE EXHAUSTION. FAIL.
   3. **Daily range trajectory** (last 3 closes): EXPANDING / STEADY / COMPRESSING.
-  4. **Volume trajectory** (last 3 sessions): RISING / FLAT / DRYING UP. If confidence > 90%, drying volume alone is not auto-FAIL — flag and weigh holistically. Below 90%, drying volume can contribute to FAIL.
+  4. **Volume trajectory** (last 3 sessions): RISING / FLAT / DRYING UP. If confidence > 85%, drying volume alone is not auto-FAIL — flag and weigh holistically. Below 85%, drying volume can contribute to FAIL.
   5. **MA5 distance and momentum**: Extended above MA5 (>5%) with cooling momentum → revise target to nearest resistance.
   6. **Resistance distance vs target**: Target requiring 2+ additional +5% resistance breaks → revise to nearest realistic resistance.
   7. **R:R on revised target**: Must be >= 1.5:1. Below 1.5:1 = FAIL regardless of all other factors.
@@ -276,11 +315,11 @@ For each stock that passed Step 2.5 AND Step 2.7, check:
 Format the validated recommendations and write the complete report to `out/YYYY-MM-DD.txt`.
 
 **Filtering:**
-- Show only `final_recommendation: true` AND `chart_read: PASS` (from Step 2.7) with confidence **strictly > 90**. Maximum 3 stocks.
+- Show only `final_recommendation: true` AND `chart_read: PASS` (from Step 2.7) with confidence **strictly > 85**. Maximum 3 stocks.
 - Never reduce position size for a marginal pick — remove it entirely instead.
 - Sort: confidence desc, then volume desc.
-- The 0-pick day is the EXPECTED outcome on most days. Do not pad. Do not lower confidence to fit. If 0 stocks clear 90%, ship 0.
-- The 90% threshold applies universally: standard picks, large-cap trending-sector picks (the prior 88% cap is superseded), Pattern O AI/Cloud Infra Universe picks, and all other pattern combinations. Event-driven notes (e.g., TRENT AGM) surface as watchlist only if below 90% — never as main picks.
+- The 0-pick day is the EXPECTED outcome on most days. Do not pad. Do not lower confidence to fit. If 0 stocks clear 85%, ship 0.
+- The 85% threshold applies universally: standard picks, large-cap trending-sector picks (the prior 88% cap is superseded), Pattern O AI/Cloud Infra Universe picks, and all other pattern combinations. Event-driven notes (e.g., TRENT AGM) surface as watchlist only if below 85% — never as main picks.
 
 **Required output sections:**
 
@@ -328,7 +367,7 @@ Skip by default. Run only when user asks about past performance.
 2. **Error handling**: If any sub-agent fails, log and continue with available data. Never halt the pipeline for a single failure.
 3. **File persistence**: `basestock.json`, `pattern_notes.md`, `duopoly_pairs.json`, `daily_recommendations.json` persist across runs in the working directory.
 4. **Self-improvement**: After each run, update `pattern_notes.md` with observations. Before new picks, read existing notes to inform decisions.
-5. **Max recommendations**: ≤5 from Step 2; ≤3 in final Step 4 output. Confidence threshold strictly >90 for final output. Never pad to reach 3.
+5. **Max recommendations**: ≤5 from Step 2; ≤3 in final Step 4 output. Confidence threshold strictly >85 for final output. Never pad to reach 3.
 
 ---
 

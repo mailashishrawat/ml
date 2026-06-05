@@ -1999,19 +1999,19 @@
     ],
     "entry_prices": {
       "HFCL": 180.55,
-      "LLOYDSME": 1820.90
+      "LLOYDSME": 1820.9
     },
     "targets": {
-      "HFCL": 198.00,
-      "LLOYDSME": 1965.00
+      "HFCL": 198.0,
+      "LLOYDSME": 1965.0
     },
     "stop_losses": {
-      "HFCL": 170.00,
-      "LLOYDSME": 1740.00
+      "HFCL": 170.0,
+      "LLOYDSME": 1740.0
     },
     "exit_windows": {
-      "HFCL": "2026-06-05 to 2026-06-10 (T+4 to T+7 — data center momentum)",
-      "LLOYDSME": "2026-06-05 to 2026-06-09 (T+4 to T+6 — Pattern D recovery)"
+      "HFCL": "2026-06-05 to 2026-06-10 (T+4 to T+7 \u2014 data center momentum)",
+      "LLOYDSME": "2026-06-05 to 2026-06-09 (T+4 to T+6 \u2014 Pattern D recovery)"
     },
     "confidence_scores": {
       "HFCL": 84,
@@ -2031,7 +2031,7 @@
     },
     "patterns": {
       "HFCL": [
-        "pattern_O (data center AI infrastructure — optical fiber)",
+        "pattern_O (data center AI infrastructure \u2014 optical fiber)",
         "pattern_H (momentum breakout near 52w high)",
         "pattern_F (structural sector tailwind: AI, 5G, BharatNet)",
         "pattern_D (no distribution volume = institutional holding)"
@@ -2045,9 +2045,9 @@
     },
     "macro_context": {
       "nifty": "23,560 (+0.05%)",
-      "niftyit": "29,962 (+3.03%) — MASSIVE IT/AI surge",
-      "wti": "$89.63 (+2.60%) — below $95, bouncing",
-      "gold": "$4,544 (-0.36%) — no gold caution",
+      "niftyit": "29,962 (+3.03%) \u2014 MASSIVE IT/AI surge",
+      "wti": "$89.63 (+2.60%) \u2014 below $95, bouncing",
+      "gold": "$4,544 (-0.36%) \u2014 no gold caution",
       "inoxwind_miss": "INOXWIND Q4 FY26 earnings miss; -7% on 1.84x volume. Hard exclude.",
       "indigo_airline": "INDIGO +2.9% to Rs 4,537. Large-cap; no ATF relief news confirmed. Watchlist.",
       "hfcl_context": "At 52w high Rs 189; +29% in 10 days; optical fiber data center demand; NIFTYIT +3% direct tailwind",
@@ -2068,15 +2068,41 @@
       "CGPOWER": "PERMANENT EXCLUDE."
     },
     "run17_backtest_estimates": {
-      "NATIONALUM": {"entry": 433.50, "current_jun1": 424.25, "pct": -2.1, "status": "LOSS"},
-      "KEC": {"entry": 501.00, "current_jun1": 494.20, "pct": -1.4, "status": "LOSS"},
-      "ASAHIINDIA": {"entry": 907.80, "current_jun1": 878.80, "pct": -3.2, "status": "LOSS"},
+      "NATIONALUM": {
+        "entry": 433.5,
+        "current_jun1": 424.25,
+        "pct": -2.1,
+        "status": "LOSS"
+      },
+      "KEC": {
+        "entry": 501.0,
+        "current_jun1": 494.2,
+        "pct": -1.4,
+        "status": "LOSS"
+      },
+      "ASAHIINDIA": {
+        "entry": 907.8,
+        "current_jun1": 878.8,
+        "pct": -3.2,
+        "status": "LOSS"
+      },
       "batch_return_pct": -2.2,
-      "note": "Run 17 batch underperformed. Distribution volume signal on NATIONALUM (4.57x) was a valid warning. KEC RSI recovery failed — stock resumed downtrend. ASAHIINDIA entry at RSI 65 was slightly high."
+      "note": "Run 17 batch underperformed. Distribution volume signal on NATIONALUM (4.57x) was a valid warning. KEC RSI recovery failed \u2014 stock resumed downtrend. ASAHIINDIA entry at RSI 65 was slightly high."
     },
     "run18_backtest_day1": {
-      "HFCL": {"entry": 180.55, "current_jun2": 182.73, "pct": 1.2, "status": "WIN_IN_PROGRESS"},
-      "LLOYDSME": {"entry": 1820.90, "current_jun2": 1828.0, "pct": 0.4, "status": "RULE_VIOLATION_EXIT_RECOMMENDED", "note": "Rule 26e retroactive fail (39/40 in full 252d check). Recommended exit at market."}
+      "HFCL": {
+        "entry": 180.55,
+        "current_jun2": 182.73,
+        "pct": 1.2,
+        "status": "WIN_IN_PROGRESS"
+      },
+      "LLOYDSME": {
+        "entry": 1820.9,
+        "current_jun2": 1828.0,
+        "pct": 0.4,
+        "status": "RULE_VIOLATION_EXIT_RECOMMENDED",
+        "note": "Rule 26e retroactive fail (39/40 in full 252d check). Recommended exit at market."
+      }
     }
   },
   {
@@ -2085,7 +2111,10 @@
     "note": "Market open run. REVISED TWICE post-user chart review. Original: 2 picks (HFCL 87%, NETWEB 84%). Revision 1: NETWEB removed (vertical one-bar spike Rule 46/Sub-Rule 26f). Revision 2: HFCL downgraded to 76% (below threshold) -- decelerating-staircase exhaustion (3 consecutive closes with shrinking daily range +2/+1 AND volume 0.08x = no returning buyers). FINAL RESULT: 0-PICK DAY. Run #18 holders of HFCL advised HOLD with revised target Rs 189 (not Rs 200) and tightened stop Rs 176 (below MA5). LLOYDSME exit recommended (Rule 26e 39/40 retroactive fail). STLTECH missed on Jun 1 (RSI 89.4 on Jun 2 = cannot enter). TRENT AGM thesis documented as event-driven watchlist. WTI +4.73% to $91.49 = approaching $95 reactivation zone.",
     "recommendations": [],
     "zero_pick_reason": "HFCL downgraded from 87% to 76% (below >78% threshold) after honest chart re-evaluation: decelerating-staircase signature (3 closes: 180/182/183 = +2/+1 daily increments + volume 0.08x = no fresh buyers). Rs 200 target requires breaking 52w high Rs 189 then +5.8% more; R:R on revised Rs 189 target = 0.86:1 (below minimum). NETWEB already removed for one-bar-spike-stall (Sub-Rule 26f). No remaining picks above 78% confidence.",
-    "removed_post_chart_review": ["NETWEB", "HFCL"],
+    "removed_post_chart_review": [
+      "NETWEB",
+      "HFCL"
+    ],
     "hfcl_downgrade": {
       "symbol": "HFCL",
       "original_confidence": 87,
@@ -2175,7 +2204,7 @@
         "early_exit_trigger": "Close below MA5 Rs 178.6"
       },
       "LLOYDSME": {
-        "entry": 1820.90,
+        "entry": 1820.9,
         "current_jun2": 1828.0,
         "pct": 0.4,
         "status": "EXIT_RECOMMENDED_RULE_VIOLATION",
@@ -2232,8 +2261,8 @@
       },
       "LLOYDSME": {
         "entry_date": "2026-06-01",
-        "entry_price": 1820.90,
-        "jun3_close": 1802.50,
+        "entry_price": 1820.9,
+        "jun3_close": 1802.5,
         "pct_gain": -1.0,
         "status": "EXIT_CONFIRMED",
         "note": "Rule 26e retroactive fail (39/40). Exit recommended Jun 2 was correct. Jun 3 confirms -1%."
@@ -2275,6 +2304,209 @@
         "cause": "Unknown / thin volume bounce",
         "why_missed": "Not a miss -- 0.60x volume means no institutional backing. Not a valid breakout.",
         "lesson": "Pattern H requires vol >= 1.5x avg. 0.60x = skip."
+      }
+    }
+  },
+  {
+    "date": "2026-06-04",
+    "run_number": 21,
+    "recommendations": [],
+    "entry_prices": {},
+    "targets": {},
+    "stop_losses": {},
+    "confidence_scores": {},
+    "result": "0_PICK_DAY",
+    "patterns": {},
+    "macro_context": {
+      "nifty50": "23405.90 (+0.00%)",
+      "niftyit": "29233.95 (-0.45%)",
+      "wti_crude": "$95.16 (Day 2 above $95, -0.90%)",
+      "gold": "$4497.80 (+1.38%, 5d change -0.03% = no GOLD_CAUTION)",
+      "nasdaq_prior": "26853.98 (-0.89%) -- US_MARKET_CAUTION active",
+      "sp500_prior": "7553.68 (-0.74%)",
+      "dxy": "99.48 (-0.05%)",
+      "ai_tailwind": "ACTIVE (Jensen Huang Jun 2026)",
+      "pattern_o": "INACTIVE (NiftyIT -0.45%, need >+2%)",
+      "pattern_i": "DAY 2 -- needs Day 3 Jun 5 for HINDOILEXP activation"
+    },
+    "zero_pick_reason": "PARAS R:R 1.43:1 fails 1.5 minimum after +5.2% move. Pattern O inactive. US_MARKET_CAUTION. WTI Day 2 (not Day 3). All RSI-ceiling stocks (HFCL 86.1, STLTECH 92.3, TEJASNET 89.4, BBOX 92.7) hard excluded.",
+    "watchlist": {
+      "PARAS": {
+        "trigger": "Pullback to Rs 840-855 (MA5 support)",
+        "entry": 850,
+        "target": 941,
+        "stop": 841.9,
+        "rr": 11.2,
+        "conf_at_trigger": 91
+      },
+      "HINDOILEXP": {
+        "trigger": "WTI Day 3 (Jun 5 close > $95)",
+        "entry": 170,
+        "target": 186.9,
+        "stop": 161.38,
+        "rr": 2.2,
+        "conf_at_trigger": 83
+      },
+      "IDEAFORGE": {
+        "trigger": "Volume >= 0.8x avg on green day",
+        "entry": 860,
+        "target": 990,
+        "stop": 820,
+        "rr": 3.25,
+        "conf_at_trigger": 80
+      },
+      "OLAELEC": {
+        "trigger": "Pullback to Rs 38-41 (RSI 55-65) after 2-3 sessions",
+        "entry": 40,
+        "target": 52,
+        "stop": 35,
+        "rr": 2.4,
+        "conf_at_trigger": 78
+      },
+      "TRENT": {
+        "trigger": "AGM Jun 23 event-driven + HV floor pass + close > Rs 2850",
+        "entry": 2850,
+        "target": 3200,
+        "stop": 2650,
+        "rr": 1.75,
+        "conf_at_trigger": 80
+      }
+    },
+    "notes": [
+      "PARAS: Closest to qualifying. R:R 1.43 fails by 0.07 after today's +5.2% move. Re-enter at MA5 pullback.",
+      "OLAELEC MISSED MOVE: Pattern A (ATHER duopoly lag) was valid Jun 2 but volume rule too strict. New Rule 47 added.",
+      "AI_TAILWIND: 1/3 sessions of NiftyIT underperformance. Still active. Watch Jun 5.",
+      "HFCL existing holders (Jun 1 entry): +12.8%. Trail stop to Rs 191 (MA5)."
+    ]
+  },
+  {
+    "date": "2026-06-05",
+    "run_number": 22,
+    "recommendations": [],
+    "entry_prices": {},
+    "targets": {},
+    "stop_losses": {},
+    "confidence_scores": {},
+    "result": "0_PICK_DAY",
+    "patterns": {},
+    "macro_context": {
+      "nifty50": "23384.10 (-0.09%)",
+      "niftyit": "29280.55 (+0.16%) -- slightly positive; NiftyIT outperformed Nifty50 by +0.25%",
+      "wti_crude": "$95.16 (Day 2 above $95) -- awaiting Jun5 close for Pattern I Day 3",
+      "gold": "$4497.80 (5d change -0.03% = no GOLD_CAUTION)",
+      "nasdaq_prior": "-0.89% -- US_MARKET_CAUTION active",
+      "sp500_prior": "-0.74%",
+      "ai_tailwind": "ACTIVE (1/3 qualifying sessions for deactivation)",
+      "pattern_o": "INACTIVE (NiftyIT +0.16%, need >+2%)",
+      "hfcl_position": "Entry Rs 180.55 Jun1, Current Rs 207.64, P&L +15.0%, trail stop Rs 199"
+    },
+    "zero_pick_reason": "All candidates fail Step 2.7 R:R gate. PARAS R:R=0.68:1 (moved +7.54% today past entry zone). GOCOLORS R:R=0.73-1.36:1 (RSI 76.0, 14.63% above MA5). TEJASNET R:R=0.78:1 + RSI 79.4. HINDOILEXP conf 83-85% (below 90%, Pattern I Day 2 not Day 3). All RSI>82 stocks hard-excluded.",
+    "watchlist": {
+      "PARAS": {
+        "priority": 1,
+        "trigger": "Pullback to Rs 845-865 (MA5 zone) on vol <= 0.8x avg",
+        "entry": 855,
+        "target": 941.27,
+        "stop": 836,
+        "rr": 9.48,
+        "conf_at_trigger": 91,
+        "template": "RM-4 Pattern D + Pattern MC",
+        "carry_sessions": 10
+      },
+      "HINDOILEXP": {
+        "priority": 2,
+        "trigger": "WTI Day 3 (Jun5 close > $95) PLUS additional catalyst",
+        "entry": 170,
+        "target": 186.9,
+        "stop": 161.38,
+        "rr": 2.26,
+        "conf_at_trigger": 85,
+        "note": "Conf 83-85% insufficient (need >90%). Need additional catalyst beyond Pattern I alone."
+      },
+      "GOCOLORS": {
+        "priority": 3,
+        "trigger": "Pullback to Rs 350-365 (MA5) + RSI 55-65 + vol >= 0.8x avg",
+        "entry": 358,
+        "target": 440,
+        "stop": 335,
+        "rr": 2.5,
+        "conf_at_trigger": 89,
+        "template": "RM-3 Support Test + Hold",
+        "carry_sessions": 8,
+        "note": "GOCOLORS +23.9% miss documented. Watchlist trigger at Rs 325 (Jun1) was correct entry. Step 2.2 Watchlist Persistence now active."
+      },
+      "ATHERENERG": {
+        "priority": 4,
+        "trigger": "Close > Rs 990 on vol >= 1.2x avg OR pullback holds Rs 930-950 with RSI 55-62",
+        "entry": 960,
+        "target": 1022,
+        "stop": 910,
+        "rr": 1.7,
+        "conf_at_trigger": 83,
+        "template": "RM-4 Pattern D Dip Recovery"
+      },
+      "TRENT": {
+        "priority": 5,
+        "trigger": "AGM Jun23 event-driven + close > Rs 2850 on vol >= 0.5x avg",
+        "entry": 2875,
+        "target": 3200,
+        "stop": 2650,
+        "rr": 1.75,
+        "conf_at_trigger": 80,
+        "event": "AGM June 23 2026"
+      },
+      "TEJASNET": {
+        "priority": 6,
+        "trigger": "Pullback to Rs 545-555 (MA5) + RSI 65-72",
+        "entry": 550,
+        "target": 650,
+        "stop": 525,
+        "rr": 2.0,
+        "conf_at_trigger": 87,
+        "template": "RM-3 Support Test + Hold after breakout"
+      },
+      "NEWGEN": {
+        "priority": 7,
+        "trigger": "First green day above Rs 510 on vol >= 1x avg after current pullback",
+        "entry": 510,
+        "target": 580,
+        "stop": 475,
+        "rr": 2.0,
+        "conf_at_trigger": 80
+      },
+      "OLAELEC": {
+        "priority": 8,
+        "trigger": "Pullback to Rs 38-41 zone + RSI 55-65",
+        "entry": 40,
+        "target": 52,
+        "stop": 35,
+        "rr": 2.4,
+        "conf_at_trigger": 78
+      }
+    },
+    "recent_movers_table": {
+      "GOCOLORS": {"session": "Jun3+Jun4", "move_pct": 19.8, "vol_ratio": "5.98x/2.37x", "rsi": 76.0, "template": "RM-9 REJECT (R:R fails)"},
+      "PARAS": {"session": "Jun4", "move_pct": 7.54, "vol_ratio": "1.93x", "rsi": 67.3, "template": "RM-1 REJECT (R:R 0.68:1)"},
+      "TEJASNET": {"session": "Jun3+Jun4", "move_pct": 12.99, "vol_ratio": "2.87x/1.51x", "rsi": 79.4, "template": "RM-9 REJECT (RSI ceiling + R:R fails)"},
+      "OLAELEC": {"session": "Jun3", "move_pct": 9.21, "vol_ratio": "est 2x", "rsi": 69.7, "template": "NEWS_PRICED_IN"},
+      "ATHERENERG": {"session": "Jun3", "move_pct": 6.41, "vol_ratio": "2.06x", "rsi": 61.1, "template": "RM-4 watchlist"}
+    },
+    "new_rules": {
+      "rule_51": "WATCHLIST PERSISTENCE FORMALIZED (2026-06-05): Step 2.2 runs before every organic analysis. All prior watchlist entries evaluated against trigger specs. Fired triggers get first-priority routing. Carry forward <= 10 sessions.",
+      "rule_52": "RM-2 ENTRY REFINED: Breakout Day 2 requires RSI < 75, price < 8% above MA5, R:R >= 1.5:1, prior day vol >= 2x avg.",
+      "rule_53": "GOCOLORS POWER LEG: Three-leg breakout with MA5 resets between legs. Entry on MA5 reset days, not power-leg days."
+    },
+    "systemic_miss_documented": {
+      "GOCOLORS": {
+        "watchlist_date": "2026-05-27",
+        "watchlist_trigger": "Rs 320-325 support hold on low vol",
+        "trigger_fired": "2026-06-01",
+        "trigger_price": 325.0,
+        "current_price": 402.6,
+        "return_from_trigger": 23.9,
+        "template": "RM-3 Support Test + Hold",
+        "root_cause": "Step 2.2 Watchlist Re-evaluation not formalized",
+        "correction": "Rule 51 (Watchlist Persistence) added"
       }
     }
   }
