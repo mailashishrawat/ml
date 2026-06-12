@@ -2509,5 +2509,244 @@
         "correction": "Rule 51 (Watchlist Persistence) added"
       }
     }
+  },
+  {
+    "date": "2026-06-09",
+    "run_number": 24,
+    "note": "Friday pipeline for Monday open. Nasdaq -4.18% + VIX 21.5 = SEVERE US caution. 0-pick day. HFCL stop triggered (exit Monday). PARAS +14.3% 2-day extended. TEJASNET borderline 85 conf (not strictly >85). Rules 58-60 added.",
+    "recommendations": [],
+    "confidence_scores": {},
+    "patterns": {},
+    "macro_context": {
+      "nifty50": "23,366.70 (-0.21%)",
+      "niftyit": "29,010.30 (-0.99%)",
+      "nasdaq": "25,709.43 (-4.18%) SEVERE DROP",
+      "sp500": "7,383.74 (-2.64%)",
+      "vix": "21.51 (+39.7%) FEAR SPIKE",
+      "gold_5d": "$4,337.10 (-3.09%)",
+      "wti": "$93.09 (-2.04%)",
+      "us_market_caution": "SEVERE (Nasdaq -4.18%, VIX 21.5)",
+      "pattern_o": "INACTIVE (NiftyIT -0.99%)",
+      "pattern_i": "INACTIVE (WTI $93 < $95)",
+      "pattern_k": "NOT APPLIED (gold fell with equities = risk-off)",
+      "ai_tailwind": "ACTIVE (Jensen Huang Jun2026)"
+    },
+    "exclusions": {
+      "PARAS": "R:R 1.59:1 marginal + 10.1% above MA5 + intraday rejection at Rs 994. Step 2.7 soft fail.",
+      "TEJASNET": "Confidence 85 exactly (need strictly >85). Enhanced US caution -15 penalty. Gap-down risk.",
+      "GOCOLORS": "RSI 76.7 approaching ceiling, 11.7% above MA5. Extended.",
+      "STLTECH": "RSI 82.3 AT ceiling + distribution bar Jun5 (-4.96% on 3.05x vol).",
+      "HFCL": "Stop triggered Jun5. EXIT Monday open. No new entry.",
+      "ATHERENERG": "Confidence 83-85%, volume not yet triggered (0.9x Jun5).",
+      "IDEAFORGE": "Upper circuit locked Jun5 (Rule 56 protocol)."
+    },
+    "watchlist": {
+      "PARAS": {
+        "trigger": "Pullback Rs 890-920 + vol <=1.0x + RSI 60-68",
+        "entry": "Rs 895-920",
+        "stop": "Rs 855",
+        "target": "Rs 1100",
+        "rr": "5.0:1 at Rs 910",
+        "confidence_on_trigger": "91-93",
+        "expiry_sessions": 10
+      },
+      "TEJASNET": {
+        "trigger": "Monday Nifty50 open >=23,250 AND TEJASNET opens >=Rs 572",
+        "entry": "Rs 573-580",
+        "stop": "Rs 565",
+        "target": "Rs 629",
+        "rr": "4.4-5.15:1",
+        "confidence_on_trigger": 88,
+        "expiry": "Monday June 9 open only (then re-evaluate)"
+      },
+      "GOCOLORS": {
+        "trigger": "MA5 reset Rs 370-385 + RSI 55-65 + vol <=0.8x down days",
+        "entry": "Rs 378",
+        "stop": "Rs 350",
+        "target": "Rs 430-450",
+        "rr": "2.5-3.0:1",
+        "confidence_on_trigger": "88-90",
+        "expiry_sessions": 10
+      },
+      "ATHERENERG": {
+        "trigger": "Vol >=1.2x on green day above Rs 1000",
+        "entry": "Rs 1000-1035",
+        "stop": "Rs 960",
+        "target": "Rs 1047-1100",
+        "rr": "1.5-1.8:1",
+        "confidence_on_trigger": "83-85",
+        "expiry_sessions": 6
+      },
+      "HFCL": {
+        "action": "EXIT Monday open (stop triggered Jun5)",
+        "realized_gain_approx_pct": 10.2,
+        "reentry_trigger": "Close above MA5 Rs 191 on vol >=0.8x + RSI 55-65",
+        "reentry_entry": "Rs 193-198",
+        "reentry_stop": "Rs 182",
+        "reentry_target": "Rs 220-225"
+      }
+    },
+    "new_rules": {
+      "58": "SEVERE US CAUTION: Nasdaq >3% OR VIX >18 = -15 conf (not -10). Gap-down risk.",
+      "59": "PATTERN K CONTEXT: Only when gold falls while US UP/flat. Not in risk-off selloff.",
+      "60": "INTRADAY REJECTION: Close >2% below intraday high at resistance = seller resistance confirmed."
+    }
+  },
+  {
+    "date": "2026-06-08",
+    "run_number": 25,
+    "recommendations": [],
+    "zero_pick_reason": "No stock cleared >85% confidence with valid R:R >= 1.5:1 simultaneously. IDEAFORGE at 52w high (R:R 0.66-1.23:1), PARAS above trigger zone (R:R 1.19:1), all others below threshold.",
+    "market_context": {
+      "nifty50": 23189.9,
+      "niftyit": 28693.85,
+      "niftyit_change_pct": -1.09,
+      "nasdaq_last_close": 25709.43,
+      "nasdaq_last_change_pct": -4.18,
+      "gold": 4343.5,
+      "wti": 94.08,
+      "ai_tailwind": "ACTIVE",
+      "pattern_o": "INACTIVE",
+      "pattern_i": "DAY_0_WATCH",
+      "us_caution": "STANDARD (-10)",
+      "india_relative_strength": "CONFIRMED (Nifty -0.77% vs Japan -4%, Korea -5%)"
+    },
+    "watchlist": {
+      "PARAS": {
+        "trigger": "Close Rs 890-920 + RSI 60-68 + vol <= 1.0x avg",
+        "entry": "Rs 895-920",
+        "stop": "Rs 855",
+        "target": "Rs 1100",
+        "rr": "5.0:1 at Rs 910",
+        "confidence_on_trigger": "91-93",
+        "expiry_sessions": 5,
+        "status": "Jun8 close Rs 967 - above trigger zone"
+      },
+      "IDEAFORGE": {
+        "trigger": "Pullback Rs 930-955 + vol <= 0.8x + RSI 65-70",
+        "entry": "Rs 935-955",
+        "stop": "Rs 895",
+        "target": "Rs 1100",
+        "rr": "3.1:1 at Rs 945",
+        "confidence_on_trigger": "86-88",
+        "expiry_sessions": 8,
+        "status": "Jun8 close Rs 992 at 52w high - R:R fails at current"
+      },
+      "GOCOLORS": {
+        "trigger": "Pullback Rs 370-385 + RSI 55-65 + vol <= 0.8x",
+        "entry": "Rs 378",
+        "stop": "Rs 350",
+        "target": "Rs 430-455",
+        "rr": "2.5-3.5:1",
+        "confidence_on_trigger": "88-90",
+        "expiry_sessions": 10
+      },
+      "ATHERENERG": {
+        "trigger": "Vol >= 1.2x on green day > Rs 1020",
+        "entry": "Rs 1020-1055",
+        "stop": "Rs 975",
+        "target": "Rs 1100-1150",
+        "confidence_on_trigger": "83-86",
+        "expiry_sessions": 6
+      },
+      "TEJASNET": {
+        "trigger": "Reclaim Rs 575+ (above MA5) on vol >= 1.0x avg",
+        "entry": "Rs 577-582",
+        "stop": "Rs 554",
+        "target": "Rs 629",
+        "rr": "2.0:1",
+        "confidence_on_trigger": "77-80",
+        "note": "DOWNGRADED from prior. Rule 26d emerging (2 lower highs + 1 lower low). Hard remove if close < Rs 554."
+      },
+      "STLTECH": {
+        "trigger": "RSI 65-68 + close above MA5 Rs 614 on vol >= 0.8x",
+        "entry": "Rs 615-625",
+        "stop": "Rs 590",
+        "target": "Rs 679",
+        "rr": "2.3:1",
+        "confidence_on_trigger": "80-82",
+        "note": "RSI descending rapidly (95.5->72.9 in 3d). Could approach trigger Jun9."
+      },
+      "HFCL": {
+        "action": "EXIT on first free day (Jun9 expected) — circuit locked Jun8",
+        "realized_gain_approx_pct": 10.2,
+        "circuit_note": "Lower circuit Jun8 (range=0). Trail stop Rs 199 was triggered Jun5 but unexecutable. Exit ASAP first free session.",
+        "reentry_trigger": "Close above MA5 Rs 190 on vol >= 0.8x + RSI 55-65",
+        "reentry_zone": "Rs 188-196"
+      }
+    },
+    "new_rules": {
+      "61": "US CAUTION CALIBRATION: When Nifty <1.0% gap-down after Nasdaq >3% drop, apply STANDARD caution (not severe) for NEXT session. India resilience = forward risk reduced.",
+      "62": "CIRCUIT UNLOCK PATTERN (RM-10): Post-circuit-lock first free day at 52w high on vol < 1.5x = likely trapped buyers, not new buying. Do NOT enter at resistance. Track as RM-10 for template development.",
+      "63": "PARAS TRIGGER EXPIRY: MA5 pullback trigger expires after 8 sessions if zone not touched. At session 8, recalibrate to current MA5 level or evaluate breakout entry."
+    }
+  },
+  {
+    "date": "2026-06-12",
+    "run_number": 26,
+    "note": "First pick after 8 consecutive 0-pick days (Runs #19-25). TEJASNET RM-4 dip recovery confirmed. Jun11 cleared Jun8 swing high (584.70>576.85). Rising volume (0.79->1.39->1.47x). Clean declining-volume correction from Jun4 peak.",
+    "recommendations": [
+      "TEJASNET"
+    ],
+    "entry_prices": {
+      "TEJASNET": 575.0
+    },
+    "targets": {
+      "TEJASNET": 629.45
+    },
+    "stop_losses": {
+      "TEJASNET": 555.0
+    },
+    "exit_window": "2026-06-16 to 2026-06-17",
+    "confidence_scores": {
+      "TEJASNET": 90
+    },
+    "patterns": {
+      "TEJASNET": [
+        "RM-4 (Pattern D Dip Recovery — institutional strength confirmed)",
+        "Pattern MC (Momentum Continuation — Jun11 cleared Jun8 swing high)",
+        "AI_TAILWIND (telecom infra, optical networking for AI data centers)"
+      ]
+    },
+    "trade_params": {
+      "TEJASNET": {
+        "entry": 575.0,
+        "stop": 555.0,
+        "target": 629.45,
+        "rr": 2.98,
+        "upside_pct": 9.47,
+        "downside_pct": 3.48,
+        "rsi_at_entry": 65.2,
+        "ma5_at_entry": 556.71,
+        "ma5_dist_pct": 3.0,
+        "vol_trend": "RISING (0.79->1.39->1.47x)",
+        "range_trend": "EXPANDING (24->37->44 pts)"
+      }
+    },
+    "macro_context": {
+      "nifty50_jun11": "23161.60 (-0.23%, 5d -1.09%)",
+      "niftyit_jun11": "27821.05 (-1.62%, 5d -5.05%)",
+      "nasdaq_jun11": "25809.66 (+2.54%) — recovery day",
+      "vix_jun11": "19.44 (falling from 22.22)",
+      "gold_jun11": "$4090.30 (-8.61% 5d) — falling with equities",
+      "wti_jun11": "$87.71 (Pattern I INACTIVE < $95)",
+      "ai_tailwind": "ACTIVE (Jensen Huang Jun2026)",
+      "pattern_o": "INACTIVE (NiftyIT not +2%)",
+      "us_caution": "STANDARD only (Rule 61: Nifty absorbed US selloff well)"
+    },
+    "watchlist_updates": {
+      "GOCOLORS": "REMOVED — Rule 26d active, trigger zone breached downward (Rule 64)",
+      "STLTECH": "REMOVED — Rule 26d active, 5 consecutive lower highs, dist vol",
+      "HFCL": "REMOVED — Active cascade to Rs163. Re-entry requires 5-session stable base first",
+      "PARAS": "RECALIBRATED trigger: close above MA5 Rs999 + RSI 65-72 + vol <=1.2x = MAIN PICK at 88%",
+      "IDEAFORGE": "REVISED to 2-stage trigger: floor Rs850-875 then MA5 reclaim Rs927. Conf 75-78%.",
+      "APARINDS": "NEW — watchlist at MA5 pullback Rs13800-13900. Conf 82%.",
+      "TEJASNET": "ACTIVE TRADE (this run's pick)"
+    },
+    "new_rules": {
+      "64": "TRIGGER ZONE BREACH RULE: Close below trigger zone bottom = breakdown not support test. Remove from watchlist immediately. Applied: GOCOLORS Jun10 close Rs362 < zone bottom Rs370.",
+      "65": "SWING HIGH CLEARANCE RULE: When stock in pullback clears prior swing high, Rule 26d is neutralized. Jun11 TEJASNET H=584.70 > Jun8 H=576.85 = prior resistance becomes support.",
+      "66": "CASCADING LOWER-CIRCUIT PATTERN: Multiple lower circuits after upper circuits = trapped buyers. NO entry until: 5+ stable sessions + MA5 reclaim on vol>=1.0x + no new 52w lows in 3 prior sessions."
+    }
   }
 ]

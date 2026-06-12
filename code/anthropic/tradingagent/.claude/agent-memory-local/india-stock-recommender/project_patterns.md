@@ -1,8 +1,128 @@
 ---
 name: Indian Market Patterns - Observations and Duopoly Pairs
-description: Technical patterns applied, known duopoly pairs, accuracy observations from 23 pipeline runs (updated June 5, 2026 -- Run #23 0-pick day; PARAS new 52wH Rs 954, HFCL trail stop triggered +4.3%, RBI day Rule 54, Rules 54-57 added)
+description: Technical patterns applied, known duopoly pairs, accuracy observations from 26 pipeline runs (updated June 12, 2026 -- Run #26: TEJASNET 90% RM-4 pick; Rules 64-66 added; GOCOLORS removed watchlist; STLTECH/HFCL cascades)
 type: project
 ---
+
+## Run #26 Update — 2026-06-12 (Thu, data as of Jun 11)
+
+### MAIN PICK: TEJASNET (90% confidence)
+- Pattern: RM-4 (Pattern D dip recovery) + MC + AI_TAILWIND
+- Entry Rs575, Stop Rs555, Target Rs629.45 (52w high), R:R 2.98:1
+- Exit window: Jun 16-17
+- Key signal: Jun11 cleared Jun8 swing high (584.70 > 576.85) = Rule 26d reversed.
+  Clean declining-volume correction Jun5-9 (down-day avg vol 0.94x). Recovery with
+  rising volume Jun10-11 (0.79->1.39->1.47x). RSI floor 59.4 (Jun9). Now RSI 65.2.
+- This is the FIRST PICK after 8 consecutive 0-pick days (Runs #19-25). All 0-picks correct.
+
+### MARKET CONTEXT (Jun 11, 2026)
+- Nifty50: 23,161.60 (-1.09% 5d) — mild weakness. 23,000 = key support.
+- NiftyIT: 27,821.05 (-5.05% 5d) — persistent weakness but AI_TAILWIND counter = 0/3. ACTIVE.
+- Nasdaq Jun11: +2.54% (recovery day after 5d -3.81%). VIX: 19.44 (declining).
+- WTI: $87.71. Pattern I INACTIVE. Gold: $4,090 (-8.61% 5d) falling WITH equities (Rule 59).
+- US_CAUTION: STANDARD (Rule 61: India absorbed prior US weakness well).
+
+### KEY WATCHLIST CHANGES
+- GOCOLORS: REMOVED (Rule 26d active; trigger zone Rs370-385 breached — close Rs362 on Jun10;
+  further fell to Rs343 Jun11. Rule 64: close below trigger zone bottom = breakdown, not support.)
+- STLTECH: REMOVED (Rule 26d — 5 consecutive lower highs; down-day avg vol 1.39x = distribution)
+- HFCL: REMOVED (active cascade Rs163.68; 52w high Rs209; -21.7% decline ongoing)
+- PARAS: Recalibrated trigger to MA5 Rs999 reclaim (was Rs890-920 — never fired, price ran past)
+  New trigger: close above Rs999 + RSI 65-72 + vol <=1.2x = MAIN PICK at 88%
+- IDEAFORGE: Cascaded to Rs870 (-12.3% from Rs992). Revised to 2-stage entry (floor first, then MA5)
+- APARINDS: NEW watchlist entry. Hit 52w high Rs14970 Jun11 on 3.07x vol. MA5 pullback trigger.
+
+### NEW RULES
+- Rule 64: Trigger zone breach rule — close BELOW zone bottom = breakdown, not support test. Remove.
+- Rule 65: Swing high clearance = Rule 26d neutralized (TEJASNET Jun11 case)
+- Rule 66: Cascading lower-circuit pattern after upper circuits = trapped buyers. No entry until stable.
+
+## Run #25 Update — 2026-06-08 (Mon, for Tuesday June 9)
+
+### MARKET CONTEXT
+- Nifty50: 23,189.9 (-0.77%) — orderly gap-down after Nasdaq -4.18%. India RELATIVE STRENGTH confirmed.
+  India -0.77% vs Japan -4%, Korea -5%. India absorbed 18% of Nasdaq's drop = decoupling signal.
+- NiftyIT: 28,693.85 (-1.09%) — Pattern O INACTIVE. AI_TAILWIND: ACTIVE (deactivation 0/3).
+- Nasdaq (last close Jun5): -4.18%. VIX 21.51. STANDARD caution applied (not severe) per Rule 61.
+- Gold: $4,343.50 (-2.94% 5d). WTI: $94.08 (Day 0 approaching $95 — Pattern I Day 0 watch).
+- HFCL: LOWER CIRCUIT LOCKED Jun8 (range=0). Exit blocked. Exit on Jun9 first free day.
+
+### 0-PICK DAY — 7th consecutive (Runs #19-25)
+All decisions correct. Quality gate functioning as designed.
+
+### KEY STOCK UPDATES
+- IDEAFORGE: First free circuit day after 2 upper circuits (Jun4 Rs 900, Jun5 Rs 945).
+  Jun8: Opened Rs 940 (below circuit price), closed at Rs 992.2 = NEW 52W HIGH.
+  Vol 0.64x (below 1.0x required). R:R at 992: 0.66-1.23:1 (FAILS <1.5:1).
+  FAILS: At 52w high = AT resistance. Cannot enter without R:R.
+  UPDATED WATCHLIST: Pullback Rs 930-955, R:R 3.1:1, conf 86-88%. RM-10 template documented.
+- PARAS: Rs 966.8 (+1.0% Jun8) on 1.01x vol. RSI 73.3, MA5 903.
+  MA5 pullback trigger (Rs 890-920) still NOT fired. R:R 1.19:1 at current. Trigger intact.
+  Trigger expiry Rule 63: recalibrate after 8 sessions (Jun17 approx).
+- TEJASNET: DOWNGRADED. 2 lower highs + 1 lower low forming. Below MA5 (566 < 570).
+  Confidence reduced to 77-80%. No longer a >85% candidate until reclaim Rs 575+.
+  HARD REMOVE if Jun9 closes below Rs 554.
+- GOCOLORS: Rs 421.2, RSI 79.0, 7.9% above MA5 (Rs 390). Not triggered. Watchlist.
+- ATHERENERG: Rs 1052 (+1.87% Jun8) on 0.58x vol. Intraday high Rs 1069. Not triggered (need 1.2x vol).
+- STLTECH: -5% Jun8 to Rs 588 on 0.40x vol. RSI rapidly descending: 95.5->82.9->72.9 in 3 days.
+  Approaching trigger zone (RSI 65-68). Could fire Jun9. Monitor closely.
+- HFCL: Lower circuit Jun8. Position holds at Rs 177.87. Exit Jun9.
+
+### NEW RULES (Run #25)
+- Rule 61: US CAUTION CALIBRATION — When India < 1% gap-down after Nasdaq >3% drop:
+  Apply STANDARD caution (-10), NOT SEVERE (-15). India resilience = forward risk reduced.
+  Counter-signal: If Nifty gaps >2%, revert to SEVERE.
+- Rule 62: CIRCUIT UNLOCK PATTERN (RM-10) — Post-circuit first free day at 52w high on vol <1.5x:
+  Likely trapped buyers exiting. Do NOT enter at resistance. R:R still applies.
+  Document as RM-10. Track IDEAFORGE Jun8 pattern over 5 sessions.
+- Rule 63: PARAS TRIGGER EXPIRY — MA5 pullback trigger expires after 8 sessions without zone touch.
+  At session 8: recalibrate to current MA5 level or evaluate breakout entry.
+
+### ACTIVE WATCHLIST PRIORITIES
+1. PARAS: Rs 890-920 pullback → 91-93% conf → MAIN PICK (trigger not fired yet)
+2. IDEAFORGE: Rs 930-955 pullback → 86-88% conf → MAIN PICK
+3. GOCOLORS: Rs 370-385 MA5 reset → 88-90% conf → MAIN PICK
+4. STLTECH: RSI 65-68 + MA5 reclaim → 80-82% conf → WATCHLIST (monitor Jun9 closely)
+5. ATHERENERG: vol >= 1.2x green day → 83-86% conf → WATCHLIST
+6. TEJASNET: DOWNGRADED to 77-80%. Reclaim Rs 575+ required.
+
+---
+
+## Run #24 Update — 2026-06-06 (Fri, for Monday June 9)
+
+### MARKET CONTEXT
+- Nifty50: 23,366.70 (-0.21%) — 7th range-bound session near 23,400
+- NiftyIT: 29,010.30 (-0.99%) — Pattern O INACTIVE. AI_TAILWIND: ACTIVE.
+- Nasdaq: 25,709.43 (-4.18%) = SEVERE DROP. VIX: 21.51 (+39.7%). ENHANCED US CAUTION.
+- S&P500: 7,383.74 (-2.64%). Gold: $4,337 (-3.09% 5d). WTI: $93.09 (-2.04%).
+- HFCL position (Jun1 entry Rs 180.55): stop triggered at Rs 199. EXIT Monday.
+  Realized gain approximately +10.2%.
+
+### 0-PICK DAY — 6th consecutive (Runs #19-24)
+All decisions correct. Quality gate functioning as designed.
+
+### KEY STOCK UPDATES
+- PARAS: +14.3% in 2 days (Jun4+5). New 52w intraday high Rs 994. Close Rs 960.
+  Intraday rejection at Rs 994 = seller resistance confirmed (Rule 60).
+  10.1% above MA5. R:R borderline at current. WATCHLIST: Rs 890-920 trigger.
+- TEJASNET: -4.28% Jun5 (pullback after +5.74% Jun4). RSI 69.8, 2.5% above MA5.
+  Chart read PASS, conf 85 (exactly at threshold = NOT strictly >85).
+  Enhanced US caution = disqualified. WATCHLIST: Rs 572+ if Nifty >23,250 Monday.
+- GOCOLORS: Rs 414.2, RSI 76.7, 11.7% above MA5. Extended. WATCHLIST: Rs 370-385.
+- IDEAFORGE: Two consecutive upper circuits. Still locked. WATCHLIST: first free day.
+- STLTECH: RSI 82.3 = AT ceiling. Jun5 -4.96% on 3.05x = distribution bar. HARD EXCLUDE.
+- ATHERENERG: Rs 1033.6, RSI 66, 4.6% above MA5. Near trigger (need vol >=1.2x).
+
+### NEW RULES
+58. SEVERE US CAUTION: Nasdaq >3% down OR VIX >18 = -15 conf (not -10). Gap-down risk.
+59. PATTERN K CONTEXT: Only applies when gold falls while US is UP/flat. Not in risk-off.
+60. INTRADAY REJECTION: Close >2% below intraday high at resistance = seller resistance confirmed.
+
+### ACTIVE WATCHLIST PRIORITIES (post Run #24)
+1. PARAS: Rs 890-920 → 91-93% conf. Stop Rs 855. Target Rs 1100. R:R 5.0:1.
+2. TEJASNET: Monday >=Rs 572 + Nifty >23,250 → 88% conf. Stop Rs 565. Target Rs 629.
+3. GOCOLORS: Rs 370-385 + RSI 55-65 → 88-90% conf. Target Rs 430-450.
+4. ATHERENERG: Vol >=1.2x green day >Rs 1000 → 83-85% conf.
 
 ## Run #23 Update — 2026-06-05 (Thu)
 
