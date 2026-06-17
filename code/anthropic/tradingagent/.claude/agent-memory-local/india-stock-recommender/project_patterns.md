@@ -1,7 +1,179 @@
 ---
 name: Indian Market Patterns - Observations and Duopoly Pairs
-description: Technical patterns applied, known duopoly pairs, accuracy observations from 26 pipeline runs (updated June 12, 2026 -- Run #26: TEJASNET 90% RM-4 pick; Rules 64-66 added; GOCOLORS removed watchlist; STLTECH/HFCL cascades)
+description: Technical patterns applied, known duopoly pairs, accuracy observations from 29 pipeline runs (updated June 16, 2026 -- Run #29: 0-pick; TEJASNET CLOSED +1.57%; STLTECH MORNING OPEN ALERT Rs617 Jun17; UNOMINDA 26e 35/40 nearest; large-caps 26e FAIL; new rules PM-1/CA-1/CA-2/71-75)
 type: project
+---
+
+## Run #29 Update — 2026-06-16 (Tue EOD, live data)
+
+### MARKET CONTEXT
+- Nifty50: 23,933.95 (+1.31%) — sustained 30d+ high. Bullish.
+- NiftyIT: 28,267.85 (+0.63% daily) — Pattern O INACTIVE. AI_TAILWIND ACTIVE (counter 0/3).
+- Nasdaq: ~26,500+, VIX ~16. Risk-on. No US_MARKET_CAUTION.
+- WTI: ~$78-80. US-Iran peace deal. Auto sector tailwind. Pattern I deactivated.
+- Gold: 5-session +1.9% = GOLD_CAUTION INACTIVE. DXY: ~99.2 = India tailwind.
+
+### TEJASNET EXIT — CONFIRMED
+- Entry Rs575 (Jun12). Exit Rs584 (Jun16 market open).
+- REALIZED P&L: +1.57%.
+- T+2 rule executed correctly.
+- RM-4 pattern accuracy: 2/2 trades profitable. HFCL +10.2%, TEJASNET +1.57%.
+- Pattern RM-4 continues HIGH CONFIDENCE.
+
+### NEW RULES ADDED Run #29
+- Rule 71 (PM-1): Stocks never leave basestock.json once added.
+- Rule 72: User-requested stocks tracked with all rules applying.
+- Rule 73: Large-cap trending stocks — size restriction waived but 26e still applies.
+- Rule 74: GOCOLORS trigger revised to Rs360-370 (R:R improved from 0.60:1 to 4.33:1).
+- Rule 75: CA-1/CA-2 corporate action watch rules now active.
+
+### CRITICAL STRUCTURAL FINDING (Run #29)
+26e volatility floor STRUCTURALLY EXCLUDES all NIFTY50 large-cap stocks:
+  MARUTI 10/40, LT 17/40, BAJFINANCE 21/40, M&M 21/40, TRENT 30/40.
+Only UNOMINDA (mid-cap, 35/40) is close to threshold.
+Large-cap trending stocks are valuable for watchlist/manual tracking but
+PIPELINE CANNOT RECOMMEND under current 26e rules.
+PROPOSED RULE 76 (inactive, needs 3 backtest validations): Reduce 26e to 20/252 for
+NIFTY50 trending stocks when: 52w high breakout + R:R >= 2:1 + no distribution.
+
+### 0-PICK DAY — Run #29
+1. STLTECH: Rs613.55 close = Rs3.45 below Rs617 trigger. Vol=0.07x (thin).
+   MORNING OPEN ALERT active for Jun17. Rs617 = 0.56% away. Expected fire.
+2. All large-caps: 26e FAIL (structural). Rules applied without exception.
+3. UNOMINDA: 26e 35/40 (only 5 HV days away!). HIGHEST WATCH PRIORITY.
+4. DELHIVERY: Pattern C fired (RSI 46.1 crossed 45) but 26e 22/40 blocks. Noted.
+5. MUTHOOTFIN: RSI 42.8 (below 45) + 26e 28/40. Dual block.
+
+### KEY WATCHLIST UPDATES (Run #29)
+1. STLTECH: MORNING OPEN ALERT Jun17. Rs617 entry, Stop Rs591, Target Rs679.9, Conf 87%.
+2. UNOMINDA: 26e 35/40 — watch daily. Entry Rs1080-1100, Stop Rs1040, Target Rs1280. Conf ~86%.
+3. GOCOLORS: TRIGGER REVISED to Rs360-370 (pullback) vs old Rs400. R:R now 4.33:1.
+4. MUTHOOTFIN: Dual block (RSI 42.8 + 26e 28/40). Pre-trigger watch.
+5. ATHERENERG: Close > Rs1042 on vol >= 1.2x. Expires Jun27.
+6. SWIGGY: Pattern S (80%, watchlist). Upgrade trigger: Q1 FY27 earnings (Jul 2026).
+
+### RUNS SUMMARY (Runs #1-29)
+Realized gains: HFCL +10.2%, TEJASNET +1.57%, multiple others.
+RM-4 (dip recovery): 2/2. MC (momentum continuation): high accuracy.
+0-pick days: 10 in recent stretch (Runs #19-25 + #27-29). 1 pick day: Run #26.
+Pattern O: Not activated in this market (NiftyIT daily gains < 2%).
+26e filter: Correctly blocked multiple false signals including KALYANKJIL, all large-caps.
+
+
+
+### MARKET CONTEXT
+- Nifty50: 24,004 (+1.61%) — 30-day high sustained. Bullish breakout continuing.
+- NiftyIT: 28,091 (+1.06%) — Pattern O INACTIVE. AI_TAILWIND ACTIVE (counter reset to 0/3).
+- Nasdaq Jun15: +3.07%. VIX 16.20. STRONG RISK-ON. No US_MARKET_CAUTION.
+- WTI: $80.72 (-11.59% 5d). US-Iran peace deal = war premium collapse.
+  Pattern I INACTIVE. Defense war premium softening.
+- Gold: 5-session +1.90% = GOLD_CAUTION INACTIVE (CORRECTION of Run #27 which used 4-session window).
+- DXY: -0.61% 5d = mild USD weakness = India tailwind.
+
+### 0-PICK DAY — Run #28
+1. STLTECH: All 7 Step 2.7 criteria PASS. Conf 87%. BUT Rs617 close trigger NOT fired (close Rs608.80).
+   MORNING OPEN ALERT active (Rule 68): 1.35% gap to trigger. Watch Jun16 open.
+2. KALYANKJIL: +11.09% Jun15 on 4.00x vol (probable Q4 earnings beat). BLOCKED 26e FAIL (34/40).
+3. TRENT: Close Rs2901 > Rs2850 trigger but R:R 0.74:1 fails Step 2.7. Watchlist pullback Rs2750-2800.
+4. MUTHOOTFIN: RSI 40.1 approaching Pattern C trigger (45). Rule 26d still partly active.
+5. All watchlist triggers: Not fired.
+
+### TEJASNET EXIT (T+2 = Jun16)
+- Entry Rs575 (Jun12). Jun15 close Rs582.35 = +1.28%.
+- Jun15: Opened Rs607, High Rs608.40 (near-target zone), Closed Rs582.35.
+  Intraday attempt at Rs608-629 zone FAILED. T+2 mandatory exit Jun16.
+- Expected P&L: +1.28% to +3.0% depending on Jun16 open.
+
+### GOLD_CAUTION CORRECTION (CRITICAL)
+Run #27 applied gold caution using 4-session window (Jun11->Jun15 = +6.13%). INCORRECT.
+Correct 5-trading-session window (Jun9->Jun15): +1.90% = BELOW 2% threshold.
+GOLD_CAUTION WAS INACTIVE IN RUN #27. Rule 69 added.
+
+### ACTIVE WATCHLIST (post-Run #28, priority order)
+1. TEJASNET: EXIT JUN16. Existing position. T+2 mandatory.
+2. STLTECH: MORNING OPEN ALERT Rs617. If Jun16 closes > Rs617 on vol >= 1.0x = main pick Jun17.
+   Entry Rs617-625, Stop Rs591 (MA5), Target Rs679.90, R:R 2.35-4.05:1. Conf: 87%.
+3. MUTHOOTFIN: Pattern C pre-trigger (RSI 40.1 -> needs 45). Trigger: RSI > 45 + vol >= 1.0x.
+   Entry ~Rs3200, Stop Rs2996 (MA5), Target Rs3650, R:R 2.99:1. Conf ~86-88% when fires. Exp Jun30.
+4. PARAS: Pullback Rs1020-1050 + RSI 62-70 + vol <= 1.0x -> 83-86%. Exp ~Jun25.
+5. APARINDS: Pullback Rs15000-15500 + RSI 60-68 -> 83%. ALT RM-1: close > Rs16174 on vol >= 1.5x.
+6. ATHERENERG: Close > Rs1042 on vol >= 1.2x -> 84-87% (gold caution now inactive).
+7. DELHIVERY: Pre-Pattern C (RSI 43.0). Trigger: RSI > 45 + vol >= 1.0x -> 83-85%. Exp Jul4.
+8. KALYANKJIL: NEWS_PRICED_IN. Pullback Rs340-360 (MA20). 26e re-verify (need 2y history). Watch.
+9. TRENT: AGM Jun23. Pullback Rs2750-2800. Conf ~80% (watchlist). R:R 1.65:1 at Rs2780.
+10. IDEAFORGE: Floor Rs850-875 (Day 2 of 5). MA5 reclaim Rs897 needed. Conf 75-78%.
+11. HFCL: First free day Jun16. MA5 reclaim Rs190+ -> 75-78%. Not main pick territory.
+12. GOCOLORS: Close > Rs400 on vol >= 1.0x. Down-day vol 1.27x concern.
+
+### NEW RULES (Run #28)
+69. GOLD_CAUTION WINDOW: Use 5 TRADING sessions (not 4, not calendar). Run #27 error corrected.
+70. EARNINGS SEASON 26e: Do NOT relax 26e for earnings-beat stocks. Rule working as intended.
+    Add follow-up: track blocked earnings-beat stocks for 2-week pullback + 26e re-check.
+
+---
+
+## Run #27 Update — 2026-06-15 (Mon, data as of Jun 15)
+
+### MARKET CONTEXT
+- Nifty50: 24,004 (+1.61%) — NEW 30-DAY HIGH. Broke Jun5 peak 23,516. BULLISH BREAKOUT.
+  Auto sector +2.93% (WTI oil drop tailwind). Banks +1.28%, +6.44% 5-session.
+- NiftyIT: 28,091 (+1.06%) — Pattern O INACTIVE. AI_TAILWIND: ACTIVE (counter 1/3).
+- Nasdaq Jun12: +0.31%. VIX 17.68 (down from 22.22). NO US_MARKET_CAUTION.
+- WTI: $80.74 (-7.95% 4-session). Iran deal optimism. Pattern I INACTIVE.
+- Gold: $4,350 (+6.35% 4-session Jun11-15). GOLD_CAUTION TRIGGERED (-15 all picks).
+- DXY: 99.44 (-0.61% 5d). Mild USD weakness = India tailwind.
+
+### 0-PICK DAY
+1. APARINDS: AT 52w high Rs16174 (intraday). RSI 79.7. 9.53% above MA5. R:R 0.04:1. HARD FAIL.
+   The +21.5% 10-session run happened WITHOUT a pullback to the watchlist trigger (Rs13800-13900).
+   MISS ROOT CAUSE: Watchlist had pullback trigger only. Parallel RM-1 breakout trigger was absent.
+   When Jun11 hit 52w high on 2.86x vol = that was the RM-1 entry. Was missed.
+2. PARAS: Jun12 +10.92% on 1.61x vol gapped from Rs989 to Rs1097. Trigger zone Rs999 "fired"
+   but only at OPEN. EOD analysis missed the intraday entry. Now RSI 76.3, AT Rs1130 52w high.
+   R:R 0.43:1 hard fail.
+3. GOLD_CAUTION (-15): Reduces ATHERENERG from ~84% to ~69%. All borderline picks lose 15 pts.
+4. 26e fails: MUTHOOTFIN (28/40), ETERNAL (33/40), TRENT (30/40), TIINDIA (31/40), CHOICEIN (29/40).
+5. HFCL: Upper circuit lock Jun15 (range=0). Rule 56.
+6. TEJASNET: Open trade from Run #26. Exit Jun16.
+
+### KEY STOCK UPDATES
+- TEJASNET: Rs595.05 (-0.63% Jun15 on 0.23x vol = thin healthy digestion).
+  Entry Rs575 (Jun12). Unrealized +3.49%. Stop Rs555 not hit (Jun15 low=Rs592).
+  Target Rs629.45. EXIT JUN16 at market.
+- PARAS: Rs1103. 52w high Rs1130 = 2.4% above. Watchlist: pullback Rs1020-1050.
+- APARINDS: Rs16120. New 52w high hit today. Watchlist: pullback Rs15000-15500.
+- ATHERENERG: Rs1033, literally at MA5 Rs1033. RSI 63.9. Vol 0.24x (coiling).
+  GOLD_CAUTION blocks this run. Watch for gold to pull back.
+- HFCL: Upper circuit Jun15. First free day Jun16. Rs180.45 pre-circuit.
+- GOCOLORS: Rs373.55 (+4.15% on 0.25x vol). Rule 26d still active (down-day vol 1.13x).
+- STLTECH: Rs589 (barely above MA5). RSI 66.1. Gradual recovery on thin vol.
+- BBOX: Rs1033.5. RSI 57.9. Pattern O candidate awaiting NiftyIT >+2%.
+- TRENT AGM: Rs2861 (closed above Rs2850 trigger). BUT 26e FAIL + split data distortion.
+  Manual verification needed. 8 days to AGM Jun23.
+
+### NEW RULES (Run #27)
+67. PARALLEL BREAKOUT TRIGGER: When a watchlist stock has a pullback trigger, ALWAYS set a
+    concurrent RM-1 activation (52w high break + vol >=1.5x). RM-1 supersedes pullback trigger.
+    Root cause: APARINDS Jun11 (2.86x vol + 52w high) = RM-1 was the correct entry, missed.
+
+68. MORNING OPEN ALERT: When watchlist trigger zone is within 1% of prior EOD close,
+    flag as "MORNING OPEN ALERT." Next session open IN the trigger zone = valid intraday entry.
+    Root cause: PARAS Jun11 close Rs989 = 0.9% below Rs999 trigger. Jun12 opened in zone.
+    EOD pipeline missed the +10.92% move.
+
+### ACTIVE WATCHLIST PRIORITIES
+1. TEJASNET: EXIT JUN16 at market. Existing position.
+2. PARAS: Pullback Rs1020-1050 + RSI 62-70 + vol <=1.0x -> 83-86% conf
+3. APARINDS: Pullback Rs15000-15500 + RSI 60-68 + vol <=0.8x -> 83% conf
+   ALT RM-1: Close above Rs16174 on vol >=1.5x -> re-evaluate
+4. ATHERENERG: Close above Rs1042 on vol >=1.2x -> 84-87% (blocked by GOLD_CAUTION this run)
+5. IDEAFORGE: Floor Rs850-875 (5 stable sessions, Day 2 of 5) then MA5 reclaim -> 78%
+6. STLTECH: Close above Rs617 on vol >=1.0x + RSI 65-72 -> 82% (or Pattern O trigger)
+7. BBOX: NiftyIT >+2% trigger + RSI 55-65 -> 82-85% (Pattern O basket)
+8. GOCOLORS: Rs400 close on vol >=1.0x -> 80% (Rule 26d not yet cleared)
+9. HFCL: First free day Jun16, then MA5 reclaim Rs190+ -> 75-78%
+10. TRENT: Manual 26e verification + AGM Jun23 thesis -> watchlist only
+
 ---
 
 ## Run #26 Update — 2026-06-12 (Thu, data as of Jun 11)

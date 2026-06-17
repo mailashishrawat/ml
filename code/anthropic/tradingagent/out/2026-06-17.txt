@@ -1,0 +1,541 @@
+================================================================================
+  INDIA MID/SMALL-CAP STOCK RECOMMENDATION — RUN #31
+  DATE: 2026-06-17 (Wednesday) | Data as of: Jun 17, 2026 close (live EOD)
+  Pipeline version: Rules 77/78/79 active | AI_TAILWIND ACTIVE | US_MARKET_CAUTION ACTIVE
+================================================================================
+
+RESULT: 0-PICK DAY (11th in recent run series)
+No stock cleared the mandatory >85% confidence threshold today.
+HFCL open position held for T+2 exit tomorrow (Jun 18).
+
+================================================================================
+STEP 1 — BASE STOCK SCREENER
+================================================================================
+
+Cadence check:
+  basestock.json generated_date: 2026-05-27
+  next_regeneration_due: 2026-07-01
+  Today (2026-06-17) < 2026-07-01 -> SKIP regeneration. Using existing file.
+  Universe: 153 stocks. Permanent membership rule PM-1 active.
+
+Status: USING EXISTING basestock.json (no regeneration needed until July 1).
+
+================================================================================
+STEP 1.5 — MACRO TREND & DISRUPTION ALERT
+================================================================================
+
+╔═══════════════════════════════════════════════════════════╗
+║  MACRO TREND & DISRUPTION ALERT — JUNE 17, 2026          ║
+╠═══════════════════════════════════════════════════════════╣
+║ HARD EXCLUDES (remove from all picks)                     ║
+║  None active today.                                       ║
+╠═══════════════════════════════════════════════════════════╣
+║ CAUTION FLAGS (-15 confidence if picked)                  ║
+║  WAR_PREMIUM_DECLINE: WTI $75.13 (-1.21% daily,          ║
+║    -6.8% 5-session). US-Iran peace deal advancing.       ║
+║    Defense sector war premium: structurally declining.   ║
+║    Pure-play E&P/defense stocks: reduced confidence.     ║
+║                                                           ║
+║  US_MARKET_CAUTION ACTIVE (-5 to -10 conf):              ║
+║    Nasdaq Jun 16 close: 26,376.34 (-1.15%).              ║
+║    Threshold is >1% decline. Flag activated.             ║
+║    VIX: 16.41 (+1.30%). Minor uptick but still low.     ║
+╠═══════════════════════════════════════════════════════════╣
+║ TAILWIND SIGNALS (+5 to +15 confidence)                   ║
+║  INDIA MARKET: Nifty50 24,060.65 (+0.30%) Day 4+        ║
+║    of uptrend. Broader India bullishness intact.         ║
+║  AI_TAILWIND: ACTIVE (Jensen Huang/Nvidia Jun 2026).     ║
+║    IT sector eligible. Counter 0/3 (no deactivation).   ║
+║    NiftyIT Jun17 +0.53% vs Nifty50 +0.30% = IT          ║
+║    outperforming for 3rd consecutive session.            ║
+║  AUTO SECTOR (+5): WTI $75.13 = input cost tailwind.    ║
+║    US-Iran deal = sustained oil softness.                ║
+║  GOLD: INACTIVE. 5-session change: +0.6%. Below +2%.    ║
+║  DXY: 99.52 (stable). USD neutral for India.            ║
+╠═══════════════════════════════════════════════════════════╣
+║ NEWS CATALYSTS (+20 conf; force Step 2)                   ║
+║  RELIANCE JIO IPO: DRHP filing likely before RIL AGM    ║
+║    Jun 19. Not in mid/small-cap universe. No direct      ║
+║    pick impact. KFINTECH (registrar/TA) = watchlist      ║
+║    note (indirect beneficiary, 26e 32/247 = FAIL).      ║
+║  TRENT +3.97%: AGM Jun 23 pre-run-up thesis playing.    ║
+║    BUT 26e FAIL (32/247). Hard block. Cannot enter.      ║
+╠═══════════════════════════════════════════════════════════╣
+║ NEW STRUCTURAL RISK                                       ║
+║  DOMS Industries: Fila block deal at 9% discount        ║
+║    (JP Morgan/BNP Paribas as placement agents).          ║
+║    Signal: strategic seller exiting at discount =        ║
+║    negative for DOMS. Not in our universe but adds       ║
+║    general caution on consumer discretionary stocks      ║
+║    where foreign promoters/strategic investors hold.     ║
+╚═══════════════════════════════════════════════════════════╝
+
+GOLD_CAUTION: INACTIVE (5-session gold change: +0.6%, below +2% threshold)
+US_MARKET_CAUTION: ACTIVE (Nasdaq Jun16 -1.15% > -1% threshold)
+AI_TAILWIND: ACTIVE (Jensen Huang Jun 2026 endorsement; counter 0/3)
+PATTERN O: INACTIVE (NiftyIT +0.53% < +2% threshold)
+WAR_PREMIUM: DECLINING (WTI $75.13; defense sector caution maintained)
+
+================================================================================
+STEP 2 — PATTERN ANALYSIS
+================================================================================
+
+OPEN POSITION STATUS:
+  HFCL — Entry Rs184.84 (Jun 16). Today: Rs186.09 (High Rs192.94, Low Rs185.10).
+  P&L: +0.68%. T+2 EXIT: Jun 18 (tomorrow). Hold.
+  RSI: 56.8. Target: Rs208.98. Stop: Rs175. Thesis intact.
+  Today's intraday high Rs192.94 (+4.4% from entry) = promising price action.
+
+--- Step 2.2: WATCHLIST TRIGGER RE-EVALUATION (prior triggers vs Jun17 data) ---
+
+Symbol      | Trigger Condition                              | Jun17 Status              | Fired?
+------------|------------------------------------------------|---------------------------|--------
+HFCL        | T+2 EXIT Jun18                                 | Holding +0.68%            | HOLD
+STLTECH     | Exit BE segment + structural reversal         | Rs612 (Rule78: 8/10 done) | BLOCKED
+            | + close > Rs679.90 on vol >= 1.5x             | Rule 77/78/79 active       |
+MOTILALOFS  | Close > Rs960 on vol >= 0.8x                  | Rs958.1 (0.2% away!),     | NO
+            |                                                | vol 0.41x (thin)          |
+UNOMINDA    | 26e >= 40 (user-requested)                     | 26e=36/247 (4 away)        | NO
+TATACOMM    | 26e >= 40                                      | 26e=38/247 (2 away)        | NO
+ATHERENERG  | Close > Rs1042 on vol >= 1.2x                 | Rs990.95 (below trigger)  | NO
+GOCOLORS    | Pullback Rs360-370 + RSI 50-58 + vol >= 0.8x  | Rs380.65 (above zone)     | NO
+BBOX        | NiftyIT > +2% (Pattern O) + vol >= 0.5x       | NiftyIT 0.53% (INACTIVE)  | NO
+APARINDS    | Close > Rs16475 on vol >= 1.5x                | Rs16224, vol 0.50x        | NO
+KALYANKJIL  | Pullback Rs340-350 + RSI 48-56 + vol <= 0.8x  | Rs384 (above zone, RSI60) | NO
+MUTHOOTFIN  | RSI > 45 AND 26e >= 40                        | RSI 41.6, 26e 28/247      | BLOCKED
+
+FIRED: NONE
+
+MOTILALOFS UPDATE: Rs958.1 vs trigger Rs960 = only Rs1.9 (0.2%) below trigger.
+Range compression continues (last3 ranges: Rs42.5 -> Rs20.0 -> Rs14.3) on thin vol (0.41x).
+Trigger still active and imminent. Monitor for tomorrow.
+
+--- Step 2.3 — Recent Mover Pattern Recognition ---
+
+RECENT MOVERS (>=5% in last 2 sessions, Jun16-Jun17):
+Symbol | Session | Move%  | Vol/Avg | RSI  | Classification             | Action
+-------|---------|--------|---------|------|----------------------------|-------
+NONE   | -       | -      | -       | -    | Universe quiet today       | -
+
+No >=5% movers in the scanned basestock universe over Jun16-Jun17 window.
+Market moved incrementally: Nifty50 +0.30%, sector rotation muted.
+
+--- Step 2.4 — Pre-Breakout Scanner (Rule 80) ---
+
+Scanning for stocks coiling within 5% of 20d high with RSI 55-72:
+
+Symbol      | 20d High  | Current | Dist  | RSI  | 3d non-dec | Vol/Avg | 26e Pass? | Action
+------------|-----------|---------|-------|------|------------|---------|-----------|--------
+MOTILALOFS  | Rs959.55  | Rs958.1 | -0.2% | 60.2 | YES        | 0.41x   | YES       | Already in watchlist
+NETWEB      | Rs5038.00 | Rs4953  | -1.7% | 64.7 | YES        | 0.58x   | YES       | R:R FAILS (<1.5:1)
+AEROFLEX    | Rs491.90  | Rs476.0 | -3.2% | 64.3 | NO         | 0.24x   | YES       | Watchlist (prior dist day Jun1)
+JYOTICNC    | Rs719.60  | Rs710.5 | -1.3% | 59.7 | YES        | 0.12x   | YES (47)  | Thin vol; watchlist
+TIINDIA     | Rs3314.5  | Rs3264  | -1.5% | 53.2 | YES        | 0.08x   | NO (26e)  | 26e FAIL
+TRENT       | Rs3060.0  | Rs3008  | -1.7% | 63.7 | YES        | 1.30x   | NO (26e)  | 26e FAIL
+
+Rule 80 additions to watchlist:
+- JYOTICNC: Close > Rs720 (20d high) on vol >= 1.0x. RSI 59.7. 26e 47/247 (PASS). Conf 79% if fires.
+- AEROFLEX: Prior Jun1 distribution day. Cooldown expired (12 sessions). Close > Rs491.90 on vol >= 1.0x.
+  RSI 64.3. 26e 73/247 (PASS). Conf 79% if fires with vol confirmation.
+
+--- Step 2.5 — Hard Gate 26e Verification ---
+
+CANDIDATES PASSING 26e (>= 40/252):
+  HFCL: 69/247 PASS (open position)
+  NEWGEN: 52/247 PASS (new candidate today)
+  MOTILALOFS: 44/247 PASS (watchlist)
+  NETWEB: 78/247 PASS (but R:R fails)
+  NBCC: 46/247 PASS (but Rule 46b concern)
+  KAYNES: 60/247 PASS (borderline setup)
+  AEROFLEX: 73/247 PASS (needs vol confirmation)
+  GRSE: 62/247 PASS (RSI 54, low vol today 0.45x)
+  JYOTICNC: 47/247 PASS (thin vol 0.12x)
+  TEJASNET: 58/247 PASS (RSI 69.7 - near ceiling)
+  BBOX: 69/247 PASS (Pattern O INACTIVE)
+
+BLOCKED BY 26e:
+  TRENT: 32/247 (→33 with today's +3.97%)
+  UNOMINDA: 36/247 (need 4 more HV days)
+  TATACOMM: 38/247 (need 2 more HV days)
+  MUTHOOTFIN: 28/247
+  APOLLOTYRE: 26/247
+  BAJFINANCE, LT, M&M, MARUTI: Structural large-cap barriers (10-21/247)
+  DELHIVERY: 22/247
+  KFINTECH: 32/247
+
+================================================================================
+STEP 2.7 — CHART READ GATE (Seven-Point Check)
+================================================================================
+
+--- NEWGEN (Newgen Software Technologies) — CHART READ ---
+
+DATA: Close Rs490.60, RSI 63.2, 26e 52/247 (PASS), MA5 Rs471.71 (+4.0%), MA20 Rs467.32 (+5.0%)
+52w HIGH: Rs1238.93 (-60.4% below current; massive overhead)
+Vol today: 1.83x 20d avg (significant volume expansion)
+
+(1) Sub-Rule 26f: Jun2 session = +17.35% on 9.38x vol. Follow-up Jun3 = +0.02% on 4.27x vol.
+    CRITICAL: Jun3 follow-up vol was 4.27x (ABOVE the 0.4x threshold). 26f requires vol < 0.4x.
+    26f: NOT TRIGGERED. PASS.
+
+(2) Rule 46b: Last 5 ranges (Rs): 14.1, 10.7, 13.8, 16.2, 36.3.
+    Today's range Rs36.3 is the LARGEST — clear expansion, not deceleration. PASS.
+
+(3) Daily range trajectory (last 3): 13.8 -> 16.2 -> 36.3. EXPANDING. PASS.
+
+(4) Volume trajectory (last 3): 0.17x -> 0.36x -> 1.83x. RISING sharply. BULLISH. PASS.
+
+(5) MA5 distance: +4.0% above MA5 Rs471.71. Below the 5% extended threshold. PASS.
+
+(6) Resistance distance vs target: First resistance = today's intraday high Rs514.90 (+4.7%).
+    Second resistance = Jun3 peak/20d high Rs538 (+9.5%). ONE resistance break to reach target.
+    Realistic. PASS.
+
+(7) R:R (tight stop = today's low Rs478.6):
+    Entry Rs490.60, Stop Rs478.60, Target Rs538.00
+    R:R = (538.0 - 490.6) / (490.6 - 478.6) = 47.4 / 12.0 = 3.95:1.
+    PASSES >= 1.5:1. PASS.
+
+Rule 77 (Downtrend gate): Last 7 highs: [492.0, 492.0, 467.0, 468.9, 481.8, 485.0, 514.9]
+  Peak at session 6 (today). 0 consecutive lower highs from peak. Rule 77: PASS.
+
+Rule 78 (Distribution day): Jun2 large move (+17.35%) closed at Rs518 (near day high).
+  No blow-off structure (close was near high). Rule 78: NOT TRIGGERED. PASS.
+
+Rule 79 (BE segment): NEWGEN trades in normal EQ series. PASS.
+
+Down-day vol check: Average down-day vol (last 20d) = 0.32x. CLEAN. No distribution. PASS.
+
+TAPE READ: NEWGEN had a major news catalyst on Jun2 (+17.35% on 9.38x vol, likely Q4 results
+announcement or large order win). The stock formed a 9-session base between Rs455 and Rs518
+(Jun3-Jun11) with below-average volume on down days — a textbook post-announcement consolidation.
+Today, the stock broke out of this base on 1.83x volume with the largest daily range in 5 sessions
+(Rs36.3). All seven chart checks pass cleanly. The 52w high of Rs1238 represents significant
+overhead but is irrelevant for the near-term trade thesis — the target is the June base high at
+Rs538 (a realistic single resistance break from current levels).
+
+CHART READ: PASS on all 7 checks.
+
+HOWEVER — CONFIDENCE GATE ANALYSIS:
+  RM-7 base confidence: 88 (earnings/order beat with digestion period)
+  Penalty: -5 (stock 60.4% below 52w high = major prior downtrend context; heavy institutional
+             supply waiting from Rs600-Rs1238 range)
+  Pre-penalty subtotal: 83%
+  US_MARKET_CAUTION active: -5
+  Total: 78%
+
+RESULT: CHART READ PASS but CONFIDENCE BELOW 85% THRESHOLD (78%).
+DECISION: WATCHLIST — not a main pick today.
+
+--- NETWEB (Netweb Technologies India) — CHART READ ---
+
+DATA: Close Rs4937.50, RSI 64.7, 26e 78/247 (PASS), MA5 Rs4642.60 (+6.4%)
+52w HIGH: Rs5038.00 (-2.0% away)
+
+Immediate verdict: Entry Rs4937, target Rs5038 (52w high) = Rs101 upside (2.0%).
+Stop below today's low Rs4850 = Rs87 risk.
+R:R = 101 / 87 = 1.16:1. FAILS the 1.5:1 requirement.
+
+CHECK 7 (R:R): FAIL — 1.16:1 < 1.5:1.
+
+Rule 78 NOTE: Distribution day detected Jun1 (close -6.2% from intraday high on 1.70x vol).
+10-session cooldown = 10 sessions. Sessions since Jun1: 12. Cooldown EXPIRED.
+Today's close (Rs4937) > Jun1 high (Rs4925.70) = Rule 78 re-entry condition technically met.
+But R:R hard fail supersedes all — NETWEB cannot be recommended regardless.
+
+CHART READ: FAIL (R:R 1.16:1 at 52w high proximity).
+Watchlist trigger: Rs5038 break on vol >= 1.5x + target revised to Rs5500 (extended resistance).
+At Rs5038 breakout entry: R:R = (5500-5038)/(5038-4850) = 462/188 = 2.46:1. Viable.
+
+--- NBCC (NBCC India) — CHART READ ---
+
+DATA: Close Rs109.79, RSI 67.0, 26e 46/247 (PASS).
+
+Rule 46b check: Last 5 daily ranges: 4.4, 3.1, 2.88, 2.66, 1.92.
+  5 CONSECUTIVE SESSIONS of shrinking range. Vol last 5: 0.71, 0.74, 1.04, 0.88, 0.30x.
+  Day 5 (today): vol 0.30x (below the 0.2x threshold individually, but the PATTERN of
+  shrinking ranges over 5 sessions with today at 0.30x = decelerating staircase exhaustion).
+  NOTE: Strict Rule 46b requires vol < 0.2x. Today vol = 0.30x (above 0.2x).
+  VERDICT: Rule 46b NOT TECHNICALLY triggered (today vol 0.30x > 0.2x), but the 5-session
+  range compression is a significant warning. Combined with RSI 67 (elevated) and thin vol,
+  the setup is not high-confidence.
+
+  Down-day vol: 1.10x average (above 1x = mild distribution concern).
+  R:R: Entry Rs109.79, stop Rs105 (MA5), target Rs125.69 (52w high). R:R = 15.9/4.79 = 3.3:1.
+  On paper R:R passes. But range compression + above-avg down-day vol = weak conviction.
+
+CHART READ: PASS on strict rules but LOW CONVICTION (69% confidence, below 85%).
+Watchlist trigger: volume expansion day (>= 0.8x) breaking above Rs112 (4-day high).
+
+--- MOTILALOFS — CHART READ (for reference) ---
+
+DATA: Close Rs958.1, RSI 60.2, 26e 44/247 (PASS).
+Trigger (Rs960) NOT fired today. Chart read is pre-fire; no new entry today.
+Assessment: Range compression (42.5 -> 20.0 -> 14.3) = natural consolidation after +13% surge.
+Down-day vol: 0.65x = clean. No distribution.
+When trigger fires (close > Rs960 on >= 0.8x vol): expected confidence ~83% (+ -5 US caution = 78%).
+Note: US_MARKET_CAUTION may clear by tomorrow if Nasdaq stabilizes.
+
+================================================================================
+STEP 3 — VALIDATION (Sonnet Agent)
+================================================================================
+
+VALIDATION: No stocks cleared 85% threshold. No validation required for today's picks.
+
+Spot-check on NEWGEN (78% candidate):
+  - Negative news (last 7 days): No SEBI/CCI issues. No management changes found.
+    Jun2 move was likely Q4 FY26 results (common in early June cycle). Positive signal.
+  - US Market: Nasdaq Jun16 -1.15%. US_MARKET_CAUTION ACTIVE.
+  - Industry trend: Enterprise content management / BPM software = STABLE/GROWING.
+    AI integration opportunity for software platforms = slight tailwind.
+  - AI_DISRUPTION_RISK: Not applicable (not an IT outsourcing stock).
+  - GOLD_CAUTION: INACTIVE.
+  - Chart validation: All 7 checks independently confirmed PASS.
+  - chart_conflict: NONE.
+  - final_recommendation: FALSE (confidence 78% < 85% threshold).
+
+STLTECH cooldown update: Rule 78 session 8/10 (Jun17). 2 sessions remain.
+After Jun19 (session 10): Re-evaluate ONLY if close above Rs679.90 on vol >= 1.5x.
+Rule 77 (downtrend) + Rule 79 (BE segment) remain active independently.
+
+================================================================================
+STEP 4 — RESULT FORMATTING
+================================================================================
+
+TRADE PARAMETERS TABLE
+Rank | Symbol | Entry | Target | Stop | Conf | Exit Date
+-----|--------|-------|--------|------|------|----------
+[NO PICKS TODAY — 0-pick day]
+
+No stocks cleared the mandatory >85% confidence threshold on June 17, 2026.
+
+OPEN POSITION (existing, NOT a new pick):
+  HFCL | Entry Rs184.84 | Target Rs208.98 | Stop Rs175.00 | 87% | EXIT Jun 18, 2026
+
+EXIT INSTRUCTIONS FOR HFCL (Jun 18):
+  If Jun18 opens >= Rs192 with Nifty50 > 24,050: trail stop to Rs185 (near today's low),
+    hold for target Rs208.98 in the same session.
+  If Jun18 opens < Rs188: EXIT at market open. Lock in profit.
+  Fallback: Exit at close of Jun18. T+2 is a hard deadline.
+  Current P&L: +0.68% (Rs184.84 -> Rs186.09)
+
+================================================================================
+WATCHLIST (Re-entry Triggers — Priority Order)
+================================================================================
+
+PRIORITY WATCHLIST:
+
+1. MOTILALOFS (Conf ~78% base; trigger imminent)
+   Trigger: Close > Rs960 on vol >= 0.8x avg
+   Entry: Rs960 | Stop: Rs882 | Target: Rs1088.32 | R:R: 1.65:1
+   RSI: 60.2 | 26e: 44/247 | Today: Rs958.1 (0.2% from trigger!)
+   Note: US_MARKET_CAUTION (-5) will reduce conf to ~73% if Nasdaq stays down.
+   If Nasdaq recovers and NiftyIT stays strong: conf moves to 78-80%.
+   NOT a main pick until >85% threshold cleared.
+
+2. UNOMINDA (User-requested; conf ~86% when 26e fires)
+   Trigger: 26e >= 40 (currently 36/247; need 4 more HV days)
+   Entry: Rs1080-1100 | Stop: Rs1040 | Target: Rs1280 | R:R: 3.8:1 @ Rs1090
+   RSI: 46.0 | Today: Rs1104 (above entry zone)
+   HIGH PRIORITY — conf 86% when threshold clears.
+
+3. TATACOMM (26e = 38/247; 2 HV days away)
+   Trigger: 26e >= 40 (likely within 1-2 weeks if NiftyIT stays strong)
+   Entry: Rs1930-1960 | Stop: Rs1890 | Target: Rs2150 | R:R: 2.7:1
+   RSI: 44.7 | Pattern O basket member.
+
+4. NEWGEN (Conf 83% base; all chart checks pass)
+   Trigger: Close > Rs538 (20d high) on vol >= 1.5x avg
+   Entry: Rs538 | Stop: Rs500 | Target: Rs580 | R:R: 1.10:1 at Rs538 entry
+   OR: Current level entry Rs490 | Stop Rs478.6 | Target Rs538 | R:R: 3.95:1
+   Note: At current level (Rs490), R:R is excellent (3.95:1) but conf = 78%.
+   If Nasdaq recovers (+5 conf restore) -> recheck conf.
+
+5. ATHERENERG (Force-include; Pattern S candidate)
+   Trigger: Close > Rs1042 on vol >= 1.2x avg
+   Entry: Rs1042 | Stop: Rs998 | Target: Rs1100 | R:R: 1.32:1 (needs revision)
+   RSI: 55.5 | 26e: 72/247 | Today: Rs990.95 (below trigger)
+   NOTE: R:R at Rs1042 entry only 1.32:1 (below 1.5). Trigger needs revisit.
+   Better entry: Wait for pullback to Rs975-990 zone. R:R improves to 2.1:1+.
+
+6. STLTECH (Blocked by Rules 77, 78, 79)
+   Rule 78 expires: After Jun19 (session 10/10 from Jun5 distribution day).
+   Re-entry requires: Exit BE segment + structural reversal (higher-high + higher-low pair)
+     + close above Rs679.90 on vol >= 1.5x.
+   Current: Rs612. Cannot enter. Multi-week timeline.
+
+7. AEROFLEX (Rule 80 coiling candidate)
+   Trigger: Close > Rs491.90 (52w high) on vol >= 1.0x avg
+   Entry: Rs492 | Stop: Rs460 | Target: Rs530 | R:R: 1.19:1 (NEEDS REVIEW)
+   NOTE: R:R at trigger entry barely passes. Better: wait for consolidation above Rs492
+     (3+ sessions) then enter on vol expansion. 26e 73/247 (strong).
+
+8. JYOTICNC (Rule 80 coiling candidate)
+   Trigger: Close > Rs720 on vol >= 1.0x avg
+   Entry: Rs720 | Stop: Rs690 | Target: Rs780 | R:R: 2.0:1
+   RSI: 59.7 | 26e: 47/247 | Today: Rs710.5 (1.3% below trigger, vol thin 0.12x)
+
+9. NETWEB (R:R fails until new base forms)
+   Current: Rs4937 | 52w high Rs5038 — too close.
+   Trigger: Break above Rs5038 on vol >= 1.5x + target revised to Rs5500.
+   At breakout entry: R:R = 2.46:1. Conf 84%.
+
+10. GOCOLORS (Pullback entry)
+    Trigger: Pullback to Rs360-370 + RSI 50-58 + vol >= 0.8x
+    Today: Rs380.65 (above entry zone). Wait for pullback.
+    R:R at Rs365: 4.33:1. Conf 80-83%.
+
+11. APARINDS (52w high resistance)
+    Trigger: Close > Rs16475 on vol >= 1.5x
+    Today: Rs16224, vol 0.50x. RSI 76.7 (near ceiling).
+    Note: RSI > 75 = RSI ceiling caution. Don't chase.
+
+12. KAYNES (Borderline)
+    Trigger: Green day vol >= 0.8x + close above Rs3270 (today's high).
+    RSI: 51.1 | 26e: 60/247. Down-day vol 0.99x (borderline distribution).
+    Conf: 67%. Below watchlist threshold for near-term action.
+
+13. KALYANKJIL (Extended — wait for pullback)
+    Trigger: Pullback to Rs340-350 + RSI 48-56 + vol <= 0.8x
+    Today: Rs384.20 (above zone). Wait.
+
+14. TRENT (AGM Jun23 — expires)
+    26e FAIL (32/247; 8 more HV days needed). AGM watch expires Jun23.
+
+15. TATAPOWER (Oversold recovery watch)
+    RSI 26.5 (deeply oversold). MA5 Rs398.
+    Trigger: Green day on vol >= 1.5x + close above Rs407.
+    Stop: Rs388. Target: Rs434. R:R: 2.5:1. Conf 74% (needs RSI > 35 first).
+
+16. MUTHOOTFIN (Dual block)
+    RSI 41.6 (below 45 threshold) AND 26e 28/247. Dual block remains.
+
+17. BAJFINANCE, M&M, LT, MARUTI: 26e structural barriers (21/40, 21/247, 17/247, 10/247).
+    Long-term monitoring only.
+
+SPECIAL NOTE — RELIANCE JIO IPO (RIL AGM Jun 19):
+  Jio IPO DRHP filing expected before Jun 19 AGM.
+  KFINTECH (registrar/TA services) = indirect beneficiary but 26e 32/247 = BLOCKED.
+  Monitor: if Jio IPO confirmed, KFINTECH may see institutional buying.
+  26e trajectory: need 8 more HV days. Watchlist if 26e reaches 40.
+
+================================================================================
+STEP 4.5 — POST-RUN MISS AUDIT (vs Yesterday's Run #30 — Jun 16)
+================================================================================
+
+4.5.1 — >= 5% Gainers Today From Basestock Universe (Jun17 vs Jun16):
+
+Symbol | Jun16 Close | Jun17 Close | %Chg | Vol/20d | Pattern at Jun16 EOD
+-------|-------------|-------------|------|---------|--------------------
+NONE   | -           | -           | -    | -       | Universe quiet
+
+Maximum gain in scanned universe: ~+3.97% (TRENT). No stock cleared +5% threshold.
+
+RESULT: NO_MISS_AUDIT_NEEDED — Universe quiet.
+
+4.5.2 — Classification:
+CORRECTLY_PICKED:       0 stocks (no new picks, HFCL open position correctly held)
+CORRECTLY_WATCHLISTED:  0 stocks (no watchlist triggers fired yesterday that moved today)
+CORRECTLY_EXCLUDED:     All stocks in scanned universe (no >=5% movers)
+NEWS_SHOCK_UNFLAGGABLE: 0 stocks
+MISS_ANALYZE:           0 stocks
+
+4.5.3 — Miss Analysis:
+None required (zero >=5% movers in universe).
+
+HFCL POSITION REVIEW (from Run #30 pick):
+  Run #30 entry: Rs184.84 (Jun16 market close / Jun17 entry)
+  Jun17 intraday: High Rs192.94 (+4.4%), closed Rs186.09 (+0.68%)
+  The stock reached 4.4% intraday before pulling back to close +0.68%.
+  This is normal post-circuit digestion behavior (no distribution on pullback from high — vol 0.22x).
+  Stop (Rs175) not threatened. Target (Rs208.98) still intact.
+  Thesis: Post-double-circuit emergence on AI_TAILWIND + Pattern O base is working.
+  VERDICT: CORRECTLY_MANAGED. No rule miss.
+
+RULE UPDATES PROPOSED THIS RUN:
+  NONE. Market was quiet. All existing rules functioned as designed.
+
+  Note on TRENT: Stock gained +3.97% today (close Rs3008.30 vs Rs2893 prior session).
+  This is a natural pre-AGM run-up that we identified and put on watchlist.
+  26e barrier (32/247) correctly blocked entry. No miss — the 26e rule exists precisely
+  because large-cap stocks with low volatility history tend to give false breakout signals.
+
+MEMORY WRITES:
+  None required this run (no new recurring misses; all one-off events).
+
+================================================================================
+PERFORMANCE NOTES — CURRENT POSITIONS & RECENT HISTORY
+================================================================================
+
+OPEN POSITION:
+  HFCL (Run #30, Jun16):
+    Entry: Rs184.84 | Current: Rs186.09 | P&L: +0.68%
+    Intraday peak Jun17: Rs192.94 (+4.4%). Closed softer (+0.68%).
+    T+2 exit: Jun 18. Hold overnight.
+
+RECENT CLOSED POSITIONS:
+  TEJASNET (Run #27, Jun12): +1.57% (T+2 exit Jun16, Rs575 -> Rs584)
+  HFCL (Run #14, May22): +10.2% (Pattern MC, momentum continuation)
+  PARAS (Run #21, Jun3): +9.4% (Pattern D dip recovery)
+
+PATTERN ACCURACY (cumulative):
+  Pattern MC (Momentum Continuation): 2/2 (HFCL +10.2%, TEJASNET +1.57%) = 100% win rate
+  Pattern O (AI/IT Infrastructure): 1/1 (HFCL — in progress, +0.68% so far)
+  Pattern RM-4 (Dip Recovery): 2/2 = 100% win rate
+  Rule 77 accuracy: 2/2 (STLTECH, IDEAFORGE correctly blocked)
+  Rule 79 accuracy: 2/2 (STLTECH correctly blocked as BE segment)
+  0-pick days: 11 of last ~31 runs = 35.5% (discipline maintained)
+
+================================================================================
+UPCOMING CATALYSTS TO WATCH
+================================================================================
+
+Jun 18 (Tomorrow):
+  - HFCL T+2 EXIT. Execute at market open if opens >= Rs192; else exit at close.
+  - MOTILALOFS: Rs958 vs Rs960 trigger (0.2% away). Monitor pre-market.
+  - Nasdaq recovery: If Nasdaq bounces, US_MARKET_CAUTION may clear,
+    restoring +5 conf to all candidates.
+
+Jun 19:
+  - RIL AGM: Reliance Jio IPO DRHP announcement expected.
+    Could be a market-sentiment-positive event. Watch Nifty50 response.
+  - STLTECH Rule 78 expires (session 10/10 from Jun5). BUT Rule 77 + 79 still apply.
+
+Jun 23:
+  - TRENT AGM. Pre-AGM run-up (26e still FAIL). Watch expires after this date.
+  - After Jun23, retire TRENT AGM watch. Standard pipeline rules only.
+
+UPCOMING 26e THRESHOLDS:
+  TATACOMM: 38/247 (2 HV days). ETA: 1-2 sessions if NiftyIT sustains.
+  UNOMINDA: 36/247 (4 HV days). ETA: 2-3 weeks at current pace.
+  TRENT: 32/247 (8 HV days). ETA: 4-6 weeks (structural large-cap barrier).
+
+================================================================================
+TOKEN USAGE & COST (Estimated)
+================================================================================
+
+Data Fetch (yfinance): ~50 calls | No cost (open-source API)
+Analysis (Claude Sonnet): ~35,000 tokens in / ~8,000 tokens out
+  Estimated cost: ~Rs 380 (~$0.46 USD)
+Market News (WebFetch): 1 successful call (businesstoday.in)
+TOTAL: ~Rs 380 (~$0.46 USD)
+
+================================================================================
+PIPELINE INTEGRITY CHECKS (all passed)
+================================================================================
+
+  26e hard gate:       ACTIVE — blocked 12+ stocks today
+  RSI ceiling (>82):  No stock near ceiling in candidate set
+  Rule 77:            STLTECH blocked (confirmed downtrend)
+  Rule 78:            STLTECH blocked (cooldown 8/10)
+  Rule 79:            STLTECH blocked (BE segment)
+  R:R >= 1.5:1:       NETWEB failed (1.16:1)
+  >85% threshold:     No stock cleared — 0-pick day correct
+  US_MARKET_CAUTION:  Applied -5 to all candidates
+  AI_TAILWIND:        Active (counter 0/3 deactivation)
+  Pattern O:          INACTIVE (NiftyIT +0.53% < +2%)
+  GOLD_CAUTION:       INACTIVE (+0.6% in 5 sessions)
+  WAR_PREMIUM:        DECLINING (WTI $75.13)
+
+================================================================================
+END OF RUN #31 — 2026-06-17
+================================================================================

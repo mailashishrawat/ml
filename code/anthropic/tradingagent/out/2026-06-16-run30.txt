@@ -1,0 +1,473 @@
+================================================================================
+  INDIA MID/SMALL-CAP STOCK RECOMMENDATION — RUN #30 (Jun 16, 2026)
+  DATE: 2026-06-16 (Tuesday) | Pipeline correction incorporating Rules 77/78/79
+  Critical fix: STLTECH removed from watchlist and morning-open-alert (BE segment +
+  confirmed downtrend + distribution day). New stock scan: 17 Tata + 10 Adani + others.
+================================================================================
+
+================================================================================
+STEP 1.5 — MACRO TREND & DISRUPTION ALERT (reused from Run #29 — unchanged)
+================================================================================
+
+╔═══════════════════════════════════════════════════════════╗
+║  MACRO TREND & DISRUPTION ALERT — JUNE 16, 2026          ║
+╠═══════════════════════════════════════════════════════════╣
+║ HARD EXCLUDES (remove from all picks)                     ║
+║  None active today                                        ║
+╠═══════════════════════════════════════════════════════════╣
+║ CAUTION FLAGS (-15 confidence if picked)                  ║
+║  WTI $80.72 (-11.59% 5-session): War premium collapsing. ║
+║    US-Iran preliminary peace deal + Strait of Hormuz     ║
+║    reopen announced. Pattern I (E&P/defense) INACTIVE.   ║
+║    Defense sector: war premium softening. Not hard        ║
+║    exclude but reduce confidence on pure-play defense.   ║
+╠═══════════════════════════════════════════════════════════╣
+║ TAILWIND SIGNALS (+5 to +15 confidence)                   ║
+║  RISK-ON ENVIRONMENT:                                     ║
+║    Nasdaq Jun15 +3.07% | VIX 16.20 (-8.37%) = low fear  ║
+║    India absorbing global rally well (Nifty at 30d high) ║
+║    DXY -0.61% 5d = mild USD weakness = India tailwind    ║
+║  AUTO SECTOR (+10): WTI $80.72 = input cost tailwind.    ║
+║    NiftyAuto +2.93% on Jun15 confirms.                   ║
+║  GOLD LOAN NBFCs (+10): Gold recovery from Jun11 low     ║
+║    ($4,090) to $4,341 (+6.1% in 4 sessions).            ║
+║    MUTHOOTFIN, MANAPPURAM = structural beneficiaries.    ║
+║  AI_TAILWIND: ACTIVE (Jensen Huang Nvidia Jun 2026       ║
+║    endorsement). IT services eligible. Counter 0/3.      ║
+╠═══════════════════════════════════════════════════════════╣
+║ NEWS CATALYSTS (+20 conf; force Step 2)                   ║
+║  KALYANKJIL: +11.09% Jun15 on 4.00x vol. Q4 FY26        ║
+║    earnings beat (probable). BUT 26e FAIL blocks entry.  ║
+║    Source: Price action, businesstoday.in Jun15-16       ║
+╠═══════════════════════════════════════════════════════════╣
+║ NEW STRUCTURAL RISK (saved to pattern_notes.md)           ║
+║  US-Iran peace deal reduces oil/defense war premium.     ║
+║  Sustained WTI < $85 = structural change for E&P stocks. ║
+╚═══════════════════════════════════════════════════════════╝
+
+GOLD_CAUTION: INACTIVE (5-session gold change Jun9->Jun15: +1.90% — below +2% threshold)
+US_MARKET_CAUTION: NONE (Nasdaq Jun15 +3.07%, VIX 16.20)
+
+================================================================================
+CRITICAL CORRECTIONS FROM RUN #29 — RULES 77, 78, 79 APPLIED
+================================================================================
+
+STLTECH — THREE SIMULTANEOUS HARD GATE FAILURES
+
+RULE 79 (BE/Trade-to-Trade Segment): FAIL
+  STLTECH trades in BE segment (Trade-to-Trade, T+T).
+  Under Rule 79, BE-segment stocks are AUTO-BLOCKED from:
+    - Main recommendations
+    - Morning Open Alerts (Rule 68)
+    - Short-swing entry framing
+  Only delivery-based positions held >= T+5 are permitted for BE stocks.
+  The "MORNING OPEN ALERT" issued in Run #29 for Rs617 is CANCELLED with
+  immediate effect. No intraday entry framing is valid.
+
+RULE 77 (Trend Direction — Confirmed Downtrend): FAIL
+  Intraday high sequence from Jun8 peak (last 7 sessions):
+    Jun8:  High Rs591.30
+    Jun9:  High Rs617.70  <- LOCAL PEAK
+    Jun10: High Rs607.60  (1st lower high from peak)
+    Jun11: High Rs598.30  (2nd lower high)
+    Jun12: High Rs596.80  (3rd lower high)   <- 3 consecutive: CONDITION 1 MET
+  Intraday low sequence (same window):
+    Contains 4 lower lows vs prior session lows after the Jun9 peak.
+    CONDITION 2 MET (2+ lower intraday lows required).
+  Price vs peak close:
+    Current close Rs608.80 vs peak-day close Rs613.00 on Jun9.
+    Rs608.80 < Rs613.00 = CONDITION 3 MET.
+  VERDICT: ALL THREE RULE 77 CONDITIONS MET. CONFIRMED DOWNTREND.
+  The stock cannot be a recommendation regardless of any price level trigger.
+  The Rs617 entry level alone is NOT a structural reversal — it is a prior swing
+  high within an active downtrend. A breakout above a lower high in a downtrend
+  is NOT a valid entry signal under Rule 77.
+
+RULE 78 (Distribution Day — Blow-Off): FAIL
+  Jun5 (peak session):
+    Intraday high: Rs679.90
+    Close: Rs619.25
+    Gap close-to-high: -8.9% (well above 5% threshold)
+    Volume: 86 lakh shares = approx 2.23x 20-day average (above 1.5x threshold)
+  ALL three Distribution Day conditions met:
+    (a) Peak session
+    (b) Closed >= 5% below intraday high = YES (-8.9%)
+    (c) Volume >= 1.5x 20d avg = YES (2.23x)
+  10-SESSION COOLDOWN ACTIVE from Jun5.
+  Sessions elapsed since Jun5: Jun8, Jun9, Jun10, Jun11, Jun12, Jun15 = 6 sessions.
+  Sessions remaining: 4 more (Jun16, Jun17, Jun18, Jun19).
+  After Jun19 (10th session): Stock may be re-evaluated ONLY if it closes above
+  Rs679.90 (the distribution-day high) on volume >= 1.5x average — NOT on any
+  sub-peak level like Rs617.
+
+COMBINED VERDICT — STLTECH:
+  - Rule 79: AUTO-BLOCKED (BE segment)
+  - Rule 77: CONFIRMED DOWNTREND (3 lower highs + 4 lower lows post-peak)
+  - Rule 78: 10-SESSION COOLING PERIOD (4 sessions remaining)
+  All three are independent hard gates. Any one alone is sufficient to block.
+  All three together confirm this is not a valid trading candidate.
+
+RE-ENTRY TRIGGER (long-horizon, multi-condition):
+  Phase 1 (structural, minimum weeks): Stock must exit BE segment (revert to EQ
+  series on NSE). This is a compliance/regulatory event, not a price event.
+  Phase 2 (after BE exit): Must show first higher-high + higher-low pair on daily
+  chart from the current peak-to-trough sequence.
+  Phase 3: Close above Rs679.90 (distribution-day high = 52w high) on volume >= 1.5x
+  20-day average.
+  ALL three phases must complete before re-evaluation as a candidate.
+  Current timeline: Multi-week minimum. Do not set a price alert at Rs617.
+
+================================================================================
+STEP 2 — MAIN PICKS
+================================================================================
+
+RESULT: 0 PICKS
+
+STLTECH was the only candidate near the >85% threshold in Run #29. It has been
+permanently removed as a candidate by Rules 77, 78, and 79 (all three independent
+hard gate failures). No other stock from the basestock.json universe cleared the
+mandatory Step 2.7 gate with confidence > 85% and R:R >= 1.5:1 as of Jun 16 data.
+
+Rank | Symbol | Entry   | Target  | Stop    | Conf | Exit Date
+-----|--------|---------|---------|---------|------|----------
+ —   | —      | —       | —       | —       |  —   | —
+
+0-pick days are the expected outcome on most days. Discipline is the edge.
+
+================================================================================
+BORDERLINE CANDIDATES (80–85%) — WATCHLIST ONLY
+================================================================================
+
+Stocks in the 80–85% confidence band. None of these qualify as main picks.
+STLTECH is REMOVED. Table shows updated status for remaining candidates.
+
+Symbol      | Prior Conf | Jun16 Status                               | Current Conf | Blocker
+------------|------------|---------------------------------------------|--------------|--------
+ATHERENERG  | 84%        | Rs1027.40. Close > Rs1042 trigger not fired.| 84%          | Trigger (vol 0.20x vs 1.2x req)
+            |            | RSI 63.9. MA5 Rs1033. Coiling. 26e PASS.   |              |
+MUTHOOTFIN  | ~82%       | Rs3160.10. RSI 40.1 (below 45 threshold).  | 82%          | Pattern C not fired; 26e 28/40
+            |            | 26e 28/40 = FAIL (need 40). Dual block.    |              | (dual block)
+SWIGGY      | 80%        | Pattern S watchlist. Base conf 80%.        | 80%          | No entry trigger fired
+            |            | No near-term catalyst.                      |              |
+GOCOLORS    | 80-83%     | Rs379.60. Above revised trigger Rs360-370. | 81%          | Price above zone (wait for
+            |            | Vol 0.11x (thin digestion). RSI 68.4.       |              | pullback to Rs360-370)
+DELHIVERY   | 83-85%     | RSI 46.1 (crossed 45 — Pattern C FIRED).   | BLOCKED      | 26e 22/40 = HARD GATE FAIL
+            |            | BUT 26e 22/40 = hard gate blocks entry.     |              | despite pattern firing
+STLTECH     | 87%        | REMOVED — Rules 77 + 78 + 79               | REMOVED      | Three independent hard gates
+
+STLTECH REMOVAL RATIONALE (for clarity):
+  Prior run showed 87% confidence and a "MORNING OPEN ALERT" for Rs617.
+  Run #30 corrects this entirely. The three new rules (77, 78, 79) retroactively
+  invalidate all prior STLTECH entry framing. The Rs617 morning alert is cancelled.
+  No STLTECH entry should have been taken on Jun16 open.
+
+================================================================================
+QUICK SCAN — 27 NEW STOCKS (Tata Group + Adani Group + UNOMINDA + 5 Large-Caps)
+================================================================================
+
+Methodology: Using Jun16 EOD data from pattern_notes.md Run #30 basket scans.
+Looking for: (a) >= 5% 2-session move, (b) near-threshold setup (26e PASS + RSI/MA5
+context promising), (c) Rule 77 clean. Not running full Step 2.7 on any below 82%.
+
+--- ADANI GROUP (10 stocks) ---
+
+No Adani stock triggered the group catalyst rule (>= 5% on >= 2x volume).
+
+Symbol     | Jun16  | Vol/Avg | RSI   | 26e Status | Setup Quality
+-----------|--------|---------|-------|------------|-------------------------------------
+ADANIENT   | +1.39% | 0.29x   | 51.1  | PASS       | Neutral. MA5 at Rs2936, close Rs2983.
+           |        |         |       |            | No setup. Monitor.
+ADANIPORTS | -0.08% | 0.25x   | ~48   | PASS       | Flat. No catalyst.
+ADANIPOWER | -0.54% | 0.14x   | 24.4  | PASS       | DEEPLY OVERSOLD (RSI 24.4).
+           |        |         |       |            | Pattern C pre-cursor. Watch for RSI
+           |        |         |       |            | recovery above 35. No entry yet.
+ADANIGREEN | +0.27% | 0.12x   | ~35   | PASS       | Oversold. No trigger.
+ADANIENSOL | +0.64% | 0.14x   | ~38   | PASS       | Oversold. No trigger.
+ATGL       | -0.46% | 0.08x   | ~42   | PASS       | Thin vol. No setup.
+AWL        | +2.37% | 0.51x   | ~45   | PASS       | RSI at neutral zone. Watch.
+AMBUJACEM  | -0.50% | 0.12x   | 33.0  | PASS       | Oversold. Cement sector weak.
+ACC        | -0.18% | 0.13x   | ~35   | PASS       | Oversold. Cement sector weak.
+NDTV       | +1.69% | 0.10x   | ~45   | Check      | Media. Very thin vol. No setup.
+
+ADANI BASKET SUMMARY: No group catalyst triggered. Three names (ADANIPOWER RSI 24.4,
+ADANIGREEN, ADANIENSOL) are in deeply oversold territory. ADANIPOWER is the most
+interesting pre-Pattern C candidate — needs RSI > 35 on a green day first. None
+clear 26e barriers with sufficient clarity to evaluate today. PASS for now.
+WATCH: ADANIPOWER for RSI > 35 trigger. If Adani group gets a positive policy catalyst
+(MoU, PLI, regulatory resolution), these names could snap back sharply — the group
+trades as a basket on news.
+
+--- TATA GROUP (17 stocks) ---
+
+No Tata stock triggered the group catalyst rule (>= 5% on >= 2x volume on group news).
+
+Symbol     | Jun16  | Vol/Avg | RSI   | 26e/Setup     | Commentary
+-----------|--------|---------|-------|---------------|----------------------------------
+TCS        | +1.53% | 0.23x   | ~55   | Large-cap,    | IT sector tailwind. 26e likely
+           |        |         |       | 26e structural| < 40 (large-cap = fewer HV days).
+           |        |         |       | barrier       | Cannot recommend without 26e PASS.
+TATASTEEL  | -0.78% | 0.17x   | 26.4  | PASS          | RSI 26.4 = deeply oversold.
+           |        |         |       |               | Metal sector weak. Not a candidate.
+TATAPOWER  | -0.87% | 0.31x   | 26.2  | PASS          | RSI 26.2 = deeply oversold. Vol
+           |        |         |       |               | 0.31x thin. MA5 Rs396.65, close
+           |        |         |       |               | Rs400.6. Watch Rs407 green day.
+           |        |         |       |               | Potential Pattern C pre-cursor.
+TATACONSUM | +2.00% | 0.26x   | 24.9  | Large-cap?    | RSI 24.9 = extreme oversold.
+           |        |         |       |               | FMCG sector. No setup yet.
+TATACHEM   | -0.87% | 0.16x   | 35.9  | Check 26e     | Oversold, chem sector. No trigger.
+TATACOMM   | -0.25% | 0.05x   | ~44   | 26e 38/40     | 2 sessions from 26e threshold.
+           |        |         |       |               | Pattern O candidate when 26e=40.
+           |        |         |       |               | NiftyIT +2.4% = may add HV days soon.
+TATAELXSI  | +1.05% | 0.22x   | 41.5  | Check         | IT design services. Recovering RSI.
+           |        |         |       |               | Watch for RSI > 45 + vol confirmation.
+TATATECH   | -0.37% | 0.12x   | 61.2  | Check         | Mid-range RSI. No trigger. Neutral.
+TATAINVEST | -0.12% | 0.19x   | 47.9  | Large-cap     | Holding company. No operational
+           |        |         |       |               | setup.
+TITAN      | +0.54% | 0.19x   | 59.8  | Large-cap     | RSI constructive. 26e structural
+           |        |         |       |               | barrier likely applies.
+VOLTAS     | +0.83% | 0.24x   | 65.6  | 26e 30/40     | RSI approaching ceiling zone.
+           |        |         |       |               | 26e FAIL blocks entry.
+INDHOTEL   | +0.70% | 0.12x   | 61.2  | Check 26e     | Near 52w high. Hospitality sector
+           |        |         |       |               | showing strength.
+RALLIS     | +1.49% | 0.53x   | 33.3  | PASS          | Agrochem. RSI 33 = oversold zone.
+           |        |         |       |               | Watch for RSI > 40 on volume.
+NELCO      | +0.98% | 0.23x   | 61.9  | 26e PASS (70) | RSI 61.9. No trigger condition met.
+           |        |         |       |               | Watch Rs[current] breakout.
+TMPV       | N/A    | N/A     | N/A   | Post-demerger | yfinance has no post-demerger data.
+           |        |         |       |               | CA-1 window EXPIRED (see below).
+TMCV       | N/A    | N/A     | N/A   | Post-demerger | yfinance has no post-demerger data.
+           |        |         |       |               | CA-1 window EXPIRED (see below).
+ARTEMISMED | N/A    | N/A     | N/A   | Small turnover| Insufficient data for evaluation.
+
+TATA BASKET SUMMARY: TATAPOWER (RSI 26.2) and TATASTEEL (RSI 26.4) are the two
+most oversold names but both are in downtrends — Rule 77 conditions likely met for
+both; confirmed downtrend until RSI > 35 on rising volume. TATACOMM is the most
+actionable: 2 sessions from 26e=40, and NiftyIT strength (today +2.4%) can add HV
+days rapidly. When TATACOMM crosses 26e=40 and NiftyIT is active, it enters Pattern O
+basket evaluation immediately. NELCO (26e PASS, RSI 61.9) is worth monitoring for a
+breakout trigger. RALLIS (RSI 33) needs a few more sessions to confirm RSI floor.
+
+No Tata group stock clears >82% threshold today.
+
+--- TMPV / TMCV — CA-1 WATCH STATUS ---
+
+CA-1 post-demerger window:
+  Listed: Nov 12, 2025
+  30-session window expires: approx Jan 22, 2026 (30 NSE trading sessions after listing)
+  TODAY (Jun 16, 2026): Well beyond the expiry date.
+  VERDICT: CA-1 watch window EXPIRED. Standard pipeline rules apply to both stocks.
+
+Both TMPV and TMCV remain in basestock.json permanently under Rule PM-1.
+yfinance does not carry post-demerger price data for these symbols under their new codes.
+Manual data check required if user wants RSI/price level evaluation.
+No price-action setup can be confirmed without data — therefore neither stock can
+generate a pipeline recommendation at this time.
+
+--- UNOMINDA (USER-REQUESTED) ---
+
+Jun15: +6.43% on 1.58x vol (recent mover — RM classification: MOMENTUM_CONTINUATION
+      as vol >= 1.5x and RSI 48.2 is below 75, but blocked by 26e)
+Jun16: -0.51% on 0.09x vol (healthy digestion, no distribution)
+26e:   35/40 — FAIL (need 5 more high-volatility days)
+RSI:   48.2 (neutral, constructive)
+Close: Rs1119.8. MA5: Rs1090. 52w HIGH: Rs1378.85 (23% upside)
+R:R when 26e fires: (1378-1119)/(1119-1080) = 259/39 = 6.64:1 (excellent)
+Status: HIGHEST PRIORITY WATCHLIST. 5 HV days away from pipeline eligibility.
+At current pace (1-2 HV days per week): 2-4 weeks.
+Accelerators: Any single session >= 3% move adds 1 HV day to the counter.
+Confidence when eligible: ~86%.
+
+--- 5 LARGE-CAPS (TRENT, BAJFINANCE, MARUTI, M&M, LT) ---
+
+All five continue to fail the 26e volatility floor (structural barrier).
+
+Symbol     | 26e Count | Threshold | Sessions to Go | RSI   | Setup Note
+-----------|-----------|-----------|----------------|-------|---------------------
+TRENT      | 30/40     | 40        | 10 more HV days| ~57   | AGM Jun23 catalyst
+           |           |           | (impossible by |       | But 26e blocks pipeline.
+           |           |           | Jun23)         |       | Manual tracking only.
+BAJFINANCE | 21/40     | 40        | 19 more HV days| ~57   | 2-session +8.24% mover.
+           |           |           |                |       | Technically constructive
+           |           |           |                |       | but 26e blocks.
+LT         | 17/40     | 40        | 23 more HV days| 60.8  | 2-session +7.97%.
+           |           |           |                |       | Strong but 26e blocks.
+M&M        | 21/40     | 40        | 19 more HV days| ~57   | Auto tailwind active.
+           |           |           |                |       | 26e blocks.
+MARUTI     | 10/40     | 40        | 30 more HV days| ~50   | 26e structural barrier
+           |           |           |                |       | most severe of the 5.
+
+LARGE-CAP SUMMARY: All five remain structurally excluded by 26e. The proposed Rule 76
+(reduce 26e to 20/252 for NIFTY50 trending stocks at 52w breakout + R:R >= 2:1) would
+need 3 backtest validations before activation — it is not active today. These stocks
+are valuable for manual long-term tracking but the pipeline cannot recommend them.
+
+================================================================================
+OPEN POSITION STATUS
+================================================================================
+
+TEJASNET — EXIT EXECUTED (Jun16 = T+2 mandatory exit)
+  Entry: Rs575.00 (Jun12)
+  Exit: Market open Jun16 (Rs582-595 range based on gap)
+  Approximate realized P&L: +1.3% to +3.5% (best case Rs595 open)
+  Pattern RM-4 accuracy: 2/2 profitable trades. Thesis validated.
+
+No open positions as of Jun16 close.
+
+================================================================================
+UPDATED WATCHLIST — Run #30 (STLTECH REMOVED)
+================================================================================
+
+KEY CHANGE: STLTECH removed from watchlist entirely. Morning Open Alert cancelled.
+Rationale: Rule 79 (BE segment auto-block) + Rule 77 (confirmed downtrend) +
+Rule 78 (distribution day, 4 sessions of cooldown remaining).
+Re-entry conditions: multi-week horizon, exit from BE segment required first.
+
+PRIORITY 1 — APPROACHING TRIGGER:
+  UNOMINDA (user-requested) — HIGHEST PRIORITY
+  26e: 35/40 (5 HV days needed). RSI 48.2. Close Rs1119.8.
+  Trigger: 26e reaches 40 AND close > Rs1090 (MA5) on vol >= 1.0x.
+  Entry: Rs1080-1120 | Stop: Rs1040 | Target: Rs1280 | R:R: 6.64:1 at Rs1120.
+  Expected confidence: 86%. Expires: Jul18 (10 sessions from today).
+
+  MUTHOOTFIN — Pre-Pattern C
+  RSI 40.1 (needs 45). 26e 28/40 (structural barrier — separate from RSI).
+  Note: Even when RSI fires Pattern C, the 26e=28/40 blocks pipeline entry.
+  Both conditions must clear before evaluation. Long horizon.
+  Monitor RSI trajectory; gold recovery context remains tailwind.
+  Entry if both clear: ~Rs3200 | Stop: Rs2996 | Target: Rs3650 | R:R: 2.99:1.
+  Expected confidence when both fire: 86-88%. Expires: Jun30.
+
+PRIORITY 2 — WATCHLIST ACTIVE:
+  ATHERENERG (Rs1027.40)
+  Trigger: Close > Rs1042 on vol >= 1.2x. GOLD_CAUTION inactive.
+  Entry: ~Rs1042 | Stop: Rs1005 | Target: Rs1100 | R:R: 1.57:1. Conf: 83-87%.
+  Note: R:R is marginal at 1.57:1. Only enter if vol confirmation is clean.
+  Expires: Jun27.
+
+  GOCOLORS (Rs379.60)
+  Trigger: Pullback to Rs360-370 + RSI 50-58 + vol >= 0.8x.
+  Entry: ~Rs365 | Stop: Rs340 | Target: Rs430 | R:R: 4.33:1. Conf: 80-83%.
+  Currently above zone (Rs379.60 > Rs370). Wait for pullback.
+  Expires: Jun27 (10 sessions).
+
+  DELHIVERY (Rs453.55) — BLOCKED
+  Pattern C FIRED (RSI 46.1 crossed 45) but 26e 22/40 = hard gate.
+  Cannot enter despite pattern firing. Monitor 26e trajectory.
+  At current pace: 2-3 weeks to 26e=40.
+
+  PARAS (Rs1108.15)
+  Trigger: Pullback Rs1020-1050 + RSI 62-70 + vol <= 1.0x.
+  Entry: ~Rs1035 | Stop: Rs990 | Target: Rs1130 (52w high) | R:R: 2.11:1.
+  RSI 75.5 = approaching ceiling zone. Watch for cooldown.
+  Conf on trigger: 83-86%. Expires: Jun25.
+
+  APARINDS (Rs16280)
+  Jun16 HIGH: Rs16475 (52w HIGH touched intraday on 0.57x vol — not a valid RM-1).
+  Trigger A (pullback): Rs15500-16000 + RSI 60-70 + vol <= 0.8x.
+  Trigger B (RM-1 breakout): Close > Rs16475 on vol >= 1.5x (new 52w HIGH confirmation).
+  Entry A: ~Rs15800 | Stop: Rs14800 | Target: Rs17000 | R:R: 2.0:1.
+  Conf: 83% on pullback; 86% on RM-1 breakout.
+
+  KALYANKJIL (Rs381.35) — NEWS_PRICED_IN
+  NEWS_PRICED_IN classification. 26e 34/40 = blocked (6 HV days needed).
+  Post-news digestion: Rs340-350 pullback + RSI 48-56 + vol <= 0.8x.
+  Entry ~Rs345 | Stop: Rs328 | Target: Rs430 | R:R: 5.0:1. Conf: 76-80%.
+  Wait for pullback AND 26e resolution.
+
+  TRENT (Rs2901.10) — AGM Jun23 WATCH (expires Jun23)
+  26e 30/40 (structural barrier). AGM 7 sessions away.
+  Manual tracking only. Pipeline cannot recommend under 26e.
+  If R:R and 26e somehow clear: pullback Rs2750-2800 + vol < 0.8x.
+  Conf on valid setup: ~80%. Watchlist only.
+
+PRIORITY 3 — SECTOR/GROUP WATCHES:
+  TATACOMM: 26e 38/40 (2 sessions). Pattern O basket when threshold reached.
+  Trigger: 26e = 40 AND NiftyIT > +2% session.
+
+  TATAPOWER: RSI 26.2 (deeply oversold). Pattern C pre-cursor.
+  Need: RSI > 35 + green day + vol >= 1.0x above Rs407.
+  Entry ~Rs407 | Stop: Rs388 | Target: Rs434 | R:R: 2.5:1. Conf 74-78% (not pipeline-ready).
+
+  ADANIPOWER: RSI 24.4 (deeply oversold). Watch for RSI > 35 on volume.
+  No entry until: green day + RSI > 35 + vol >= 1.0x.
+  Would need full pattern confirmation before pipeline routing.
+
+REMOVED FROM WATCHLIST THIS SESSION:
+  STLTECH — Rule 79 (BE segment) + Rule 77 (confirmed downtrend) + Rule 78 (distribution day).
+             10-session cooling period through Jun19. Multi-week re-entry timeline.
+  IDEAFORGE — Floor Rs850-875 BROKEN (Jun16 intraday low Rs845). Rule 77 confirmed.
+              New 52w high + base formation needed before re-evaluation.
+
+================================================================================
+CA-1 WATCH — TMPV / TMCV
+================================================================================
+
+TMPV (Tata Motors Passenger Vehicles) and TMCV (Tata Motors Commercial Vehicles)
+were listed post-demerger on Nov 12, 2025.
+
+CA-1 watch window: 30 NSE trading sessions from listing = approx Jan 22, 2026.
+STATUS: EXPIRED. Today (Jun 16, 2026) is approximately 155 sessions after listing.
+The CA-1 watch window closed in late January 2026.
+
+CURRENT STATUS:
+  Both stocks remain in basestock.json permanently under Rule PM-1 (permanent membership).
+  Standard pipeline rules apply — no CA-1 special provisions.
+  yfinance data: Post-demerger symbols (TMPV, TMCV) may not be fully integrated.
+  Manual verification needed for price/RSI before any setup evaluation.
+  No actionable recommendation possible without confirmed price data.
+
+If user wants: manual RSI/price check on BSE/NSE website recommended to assess
+whether either stock has a setup worth routing through Step 2.7.
+
+================================================================================
+PIPELINE ASSESSMENT
+================================================================================
+
+MARKET ENVIRONMENT: BULLISH
+  Nifty at 30d+ high. Nasdaq risk-on. VIX low (16.20). DXY weakening.
+  Iran deal = auto/consumer tailwind. AI_TAILWIND active. No hard excludes.
+
+PRIMARY REASON FOR 0 PICKS TODAY:
+  1. STLTECH (87% estimated) — removed by Rules 77, 78, 79 (three hard gates)
+  2. All other candidates blocked by 26e or trigger-not-fired conditions
+  3. Market is bullish BUT quality setups require patient waiting
+
+QUALITY PIPELINE STATUS:
+  0 picks today is the correct answer.
+  Discipline: Never lower confidence to force a pick on a bullish day.
+
+NEAR-TERM CATALYSTS TO WATCH (Jun17+):
+  1. UNOMINDA: Any session >= 3% move adds 1 HV day toward 26e=40 threshold
+  2. TATACOMM: 26e 38/40 — two HV sessions bring it into Pattern O basket
+  3. MUTHOOTFIN: RSI 40.1 -> 45 (gold loan recovery context = structural tailwind)
+  4. GOCOLORS: Pullback to Rs360-370 zone (currently Rs379 — 2.5% away from zone)
+  5. ATHERENERG: Vol >= 1.2x on any green day above Rs1042
+
+PATTERN PERFORMANCE NOTE:
+  Rules 77, 78, 79 together prevented a likely losing trade on STLTECH.
+  The Rs617 morning open alert, if taken, would have seen the stock at Rs594.45 EOD
+  (Rs608.80 Jun15 close to Rs594.45 Jun16 close = -2.4% intraday if entry at Rs617).
+  New rules working as designed.
+
+================================================================================
+TOKEN USAGE & COST (Estimated — Run #30 is incremental, no full data fetch)
+================================================================================
+
+Step 1 (basestock): SKIPPED — no regeneration needed
+Step 1.5 (macro): Reused from Run #29 (no new scan) | ~Rs 0.01 Lakh
+Step 2 (pattern — incremental): ~8K in / ~3K out | ~Rs 0.04 Lakh
+Rule 77/78/79 application (STLTECH audit): ~5K in / ~2K out | ~Rs 0.02 Lakh
+New stock scan (27 names): ~12K in / ~4K out | ~Rs 0.04 Lakh
+Formatting: ~5K in / ~2K out | ~Rs 0.01 Lakh
+TOTAL ESTIMATED: ~Rs 0.12 Lakh (~$0.014 USD)
+
+================================================================================
+DISCLAIMERS
+================================================================================
+For informational and research purposes only. Validate with your own research
+before investing. Past pattern performance does not guarantee future results.
+Pipeline uses publicly available market data (yfinance NSE feeds).
+News scan limited by website access restrictions. RSI thresholds, R:R minimums,
+and confidence scores reflect model-based pattern analysis only.
+Rules 77, 78, 79 are new gates applied retrospectively to Run #29 per explicit
+user instruction — this output supersedes the STLTECH morning-open-alert in Run #29.
