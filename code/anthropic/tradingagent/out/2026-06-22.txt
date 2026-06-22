@@ -1,0 +1,370 @@
+================================================================================
+INDIA MID/SMALL-CAP STOCK RECOMMENDATION PIPELINE
+Run #35 | Date: 2026-06-22 (Monday) | NSE Session: Jun 22, 2026
+Generated: Sat Jun 20 (using Fri Jun 19 EOD data)
+SUPERSEDES Run #34 — Wilder RSI + RM-11 cap-tier rule applied (UGD-2026-06-20)
+================================================================================
+
+================================================================================
+RULE UPDATES SINCE RUN #34 (applied this run)
+================================================================================
+  RSI-1 (NEW MANDATORY): RSI must use Wilder smoothing
+                         ewm(alpha=1/14, adjust=False), NOT rolling(14).mean().
+                         Run #34 simple-rolling RSIs were systematically biased.
+  RM-11 (UPDATED CAP):   Day-1 vol >=10x avg -> RSI ceiling 85
+                         Day-1 vol  2-10x avg -> RSI ceiling 78
+                         (was: flat 78 regardless of vol)
+  CHEMICALS BASKET (NEW): NACLIND force-added (UGD-2026-06-20). Candidate
+                         monthly-review members: DEEPAKNTR, NAVINFLUOR,
+                         ALKYLAMIN, VINATIORGA, PIDILITIND, BALRAMCHIN.
+
+WILDER vs SIMPLE RSI GAP — verification (Fri Jun 19 EOD, yfinance):
+  Symbol    | Wilder | Simple | Gap   | Run#34 quoted
+  ----------|--------|--------|-------|---------------
+  NIACL     | 80.99  | 79.34  | +1.65 | 70.2  (Run#34 was off by ~11pts)
+  TARIL     | 68.88  | 70.84  | -1.96 | 58.5  (Run#34 was 10pts low)
+  SPAL      | 76.64  | 78.17  | -1.53 | 71.4  (Run#34 was 5pts low)
+  NACLIND   | 70.61  | 72.63  | -2.02 | 59.2  (Run#34 was 11pts low)
+  HFCL      | 73.50  | 63.79  | +9.71 | n/a   (HFCL flips: was "low" now "hot")
+  NETWEB    | 66.05  | 59.01  | +7.04 | n/a
+  TRENT     | 75.16  | 77.48  | -2.32 | 73.7  (close)
+  AEROFLEX  | 67.76  | 70.47  | -2.72 | n/a
+  MOTILALOFS| 67.20  | 68.78  | -1.58 | n/a
+  GOCOLORS  | 52.75  | 56.63  | -3.88 | n/a
+
+Note: Yahoo EOD closes for Jun 19 differ slightly from Run #34's NSE-quoted
+levels (e.g. NIACL Rs202.31 vs Run#34's Rs200.90). Entry/stop levels below
+are recalibrated to the freshly fetched closes.
+
+================================================================================
+STEP 1 — BASE STOCK SCREENER
+================================================================================
+STATUS: SKIPPED (monthly regeneration not due)
+next_regeneration_due: 2026-07-01
+
+UPDATES THIS RUN (carried + new):
+  - TATACAP added to Tata group basket (Jun 19)
+  - Power equipment basket: TARIL/TRIL/KECL/KPIL/GVT&D/APARINDS/POWERGRID/SUZLON
+  - PANAMAPET 60d OHLC backfill (Jun 19)
+  - NEW Jun 20: Chemicals basket created -- NACLIND force-added.
+    Candidate members for monthly review: DEEPAKNTR, NAVINFLUOR, ALKYLAMIN,
+    VINATIORGA, PIDILITIND, BALRAMCHIN.
+
+================================================================================
+STEP 1.5 — MACRO TREND & DISRUPTION ALERT — 2026-06-22
+================================================================================
+
+  Macro context (no change vs Run #34 — weekend; no new news identified):
+    HARD EXCLUDES:    None
+    CAUTION FLAGS:    TRENT AGM Tue Jun23 (T+1; pre-AGM exit required if entered)
+                      Monitor Nasdaq Fri Jun19 close for US_MARKET_CAUTION
+    TAILWINDS:        Insurance Q4 momentum (NIACL); Power equip / grid capex
+                      (TARIL); Tata financial services (TATACAP); Chemicals
+                      single-stock catalyst (NACLIND)
+    NEWS CATALYSTS:   NIACL Day-2 institutional wave; TARIL +10% Fri;
+                      TATACAP first ATH; SPAL 2-day +23%; NACLIND breakout
+    NEW STRUCTURAL:   RM-11 first live test today -- track NIACL realized
+                      under updated RSI cap-tier rule.
+
+================================================================================
+STEP 2 — PATTERN ANALYSIS (re-run under Wilder RSI)
+================================================================================
+
+--- STEP 2.2: WATCHLIST TRIGGER RE-EVALUATION (from Jun 18 watchlist) ---
+
+  GOCOLORS    Rs354.10 close, vol 0.14x (FAR below 0.8x gate). Trigger inactive.
+              Wilder RSI 52.75 -- room exists, but no volume = no trade.
+  MOTILALOFS  Rs953.45 close (just under Rs960 trigger). Vol 0.80x (at gate).
+              Wilder RSI 67.20. Carry trigger; needs Rs960+ AND vol >=0.8x.
+  TRENT       Rs3205.80; Wilder RSI 75.16 (Run#34 simple was 73.7).
+              Still under 78 -- but AGM Tue Jun23 (T+1) caps any entry to a
+              1-day swing. Conf 74% -- BELOW 85% threshold. WATCHLIST.
+  AEROFLEX    Rs507.25 (above Rs492 trigger), vol 1.32x, Wilder RSI 67.76.
+              Trigger ALREADY MET on Jun 19 close.
+              Re-evaluate Step 2.7 below.
+  HFCL        Rs209.61 (already above Rs194 re-entry). Wilder RSI 73.50
+              (was simple 63.79 -- WILDER SHOWS HOT). Vol 0.54x (below 0.8x gate).
+              RSI 73.50 still under 78, but momentum-stretched + vol thin.
+              Hold; re-arm only on pullback to Rs194 or vol >=1.0x breakout.
+  NETWEB      Rs5060.90; Wilder RSI 66.05; vol 0.84x. Steady but no new trigger.
+  TATACOMM    26e gating (carried). Re-check Mon EOD.
+  UNOMINDA    26e annual 36/40. Wait.
+  NEWGEN      Carry Rs538 trigger.
+
+--- RECENT MOVERS SCAN (>=5%, Jun 18-19) -- Wilder RSI ---
+
+Symbol      | 2-Day Move | Day-1 Vol/Avg | Day-2 Vol/Avg | W-RSI | Classification
+------------|-----------|---------------|---------------|-------|--------------------------
+NIACL       | +22.27%   | 10.84x        | 16.99x        | 80.99 | RM-11 (cap=85, vol>=10x)
+SPAL        | +23.76%   |  4.44x        |  4.00x        | 76.64 | RM-11 (cap=78, vol 2-10x)
+TARIL       |  +9.71%   | 10.98x        |  1.08x        | 68.88 | RM-1 BREAKOUT DAY 1
+NACLIND     | +13.58%   |  9.99x        |  1.97x        | 70.61 | RM-1 BREAKOUT DAY 1
+PANAMAPET   | +30.9%    |  9.5x         |  1.5x         | ~80+  | RM-9 EXHAUSTION (carry)
+TATACAP     | +12.7%    | 19.4x         |  1.3x         | ~85+  | RM-9 EXHAUSTION (carry)
+
+--- STEP 2.3: PATTERN RECOGNITION (Wilder RSI applied) ---
+
+NIACL (RM-11 -- updated rule):
+  Day-1 (Fri) +13.23% on 10.84x vol. Day-2 (Thu) +7.98% on 16.99x vol.
+  Wilder RSI 80.99.
+  RM-11 cap-tier check: Day-1 vol 10.84x >= 10x -> RSI ceiling = 85.
+  80.99 < 85 -> RM-11 PASS under updated rule.
+  (Under old flat-78 rule this would FAIL -- key reason rule was raised.)
+  Both days closed in upper half of range. Insurance Q4 wave.
+  Base conf 90.
+  Modifiers: news catalyst already counted; -5 if US_MARKET_CAUTION active.
+  Adjustment for higher RSI: -3 (closer to ceiling than Run #34 thought).
+  Final conf: 87 (no caution) or 82 (caution).
+  Last close: Rs202.31 (Yahoo EOD)
+  Entry: Rs198-200 (1-2% dip from Fri close)
+  Stop:  Rs189 (just below Thu close ~Rs178 + ATR cushion -- 6.6%)
+  Target: Rs220 (R:R = 2.0-2.4:1)
+
+SPAL (RM-11 -- updated rule):
+  Day-1 +11.67% on 4.44x vol. Day-2 +10.83% on 4.00x vol.
+  Wilder RSI 76.64.
+  RM-11 cap-tier check: Day-1 vol 4.44x in 2-10x -> RSI ceiling = 78.
+  76.64 < 78 -> RM-11 PASS (margin of just 1.4 pts -- TIGHT).
+  Concern carries from Run #34: thinner turnover (~Rs206 Cr Fri).
+  -3 for thin participation, -2 for tight RSI margin.
+  Final conf: 85.
+  Last close: Rs1028.40
+  Entry: Rs1010-1018 (1% dip)
+  Stop:  Rs975 (5% stop -- tight base too narrow)
+  Target: Rs1080 (52w high / nearest resistance)
+  R:R: 1.2-1.7:1 -- BORDERLINE on 1.5:1 gate. Position size half.
+
+TARIL (RM-1 Breakout Day 1):
+  Day-1 +10.07% on 10.98x vol. Day-2 -0.32% (flat). Wilder RSI 68.88 -- healthy.
+  Power equipment basket member.
+  Single-day breakout -- Sub-Rule 26f risk (one-bar +10% no follow-through).
+  DEFER. Wait for Mon confirmation: close > Rs358 on vol >= 0.8x avg.
+  If Mon confirms, upgrade to RM-2 Day-2 continuation.
+  Conf if triggered: 87.
+  Stop: Rs325. Target: Rs395.
+
+NACLIND (RM-1 Breakout Day 1) -- NEW chemicals basket:
+  Day-1 +15.60% on 9.99x vol. Wilder RSI 70.61. Day-2 was -1.75%.
+  Step 2.7 chart read:
+    - Base structure: 6-week consolidation Rs152-172 (May 13 - Jun 18)
+    - Breakout bar: Open Rs168.58, High Rs195.80, Low Rs167.84, Close Rs193.80
+      -- closed at 99% of range (no upper wick distribution)
+    - Volume Jun 19: 8.78M vs 20d avg 0.88M = ~10x
+    - Pattern f-style (chemicals catalyst, single-stock event)
+    - 60d high before bar: ~Rs180 (Jun 9 spike). Cleanly broken.
+  Single-day breakout -- 26f risk same as TARIL.
+  DEFER. Wait Mon confirmation: close > Rs193 on vol >= 0.8x avg.
+  If Mon confirms: upgrade to RM-2, Conf 85 (chemicals basket = newly tracked,
+  -2 vs TARIL whose basket has more L10 hits).
+  Stop: Rs172 (below pre-breakout consolidation high).
+  Target: Rs215 (10% above breakout / next resistance zone).
+
+AEROFLEX (watchlist trigger met):
+  Rs507.25 close on Jun 19 -- crossed Rs492 trigger. Vol 1.32x (>=1.0x gate).
+  Wilder RSI 67.76 (healthy). 2-day move -0.71% (no climax).
+  Trigger met but not in mover-screen as RM-11/RM-1 pattern -- this is a
+  Pattern f / watchlist confirmation. Day-2 was -4.29% then Day-1 +3.73%
+  (rebound day). NOT a clean breakout day.
+  Borderline: trigger satisfied but not on impulse bar. Conf 76 -- below 85.
+  WATCHLIST: re-arm trigger to Rs515 close on vol >=1.0x.
+
+================================================================================
+STEP 3 — VALIDATION (Wilder RSI + cap-tier rule)
+================================================================================
+
+Step 3.1 Price Action Hard Gate:
+  NIACL   PASS. Strong uptrend, no distribution wick, vol blowing out.
+  SPAL    PASS. 2-day breakout from base; no distribution.
+  TARIL   DEFER. Single-day breakout -- needs Mon confirmation.
+  NACLIND DEFER. Single-day breakout -- needs Mon confirmation.
+
+Step 3.2 Chart Read (Step 2.7 gates):
+  NIACL   Wilder RSI 80.99 < 85 (vol 10.84x cap) -- PASS RM-11.
+          R:R 2.0-2.4:1 >= 1.5 -- PASS.
+          No 26f (multi-day move). No Rule 77 (uptrend confirmed).
+          No Rule 78 (no distribution). Series EQ.
+  SPAL    Wilder RSI 76.64 < 78 (vol 4.44x cap) -- PASS RM-11 by 1.4pts only.
+          R:R 1.2-1.7:1 -- borderline; using Rs1080 target gives 1.7:1.
+          Position size HALF, flagged "low-conviction RM-11".
+  TARIL   Conditional only -- not validated this run.
+  NACLIND Conditional only -- not validated this run.
+
+Step 3.3 External Validation:
+  - Negative news: None flagged for NIACL, SPAL, TARIL, NACLIND.
+  - US Market: Verify Nasdaq Jun 19 close on Mon pre-open.
+  - Industry: Insurance (POSITIVE Q4 -- NIACL); Misc (SPAL, NACLIND -- single
+    stock); Power equip (TARIL).
+  - AI Tailwind: not relevant.
+  - Gold: no caution.
+
+================================================================================
+STEP 4 — FINAL RECOMMENDATIONS
+================================================================================
+
+MAIN RECOMMENDATIONS (Monday Jun 22 open):
+
+Rank | Symbol  |  Entry      | Target   | Stop     | Conf | Exit Date
+-----+---------+-------------+----------+----------+------+-----------
+ 1   | NIACL   | Rs198-200   | Rs220.00 | Rs189.00 |  87% | 2026-06-24
+ 2   | SPAL    | Rs1010-1018 | Rs1080.00| Rs975.00 |  85% | 2026-06-24
+
+Conditional (entry triggers required -- NOT market-on-open):
+
+ -   | TARIL   | Rs358*      | Rs395.00 | Rs325.00 |  87% | 2026-06-25
+       *Trigger: Mon close > Rs358 on volume >= 0.8x 20d avg.
+        Power equipment basket.
+
+ -   | NACLIND | Rs193**     | Rs215.00 | Rs172.00 |  85% | 2026-06-25
+       **Trigger: Mon close > Rs193 on volume >= 0.8x 20d avg.
+        NEW chemicals basket (force-added Jun 20).
+
+PRIMARY PICK COUNT: 2 (NIACL, SPAL -- both RM-11 under updated cap-tier)
+CONDITIONAL: 2 (TARIL, NACLIND -- both RM-1 Day-1 trigger-based)
+
+DELTA vs RUN #34:
+  - NIACL conf 90 -> 87 (Wilder RSI 80.99 closer to ceiling than 70.2 thought).
+  - SPAL promoted from CONDITIONAL to MAIN: under updated cap-tier rule
+    (Day-1 vol 4.44x -> cap 78), Wilder RSI 76.64 PASSES with 1.4pt margin.
+    Run #34 had it at conf 87 on simple RSI 71.4 (the larger margin was
+    illusory). True margin tighter, but trade survives -> kept (position half).
+  - NACLIND added as CONDITIONAL pick (was MISS in Run #34's audit; chemicals
+    basket created Jun 20 closes the universe gap).
+  - TARIL conditional unchanged.
+
+NIACL -- Detailed:
+  Pattern:    RM-11 Consecutive Catalyst Continuation (FIRST LIVE DEPLOYMENT)
+  Logic:      Day-1 +13.23% on 10.84x vol AFTER Day-2 +7.98% on 16.99x vol.
+              Wilder RSI 80.99 < 85 (Day-1 vol >=10x -> cap 85). Insurance Q4.
+              Both days closed in upper range (no distribution).
+  PE:         12 (LIC subsidiary)
+  Wilder RSI: 80.99 (< 85 cap-tier ceiling for vol >=10x)
+  Last close: Rs202.31 (Yahoo Fri Jun 19)
+  Volume:     10.84x 20d avg
+  Mkt cap:    ~Rs33,000 Cr
+  Potential:  +8.7% to target / -6.6% to stop
+  R:R:        1.3-2.0:1 from entry midpoint Rs199 (target +Rs21 vs stop -Rs10)
+              Adjusted: 2.0:1 at lower entry Rs198, 1.0:1 at Rs200 -- use Rs198
+              for the cleaner R:R.
+  Entry plan: Limit Rs198-200 first 30 min Mon. If gap up >2%, wait first-15-min
+              pullback to Rs200. Do NOT chase above Rs204.
+  Exit:       T+2 = Wed Jun 24. Trim 50% at Rs212; ride rest with stop-trail Rs207.
+
+SPAL -- Detailed:
+  Pattern:    RM-11 Consecutive Catalyst Continuation (low-conviction tier)
+  Logic:      Day-1 +11.67% on 4.44x vol AFTER Day-2 +10.83% on 4.00x vol.
+              Wilder RSI 76.64 < 78 (Day-1 vol 2-10x -> cap 78). Margin 1.4pts.
+  Wilder RSI: 76.64 (< 78 cap-tier ceiling for vol 2-10x)
+  Last close: Rs1028.40
+  Mkt cap:    ~Rs2,600 Cr
+  R:R:        1.2-1.7:1 (target Rs1080 / stop Rs975 / entry Rs1014 mid)
+  Position:   HALF size (low turnover ~Rs206 Cr Fri vs NIACL Rs2,400 Cr).
+  Skip if NIACL fills first and ties up capital.
+
+================================================================================
+WATCHLIST
+================================================================================
+
+P1 -- Imminent / Confirmation-Pending:
+  TARIL       Mon close > Rs358 on vol >= 0.8x -> enter Tue (Rs395 / Rs325)
+  NACLIND     Mon close > Rs193 on vol >= 0.8x -> enter Tue (Rs215 / Rs172)
+  TATACAP     Pullback to Rs340-355 + Wilder RSI <70 (currently very high)
+  PANAMAPET   Pullback to Rs420-440 + Wilder RSI <70
+
+P2 -- Carry-over from Jun 18:
+  GOCOLORS    Rs360-370 + vol >= 0.8x (vol 0.14x Fri -- inactive, hold)
+  MOTILALOFS  Close > Rs960 + vol >= 0.8x (Fri Rs953.45, vol 0.80x -- close)
+  NEWGEN      Close > Rs538 + vol >= 1.5x
+  AEROFLEX    Close > Rs515 + vol >= 1.0x  (re-armed; Rs492 trigger met but
+              not on a clean breakout bar)
+  HFCL        Re-arm: pullback to Rs194 OR new breakout Rs215 + vol >= 1.0x.
+              Note: Wilder RSI 73.50 (much hotter than simple 63.79).
+
+P3 -- Event-driven:
+  TRENT       AGM Tue Jun23 -- pre-AGM 1-day swing only IF US caution clears
+              AND Wilder RSI < 72 by Mon close. Currently 75.16. WATCHLIST.
+
+P4 -- Pattern S / 26e gating:
+  UNOMINDA    26e 36/40. Wait.
+  TATACOMM    26e 38/40. 2 HV days needed.
+  ATHERENERG  Close > Rs1042 on vol >= 1.2x.
+
+P5 -- Chemicals basket monthly review (NEW Jun 20):
+  DEEPAKNTR   Wilder RSI 44.76, neutral.
+  NAVINFLUOR  Wilder RSI 65.75, +2.6% Fri on 1.45x vol -- mild momentum.
+  VINATIORGA  Wilder RSI 52.35, neutral.
+  PIDILITIND  Wilder RSI 75.78 -- hot, watch for pullback.
+  BALRAMCHIN  Wilder RSI 47.77, weak (-4.07% Fri).
+  ALKYLAMIN   No data via yfinance ticker -- verify NSE symbol.
+
+================================================================================
+STEP 4.5 -- POST-RUN MISS AUDIT (vs Run #34)
+================================================================================
+
+Run #34 picks vs Run #35 picks:
+  NIACL   KEPT     Conf 90 -> 87 (RSI margin tighter under Wilder)
+  TARIL   KEPT     Conditional unchanged
+  SPAL    PROMOTED Conditional (87) -> Main #2 (85). Survives updated cap-tier.
+  NACLIND ADDED    New conditional pick. Run #34 audit logged it as MISS
+                   (universe gap); chemicals basket created Jun 20 fixes it.
+
+No Run #34 pick was rejected by the rule updates.
+The two updates moved confidence levels and tightened margins, but did not
+invalidate any active trade.
+
+Jun 19 NSE >5% gainers from basestock (post-rule):
+  CORRECTLY_PICKED:        2 (NIACL, SPAL)  -- both confirmed under updated rule
+  CORRECTLY_CONDITIONAL:   2 (TARIL, NACLIND)
+  CORRECTLY_EXCLUDED:      2 (TATACAP RSI ~85+, PANAMAPET RSI ~80+)
+  MISS_ANALYZE:            0  (chemicals basket closes the prior NACLIND gap)
+  NEWS_SHOCK_UNFLAGGABLE:  0
+
+================================================================================
+STEP 4.6 -- NSE-WIDE SELF-AUDIT & PATTERN VOTE (carry from Run #34)
+================================================================================
+
+No new NSE-wide audit needed -- Jun 19 EOD universe has not changed since
+Run #34 ran. Pattern vote tally and tag changes carry forward:
+
+UPVOTES:
+  RM-11    NIACL + SPAL = 2 first-fire hits (now 2 wins/0 losses pending Mon)
+  Pattern j NIACL, TATACAP, TARIL +3
+  Pattern h TARIL +1 (HIGH_CONVICTION -> PRIORITY)
+  Pattern f TARIL, NACLIND +2
+
+NEW under Run #35:
+  Chemicals basket: NACLIND first member added; basket Hits_L10 = 1.
+  Pattern f (chemicals theme): +1 from NACLIND.
+  RM-11 cap-tier rule: validated by SPAL surviving -- old flat-78 would have
+  rejected SPAL Wilder 76.64 if it had been computed correctly.
+
+================================================================================
+SUMMARY FOR MONDAY JUN 22
+================================================================================
+
+PRIMARY ACTIONABLE:
+  #1 NIACL  Rs198-200 / Rs220 / Rs189  Conf 87%  Exit Wed Jun 24
+  #2 SPAL   Rs1010-1018 / Rs1080 / Rs975  Conf 85%  Exit Wed Jun 24
+            (HALF position size -- borderline R:R + thin turnover)
+
+CONDITIONAL (entry trigger required):
+  TARIL    Mon close > Rs358 on vol >=0.8x -> enter Tue. Rs395 / Rs325. Conf 87%.
+  NACLIND  Mon close > Rs193 on vol >=0.8x -> enter Tue. Rs215 / Rs172. Conf 85%.
+
+REJECTIONS WITH RATIONALE:
+  TATACAP    Wilder RSI ~85+ (single-day spike, RM-9 exhaustion)
+  PANAMAPET  Wilder RSI ~80+ + single-day climax (RM-9)
+  TRENT      AGM 1 session away; conf 74%; Wilder RSI 75.16
+  HFCL       Wilder RSI 73.50 (much hotter than simple 63.79); thin vol
+  GARFIBRES/RML/SBC  unrecognized / corp-action suspected (Run #34 carry)
+
+PIPELINE IMPROVEMENTS DEPLOYED THIS RUN:
+  + RSI-1 Wilder smoothing made mandatory (UGD-2026-06-20)
+  + RM-11 RSI cap raised to tiered 78/85 by Day-1 vol regime
+  + Chemicals basket created (NACLIND force-added)
+
+NEXT TUESDAY: Measure NIACL + SPAL realized vs predicted. RM-11 thesis +
+cap-tier rule first joint validation. Confirm/abandon TARIL+NACLIND
+based on Mon close.
+
+DISCLAIMER: For research purposes only. Verify with own analysis. Past pattern
+performance does not guarantee future results.

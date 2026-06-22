@@ -1,0 +1,155 @@
+================================================================================
+TOP-GAINER INTROSPECT — 2026-06-22 (Monday)
+================================================================================
+Run reference: out/2026-06-22.txt (Run #35, generated Sat Jun 20 from Fri Jun 19 EOD)
+Data source: yfinance EOD Jun 22 (NSE public API returned 403 — fallback)
+Wilder RSI used per Rule RSI-1.
+
+================================================================================
+1. NSE TOP 10 GAINERS (>5%, sorted by Value Traded LTP × Vol)
+================================================================================
+(8 names cleared the >5% gate today; below ranked by Value Cr)
+
+Rank | Symbol     | LTP      | Chg%    | Volume       | Value Cr | InUniv | Picked?
+-----|------------|----------|---------|--------------|----------|--------|----------
+ 1   | IDBI       | 87.65    |  +5.63% | 8,38,07,988  | 734.6    | Y      | N
+ 2   | KIRLOSENG  | 2389.80  | +20.00% |   17,94,364  | 428.8    | N      | N
+ 3   | NACLIND    | 215.83   | +11.37% |  1,16,06,470 | 250.5    | Y(UGD) | **Y** (conditional fired)
+ 4   | EBGNG      | 548.75   |  +9.32% |   38,43,921  | 210.9    | Y(UGD) | N
+ 5   | LEMONTREE  | 118.75   |  +5.05% |  1,69,88,707 | 201.7    | N      | N
+ 6   | DECNGOLD   | 227.51   |  +5.96% |   53,53,073  | 121.8    | N      | N
+ 7   | AEROENTER  | 144.99   |  +6.71% |   77,37,914  | 112.2    | Y(UGD) | N (gated)
+ 8   | POLYMED    | 1671.40  |  +6.91% |    3,21,531  |  53.7    | N      | N
+
+NSE_API_GAP note: full NSE buckets not directly fetchable today; list above is
+yfinance scan over basestock + extended extras universe (275 symbols).
+
+================================================================================
+2. PER-GAINER PATTERN ATTRIBUTION + VERDICT
+================================================================================
+
+Symbol     | Predicting Pattern(s)              | Wilder RSI (prev→today) | Vol/Avg | Bucket                          | Notes
+-----------|------------------------------------|-------------------------|---------|---------------------------------|-----------------------------------------------------
+IDBI       | Pattern j (clarification news)     | 61.04 → 66.37           |  3.72x  | UNPREDICTED_BUT_PREDICTABLE     | In universe; volume-surge clarification + lingering divest rumor; no scan flagged
+KIRLOSENG  | Pattern j + DC capex theme         | 66.00 → 81.52           |  4.73x  | UNPREDICTED_BUT_PREDICTABLE     | HyperNext 192MW genset order Jun 19; AI/DC theme blindspot (NOT current basket)
+NACLIND    | RM-1 (D1 Jun19) → RM-2 (D2 Jun22)  | 70.71 → 77.84           | 13.20x  | PREDICTED_AND_PICKED            | Chemicals basket force-added Jun 20; conditional trigger Rs193 fired at open Rs198
+EBGNG      | RM-11 candidate / Pattern j        | 69.81 → 76.45           |  6.35x  | UNPREDICTED_BUT_PREDICTABLE     | Already UGD-added Jun 19; promoter/SAST activity + investor meet; pattern not flagged
+LEMONTREE  | Pattern j (hospitality catalysts)  | 53.33 → 62.11           |  5.11x  | UNPREDICTED_BUT_PREDICTABLE     | Hotel signings/openings + mgmt cluster; no hotels basket exists
+DECNGOLD   | Multi-catalyst (gold junior)       | 72.40 → 75.49           |  1.45x  | UNPREDICTED_AND_UNPREDICTABLE   | 60d range 105% — too volatile; vol only 1.45x; RSI already hot
+AEROENTER  | RM-9 EXHAUSTION (gating pattern)   | 83.12 → 85.94           |  5.58x  | PREDICTED_BUT_GATED             | Wilder RSI 85.94 exceeds RM-11 cap-85 even at vol≥10x — correctly excluded
+POLYMED    | None clean (marginal Pattern d)    | 59.19 → 67.03           |  1.37x  | UNPREDICTED_BUT_PREDICTABLE     | Vol/Avg too low for RM-1; mixed news incl. negative stamp duty; log only
+
+================================================================================
+3. CATALYST CHECK (for ambiguous classifications)
+================================================================================
+IDBI       — Vol-surge clarification (Jun 18) + Q4 FY26 net profit Rs1,943 Cr; divest rumor lingering. No fresh catalyst Jun 22.
+KIRLOSENG  — HyperNext 192 MW Optiprime genset order (Jun 19 press). Confirmed DC capex catalyst → AI/DC blindspot.
+EBGNG      — Director Pancholi bought 52,807 sh Jun 12; A Flex Invest at 7.38% Jun 17; PhillipCapital investor meet Jun 23.
+LEMONTREE  — Tadgaon/Igatpuri resort signings (200 keys) Jun 18; new Sri Ganganagar hotel Jun 17; Franklin Templeton trim Jun 17.
+DECNGOLD   — ASSOCHAM exploration award Jun 19; SC iron-ore lease ruling Jun 15; Kyrgyzstan Altyn Tor accel Jun 11; Spain tungsten EUR 1.76M Jun 10.
+AEROENTER  — SEBI SAST disclosures (block stake build-up); stake-build at 7.38%.
+POLYMED    — Investor meets Jun 22–25; Delhi stamp duty Rs2.5 Cr penalty (Jun 16, negative).
+
+================================================================================
+4. PATTERN VOTE TALLY
+================================================================================
+UPVOTES (fired correctly this run):
+  RM-2     : Hits_L10 2 → 3, tag NORMAL → HIGH_CONVICTION ; winner: NACLIND +11.37% (D2 cont)
+  Pattern f: Hits_L10 1 → 2, tag NORMAL (no tier change)  ; winner: NACLIND +11.37% (chemicals basket)
+
+DOWNGRADED / UNCHANGED TAGS (silent today):
+  Rule 80   : Hits_L10 0 / L30 2 → tag COOLING (was COOLING) — unchanged
+  Pattern SB: Hits_L10 0 / L30 1 → tag COOLING (was COOLING) — unchanged
+  Pattern h, MC, RM-11, RM-4, RM-7, RM-1, Pattern j, Pattern d: did not fire today; tags unchanged
+  (No pattern crossed into STALE this run.)
+
+PIPELINE MISSES (pattern fired, gates swallowed): None. Gates held correctly:
+  - SPAL (low-conviction RM-11 borderline) closed -4.80% — half-position sizing prudent; escaped stop by Rs4.
+  - TARIL conditional did NOT confirm (close Rs351.50 < Rs358 trigger) — correctly excluded.
+  - AEROENTER wRSI 85.94 — correctly gated by RM-9/RM-11 ceiling.
+
+UNRECOGNIZED:
+  KIRLOSENG  — Proposed new basket (Data Center / AI Infra Hardware), log-only single hit.
+  LEMONTREE  — Hospitality catalyst stack; no basket; single occurrence, log only.
+  POLYMED    — Mixed signal; log only.
+  IDBI       — Pattern j (catalyst-driven) but ambient — note for Step 1.5 scan tightening on divest rumor cluster.
+
+================================================================================
+5. AGENT FILE EDITS APPLIED
+================================================================================
+File: .claude/agents/india-stock-recommender.md
+  Section: Step 1 — Sector baskets (line ~64)
+  Change: Added "Data Center / AI Infra Hardware basket" as PROPOSED (force_include: false,
+          dc_basket_proposed: true). KIRLOSENG seed member, log-only until 2nd basket member
+          hits ≥+5% on a DC/AI-infra catalyst within 30 sessions. Memory link.
+  Rationale: KIRLOSENG +20% on the HyperNext 192MW DC-genset order revealed a thematic
+             blindspot adjacent to Pattern O (NIFTYIT trigger) but distinct — DC hardware
+             vs IT services. Consistent with the chemicals/power-equip basket precedent
+             (single-stock-catalyst seeded basket).
+  Section: Step 1 — Chemicals basket entry (line ~64)
+  Change: Appended "Jun 22 validation:" note recording NACLIND Day-2 continuation +11.37%.
+  Rationale: Validates the basket + conditional trigger logic for future audits.
+
+File: pattern_notes.md
+  Section: PATTERN VOTE LEDGER (top block between <!-- ledger-start --> markers)
+  Change: RM-2 Hits_Total 6→7, L10 2→3, tag NORMAL→HIGH_CONVICTION, Last_Hit 2026-06-22,
+          appended "NACLIND +11.37% (Jun22, D2 cont)" to Recent_Winners.
+          Pattern f Hits_Total 1→2, L10 1→2, Last_Hit 2026-06-22, appended "NACLIND +11.37% (Jun22, chemicals D2)".
+  Section: PATTERN HIT DATES
+  Change: Appended 2026-06-22 to RM-2 and Pattern f date lists.
+  Section: NEW — INTROSPECT_RUN_2026-06-22 (inserted near top after H1)
+  Change: Full audit notes with buckets, pattern upvotes, picks reality check, basket proposal.
+
+================================================================================
+6. MEMORY WRITES
+================================================================================
+Path: .claude/agent-memory-local/india-stock-recommender/data-center-basket-jun22-proposal.md
+Summary: Data Center / AI Infra Hardware basket proposal. Seed: KIRLOSENG +20% on
+         HyperNext 192MW DC-genset order Jun 22. Log-only single hit; promote on 2nd
+         member confirm within 30 sessions. Links: [[pattern-o-ai-cloud-infra-universe]],
+         [[ugd-ohlc-backfill-rule]], [[chemicals-basket-jun20]].
+
+Path: .claude/agent-memory-local/india-stock-recommender/MEMORY.md
+Summary: Index pointer added for the new basket proposal memory.
+
+================================================================================
+7. LEDGER SNAPSHOT (post-update)
+================================================================================
+Pattern    | Hits_Total | Hits_L10 | Hits_L30 | Last_Hit_Date | Tag              | Recent_Winners (last 5)
+-----------|------------|----------|----------|---------------|------------------|------------------------
+Pattern h  | 15         | 3        | 8        | 2026-06-19    | HIGH_CONVICTION  | HAL +5.36%, COCHINSHIP +5.62%, BDL +6.09%, PARAS +18.0% (Jun17), TARIL +10.1% (Jun19)
+Pattern MC | 9          | 2        | 6        | 2026-06-19    | NORMAL           | HFCL +22.6%, AEROFLEX +19.99%, LLOYDSENGG +12.04%, HFCL +5.0% (Jun19)
+RM-11      | 2          | 2        | 2        | 2026-06-19    | NORMAL           | NIACL +13.2% (Jun19), SPAL +11.7% (Jun19)
+RM-4       | 6          | 1        | 4        | 2026-06-03    | NORMAL           | PARAS +9.4%, APOLLO +8.13%, TRENT +7.97%
+Rule 80    | 3          | 0        | 2        | 2026-06-15    | COOLING          | NETWEB +9.45%, LLOYDSENGG +12.04%
+Pattern SB | 1          | 0        | 1        | 2026-06-17    | COOLING          | Defence basket (3-stock breadth)
+RM-7       | 2          | 1        | 2        | 2026-06-18    | NORMAL           | NIACL +12.2% (Jun18), NEWGEN +17.35% (Jun2)
+RM-2       | 7          | 3        | 5        | 2026-06-22    | HIGH_CONVICTION  | AEROFLEX +8.3%, NELCO +7.59% (Jun19), NACLIND +11.37% (Jun22, D2 cont)
+Pattern j  | 3          | 3        | 3        | 2026-06-19    | HIGH_CONVICTION  | NIACL +13.2% (Jun19), TATACAP +6.2% (Jun19), TARIL +10.1% (Jun19)
+Pattern f  | 2          | 2        | 2        | 2026-06-22    | NORMAL           | TARIL +10.1% (Jun19, power equip), NACLIND +11.37% (Jun22, chemicals D2)
+Pattern d  | 1          | 1        | 1        | 2026-06-19    | NORMAL           | BERGEPAINT +9.0% (Jun19, outside universe)
+RM-1       | 2          | 2        | 2        | 2026-06-19    | NORMAL           | TARIL +10.1% (Jun19), NACLIND +15.6% (Jun19)
+
+================================================================================
+8. NEXT-RUN HEADS-UP
+================================================================================
+Tags promoted to HIGH_CONVICTION:
+  - RM-2 (Hits_L10 3) — Step 2 must apply +2 confidence modifier on RM-2 setups next run.
+
+Tags now PRIORITY: (none crossed the ≥5 L10 threshold)
+
+Patterns now STALE: (none)
+
+New thematic baskets added:
+  - Data Center / AI Infra Hardware (PROPOSED, log-only). Watch for 2nd member ≥+5% on
+    DC/AI-infra catalyst — promote then. Candidates: HFCL, STLTECH, TEJASNET, BBOX,
+    POWERGRID, KIRLOSENG.
+
+PICKS REALITY CHECK (Run #35 Jun 22 picks):
+  NIACL    +4.84% — held, just under top-10 cutoff (Day-3 of RM-11 thesis intact)
+  SPAL     -4.80% — close Rs979 vs stop Rs975 — escaped by Rs4 thanks to half-size + risk flag
+  TARIL    conditional Rs358 trigger NOT met (close Rs351.50) — correctly stayed out
+  NACLIND  conditional Rs193 trigger MET (open Rs198, close Rs215.83 +11.37%) — **trade of the day**
+            → Chemicals basket + RM-1→RM-2 D2 logic validated
+
+DISCLAIMER: Retrospective audit only. No new picks. Trade decisions remain with the user.

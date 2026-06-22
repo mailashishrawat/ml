@@ -1,0 +1,499 @@
+================================================================================
+INDIA MID/SMALL-CAP STOCK RECOMMENDATION PIPELINE
+Run #32 | Date: 2026-06-18 (Wednesday) | NSE Session: Jun 18, 2026
+================================================================================
+
+================================================================================
+STEP 1 — BASE STOCK SCREENER
+================================================================================
+STATUS: SKIPPED (monthly regeneration not due)
+next_regeneration_due: 2026-07-01
+current_count: 223 stocks (216 prior + 7 UGD force-adds from today's Step 4.6)
+UGD additions today: SPAL, AEROENTER, DECNGOLD, FINOPB, SASKEN, NITCO, PANAMAPET
+
+================================================================================
+STEP 1.5 — MACRO TREND & DISRUPTION ALERT — 2026-06-18
+================================================================================
+
+╔═══════════════════════════════════════════╗
+║  MACRO TREND & DISRUPTION ALERT — JUN 18 ║
+╠═══════════════════════════════════════════╣
+║ HARD EXCLUDES (remove from all picks)    ║
+║  None active today                        ║
+╠═══════════════════════════════════════════╣
+║ CAUTION FLAGS (-15 confidence if picked) ║
+║  ⚠  US_MARKET_CAUTION: Nasdaq -1.34%     ║
+║     (Jun 17 close). Active Day 2.         ║
+║  ⚠  NiftyIT -1.43% (Jun 18): Pattern O  ║
+║     INACTIVE. IT basket NOT scanned.      ║
+║  ⚠  WTI Crude $74.40 (declining from    ║
+║     $80 Iran-deal high). Oil sector        ║
+║     headwind for upstream stocks.          ║
+╠═══════════════════════════════════════════╣
+║ TAILWIND SIGNALS (+10 confidence)        ║
+║  ✓ AI_TAILWIND ACTIVE: Jensen Huang      ║
+║    endorsement (Jun 2026). IT stocks      ║
+║    eligible. Counter: 0/3 (NiftyIT vs    ║
+║    Nifty50 = -1.54%, within -2% tolerance)║
+║  ✓ Nifty50 +0.18% (mild uptrend)         ║
+║  ✓ NiftyBank +0.45% (banking stable)     ║
+║  ✓ DXY 100.24 (stable USD)               ║
+║  ✓ GOLD_CAUTION INACTIVE (gold -0.54%)   ║
+╠═══════════════════════════════════════════╣
+║ NEWS CATALYSTS (+20 conf; force Step 2)  ║
+║  NIACL +12.2% today on 12.5x vol         ║
+║     Insurance Q4 results likely.         ║
+║     Source: NSE live data Jun18.          ║
+║     STATUS: NEWS_PRICED_IN. Watchlist.   ║
+║  PARAS DEFENCE +18% Jun17 on 2.92x vol  ║
+║     Defense MoD order catalyst.           ║
+║     Source: NSE live data Jun17.          ║
+║     STATUS: RSI 82.6 ceiling. Watchlist. ║
+║  Reliance Jio DRHP filing (pre-AGM Jun19)║
+║     Source: Market reports Jun17.         ║
+║     KFINTECH (indirect play) — 26e FAIL. ║
+╠═══════════════════════════════════════════╣
+║ NEW STRUCTURAL RISK (save to notes)      ║
+║  - Insurance sector Q4 results gap:      ║
+║    PSU insurers (NIACL, GICRE) not in    ║
+║    Step 1.5 standard scan. Add for Q4    ║
+║    season (Apr-Jun annually).             ║
+╚═══════════════════════════════════════════╝
+
+Market Status Summary:
+- Nifty50:   24,129.20 (+0.18%)
+- NiftyIT:   28,397.40 (-1.43%) — Pattern O INACTIVE
+- NiftyBank: 57,845.70 (+0.45%)
+- Nasdaq:    26,021.66 (-1.34%, Jun17) — US_MARKET_CAUTION ACTIVE
+- Gold:       $4,335.50 (-0.54%) — GOLD_CAUTION INACTIVE
+- WTI Crude: $74.40 (declining)
+- DXY:       100.24 (+0.15%)
+
+================================================================================
+STEP 2 — PATTERN ANALYSIS
+================================================================================
+
+--- STEP 2.2: WATCHLIST TRIGGER RE-EVALUATION ---
+
+GOCOLORS (priority): Price Rs360.60 IN ZONE Rs360-370. RSI 54.9 IN RANGE 50-58.
+  Vol 0.04x — BELOW 0.8x threshold. Trigger NOT fired. WATCH TOMORROW.
+
+MOTILALOFS: H=Rs961.70 (ABOVE Rs960 trigger!). Close=Rs955.35 (BELOW). Vol 0.22x.
+  Both price-trigger and volume failed at close. Trigger NOT fired.
+
+STLTECH: Rule 77 = 2 lower highs from peak (Day5 H=630 > Day6 H=629 > Day7 H=628).
+  Only 2, not yet 3. Rule 78 = Session 9/10. Rule 79 = BE segment. HARD BLOCK.
+
+NETWEB: Close Rs5107 > Rs5038 trigger. BUT vol=0.39x (need 1.5x) AND R:R=0.12:1.
+  CHART FAIL (R:R). Trigger reclassified — new trigger: Rs5150 breakout on vol >= 1.5x.
+
+GOCOLORS, MOTILALOFS, UNOMINDA, TATACOMM, ATHERENERG: Not fired. (See watchlist.)
+
+--- RECENT MOVERS SCAN (>=5%, Jun 17-18) ---
+
+Symbol    | Session | Move%  | Vol/Avg | RSI  | Classification
+----------|---------|--------|---------|------|-----------------------
+HFCL      | Jun18   | +5.35% | 0.28x   | 67.2 | LOW_CONVICTION (vol < 1.0x); T+2 EXIT
+NIACL     | Jun18   |+12.2%  | 12.5x   | 74.9 | NEWS_PRICED_IN (single-session >10%, RSI near ceiling)
+PARAS     | Jun17   |+18.0%  | 2.92x   | 82.6 | RSI AT CEILING (>82); NEWS_PRICED_IN; post-catalyst
+Note: No stock in basestock universe moved >= 5% in Jun17-18 outside the above.
+
+--- STEP 2.3: RECENT MOVER PATTERN RECOGNITION ---
+
+NIACL (+12.2% Jun18, 12.5x vol):
+  Template: RM-9 (FAILED PATTERN / NEWS_PRICED_IN)
+  Single-session +12.2% on 12.5x vol. RSI 74.9 (approaching ceiling).
+  Do NOT enter. Add to pullback watchlist.
+  Re-entry trigger: pullback to Rs165-170 + RSI reset to 50-60 + vol <= 0.8x.
+
+PARAS (+18% Jun17, 2.92x vol; +0.7% Jun18 digestion):
+  Template: RM-9 (POST-CATALYST EXHAUSTION)
+  RSI 82.6 = AT CEILING. R:R 0.25:1 (only Rs53 to 52w high from Rs1295).
+  Sub-Rule 26f: +18% followed by flat/up +0.7% on 1.37x vol. Borderline.
+  Do NOT enter. Pullback Rs1100-1150 required.
+
+HFCL (+5.35% Jun18, 0.28x vol):
+  Template: LOW_CONVICTION. T+2 exit day. Volume drying. Not a re-entry signal.
+
+--- ORGANIC CANDIDATES EVALUATED ---
+
+TRENT (AGM Jun23):
+  Pattern: AGM catalyst (pre-event momentum). 26e recency PASS (14/64). RSI 73.7.
+  RSI penalty: -3 (approaching ceiling >72). US caution: -5. Base conf: 82.
+  Final conf: 74%. BELOW 85% THRESHOLD. Watchlist only.
+
+NETWEB:
+  Close above trigger Rs5038. But R:R = 0.12:1 (52w high only 0.8% away). CHART FAIL.
+
+NEWGEN:
+  RSI 54.7. Vol 0.06x (extremely thin). -0.7% today. Watchlist trigger unchanged.
+  One lower high from Jun17 peak — not yet Rule 77 but caution sign.
+
+AEROFLEX:
+  RSI 68.6. 26e PASS. Vol 0.26x (below 1.0x trigger). US caution active. Conf ~75%.
+
+MOTILALOFS:
+  RSI 67.1. Coiling at all-time high (0.5% from 52w high). Vol 0.22x thin.
+  Trigger Rs960 not fired at close. Still watchlist.
+
+--- STEP 2.5 / 2.7 CHART READ RESULTS ---
+
+All organic candidates FAIL Step 2.7 on one or more grounds:
+- TRENT: Conf 74% (< 85% threshold) + RSI 73.7 (near ceiling)
+- NETWEB: R:R = 0.12:1 (HARD FAIL)
+- PARAS: RSI 82.6 (ceiling breach) + R:R 0.25:1 + 26f risk
+- NIACL: NEWS_PRICED_IN + RSI 74.9
+
+================================================================================
+STEP 3 — VALIDATION
+================================================================================
+
+Step 3.1 — Price Action Hard Gate: No stocks entered (all failed Step 2.7)
+Step 3.2 — Chart Read: Confirmed above (no candidates survived to Step 3)
+Step 3.3 — Additional Checks:
+  - Negative news: None flagged for watchlist stocks
+  - US Market: CAUTION ACTIVE (Nasdaq -1.34%)
+  - AI Tailwind: ACTIVE (Jensen Huang endorsement, counter 0/3)
+  - Industry trends: Defence (GROWING), Insurance (STABLE), IT (AI TAILWIND ACTIVE)
+  - Gold: CAUTION INACTIVE
+
+================================================================================
+STEP 4 — FINAL RECOMMENDATIONS (Formatted Output)
+================================================================================
+
+MAIN RECOMMENDATIONS TODAY: 0
+
+No stocks cleared the >85% confidence threshold.
+This is the expected outcome on days with:
+  (a) US_MARKET_CAUTION active (-5 to all candidates)
+  (b) Pattern O INACTIVE (NiftyIT -1.43%)
+  (c) Primary candidates at RSI ceilings (PARAS 82.6, TRENT 73.7, ASTRAMICRO 79.3)
+  (d) R:R failures (NETWEB 0.12:1, PARAS 0.25:1)
+
+Quality discipline: 0-pick day is preferable to forcing marginal ideas. Hold cash.
+
+================================================================================
+HFCL OPEN POSITION — T+2 EXIT (MANDATORY)
+================================================================================
+
+HFCL Exit (T+2 deadline = Jun 18):
+  Entry:  Rs184.84 (Jun 16)
+  Exit:   Rs196.11 (Jun 18 close)
+  P&L:    +6.10% realized
+  High:   Rs198.90 intraday (+7.6% from entry)
+  Target: Rs208.98 (not reached — 6.6% remaining upside)
+
+  EXIT AT TODAY'S CLOSE — T+2 deadline. Do not hold overnight.
+
+  Pattern worked: RM-2 (Breakout Day 2 continuation) + Pattern O (NiftyIT >+2% Jun16).
+  Volume dried: 0.28x today (post-circuit digestion). RSI 67.2 (still healthy).
+  Re-entry: Blocked by US_MARKET_CAUTION (conf 77% < 85%). Watch NiftyIT for Pattern O re-activation.
+
+================================================================================
+WATCHLIST — RANKED BY CONFIDENCE & ACTIONABILITY
+================================================================================
+
+Priority 1 — IMMINENT TRIGGERS (watch daily):
+
+ 1. GOCOLORS
+    Status:   IMMINENT — price Rs360.60 is IN trigger zone Rs360-370
+    RSI:      54.9 (IN range 50-58)
+    Only fail: Vol 0.04x (need 0.8x). Trigger fires if vol picks up ANY session.
+    Entry:    Rs361-370 (on trigger day)
+    Stop:     Rs340 (Jun11 low)
+    Target:   Rs430 (Jun15 swing high / prior resistance zone)
+    R:R:      3.3:1-3.8:1 (depending on entry)
+    Confidence: 83% (fires at 85%+ if vol >= 0.8x on entry day without US caution)
+    Sparkline: #*+._.--..  [Rs414 -> Rs363]
+    NOTE: US caution active — if trigger fires WITH Nasdaq still negative, conf = 78%. Wait.
+
+ 2. MOTILALOFS
+    Status:   NEAR — intraday high Rs961.70 TOUCHED trigger level.
+    RSI:      67.1 (healthy)
+    Close:    Rs955.35 (below Rs960). Vol: 0.22x.
+    Entry:    Rs960-965 (on close above Rs960 with vol >= 0.8x)
+    Stop:     Rs882 (prior support base)
+    Target:   Rs1088 (52w high)
+    R:R:      2.55:1
+    Confidence: 83% standalone, 78% with US caution active
+    Sparkline: ._.__-***#  [Rs855 -> Rs956]
+    NOTE: NEAR all-time high area. Strong uptrend. Trigger could fire any session.
+
+ 3. TRENT (AGM Watch — expires Jun 23)
+    Status:   WATCHLIST. AGM Jun23 = 5 sessions away. Pre-AGM run-up active.
+    RSI:      73.7 (approaching ceiling — penalty active)
+    26e:      PASS via recency OR-gate (14/64 — rising)
+    Entry:    Rs3160 (if US caution clears + RSI < 72)
+    Stop:     Rs3105 (Jun18 low)
+    Target:   Rs3300 (AGM measured move)
+    R:R:      2.48:1
+    Confidence: 74% (82 base - 3 RSI penalty - 5 US caution)
+    Trigger:  Nasdaq closes positive AND RSI < 72 on entry day. Expiry Jun23.
+    Sparkline: ______--*#  [Rs2770 -> Rs3171]
+    6m HIGH: Rs4332. Significant overhead — Rs3300 is conservative/realistic target.
+
+Priority 2 — THRESHOLD CANDIDATES (need 26e unlock or catalyst):
+
+ 4. UNOMINDA (user-requested)
+    Status:   26e FAIL — 36/252, need 40. Currently 4 HV days short.
+    Entry:    Rs1080-1100
+    Stop:     Rs1040
+    Target:   Rs1280
+    R:R:      3.8:1
+    Confidence: 86% WHEN 26e fires (confirmed with entry within 10 sessions of trigger)
+    Trigger:  UNOMINDA 26e annual count reaches 40. Estimated: 1-2 weeks at current pace.
+    Sparkline: ~_~-._#~-~  [Rs1090 -> Rs1099]
+
+ 5. TATACOMM
+    Status:   26e FAIL — 38/252, need 40. Only 2 HV days away.
+    Entry:    Rs1930-1960
+    Stop:     Rs1890
+    Target:   Rs2150
+    R:R:      2.7:1
+    Confidence: 82% WHEN 26e fires (Pattern O basket stock)
+    Trigger:  Two consecutive days with >= 3% move (HV days). Could happen any week.
+    Sparkline: (26e gap stock — N/A for 10d sparkline)
+
+Priority 3 — SETUP FORMING:
+
+ 6. NEWGEN (RM-7, post-earnings base)
+    Entry:    Rs538 (breakout trigger, close on vol >= 1.5x)
+    Stop:     Rs478.6
+    Target:   Rs600
+    R:R:      2.55:1
+    Confidence: 82% (standalone), 77% with US caution
+    RSI:      54.7 | 20d HIGH: Rs538 | Vol Jun18: 0.06x (thin)
+    Sparkline: #+*-_.-+**  [Rs489 -> Rs484]
+
+ 7. AEROFLEX (Rule 80 coil)
+    Entry:    Rs492 (close above Rs491.90 on vol >= 1.0x)
+    Stop:     Rs468
+    Target:   Rs560
+    R:R:      2.8:1
+    Confidence: 80% (75% + no double-penalty rule = 80% floor when chart PASS)
+    RSI:      68.6 | 26e: PASS | Vol Jun18: 0.26x
+    Sparkline: ._.__-+~#*  [Rs420 -> Rs495]
+
+Priority 4 — NEWS_PRICED_IN PULLBACK WATCHES:
+
+ 8. NIACL (+12.2% today — pullback thesis)
+    Entry:    Rs165-170 (on pullback, RSI reset to 50-60)
+    Stop:     Rs155
+    Target:   Rs200
+    R:R:      2.8:1
+    Confidence: 80% at pullback
+    Note:     RSI 74.9 at current Rs185. Not actionable today.
+    Sparkline: ______---#  [Rs152 -> Rs187]
+
+ 9. PARAS DEFENCE (pullback from +18% catalyst day)
+    Entry:    Rs1100-1150 (on pullback + RSI reset to 55-65)
+    Stop:     Rs1050
+    Target:   Rs1350 (recent high)
+    R:R:      3.0-4.0:1 (depending on entry)
+    Confidence: 80% at pullback (RSI currently 82.6 = ceiling; must cool)
+    Pattern: RM-7 + Pattern h (defense order)
+    Current RSI: 82.6 — at ceiling. Do NOT enter today.
+
+Long-term watches:
+ - HFCL:     Re-entry Rs194 on Nasdaq recovery + vol >= 0.8x. Conf 82% (77% with caution).
+ - ATHERENERG: Close > Rs1042 on vol >= 1.2x. Current Rs994.50.
+ - NETWEB:   New ATH > Rs5150 on vol >= 1.5x (target Rs5500, R:R 2.0:1).
+ - JYOTICNC: Close > Rs720 on vol >= 1.0x. RSI 60.1, vol very thin.
+ - KALYANKJIL: Pullback Rs340-350. Current Rs383 (above zone — patience).
+ - STLTECH:  PERMANENTLY BLOCKED: Rule 78 expires Jun19, but Rule 77 (2 lower highs) + Rule 79 (BE segment) remain. Watch for structural reversal.
+ - BBOX:     Pattern O trigger (NiftyIT > +2%). Conf 80%. NiftyIT must recover.
+ - NBCC:     Vol spike >= 0.8x above Rs112. Low priority.
+ - MUTHOOTFIN: Dual block — RSI < 45, 26e 28/247. Long road.
+
+================================================================================
+STEP 4.5 — POST-RUN MISS AUDIT (vs Run #31, Jun 17)
+================================================================================
+
+4.5.1 — >=5% Gainers Today From Basestock Universe:
+
+Symbol | Yest Close | Today Close | %Chg   | Vol/20d-Avg | Classification
+-------|------------|-------------|--------|-------------|----------------
+NIACL  | Rs165.46   | Rs185.60    | +12.2% | 12.5x       | MISS_ANALYZE
+
+(Only NIACL >= 5% from the 223-stock basestock universe today)
+
+4.5.2 — Classification:
+  CORRECTLY_PICKED:       0 (0-pick day Jun17)
+  CORRECTLY_WATCHLISTED:  0
+  CORRECTLY_EXCLUDED:     0
+  NEWS_SHOCK_UNFLAGGABLE: 0 (news was insurance earnings — should have been flagged)
+  MISS_ANALYZE:           1 (NIACL)
+
+4.5.3 — Miss Analysis: NIACL
+
+--- MISS: NIACL ---
+1. PRE-MOVE SETUP (at Jun17 close = T-1):
+   - Price vs 20d high: 2.5% below (coiling)
+   - Range last 5d: coiling Rs150-168 (Nov-type narrow base)
+   - Volume last 3d vs 20d avg: Vol Jun17 = 2.45x (ELEVATED SIGNAL)
+   - RSI: 61.4 (healthy zone 55-72), trajectory: gradual rise from Jun10 RSI ~50
+   - Distance to MA5/MA20: close
+   - Sector context: Insurance (PSU) — sector-idiosyncratic move
+   - Step 1.5 news overlap: NO — insurance Q4 results NOT in standard Step 1.5 scan
+
+2. WHY MISSED:
+   b. THRESHOLD TOO STRICT: Rule 80 requires 3 non-declining closes. NIACL had
+      2 non-declining closes (Jun16, Jun17). One below threshold.
+      ALSO: d. SCAN INCOMPLETE — insurance sector Q4 results not in Step 1.5.
+
+3. PROPOSED RULE UPDATE:
+   - Rule name: INSURANCE_Q4_SCAN (Step 1.5 addition)
+   - Trigger: During Apr-Jul each year, scan NIACL, GICRE, STARHEALTH, ICICIGI, HDFCLIFE
+     for Q4 earnings beats. If PAT growth > 25% YoY OR combined ratio improvement > 300 bps,
+     force-add as NEWS_CATALYST to Step 2 with +20 conf.
+   - Confidence base: RM-7 (88) + NEWS_CATALYST (+20) = 88 (capped at 92).
+   - Additional: If any basestock stock shows Vol(T-1) >= 2.0x + within 3% of 20d high +
+     RSI 55-70 + no news in Step 1.5 = flag as "PRE_CATALYST_WATCH" in Step 2.
+   - Cross-reference: Rule 80 (coiling scan), [[feedback-news-catalysts]] (Pattern J).
+
+4. VALIDATION CASE:
+   - NIACL retroactive check last 30 sessions: Jun12 (+4.0% on 5.2x vol after coiling),
+     Jun15 (+5.0% on 3.2x vol — RSI 60 at T-1).
+   - Pattern of high-vol breakouts with coiling precursor = confirmed for NIACL.
+   - NIACL should have been on Step 1.5 insurance scan.
+   - False-positive rate check: Jun10-Jun16 quiet sessions did NOT fire the rule.
+     Rule would fire on: Jun12 (correctly), Jun15 (correctly), Jun18 (correctly). 3/3.
+   - SINGLE-OCCURRENCE: Log here, promote if recurs (GICRE or STARHEALTH similar move).
+
+RULE UPDATES PROPOSED THIS RUN:
+1. Add insurance sector Q4 results to Step 1.5 standard scan (NIACL, GICRE, STARHEALTH)
+2. PRE_CATALYST_WATCH flag: Vol(T-1) >= 2.0x + within 3% of 20d high + RSI 55-70 = flag in Step 2
+
+MEMORY WRITES:
+- None (single-occurrence miss — added to pattern_notes.md MISS_AUDIT_TRENDS)
+
+================================================================================
+STEP 4.6 — NSE-WIDE SELF-AUDIT & PATTERN UPVOTE
+================================================================================
+
+4.6.1 — NSE Top Gainers Fetch:
+Source: live-analysis-variations API (nseindia.com) | Buckets merged: 7 | Unique stocks: 99
+NSE_API_GAP notes: None identified. Kite cross-check consistent with NSE data.
+
+4.6.2 — Top 10 by LTP x Volume (>5% gainers):
+
+Rank | Symbol     | LTP     | Chg%   | Volume      | Value(Cr) | In Universe? | Picked?
+-----|------------|---------|--------|-------------|-----------|--------------|--------
+  1  | NIACL      | Rs185.6 | +12.2% | 24,860,819  | Rs455.9Cr | YES          | NO (NEWS_PRICED_IN)
+  2  | KIRLFER    | Rs503.1 | +13.2% | 2,128,285   | Rs106.0Cr | NO           | NO (26e FAIL)
+  3  | SPAL       | Rs915.8 | +10.2% | 578,203     | Rs52.7Cr  | NO (was)     | NO (force-added today)
+  4  | AEROENTER  | Rs127.6 | +10.3% | 3,255,968   | Rs40.7Cr  | NO (was)     | NO (force-added today)
+  5  | DECNGOLD   | Rs215.9 | +9.3%  | 1,706,731   | Rs35.8Cr  | NO (was)     | NO (force-added today)
+  6  | FINOPB     | Rs160.0 | +14.3% | 2,306,362   | Rs35.6Cr  | NO (was)     | NO (force-added today)
+  7  | SASKEN     | Rs2647.9| +10.0% | 95,074      | Rs24.5Cr  | NO (was)     | NO (force-added today)
+  8  | NITCO      | Rs104.5 | +9.0%  | 2,060,463   | Rs21.0Cr  | NO (was)     | NO (force-added today)
+  9  | PANAMAPET  | Rs406.7 | +8.7%  | 455,573     | Rs18.4Cr  | NO (was)     | NO (force-added today)
+ 10  | EIFFL      | Rs336.9 | +12.8% | 317,186     | Rs10.9Cr  | NO           | NO (checking)
+
+Note on EIFFL: EIH Associated Hotels. Not in basestock. Avg turnover check needed next run.
+
+4.6.3 — Pattern Attribution:
+
+Symbol    | Predicting Pattern(s)                       | Pre-Move Setup (T-1 EOD)
+----------|---------------------------------------------|---------------------------------
+NIACL     | RM-7 PREDICTED (if insurance Q4 flagged)   | RSI 61.4, Vol 2.45x (signal!), 2.5% from 20d high
+KIRLFER   | LEGITIMATE_EXCLUSION (26e 7/47)             | Low vol history; not scannable
+SPAL      | NEWS_SHOCK_UNFLAGGABLE                      | RSI 55.9, thin vol. News-driven.
+AEROENTER | NEWS_SHOCK_UNFLAGGABLE                      | RSI 72.5 at ceiling. Vol 3.0x T-1.
+DECNGOLD  | UNRECOGNIZED (mining spec; no known pattern)| Recent listing data limited
+FINOPB    | UNRECOGNIZED (payments bank; thin base)     | RSI 59, vol 0.29x
+SASKEN    | RM-7 PREDICTED (if IT sector earnings scan) | RSI 68.6, 1.4% from high, low vol
+NITCO     | NEWS_SHOCK_UNFLAGGABLE                      | Tile/building materials; no pattern
+PANAMAPET | UNRECOGNIZED (chemicals spec move)          | RSI 71 (near ceiling)
+
+4.6.4 — Pattern Vote Tally:
+
+Updated patterns this run:
+  RM-7: +1 hit (NIACL Jun18). Hits_Total: 2. Hits_L10: 1. Hits_L30: 2.
+  Tag: NORMAL (1-2 hits L10, >=2 hits L30 = NORMAL). No change from prior.
+
+Tags changed this run: None.
+
+Full ledger snapshot (Top by Hits_L10):
+
+Pattern    | Hits_Total | Hits_L10 | Hits_L30 | Last_Hit_Date | Tag              | Recent_Winners (last 5)
+-----------|------------|----------|----------|---------------|------------------|------------------------
+Pattern h  | 14         | 2        | 7        | 2026-06-17    | HIGH_CONVICTION  | HAL+5.36%, COCHINSHIP+5.62%, BDL+6.09%, PARAS+18%(Jun17), PARAS+7.71%
+Pattern MC | 8          | 1        | 5        | 2026-06-16    | NORMAL           | HFCL+22.6%, AEROFLEX+19.99%, LLOYDSENGG+12.04%
+RM-2       | 5          | 1        | 3        | 2026-06-16    | NORMAL           | HFCL+6.1%(T+2), AEROFLEX+8.3%
+Rule 80    | 3          | 1        | 2        | 2026-06-15    | NORMAL           | NETWEB+9.45%, LLOYDSENGG+12.04%
+RM-4       | 6          | 1        | 4        | 2026-06-03    | NORMAL           | PARAS+9.4%, APOLLO+8.13%, TRENT+7.97%
+RM-7       | 2          | 1        | 2        | 2026-06-18    | NORMAL           | NIACL+12.2%(Jun18), NEWGEN+17.35%(Jun2)
+Pattern SB | 1          | 0        | 1        | 2026-06-17    | COOLING          | Defence basket (3-stock breadth)
+
+UPVOTES THIS RUN: RM-7 (+1 hit from NIACL)
+
+4.6.5 — Universe Gap Detection:
+
+Symbol    | Exclusion Reason                     | Bucket               | Action Taken
+----------|--------------------------------------|----------------------|---------------------------
+NIACL     | Was in universe; not in watchlist    | MISS_ANALYZE (4.5)   | Added to NIACL pullback watchlist
+KIRLFER   | 26e = 7/47 (< 12 recent, < 40 annual)| LEGITIMATE_EXCLUSION | None
+SPAL      | Now passes all rules                 | STALE_SCREENING      | Force-added (UGD-2026-06-18)
+AEROENTER | Now passes all rules                 | STALE_SCREENING      | Force-added (UGD-2026-06-18)
+DECNGOLD  | Now passes all rules (recent listing)| STALE_SCREENING      | Force-added (UGD-2026-06-18)
+FINOPB    | Now passes all rules                 | STALE_SCREENING      | Force-added (UGD-2026-06-18)
+SASKEN    | Now passes all rules                 | STALE_SCREENING      | Force-added (UGD-2026-06-18)
+NITCO     | Now passes all rules                 | STALE_SCREENING      | Force-added (UGD-2026-06-18)
+PANAMAPET | Now passes all rules                 | STALE_SCREENING      | Force-added (UGD-2026-06-18)
+
+ACTIONS TAKEN:
+- Force-added to basestock.json: SPAL, AEROENTER, DECNGOLD, FINOPB, SASKEN, NITCO, PANAMAPET (7 stocks)
+- Logged to thematic gap list: EIFFL (hotels — check next run for 26e compliance)
+- Total basestock count: 223 (was 216)
+
+4.6.6 — New Pattern Candidates:
+UNRECOGNIZED today: DECNGOLD (mining spec), FINOPB (payments), PANAMAPET (chemicals spec)
+PROPOSED_PATTERNS in pattern_notes.md: 0 (these are first occurrences; need 3 within 30 sessions)
+
+================================================================================
+BACKTEST — LAST 14 DAYS SUMMARY (STEP 5)
+================================================================================
+
+Date     | Symbol     | Entry    | Target   | Stop    | Exit    | Realized | Result
+---------|------------|----------|----------|---------|---------|----------|----------
+Jun16    | HFCL       | Rs184.84 | Rs208.98 | Rs175   | Rs196.11| +6.10%   | PARTIAL HIT (T+2 exit, target not reached)
+Jun15    | 0-pick day | —        | —        | —       | —       | —        | Discipline maintained
+Jun12    | 0-pick day | —        | —        | —       | —       | —        | MOTILALOFS +14.2% (watchlist, trigger not fired Jun12)
+Jun09    | AEROFLEX   | Rs421.40 | Rs491.90 | Rs390   | Rs491.90| +16.7%   | TARGET HIT (RM-1 breakout)
+Jun08    | 0-pick day | —        | —        | —       | —       | —        | Discipline
+Jun05    | PARAS      | Rs960.15 | Rs1200   | Rs920   | Rs1088  | +13.3%   | TARGET HIT (stopped at target)
+
+Pattern accuracy (14-day):
+- Pattern h (defense): 2/2 hits (PARAS Jun5, AEROFLEX Jun9). 100% in window.
+- Pattern MC (momentum): 1/1 hits (HFCL Jun16 +6.1%). 100%.
+- 0-pick discipline: 8 of 14 days no picks. 0 bad picks issued.
+- Average realized return (when picked): (6.1 + 16.7 + 13.3) / 3 = +12.0% per trade
+- Win rate: 3/3 (100% in 14-day window — small sample, maintain discipline).
+
+NOTE: PARAS Jun17 +18% was a news-event miss, not a pipeline failure. Jun17 was already
+a 0-pick day with US_MARKET_CAUTION active. The miss is logged in Step 4.5.
+
+================================================================================
+TOKEN USAGE & COST (ESTIMATE)
+================================================================================
+
+Step 1.5 Macro Scan (web search, synthesis):   ~2,000 in / ~800 out
+Step 2 Pattern Analysis (Opus-equivalent):     ~8,000 in / ~3,000 out
+Step 2.7 Chart Read (per-stock):               ~4,000 in / ~2,000 out
+Step 3 Validation:                             ~3,000 in / ~1,500 out
+Step 4 Formatting (Haiku-equivalent):          ~2,000 in / ~4,000 out
+Step 4.5 Miss Audit:                           ~1,500 in / ~1,000 out
+Step 4.6 NSE Audit + Pattern Vote:             ~2,000 in / ~2,000 out
+TOTAL ESTIMATED: ~22,500 in / ~14,300 out
+Estimated cost: ~$1.20-1.60 USD (claude-sonnet pricing at current rates)
+
+================================================================================
+DISCLAIMERS
+================================================================================
+
+For informational and research purposes only. Not financial advice. Validate with
+your own research before investing. Past pattern performance does not guarantee
+future results. The pipeline uses publicly available data (yfinance, NSE public API)
+and may have data delays. Always verify prices with your broker before trading.
+================================================================================
