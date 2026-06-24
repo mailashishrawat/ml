@@ -1,0 +1,224 @@
+================================================================================
+TOP-GAINER INTROSPECT — 2026-06-23 (Monday)
+================================================================================
+Run reference: out/2026-06-23.txt (Run #36, 0-pick day; TRENT AGM rule retired;
+TATACOMM + UNOMINDA 26e gates opened; 5 STALE_SCREENING UGD force-adds)
+Data source: NSE public API live-analysis-variations (cookie-primed); yfinance
+60d OHLCV per Rule RSI-1 (Wilder smoothing, ewm alpha=1/14).
+Skill: top-gainer-introspect | Operates on Step 4.6 (NSE-Wide Self-Audit) output.
+
+================================================================================
+1. NSE TOP 10 GAINERS (>5%, sorted by Value Traded = LTP × Volume)
+================================================================================
+Reproduced verbatim from Run #36 Step 4.6.2 (NSE API merged 7 buckets, 137 unique).
+
+Rank | Symbol     | LTP       | Chg%   | Volume       | Value Cr | InUniv     | Picked?
+-----|------------|-----------|--------|--------------|----------|------------|----------
+ 1   | SUBROS     | Rs 858.20 | +14.82 | 87,78,610    | Rs 749.4 | NO -> YES* | NO (NEWS_PRICED_IN)
+ 2   | KSCL       | Rs 947.00 | +11.48 | 65,66,974    | Rs 627.7 | NO -> YES* | NO (NEWS_PRICED_IN, T-1 vol 16x)
+ 3   | DELHIVERY  | Rs 484.60 | + 5.10 | 1,25,06,879  | Rs 601.6 | NO         | NO (LEGITIMATE_EXCLUSION 26e fail)
+ 4   | NOCIL      | Rs 190.82 | +20.00 | 2,66,26,445  | Rs 496.7 | NO -> YES* | NO (NEWS_PRICED_IN, RSI 72.3 ceiling)
+ 5   | KIRLOSENG  | Rs 2389.80| +20.00 | 17,94,366    | Rs 417.4 | YES        | NO (RM-9 D1 +20% climax; D2 today)
+ 6   | EMSLIMITED | Rs 405.20 | +15.72 | 98,39,865    | Rs 392.8 | NO -> YES* | NO (NEWS_PRICED_IN)
+ 7   | NACLIND    | Rs 215.41 | +11.15 | 1,16,13,855  | Rs 247.1 | YES (UGD)  | NO (RM-9 D3, Sub-Rule 26f warn)
+ 8   | MANKIND    | Rs 2543.00| + 5.34 | 9,83,998     | Rs 246.3 | NO         | NO (no pharma basket)
+ 9   | IGARASHI   | Rs 473.55 | +14.30 | 49,43,460    | Rs 233.7 | NO         | NO (auto-EV; passes 26e but stale)
+10   | DENTA      | Rs 324.80 | +11.23 | 67,12,271    | Rs 218.0 | NO         | NO (pre-earnings run-up; RSI 79.3 ceiling)
+
+*Force-added this run via UGD (STALE_SCREENING); 60d OHLCV backfilled.
+
+================================================================================
+2. PER-GAINER PATTERN ATTRIBUTION + VERDICT
+================================================================================
+
+Symbol     | Predicting Pattern(s)              | Wilder RSI (T-1 -> T)   | Vol/Avg (T-1) | Bucket                          | Notes
+-----------|------------------------------------|-------------------------|---------------|---------------------------------|-----------------------------------------------------
+SUBROS     | RM-1 D1 / Rule 80 (coiling -> brk) | 73.6 (T-1) -> 74.3 (T)  |  5.02x (T)    | UNPREDICTED_BUT_PREDICTABLE     | T-1 vol 18.5x = CATALYST DAY (the +14.82% IS the catalyst session). UGD force-added.
+KSCL       | Pattern j / RM-7 (agri catalyst)   | 64.1 (T-1) -> 60.1 (T)  | 15.97x (T-1)  | UNPREDICTED_BUT_PREDICTABLE     | Clean RSI 64. T-1 vol 16x = catalyst day. UGD force-added; STALE_SCREENING gap.
+DELHIVERY  | Pattern j (logistics catalyst)     | 68.9 (T-1) -> 63.2 (T)  |  4.81x (T-1)  | LEGITIMATE_EXCLUSION            | 26e 23/252, 6/64 — fails BOTH annual and Tier-A gates. Gate held correctly.
+NOCIL      | Pattern f / RM-1 (chemicals)       | 69.4 (T-1) -> 67.8 (T)  | 16.31x (T-1)  | UNPREDICTED_BUT_PREDICTABLE     | T-1 vol 16x = catalyst. Chemicals basket new member candidate. UGD force-added.
+KIRLOSENG  | RM-9 Day-1 climax + DC basket      | 81.5 (T-1) -> 83.8 (T)  |  3.99x (T-1)  | PREDICTED_BUT_GATED             | RSI 81.5 > 78 cap (Day-1 vol 4.73x falls in 2-10x band). Correctly excluded.
+EMSLIMITED | RM-4 (RSI dip recovery) + Rule 80  | 74.7 (T-1) -> 79.4 (T)  |  6.57x (T-1)  | UNPREDICTED_BUT_PREDICTABLE     | Coiling near 20dH; T-1 vol 6.57x = catalyst. UGD force-added.
+NACLIND    | RM-9 Day-3 (post-catalyst)         | 77.7 (T-1) -> 69.4 (T)  |  8.04x (T-1)  | PREDICTED_BUT_GATED             | Day-3 of NACL run; Sub-Rule 26f flat/dn on 0.08x vol = exhaustion signal. Correctly excluded.
+MANKIND    | Pattern j (pharma conference)      | 68.7 (T-1) -> 67.1 (T)  |  1.94x (T-1)  | UNPREDICTED_BUT_PREDICTABLE     | IIFL Invest India Capital Day London Jun 23-24. NO PHARMA BASKET = thematic gap.
+IGARASHI   | RM-4 / Pattern SB (auto-EV)        | 75.7 (T-1) -> 76.9 (T)  |  6.20x (T-1)  | UNPREDICTED_BUT_PREDICTABLE     | Pre-AGM Aug 7 + final div Re 1.30. Auto-ancillary recovery. MCap Rs1494 Cr (passes).
+DENTA      | Pattern j + RM-8 (pre-earnings)    | 79.3 (T-1) -> 81.6 (T)  | 11.87x (T-1)  | PREDICTED_BUT_GATED             | RSI 79.3 -> 81.6 = RM-9 territory pre and post. Jun 17 NSE vol clarification + Jun 25 earnings call. Correctly excluded.
+
+KEY FINDING:
+  9 of 10 gainers either resolved (5 UGD force-adds), were correctly gated (3: KIRLOSENG/
+  NACLIND/DENTA via RM-9 RSI cap), or were legitimately excluded (DELHIVERY 26e fail).
+  Only 2 actionable rule gaps remain:
+    - MANKIND  : Pharma investor-conference catalyst (Pattern j) — no pharma basket scan.
+    - IGARASHI : Auto-EV (motors for EV / appliances) sector adjacency — no auto-EV basket.
+  Both are SINGLE-OCCURRENCE this run. Log under UNRECOGNIZED_MOVERS; promote to new
+  basket only on 2nd hit within 30 sessions.
+
+================================================================================
+3. CATALYST CHECK (for ambiguous classifications)
+================================================================================
+MANKIND   — IIFL Invest India Capital Day London Jun 23-24 2026 (Pattern j); HR leadership
+            change Jun 8; ESOP allotment Jun 8; Upakarma acquisition completed Jun 2.
+            Pharma investor-conference cluster — recurring around large-cap pharma names.
+            Source: screener.in/company/MANKIND/ (WebFetch).
+IGARASHI  — Final dividend Rs 1.30/sh (FY25-26) announced Jun 20; AGM Aug 7; record Jul 31.
+            No big single catalyst — auto-ancillary recovery + EV-motor narrative + dividend.
+            Source: screener.in/company/IGARASHI/ (WebFetch).
+DENTA     — Q4 FY26 earnings call scheduled Jun 25 (2 sessions post the +11% move).
+            NSE exchange clarification Jun 17 on unusual volume (company said "market-driven,
+            no material info"). Pre-earnings + clarification cluster = Pattern j.
+            Source: screener.in/company/DENTA/ (WebFetch).
+DELHIVERY — Logistics theme run-up; no specific corporate-action catalyst found. 26e gate
+            correctly excluded it (volatility too low to admit to universe).
+KSCL      — Agri-seeds catalyst (kharif season pre-positioning); 16x vol Jun 22 = catalyst day.
+
+================================================================================
+4. PATTERN VOTE TALLY
+================================================================================
+UPVOTES (in-universe predicted-and-picked OR predicted-but-gated, per ledger rule):
+  RM-9 (exclusion gate) :  +3 correct rejects today — KIRLOSENG (RSI 81.5), NACLIND (D3
+                            Sub-Rule 26f), DENTA (RSI 79.3 + vol 11.87x climax).
+                            NOTE: RM-9 is an EXCLUSION pattern — no ledger row; counted
+                            in 'Gate-working' annotation only (per agent file 4.6.4.2).
+  Pattern f (chemicals)  : NOCIL retrospective attribution (+20% chemicals catalyst).
+                            Outside universe at T-1 -> ATTRIBUTION ONLY, no upvote per
+                            ledger rule "outside-universe attribution hits don't count."
+                            Pattern f Hits_L10 stays 2 / L30 2 / NORMAL.
+  Rule 80 / RM-8         : SUBROS, EMSLIMITED retrospective attribution. Both outside
+                            universe at T-1 -> ATTRIBUTION ONLY. Rule 80 stays Hits_L10 0
+                            / L30 2 / COOLING. (5th session COOLING — getting close to
+                            STALE if Hits_L30 drops below 1.)
+
+NO LEDGER UPVOTES THIS RUN. All 5 force-add winners were outside universe at T-1.
+
+DOWNGRADED / UNCHANGED TAGS (silent ≥10 / ≥30 sessions):
+  Pattern h     : Hits_L10 3, last hit 2026-06-19 (4 sessions ago). HIGH_CONVICTION unchanged.
+  Pattern MC    : Hits_L10 2, last hit 2026-06-19. NORMAL unchanged.
+  RM-11         : Hits_L10 2 (NIACL+SPAL Jun19). NORMAL unchanged.
+                  SPAL stopped out -3.83% Jun 23 — half-size sizing rule validated.
+                  RSI margin <2.0pts above cap → max half-size rule logged.
+  RM-4          : Hits_L10 1, last hit 2026-06-03 (14 sessions ago). NORMAL retained
+                  (L30=4). Approaching COOLING if no fire by Jun 26.
+  Rule 80       : Hits_L10 0, L30 2, last hit 2026-06-15 (6 sessions ago). COOLING (unchanged).
+  Pattern SB    : Hits_L10 0, L30 1, last hit 2026-06-17 (4 sessions ago). COOLING (unchanged).
+  RM-7          : Hits_L10 1, last hit 2026-06-18 (3 sessions ago). NORMAL unchanged.
+  RM-2          : Hits_L10 3, last hit 2026-06-22 (1 session ago). HIGH_CONVICTION unchanged.
+  Pattern j     : Hits_L10 3, last hit 2026-06-19 (4 sessions ago). HIGH_CONVICTION unchanged.
+  Pattern f     : Hits_L10 2, last hit 2026-06-22 (1 session ago). NORMAL unchanged.
+  Pattern d     : Hits_L10 1, last hit 2026-06-19 (4 sessions ago). NORMAL unchanged.
+  RM-1          : Hits_L10 2, last hit 2026-06-19 (4 sessions ago). NORMAL unchanged.
+
+NO TAG CHANGES THIS RUN. No pattern crossed any threshold.
+
+PIPELINE MISSES (pattern fired, gates swallowed): NONE.
+  - UNOMINDA: Setup VALID (R:R 8.81:1, RSI 55.1, Tier-A 26e opened), trigger Rs1137 not
+    fired due to thin-market day (vol 0.01x). Correctly watchlisted P1. Not a miss.
+  - TATACOMM: 26e gate opened but R:R 0.78:1 fails 1.5 threshold. Correctly watchlisted
+    pullback Rs1850-1880. Not a miss.
+  - SPAL stop-out: RM-11 borderline tier executed cleanly (half-size, -3.83% realized).
+    Position sizing rule worked. Not a pattern failure.
+
+UNRECOGNIZED THIS RUN (logged to pattern_notes UNRECOGNIZED_MOVERS):
+  MANKIND   — Pharma investor-conference Pattern j. Proposed: Pharma-IR-conference watch
+              (single-occurrence log; promote to basket on 2nd hit in 30 sessions).
+  IGARASHI  — Auto-EV motors. Proposed: Auto-EV/motors adjacency watch (single-occurrence;
+              promote on 2nd hit in 30 sessions). Already passes 26e — re-evaluate next
+              monthly regen.
+
+KIRLOSENG continuation (Day-2 +6.08% Jun 23) is NOT a fresh basket hit — parent log-only
+status preserved. DC basket countdown: 28/30 sessions remain to find 2nd member move.
+
+================================================================================
+5. AGENT FILE EDITS APPLIED
+================================================================================
+NONE this run.
+
+Rationale: No pipeline_miss_count >= 3 accumulated; no STALE pattern lingering 30+
+sessions; no UNPREDICTED_BUT_PREDICTABLE pattern reached 3 confirmed wins in pattern_notes.
+The 5 UGD force-adds (NOCIL, SUBROS, EMSLIMITED, KSCL, KIRLOSIND) were already
+performed in Run #36 Step 4.6.5 — UGD mechanism is working as designed.
+
+The Pharma + Auto-EV thematic gaps are SINGLE-OCCURRENCE this run — per the agent's
+"single-occurrence: log, don't legislate" rule, no agent-file edit yet. Log under
+UNRECOGNIZED_MOVERS, watch for 2nd hit within 30 sessions before proposing baskets.
+
+EDIT DEFERRED (to be applied if confirmed):
+  - Step 1 baskets: "Pharma IR-conference watch" — defer until 2nd pharma name (e.g.,
+    DRREDDY/CIPLA/LUPIN/SUNPHARMA/AUROPHARMA) gains ≥5% on an investor-conference catalyst
+    within 30 sessions.
+  - Step 1 baskets: "Auto-EV motors adjacency" — defer until 2nd auto-EV name (e.g.,
+    LUMAXIND/MINDA/SCHAEFFLER/SUNDARMFIN) gains ≥5% on an EV-component catalyst within 30
+    sessions.
+
+================================================================================
+6. MEMORY WRITES
+================================================================================
+NONE this run.
+
+(Single-occurrence findings logged inline in pattern_notes.md under
+UNRECOGNIZED_MOVERS Jun 23. No new persistent memory until basket promotion.)
+
+================================================================================
+7. LEDGER SNAPSHOT (post-update — UNCHANGED from Jun 22 ledger)
+================================================================================
+Pattern    | Hits_Total | Hits_L10 | Hits_L30 | Last_Hit_Date | Tag              | Recent_Winners (last 5)
+-----------|------------|----------|----------|---------------|------------------|------------------------
+Pattern h  | 15         | 3        | 8        | 2026-06-19    | HIGH_CONVICTION  | HAL +5.36%, COCHINSHIP +5.62%, BDL +6.09%, PARAS +18.0% (Jun17), TARIL +10.1% (Jun19)
+Pattern MC | 9          | 2        | 6        | 2026-06-19    | NORMAL           | HFCL +22.6%, AEROFLEX +19.99%, LLOYDSENGG +12.04%, HFCL +5.0% (Jun19)
+RM-11      | 2          | 2        | 2        | 2026-06-19    | NORMAL           | NIACL +13.2% (Jun19), SPAL +11.7% (Jun19)
+RM-4       | 6          | 1        | 4        | 2026-06-03    | NORMAL           | PARAS +9.4%, APOLLO +8.13%, TRENT +7.97%
+Rule 80    | 3          | 0        | 2        | 2026-06-15    | COOLING          | NETWEB +9.45%, LLOYDSENGG +12.04%
+Pattern SB | 1          | 0        | 1        | 2026-06-17    | COOLING          | Defence basket (3-stock breadth)
+RM-7       | 2          | 1        | 2        | 2026-06-18    | NORMAL           | NIACL +12.2% (Jun18), NEWGEN +17.35% (Jun2)
+RM-2       | 7          | 3        | 5        | 2026-06-22    | HIGH_CONVICTION  | AEROFLEX +8.3%, NELCO +7.59% (Jun19), NACLIND +11.37% (Jun22)
+Pattern j  | 3          | 3        | 3        | 2026-06-19    | HIGH_CONVICTION  | NIACL +13.2% (Jun19), TATACAP +6.2% (Jun19), TARIL +10.1% (Jun19)
+Pattern f  | 2          | 2        | 2        | 2026-06-22    | NORMAL           | TARIL +10.1% (Jun19, power equip), NACLIND +11.37% (Jun22, chemicals D2)
+Pattern d  | 1          | 1        | 1        | 2026-06-19    | NORMAL           | BERGEPAINT +9.0% (Jun19, outside universe)
+RM-1       | 2          | 2        | 2        | 2026-06-19    | NORMAL           | TARIL +10.1% (Jun19), NACLIND +15.6% (Jun19)
+
+NO UPDATES THIS RUN — all in-universe gainers (KIRLOSENG, NACLIND) were correctly-gated
+RM-9 exclusions, which do not earn ledger upvotes (exclusion pattern, no ledger row).
+
+================================================================================
+8. NEXT-RUN HEADS-UP
+================================================================================
+Tags promoted to PRIORITY: (none crossed ≥5 L10 threshold)
+Tags promoted to HIGH_CONVICTION: (none — RM-2 and Pattern j retained from Jun 22)
+Patterns now STALE: (none)
+
+Thematic basket countdowns:
+  - DC / AI Infra Hardware basket: 28/30 sessions remain. KIRLOSENG D2 (+6%) on Jun 23
+    is NOT a fresh basket hit (parent log-only). Need a 2nd stock with explicit DC/AI-infra
+    catalyst >=+5% within 28 sessions to promote basket to ACTIVE and force-add KIRLOSENG
+    to basestock.json.
+  - Pharma IR-conference watch: 30/30 sessions begin Jun 23 (MANKIND seed).
+  - Auto-EV motors watch: 30/30 sessions begin Jun 23 (IGARASHI seed).
+
+UGD force-adds active (need 5d post-catalyst digestion before fresh entry):
+  - NOCIL      : Entry Rs190-195 + RSI 60-65 + vol >= 1.0x. Conf 78% when fires.
+  - SUBROS     : Entry Rs840-860 + RSI < 72 + vol >= 0.8x. Conf 78%.
+  - EMSLIMITED : Entry Rs390-400 + RSI < 70 + vol >= 1.0x. Conf 75%.
+  - KSCL       : Wait 3-5 sessions for RSI 55-65 settle. Conf 72% when fires.
+  - KIRLOSIND  : Wait digestion; Kirloskar group correlation play. Conf 70% when fires.
+
+26e gates opened heading into Jun 24:
+  - UNOMINDA  P1: Trigger Rs1137 vol >= 1.0x. Conf 87% when fires. R:R 3.04:1.
+  - TATACOMM  P2: Pullback Rs1850-1880 + RSI 55-65. Conf 84% when fires. R:R 3.35:1.
+
+Active management Jun 24:
+  - NIACL    : T+2 hard exit at open (P&L +2.59% to +4.5%).
+  - TARIL    : Conditional trigger Rs358 vol >= 0.8x. Conf 87% if fires.
+
+PICKS REALITY CHECK (Run #36 Jun 23 picks): 0 picks — correct call.
+  None of the 10 NSE gainers cleared the 85% threshold:
+    - 5 were outside universe at T-1 (resolved via UGD)
+    - 2 were correctly-gated RM-9 (KIRLOSENG, NACLIND)
+    - 1 was legitimate exclusion (DELHIVERY 26e fail)
+    - 2 were single-occurrence thematic gaps (MANKIND, IGARASHI) requiring 2nd-hit
+      confirmation before basket promotion.
+
+ZERO-PICK DAY CONCLUSION: The 0-pick verdict for Jun 23 was DEFENSIBLE. No pattern
+fired with a setup that cleared all gates. The big NSE gainers were either
+catalyst-day-of (RSI ceiling), single-occurrence themes, or correctly excluded by
+existing rules. Pipeline behaved as designed.
+
+DISCLAIMER: Retrospective audit only. No new picks. Trade decisions remain with the user.

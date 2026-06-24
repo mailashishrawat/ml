@@ -1,4 +1,243 @@
-# Pattern Notes — Updated 2026-06-19 (Run #33: 0-pick day; IT SECTOR CRASH NiftyIT -5.85% AI_DISRUPTION_RISK Day1; HFCL +5% post T+2 exit CORRECTLY_EXCLUDED; NELCO +7.59% Tata group breakout continuation - RSI 84.9 ceiling; MOTILALOFS trigger Rs961 not fired; TRENT RSI 75.3 ceiling + R:R 0.81 fail; BAJFINANCE Rule77 fail; US_CAUTION LIFTED Nasdaq +1.91%; EBGNG force-added via UGD)
+# Pattern Notes — Updated 2026-06-24 (Run #37: HFCL 88% RM-4 pick; NIACL stopped out -5.03%; NACLIND conditional +6.01% T+2 exit; TARIL/UNOMINDA carry; market-wide thin vol systemic 5+ sessions; NSE top gainers all outside universe; ENTERO/ROTO/SIS flagged for 26e eval)
+
+---
+
+## RUN_2026-06-24 OBSERVATIONS (Run #37)
+
+### MARKET CONTEXT (Jun 24 EOD)
+- Nifty50: Mildly positive (TMCV +2.61%, ICICIBANK +1.94%, TECHM +2.72% — modest breadth)
+- NiftyIT: -0.18% (avg TCS/HCLTECH/WIPRO) = NEUTRAL. AI_TAILWIND ACTIVE.
+- US_MARKET_CAUTION: Carry-forward (Jun22 NASDAQ -1.32% confirmed; Jun23 not in cache)
+- Gold: No spike. GOLD_CAUTION: INACTIVE.
+- Volume: Systemic thin market day (HFCL 0.11x, TARIL 0.10x, UNOMINDA 0.07x, MOTILALOFS 0.06x)
+  This is the 5th+ consecutive thin-vol session. Systemic, not stock-specific.
+
+### ACTIVE TRADE RESULTS (Jun 22-24)
+- NIACL: Stop Rs189 hit Jun24 (intraday low Rs188.65). Realized -5.03% from entry Rs199.
+  T+2 exit day = stop day coincide. Trade closed at Rs189.
+- NACLIND (conditional, entered Jun22 trigger Rs193): T+2 exit Jun24 at Rs204.60. Realized +6.01%.
+- SPAL: Already stopped out Jun23 at Rs975 (-3.83%). Half-size = -1.9% portfolio.
+- TARIL conditional: Rs343.50 still below Rs358 trigger. Carry.
+- HFCL: PICKED today (88%) as RM-4 pullback entry. Entry session = Jun25 open.
+
+### NIACL POST-MORTEM (RM-11 reversal analysis)
+- Jun22: Entry Rs199 (RM-11 thesis). Day1 close Rs212.11 (+6.59%). RSI 71.
+- Jun23: Close Rs195.10 (-7.99% from peak). RSI 63.5.
+- Jun24: Low Rs188.65 < stop Rs189. STOP HIT.
+- Sequence: +6.59% Day1, -7.99% Day2, -2.64% Day3 = SHARP REVERSAL
+- Root cause: INSURANCE SECTOR DE-RATING — not NIACL-specific pattern failure.
+  ICICIGI, HDFCLIFE likely showed similar pattern in same period.
+- LESSON: Insurance sector RM-11 = needs RSI margin >= 4pts above cap (was 1pt for NIACL).
+  Standard RM-11 margin rule is 2pts; insurance sector = 4pts.
+  Add insurance sector modifier to RM-11 rule in next run review.
+
+### HFCL SETUP ANALYSIS (RM-4 — Jun 24 pick)
+- Full chart trace documented in out/2026-06-24.txt
+- Key: Hit 52w high Rs220.09 Jun22 intraday, pulled back 2 sessions to Rs198.59 on drying vol
+- RSI: 73.5 -> 67.1 -> 64.1 (controlled digest)
+- Entry at MA5 Rs203.92 (-2.61%) = canonical RM-4 lowest-risk entry
+- R:R 2.46:1 | Stop Rs185 (below MA20) | Target Rs230
+- Confidence: 88% (floor applied per no-double-penalty rule)
+
+### NSE TOP GAINERS (Jun 24 — NSE API)
+ROTO +10.26% (Rs231.8 Cr) | SIS +8.88% (Rs118.2 Cr) | SETL +6.00% (Rs38.0 Cr)
+RAMCOSYS +9.47% (Rs37.2 Cr) | ICIL +5.24% (Rs45.7 Cr) | ENTERO +6.62% (Rs11.3 Cr)
+ALL OUTSIDE UNIVERSE. Zero in-universe gainers >5%.
+Pattern attribution (outside-universe): Rule 80/RM-8 (ROTO, ENTERO), RM-7 (SIS, ICIL)
+
+ENTERO flagged for 26e check and possible force-add (RM-8 coil pattern pre-move).
+ROTO flagged for MCap check (small-cap, need > Rs500 Cr before force-add).
+SIS flagged for 26e check (8.47x vol = likely passes now).
+
+### WATCHLIST PRIORITY ORDER (heading into Jun 25)
+P1: HFCL (ACTIVE PICK - entry Jun25 open at Rs195-202 | conf 88% | target Rs230 | stop Rs185)
+P1: TARIL (trigger Rs358 on vol >=0.8x | conf 87% | target Rs420 | R:R 1.88:1)
+P1: UNOMINDA (trigger Rs1137 on vol >=1.0x | conf 82% | target Rs1280 | R:R 3.04:1)
+P2: AEROFLEX (trigger Rs515 on vol >=1.0x | conf 84% | R:R 1.67:1)
+P2: MOTILALOFS (trigger Rs962 on vol >=0.8x | conf 82% | target Rs1090 REVISED | R:R 1.91:1)
+P2: NETWEB (trigger Rs5150 on vol >=1.5x | conf 83% | R:R 1.86:1)
+P2: TATACOMM (pullback Rs1850-1880 | conf 84% | R:R 3.35:1)
+P3: SUBROS (wait digestion Rs800-860 + RSI <70 | conf 80%)
+P3: TRENT (pullback Rs3100-3150 + RSI 65 | conf 82%)
+P3: GOCOLORS (revised zone Rs350-365 + vol >=0.4x | conf 82%)
+
+### RULE 82 — WATCHLIST FRAMING LOCK-IN ESCAPE (added Jun 24, 2026)
+
+**Trigger:** TRENT Jun 2026 miss. Placed on watchlist as "pullback entry Rs3100-3150" after AGM
+run-up. Stock closed above Rs3100 for 5+ consecutive sessions (Jun 17: Rs3102 → Jun 24: Rs3256,
+high Rs3309) without ever giving the dip. Agent kept saying "wait for Rs3100-3150 pullback" while
+stock ran +18.7% from Jun 11 low. Same class of miss as GOCOLORS (May-Jun 2026).
+
+**Rule 82:** When a pullback-framed watchlist stock closes ABOVE its pullback entry zone for
+**5 consecutive sessions**, the framing must be forcibly re-evaluated:
+
+1. **Check:** Has the stock made 5 consecutive closes above the upper bound of the pullback zone?
+2. **If YES — Framing Reset:** Re-classify from "pullback entry" to "running breakout" (RM-1 class).
+3. **Compute new entry:** Use current close as base. New entry = current close (market order) or
+   intraday dip of up to 1.5% from current close.
+4. **Compute new target:** Use measured move from the *original breakout base* (not prior target).
+   For TRENT: base Rs2710 (Jun 11 low), breakout Rs2900 → measured move projects Rs3540+.
+5. **Compute new stop:** MA20 or -5% from new entry, whichever is higher.
+6. **Re-run R:R:** If R:R >= 1.5:1 at new entry, promote to active candidate and run Step 2.7.
+7. **If R:R fails:** Add 1-session wait; re-check next session with same logic.
+
+**Example:** TRENT Jun 24.
+  Old framing: pullback to Rs3100-3150 (zone never hit for 5+ sessions).
+  New framing (Rule 82): entry Rs3256 (current close), target Rs3600 (measured move from
+  Rs2710 base), stop Rs3100 (MA20 / prior resistance). R:R = (3600-3256)/(3256-3100) = 2.2:1. PASS.
+  TRENT should have been promoted to active candidate on Jun 23 at the latest.
+
+**How to apply:** In Step 2.2, after evaluating each watchlist item, add a Rule 82 check:
+  count consecutive sessions where close > pullback_zone_upper_bound.
+  If count >= 5: flag "FRAMING_RESET" and route through new-entry computation above.
+  Reset the session counter. The 10-session auto-retire clock also resets on framing reset.
+
+**Scope:** Applies to any watchlist stock tagged as "pullback entry", "wait for dip", "zone entry",
+or "wait for RSI reset". Does NOT apply to breakout-trigger watchlist items (those already
+have a clear price trigger that either fires or doesn't).
+
+### RULE 81 — POST-STOP RE-ENTRY ZONE CALIBRATION (added Jun 24, 2026)
+
+**Trigger:** SPAL Jun 24 miss. Stopped out Jun 23 at Rs975. Agent set re-entry zone Rs900-940
+(theoretical deeper pullback). Jun 24: stock opened Rs957 (barely below Rs975 stop level),
+touched Rs957 low, then exploded +13.2% to Rs1126.95 close on 6.9x vol. Zone was too deep
+— the real bottom was Rs954 (Jun 23 low), not Rs900-940.
+
+**Rule 81:** After a stop-out, the re-entry zone must be anchored to the **actual T-1 low ± 2%**,
+NOT a theoretical deeper pullback level.
+
+- Re-entry zone lower bound = T-1 actual session low × 0.98 (2% buffer below the real floor)
+- Re-entry zone upper bound = stop price × 0.99 (just below the stop that was hit)
+- This replaces the habit of setting re-entry at "RSI reset + deep pullback" without checking
+  where price actually found support
+- Vol trigger still required (>= 0.8x 20d avg) AND RSI must reset (< 65 for RM-11 class)
+- If T-1 low is within 5% of the stop level: flag as "tight re-entry zone — half-size only"
+
+**Example:** SPAL stop Rs975, Jun23 low Rs954.
+  Correct re-entry zone: Rs954 × 0.98 = Rs935 (lower) to Rs975 × 0.99 = Rs965 (upper).
+  Agent set Rs900-940 — too deep by ~Rs30.
+
+**How to apply:** In Step 2.2 watchlist re-evaluation, immediately after logging a stop-out,
+compute Rule 81 re-entry zone and add to watchlist at that level (not a theoretical RSI-reset
+level). Applies to all stop-outs regardless of pattern class.
+
+### PATTERN VOTE LEDGER UPVOTES THIS RUN
+NONE — all Jun24 gainers outside universe. Attribution only, no ledger changes.
+
+---
+
+## RUN_2026-06-23 OBSERVATIONS (Run #36)
+
+### MARKET CONTEXT (Jun 23 EOD)
+- Nifty50: 24,071.30 (-0.13%). Mild pullback.
+- NiftyBank: 57,886.75 (-0.08%). Flat.
+- NiftyIT: 27,416.45 (-0.77% Jun23 vs Nifty50 -0.13% = -0.64% relative). NEUTRAL.
+  AI_TAILWIND RESET TO ACTIVE: Jun 22 recovery (+0.36%) + Jun 23 neutral (-0.64%) clears Jun19 Day1 breach.
+- NASDAQ: 26,166.60 (-1.32% Jun22). US_MARKET_CAUTION ACTIVE.
+- Gold: $4,157.50 (-1.58% Jun22). GOLD_CAUTION: INACTIVE.
+- WTI: $73.58 (-3.94% Jun22). Oil declining sharply.
+
+### ACTIVE TRADE RESULTS (Jun 22 picks)
+- NIACL: Jun 23 close Rs204.17 (+2.59% from entry Rs199). T+2 EXIT TOMORROW Jun 24.
+- SPAL: Jun 23 low Rs968.05 breached stop Rs975. STOPPED OUT. Realized -3.83% (half-size = -1.9% portfolio impact).
+- NACLIND (conditional, entered Jun 22): Jun 23 close Rs214.23 (+11.83% from trigger Rs193). T+2 exits Jun 24.
+- TARIL conditional: Rs352.70 still below Rs358 trigger. Setup intact.
+
+### SPAL POST-MORTEM
+- RM-11 borderline tier (Day-1 vol 4.44x, RSI 76.64 with cap 78 = 1.4pt margin).
+- Half-size position correctly applied. Lesson: RM-11 with RSI margin <2.0pts = max half-size.
+- Stop at Rs975 worked as designed. No rule change needed.
+
+### 26e GATE OPENINGS (Jun 23)
+- TATACOMM: 40/252 ANNUAL GATE OPENED. But R:R 0.78:1 (too close to 52w high). Need pullback Rs1850-1880.
+- UNOMINDA: 11/64 Tier-A GATE OPENED. R:R 8.81:1. Trigger Rs1137 on vol >=1.0x. Conf 87% when fires.
+
+### NSE TOP GAINERS (Jun 23 - from NSE API)
+SUBROS +14.82% (Rs749 Cr) | KSCL +11.48% (Rs628 Cr) | DELHIVERY +5.10% (Rs602 Cr)
+NOCIL +20.00% (Rs497 Cr) | KIRLOSENG +20.00% (Rs417 Cr) | EMSLIMITED +15.72% (Rs393 Cr)
+NACLIND +11.15% (Rs247 Cr) | MANKIND +5.34% (Rs246 Cr) | IGARASHI +14.30% (Rs234 Cr)
+
+5 force-added via UGD (STALE_SCREENING): NOCIL, SUBROS, EMSLIMITED, KSCL, KIRLOSIND
+1 CORRECTLY_EXCLUDED (in universe): KIRLOSENG (RSI 81.5 = RM-9)
+1 CORRECTLY_EXCLUDED (in universe): NACLIND (Day-3, Sub-Rule 26f risk)
+1 LEGITIMATE_EXCLUSION: DELHIVERY (26e 23/252, 6/64 — both fail)
+
+### KIRLOSKAR GROUP NOTE
+KIRLOSENG +20% Jun22 + +6.08% Jun23; KIRLOSIND +15.29% Jun23.
+These are SEPARATE catalysts (KIRLOSENG = DC genset order HyperNext; KIRLOSIND = group correlation).
+DC basket: KIRLOSIND move is Kirloskar GROUP play, NOT a data-center infrastructure catalyst.
+DC basket activation requires a stock with explicit DC/AI-infra exposure to move >=+5% on DC catalyst.
+KIRLOSIND does not qualify. DC basket remains: 1-hit log-only. 28 sessions remain to find 2nd hit.
+
+### TRENT AGM RULE RETIRED
+AGM held Jun 23. Pre-AGM close Rs3181.90, RSI 77.5.
+Post-AGM: monitor for RSI pullback to 65-70. Setup trigger (post-AGM): RSI 65-70 + vol >=0.8x + close >Rs3180.
+Memory file trent-agm-23-june-2026.md: STATUS RETIRED.
+
+### WATCHLIST PRIORITY ORDER (heading into Jun 24)
+P1: TARIL (trigger Rs358 on vol >=0.8x | conf 87% | target Rs420 REVISED | R:R 1.88:1)
+P1: UNOMINDA (trigger Rs1137 on vol >=1.0x | conf 87% when fires | R:R 3.04:1)
+P1: MOTILALOFS (trigger Rs962 on vol >=0.8x | conf 82-87% | R:R 1.37:1)
+P2: AEROFLEX (trigger Rs515 on vol >=1.0x | conf 84%)
+P2: TATACOMM (pullback Rs1850-1880 + RSI 55-65 | conf 84%)
+P2: BAJFINANCE (trigger Rs973 on vol >=1.0x | conf 82%)
+P3: GOCOLORS (zone Rs355-375, vol >=0.4x lowered threshold | conf 83%)
+P3: HFCL (pullback Rs195-200 | conf 83%)
+P3: NOCIL (new - wait digestion, Rs190-195 + RSI 60-65 | conf 78%)
+P3: SUBROS (new - wait digestion, Rs840-860 + RSI <72 | conf 78%)
+
+---
+
+---
+
+## INTROSPECT_RUN_2026-06-23
+
+NSE Jun 23 top 10 >5% gainers (sorted by Value Cr; NSE API live-analysis-variations, 7 buckets merged, 137 unique stocks; reproduced from Run #36 Step 4.6.2):
+  SUBROS +14.82% (749.4 Cr) | KSCL +11.48% (627.7 Cr) | DELHIVERY +5.10% (601.6 Cr)
+  NOCIL +20.00% (496.7 Cr) | KIRLOSENG +20.00% (417.4 Cr) | EMSLIMITED +15.72% (392.8 Cr)
+  NACLIND +11.15% (247.1 Cr) | MANKIND +5.34% (246.3 Cr) | IGARASHI +14.30% (233.7 Cr)
+  DENTA +11.23% (218.0 Cr)
+
+Buckets:
+  PREDICTED_BUT_GATED:    KIRLOSENG (RM-9 RSI 81.5 > Day-1 vol 2-10x cap 78; correctly excluded),
+                          NACLIND (RM-9 D3, Sub-Rule 26f flat/dn on 0.08x vol; correctly excluded),
+                          DENTA (Pattern j pre-earnings but RSI 79.3 -> 81.6 in RM-9 ceiling territory; gate would have held)
+  LEGITIMATE_EXCLUSION:   DELHIVERY (26e 23/252, 6/64 — fails both annual and Tier-A gates)
+  UNPREDICTED_BUT_PREDICTABLE (resolved via UGD Step 4.6.5):
+                          SUBROS (RM-1 D1 / Rule 80 coil), KSCL (Pattern j agri-seeds catalyst),
+                          NOCIL (Pattern f chemicals catalyst), EMSLIMITED (RM-4 + Rule 80 coil)
+  UNPREDICTED_BUT_PREDICTABLE (NEW thematic gaps, single-occurrence):
+                          MANKIND (Pattern j; IIFL Invest India Capital Day London Jun 23-24 — pharma IR conference cluster; no pharma basket exists),
+                          IGARASHI (RM-4 / Pattern SB auto-EV motors; final div Rs 1.30 + AGM Aug 7; no auto-EV basket exists)
+
+Pattern upvotes this run: NONE.
+  All in-universe gainers (KIRLOSENG, NACLIND) were RM-9 exclusions — exclusion patterns don't earn ledger upvotes.
+  All UNPREDICTED_BUT_PREDICTABLE winners were outside universe at T-1 (resolved via UGD); attribution-only hits don't count per ledger rule.
+
+Pipeline misses: NONE.
+  UNOMINDA setup VALID (R:R 8.81:1, RSI 55.1, Tier-A 26e opened) but trigger Rs1137 didn't fire on thin-market 0.01x vol. Correctly P1-watchlisted.
+  TATACOMM 26e gate opened but R:R 0.78:1 fails 1.5 threshold. Correctly P2-watchlisted pullback.
+  SPAL stop-out -3.83% Jun 23: RM-11 borderline tier executed cleanly. Half-size sizing rule worked.
+
+Picks reality check (Run #36 picks for Jun 23): 0-pick day = DEFENSIBLE.
+  No pattern produced a setup that cleared all gates. The 10 NSE gainers were either
+  catalyst-day-of (RSI ceiling), single-occurrence thematic gaps, or correctly excluded.
+
+Universe gaps this run (logged to UNRECOGNIZED_MOVERS Jun 23):
+  MANKIND — pharma IR-conference Pattern j; single occurrence; promote to basket on 2nd hit in 30 sessions
+  IGARASHI — auto-EV motors / Pattern SB-ish auto adjacency; single occurrence; passes 26e, re-evaluate next monthly regen
+
+DC basket countdown: 28/30 sessions remain. KIRLOSENG D2 +6.08% Jun 23 is parent continuation,
+NOT a fresh basket hit. Need 2nd stock with explicit DC/AI-infra catalyst within 28 sessions.
+
+Tag changes this run: NONE.
+
+Agent file edits applied: NONE this run.
+  Rationale: No pipeline_miss_count >= 3; no STALE pattern lingering 30+ sessions; no
+  UNPREDICTED_BUT_PREDICTABLE pattern reached 3 confirmed wins; thematic gaps (MANKIND,
+  IGARASHI) are single-occurrence — promote to basket only on 2nd hit per existing rule.
+
+Memory writes: NONE this run.
 
 ---
 
@@ -513,6 +752,10 @@ MISS_ANALYZE: 1 (NIACL)
 ### THEMATIC GAPS (Jun 18 update)
 - Insurance PSU stocks (NIACL, GICRE, STARHEALTH): Add to Step 1.5 Q4 results scan.
 - Defence basket coverage: HAL, BDL, COCHINSHIP, MAZDOCK are in basestock but sometimes miss the basket scan in Step 1.5.
+
+### UNRECOGNIZED_MOVERS (Jun 23 — added by introspect run)
+MANKIND  +5.34% (Rs246 Cr) | RSI(T-1) 68.7 | Vol/Avg 1.94x | Pharma sector | Suspected pattern: Pattern j (IIFL Invest India Capital Day London Jun 23-24 — pharma IR conference cluster). PROPOSED RULE: "Pharma IR-conference watch" basket (add DRREDDY, CIPLA, LUPIN, SUNPHARMA, AUROPHARMA, MANKIND, TORNTPHARM as seed candidates). SINGLE-OCCURRENCE: log here; promote to basket on 2nd pharma name ≥5% on investor-conference catalyst within 30 sessions.
+IGARASHI +14.30% (Rs234 Cr) | RSI(T-1) 75.7 | Vol/Avg 6.20x | Auto-EV motors sector | Suspected pattern: RM-4 / Pattern SB auto adjacency. Final div Rs 1.30 + AGM Aug 7 (Jun 20 disclosure). MCap Rs1494 Cr — passes 26e (38/252). PROPOSED RULE: "Auto-EV motors adjacency" basket (LUMAXIND, MINDA, SCHAEFFLER, SUNDARMFIN, BOSCHLTD as seed candidates). SINGLE-OCCURRENCE: log here; re-evaluate at next monthly regen for natural inclusion; promote to basket on 2nd auto-EV name ≥5% on EV-component catalyst within 30 sessions.
 
 ### UNRECOGNIZED_MOVERS (Jun 18)
 None today. Top gainers were either NEWS_PRICED_IN, NEWS_SHOCK_UNFLAGGABLE, or STALE_SCREENING.

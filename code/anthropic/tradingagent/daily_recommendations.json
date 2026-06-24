@@ -2485,11 +2485,41 @@
       }
     },
     "recent_movers_table": {
-      "GOCOLORS": {"session": "Jun3+Jun4", "move_pct": 19.8, "vol_ratio": "5.98x/2.37x", "rsi": 76.0, "template": "RM-9 REJECT (R:R fails)"},
-      "PARAS": {"session": "Jun4", "move_pct": 7.54, "vol_ratio": "1.93x", "rsi": 67.3, "template": "RM-1 REJECT (R:R 0.68:1)"},
-      "TEJASNET": {"session": "Jun3+Jun4", "move_pct": 12.99, "vol_ratio": "2.87x/1.51x", "rsi": 79.4, "template": "RM-9 REJECT (RSI ceiling + R:R fails)"},
-      "OLAELEC": {"session": "Jun3", "move_pct": 9.21, "vol_ratio": "est 2x", "rsi": 69.7, "template": "NEWS_PRICED_IN"},
-      "ATHERENERG": {"session": "Jun3", "move_pct": 6.41, "vol_ratio": "2.06x", "rsi": 61.1, "template": "RM-4 watchlist"}
+      "GOCOLORS": {
+        "session": "Jun3+Jun4",
+        "move_pct": 19.8,
+        "vol_ratio": "5.98x/2.37x",
+        "rsi": 76.0,
+        "template": "RM-9 REJECT (R:R fails)"
+      },
+      "PARAS": {
+        "session": "Jun4",
+        "move_pct": 7.54,
+        "vol_ratio": "1.93x",
+        "rsi": 67.3,
+        "template": "RM-1 REJECT (R:R 0.68:1)"
+      },
+      "TEJASNET": {
+        "session": "Jun3+Jun4",
+        "move_pct": 12.99,
+        "vol_ratio": "2.87x/1.51x",
+        "rsi": 79.4,
+        "template": "RM-9 REJECT (RSI ceiling + R:R fails)"
+      },
+      "OLAELEC": {
+        "session": "Jun3",
+        "move_pct": 9.21,
+        "vol_ratio": "est 2x",
+        "rsi": 69.7,
+        "template": "NEWS_PRICED_IN"
+      },
+      "ATHERENERG": {
+        "session": "Jun3",
+        "move_pct": 6.41,
+        "vol_ratio": "2.06x",
+        "rsi": 61.1,
+        "template": "RM-4 watchlist"
+      }
     },
     "new_rules": {
       "rule_51": "WATCHLIST PERSISTENCE FORMALIZED (2026-06-05): Step 2.2 runs before every organic analysis. All prior watchlist entries evaluated against trigger specs. Fired triggers get first-priority routing. Carry forward <= 10 sessions.",
@@ -2668,7 +2698,7 @@
         "note": "RSI descending rapidly (95.5->72.9 in 3d). Could approach trigger Jun9."
       },
       "HFCL": {
-        "action": "EXIT on first free day (Jun9 expected) — circuit locked Jun8",
+        "action": "EXIT on first free day (Jun9 expected) \u2014 circuit locked Jun8",
         "realized_gain_approx_pct": 10.2,
         "circuit_note": "Lower circuit Jun8 (range=0). Trail stop Rs 199 was triggered Jun5 but unexecutable. Exit ASAP first free session.",
         "reentry_trigger": "Close above MA5 Rs 190 on vol >= 0.8x + RSI 55-65",
@@ -2703,8 +2733,8 @@
     },
     "patterns": {
       "TEJASNET": [
-        "RM-4 (Pattern D Dip Recovery — institutional strength confirmed)",
-        "Pattern MC (Momentum Continuation — Jun11 cleared Jun8 swing high)",
+        "RM-4 (Pattern D Dip Recovery \u2014 institutional strength confirmed)",
+        "Pattern MC (Momentum Continuation \u2014 Jun11 cleared Jun8 swing high)",
         "AI_TAILWIND (telecom infra, optical networking for AI data centers)"
       ]
     },
@@ -2726,21 +2756,21 @@
     "macro_context": {
       "nifty50_jun11": "23161.60 (-0.23%, 5d -1.09%)",
       "niftyit_jun11": "27821.05 (-1.62%, 5d -5.05%)",
-      "nasdaq_jun11": "25809.66 (+2.54%) — recovery day",
+      "nasdaq_jun11": "25809.66 (+2.54%) \u2014 recovery day",
       "vix_jun11": "19.44 (falling from 22.22)",
-      "gold_jun11": "$4090.30 (-8.61% 5d) — falling with equities",
+      "gold_jun11": "$4090.30 (-8.61% 5d) \u2014 falling with equities",
       "wti_jun11": "$87.71 (Pattern I INACTIVE < $95)",
       "ai_tailwind": "ACTIVE (Jensen Huang Jun2026)",
       "pattern_o": "INACTIVE (NiftyIT not +2%)",
       "us_caution": "STANDARD only (Rule 61: Nifty absorbed US selloff well)"
     },
     "watchlist_updates": {
-      "GOCOLORS": "REMOVED — Rule 26d active, trigger zone breached downward (Rule 64)",
-      "STLTECH": "REMOVED — Rule 26d active, 5 consecutive lower highs, dist vol",
-      "HFCL": "REMOVED — Active cascade to Rs163. Re-entry requires 5-session stable base first",
+      "GOCOLORS": "REMOVED \u2014 Rule 26d active, trigger zone breached downward (Rule 64)",
+      "STLTECH": "REMOVED \u2014 Rule 26d active, 5 consecutive lower highs, dist vol",
+      "HFCL": "REMOVED \u2014 Active cascade to Rs163. Re-entry requires 5-session stable base first",
       "PARAS": "RECALIBRATED trigger: close above MA5 Rs999 + RSI 65-72 + vol <=1.2x = MAIN PICK at 88%",
       "IDEAFORGE": "REVISED to 2-stage trigger: floor Rs850-875 then MA5 reclaim Rs927. Conf 75-78%.",
-      "APARINDS": "NEW — watchlist at MA5 pullback Rs13800-13900. Conf 82%.",
+      "APARINDS": "NEW \u2014 watchlist at MA5 pullback Rs13800-13900. Conf 82%.",
       "TEJASNET": "ACTIVE TRADE (this run's pick)"
     },
     "new_rules": {
@@ -2748,5 +2778,163 @@
       "65": "SWING HIGH CLEARANCE RULE: When stock in pullback clears prior swing high, Rule 26d is neutralized. Jun11 TEJASNET H=584.70 > Jun8 H=576.85 = prior resistance becomes support.",
       "66": "CASCADING LOWER-CIRCUIT PATTERN: Multiple lower circuits after upper circuits = trapped buyers. NO entry until: 5+ stable sessions + MA5 reclaim on vol>=1.0x + no new 52w lows in 3 prior sessions."
     }
+  },
+  {
+    "date": "2026-06-23",
+    "run_number": 36,
+    "recommendations": [],
+    "conditional_watchlist": [
+      {
+        "symbol": "TARIL",
+        "trigger": "Close > Rs358 on vol >= 0.8x 20d avg",
+        "entry": 358,
+        "target": 420,
+        "stop": 325,
+        "rr": 1.88,
+        "confidence": 87,
+        "exit_date": "2026-06-26",
+        "pattern": "RM-1 (Power equipment basket)",
+        "notes": "Target revised from Rs395 to Rs420. 3-session base above Rs350 intact."
+      }
+    ],
+    "active_trades": [
+      {
+        "symbol": "NIACL",
+        "entry_date": "2026-06-22",
+        "entry": 199,
+        "target": 220,
+        "stop": 189,
+        "jun23_close": 204.17,
+        "pnl_pct": 2.59,
+        "status": "HOLD - T+2 EXIT JUN 24",
+        "exit_date": "2026-06-24"
+      },
+      {
+        "symbol": "SPAL",
+        "entry_date": "2026-06-22",
+        "entry": 1014,
+        "target": 1080,
+        "stop": 975,
+        "jun23_close": 974.0,
+        "pnl_pct": -3.83,
+        "status": "STOPPED OUT",
+        "exit_date": "2026-06-23"
+      },
+      {
+        "symbol": "NACLIND",
+        "entry_date": "2026-06-22",
+        "entry": 193,
+        "target": 215,
+        "stop": 172,
+        "jun23_close": 214.23,
+        "pnl_pct": 11.83,
+        "status": "HOLD - T+2 EXIT JUN 24",
+        "exit_date": "2026-06-24"
+      }
+    ],
+    "zero_pick_reason": "0-pick day: all candidates failed R:R gate, RSI ceiling, or volume trigger. Market-wide thin volume (NASDAQ -1.32% US_CAUTION). TATACOMM 26e opened but R:R 0.78:1. UNOMINDA 26e opened but trigger not fired. MOTILALOFS trigger not fired. TARIL trigger not fired.",
+    "ugd_force_adds": [
+      "NOCIL",
+      "SUBROS",
+      "EMSLIMITED",
+      "KSCL",
+      "KIRLOSIND"
+    ],
+    "rules_applied": [
+      "RSI-1 (Wilder)",
+      "Rule 80",
+      "Rule 77/78/79",
+      "Step 2.7 chart read",
+      "RM-11 cap tier",
+      "26e tiered recency",
+      "US_MARKET_CAUTION -5 conf"
+    ],
+    "market_context": {
+      "nifty50": 24071.3,
+      "niftyit": 27416.45,
+      "niftyit_vs_nifty50_pct": -0.64,
+      "ai_tailwind_status": "ACTIVE (re-activated - Jun22 recovery clears Jun19 breach)",
+      "us_market_caution": true,
+      "nasdaq": 26166.6,
+      "nasdaq_pct": -1.32,
+      "gold_caution": false,
+      "trent_agm_rule": "RETIRED"
+    }
+  },
+  {
+    "date": "2026-06-24",
+    "run_number": 37,
+    "recommendations": [
+      "HFCL"
+    ],
+    "conditional_watchlist": [
+      {
+        "symbol": "TARIL",
+        "trigger": "Close > Rs358 on vol >= 0.8x 20d avg",
+        "entry": 358,
+        "target": 420,
+        "stop": 325,
+        "rr": 1.88,
+        "confidence": 87,
+        "exit_date": "2026-06-26"
+      },
+      {
+        "symbol": "UNOMINDA",
+        "trigger": "Close > Rs1137 on vol >= 1.0x 20d avg",
+        "entry": 1137,
+        "target": 1280,
+        "stop": 1090,
+        "rr": 3.04,
+        "confidence": 82,
+        "note": "Conf reaches 85% on trigger fire + US_MARKET_CAUTION lift"
+      }
+    ],
+    "entry_prices": {
+      "HFCL": 198
+    },
+    "targets": {
+      "HFCL": 230
+    },
+    "stop_losses": {
+      "HFCL": 185
+    },
+    "confidence_scores": {
+      "HFCL": 88
+    },
+    "patterns": {
+      "HFCL": [
+        "RM-4",
+        "Pattern_d",
+        "AI_TAILWIND"
+      ]
+    },
+    "market_context": {
+      "nifty50": "cautiously positive (TMCV +2.61% NIFTYNEXT50 top)",
+      "niftyit": "neutral (-0.18% avg IT stocks) \u2014 AI_TAILWIND ACTIVE",
+      "us_market_caution": "ACTIVE (carry-forward Jun22 NASDAQ -1.32%)",
+      "gold_caution": "INACTIVE",
+      "ai_tailwind": "ACTIVE"
+    },
+    "closed_trades": [
+      {
+        "symbol": "NIACL",
+        "entry": 199,
+        "exit": 189,
+        "realized_pnl_pct": -5.03,
+        "exit_reason": "stop_hit",
+        "entry_date": "2026-06-22",
+        "exit_date": "2026-06-24"
+      },
+      {
+        "symbol": "NACLIND",
+        "entry": 193,
+        "exit": 204.6,
+        "realized_pnl_pct": 6.01,
+        "exit_reason": "t2_exit",
+        "entry_date": "2026-06-22",
+        "exit_date": "2026-06-24"
+      }
+    ],
+    "notes": "Run #37: HFCL 88% RM-4 pullback entry (Rs195-202 zone, entry Jun25 open). NIACL stopped -5.03% (insurance sector de-rating). NACLIND conditional +6.01% T+2 exit. Market-wide thin vol systemic."
   }
 ]

@@ -12,7 +12,9 @@ You are an elite Indian stock market analysis orchestrator. Coordinate a pipelin
 
 ## PIPELINE ORDER
 
-**1 → 1.5 → 2 → 2.5 (HARD GATE) → 2.7 (CHART READ, HARD GATE) → 3 → 4 → 4.5 (POST-RUN MISS AUDIT) → 4.6 (NSE-WIDE SELF-AUDIT & PATTERN UPVOTE)** on every daily run. Step 5 (backtest) optional — skip unless user asks.
+**1 → 1.5 → 2 → 2.5 (HARD GATE) → 2.7 (CHART READ, HARD GATE) → 3 → 4 → 4.5 (POST-RUN MISS AUDIT) → 4.6 (NSE-WIDE SELF-AUDIT & PATTERN UPVOTE + RULES LEDGER UPDATE)** on every daily run. Step 5 (backtest) optional — skip unless user asks.
+
+At the START of every run: read the RULES LEDGER (bottom of this file) and load current Status/Net for each rule. Any rule flagged `REVIEW` must be surfaced in Step 1.5 output. At the END of every run (Step 4.6): update Upvotes/Downvotes/Net/Last_Updated in the ledger table.
 
 Step 1 is monthly (reads `basestock.json` most days). Steps 1.5–4.6 run every time.
 
@@ -752,6 +754,49 @@ Update agent memory across runs. Track:
 - Sectors currently in or out of institutional favor
 
 Write concise accuracy observations to `pattern_notes.md` after each run.
+
+---
+
+## RULES LEDGER
+
+**Purpose:** Single source of truth for all pipeline rules. Every rule has an upvote/downvote score updated in Step 4.6. A rule is **upvoted** (+1) when it correctly predicted or correctly excluded a stock that subsequently moved ≥5%. A rule is **downvoted** (-1) when it caused a MISS_ANALYZE (blocked a legitimate entry or produced a false positive that stopped out). Net score drives automatic threshold reviews: score ≤ −3 triggers a rule review in the next run's Step 4.6 output.
+
+**Step 4.6 ledger update procedure:** After computing pattern attribution (4.6.3), scan the RULES_LEDGER below. For each `CORRECTLY_EXCLUDED` or `CORRECTLY_PICKED` outcome, upvote the rule(s) that fired. For each `MISS_ANALYZE` outcome, downvote the rule(s) that caused the miss. Write back the updated scores.
+
+<!-- rules-ledger-start -->
+| Rule ID | Name | Step | Upvotes | Downvotes | Net | Last_Updated | Status | One-Line Summary |
+|---------|------|------|---------|-----------|-----|--------------|--------|-----------------|
+| RSI-1 | Wilder RSI Standard | 1, all | 3 | 0 | +3 | 2026-06-19 | ACTIVE | All RSI = Wilder 14-period ewm(alpha=1/14); SMA-RSI produces 8-12pt lower values and causes RM-11 misclassification |
+| PM-1 | Permanent Membership | 1 | 2 | 0 | +2 | 2026-06-16 | ACTIVE | Once added to basestock.json, a symbol never leaves; only `active: false` tagging allowed |
+| CA-1 | Post-Corporate-Action Breakout | 1 | 1 | 0 | +1 | 2026-06-16 | ACTIVE | 30-session base watch after split/bonus ex-date; Pattern A / RM-1 setup triggers entry |
+| CA-2 | Large-Cap CA Scanner | 1.5 | 1 | 0 | +1 | 2026-06-16 | ACTIVE | Scan BSE corporate actions last 30d for NIFTY50/NEXT50 splits/bonuses each run |
+| 26e | Volatility Floor | 1, 2 | 5 | 2 | +3 | 2026-06-18 | ACTIVE | Annual ≥40/252 OR Tier-A ≥8/64 (default) OR Tier-B ≥5/64 (trending sector) OR Tier-C ≥3/64 (mega-cap+catalyst) |
+| Sub-26f | One-Bar Climax Gate | 2.7 | 4 | 0 | +4 | 2026-06-15 | ACTIVE | Single session +10%+ then 1-2 flat/down sessions on vol <0.4x = CLIMAX EXHAUSTION; FAIL |
+| 26g | MA5 Verification | 2.7 | 1 | 0 | +1 | 2026-06-24 | ACTIVE | "Resting at MA5" = abs(price−MA5)/MA5 ≤ 1.0%; >1% below = below support, not at it |
+| 46b | Decelerating Staircase | 2.7 | 3 | 0 | +3 | 2026-06-15 | ACTIVE | 3+ closes with shrinking daily increment AND vol <0.2x throughout = exhaustion; FAIL |
+| 46c | R:R Recompute on Stop Proximity | 2.7 | 1 | 0 | +1 | 2026-06-24 | ACTIVE | When intraday low within 5% of stop, recompute R:R on worst-case fill; if <2.0, cancel entry |
+| 77 | Downtrend Gate | 2.7 | 4 | 0 | +4 | 2026-06-16 | ACTIVE | 3+ consecutive lower intraday highs + 2+ lower lows + below prior-peak close = confirmed downtrend; FAIL |
+| 77b | RM-4 V-Confirmation | 2.7 | 1 | 0 | +1 | 2026-06-24 | ACTIVE | RM-4 requires ≥1 green close above prior day's close; 2+ consecutive red closes = V not confirmed; REJECT |
+| 77c | Post-52w-High Cooldown | 2.7 | 1 | 0 | +1 | 2026-06-24 | ACTIVE | After fresh 52w high then sell-off, require minimum 3 sessions of price stabilization before any RM-4 qualifies |
+| 78 | Distribution Day Gate | 2.7 | 3 | 0 | +3 | 2026-06-16 | ACTIVE | Peak day closed ≥5% below intraday high on ≥1.5x vol = blow-off; 10-session cooldown |
+| 78b | Intraday Volume Ban | 2.7 | 1 | 0 | +1 | 2026-06-24 | ACTIVE | Current-session intraday vol snapshots CANNOT be used for drying/distribution signals; prior completed sessions only |
+| 79 | BE Segment Block | 2.7 | 2 | 0 | +2 | 2026-06-16 | ACTIVE | series "BE" or -BE suffix = auto-block from picks and morning-open-alerts; delivery ≥T+5 only |
+| 80 | Pre-Breakout Scanner | 2.4 | 3 | 1 | +2 | 2026-06-16 | ACTIVE | Coiling within 5% of 20d high, 3 non-declining closes, vol ≥0.8x, RSI 55-72 → watchlist with breakout trigger |
+| 81 | Post-Stop Re-Entry Zone | 2.2 | 1 | 0 | +1 | 2026-06-24 | ACTIVE | After stop-out: re-entry zone = (T-1 actual low ×0.98) to (stop ×0.99); not theoretical RSI-reset depth (SPAL Jun 24 miss) |
+| 82 | Watchlist Framing Reset | 2.2 | 1 | 0 | +1 | 2026-06-24 | ACTIVE | 5 consecutive closes above pullback zone → force-reclassify to RM-1 running breakout; recompute measured-move target (TRENT Jun 24 miss) |
+| RM11-RSI | RM-11 RSI Cap Tiers | 2.3 | 2 | 2 | 0 | 2026-06-22 | ACTIVE | Day-1 vol ≥10x: cap RSI 85. Day-1 vol 2-10x: cap RSI 78. Insurance sector: +2pts extra margin above cap |
+| RM11-INS | RM-11 Insurance Modifier | 2.3 | 0 | 1 | -1 | 2026-06-24 | ACTIVE | Insurance stocks (NIACL/ICICIGI/HDFCLIFE) require RSI margin ≥4pts above cap for RM-11 (standard is 2pts); sector susceptible to sudden de-rating (NIACL Jun 24 stop-out) |
+| WPR | Watchlist Persistence | 2.2 | 4 | 1 | +3 | 2026-06-05 | ACTIVE | Every watchlist item re-evaluated each session against stated trigger for up to 10 sessions; no silent drops |
+| NDP | No Double-Penalty on Thin Vol | 2.7 | 3 | 0 | +3 | 2026-06-03 | ACTIVE | Chart read PASS + pattern confirmed → confidence floor 88%; don't penalize twice for thin-vol digestion |
+<!-- rules-ledger-end -->
+
+**Upvote/Downvote procedure (Step 4.6 — runs every session):**
+1. Read table between `<!-- rules-ledger-start -->` and `<!-- rules-ledger-end -->`.
+2. For each `CORRECTLY_EXCLUDED` / `CORRECTLY_PICKED` outcome: identify which Rule ID(s) fired → increment Upvotes, update Net, set Last_Updated = today.
+3. For each `MISS_ANALYZE` outcome: identify the Rule ID that caused the miss → increment Downvotes, update Net, set Last_Updated = today.
+4. **Net ≤ −3:** Flag rule as `REVIEW` in Status column; include in Step 4.6 output under "RULES UNDER REVIEW" with a proposal to tighten, loosen, or retire.
+5. **Net ≥ +8:** Flag rule as `HIGH_CONVICTION` in Status column.
+6. Write back the full table between the markers. Do not alter any other content.
 
 ---
 
