@@ -1,0 +1,366 @@
+{
+  "STRICT": {
+    "tier": "STRICT",
+    "total_trades": 1,
+    "win_rate_pct": 100.0,
+    "avg_winner_pct": 5.27,
+    "avg_loser_pct": 0,
+    "median_ret": 5.27,
+    "mean_ret_pct": 5.27,
+    "best_pct": 5.27,
+    "worst_pct": 5.27,
+    "payoff_ratio": null,
+    "expectancy_after_cost_pct": 5.02,
+    "exit_reasons": {
+      "t+2_close": 1
+    },
+    "by_rsi_bucket": {
+      "rsi_<30": {
+        "count": 1,
+        "mean": 5.27,
+        "median": 5.27
+      }
+    },
+    "by_vol_bucket": {
+      "vol_2.0-3.0": {
+        "count": 1,
+        "mean": 5.27,
+        "median": 5.27
+      }
+    },
+    "by_t2_range_bucket": {
+      "t2_0-20": {
+        "count": 1,
+        "mean": 5.27,
+        "median": 5.27
+      }
+    },
+    "by_drop_bucket": {
+      "drop_-15_-10": {
+        "count": 1,
+        "mean": 5.27,
+        "median": 5.27
+      }
+    },
+    "top_winners": [
+      {
+        "symbol": "BDL",
+        "signal_date": "2026-04-01",
+        "ret_pct": 5.27,
+        "exit_reason": "t+2_close"
+      }
+    ],
+    "top_losers": [
+      {
+        "symbol": "BDL",
+        "signal_date": "2026-04-01",
+        "ret_pct": 5.27,
+        "exit_reason": "t+2_close"
+      }
+    ]
+  },
+  "BALANCED": {
+    "tier": "BALANCED",
+    "total_trades": 9,
+    "win_rate_pct": 33.3,
+    "avg_winner_pct": 4.06,
+    "avg_loser_pct": -5.37,
+    "median_ret": -0.98,
+    "mean_ret_pct": -2.23,
+    "best_pct": 6.83,
+    "worst_pct": -14.67,
+    "payoff_ratio": 0.76,
+    "expectancy_after_cost_pct": -2.48,
+    "exit_reasons": {
+      "t+2_close": 7,
+      "stop": 2
+    },
+    "by_rsi_bucket": {
+      "rsi_30-35": {
+        "count": 4,
+        "mean": -1.28,
+        "median": -2.48
+      },
+      "rsi_35-40": {
+        "count": 2,
+        "mean": -7.82,
+        "median": -7.82
+      },
+      "rsi_<30": {
+        "count": 3,
+        "mean": 0.25,
+        "median": -0.15
+      }
+    },
+    "by_vol_bucket": {
+      "vol_1.5-2.0": {
+        "count": 2,
+        "mean": 0.9,
+        "median": 0.9
+      },
+      "vol_2.0-3.0": {
+        "count": 4,
+        "mean": 1.05,
+        "median": -0.04
+      },
+      "vol_>=3.0": {
+        "count": 3,
+        "mean": -8.68,
+        "median": -7.0
+      }
+    },
+    "by_t2_range_bucket": {
+      "t2_0-20": {
+        "count": 3,
+        "mean": -5.47,
+        "median": -7.0
+      },
+      "t2_20-40": {
+        "count": 1,
+        "mean": 0.07,
+        "median": 0.07
+      },
+      "t2_>60": {
+        "count": 5,
+        "mean": -0.74,
+        "median": -0.98
+      }
+    },
+    "by_drop_bucket": {
+      "drop_-10_-7": {
+        "count": 7,
+        "mean": -1.52,
+        "median": -0.98
+      },
+      "drop_-15_-10": {
+        "count": 2,
+        "mean": -4.7,
+        "median": -4.7
+      }
+    },
+    "top_winners": [
+      {
+        "symbol": "BLUESTARCO",
+        "signal_date": "2026-04-08",
+        "ret_pct": 6.83,
+        "exit_reason": "t+2_close"
+      },
+      {
+        "symbol": "BDL",
+        "signal_date": "2026-04-01",
+        "ret_pct": 5.27,
+        "exit_reason": "t+2_close"
+      },
+      {
+        "symbol": "CAMS",
+        "signal_date": "2026-03-09",
+        "ret_pct": 0.07,
+        "exit_reason": "t+2_close"
+      },
+      {
+        "symbol": "OLECTRA",
+        "signal_date": "2026-01-28",
+        "ret_pct": -0.15,
+        "exit_reason": "t+2_close"
+      },
+      {
+        "symbol": "TMCV",
+        "signal_date": "2026-04-08",
+        "ret_pct": -0.98,
+        "exit_reason": "t+2_close"
+      }
+    ],
+    "top_losers": [
+      {
+        "symbol": "LTFOODS",
+        "signal_date": "2026-03-05",
+        "ret_pct": -14.67,
+        "exit_reason": "t+2_close"
+      },
+      {
+        "symbol": "MRPL",
+        "signal_date": "2026-05-08",
+        "ret_pct": -7.0,
+        "exit_reason": "stop"
+      },
+      {
+        "symbol": "BLUESTARCO",
+        "signal_date": "2026-03-25",
+        "ret_pct": -5.04,
+        "exit_reason": "stop"
+      },
+      {
+        "symbol": "IRCON",
+        "signal_date": "2026-03-06",
+        "ret_pct": -4.38,
+        "exit_reason": "t+2_close"
+      },
+      {
+        "symbol": "TMCV",
+        "signal_date": "2026-04-08",
+        "ret_pct": -0.98,
+        "exit_reason": "t+2_close"
+      }
+    ]
+  },
+  "BROAD": {
+    "tier": "BROAD",
+    "total_trades": 29,
+    "win_rate_pct": 34.5,
+    "avg_winner_pct": 5.3,
+    "avg_loser_pct": -4.34,
+    "median_ret": -2.0,
+    "mean_ret_pct": -1.02,
+    "best_pct": 8.0,
+    "worst_pct": -14.67,
+    "payoff_ratio": 1.22,
+    "expectancy_after_cost_pct": -1.27,
+    "exit_reasons": {
+      "t+2_close": 13,
+      "stop": 12,
+      "target_cap": 4
+    },
+    "by_rsi_bucket": {
+      "rsi_30-35": {
+        "count": 7,
+        "mean": 1.37,
+        "median": 0.07
+      },
+      "rsi_35-40": {
+        "count": 6,
+        "mean": -6.26,
+        "median": -4.55
+      },
+      "rsi_<30": {
+        "count": 16,
+        "mean": -0.09,
+        "median": -1.08
+      }
+    },
+    "by_vol_bucket": {
+      "vol_1.2-1.5": {
+        "count": 8,
+        "mean": 1.4,
+        "median": -0.43
+      },
+      "vol_1.5-2.0": {
+        "count": 4,
+        "mean": -0.79,
+        "median": -2.48
+      },
+      "vol_2.0-3.0": {
+        "count": 7,
+        "mean": 0.01,
+        "median": -0.15
+      },
+      "vol_>=3.0": {
+        "count": 10,
+        "mean": -3.76,
+        "median": -4.11
+      }
+    },
+    "by_t2_range_bucket": {
+      "t2_0-20": {
+        "count": 9,
+        "mean": -1.39,
+        "median": -2.43
+      },
+      "t2_20-40": {
+        "count": 7,
+        "mean": -0.77,
+        "median": -1.3
+      },
+      "t2_40-60": {
+        "count": 4,
+        "mean": 0.46,
+        "median": -0.64
+      },
+      "t2_>60": {
+        "count": 9,
+        "mean": -1.49,
+        "median": -2.0
+      }
+    },
+    "by_drop_bucket": {
+      "drop_-10_-7": {
+        "count": 19,
+        "mean": -1.16,
+        "median": -2.43
+      },
+      "drop_-15_-10": {
+        "count": 8,
+        "mean": -0.58,
+        "median": 1.25
+      },
+      "drop_<=-15": {
+        "count": 2,
+        "mean": -1.35,
+        "median": -1.35
+      }
+    },
+    "top_winners": [
+      {
+        "symbol": "AEGISLOG",
+        "signal_date": "2026-01-27",
+        "ret_pct": 8.0,
+        "exit_reason": "target_cap"
+      },
+      {
+        "symbol": "HCC",
+        "signal_date": "2026-04-01",
+        "ret_pct": 8.0,
+        "exit_reason": "target_cap"
+      },
+      {
+        "symbol": "JTLIND",
+        "signal_date": "2026-01-12",
+        "ret_pct": 8.0,
+        "exit_reason": "target_cap"
+      },
+      {
+        "symbol": "VOLTAS",
+        "signal_date": "2026-04-08",
+        "ret_pct": 8.0,
+        "exit_reason": "target_cap"
+      },
+      {
+        "symbol": "BLUESTARCO",
+        "signal_date": "2026-04-08",
+        "ret_pct": 6.83,
+        "exit_reason": "t+2_close"
+      }
+    ],
+    "top_losers": [
+      {
+        "symbol": "LTFOODS",
+        "signal_date": "2026-03-05",
+        "ret_pct": -14.67,
+        "exit_reason": "t+2_close"
+      },
+      {
+        "symbol": "EMSLIMITED",
+        "signal_date": "2026-06-08",
+        "ret_pct": -9.47,
+        "exit_reason": "stop"
+      },
+      {
+        "symbol": "MRPL",
+        "signal_date": "2026-05-08",
+        "ret_pct": -7.0,
+        "exit_reason": "stop"
+      },
+      {
+        "symbol": "LLOYDSENGG",
+        "signal_date": "2026-03-25",
+        "ret_pct": -6.97,
+        "exit_reason": "stop"
+      },
+      {
+        "symbol": "BLUESTARCO",
+        "signal_date": "2026-05-14",
+        "ret_pct": -5.26,
+        "exit_reason": "stop"
+      }
+    ]
+  }
+}

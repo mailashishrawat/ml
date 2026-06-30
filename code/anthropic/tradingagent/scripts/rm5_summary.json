@@ -1,0 +1,30 @@
+{
+  "total_trades": 1,
+  "winners": 1,
+  "losers": 0,
+  "win_rate_pct": 100.0,
+  "avg_winner_pct": 5.27,
+  "avg_loser_pct": 0,
+  "median_ret_pct": 5.27,
+  "mean_ret_pct": 5.27,
+  "best_trade_pct": 5.27,
+  "worst_trade_pct": 5.27,
+  "expectancy_pct": 5.27,
+  "payoff_ratio": null,
+  "trades_by_exit_reason": {
+    "t+2_close": 1
+  },
+  "by_month": {
+    "2026-04": {
+      "count": 1,
+      "mean": 5.27,
+      "median": 5.27
+    }
+  },
+  "top_symbols_by_signal_count": {
+    "BDL": 1
+  },
+  "unique_signal_days": 1,
+  "avg_signals_per_signal_day": 1.0,
+  "expectancy_after_cost_pct": 5.02
+}

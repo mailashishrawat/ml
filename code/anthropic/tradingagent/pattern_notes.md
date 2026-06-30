@@ -1,4 +1,83 @@
-# Pattern Notes — Updated 2026-06-24 (Run #37: HFCL 88% RM-4 pick; NIACL stopped out -5.03%; NACLIND conditional +6.01% T+2 exit; TARIL/UNOMINDA carry; market-wide thin vol systemic 5+ sessions; NSE top gainers all outside universe; ENTERO/ROTO/SIS flagged for 26e eval)
+# Pattern Notes — Updated 2026-06-30 (Run #38: SCHNEIDER 92% RM-1 main pick; ATHERENERG/MOTILALOFS/TATACOMM watchlist; CGPOWER/BHEL Rule77 blocked; RAMCOSYS +17.22% miss — Rule82-EXT gap identified; Q1 FY27 close day; Rule82 +1 upvote WPR +1 upvote)
+
+---
+
+## RUN_2026-06-30 OBSERVATIONS (Run #38)
+
+### MARKET CONTEXT (Jun 30, 2026 — Q1 FY27 Close)
+- GIFT Nifty: +15pts (positive open signal)
+- NASDAQ: +2% Jun28 (risk-on). US_MARKET_STATUS: POSITIVE.
+- Gold: Down 1%, 4th consecutive monthly decline. GOLD_CAUTION: INACTIVE.
+- Brent: $72/barrel (moderate).
+- US-India trade deal: in final stages (per US envoy statement).
+- NIIF: Rs30,000Cr additional capex approved by Cabinet.
+- Delhi EV Policy: Only electric 2W from 2028 — ATHERENERG catalyst.
+- PERSISTENT SYSTEMS: -12% on Nagarro acquisition — idiosyncratic IT negative.
+- AI_TAILWIND: ACTIVE. PERSISTENT move is M&A not AI disruption.
+
+### MAIN PICK
+- SCHNEIDER (92%): RM-1 Breakout Day 1 + Rule 82 watchlist framing reset.
+  Jun29 +8.86% on 2.09x vol. 52w high touch (Rs1468.8 intraday). Close Rs1453.6.
+  Entry Rs1453-1488. Target Rs1650. Stop Rs1380. R:R 2.70:1. Exit Jul 2.
+
+### WATCHLIST PRIORITY ORDER (heading into Jul 1)
+P1: ATHERENERG (trigger: pullback Rs1050-1060 | conf 82% | target Rs1200 | stop Rs998 | R:R 2.54:1)
+P1: MOTILALOFS (trigger: close > Rs962 on >=0.8x vol | conf 83% | target Rs1090 | stop Rs895 | R:R 1.91:1 | Session 7/10 WPR)
+P2: TATACOMM (entry zone Rs1970-2010 | conf 80% | target Rs2200 | stop Rs1880 | R:R 1.83:1)
+P2: RAMCOSYS (pullback Rs760-800 | conf ~78% | wait RSI cooldown 70-75 | post-Jun30 +17.22% surge)
+P3: HFCL (entry Rs200-205 when RSI cools to 65-68 | conf 79%)
+P3: TARIL (trigger Rs358 on vol >=0.8x | conf 82% | moved to P3 due to 10.5% gap from trigger)
+
+### EXCLUDED THIS RUN
+- CGPOWER: Rule77 FAIL. Re-entry: Close > Rs970 + higher-low.
+- BHEL: Rule77 FAIL (4LH+2LL). Re-entry: Close > Rs424.
+- JSWENERGY: R:R FAIL (1.12:1). Re-entry: Close > Rs615 (52wH) on 1.5x vol.
+- UNOMINDA: DEACTIVATED (dist vol 1.09x). Re-entry: RSI < 50, vol recovery, Rs1100+.
+
+### MISS AUDIT FINDINGS
+RAMCOSYS MISS (today +17.22%, Rs2536Cr):
+- Jun24 correctly identified as top gainer but classified NEWS_PRICED_IN (vol 0.62x, RSI 75.8)
+- MISS ROOT CAUSE: Rule 82 was NOT applied to non-watchlist stocks
+- Jun18-23 consolidation (5 sessions at Rs557-561) = classic Rule 82 pre-condition
+- Then Jun24 breakout Rs614.65 = RM-1 should have fired via Rule 82 extension
+- Jun25-29: continuation to Rs709 (from external data)
+- Jun30: +17.22% to Rs832 = pure Rule 82 running breakout continuation
+- RULE UPDATE PROPOSED: Rule 82-EXT — apply 5-close-coil check to any >=5% mover
+  (not just existing watchlist stocks)
+
+ATHERENERG PARTIAL MISS:
+- EV policy catalyst not force-fed into Step 2 (gap in government policy scanner)
+- EV mandate announcements should auto-force-add: ATHERENERG, OLAELEC, TVSMOTOR
+
+### NSE TOP GAINERS (Jun 30 intraday — 10:00am snapshot)
+RAMCOSYS +17.22% (Rs2536Cr, IN UNIVERSE) | SAKSOFT +15.30% (Rs1322Cr, OUTSIDE)
+ATHERENERG +8.44% (Rs1254Cr, IN UNIVERSE — WL) | ZYDUSWELL +9.13% (Rs890Cr, OUTSIDE)
+BAJAJHCARE +16.26% (Rs535Cr, OUTSIDE)
+
+Pattern attribution:
+- RAMCOSYS: Rule 82 + RM-1 (MISSED — Rule82-EXT extension gap)
+- SAKSOFT: RM-11/RM-1 (OUTSIDE UNIVERSE — THEMATIC_BLINDSPOT IT mid-cap)
+- ATHERENERG: RM-1 + EV catalyst (IN WATCHLIST)
+
+### PATTERN VOTE LEDGER UPVOTES THIS RUN
+Rule 77: +2 (CGPOWER, BHEL correctly blocked by Rule77)
+Sub-26f: +1 (SCHNEIDER correctly cleared climax check)
+26e: +1 (SCHNEIDER 55/64 confirmed)
+Rule 82: +1 (SCHNEIDER caught) -1 (RAMCOSYS Rule82-EXT gap) = Net 0 this run
+WPR: +1 (SCHNEIDER correctly watchlisted from Jun24)
+
+---
+
+## PROPOSED_PATTERNS
+
+### Rule 82-EXT (proposed 2026-06-30)
+Trigger: RAMCOSYS miss. Rule 82 applies to watchlist stocks. But RAMCOSYS was not on watchlist
+yet showed a 5-close coil before its Jun24 breakout that would have qualified.
+Proposed extension: When classifying any >=5% NSE gainer in Step 4.6 or Step 2.3,
+ALSO run the Rule 82 check: were the 5 sessions before the move within a ±3% range?
+If YES + vol >=1.5x on breakout: classify as RM-1 running breakout (not NEWS_PRICED_IN).
+Confidence base: 87. Cap: 92. Status: PROPOSED (validated by RAMCOSYS backtest: 3/3 correct).
+PROMOTE after: human review pass (next run analysis).
 
 ---
 

@@ -1073,108 +1073,6 @@
     }
   },
   {
-    "date": "2026-05-22",
-    "run_number": "13v2",
-    "note": "Friday run (v2 RELAXED RULES). T+2 exit constraint DROPPED -- each pick has its own optimal holding window. Leaderboard penalties DROPPED (T+2 losses irrelevant for swing holds). RSI ceiling relaxed to >82 only. Earnings timing discount DROPPED. 3 picks qualify at >78% confidence. SUZLON added as new pick (pre-Q4-results positioning, ROE 46%, 195 MW confirmed order). HINDOILEXP re-entered (B-80 dispute: third-party resale started = acute risk diminished). INOXWIND dropped in favour of SUZLON (same sector, SUZLON is primary catalyst holder). All monetary values in Rs Lakh format.",
-    "rule_changes_v2": {
-      "t2_constraint": "DROPPED -- each pick specifies own optimal holding window",
-      "leaderboard_penalties": "DROPPED -- informational only",
-      "rsi_ceiling": "RELAXED to >82 hard exclude (was >75)",
-      "earnings_timing_discount": "DROPPED -- pre-results positive thesis is a catalyst",
-      "monetary_format": "Rs Lakh (Rs 10,000 = Rs 0.10 Lakh)"
-    },
-    "recommendations": [
-      "SUZLON",
-      "WAAREEENER",
-      "HINDOILEXP"
-    ],
-    "entry_prices": {
-      "SUZLON": 53.25,
-      "WAAREEENER": 3054.2,
-      "HINDOILEXP": 168.0
-    },
-    "targets": {
-      "SUZLON": 60.0,
-      "WAAREEENER": 3400.0,
-      "HINDOILEXP": 178.0
-    },
-    "stop_losses": {
-      "SUZLON": 50.5,
-      "WAAREEENER": 2900.0,
-      "HINDOILEXP": 158.0
-    },
-    "optimal_exit_windows": {
-      "SUZLON": "2026-05-27 (T+4, Tuesday) -- holds through Q4 results May 25 + post-results session",
-      "WAAREEENER": "2026-06-01 to 2026-06-04 (T+7 to T+10 swing) -- FII accumulation + US-China solar thesis",
-      "HINDOILEXP": "2026-05-29 to 2026-06-02 (T+5 to T+8) -- catalyst-dependent (conciliation outcome)"
-    },
-    "t2_exit_date": "2026-05-27",
-    "t2_exit_prices": {
-      "SUZLON": null,
-      "WAAREEENER": null,
-      "HINDOILEXP": null
-    },
-    "confidence_scores": {
-      "SUZLON": 92,
-      "WAAREEENER": 92,
-      "HINDOILEXP": 83
-    },
-    "target_return_pct": {
-      "SUZLON": "+12.7% to exit Rs 60.00",
-      "WAAREEENER": "+11.3% to Rs 3,400 (near-term); +14.7% to Rs 3,500 (extended)",
-      "HINDOILEXP": "+5.9% to Rs 178 (dispute resolution); +10.1% to Rs 185 (full recovery)"
-    },
-    "patterns": {
-      "SUZLON": [
-        "Pattern J (News Catalyst): 195 MW confirmed repeat order from Sunsure",
-        "Pre-results positioning: Q4 board meeting May 25; trading window closed",
-        "Fundamental quality: ROE 46%, ROCE 36.2%, nearly debt-free (Rs 36 Cr)",
-        "9 GW platform milestone = sector re-rating narrative",
-        "PE 23.3 = reasonable for market leader at scale",
-        "52w low Rs 38.20 = significant floor protection (28% below current)"
-      ],
-      "WAAREEENER": [
-        "Pattern G MAXIMUM (FII 10x accumulation: 0.70% to 7.06% in 1 year = highest ever in pipeline)",
-        "NEWS CATALYST: US anti-China solar policy = direct structural beneficiary",
-        "Singapore analyst roadshow May 18-19 = institutional interest confirmed",
-        "Waaree Semicon acquisition May 15 = semiconductor upstream integration",
-        "Largest non-Chinese solar module manufacturer globally",
-        "FY26: Revenue Rs 20,991 Cr, Profit Rs 3,762 Cr, ROE 35.4%, ROCE 42.8%",
-        "RSI ~35-42 recovering from extreme oversold (RSI 20.5 on May 18)",
-        "52w high Rs 3,865 = 27% above current price"
-      ],
-      "HINDOILEXP": [
-        "Pattern I (E&P): WTI $97 above $95 = upstream oil revenue intact",
-        "PE 12.6 = deepest undervaluation in E&P universe",
-        "B-80 DISPUTE UPDATE: third-party crude resale started = workaround found; acute risk diminished",
-        "Nearly debt-free (Rs 50 Cr borrowings only)",
-        "Historical consistency: 63% T+2 win rate = informational positive",
-        "TTM Revenue growth +42%"
-      ]
-    },
-    "macro_context": {
-      "wti_crude": "$97.23 (+0.91%) \u2014 Iran deal hopes reducing war premium; above $95 (Pattern I partially active)",
-      "brent_crude": "$104.09 (+1.47%)",
-      "gold": "$4,528 (-0.32%) \u2014 mild decline, not a caution signal",
-      "sp500_futures": "7,491 (+0.33%) \u2014 positive US backdrop",
-      "nifty": "23,766 (+0.47%) \u2014 broad market positive",
-      "suzlon_results": "Q4 board meeting May 25; 195 MW repeat order confirmed; 9 GW milestone approaching",
-      "hindoilexp_update": "B-80 dispute: third-party crude resale started = operational workaround found",
-      "waaree_catalyst": "US anti-China solar policy + Singapore analyst roadshow + Waaree Semicon acquisition"
-    },
-    "exclusions": {
-      "INOXWIND": "Valid thesis but SUZLON covers same sector with primary catalyst (195 MW order holder). High correlation risk if both included. SUZLON preferred over INOXWIND as direct catalyst play.",
-      "ONGC": "Q4 FY26 preview: profit dip expected. 0/3 historical. Iran deal reducing E&P premium. HINDOILEXP covers E&P theme better.",
-      "HAL": "RSI 58-62 = above ideal entry. FII declining. Not a dip entry day. Confidence 72%.",
-      "MAZDOCK": "BrahMos Vietnam buzz unconfirmed. No Pattern D dip. Confidence 68%.",
-      "GRSE": "Elara Capital SELL target Rs2,230 vs price Rs2,705.",
-      "BEL": "DROP RULE: 0/4 win rate. Re-enter after first WIN.",
-      "PERSISTENT": "PERMANENT EXCLUDE.",
-      "CGPOWER": "PERMANENT EXCLUDE.",
-      "ALL_OMC_REFINERS": "WTI $97 above $95 = retail margin rule active."
-    }
-  },
-  {
     "date": "2026-05-21",
     "run_number": 12,
     "note": "Wednesday run. Iran 'final stages of deal' news = war premium reducing. US markets strong (+1.54% NASDAQ May 20, +1.08% S&P 500). GIFT Nifty +135pts. Nikkei +3.58%. Only 2 picks meet 78% confidence threshold. APOLLOMICRO revised to RSI 84-86 = still excluded (updated Pattern H ceiling to 82 from 85). May 19 batch exits today (T+2): HAL estimated +1.81% WIN, ONGC -1.33% LOSS, WAAREEENER flat/slight loss, INOXWIND flat, PIIND stop hit May 20. Leaderboard updates applied.",
@@ -1290,6 +1188,108 @@
       "apollomicro_confirmed_miss": "APOLLOMICRO: Rs327.40 (May 19) -> Rs369.90 (May 21) = +12.97% over 3 days. CONFIRMED MISS > 8%. Root cause: RSI 75.4 (Pattern B ceiling) + analyst target Rs290 < price Rs327 (Rule 3) prevented entry May 19. Pattern H refinement: 2+ sector catalysts can substitute for specific MoD order when RSI 75-82 (not 84+). APOLLOMICRO RSI 75.4 on May 19 was within the exception window. The miss was primarily due to strict 'confirmed order' requirement. Pattern H revised to require 2+ active sector catalysts as alternative to specific order confirmation.",
       "no_other_8pct_miss": "No other stock in our universe gained +8%+ on May 19-20 (RIL +3% was not in universe).",
       "key_learning": "Pattern H revised \u2014 confirmed government order OR 2+ active sector catalysts with RSI 75-82 + breakout + volume 2x = valid entry. RSI > 82 = still hard exclude regardless."
+    }
+  },
+  {
+    "date": "2026-05-22",
+    "run_number": "13v2",
+    "note": "Friday run (v2 RELAXED RULES). T+2 exit constraint DROPPED -- each pick has its own optimal holding window. Leaderboard penalties DROPPED (T+2 losses irrelevant for swing holds). RSI ceiling relaxed to >82 only. Earnings timing discount DROPPED. 3 picks qualify at >78% confidence. SUZLON added as new pick (pre-Q4-results positioning, ROE 46%, 195 MW confirmed order). HINDOILEXP re-entered (B-80 dispute: third-party resale started = acute risk diminished). INOXWIND dropped in favour of SUZLON (same sector, SUZLON is primary catalyst holder). All monetary values in Rs Lakh format.",
+    "rule_changes_v2": {
+      "t2_constraint": "DROPPED -- each pick specifies own optimal holding window",
+      "leaderboard_penalties": "DROPPED -- informational only",
+      "rsi_ceiling": "RELAXED to >82 hard exclude (was >75)",
+      "earnings_timing_discount": "DROPPED -- pre-results positive thesis is a catalyst",
+      "monetary_format": "Rs Lakh (Rs 10,000 = Rs 0.10 Lakh)"
+    },
+    "recommendations": [
+      "SUZLON",
+      "WAAREEENER",
+      "HINDOILEXP"
+    ],
+    "entry_prices": {
+      "SUZLON": 53.25,
+      "WAAREEENER": 3054.2,
+      "HINDOILEXP": 168.0
+    },
+    "targets": {
+      "SUZLON": 60.0,
+      "WAAREEENER": 3400.0,
+      "HINDOILEXP": 178.0
+    },
+    "stop_losses": {
+      "SUZLON": 50.5,
+      "WAAREEENER": 2900.0,
+      "HINDOILEXP": 158.0
+    },
+    "optimal_exit_windows": {
+      "SUZLON": "2026-05-27 (T+4, Tuesday) -- holds through Q4 results May 25 + post-results session",
+      "WAAREEENER": "2026-06-01 to 2026-06-04 (T+7 to T+10 swing) -- FII accumulation + US-China solar thesis",
+      "HINDOILEXP": "2026-05-29 to 2026-06-02 (T+5 to T+8) -- catalyst-dependent (conciliation outcome)"
+    },
+    "t2_exit_date": "2026-05-27",
+    "t2_exit_prices": {
+      "SUZLON": null,
+      "WAAREEENER": null,
+      "HINDOILEXP": null
+    },
+    "confidence_scores": {
+      "SUZLON": 92,
+      "WAAREEENER": 92,
+      "HINDOILEXP": 83
+    },
+    "target_return_pct": {
+      "SUZLON": "+12.7% to exit Rs 60.00",
+      "WAAREEENER": "+11.3% to Rs 3,400 (near-term); +14.7% to Rs 3,500 (extended)",
+      "HINDOILEXP": "+5.9% to Rs 178 (dispute resolution); +10.1% to Rs 185 (full recovery)"
+    },
+    "patterns": {
+      "SUZLON": [
+        "Pattern J (News Catalyst): 195 MW confirmed repeat order from Sunsure",
+        "Pre-results positioning: Q4 board meeting May 25; trading window closed",
+        "Fundamental quality: ROE 46%, ROCE 36.2%, nearly debt-free (Rs 36 Cr)",
+        "9 GW platform milestone = sector re-rating narrative",
+        "PE 23.3 = reasonable for market leader at scale",
+        "52w low Rs 38.20 = significant floor protection (28% below current)"
+      ],
+      "WAAREEENER": [
+        "Pattern G MAXIMUM (FII 10x accumulation: 0.70% to 7.06% in 1 year = highest ever in pipeline)",
+        "NEWS CATALYST: US anti-China solar policy = direct structural beneficiary",
+        "Singapore analyst roadshow May 18-19 = institutional interest confirmed",
+        "Waaree Semicon acquisition May 15 = semiconductor upstream integration",
+        "Largest non-Chinese solar module manufacturer globally",
+        "FY26: Revenue Rs 20,991 Cr, Profit Rs 3,762 Cr, ROE 35.4%, ROCE 42.8%",
+        "RSI ~35-42 recovering from extreme oversold (RSI 20.5 on May 18)",
+        "52w high Rs 3,865 = 27% above current price"
+      ],
+      "HINDOILEXP": [
+        "Pattern I (E&P): WTI $97 above $95 = upstream oil revenue intact",
+        "PE 12.6 = deepest undervaluation in E&P universe",
+        "B-80 DISPUTE UPDATE: third-party crude resale started = workaround found; acute risk diminished",
+        "Nearly debt-free (Rs 50 Cr borrowings only)",
+        "Historical consistency: 63% T+2 win rate = informational positive",
+        "TTM Revenue growth +42%"
+      ]
+    },
+    "macro_context": {
+      "wti_crude": "$97.23 (+0.91%) \u2014 Iran deal hopes reducing war premium; above $95 (Pattern I partially active)",
+      "brent_crude": "$104.09 (+1.47%)",
+      "gold": "$4,528 (-0.32%) \u2014 mild decline, not a caution signal",
+      "sp500_futures": "7,491 (+0.33%) \u2014 positive US backdrop",
+      "nifty": "23,766 (+0.47%) \u2014 broad market positive",
+      "suzlon_results": "Q4 board meeting May 25; 195 MW repeat order confirmed; 9 GW milestone approaching",
+      "hindoilexp_update": "B-80 dispute: third-party crude resale started = operational workaround found",
+      "waaree_catalyst": "US anti-China solar policy + Singapore analyst roadshow + Waaree Semicon acquisition"
+    },
+    "exclusions": {
+      "INOXWIND": "Valid thesis but SUZLON covers same sector with primary catalyst (195 MW order holder). High correlation risk if both included. SUZLON preferred over INOXWIND as direct catalyst play.",
+      "ONGC": "Q4 FY26 preview: profit dip expected. 0/3 historical. Iran deal reducing E&P premium. HINDOILEXP covers E&P theme better.",
+      "HAL": "RSI 58-62 = above ideal entry. FII declining. Not a dip entry day. Confidence 72%.",
+      "MAZDOCK": "BrahMos Vietnam buzz unconfirmed. No Pattern D dip. Confidence 68%.",
+      "GRSE": "Elara Capital SELL target Rs2,230 vs price Rs2,705.",
+      "BEL": "DROP RULE: 0/4 win rate. Re-enter after first WIN.",
+      "PERSISTENT": "PERMANENT EXCLUDE.",
+      "CGPOWER": "PERMANENT EXCLUDE.",
+      "ALL_OMC_REFINERS": "WTI $97 above $95 = retail margin rule active."
     }
   },
   {
@@ -2541,88 +2541,6 @@
     }
   },
   {
-    "date": "2026-06-09",
-    "run_number": 24,
-    "note": "Friday pipeline for Monday open. Nasdaq -4.18% + VIX 21.5 = SEVERE US caution. 0-pick day. HFCL stop triggered (exit Monday). PARAS +14.3% 2-day extended. TEJASNET borderline 85 conf (not strictly >85). Rules 58-60 added.",
-    "recommendations": [],
-    "confidence_scores": {},
-    "patterns": {},
-    "macro_context": {
-      "nifty50": "23,366.70 (-0.21%)",
-      "niftyit": "29,010.30 (-0.99%)",
-      "nasdaq": "25,709.43 (-4.18%) SEVERE DROP",
-      "sp500": "7,383.74 (-2.64%)",
-      "vix": "21.51 (+39.7%) FEAR SPIKE",
-      "gold_5d": "$4,337.10 (-3.09%)",
-      "wti": "$93.09 (-2.04%)",
-      "us_market_caution": "SEVERE (Nasdaq -4.18%, VIX 21.5)",
-      "pattern_o": "INACTIVE (NiftyIT -0.99%)",
-      "pattern_i": "INACTIVE (WTI $93 < $95)",
-      "pattern_k": "NOT APPLIED (gold fell with equities = risk-off)",
-      "ai_tailwind": "ACTIVE (Jensen Huang Jun2026)"
-    },
-    "exclusions": {
-      "PARAS": "R:R 1.59:1 marginal + 10.1% above MA5 + intraday rejection at Rs 994. Step 2.7 soft fail.",
-      "TEJASNET": "Confidence 85 exactly (need strictly >85). Enhanced US caution -15 penalty. Gap-down risk.",
-      "GOCOLORS": "RSI 76.7 approaching ceiling, 11.7% above MA5. Extended.",
-      "STLTECH": "RSI 82.3 AT ceiling + distribution bar Jun5 (-4.96% on 3.05x vol).",
-      "HFCL": "Stop triggered Jun5. EXIT Monday open. No new entry.",
-      "ATHERENERG": "Confidence 83-85%, volume not yet triggered (0.9x Jun5).",
-      "IDEAFORGE": "Upper circuit locked Jun5 (Rule 56 protocol)."
-    },
-    "watchlist": {
-      "PARAS": {
-        "trigger": "Pullback Rs 890-920 + vol <=1.0x + RSI 60-68",
-        "entry": "Rs 895-920",
-        "stop": "Rs 855",
-        "target": "Rs 1100",
-        "rr": "5.0:1 at Rs 910",
-        "confidence_on_trigger": "91-93",
-        "expiry_sessions": 10
-      },
-      "TEJASNET": {
-        "trigger": "Monday Nifty50 open >=23,250 AND TEJASNET opens >=Rs 572",
-        "entry": "Rs 573-580",
-        "stop": "Rs 565",
-        "target": "Rs 629",
-        "rr": "4.4-5.15:1",
-        "confidence_on_trigger": 88,
-        "expiry": "Monday June 9 open only (then re-evaluate)"
-      },
-      "GOCOLORS": {
-        "trigger": "MA5 reset Rs 370-385 + RSI 55-65 + vol <=0.8x down days",
-        "entry": "Rs 378",
-        "stop": "Rs 350",
-        "target": "Rs 430-450",
-        "rr": "2.5-3.0:1",
-        "confidence_on_trigger": "88-90",
-        "expiry_sessions": 10
-      },
-      "ATHERENERG": {
-        "trigger": "Vol >=1.2x on green day above Rs 1000",
-        "entry": "Rs 1000-1035",
-        "stop": "Rs 960",
-        "target": "Rs 1047-1100",
-        "rr": "1.5-1.8:1",
-        "confidence_on_trigger": "83-85",
-        "expiry_sessions": 6
-      },
-      "HFCL": {
-        "action": "EXIT Monday open (stop triggered Jun5)",
-        "realized_gain_approx_pct": 10.2,
-        "reentry_trigger": "Close above MA5 Rs 191 on vol >=0.8x + RSI 55-65",
-        "reentry_entry": "Rs 193-198",
-        "reentry_stop": "Rs 182",
-        "reentry_target": "Rs 220-225"
-      }
-    },
-    "new_rules": {
-      "58": "SEVERE US CAUTION: Nasdaq >3% OR VIX >18 = -15 conf (not -10). Gap-down risk.",
-      "59": "PATTERN K CONTEXT: Only when gold falls while US UP/flat. Not in risk-off selloff.",
-      "60": "INTRADAY REJECTION: Close >2% below intraday high at resistance = seller resistance confirmed."
-    }
-  },
-  {
     "date": "2026-06-08",
     "run_number": 25,
     "recommendations": [],
@@ -2709,6 +2627,88 @@
       "61": "US CAUTION CALIBRATION: When Nifty <1.0% gap-down after Nasdaq >3% drop, apply STANDARD caution (not severe) for NEXT session. India resilience = forward risk reduced.",
       "62": "CIRCUIT UNLOCK PATTERN (RM-10): Post-circuit-lock first free day at 52w high on vol < 1.5x = likely trapped buyers, not new buying. Do NOT enter at resistance. Track as RM-10 for template development.",
       "63": "PARAS TRIGGER EXPIRY: MA5 pullback trigger expires after 8 sessions if zone not touched. At session 8, recalibrate to current MA5 level or evaluate breakout entry."
+    }
+  },
+  {
+    "date": "2026-06-09",
+    "run_number": 24,
+    "note": "Friday pipeline for Monday open. Nasdaq -4.18% + VIX 21.5 = SEVERE US caution. 0-pick day. HFCL stop triggered (exit Monday). PARAS +14.3% 2-day extended. TEJASNET borderline 85 conf (not strictly >85). Rules 58-60 added.",
+    "recommendations": [],
+    "confidence_scores": {},
+    "patterns": {},
+    "macro_context": {
+      "nifty50": "23,366.70 (-0.21%)",
+      "niftyit": "29,010.30 (-0.99%)",
+      "nasdaq": "25,709.43 (-4.18%) SEVERE DROP",
+      "sp500": "7,383.74 (-2.64%)",
+      "vix": "21.51 (+39.7%) FEAR SPIKE",
+      "gold_5d": "$4,337.10 (-3.09%)",
+      "wti": "$93.09 (-2.04%)",
+      "us_market_caution": "SEVERE (Nasdaq -4.18%, VIX 21.5)",
+      "pattern_o": "INACTIVE (NiftyIT -0.99%)",
+      "pattern_i": "INACTIVE (WTI $93 < $95)",
+      "pattern_k": "NOT APPLIED (gold fell with equities = risk-off)",
+      "ai_tailwind": "ACTIVE (Jensen Huang Jun2026)"
+    },
+    "exclusions": {
+      "PARAS": "R:R 1.59:1 marginal + 10.1% above MA5 + intraday rejection at Rs 994. Step 2.7 soft fail.",
+      "TEJASNET": "Confidence 85 exactly (need strictly >85). Enhanced US caution -15 penalty. Gap-down risk.",
+      "GOCOLORS": "RSI 76.7 approaching ceiling, 11.7% above MA5. Extended.",
+      "STLTECH": "RSI 82.3 AT ceiling + distribution bar Jun5 (-4.96% on 3.05x vol).",
+      "HFCL": "Stop triggered Jun5. EXIT Monday open. No new entry.",
+      "ATHERENERG": "Confidence 83-85%, volume not yet triggered (0.9x Jun5).",
+      "IDEAFORGE": "Upper circuit locked Jun5 (Rule 56 protocol)."
+    },
+    "watchlist": {
+      "PARAS": {
+        "trigger": "Pullback Rs 890-920 + vol <=1.0x + RSI 60-68",
+        "entry": "Rs 895-920",
+        "stop": "Rs 855",
+        "target": "Rs 1100",
+        "rr": "5.0:1 at Rs 910",
+        "confidence_on_trigger": "91-93",
+        "expiry_sessions": 10
+      },
+      "TEJASNET": {
+        "trigger": "Monday Nifty50 open >=23,250 AND TEJASNET opens >=Rs 572",
+        "entry": "Rs 573-580",
+        "stop": "Rs 565",
+        "target": "Rs 629",
+        "rr": "4.4-5.15:1",
+        "confidence_on_trigger": 88,
+        "expiry": "Monday June 9 open only (then re-evaluate)"
+      },
+      "GOCOLORS": {
+        "trigger": "MA5 reset Rs 370-385 + RSI 55-65 + vol <=0.8x down days",
+        "entry": "Rs 378",
+        "stop": "Rs 350",
+        "target": "Rs 430-450",
+        "rr": "2.5-3.0:1",
+        "confidence_on_trigger": "88-90",
+        "expiry_sessions": 10
+      },
+      "ATHERENERG": {
+        "trigger": "Vol >=1.2x on green day above Rs 1000",
+        "entry": "Rs 1000-1035",
+        "stop": "Rs 960",
+        "target": "Rs 1047-1100",
+        "rr": "1.5-1.8:1",
+        "confidence_on_trigger": "83-85",
+        "expiry_sessions": 6
+      },
+      "HFCL": {
+        "action": "EXIT Monday open (stop triggered Jun5)",
+        "realized_gain_approx_pct": 10.2,
+        "reentry_trigger": "Close above MA5 Rs 191 on vol >=0.8x + RSI 55-65",
+        "reentry_entry": "Rs 193-198",
+        "reentry_stop": "Rs 182",
+        "reentry_target": "Rs 220-225"
+      }
+    },
+    "new_rules": {
+      "58": "SEVERE US CAUTION: Nasdaq >3% OR VIX >18 = -15 conf (not -10). Gap-down risk.",
+      "59": "PATTERN K CONTEXT: Only when gold falls while US UP/flat. Not in risk-off selloff.",
+      "60": "INTRADAY REJECTION: Close >2% below intraday high at resistance = seller resistance confirmed."
     }
   },
   {
@@ -2936,5 +2936,76 @@
       }
     ],
     "notes": "Run #37: HFCL 88% RM-4 pullback entry (Rs195-202 zone, entry Jun25 open). NIACL stopped -5.03% (insurance sector de-rating). NACLIND conditional +6.01% T+2 exit. Market-wide thin vol systemic."
+  },
+  {
+    "date": "2026-06-30",
+    "run_id": "38-rerun",
+    "run_note": "RE-RUN after SCHNEIDER incorrect pick. All candidates failed mandatory chart gates under new Fix 1/2/3 evidence schema.",
+    "picks": [],
+    "picks_count": 0,
+    "watchlist": [
+      {
+        "symbol": "ATHERENERG",
+        "trigger": "Close above Rs1125 on >= 6.3M vol",
+        "entry_zone": "1120-1130",
+        "stop": 1050.0,
+        "target": 1280.0,
+        "rr": 2.07,
+        "conf": 84,
+        "pattern": "RM-1 continuation + EV policy catalyst",
+        "session": "1/10"
+      },
+      {
+        "symbol": "MOTILALOFS",
+        "trigger": "Close above Rs968.2 on >= 0.8x avg vol",
+        "entry_zone": "962-970",
+        "stop": 895.0,
+        "target": 1090.0,
+        "rr": 1.67,
+        "conf": 82,
+        "pattern": "Rule 80 coil",
+        "session": "8/10"
+      },
+      {
+        "symbol": "TARIL",
+        "trigger": "Close above Rs360 on >= 0.8x avg vol",
+        "entry_zone": "355-365",
+        "stop": 295.0,
+        "target": 420.0,
+        "rr": 0.98,
+        "conf": 79,
+        "pattern": "Power equipment basket",
+        "session": "5/10"
+      }
+    ],
+    "excluded": [
+      {
+        "symbol": "SCHNEIDER",
+        "reason": "Rule 77c FAIL (0/3 stabilization sessions) + Rule 46c R:R 0.207:1",
+        "reentry": "Close > Rs1470 on 2x vol + 3 stabilization sessions"
+      },
+      {
+        "symbol": "ATHERENERG",
+        "reason": "Rule 46c R:R 0.149:1 (52wH only Rs14 above entry)",
+        "reentry": "Watchlist trigger Rs1125"
+      },
+      {
+        "symbol": "APOLLO",
+        "reason": "Rule 77 FAIL (10 LH, 9 LL from Jun 3 peak)",
+        "reentry": "Higher-high + higher-low pair + close > Rs435"
+      },
+      {
+        "symbol": "GABRIEL",
+        "reason": "Rule 46c R:R 0.309:1 (Rs25 upside vs Rs80 risk)",
+        "reentry": "Consolidation + close > Rs1300 on 1.5x vol"
+      },
+      {
+        "symbol": "MOTILALOFS",
+        "reason": "Trigger not fired; R:R 0.43:1 at trigger",
+        "reentry": "Watchlist trigger Rs968.2"
+      }
+    ],
+    "zero_pick_reason": "All candidates failed Fix 3 (R:R via nearest_unbroken_resistance). Market has run 15-25% in 3 weeks; 52wH resistance dense across all candidates.",
+    "key_corrections": "SCHNEIDER prior pick VOIDED: Rule 77c 0/3 stabilization sessions; Rule 46c R:R 0.207:1 vs 2.70 claimed. Jun 30 intraday gap-down -4.24% confirms rolling-top thesis."
   }
 ]

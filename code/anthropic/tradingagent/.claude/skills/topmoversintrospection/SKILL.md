@@ -31,7 +31,7 @@ The output is a set of edits to the RULES LEDGER table in `.claude/agents/india-
 
 ### Step 1 — Fetch Chartink top gainers (fan out subagent)
 
-Spawn ONE subagent to fetch the scanner results. Use Agent tool with `subagent_type: general-purpose`:
+Spawn ONE subagent to fetch the scanner results. Use Agent tool with `subagent_type: general-purpose` and `model: opus` (deeper reasoning required for parsing the screener response and reconciling against the basestock universe fallback):
 
 ```
 Task: Fetch the top gainers from this Chartink screener: <SCANNER_URL>
@@ -62,7 +62,9 @@ Read `.claude/agents/india-stock-recommender.md` and extract the rule ledger tab
 
 ### Step 3 — Fan out subagents to analyze gainers vs rules
 
-Spawn **2 subagents in parallel** (5 gainers each) for efficiency. Each subagent receives:
+Spawn **2 subagents in parallel** (5 gainers each) for efficiency. **Both subagents MUST use `model: opus`** — the analysis requires careful pattern attribution, distinguishing genuine rule failures from coincidental moves, and reasoning about which rules would have fired given T-1 EOD data alone. Sonnet has shown a tendency to over-apply rule fixes without backtest evidence; Opus's deeper reasoning materially improves vote-tally accuracy.
+
+Use Agent tool with `subagent_type: general-purpose` and `model: opus` for each. Each subagent receives:
 
 - Its 5 gainers (symbol, %chg, volume, value Cr)
 - The current rule ledger (compact form)

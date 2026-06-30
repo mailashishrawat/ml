@@ -1,0 +1,2 @@
+symbol,signal_date,entry_date,exit_date,entry,stop,target_cap,exit,exit_reason,ret_pct,drop_5d,rsi_t_minus_2,vol_ratio_t_minus_1,close_in_range_t_minus_1,turnover_20d_cr
+BDL,2026-04-01,2026-04-02,2026-04-07,1174.0,1109.0,1267.92,1235.9,t+2_close,5.27,-12.26,29.4,2.05,0.87,258.9

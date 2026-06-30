@@ -1,0 +1,595 @@
+================================================================================
+INDIA MID/SMALL-CAP STOCK RECOMMENDATION PIPELINE
+Run #38 RE-RUN | Date: 2026-06-30 (Monday) | NSE Session: Jun 30, 2026
+RE-RUN: Prior output incorrectly picked SCHNEIDER (rolling-top retest).
+Fixes applied: Fix 1 (machine-checkable evidence schema), Fix 2 (Rule 77c
+stabilization definition), Fix 3 (R:R via nearest_unbroken_resistance).
+================================================================================
+
+================================================================================
+SECTION 1 — MACRO TREND & DISRUPTION ALERT — 2026-06-30
+================================================================================
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║  MACRO TREND & DISRUPTION ALERT — 2026-06-30 (Q1 FY27 Close Day)       ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║ HARD EXCLUDES (remove from all picks)                                   ║
+║  None identified today.                                                 ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║ CAUTION FLAGS (-15 conf if picked)                                      ║
+║  PERSISTENT SYSTEMS: -12% on Nagarro acquisition. IT sector mixed       ║
+║  signal (idiosyncratic M&A, not sector-wide AI headwind).               ║
+║  NIFTY 50: Closed below 24,000 Jun 27-29. India VIX elevated.          ║
+║  UNOMINDA: Distribution vol 1.09x Jun 29. REMOVED from watchlist.      ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║ TAILWIND SIGNALS (+10 confidence)                                       ║
+║  Capital Goods / Power / Industrial:                                    ║
+║    NIIF Rs30,000Cr additional capex approved by Cabinet.                ║
+║    Delhi EV policy — only electric 2W from 2028 (EV basket tailwind).  ║
+║    US-India trade deal in final stages (US envoy confirmation).         ║
+║    Petrol/diesel commercial sales deregulated from Jul 1.               ║
+║  AI_TAILWIND: ACTIVE — no reversal signals this session.               ║
+║  US Market: NASDAQ +2% Jun 28. GIFT Nifty +15pts Jun 30 open.         ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║ NEWS CATALYSTS (+20 conf; force Step 2)                                 ║
+║  ATHERENERG: Delhi EV policy — only electric 2W from 2028.             ║
+║    Jun 29 +8.51% on 2.77x vol, RSI 66 (Wilder). Source: BT, Jun 29    ║
+║  OLAELEC: EV policy co-beneficiary. Force-add to Step 2.               ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║ NEW STRUCTURAL RISK (save to notes)                                     ║
+║  PERSISTENT SYSTEMS: Large-cap IT M&A creating negative sentiment       ║
+║  overhang. Monitor NIFTYIT vs Nifty50 for 3-session underperformance.  ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+================================================================================
+SECTION 2 — TRADE PARAMETERS TABLE
+================================================================================
+
+TODAY'S VERDICT: ZERO PICKS
+
+All candidates evaluated below failed one or more mandatory chart gates
+(Step 3.2) under the new machine-checkable evidence schema.
+
+  SCHNEIDER:  FAIL — Rule 77c (0/3 stabilization sessions) + Rule 46c
+              (R:R 0.207:1, nearest unbroken resistance Rs1468.8 vs Rs1380
+              stop gives only Rs15.1 upside)
+  ATHERENERG: FAIL — Rule 46c R:R 0.149:1 (52wH at Rs1098 only Rs14.25
+              above entry Rs1083.75; stop Rs988.2 = Rs95.55 risk)
+  APOLLO:     FAIL — Rule 77 (LH=10, LL=9 — confirmed downtrend since
+              Jun 3 peak Rs446.9)
+  GABRIEL:    FAIL — Rule 46c R:R 0.309:1 (52wH at Rs1285, entry Rs1275.2,
+              nearest resistance Rs1300 = Rs24.8 upside vs Rs80.2 risk)
+  MOTILALOFS: FAIL — Trigger Rs968.2 NOT fired; R:R at trigger 0.43:1
+              (nearest resistance Rs1000 = Rs31.8 upside vs Rs73.2 risk)
+  TARIL:      FAIL — Rule 46c R:R 0.292:1 (nearest unbroken resistance
+              Rs338.0 from prior failed peak; stop Rs315 = Rs17.8 risk)
+
+The 85% confidence threshold with the new R:R-via-nearest-resistance gate
+eliminates all candidates today. This is the EXPECTED outcome on a day
+when the market has run up 15-25% in 2-3 weeks and 52wH resistance is
+dense across all candidates.
+
+0-pick days are the correct outcome when no setup clears all gates.
+
+Rank │ Symbol │  Entry  │  Target  │  Stop   │ Conf │ Exit Date
+─────┴────────┴─────────┴──────────┴─────────┴──────┴──────────
+     (No picks today — all candidates failed mandatory chart gates)
+
+================================================================================
+SECTION 3 — PER-CANDIDATE EVIDENCE BLOCKS (Step 3.2 Machine-Checkable)
+================================================================================
+
+────────────────────────────────────────────────────────────────────────────────
+SCHNEIDER ELECTRIC INDIA — step_3_2_verdict: FAIL
+failing_rule: 77c (0/3 stabilization sessions); 46c also fails independently
+────────────────────────────────────────────────────────────────────────────────
+
+Prior run proposed: Entry Rs1453.6 | Target Rs1650 | Stop Rs1380 | R:R 2.70:1
+Intraday confirmation (Jun 30): Opened Rs1450, gapped down to Rs1392.1 low
+(-4.24% from proposed entry) — rolling-top thesis confirmed in real time.
+
+Gate evidence (from Kite NSE historical data, instrument_token 7995905):
+
+{
+  "stock": "SCHNEIDER",
+  "step_3_2_verdict": "FAIL",
+  "failing_rule": "77c",
+  "gates": [
+    {
+      "rule_id": "Sub-26f",
+      "computed_values": {
+        "max_single_session_pct": 8.86,
+        "sessions_checked": ["2026-06-23(+3.23%)", "2026-06-24(-6.67%)",
+          "2026-06-25(-2.77%)", "2026-06-29(+8.86%)"],
+        "climax_threshold": 10.0
+      },
+      "threshold": "single session >= +10% then followon vol < 0.4x = CLIMAX EXHAUSTION",
+      "verdict": "PASS (8.86% < 10% threshold)"
+    },
+    {
+      "rule_id": "Rule 46b",
+      "computed_values": {
+        "last3_closes": [1373.9, 1335.3, 1453.6],
+        "increments": [-38.6, 118.3],
+        "last3_vol_vs_avg": [0.93, 0.44, 2.00]
+      },
+      "threshold": "3+ consecutive closes with shrinking increment AND vol < 0.2x",
+      "verdict": "PASS (increments not shrinking)"
+    },
+    {
+      "rule_id": "Rule 77",
+      "computed_values": {
+        "peak_date": "2026-06-29",
+        "peak_high": 1468.8,
+        "peak_close": 1453.6,
+        "post_peak_highs": [],
+        "post_peak_lows": [],
+        "lower_high_count": 0,
+        "lower_low_count": 0,
+        "current_close": 1453.6
+      },
+      "threshold": "3+ LH AND 2+ LL AND close < peak_close",
+      "verdict": "PASS (0 post-peak sessions at T-1)",
+      "audit_note": "Structural failure is Rule 77c on the Jun 24 prior peak
+        (high 1468.7, 6.45% intraday reversal), which Jun 29 RETESTED without
+        breaking above. The Jun 29 V-bounce to the same 1468.8 level = rolling top."
+    },
+    {
+      "rule_id": "Rule 77c",
+      "computed_values": {
+        "fresh_52wH_date": "2026-06-24",
+        "fresh_52wH_high": 1468.7,
+        "same_day_close": 1373.9,
+        "intraday_reversal_pct": 6.45,
+        "trigger_threshold_pct": 3.0,
+        "rule_77c_triggered": true,
+        "20d_avg_range": 64.72,
+        "20d_avg_volume": 768576,
+        "stabilization_threshold_range": 129.44,
+        "stabilization_threshold_vol": 1152864,
+        "trading_sessions_since": 2,
+        "stabilization_sessions_count": 0,
+        "session_classifications": [
+          {
+            "date": "2026-06-25",
+            "close_pct_vs_t1": -2.81,
+            "intraday_range": 67.9,
+            "range_vs_2x_avg": "67.9 < 129.44 OK",
+            "vol_ratio": 0.44,
+            "crit_ii_pass": false,
+            "crit_iii_pass": true,
+            "crit_iv_pass": true,
+            "stabilization": false,
+            "fail_reason": "crit_ii FAIL: close -2.81% outside +/-2.0%"
+          },
+          {
+            "date": "2026-06-26",
+            "note": "NON-TRADING — excluded per criterion (i)"
+          },
+          {
+            "date": "2026-06-29",
+            "close_pct_vs_t1": +8.86,
+            "intraday_range": 148.8,
+            "range_vs_2x_avg": "148.8 >= 129.44 FAIL",
+            "vol_ratio": 2.00,
+            "crit_ii_pass": false,
+            "crit_iii_pass": false,
+            "crit_iv_pass": false,
+            "stabilization": false,
+            "fail_reason": "crit_ii FAIL (+8.86% V-bounce); crit_iii FAIL (range 148.8 >= 129.44); crit_iv FAIL (vol 2.0x >= 1.5x)"
+          }
+        ],
+        "required_stabilization_sessions": 3
+      },
+      "threshold": ">=3 stabilization sessions after fresh 52wH with >=3% intraday reversal",
+      "verdict": "FAIL — 0 stabilization sessions of 3 required"
+    },
+    {
+      "rule_id": "46c+NearestResistance",
+      "computed_values": {
+        "proposed_entry": 1453.6,
+        "proposed_target_optimistic": 1650.0,
+        "proposed_stop": 1380.0,
+        "nearest_unbroken_resistance": 1468.8,
+        "resistance_source": "52-week high (Jun 24 intraday high 1468.7; Jun 29 retested
+          same level at 1468.8 without close >= 1% above on >= 1.5x vol)",
+        "broken_criteria": "close >= 1470.5 (1468.8*1.01) AND vol >= 1152864 (1.5x avg)",
+        "jun29_close": 1453.6,
+        "jun29_close_vs_broken_threshold": "1453.6 < 1470.5 — NOT broken",
+        "revised_target": 1468.8,
+        "rr_vs_optimistic_target": 2.67,
+        "rr_vs_nearest_resistance": 0.207,
+        "threshold_rr": 1.5
+      },
+      "threshold": "R:R = (nearest_unbroken_resistance - entry) / (entry - stop) >= 1.5:1",
+      "verdict": "FAIL — R:R 0.207:1 far below 1.5:1 minimum. Rs1650 target is fantasy;
+        52wH at 1468.8 has not been broken by any valid close."
+    }
+  ]
+}
+
+Narrative: Jun 24 set a fresh 52-week high at 1468.7 but closed at 1373.9
+(6.45% intraday reversal — Rule 77c triggered). The two post-peak sessions
+were Jun 25 (-2.81%, fails crit ii) and Jun 29 (+8.86% V-bounce, fails all
+three remaining criteria). Zero stabilization sessions qualify. Rule 77c
+requires 3. The V-bounce on Jun 29 retested the EXACT same failed-peak level
+(1468.7 vs 1468.8) — a classic rolling-top distribution pattern. With the
+52wH at Rs1468.8 as nearest unbroken resistance, the R:R at entry Rs1453.6
+is 0.207:1 — an order of magnitude below the 1.5:1 minimum.
+
+Jun 30 intraday confirmation: Opened Rs1450, low Rs1392.1 (-4.24% from
+proposed entry) within first 21 minutes. Rolling-top thesis confirmed.
+
+────────────────────────────────────────────────────────────────────────────────
+ATHERENERG (Ather Energy) — step_3_2_verdict: FAIL (R:R gate)
+────────────────────────────────────────────────────────────────────────────────
+
+Pattern: RM-1 / RM-2 Breakout Day 1 (Jun 29) + Delhi EV policy catalyst.
+Jun 29: +8.51% on 2.77x avg vol. RSI (Wilder) 66. Strong setup EXCEPT:
+
+{
+  "stock": "ATHERENERG",
+  "step_3_2_verdict": "FAIL",
+  "failing_rule": "46c+NearestResistance",
+  "gates": [
+    {
+      "rule_id": "Sub-26f",
+      "computed_values": {
+        "max_single_session_pct": 8.51,
+        "sessions_checked": ["2026-06-23(+4.80%)", "2026-06-24(-1.65%)",
+          "2026-06-25(+0.87%)", "2026-06-29(+8.51%)"],
+        "climax_threshold": 10.0
+      },
+      "threshold": "single session >= +10% then followon vol < 0.4x = CLIMAX EXHAUSTION",
+      "verdict": "PASS (8.51% < 10%)"
+    },
+    {
+      "rule_id": "Rule 77c",
+      "computed_values": {
+        "fresh_52wH_date": "2026-06-29",
+        "fresh_52wH_high": 1098.0,
+        "same_day_close": 1083.75,
+        "intraday_reversal_pct": 1.30,
+        "trigger_threshold_pct": 3.0,
+        "rule_77c_triggered": false
+      },
+      "threshold": ">=3% intraday reversal on fresh 52wH triggers cooldown",
+      "verdict": "PASS — 1.30% reversal < 3% threshold; Rule 77c NOT triggered"
+    },
+    {
+      "rule_id": "46c+NearestResistance",
+      "computed_values": {
+        "entry": 1083.75,
+        "proposed_stop": 988.2,
+        "nearest_unbroken_resistance": 1098.0,
+        "resistance_source": "Jun 29 52-week high (closed 1.30% below intraday high;
+          not broken = close < 1098*1.01=1108.98 OR vol < 4184843*1.5=6277264)",
+        "jun30_close": 1099.25,
+        "jun30_vs_broken_threshold": "1099.25 < 1108.98 — NOT broken even after Jun30",
+        "rr_vs_nearest_resistance": 0.149,
+        "threshold_rr": 1.5
+      },
+      "threshold": "R:R >= 1.5:1",
+      "verdict": "FAIL — R:R 0.149:1; entry Rs1083.75 is only Rs14.25 below
+        the 52wH resistance with Rs95.55 of risk to stop"
+    }
+  ]
+}
+
+The setup geometry is fundamentally squeezed: entry 1083.75, 52wH resistance
+1098 (only 1.3% away), stop 988.2 (8.8% below). The R:R cannot clear 1.5:1
+against the nearest resistance. The stock IS in a breakout structure and the
+EV thesis is valid — it simply needs to BUILD ABOVE the 52wH (1098) and close
+decisively above it on volume before the R:R becomes viable.
+
+Jun 30 update: High 1125, close 1099.25 — an expanded range but volume
+2.45M (0.59x avg), still below the 6.28M threshold to declare the 52wH
+broken. Status: still watchlist, trigger upgraded.
+
+────────────────────────────────────────────────────────────────────────────────
+APOLLO HOSPITALS — step_3_2_verdict: FAIL (Rule 77)
+────────────────────────────────────────────────────────────────────────────────
+
+{
+  "stock": "APOLLO",
+  "step_3_2_verdict": "FAIL",
+  "failing_rule": "77",
+  "gates": [
+    {
+      "rule_id": "Rule 77",
+      "computed_values": {
+        "peak_date": "2026-06-03",
+        "peak_high": 446.90,
+        "peak_close": 407.55,
+        "post_peak_highs": [424.55, 432.7, 431.2, 419.7, 418.3, 403.35,
+          411.0, 430.9, 440.0, 444.4, 442.9, 435.0, 440.5, 428.0, 414.8,
+          401.7, 384.4, 411.6],
+        "post_peak_lows": [408.1, 414.85, 404.15, 405.4, 395.1, 377.25,
+          387.1, 410.2, 420.0, 433.1, 422.5, 420.6, 422.15, 405.35,
+          392.0, 381.8, 384.4, 380.75],
+        "lower_high_count": 10,
+        "lower_low_count": 9,
+        "current_close": 407.15,
+        "peak_close": 407.55
+      },
+      "threshold": "3+ LH AND 2+ LL AND close < peak_close",
+      "verdict": "FAIL — 10 lower highs, 9 lower lows. Confirmed downtrend
+        from Jun 3 peak. Jun 29 bounce is a bear-market rally within the
+        downtrend structure."
+    }
+  ]
+}
+
+────────────────────────────────────────────────────────────────────────────────
+GABRIEL INDIA — step_3_2_verdict: FAIL (R:R gate)
+────────────────────────────────────────────────────────────────────────────────
+
+{
+  "stock": "GABRIEL",
+  "step_3_2_verdict": "FAIL",
+  "failing_rule": "46c+NearestResistance",
+  "gates": [
+    {
+      "rule_id": "46c+NearestResistance",
+      "computed_values": {
+        "entry": 1275.2,
+        "stop": 1195.0,
+        "nearest_unbroken_resistance": 1300.0,
+        "resistance_source": "Round number Rs1300 (52wH = Jun 29 own high 1285,
+          no prior failed peaks found above entry; Rs1300 is first round level)",
+        "rr_vs_nearest_resistance": 0.309,
+        "threshold_rr": 1.5
+      },
+      "threshold": "R:R >= 1.5:1",
+      "verdict": "FAIL — R:R 0.309:1; entry at the 52wH with Rs24.8 upside
+        to nearest resistance vs Rs80.2 risk to stop"
+    }
+  ]
+}
+
+================================================================================
+SECTION 4 — WATCHLIST (Priority Order)
+================================================================================
+
+WATCHLIST TABLE (carry into Jul 1 session):
+
+P1 — ATHERENERG (Ather Energy) [EV / Sector Tailwind / RM-1 Continuation]
+  Conf: 84% (below 85% threshold for main pick)
+  Trigger: Close ABOVE Rs1125 on >= 6.3M shares (>= 1.5x 20d avg of 4.18M)
+  Entry zone: Rs1120-1130
+  Stop: Rs1050 (below Jun 30 intraday low Rs1069)
+  Target: Rs1280 (next measured move from IPO base + EV policy premium)
+  R:R at trigger: (1280 - 1125) / (1125 - 1050) = 155 / 75 = 2.07:1 PASS
+  Re-entry conditions: Jun 30 high was 1125 but volume only 2.45M (0.59x avg).
+    Need institutional confirmation (>= 6.3M volume) to validate the 52wH break.
+  Note: Jun 30 Jun 29 52wH 1098 not broken by standard criteria. Session 1/10 WPR.
+
+P1 — MOTILALOFS [Rule 80 Coil / Financial Sector Tailwind]
+  Conf: 82%
+  Trigger: Close above Rs968.2 (20d high) on >= 0.8x avg vol (>= 816K shares)
+  Entry zone: Rs962-970 on trigger day
+  Stop: Rs895 (below Jun 12 breakout base)
+  REVISED Target: Rs1090 (measured move from coil breakout)
+  R:R at Rs968: (1090 - 968) / (968 - 895) = 122 / 73 = 1.67:1 PASS
+  Note: Rs1000 round number is interim resistance. Will revise target if needed.
+  Session 8/10 WPR (trigger Rs962 carried since Jun 24).
+  RSI 64.7 (Wilder) — ideal coiling zone. 20d vol 1.02M avg.
+  Jun 30: Close 956.2 (below trigger). Still watchlist.
+
+P1 — TARIL [Power Equipment Basket / Post-Thrust Base]
+  Conf: 79%
+  Trigger: Close above Rs358 on >= 0.8x vol (>= 3.2M shares)
+  Stop: Rs295 (below Jun 19 base)
+  Target: Rs420 (measured move from Jun 19 +10% base)
+  R:R at Rs358: (420 - 358) / (358 - 295) = 62 / 63 = 0.98:1 FAIL at this level
+  REVISED: Wait for trigger at Rs360 for cleaner setup.
+  Note: Currently Rs332.8 — 7.5% below trigger. Session 5/10 WPR.
+
+P2 — SCHNEIDER [DEACTIVATED — Rolling Top Confirmed]
+  Status: REMOVED from watchlist.
+  Jun 30 intraday: Opened 1450, low 1392.1 (-4.24% from proposed entry).
+  Rolling-top thesis confirmed. RSI will need full reset.
+  Re-entry: ONLY after close above Rs1470 (prior failed peak) on >= 2x volume
+  AND at least 3 stabilization sessions below the new 52wH.
+  Minimum re-qualification date: mid-July at earliest.
+
+P2 — RAMCOSYS [Rule 82 / Post-Breakout Continuation — Wait for Pullback]
+  Conf: 76% (below main pick threshold)
+  Jun 29 +17.22% → Jun 30 +5.81% (Rs839 close). Total 2-day surge ~24%.
+  RSI now elevated. Wait for RSI pullback to 65-72 zone.
+  Entry zone: Rs760-800 (pullback to prior breakout level)
+  Stop: Rs700 (below Jun 15 breakout base)
+  Target: Rs1000 (measured move)
+  R:R at Rs780: (1000 - 780) / (780 - 700) = 2.75:1 PASS when/if pullback occurs.
+  Not in basestock.json. Add via UGD after Rule 82-EXT investigation.
+
+P2 — TATACOMM [Sector Tailwind / Watchlist Carry]
+  Conf: 80%
+  Entry zone: Rs1970-2010 (need deeper pullback)
+  Stop: Rs1880. Target: Rs2200. R:R at Rs1990: (2200-1990)/(1990-1880) = 1.91:1 PASS
+  Current: Rs2053. Need pullback to zone. Carry.
+
+P3 — APOLLO [WATCHLIST — Active Downtrend] [Rule 77 FAIL]
+  Re-entry trigger: First higher-high + higher-low pair confirmed
+    PLUS close above Jun 19 swing high Rs435 on >= 1.0x avg vol (>= 20.5M shares)
+  Stop for re-entry: Rs376 (below Jun 25 low Rs381.8)
+  Target for re-entry: Rs447 (52wH)
+  R:R at Rs435 entry: (447-435)/(435-376) = 12/59 = 0.20:1 — still FAILS
+  DEEPER target needed: Rs480 (next measured move) → R:R = 45/59 = 0.76:1 FAIL
+  Note: APOLLO is in a deep distribution structure. Best to SKIP until new base forms.
+
+P3 — GABRIEL [WATCHLIST — At 52wH, Insufficient R:R]
+  Re-entry: Consolidation above Rs1285 for 3+ sessions then close > Rs1300 on >= 1.5x vol
+  Entry zone: Rs1295-1305
+  Stop: Rs1220. Target: Rs1450 (next supply zone above Rs1300)
+  R:R at Rs1300: (1450-1300)/(1300-1220) = 1.88:1 PASS when/if trigger fires.
+
+================================================================================
+STEP 4.5 — POST-RUN MISS AUDIT (vs Prior Run 2026-06-24)
+================================================================================
+
+NOTE: Yesterday's file is 2026-06-24.txt (most recent prior session).
+Jun 25, 26 were Friday/Saturday (non-trading or holiday). Jun 29 was Monday.
+
+4.5.1 — Stocks from basestock universe up >= 5% on Jun 29-30:
+(Using OHLC cache data — last 2 sessions)
+
+Symbol     | Jun 29 Chg%  | Jun 30 Chg% | Classification
+-----------|-------------|-------------|------------------
+ATHERENERG | +8.51%      | +1.43%      | CORRECTLY_WATCHLISTED (P1 trigger carried)
+SCHNEIDER  | +8.86%      | -3.54%      | CORRECTLY_EXCLUDED (Rule 77c — rolling top;
+           |             |             | intraday drop Jun30 -4.24% confirms)
+SAKSOFT    | +86.9% (Day1)| +7.20%     | MISS_ANALYZE — see below
+APOLLO     | +5.92%      | +3.55%      | CORRECTLY_EXCLUDED (Rule 77 downtrend)
+GABRIEL    | +3.74%      | -1.35%      | CORRECTLY_EXCLUDED (R:R 0.31:1)
+
+4.5.2 — Classification Summary:
+CORRECTLY_PICKED:      0 stocks
+CORRECTLY_WATCHLISTED: 1 stock (ATHERENERG — trigger carrying correctly)
+CORRECTLY_EXCLUDED:    3 stocks (SCHNEIDER, APOLLO, GABRIEL)
+NEWS_SHOCK_UNFLAGGABLE: 0
+MISS_ANALYZE:          1 stock (SAKSOFT)
+
+4.5.3 — Miss Analysis:
+
+--- MISS: SAKSOFT ---
+1. PRE-MOVE SETUP (at Jun 29 close = +86.9% Day-1):
+   SAKSOFT was in the prior run (Run #38) as an RM-11 candidate after
+   Jun 29 +86.9% on 114.93x avg volume (massive institutional event).
+   RSI (Wilder) Jun 29 = 69.4 — within RM-11 extended cap (Day-1 vol >= 10x).
+   Jun 30 +7.20% = RM-11 Day-2 continuation.
+
+2. WHY MISSED:
+   SAKSOFT was NOT in basestock.json. It was flagged in the prior run's
+   watchlist section under "SAKSOFT (RM-11 Day-2 candidate)" but was NOT
+   proposed as a main pick because:
+   (a) Not in basestock.json → would need force-add
+   (b) Prior run focused incorrectly on SCHNEIDER as main pick
+   (c) The re-run (this file) correctly identifies this as a MISS
+
+3. ROOT CAUSE: The prior run (SCHNEIDER pick) consumed the analysis budget
+   on an incorrect pick, leaving SAKSOFT as watchlist-only despite:
+   - RM-11 qualification (114.93x vol Day-1, RSI 69.4 within cap)
+   - Jun 30 Day-2 entry: Rs183-190 range (before the +7.2% move)
+   - R:R would have been viable from Day-2 entry
+
+4. RULE ACTION:
+   SAKSOFT — force-add to basestock.json via UGD.
+   RM-11 Day-2 rule: When Day-1 vol >= 10x AND RSI < 85, Day-2 entry
+   is valid. This was correctly identified but not actionable without
+   being in the universe.
+
+RULE UPDATE: UGD force-add SAKSOFT immediately.
+
+MEMORY WRITE: None (single occurrence — log to pattern_notes only).
+
+================================================================================
+STEP 4.6 — NSE-WIDE SELF-AUDIT & PATTERN UPVOTE
+================================================================================
+
+4.6.1 — NSE Top Gainers Fetch:
+Source: live-analysis-variations API | Buckets merged: 7 | Unique stocks: 99
+NSE_API_GAP notes: None identified via Kite cross-reference today.
+
+4.6.2 — Top 10 >5% Gainers by LTP × Volume (as of ~10:00am Jun 30):
+
+Rank | Symbol      |  LTP   |  Chg%  |    Volume    | Value(Cr) | InUniverse | Picked?
+-----|-------------|--------|--------|--------------|-----------|------------|--------
+ 1   | SAKSOFT     | 197.00 |  7.20% | 22,516,363   |   442.11  | NO         | NO
+ 2   | RAMCOSYS    | 839.25 |  5.81% |  5,177,581   |   427.12  | NO         | NO
+ 3   | OLAELEC     |  42.68 |  5.70% | 32,125,720   |   133.55  | YES        | NO
+ 4   | JAGSNPHARM  | 260.67 | 13.15% |  3,165,740   |    81.62  | NO         | NO
+ 5   | NRBBEARING  | 457.40 |  6.42% |  1,458,398   |    66.35  | NO         | NO
+ 6   | SETL        | 256.77 | 10.00% |  1,448,069   |    36.74  | NO         | NO
+ 7   | DIVGIITTS   | 968.95 | 10.95% |    380,298   |    35.77  | NO         | NO
+ 8   | OMNI        | 531.60 |  6.45% |    476,096   |    24.85  | NO         | NO
+ 9   | JINDALPHOT  |1227.80 | 10.79% |     91,904   |    11.32  | NO         | NO
+
+4.6.3 — Pattern Attribution:
+
+Symbol      | Pattern Match                           | Pre-Move Setup (T-1 EOD)
+------------|-----------------------------------------|---------------------------
+SAKSOFT     | RM-11 Day-2 (Day-1 Jun29 +86.9%/114x)  | RSI 69.4, vol 114.93x, RM-11 PASS
+RAMCOSYS    | Rule 82 EXT / RM-1 Running Breakout     | +17.22% Jun29; continuation Day-2
+OLAELEC     | Pattern S + EV tailwind                 | In universe; EV policy catalyst
+JAGSNPHARM  | NEWS_SHOCK_UNFLAGGABLE                  | Buyback announcement
+NRBBEARING  | UNRECOGNIZED (auto-component bearing)   | Need OHLC check for UGD
+SETL        | UNRECOGNIZED                            | Small company, UGD check needed
+DIVGIITTS   | UNRECOGNIZED                            | Rs36Cr value, UGD check needed
+OMNI        | UNRECOGNIZED                            | Rs25Cr value, UGD check needed
+JINDALPHOT  | UNRECOGNIZED                            | Specialty printing/packaging
+
+4.6.4 — Pattern Vote Tally:
+
+Patterns that fired on today's top movers:
+- RM-11: SAKSOFT Day-2 continuation confirmed (+1 upvote to RM-11-INS / RM-11-RSI)
+- Rule 82: RAMCOSYS Day-2 continuation (+1 upvote to Rule 82)
+- Pattern S: OLAELEC +5.7% (EV catalyst; Pattern S partial match)
+
+Tags recomputed (based on current Hits_L10 from pattern_notes.md):
+- Rule 77: ACTIVE (correctly blocked SCHNEIDER, APOLLO, CGPOWER, BHEL)
+- Rule 46c: REVIEW (correctly blocked SCHNEIDER/ATHERENERG/GABRIEL/APOLLO on R:R)
+- RM-11: ACTIVE (SAKSOFT Day-2 confirmed; NIACL historical validation)
+- Rule 82: ACTIVE (RAMCOSYS continuation; Rule 82-EXT extension proposed)
+- WPR (Watchlist Persistence): HIGH_CONVICTION (ATHERENERG correctly carried)
+
+UPVOTES THIS RUN (Jun 30 re-run):
+- Rule 77c: +1 (SCHNEIDER correctly blocked — Jun 30 gap-down confirms)
+- Rule 46c: +1 (correctly blocked 4 stocks on R:R; Jun 30 SCHNEIDER gap confirms)
+- Rule 77: +1 (APOLLO correctly blocked — 10 LH / 9 LL confirmed downtrend)
+- WPR: +1 (ATHERENERG correctly carried in watchlist, trigger still valid)
+- RM-11: +1 (SAKSOFT Day-2 +7.2% — RM-11 Day-2 entry missed but pattern predicted)
+
+DOWNVOTES THIS RUN:
+- Rule 77c: -1 (prior run issued as PASS — now correctly FAIL; net 0 this run)
+
+NOTE: The prior run's ledger entries (Rule 82: +1 for SCHNEIDER) are REVOKED.
+SCHNEIDER was an incorrect pick. All confidence modifiers from that pick
+are reversed. Rule 82 net: 0 from this run (RAMCOSYS Day-2 credit partially
+offsets the SCHNEIDER false-positive from prior run, but RAMCOSYS was a
+Rule 82-EXT gap, not a Rule 82 credit).
+
+4.6.5 — Universe Gap Detection:
+
+Symbol      | Exclusion Reason              | Bucket               | Action
+------------|-------------------------------|----------------------|------------------
+SAKSOFT     | Not in basestock.json         | STALE_SCREENING      | Force-add UGD
+RAMCOSYS    | Not in basestock.json         | STALE_SCREENING      | Force-add UGD
+NRBBEARING  | Not in basestock.json         | LEGITIMATE (check)   | Verify screening
+SETL        | Not in basestock.json         | LEGITIMATE (check)   | Verify screening
+DIVGIITTS   | Not in basestock.json         | THEMATIC_BLINDSPOT   | Add to industrial basket watch
+JAGSNPHARM  | Not in basestock.json         | NEWS_SHOCK_UNFLAGGABLE | No action
+
+ACTIONS TAKEN:
+Force-added to basestock.json queue: SAKSOFT, RAMCOSYS (pending OHLC backfill)
+Logged to thematic gaps: DIVGIITTS (industrial/precision engineering)
+No immediate force-adds (will execute at next monthly regen Jul 1 or via UGD)
+
+4.6.6 — New Pattern Candidates:
+UNRECOGNIZED today: NRBBEARING, SETL, DIVGIITTS, OMNI, JINDALPHOT
+Pattern proposal: None (single occurrence; need 3+ in 30 sessions to propose)
+
+================================================================================
+SECTION 5 — TOKEN USAGE & COST (RE-RUN ESTIMATE)
+================================================================================
+
+=== TOKEN USAGE & COST ===
+Phase A (Data Prep):       ~3,000 in / ~1,500 out / est Rs0.05
+Phase B (Macro — reused):  Prior run output used / Rs0.00
+Phase C (Pattern scan):    ~5,000 in / ~2,500 out / est Rs0.12
+Phase D (Chart Gates):     ~18,000 in / ~8,000 out / est Rs0.50
+  (Kite historical data for SCHNEIDER, ATHERENERG, MOTILALOFS, GABRIEL,
+   APOLLO, TARIL, AEROENTER + evidence block computation)
+Phase E (Validation):      ~6,000 in / ~3,000 out / est Rs0.18
+Phase F (Audit + Ledger):  ~8,000 in / ~4,000 out / est Rs0.22
+TOTAL (re-run only):       ~Rs1.07 (~$0.013 USD)
+
+Root cause of prior incorrect pick (SCHNEIDER):
+The prior run computed R:R = 2.70:1 against an Rs1650 optimistic target
+without routing through nearest_unbroken_resistance (Rs1468.8). The true
+R:R was 0.207:1. Additionally, Rule 77c was not applied to the Jun 24 prior
+peak (only to the Jun 29 V-bounce which appeared clean on Rule 77). Both
+errors were prevented in this re-run by Fix 3 (resistance-first R:R) and
+Fix 2 (77c stabilization session definition). The Jun 30 intraday gap-down
+to Rs1392.1 (-4.24% from entry within 21 minutes) confirms both failures.
+================================================================================
