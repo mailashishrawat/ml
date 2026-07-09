@@ -1,0 +1,170 @@
+═══════════════════════════════════════════════════════════════════════════════
+INDIA STOCK RECOMMENDER · 2026-07-08 · Run #41
+═══════════════════════════════════════════════════════════════════════════════
+
+VERDICT: ZERO-PICK DAY
+
+Only 1 candidate reached Phase D (LODHA, RM-2 Breakout Day-2, Phase C conf 92).
+It failed two hard downside gates:
+  - Rule 26e (Volatility Floor): 3 HVD@≥5% in 68-session history vs 11 required
+    under proportional thin-history adjustment (68/252 × 40).
+  - Rule 46c (R:R): entry Rs1097, stop Rs1045 (MA5-based), measured-move target
+    Rs1150 → R:R 1.02 vs 1.5 floor. Extended above MA5 (4.5% gap, Rule 26g
+    flagged) with SIDEWAYS UT1 + 0.89x thin vol left no room. UT-RELAX-1
+    (R:R floor 1.2 in STRONG_UP + vol ≥1.2x) NOT applicable.
+  - Rule 46d exemption NOT applicable: RM-2 template (not RM-1/RM-11), no T1/T2
+    catalyst, vol 0.89x < 1.5x, no WPR-P1 fire.
+  - UT-RELAX-5 publish relaxation NOT applicable (SIDEWAYS, no T1/T2).
+
+Downside gates are never relaxed by doctrine. LODHA routed to watchlist.
+
+────────────────────────────────────────────────────────────────────────────────
+1. MARKET CONTEXT (from Phase B macro-scan)
+────────────────────────────────────────────────────────────────────────────────
+
+AI DISRUPTION STATUS ...... AI_TAILWIND (active)
+US MARKET STATUS .......... neutral (US-India tariff friction backdrop)
+GOLD CAUTION .............. false
+
+TAILWIND SIGNALS
+  - IT_SERVICES  (+15) — AI_TAILWIND + NiftyIT reversal session 3 bullish close
+                        (HCLTECH +3.00%, TECHM +2.92%, INFY +2.84% Jul 7)
+  - NBFC         (+10) — Times Business Jul 8: NBFC credit growth 14.2%
+                        to Rs58.61L cr
+  - TATA_GROUP    (+8) — Tata Power 2x profits / Rs1L cr rev by FY30 guidance
+  - EV_2W         (+5) — EV policy T1 catalyst active through ~Jul 14
+
+HARD EXCLUDES ............. MCX, BSE, NIACL, ICICIGI, HDFCLIFE
+CAUTION FLAGS ............. ATHERENERG (SHARE_SALE_OVERHANG — Rs1900cr QIP,
+                          resistance Rs1073.4); TATAMOTORS/TMPV/TMCV/M&M/
+                          TATASTEEL (US-India tariff friction on exporters)
+
+NEWS CATALYSTS (force-added into Phase C):
+  - TATAPOWER   T2 BULLISH  (Times Business Jul 8 — FY30 guidance)
+  - ATHERENERG  T1 BEARISH  (Rs1900cr QIP, SHARE_SALE_DILUTION sub-tag)
+  - BAJFINANCE  T2 BULLISH  (NBFC credit growth sector-wide)
+  - HCLTECH     T2 BULLISH  (NiftyIT reversal + AI_TAILWIND)
+  - TECHM       T2 BULLISH  (NiftyIT reversal + AI_TAILWIND)
+  - INFY        T2 BULLISH  (NiftyIT reversal + AI_TAILWIND)
+
+────────────────────────────────────────────────────────────────────────────────
+2. FINAL PICKS
+────────────────────────────────────────────────────────────────────────────────
+
+  (none — zero-pick day, see verdict above)
+
+────────────────────────────────────────────────────────────────────────────────
+3. CARRY POSITIONS
+────────────────────────────────────────────────────────────────────────────────
+
+  DIXON      RM-1_CARRY   close Rs13,242.00   vol 1.31x   RSI 69.1
+             Original entry from Jul 7 RM-1 main pick.
+             Stop Rs12,121   Target Rs15,323   Exit Jul 9 (per WPR).
+             Action: HOLD.
+
+────────────────────────────────────────────────────────────────────────────────
+4. WATCHLIST (persistence per Rule WPR + Rule 82 framing reset)
+────────────────────────────────────────────────────────────────────────────────
+
+Symbol       Template          Trigger                                          Notes
+LODHA        RM-2              entry Rs1050 (MA5 pullback) OR                  Phase D chart-gate FAIL
+                               fresh break >Rs1108 on ≥1.5x vol                 (26e + 46c). 20dH=52wH=Rs1107.6.
+                               stop Rs995, target Rs1150                        Watch 10 sessions per WPR.
+SWIGGY       Rule-80-Coil      break >Rs270 on ≥1.5x vol, stop Rs250            Coil 1.4% dist_20dH. RSI 62.9. Vol 2.65x Jul 7.
+RITES        RM-1              pullback into Rs225-230 (MA5), stop Rs210,      NEWS_PRICED_IN (-10) after Jul 1 +14% catalyst.
+                               target Rs265                                      Jul 7 fresh 20dH break on 9.44x vol.
+63MOONS      Rule-80-Coil      break >Rs735 on ≥1.5x vol, stop Rs680            RSI 68.4. dist_20dH +3.08%.
+ABDL         Rule-80-Coil      per pattern-scan trigger                         Watchlist carry.
+DIACABS      Rule-80-Coil      per pattern-scan trigger                         Watchlist carry.
+SWANCORP     Rule-80-Coil      per pattern-scan trigger                         Watchlist carry.
+TEXRAIL      Rule-80-Coil      per pattern-scan trigger                         Watchlist carry.
+WELCORP      Rule-80-Coil      per pattern-scan trigger                         Watchlist carry.
+TATAPOWER    RM-5-Catalyst     green day close >Rs383 (MA5) on ≥1.2x vol         MANUAL ADD (user Jul 8). T2 BULL catalyst
+             (oversold-bounce)  AND RSI reclaim >40, stop Rs368,                   (Tata Power FY30 2x profits, ₹1L cr rev).
+                                target Rs410 (MA50 reversion)                      Chart oversold: close Rs377.20, RSI 31.6,
+                                                                                    -7.77% off 20dH, UT1=SIDEWAYS. Wait for
+                                                                                    tape confirmation before entry — do NOT
+                                                                                    knife-catch on the announcement alone.
+AEQUS        RM-1-Coil-Break   Breakout entry: green close >Rs248 on ≥1.5x vol   MANUAL ADD (user Jul 8). Aerospace / precision
+             (Aerospace         + RSI 60-75, stop Rs215, target Rs275             mfg thematic (Boeing/Airbus supplier,
+              thematic          Pullback entry: Rs228-232 (MA5 hold + green)      Belagavi SEZ, defense vertical). Listed
+              Tier-D 26e)                                                          2025-12-10, 142 sessions of OHLC backfilled
+                                                                                    from yfinance. Rule 26e PASS via Tier D
+                                                                                    (recent-listing thematic): 14 HVD@≥5% in
+                                                                                    last 64 sess (Tier A also passes). Chart
+                                                                                    T-1: close Rs231.89, RSI 60.7, UT1=UP,
+                                                                                    dist_20dH -6.08%. Jul 8 intraday high
+                                                                                    Rs266.59 (potential breakout in progress).
+                                                                                    Confidence cap 85% (Tier D). NEWS MONITOR:
+                                                                                    permanent scan flag in Step 1.5 for
+                                                                                    aerospace/eVTOL/UAV/MoD-order catalysts.
+
+HARD-EXCLUDE BUCKET
+  ATHERENERG   SHARE_SALE_OVERHANG   Do not re-enter until Rs1073.4 resistance
+                                     reclaimed on volume + 30 sessions elapsed
+                                     from Jul 7 QIP announce OR placement close.
+
+────────────────────────────────────────────────────────────────────────────────
+4.5 MISS AUDIT (T-0 gainers cross-check)
+────────────────────────────────────────────────────────────────────────────────
+
+T-0 Chartink 5%+ gainers with Rs1cr liquidity — top-25 attribution:
+
+Rank  Symbol       %Chg    Close     Category
+  1.  ZSARACOM    +20.00  Rs12,404   UNIVERSE_GAP (illiquid, vol 1,477 — likely SME)
+  2.  SHAREINDIA  +20.00  Rs164.91   UNIVERSE_GAP (broker; not in basestock)
+  3.  ITDC        +19.99  Rs702.80   UNIVERSE_GAP (tourism/PSU; not in anchors)
+  4.  DBSTOCKBRO  +16.96  Rs42.14    UNIVERSE_GAP (micro-cap broker)
+  5.  IOLCP       +14.25  Rs165.04   UNIVERSE_GAP (chemicals — basket has NACLIND only)
+  6.  NAUKRI      +13.10  Rs1159.45  UNIVERSE_GAP (Info Edge — high-cap add candidate)
+  7.  KOTIC       +11.51  Rs178.79   UNIVERSE_GAP
+  8.  PWL         +10.13  Rs148.78   UNIVERSE_GAP
+  9.  SHIVAUM     + 9.99  Rs440.90   UNIVERSE_GAP
+ 10.  METROGLOBL  + 9.90  Rs146.36   UNIVERSE_GAP
+ 11.  (next 15 mostly UNIVERSE_GAP small-caps)
+ 12.  RITES       + 8.92  Rs235.43   WATCHLIST_HIT (in Phase C watchlist; carried in Section 4)
+ 13.  SWIGGY      + 7.21  Rs266.27   WATCHLIST_HIT (in Phase C watchlist; carried in Section 4)
+ 25.  AEGISVOPAK  + 5.13  Rs294.32   IN_UNIVERSE_NOT_PICKED (scanned, did not template-match)
+
+Miss-audit category counts (T-0 top-25):
+  UNIVERSE_GAP ............ 22   (small/mid-caps not in basestock anchors)
+  WATCHLIST_HIT ............ 2   (correctly held as pending entries)
+  IN_UNIVERSE_NOT_PICKED ... 1   (AEGISVOPAK — noted for pattern-scan review)
+
+Note: Because Jul 8 session may have been in-progress at run time, the T-0
+scan snapshot reflects the latest completed session (Jul 7) for many rows.
+Attribution logic is unaffected — the categorization holds regardless of the
+reference session, and no MISS_ANALYZE outcomes arose.
+
+────────────────────────────────────────────────────────────────────────────────
+4.6 RULES LEDGER — VOTE UPDATES THIS RUN
+────────────────────────────────────────────────────────────────────────────────
+
+Rule    Change             Reason
+26e     +1 upvote  (18/3)  LODHA correctly blocked on thin-history HVD floor
+46c     +1 upvote  (11/2)  LODHA correctly blocked on R:R 1.02 vs 1.5 floor
+UT-1    +1 upvote  ( 6/0)  LODHA SIDEWAYS classification (HL=2 kept it out of
+                            STRONG_UP) correctly denied UT-RELAX-1/2/5
+WPR     +1 upvote  (13/2)  DIXON RM-1 CARRY correctly persisted from Jul 7;
+                            all watchlist symbols accounted for, no silent drops
+
+Rules Status snapshot (post-update):
+  HIGH_CONVICTION: 26e (+15), Sub-26f (+9), 46c (+9), WPR (+11)
+  REVIEW: 77 (+0 — 77d already promoted ACTIVE Jul 2), NEWS-CAT (+1)
+
+────────────────────────────────────────────────────────────────────────────────
+4.7 FILES WRITTEN THIS RUN
+────────────────────────────────────────────────────────────────────────────────
+
+  data/dailygainers.csv          +25 rows tagged t0_5pct_liq1cr
+  out/stockparam_final.csv      +117 rows (39 cols, T-1 Jul 7)
+  daily_recommendations.json     +1 entry (zero-pick day, null outcome maps)
+  .claude/agents/india-stock-recommender.md  ledger updated (4 rules)
+  .cache/run/2026-07-08/         phase_{a,b,c,d,e,f}_done sentinels
+
+────────────────────────────────────────────────────────────────────────────────
+DISCLAIMER
+────────────────────────────────────────────────────────────────────────────────
+For informational and research purposes only. Validate with your own research
+before investing. Past pattern performance does not guarantee future results.
+═══════════════════════════════════════════════════════════════════════════════

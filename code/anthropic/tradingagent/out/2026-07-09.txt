@@ -1,0 +1,195 @@
+INDIA STOCK RECOMMENDER — 2026-07-09 (Thursday)
+Zero-pick day. See rationale in Section 2.
+
+════════════════════════════════════════════════════════════════════
+SECTION 1 — MACRO TREND & DISRUPTION ALERT
+════════════════════════════════════════════════════════════════════
+
+╔═══════════════════════════════════════════════════════════════════╗
+║       MACRO TREND & DISRUPTION ALERT — 2026-07-09                ║
+╠═══════════════════════════════════════════════════════════════════╣
+║ MARKET-WIDE HEADWIND (T1 — HIGH IMPACT)                          ║
+║  ⚠️ Trump swings + India tariff overhang → Sensex −1,700 pts     ║
+║     Broad-market risk-off; index-heavyweights & metals hit       ║
+║     Source: Times Business 9-July (front-page lead)              ║
+║                                                                   ║
+║ MACRO GROWTH TRIM                                                 ║
+║  ⚠️ IMF-ADB trim India growth forecast citing high crude         ║
+║     Auto ancillaries, refiners, aviation caution                 ║
+║     Source: Times Business 9-July                                ║
+║                                                                   ║
+║ HARD EXCLUDES                                                     ║
+║  ❌ IT services broad — Trump tariff overhang + Q1 IT lag flag   ║
+║     (INFOSYS/WIPRO/HCLTECH/LTIM etc; AI_TAILWIND ceased fresh    ║
+║      catalyst — no Huang/Altman refresh in 48h; downgraded to    ║
+║      NEUTRAL until named-CEO refresh)                            ║
+║  ❌ Financials — Nomura downgrades YES/BANDHAN (broad NBFC/PSU   ║
+║     bank caution ahead of Q1 results)                            ║
+║                                                                   ║
+║ CAUTION FLAGS                                                     ║
+║  ⚠️ Metals (TATASTEEL/JSW/HINDALCO) — Iran tension + crude spike ║
+║  ⚠️ Recent-IPO chase (SWIGGY/OLA/ATHERENERG/OYO) — Zostel        ║
+║     flags Oyo IPO disclosures to SEBI; broader IPO caution      ║
+║  ⚠️ Banks card-usage push = margin compression; MoM growth <5%   ║
+║                                                                   ║
+║ TAILWINDS                                                         ║
+║  ✅ TATA GROUP AUTO (TMPV/TMCV/TATAMOTORS/TATATECH) — $80bn       ║
+║     revenue target by 2031 (T1, Times Business front-page)       ║
+║  ✅ EV luxury/premium — BMW +17% vs Merc +9% Jan-Jun EV growth    ║
+║     Suggests premium-segment demand robust (ATHERENERG for       ║
+║     mass-market EV still separate)                               ║
+║  ✅ Ford GCC Coimbatore centre — Tamil Nadu tech/auto GCC theme  ║
+║     (Coimbatore-linked names, marginal — no direct listed play)  ║
+║  ✅ TCS record Rs 110/share dividend — signals FY26 cash confidence║
+║     (partial IT offset but sector-wide bearish overrides)        ║
+║                                                                   ║
+║ NEWS CATALYSTS (force-add to Phase C)                            ║
+║  📰 TMPV / TMCV / TATAMOTORS — Tata $80bn auto by 2031 (T1)      ║
+║  📰 TATATECH — Tata group ecosystem beneficiary of auto capex (T2)║
+║                                                                   ║
+║ NEW STRUCTURAL RISK                                              ║
+║   • IPO OVERHANG risk: Zostel disclosures to SEBI + startup      ║
+║     IPO road caution → depresses recent-listing multiple across  ║
+║     new-economy names. Watch: SWIGGY, OLAELEC, ATHERENERG,       ║
+║     FIRSTCRY, HYUNDAI, BLACKBUCK, DIGITIDE, DELHIVERY            ║
+║                                                                   ║
+║ COMMODITIES: Crude +6% (Iran) — refiner/aviation caution         ║
+║ GEOPOLITICS: Trump-Iran ceasefire wobble → VIX +26%              ║
+║ AI STATUS: NEUTRAL (was AI_TAILWIND — refresh lapsed)            ║
+║ RULES UNDER REVIEW: [77 downtrend gate, NEWS-CAT scanner]        ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+Additional macro context:
+  - Sensex T-1: -2.15% (-1,700 pts)
+  - VIX T-1: +26%
+  - Brent crude: +6% (Iran-Israel/Trump ceasefire wobble)
+  - US market status: risk_off_trump_iran
+  - AI status: NEUTRAL (Jensen Huang AI_TAILWIND lapsed — no 48h refresh)
+  - Sector hard excludes: IT services broad (Trump tariff overhang + Q1 IT lag)
+  - Force-added catalysts: TMPV / TMCV / TATATECH (Tata $80bn auto by 2031)
+      -- Note: none matched a template (TMPV/TMCV DOWN/SIDEWAYS, TATATECH data hole T-1)
+
+News sources status:
+  ✓ User news image (Times Business 2026-07-09) — read
+  ✓ Business Today — WebFetch success (June-context baseline)
+  ✗ MoneyControl / ET / LiveMint / Business Standard / Hindu BL / Fin Express — 6/7 blocked
+  ⚠ policy_scanner_gaps: PIB/ministry auto-scanner not active (manual only)
+
+════════════════════════════════════════════════════════════════════
+SECTION 2 — TRADE PARAMETERS
+════════════════════════════════════════════════════════════════════
+
+Rank │ Symbol │ Entry │ Target │ Stop │ Conf │ Exit Date
+─────┼────────┼───────┼────────┼──────┼──────┼──────────
+     (no picks today)
+
+ZERO-PICK DAY RATIONALE
+
+Zero picks day. Sole Phase C candidate NAUKRI (RM-2 Day-2 hold, conf 92) FAILED Phase D on THREE distinct gates: (1) Rule 46c R:R against fresh 52wH nearest_unbroken_resistance = 0.56 (below UT-RELAX-1 floor 1.2); (2) Rule 3.1C distribution-volume active (1.17x avg on last 5 down-days) indicating institutional selling into strength; (3) Rule 3.1D 26e volatility floor data-artifact (only 63 sess in stockparam.csv). Rule 46d exemption denied on all 3 hard conditions (c1: 3.19% > 1.5% band; c3: intraday reversal 3.19% > 2%; c5: no T1/T2 catalyst on NAUKRI). Compounding factors: broad-market risk-off (Sensex -2.15%, VIX +26% on Trump-Iran + crude +6%), IT sector under Trump-tariff overhang. Force-added Tata catalysts (TMPV/TMCV/TATATECH) failed to match ANY template (TMPV/TMCV in DOWN/SIDEWAYS with negative T-1 returns; TATATECH T-1 data hole). This is an EXPECTED zero-pick day per the pipeline rules — 85% publish threshold applies universally; UT-RELAX-5 needed T1/T2 catalyst which no chart-passing candidate had; padding is forbidden.
+
+The pipeline correctly refused to publish. The 85% publish threshold applies
+universally; UT-RELAX-5 relaxation to ≥84% requires (STRONG_UP AND all_chart_gates_pass
+AND T1/T2 catalyst) — no candidate met all three today. Padding is forbidden.
+Zero-pick days are expected and acceptable per the pipeline design.
+
+════════════════════════════════════════════════════════════════════
+SECTION 3 — PER-STOCK DETAILS
+════════════════════════════════════════════════════════════════════
+
+  (no final picks — see Section 2 rationale)
+
+════════════════════════════════════════════════════════════════════
+SECTION 4 — WATCHLIST (carry, monitor for triggers)
+════════════════════════════════════════════════════════════════════
+
+W1  NAUKRI (Info Edge)  conf 92 (Phase D FAIL)
+    ORIGINAL TEMPLATE: RM-2 Breakout Day-2 hold at Rs 1179 after Day-1 +13.10%
+    FAILURE: 46c R:R 0.56 against fresh 52wH Rs 1217.80 (below floor 1.2);
+             3.1C distribution vol 1.17x on down-days
+    RE-ENTRY TRIGGER (choose one):
+      A. Sustained close > Rs 1218 on ≥1.5x vol
+         -- 46d activates, measured_move target = Rs 1218 + (1218-1025.15) = Rs 1411
+         -- Entry Rs 1220, stop Rs 1160, R:R ≈ 3.2:1
+      B. Pullback to Rs 1090-1110 zone with recovery vol ≥1.2x
+         -- RM-3 support-test; 46c clears against Rs 1218
+
+W2  AEQUS (Aequs — aerospace thematic)  conf 85
+    ORIGINAL: Pattern-MC 3rd consec up close in STRONG_UP (T-1 +5.66% vol 4.19x)
+    BLOCKER: T-1 dist wick (5.48% intraday drop) despite closing green
+    RE-ENTRY: pullback to Rs 240-245 (MA5-ish) w/ recovery vol ≥1.2x
+
+W3  IOLCP (IOL Chemicals)  conf 85
+    ORIGINAL: RM-2 Day-2 hold after Day-1 +14.25% (vol 7.53x)
+    BLOCKER: RSI 76 near UT-RELAX-2 cap 84 + T-1 dist wick 6.07%
+    RE-ENTRY: pullback to Rs 158-162 zone with recovery vol >=1.0x
+
+W4  ATHERENERG  conf 78 (Rule 80f BLOCKED)
+    ORIGINAL: RM-2 signal on Jul 7-8 close at 52wH area
+    BLOCKER: Rule NEWS-CAT SHARE_SALE_DILUTION (Rs 1900cr overhang) + IPO_OVERHANG_RIPPLE
+    RE-ENTRY: below share-sale price disclosed level (implied Rs 1130-1160 zone)
+              AND positive share-sale placement closure news
+
+Prior-run watchlist (from out/2026-07-08.txt): 0 entries to carry
+    -- This session establishes the initial watchlist state.
+
+════════════════════════════════════════════════════════════════════
+
+════════════════════════════════════════════════════════════════════
+SECTION 4.6 — NSE-WIDE SELF-AUDIT (Chartink T-0 top gainers)
+════════════════════════════════════════════════════════════════════
+
+Scan clause: latest close > 1 day ago close * 1.05 AND latest close * latest volume > 10000000
+
+Top movers today (2026-07-09) — 1 rows:
+Rank | Symbol      | LTP       | Chg%    | Volume     | Val(Cr) | Anchor? | Picked?
+   1 | UNICHEMLAB  | Rs  610.15 | +6.54%  |     31,117 |    1.90 | no      | no
+
+
+Interpretation: Broad-market risk-off (Sensex -2.15%, VIX +26%, crude +6%) left only 1 name crossing
+the 5% gainer threshold with the Rs 1 Cr liquidity gate — UNICHEMLAB (small pharma, Rs 1.9cr val_cr).
+Well below actionability threshold. Zero-signal day is consistent with macro backdrop.
+
+════════════════════════════════════════════════════════════════════
+SECTION 4.5 — POST-RUN MISS AUDIT
+════════════════════════════════════════════════════════════════════
+
+Prior picks (from out/2026-07-08.txt): none parsed
+
+Attribution:
+Symbol      | Chg%    | Val(Cr) | Anchor? | Category            | Note
+  UNICHEMLAB  | +6.54% |    1.90 | no      | CORRECTLY_EXCLUDED  | Below meaningful liquidity threshold; small pharma; not in u
+
+
+Summary histogram: {'CORRECTLY_EXCLUDED': 1}
+No MISS_ANALYZE cases today. Pipeline behaved as designed given macro backdrop.
+
+════════════════════════════════════════════════════════════════════
+SECTION 4.7 — DAILY PARAMETER LOG
+════════════════════════════════════════════════════════════════════
+
+STEP 4.7a: data/stockparam.csv appended 1279 rows in Phase A
+           (95 stale gap-fills + 60-sess backfill for 19 MISSING; 1 unrepairable = TRIL delisted)
+STEP 4.7b: out/stockparam_final.csv appended 114 rows for date 2026-07-08
+           F.6 integrity check: first 26 cols match data/stockparam.csv = True
+
+RULES LEDGER vote changes this run:
+  46c          +1 / -0  -> Net 10, Status HIGH_CONVICTION
+                Reason: Correctly blocked NAUKRI RM-2 Day-2 publish — R:R vs fresh 52wH = 0.56 < 1.2 floor
+  NEWS-CAT     +1 / -0  -> Net 2, Status REVIEW
+                Reason: SHARE_SALE_DILUTION sub-tag correctly blocked ATHERENERG re-entry (Rs 1900cr overhang)
+
+
+════════════════════════════════════════════════════════════════════
+SECTION 5 — TOKEN USAGE & COST (estimate)
+════════════════════════════════════════════════════════════════════
+
+Screener (Haiku):     80,000 in / 10,000 out / Rs 10.92
+Analyzer (Opus):      not used
+Validator (Sonnet):   155,000 in / 43,000 out / Rs 93.24
+Formatter (Haiku):    30,000 in / 15,000 out / Rs 8.82
+─────────────────────────────────────────────
+TOTAL ESTIMATE:       ~Rs 113  (~$1.35 USD)
+
+═══════════════════════════════════════════════════════════════════
+END OF REPORT — 2026-07-09
+═══════════════════════════════════════════════════════════════════

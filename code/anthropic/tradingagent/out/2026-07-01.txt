@@ -1,0 +1,77 @@
+STEP 4.7 — DAILY PARAMETER LOG: Appended 42 rows for 2026-06-30 to data/stockparam.csv (total rows now: 42). Backfill: none. Skipped 5 symbols missing cache, 182 symbols without Jun 30 data.
+
+STEP 4.7 — COVERAGE DIAGNOSIS (honest report):
+  Basestock symbols: 229
+  Cache files present: 224 (5 symbols missing OHLC cache)
+  Cache files WITH Jun 30 row: 42 (~18%)
+  Cache files stale at Jun 29 or earlier: 182 (~81%)
+
+  Root cause: .cache/ohlc/ has not been refreshed for most symbols today.
+  Only ~18% of cache files contain the T-1 (Jun 30) row.
+
+  IMPACT: stockparam.csv covers only the freshest 42 symbols this run.
+  This is a CACHE FRESHNESS issue, not a Step 4.7 pipeline defect.
+
+  FIX FORWARD: Phase A (data prep) should refresh .cache/ohlc/ for ALL
+  basestock symbols to T-1 before Phase F runs Step 4.7. Add a pre-flight
+  check in scripts/compute_stockparam.py that logs which symbols lack the
+  target date and (optionally) triggers a yfinance backfill for those.
+
+  Follow-up recorded here for the next-run agent to act on.
+STEP 4.7 — SCHEMA MIGRATION: extended stockparam.csv from 35 to 39 columns. Backfilled 42 rows with microtrend/global/news/structural summaries sourced from phase_b_macro.json.
+
+STEP 4.7 — ARCHITECTURE MIGRATION (Jul 1): stockparam.csv split into two files:
+  • data/stockparam.csv       — 26 cols, 42 rows, Phase A write (earliest possible, no Step 1.5 dep)
+  • out/stockparam_final.csv  — 39 cols, 42 rows, Phase F.6 write (superset, macro + pipeline decisions)
+  Consistency invariant: first 26 cols match byte-for-byte between both files.
+  Rationale: earliest-possible technical substrate survives any downstream pipeline crash.
+STEP 4.7a — WEEK BACKFILL: Appended rows for Jun 22-26 2026 to data/stockparam.csv. Per-date counts: {22: 186, 23: 186, 24: 186, 25: 186, 26: 107}. Total rows in file now: 894. Skipped: 1 symbols missing across the week.
+STEP 4.7a — WEEK BACKFILL: Appended rows for Jun 22-26 2026 to data/stockparam.csv. Per-date counts: {22: 186, 23: 186, 24: 186, 25: 186, 26: 107}. Total rows in file now: 893. Skipped: 0 symbols missing across the week (all 186-107 rows per date available from cache).
+
+================================================================================
+STEP 4.7b — WEEK BACKFILL: Appended 851 rows for Jun 22-26 2026
+================================================================================
+
+TASK: Backfill out/stockparam_final.csv (39 cols) for Jun 22-26 to sync with data/stockparam.csv (26 cols).
+
+EXECUTION SUMMARY:
+  - Schema verified: 39-col header matches specification.
+  - Loaded 893 rows from data/stockparam.csv (ground truth for cols 1-26).
+  - Pre-existing: 42 rows (Jun 30 only, no duplicates added).
+  - Appended: 851 rows across Jun 22-26 (first-write-wins duplicate protection).
+  - Consistency invariant: 0 mismatches against data/stockparam.csv.
+
+PER-DATE APPEND COUNTS:
+  Jun 22: 186 rows (6 macro cols filled from out/2026-06-22.txt; 7 BACKFILL_NA pipeline cols)
+  Jun 23: 186 rows (6 macro cols filled from out/2026-06-23.txt; 7 BACKFILL_NA pipeline cols)
+  Jun 24: 186 rows (6 macro cols filled from out/2026-06-24.txt; 7 BACKFILL_NA pipeline cols)
+  Jun 25: 186 rows (all 13 new cols = BACKFILL_NA; pipeline not run that day)
+  Jun 26: 107 rows (all 13 new cols = BACKFILL_NA; pipeline not run that day)
+  ────────────────────────────────────
+  TOTAL:  851 rows
+
+MACRO COL SOURCING (Jun 22-24):
+  - microtrend_disruption_summary: Extracted from STEP 1.5 CAUTION FLAGS section
+  - global_overnight_cues_summary: Synthesized from macro block market status + AI_TAILWIND + NiftyIT
+  - news_and_trends_summary: Extracted from NEWS CATALYSTS section
+  - structural_risk_summary: Extracted from NEW STRUCTURAL RISK section
+  - catalyst_tag, sector_tailwind: Set to BACKFILL_NA (no per-symbol overrides required)
+  - rm_classification, rule_80_pass, watchlist_state, chart_read_verdict, failing_rule, ut_relax_applied, pipeline_decision: All set to BACKFILL_NA per Step 4.7.1 backfill fidelity rule
+
+MACRO COL SOURCING (Jun 25-26):
+  - All 13 new columns set to BACKFILL_NA (no out/*.txt files exist; pipeline not run)
+
+FINAL CONSISTENCY CHECK:
+  import csv
+  d = {(r[0],r[1]): r for r in list(csv.reader(open('data/stockparam.csv')))[1:]}
+  f = {(r[0],r[1]): r[:26] for r in list(csv.reader(open('out/stockparam_final.csv')))[1:]}
+  mismatches = sum(1 for k in f if k in d and d[k] != f[k])
+  Result: mismatches = 0 ✓
+
+FILE STATE POST-BACKFILL:
+  - out/stockparam_final.csv: 894 lines (1 header + 42 Jun 30 + 851 Jun 22-26)
+  - Last row: 2026-06-26, TRENT (vol=0, BACKFILL_NA pipeline cols as expected)
+
+BYTE-FOR-BYTE INVARIANT STATUS:
+  Preserved: First 26 columns match data/stockparam.csv exactly (0 mismatches).
+

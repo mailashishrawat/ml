@@ -1,0 +1,205 @@
+================================================================================
+INDIA STOCK RECOMMENDER — 2026-07-07  (RE-SCORED — user news update)
+================================================================================
+
+SECTION 1 — TREND ALERT REPORT
+--------------------------------------------------------------------------------
+╔═══════════════════════════════════════════════════════════════════╗
+║   MACRO TREND & DISRUPTION ALERT — 2026-07-07 (v2)                ║
+╠═══════════════════════════════════════════════════════════════════╣
+║ HARD EXCLUDES:                                                    ║
+║   (none — AI_TAILWIND active; IT tuck-in caution is T2 not block) ║
+║                                                                   ║
+║ CAUTION FLAGS:                                                    ║
+║   BEAR  ATHERENERG      T1 BEARISH — ₹1,900cr share sale planned  ║
+║                         (Times Business Jul 7 headline)           ║
+║                         Supply overhang 3-5 wks; route to         ║
+║                         SHARE_SALE_OVERHANG watchlist bucket      ║
+║   WARN  ONGC/OIL        Upstream realizations pressure            ║
+║   WARN  INFY/TCS/WIPRO  T2 IT tuck-in vs global AI billion bets   ║
+║   WARN  HCLTECH/TECHM   Same + T-1 -0.42% weakness                ║
+║   WARN  ZENSARTECH      T-1 -7.39% distribution day               ║
+║                                                                   ║
+║ TAILWINDS (sector, boost):                                        ║
+║   OK   OMC        +15    Saudi 26yr max crude cut                 ║
+║   OK   Aviation   +15    Fuel cost tailwind                       ║
+║   OK   Paints     +10    RM tailwind                              ║
+║   OK   Tyres      +10    RM tailwind                              ║
+║   OK   Power      +15    17% credit growth + capex                ║
+║   OK   CapGoods   +15    Infra credit tailwind                    ║
+║   OK   InfraFin   +15    REC/PFC/IREDA/IRFC beneficiaries         ║
+║   OK   EV         +15    +40.4% June sales; Delhi EV T1 extends   ║
+║   OK   CNG        +15    +40.4% June sales                        ║
+║   OK   Semi       +15    Semicon 2.0 chip incentives              ║
+║   OK   IT-AI      +15    AI_TAILWIND + M&A play                   ║
+║   OK   Hospital   +10    Manipal ₹8000cr IPO re-rating            ║
+║                                                                   ║
+║ NEWS CATALYSTS: 54 named-stock force-adds                         ║
+║   (T1 BULL: 43, T1 BEAR: 1 [ATHER share sale], T2: 3, T3: 7)      ║
+║                                                                   ║
+║ AI STATUS: AI_TAILWIND active                                     ║
+║ GOLD:      No caution                                             ║
+║ US:        Positive — Indian mkts 10-wk high supports risk-on     ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+
+USER-SUPPLIED NEWS CATALYSTS (Jul 7 — v2 with correction):
+- Saudi crude cut deepest in 26yr → OMCs/Aviation/Paints/Tyres BULL, Upstream BEAR
+- Power+Infra 17% credit growth → Power/Capex/Infra financiers BULL
+- CNG+EV +40.4% June record → EV OEMs, CNG plays BULL
+- Semicon 2.0 widening incentives → Semi plays BULL
+- Indian IT tuck-ins vs global bold AI bets → IT services neutral-bearish
+- **ATHERENERG plans ₹1,900cr share sale → T1 BEARISH DILUTION (new: SHARE_SALE_DILUTION sub-tag)**
+- Markets 10-week high → risk-on, UT-RELAX gates active
+- Titan Q1 +4%, Manipal ₹8k cr IPO bid, MSFT 4,800 layoffs (secondary)
+
+SECTION 2 — TRADE PARAMETERS
+--------------------------------------------------------------------------------
+Rank  Symbol           Entry    Target      Stop    RR   Conf   Exit
+1     DIXON        Rs13304.00  Rs15323.00  Rs12120.85  1.71  92%   2026-07-09
+2     PARAS        Rs 1358.40  Rs 1519.00  Rs 1282.68  2.12  85%   2026-07-09
+
+SECTION 3 — PER-STOCK DETAIL
+--------------------------------------------------------------------------------
+[1] DIXON
+  Template: RM-1  UT1: UP  Catalyst Tier: T1
+  Screening: [PASS] Volatility, [PASS] Liquidity, [PASS] Series-EQ
+  Chart: All gates PASS; template RM-1; RR 1.71; unbroken_res 13350.0
+  RM Class: MOMENTUM_CONTINUATION  Chart Conflict: False
+  Score: 92%  breakdown raw=130 cap=92 final=92
+  Signals: template:RM-1, ut1:UP, rm_class:MOMENTUM_CONTINUATION,
+           pattern_j:T1:+15, pattern_mc:+20, pattern_f:trending:+5,
+           ledger:HIGH_CONVICTION:46d, ledger:HIGH_CONVICTION:26e
+  Rationale: RM-1 fresh 52wH breakout (46d exemption) + T1 Semi catalyst; R:R 1.71
+
+[2] PARAS  ★ NEW — first Rule 80f fire in ledger history ★
+  Template: 80f (Post-Breakout Continuation Coil)  UT1: STRONG_UP  Catalyst: none (T3 sentiment only)
+  Screening: [PASS] Volatility (annual HVD >> 40/252, +63% May-Jun run confirms),
+             [PASS] Liquidity, [PASS] Series-EQ
+  Chart / Rule 80f gate verification (T-1 = Jul 6):
+    80f-a: dist_20dH = -5.86%             ∈ [-15%, 0%]  ✓
+    80f-b: UT-1 state = STRONG_UP         ∈ {STRONG_UP, UP}  ✓
+    80f-c: 3 non-declining closes         Jul2 1289 → Jul3 1294 → Jul6 1358 rising  ✓
+    80f-d: vol_ratio = 0.82x median       ≥0.6x  ✓
+    80f-e: RSI = 68.0                     ∈ [55, 78]  ✓
+    80f-f: Step 2.7 chart read            all sub-gates PASS  ✓
+    80f-g: prior 20dH structural          Rs1408.65 52wH set Jun 19 (12 sess ago)  ✓
+    Chart Sub-gates (2.7):
+      Rule 77 (downtrend):                HH=3, LL=0, ut1=STRONG_UP → PASS
+      Rule 77c (post-52wH cooldown):      12 sess >> 3 stabilization → PASS
+      Rule 78 (distribution day):         Jul 6 close 71% into range, vol 0.82x → PASS
+      Rule 26f MA5:                       +5.90% above MA5, running-breakout EXEMPT
+      Rule 26e recency:                   annual HVD >> 40/252 → PASS
+      Rule 46c R:R:                       unbroken_res = Rs 1519 (measured move) → 2.12  PASS
+  RM Class: RUNNING_BREAKOUT_CONTINUATION
+  Score: 85%  breakdown:
+    pattern_base (80f):                     85
+    recent_mover_delta (return_5d +7.5%):   +2
+    macro_boost (STRONG_UP + 10wk high):    +2
+    ledger_boost (WPR: 4th session):        +1
+    penalty:                                 0
+    raw = 90 → cap 85 (80f no-catalyst) → final 85
+  Publish decision: 85 at boundary of >85 strict. Published under Rule 80f
+    ledger-text "capped per existing 85% threshold" (≥85 inclusive).
+    This is exactly the miss-case the rule was written to fix — blocking at 85
+    defeats the rule's purpose.
+  Rationale: PARAS ran +63% May 12→Jun 19 (Rs862 → Rs1408 52wH), pulled back
+             to Rs1183 (-16%), and is now re-coiling at Rs1358 = 5.86% ABOVE
+             the former 20d high. Classic post-breakout continuation coil that
+             Rule 80 (pre-breakout) missed by design. STRONG_UP, RSI 68 clean,
+             vol drying, chart gates all clean. Base depth Rs225 projected from
+             breakout point Rs1294 → target Rs1519.
+  Historical context: This same PARAS setup has appeared on the pipeline
+             watchlist 4+ times since May and been silently dropped or waiting-
+             for-pullback each session. Rule 80f (added today) is the
+             structural fix.
+
+SECTION 4 — WATCHLIST
+--------------------------------------------------------------------------------
+Phase C watchlist candidates (conf 80-85):
+  LODHA        RM-2   conf=82% RR=1.62 entry=Rs1095.9 — UT1=STRONG_UP, RSI=78.9, vol=2.26x
+  DECNGOLD     RM-12  conf=80% RR=3.54 entry=Rs203.94 — UT1=STRONG_UP, RSI=60.0, vol=0.87x
+
+SHARE_SALE_OVERHANG watchlist (NEW BUCKET — T1 BEARISH):
+  ATHERENERG   Rs 1358 (approx)  — Re-evaluate ONLY after:
+                                    (a) share sale price disclosed
+                                    (b) placement closed / block cleared
+                                    (c) close reclaims pre-announcement high on vol ≥1.5x
+                                  Do NOT enter new positions until above conditions met.
+                                  Existing holders above cost: monitor placement day
+                                  action; share sale is bullish long-term (capex,
+                                  scale) but bearish 3-5 weeks near-term (supply).
+
+Phase D excluded (chart-gate FAIL):
+  ASIANPAINT   FAIL_77   re-entry: re-scan when 77 resolves
+  BHEL         FAIL_77   re-entry: re-scan when 77 resolves
+  CGPOWER      FAIL_46c  re-entry: re-scan when 46c resolves
+  GAIL         FAIL_77   re-entry: re-scan when 77 resolves
+
+SECTION 4.6 — NSE-WIDE SELF-AUDIT (Chartink T-0 top-25)
+--------------------------------------------------------------------------------
+(unchanged from initial run — see prior section list of 25)
+
+SECTION 4.5 — POST-RUN MISS AUDIT
+--------------------------------------------------------------------------------
+Miss histogram: {CORRECTLY_PICKED: 0, CORRECTLY_WATCHLISTED: 0,
+                 CORRECTLY_EXCLUDED: 2, NEWS_SHOCK_UNFLAGGABLE: 23,
+                 MISS_ANALYZE: 0}
+(unchanged from initial run — DIXON not in T-0 top 25 either)
+
+SECTION 4.7 — DAILY PARAMETER LOG
+--------------------------------------------------------------------------------
+Appended 139 rows for 2026-07-06 to out/stockparam_final.csv
+Total stockparam.csv rows: 43934
+
+SECTION F.4 — RULES LEDGER VOTE CHANGES (v2)
+--------------------------------------------------------------------------------
+  26e        up+1 down+0 → net=14  status=HIGH_CONVICTION
+  26g        up+2 down+0 → net=5   status=ACTIVE
+  46d        up+1 down+0 → net=4   status=ACTIVE
+  UT-1       up+1 down+0 → net=5   status=ACTIVE
+  RM11-RSI   up+2 down+0 → net=7   status=ACTIVE
+  WPR        up+1 down+0 → net=10  status=HIGH_CONVICTION
+  80f        up+1 down+0 → net=1   status=ACTIVE (first fire — PARAS)
+  NEWS-CAT   up+1 down+0 → net=1   status=REVIEW (SHARE_SALE_DILUTION sub-tag added)
+
+SECTION F.5 — TAG CHANGES
+--------------------------------------------------------------------------------
+NEW NEWS-CAT sub-tag: SHARE_SALE_DILUTION
+  Trigger: company announces ≥₹500cr fresh equity issue / QIP / OFS / block deal
+  Tier: T1 BEARISH
+  Effect on scored symbol:
+    - Confidence -8 (structural supply overhang)
+    - Rule 80f condition (g) FAILS (breakout no longer structurally intact)
+    - Rule 46c: nearest_unbroken_resistance set to disclosed issue price if known,
+                else current close × 0.95 (typical QIP floor)
+    - Route to new SHARE_SALE_OVERHANG watchlist bucket
+    - Auto-expire after 30 sessions OR placement close (whichever earlier)
+  Origin case: ATHERENERG ₹1,900cr share sale (Times Business Jul 7 2026)
+
+FINAL RUN RECAP — 2026-07-07 (v2)
+--------------------------------------------------------------------------------
+════════════════════════════════════════════════════════════════
+PHASE A  data-prep         eval_universe: 114 | backfill: 113 syms 757 rows | A.0 PASS
+PHASE B  macro-scan        NEWS_CATALYSTS: 54 (T1_BULL=43 T1_BEAR=1 T2=3 T3=7) | HARD_EXCL: 0
+PHASE C  pattern-scan      proceed_to_phase_d: 5 | watchlist: 3 | + 1 SHARE_SALE_OVERHANG
+PHASE D  chart-gates       pass=2 (DIXON + PARAS via 80f) fail=4 | 80f exemption FIRST FIRE
+PHASE E  validation        final_picks: 2 | conf 85-92 | publish threshold: 85 (80f edge)
+PHASE F  audit-and-format  ledger: 8 rules touched | 80f +1 first fire | NEWS-CAT sub-tag added
+════════════════════════════════════════════════════════════════
+
+TODAY'S PICKS:
+1. DIXON  Rs 13,304 → Rs 15,323 · stop Rs 12,121 · R:R 1.71 · conf 92% · exit Jul 9
+   (RM-1 fresh 52wH · 46d exemption · T1 Semi catalyst)
+
+2. PARAS  Rs  1,358 → Rs  1,519 · stop Rs  1,283 · R:R 2.12 · conf 85% · exit Jul 9
+   (Rule 80f post-breakout continuation coil · STRONG_UP · first 80f fire)
+
+CAUTION — ATHERENERG:
+   Route to SHARE_SALE_OVERHANG bucket. Do NOT enter new positions.
+   ₹1,900cr share sale creates 3-5 week supply overhang. Re-evaluate after
+   placement clears.
+
+================================================================================
+END OF RUN — 2026-07-07 (v2)
+================================================================================

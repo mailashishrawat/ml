@@ -1,0 +1,203 @@
+╔══════════════════════════════════════════════════════════════════╗
+║  INDIA STOCK RECOMMENDER — DAILY OUTPUT — 2026-07-06 (Monday)     ║
+╚══════════════════════════════════════════════════════════════════╝
+
+SECTION 1 — MACRO TREND & DISRUPTION ALERT
+─────────────────────────────────────────────
+╔══════════════════════════════════════════════════════════════════╗
+║  MACRO TREND & DISRUPTION ALERT — 2026-07-06 (Monday)              ║
+╠══════════════════════════════════════════════════════════════════╣
+║ HARD EXCLUDES (5):                                               ║
+║   ❌ Life insurance — HDFCLIFE, SBILIFE, ICICIPRULI, LICI, MAXFINR║
+║      (IRDAI misselling probe → structural regulatory scrutiny)   ║
+║                                                                  ║
+║ CAUTION FLAGS (23):                                              ║
+║   ⚠️  IT US-services (10 names) — USTR probe tariff overhang     ║
+║   ⚠️  Pharma US-exposed (6 names) — USTR probe                    ║
+║   ⚠️  FMCG (6 names) — El Nino monsoon T3                         ║
+║   ⚠️  ANY_IT — Q1 FY27 earnings event risk on running breakouts   ║
+║                                                                  ║
+║ TAILWINDS (3):                                              ║
+║   ✅ AI_INFRA_DOMESTIC (+15) — HFCL/STLTECH/TEJASNET/BBOX/  ║
+║      IDEAFORGE/TATACOMM/KIRLOSENG (Rs 25L fresher AI hiring surge)║
+║   ✅ JEWELLERY (+10) — TITAN CaratLane West Asia expansion  ║
+║   ✅ POWER_EQUIP_GRID (+10) — Rs 9 lakh Cr transmission capex║
+║                                                                  ║
+║ NEWS CATALYSTS (6):                                          ║
+║   📰 TITAN T2 — CaratLane West Asia expansion (Times Biz)        ║
+║   📰 HFCL/STLTECH/TEJASNET/BBOX/IDEAFORGE T1 — AI hiring surge   ║
+║                                                                  ║
+║ AI STATUS: AI_TAILWIND_DOMESTIC_ONLY                             ║
+║   (Domestic AI infra green-light; US-services IT capped by USTR) ║
+║                                                                  ║
+║ REVIEW RULES: 77 (5+ 77d escape cases), NEWS-CAT (still REVIEW)  ║
+║                                                                  ║
+║ EVENT RISK: Q1 FY27 earnings season kicks off this week —        ║
+║   framing running breakouts cautiously                           ║
+╚══════════════════════════════════════════════════════════════════╝
+
+SECTION 2 — TRADE PARAMETERS
+─────────────────────────────────────────────
+ZERO-PICK DAY — no candidate cleared publish threshold >85% + all chart gates.
+Rationale: All 5 Phase C candidates failed Phase D chart gates: 3 (ADANIPORTS/HYUNDAI/M&M) failed 26e volatility floor (large-cap smooth uptrends have HVD252<40 and HVD64<8 — Rule 26e HIGH_CONVICTION correctly blocks these); all 5 failed Rule 46c R:R gate (R:R 0.01–0.23 vs ≥1.5 required — Rule 46c HIGH_CONVICTION correctly blocks chase-at-extended entries). No candidate satisfied Rule 46d 6-condition exemption (no fresh 52wH breakout on catalyst). 12 Phase C watchlist candidates (78–85% conf) carried forward — none are eligible as main picks under the strict >85% publish threshold. Zero-pick day is expected and preferable to forcing a marginal trade with sub-1.5 R:R. USTR probe + IRDAI probe + Q1 earnings start add event-risk overlay this session.
+
+SECTION 3 — PER-STOCK CHART-GATE DETAILS (candidates that reached Phase D)
+─────────────────────────────────────────────
+
+ADANIGREEN — RM-3, conf 92 (Phase C)
+  Chart-read notes: RSI 62.7, vol 0.86x, MA5 dist 1.83%, UT-1 UP
+  R:R vs swing_2026-06-23: 0.01 (revised target Rs1557.0, stop Rs1488.13)
+  Verdict: FAIL — 46c/46d
+
+ADANIPORTS — RM-3, conf 92 (Phase C)
+  Chart-read notes: RSI 62.6, vol 0.72x, MA5 dist 1.95%, UT-1 UP
+  R:R vs 52wH: 0.23 (revised target Rs1891.1, stop Rs1799.99)
+  Verdict: FAIL — 26e
+
+HYUNDAI — RM-3, conf 92 (Phase C)
+  Chart-read notes: RSI 59.0, vol 0.70x, MA5 dist 3.17%, UT-1 UP
+  R:R vs round_2000: 0.08 (revised target Rs2000, stop Rs1914.53)
+  Verdict: FAIL — 26e
+
+J&KBANK — RM-2, conf 92 (Phase C)
+  Chart-read notes: RSI 67.1, vol 1.16x, MA5 dist 3.19%, UT-1 STRONG_UP
+  R:R vs swing_2026-06-22: 0.1 (revised target Rs165.99, stop Rs156.89)
+  Verdict: FAIL — 46c/46d
+
+M&M — RM-3, conf 92 (Phase C)
+  Chart-read notes: RSI 56.4, vol 0.81x, MA5 dist 1.36%, UT-1 UP
+  R:R vs swing_2026-05-27: 0.04 (revised target Rs3141.3, stop Rs3024.15)
+  Verdict: FAIL — 26e
+
+SECTION 4 — WATCHLIST
+─────────────────────────────────────────────
+
+4a — Phase C watchlist candidates (78–85% conf, awaiting trigger):
+  BANSALWIRE   Pattern-MC   conf=85  RSI=72.1  → Momentum continuation, +6.2% on 2.9x vol, RSI 72.1
+  DENTA        Pattern-MC   conf=85  RSI=74.1  → Momentum continuation, +6.4% on 3.0x vol, RSI 74.1
+  INFY         Pattern-MC   conf=85  RSI=42.9  → Momentum continuation, +5.6% on 0.9x vol, RSI 42.9
+  SEIL         Pattern-MC   conf=85  RSI=68.6  → Momentum continuation, +6.9% on 2.1x vol, RSI 68.6
+  THANGAMAYL   Pattern-MC   conf=85  RSI=65.8  → Momentum continuation, +6.2% on 1.2x vol, RSI 65.8
+  WABAG        Pattern-MC   conf=85  RSI=66.8  → Momentum continuation, +5.2% on 1.1x vol, RSI 66.8
+  COMSYN       RM-2         conf=82  RSI=74.9  → Day-2 continuation after +19.4% RM-1 breakout, holding above prev close, RSI 74.9
+  IKIO         RM-11        conf=82  RSI=80.1  → Consecutive +11.7% (17.6x) → +19.1% (16.5x), RSI 80.1<85
+  PCJEWELLER   RM-2         conf=82  RSI=74.1  → Day-2 continuation after +12.2% RM-1 breakout, holding above prev close, RSI 74.1
+  SUVEN        RM-2         conf=82  RSI=74.6  → Day-2 continuation after +8.8% RM-1 breakout, holding above prev close, RSI 74.6
+  FABTECH      RM-12        conf=80  RSI=68.3  → UT-1=UP, pullback 6.0% from 20dH, recovery close>prev high on 4.2x vol, RSI 68.3
+  MAPMYINDIA   RM-12        conf=80  RSI=62.4  → UT-1=UP, pullback 16.7% from 20dH, recovery close>prev high on 1.7x vol, RSI 62.4
+
+4b — Phase D excluded (chart-gate FAIL — re-entry triggers):
+  ADANIGREEN   → chart-gate FAIL: 46c/46d; re-entry: Fresh close above Rs1557.0 on vol ≥1.5x with R:R>=1.5 recompute
+  ADANIPORTS   → chart-gate FAIL: 26e; re-entry: Fresh close above Rs1891.1 on vol ≥1.5x with R:R>=1.5 recompute
+  HYUNDAI      → chart-gate FAIL: 26e; re-entry: Fresh close above Rs2000 on vol ≥1.5x with R:R>=1.5 recompute
+  J&KBANK      → chart-gate FAIL: 46c/46d; re-entry: Fresh close above Rs165.99 on vol ≥1.5x with R:R>=1.5 recompute
+  M&M          → chart-gate FAIL: 26e; re-entry: Fresh close above Rs3141.3 on vol ≥1.5x with R:R>=1.5 recompute
+
+4c — Rule 82 watchlist audit (prior-run watchlist symbols):
+  APOLLO       state=BELOW  trigger=WAITING          action=CARRY
+  ATHERENERG   state=ABOVE  trigger=FIRED            action=PROMOTE_TO_STEP_2_7
+  BAJFINANCE   state=ABOVE  trigger=FIRED            action=PROMOTE_TO_STEP_2_7
+  CGPOWER      state=ABOVE  trigger=FIRED            action=PROMOTE_TO_STEP_2_7
+  ETERNAL      state=ABOVE  trigger=FIRED            action=PROMOTE_TO_STEP_2_7
+  GABRIEL      state=ABOVE  trigger=FIRED            action=PROMOTE_TO_STEP_2_7
+  GOCOLORS     state=BELOW  trigger=WAITING          action=CARRY
+  KEI          state=ABOVE  trigger=FIRED            action=PROMOTE_TO_STEP_2_7
+  MARUTI       state=ABOVE  trigger=FIRED            action=PROMOTE_TO_STEP_2_7
+  MOTILALOFS   state=ABOVE  trigger=FIRED            action=PROMOTE_TO_STEP_2_7
+  PARAS        state=ABOVE  trigger=FIRED            action=PROMOTE_TO_STEP_2_7
+  PAYTM        state=ABOVE  trigger=FIRED            action=PROMOTE_TO_STEP_2_7
+
+SECTION 5 — Token cost & audit  (Phase F will fill in)
+─────────────────────────────────────────────
+
+
+SECTION 4.5 — POST-RUN MISS AUDIT (F.2)
+─────────────────────────────────────────────
+  NOT_A_GAINER                 18
+  CORRECTLY_WATCHLISTED        4
+  NEWS_SHOCK_UNFLAGGABLE       2
+  CORRECTLY_EXCLUDED           1
+
+T-1 (Jul 3) top-25 attribution:
+Rk Symbol              LTP    Chg%    Val(Cr) Category               Rule/Note
+ 1 ZENSARTECH       516.10  +10.43    3135.58 CORRECTLY_EXCLUDED     Phase B caution: USTR probe (T2)
+ 2 INFY            1047.20   +0.61    1220.36 NOT_A_GAINER           N/A
+ 3 VOGL              42.79   -4.04    1180.66 NOT_A_GAINER           N/A
+ 4 VISL              40.52   -4.99    1157.10 NOT_A_GAINER           N/A
+ 5 PCJEWELLER        10.30   +4.57    1020.25 NOT_A_GAINER           N/A
+ 6 IKIO             202.82  +19.14     869.69 CORRECTLY_WATCHLISTED  Phase C watchlist (78-85%)
+ 7 PERSISTENT      4682.70   +2.23     726.52 NOT_A_GAINER           N/A
+ 8 VEDPOWER          45.71   -6.02     724.68 NOT_A_GAINER           N/A
+ 9 AEGISLOG        1325.40   +0.26     610.43 NOT_A_GAINER           N/A
+10 COFORGE         1464.00   -0.12     593.37 NOT_A_GAINER           N/A
+11 SUVEN            327.60   +9.95     349.36 CORRECTLY_WATCHLISTED  Phase C watchlist (78-85%)
+12 FORCEMOT       18804.00   -2.91     345.24 NOT_A_GAINER           N/A
+13 MPHASIS         2296.60   +2.28     311.54 NOT_A_GAINER           N/A
+14 PARAS           1294.00   +0.38     253.84 NOT_A_GAINER           N/A
+15 WABAG           2080.90   -4.99     228.96 NOT_A_GAINER           N/A
+16 THANGAMAYL      6159.50   -2.47     167.94 NOT_A_GAINER           N/A
+17 EXIDEIND         416.60   +7.77     157.48 NEWS_SHOCK_UNFLAGGABLE sub-10% move, likely intraday drift
+18 SIKA            1220.70    n/a      116.56 NOT_A_GAINER           N/A
+19 BHARATSE         239.73   -0.43     112.92 NOT_A_GAINER           N/A
+20 COMSYN           200.31   +7.26      89.79 CORRECTLY_WATCHLISTED  Phase C watchlist (78-85%)
+21 SONACOMS         660.10   -0.33      81.68 NOT_A_GAINER           N/A
+22 MAPMYINDIA       938.35  +10.39      80.90 CORRECTLY_WATCHLISTED  Phase C watchlist (78-85%)
+23 SHILPAMED        608.95   +1.35      78.96 NOT_A_GAINER           N/A
+24 J&KBANK          165.20   +0.30      75.20 NOT_A_GAINER           N/A
+25 GCSL             490.45   +6.61      74.67 NEWS_SHOCK_UNFLAGGABLE sub-10% move, likely intraday drift
+
+
+SECTION 4.6 — NSE-WIDE SELF-AUDIT (F.1)
+─────────────────────────────────────────────
+Note: run executed pre-market (Monday morning). T-0 (Jul 6) not yet closed.
+Substrate used for 4.6.2 audit = T-1 (Jul 3) top-25 by Close×Volume from data/dailygainers.csv.
+
+T-1 TOP-25 with pattern attribution (4.6.3):
+Rk Symbol              LTP    Chg%    Val(Cr) Pattern
+ 1 ZENSARTECH       516.10  +10.43    3135.58 RM-11 (consecutive/large-move continuation)
+ 2 INFY            1047.20   +0.61    1220.36 UNRECOGNIZED
+ 3 VOGL              42.79   -4.04    1180.66 Down-day (not a mover)
+ 4 VISL              40.52   -4.99    1157.10 Down-day (not a mover)
+ 5 PCJEWELLER        10.30   +4.57    1020.25 UNRECOGNIZED
+ 6 IKIO             202.82  +19.14     869.69 RM-11 (consecutive/large-move continuation)
+ 7 PERSISTENT      4682.70   +2.23     726.52 UNRECOGNIZED
+ 8 VEDPOWER          45.71   -6.02     724.68 Down-day (not a mover)
+ 9 AEGISLOG        1325.40   +0.26     610.43 UNRECOGNIZED
+10 COFORGE         1464.00   -0.12     593.37 UNRECOGNIZED
+11 SUVEN            327.60   +9.95     349.36 RM-11 (consecutive/large-move continuation)
+12 FORCEMOT       18804.00   -2.91     345.24 UNRECOGNIZED
+13 MPHASIS         2296.60   +2.28     311.54 UNRECOGNIZED
+14 PARAS           1294.00   +0.38     253.84 Down-day (not a mover)
+15 WABAG           2080.90   -4.99     228.96 Down-day (not a mover)
+16 THANGAMAYL      6159.50   -2.47     167.94 UNRECOGNIZED
+17 EXIDEIND         416.60   +7.77     157.48 UNRECOGNIZED
+18 SIKA            1220.70    n/a      116.56 UNRECOGNIZED
+19 BHARATSE         239.73   -0.43     112.92 UNRECOGNIZED
+20 COMSYN           200.31   +7.26      89.79 RM-1 / MC (breakout/momentum-continuation)
+21 SONACOMS         660.10   -0.33      81.68 UNRECOGNIZED
+22 MAPMYINDIA       938.35  +10.39      80.90 UNRECOGNIZED
+23 SHILPAMED        608.95   +1.35      78.96 UNRECOGNIZED
+24 J&KBANK          165.20   +0.30      75.20 UNRECOGNIZED
+25 GCSL             490.45   +6.61      74.67 RM-1 / MC (breakout/momentum-continuation)
+
+
+SECTION 4.6.4 — RULES LEDGER UPDATE (F.4)
+─────────────────────────────────────────────
+  46c      Δup=+1 Δdn=+0 → Net=8, Status=HIGH_CONVICTION
+  26e      Δup=+1 Δdn=+0 → Net=13, Status=HIGH_CONVICTION
+  WPR      Δup=+1 Δdn=+0 → Net=9, Status=HIGH_CONVICTION
+
+
+SECTION 4.7 — DAILY PARAMETER LOG (F.6)
+─────────────────────────────────────────────
+Appended 91 rows to out/stockparam_final.csv for T-1 2026-07-03.
+Schema: 26 base cols (data/stockparam.csv) + 13 macro/pipeline cols.
+
+
+SECTION 5 — TOKEN USAGE & COST (F.3)
+─────────────────────────────────────────────
+Screener  (Haiku):  ~15k in  / ~2k out  / ~Rs 2.5
+Analyzer  (Opus):   ~40k in  / ~8k out  / ~Rs 90
+Validator (Sonnet): ~20k in  / ~4k out  / ~Rs 12
+Formatter (Haiku):  ~25k in  / ~5k out  / ~Rs 4
+TOTAL: ~Rs 108 (~$1.30 USD) — estimated across resume + fresh phases

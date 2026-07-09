@@ -1,4 +1,4 @@
-# Pattern Notes — Updated 2026-06-30 (Run #38: SCHNEIDER 92% RM-1 main pick; ATHERENERG/MOTILALOFS/TATACOMM watchlist; CGPOWER/BHEL Rule77 blocked; RAMCOSYS +17.22% miss — Rule82-EXT gap identified; Q1 FY27 close day; Rule82 +1 upvote WPR +1 upvote)
+# Pattern Notes — Updated 2026-07-03 (Phase F.1 NSE Self-Audit: 25 new symbols force-added via UGD; all top-10 UNRECOGNIZED — new universe entries; SCAN_INCOMPLETE root cause logged)
 
 ---
 
@@ -831,6 +831,27 @@ MISS_ANALYZE: 1 (NIACL)
 ### THEMATIC GAPS (Jun 18 update)
 - Insurance PSU stocks (NIACL, GICRE, STARHEALTH): Add to Step 1.5 Q4 results scan.
 - Defence basket coverage: HAL, BDL, COCHINSHIP, MAZDOCK are in basestock but sometimes miss the basket scan in Step 1.5.
+
+### UNRECOGNIZED_MOVERS (Jul 3 — Phase F.1 UGD batch)
+All 10 top movers were OUTSIDE basestock.json universe (new additions via UGD-2026-07-03).
+No stockparam.csv history available for pattern attribution — all classified UNRECOGNIZED.
+Root cause: SCAN_INCOMPLETE. Fix: 23 symbols force-added active=true; 2 inactive (PCJEWELLER <Rs20, ELGIRUBCO turnover borderline).
+Next session all will be in eval_universe via Phase A daily top-25 fetch.
+
+ZENSARTECH  +6.26%  (Rs532.7Cr)  | IT services (Zensar/RPG group) | Suspected: RM-1/RM-8 (IT sector tailwind, NIFTYIT positive)
+IKIO        +10.91% (Rs202.0Cr)  | Lighting/IoT tech | Suspected: catalyst-driven (earnings/order)
+EIEL        +5.83%  (Rs131.3Cr)  | Water/infra, recent IPO Nov24 | Suspected: order win catalyst
+SUMICHEM    +6.46%  (Rs130.8Cr)  | Agrochemicals (Sumitomo) | Suspected: RM-8 coil / sector tailwind
+MOSCHIP     +6.91%  (Rs99.1Cr)   | Semiconductor IP (recent listing Feb25) | Suspected: AI/chip tailwind RM-8
+SUVEN       +10.19% (Rs95.1Cr)   | Pharma CDMO | Suspected: Phase3 trial catalyst / RM-11
+INDOFARM    +12.27% (Rs50.4Cr)   | Agri equipment (recent IPO Jan25) | Suspected: order win / RM-11
+DENTA       +6.93%  (Rs49.5Cr)   | Water infra (recent IPO Jan25) | Suspected: order/policy catalyst
+BLUSPRING   +7.13%  (Rs40.5Cr)   | Renewable energy (listing Jun25) | Suspected: sector tailwind
+
+THEMATIC_GAPS identified:
+- Semiconductor/chip design (MOSCHIP) — no existing basket; SINGLE-OCCURRENCE; promote if 2nd chip-design name >=5% within 30 sessions
+- Water infra (DENTA, EIEL) — adjacent to power_equip basket; consider water_infra_basket proposal
+- Agrochemicals (SUMICHEM) — adjacent to chemicals_basket; add SUMICHEM as chemicals_basket seed
 
 ### UNRECOGNIZED_MOVERS (Jun 23 — added by introspect run)
 MANKIND  +5.34% (Rs246 Cr) | RSI(T-1) 68.7 | Vol/Avg 1.94x | Pharma sector | Suspected pattern: Pattern j (IIFL Invest India Capital Day London Jun 23-24 — pharma IR conference cluster). PROPOSED RULE: "Pharma IR-conference watch" basket (add DRREDDY, CIPLA, LUPIN, SUNPHARMA, AUROPHARMA, MANKIND, TORNTPHARM as seed candidates). SINGLE-OCCURRENCE: log here; promote to basket on 2nd pharma name ≥5% on investor-conference catalyst within 30 sessions.
@@ -5728,3 +5749,25 @@ Pattern e    |
 Pattern g    |
 Pattern k/S  | 2026-05-29, 2026-06-09
 Pattern CA-1 |
+
+
+## MISSED MOVE LOG — 2026-07-03 (T-1 = Jul 2, retrospective covers Jun 29 - Jul 2)
+
+| Symbol | Date | Move% | Vol/Avg | Blocking_Rule | Miss_Type | Action |
+|--------|------|--------|---------|---------------|-----------|--------|
+| SAKSOFT | Jun 29-30 | +14.53%/+12.48% | 13x/10.9x | NOT IN UNIVERSE | UNIVERSE_GAP | Force-add to basestock.json (AI_TAILWIND/IT small-cap); 60d OHLC backfill |
+| RITES | Jul 1 | +14.02% | 16.88x | Rule 26e FAIL (HVD252=5<40) | CORRECTLY_EXCLUDED | Accept miss; Rule 26e load-bearing for dormant stocks |
+| DIVGIITTS | Jun 30 | +13.08% | 17.34x | NOT IN UNIVERSE; 26e would also fail | UNIVERSE_GAP | Force-add as AI/data-center adjacent |
+| PARAS | Jun 30 | +8.97% | 0.92x | Rule 77 (6LH/4LL SIDEWAYS) | BLOCKED | Rule 77d escape (active) not triggered (vol 0.92x < 0.8x? No — vol=0.92 but range<1.5x avg) |
+
+**Structural note**: SAKSOFT move was 3 consecutive RM-11-class days (+15%/+14.5%/+12.5%) starting Jun 25.
+Pure universe gap — this was never in basestock.json. AI_TAILWIND basket addition warranted.
+
+**Rule 26e load-bearing**: RITES +14% on 16.88x vol correctly excluded. Stock had HVD252=5 before the
+event — this level of vol dormancy means 26e is protecting against false-positive chasing of random
+one-off news spikes. No rule modification needed.
+
+
+### MISSED MOVE LOG — 2026-07-06
+- AVG +7.3%: RSI 77.1, vol 1.85x — ≥5% mover with MOMENTUM_CONTINUATION class matched no RM-1..12 template
+- GCSL +6.6%: RSI 78.5, vol 2.30x — ≥5% mover with MOMENTUM_CONTINUATION class matched no RM-1..12 template

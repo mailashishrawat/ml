@@ -1,0 +1,93 @@
+date,symbol,rule_blocked,rule_narrative,actual_move,likely_trend_state,rsi_at_miss,vol_ratio_at_miss,catalyst_present,category
+2026-05-25,STLTECH,N/A,"Universe gap - not in basestock; force-added but excluded (PE 475, negative 3yr ROE, news_priced_in)",+5%,STRONG_UP,N/A,N/A,true,MISS_ANALYZE
+2026-05-25,EICHERMOT,N/A,"Universe gap (large-cap auto not in mid/small-cap universe); +5% news-day jump = entry timing chase",+4.93%,STRONG_UP,73,N/A,true,MISS_ANALYZE
+2026-05-26,APOLLOMICRO,RSI-ceiling,"RSI estimated 75-82+ exceeds hard exclude; Pattern H requires confirmed MoD order for RSI exception","+10.5% (4d)",STRONG_UP,80,N/A,true,MISS_ANALYZE
+2026-05-26,BLUEJET,N/A,"Universe gap - specialty pharma/healthcare not in basestock; Pattern P (Q4 EBITDA beat) would have caught this",+7.24%,STRONG_UP,N/A,N/A,true,MISS_ANALYZE
+2026-05-27,APOLLOMICRO,RSI-ceiling,"+40% in 7 days post Q4; RSI > 82 = hard exclude","+40% (7d)",STRONG_UP,85,N/A,true,MISS_ANALYZE
+2026-05-27,GOCOLORS,N/A,"Was in basestock but not in pattern analysis focus; +18.5% on 7.35x volume from 52w low base was missed","+34% (5d)",STRONG_UP,68.6,7.35x,false,MISS_ANALYZE
+2026-05-27,SANSERA,RSI-ceiling,"In basestock but Pattern P (Q4 beat) should have flagged for May 22 entry; now RSI 76.4 = too late",+14.8%,STRONG_UP,76.4,8.65x,true,MISS_ANALYZE
+2026-05-27,UNIPARTS,RSI-ceiling,"RSI 75.5 approaching hard exclude; +8.6% on 12.18x massive volume = institutional block purchase",+8.6%,STRONG_UP,75.5,12.18x,false,MISS_ANALYZE
+2026-05-27,BHARATRAS,78%-threshold,"77% confidence just missed threshold; +6.2% on 5.56x vol flagged as news priced in",+6.2%,STRONG_UP,65,5.56x,true,MISS_ANALYZE
+2026-05-27,JPPOWER,news_priced_in,"Adani Power stake acquisition; +18.5% intraday; entry tomorrow too late",+18.5%,STRONG_UP,N/A,N/A,true,MISS_ANALYZE
+2026-06-01,HFCL,N/A,"Was not in top analysis candidates in prior runs despite Pattern O firing; systematic Pattern O scanning absent","+29% (10d)",STRONG_UP,75,0.35x,true,MISS_ANALYZE
+2026-06-01,NETWEB,26b-distribution,"Distribution volume rule 26b prevented entry despite +20% 10d run; overly strict for stocks at new 52w highs with RSI<80","+20% (10d)",STRONG_UP,73,1.04x,true,NARRATIVE_COMPLAINT
+2026-06-01,WAAREEENER,26e,"Only 8 days with >=3% move in 65 trading days (floor=11); RSI recovery promising but 26e hard fails",N/A,UP,46,N/A,false,DOWNVOTE
+2026-06-02,STLTECH,RSI-ceiling,"+44.5% 10d run; RSI 89.4 hard exclude","+44.5% (10d); +4.8% today",STRONG_UP,89.4,N/A,true,MISS_ANALYZE
+2026-06-02,LLOYDSME,26e,"Full 252-day check: 39/40 high-vol days = one day short; retroactively failed",+0.4%,UP,64,N/A,false,NARRATIVE_COMPLAINT
+2026-06-02,HFCL,46b,"Downgraded from 87% to 76%; decelerating-staircase exhaustion signature; vol 0.08x; R:R < 1:1",+1.2%,UP,73.6,0.08x,true,NARRATIVE_COMPLAINT
+2026-06-02,TRENT,26e,"29/40 high-vol days = FAIL; event-driven AGM pre-run thesis blocked",N/A,SIDEWAYS,58.2,0.08x,true,NARRATIVE_COMPLAINT
+2026-06-02,TATACOMM,RSI+trend,"RSI 79.5 in exception window but below MA5 = FAIL_TREND",N/A,UP,79.5,N/A,true,DOWNVOTE
+2026-06-02,MOTILALOFS,78%-threshold,"Confidence dropped to ~78% on thin close volume 0.09x avg",+3.1%,UP,54.3,0.09x,false,MISS_ANALYZE
+2026-06-03,HFCL,46b/RR,"R:R 0.69:1 realistic target vs MA5 stop; below 1.5:1","+7.8% hold",STRONG_UP,79.9,0.24x,false,NARRATIVE_COMPLAINT
+2026-06-03,TEJASNET,RR,"R:R 1.49:1 (0.01 short of 1.5:1); vol drying 0.23x",+4.2%,STRONG_UP,81.8,0.23x,false,NARRATIVE_COMPLAINT
+2026-06-03,PARAS,conf-90%,"Chart PASS (R:R 1.78:1) but confidence 72% below >90% threshold",-1.1%,UP,60.7,0.07x,false,NARRATIVE_COMPLAINT
+2026-06-03,NEWGEN,RR,"R:R 1.35:1 below 1.5; news priced-in -10 penalty; NIFTYIT -4.2%",+0.6-1.5%,STRONG_UP,72.3,1.07x,true,MISS_ANALYZE
+2026-06-03,NEWGEN-pre,N/A,"Pre-Results Accumulation Scan not run; software-infra near 52w low missed +17.3% Jun2 gap",+17.3%,UP,37,0.31x,true,MISS_ANALYZE
+2026-06-04,PARAS,RR,"R:R 1.43:1 (below 1.5); +5.2% move put entry too close to Rs888 resistance",+5.2%,STRONG_UP,74.2,1.07x,false,MISS_ANALYZE
+2026-06-04,OLAELEC,N/A,"Pattern A ATHER duopoly lag signal was valid Jun2 but not flagged","+10.1% (2d)",UP,64,N/A,true,MISS_ANALYZE
+2026-06-04,IDEAFORGE,vol/RR,"Volume 0.38x = LOW_CONVICTION; R:R also fails; defense/AI dual theme","+8.6% (2d)",UP,61.9,0.38x,false,NARRATIVE_COMPLAINT
+2026-06-05,GOCOLORS,watchlist,"Jun1 trigger fired at Rs325 (RM-3 Support Test + Hold) but Watchlist Persistence not formalized","+23.9% (3d)",STRONG_UP,N/A,0.56x,false,MISS_ANALYZE
+2026-06-05,PARAS,RR,"R:R 0.68:1; +7.54% moved entry too close to Rs941 52w-high resistance",+7.54%,STRONG_UP,67.3,1.93x,false,MISS_ANALYZE
+2026-06-05,TEJASNET,RR,"R:R 0.78:1; RSI 79.4 approaching ceiling; 9.98% above MA5","+12.99% (2d)",STRONG_UP,79.4,1.51x,false,NARRATIVE_COMPLAINT
+2026-06-05,PARAS-b,RSI+MA5,"RSI 82.0 (fails <75) + 9.5% above MA5 (fails <8%); RM-2 refined entry blocked",+6.74%,STRONG_UP,82.0,1.04x,false,NARRATIVE_COMPLAINT
+2026-06-05,TVSSCS,26e,"HV 19/40 hard block; clean RM-2 pattern (breakout above 52w on 2.14x/1.83x vol)",+10.1%,STRONG_UP,71.4,1.83x,false,DOWNVOTE
+2026-06-05,IDEAFORGE,upper-circuit,"Upper circuit locked Jun4+Jun5; cannot transact","+10.3% (2d)",STRONG_UP,66.6,0.13x,false,NARRATIVE_COMPLAINT
+2026-06-08,IDEAFORGE,RR,"R:R 0.66-1.23:1 at 52w high Rs992; vol 0.64x below institutional level",+5.0%,STRONG_UP,75.6,0.64x,false,MISS_ANALYZE
+2026-06-08,PARAS,RR/MA5,"7.1% above MA5 extended; R:R 1.19:1 fails; RSI 73.3","reached Rs967",STRONG_UP,73.3,1.01x,false,NARRATIVE_COMPLAINT
+2026-06-09,TEJASNET,conf-85%,"Chart PASS, R:R 5.15:1 valid, but confidence exactly 85 not strictly >85",+5.74%,UP,69.8,4.75x,false,DOWNVOTE
+2026-06-09,PARAS,RR,"R:R 1.59:1 marginal; intraday rejection at Rs994; 10.1% above MA5","+14.3% (2d)",STRONG_UP,72.0,5.34x,true,MISS_ANALYZE
+2026-06-12,PARAS,RR/MA5,"Close Rs989 below MA5 Rs999 by Rs10; R:R to 52w-high 1.18:1 fails","+10.92% next day",STRONG_UP,67.3,1.10x,false,MISS_ANALYZE
+2026-06-12,APARINDS,RR,"At 52w high; R:R to Rs15500 conservative target 1.25:1 fails","+3.31% then +25% run",STRONG_UP,68.4,3.07x,false,MISS_ANALYZE
+2026-06-15,PARAS,RR/GOLD_CAUTION,"Jun12 +10.92% single-session gapped past trigger; entry Rs1103 at 52w high; R:R 0.43:1; GOLD_CAUTION",+10.92%,STRONG_UP,76.3,1.61x,true,MISS_ANALYZE
+2026-06-15,APARINDS,RSI-ceiling,"RSI 79.7 near ceiling; at 52w high Rs16174; 9.53% above MA5; R:R 0.04:1","+5.91% (+25.1% 5d)",STRONG_UP,79.7,0.75x,true,MISS_ANALYZE
+2026-06-15,MUTHOOTFIN,26e,"HV 28/40 hard fail; +5.02% on 0.53x vol, gold NBFC tailwind",+5.02%,UP,42.3,0.53x,true,DOWNVOTE
+2026-06-15,CHOICEIN,26e,"HV 29/40 hard fail despite +4.14% on 1.12x vol",+4.14%,UP,N/A,1.12x,false,DOWNVOTE
+2026-06-15,TIINDIA,26e,"HV 31/40 hard fail despite +2.84% Jun15 following +5.6% Jun12",+2.84%,UP,N/A,N/A,false,DOWNVOTE
+2026-06-15,TRENT,26e,"HV 30/40 fail; passed Rs2850 AGM trigger Jun15",+3.87%,UP,53.7,0.48x,true,DOWNVOTE
+2026-06-15,ETERNAL,26e,"HV 33/40 fail; down-day vol 1.06x borderline distribution",+4.33%,UP,52.9,0.64x,false,DOWNVOTE
+2026-06-16,KALYANKJIL,26e,"26e FAIL 34/40 HV days - hard gate blocks entry",+11.09%,STRONG_UP,60.2,4.00x,true,MISS_ANALYZE
+2026-06-16,TRENT,46b/RR,"R:R 0.74:1 fails Step 2.7 (near 52w high)",+5.29%,STRONG_UP,57.2,2.02x,true,MISS_ANALYZE
+2026-06-16,TIINDIA,RR,"At 52w high, R:R 0.27:1 fails",+5.60%,STRONG_UP,59.5,0.78x,false,MISS_ANALYZE
+2026-06-16,APARINDS,RSI-ceiling,"RSI 79.2 near ceiling - momentum at 52w high",+5.03%,STRONG_UP,79.2,1.52x,false,MISS_ANALYZE
+2026-06-16,PARAS,RSI/News,"NEWS_PRICED_IN classification; +10.92% on 1.61x vol",+10.92%,STRONG_UP,76.7,1.61x,true,MISS_ANALYZE
+2026-06-17,TRENT,26e,"26e FAIL 32/247 blocks legitimate AGM pre-run-up despite +3.97% move",+3.97%,STRONG_UP,73.7,1.30x,true,NARRATIVE_COMPLAINT
+2026-06-17,DELHIVERY,26e,"Pattern C FIRED (RSI 46.1) but 26e 22/40 hard gate blocks entry",N/A,UP,46.1,N/A,false,NARRATIVE_COMPLAINT
+2026-06-18,NIACL,N/A,"Insurance Q4 sector not in Step 1.5 standard scan; Rule 80 needs 3 non-declining but only 2",+12.2%,STRONG_UP,61.4,2.45x,true,MISS_ANALYZE
+2026-06-18,PARAS,RSI/46b,"+18% Jun17 on 2.92x vol; RSI 82.6 ceiling + R:R 0.25:1",+18.0%,STRONG_UP,82.6,2.92x,true,MISS_ANALYZE
+2026-06-19,NELCO,RSI-ceiling,"RSI 84.9 ceiling breach; NEWS_PRICED_IN 14.81x vol Day 1","+17.2% then +7.59%",STRONG_UP,84.9,14.81x,true,NARRATIVE_COMPLAINT
+2026-06-19,GNA,RR,"R:R 0.21:1 near 52w high - too late after +5.17%/+9.13% two-day run",+9.13%,STRONG_UP,73.0,2.75x,true,NARRATIVE_COMPLAINT
+2026-06-19,EBGNG,N/A,"Universe gap - missed in May-2026 screening; force-added same day",+9.82%,STRONG_UP,69.8,1.06x,true,MISS_ANALYZE
+2026-06-19,HFCL,46b/MA5,"Extended +12.6% above MA5, RSI approaching ceiling - CORRECTLY_EXCLUDED but +5% missed",+5.00%,STRONG_UP,71.5,0.28x,false,NARRATIVE_COMPLAINT
+2026-06-22,TATACAP,RSI-ceiling,"Wilder RSI ~85+ single-day spike, RM-9 exhaustion",+12.7%,STRONG_UP,85,19.4x,true,NARRATIVE_COMPLAINT
+2026-06-22,PANAMAPET,RSI-ceiling,"Wilder RSI ~80+ + single-day climax (RM-9)",+30.9%,STRONG_UP,80,9.5x,true,NARRATIVE_COMPLAINT
+2026-06-22,IDBI,N/A,"Pattern j (clarification news + divest rumor) not flagged by any scan - in-universe but pattern silent",+5.63%,UP,66.37,3.72x,true,MISS_ANALYZE
+2026-06-22,KIRLOSENG,N/A,"Data Center / AI Infra Hardware thematic blindspot",+20.00%,STRONG_UP,81.52,4.73x,true,MISS_ANALYZE
+2026-06-22,EBGNG,N/A,"RM-11/Pattern j promoter buying + investor meet cluster; UGD-added Jun 19 but pattern not flagged",+9.32%,UP,76.45,6.35x,true,MISS_ANALYZE
+2026-06-22,LEMONTREE,N/A,"Pattern j hospitality catalysts - no hotels basket exists",+5.05%,UP,62.11,5.11x,true,MISS_ANALYZE
+2026-06-22,POLYMED,N/A,"Marginal Pattern d; vol/avg too low for RM-1; mixed news",+6.91%,SIDEWAYS,67.03,1.37x,true,MISS_ANALYZE
+2026-06-23,MANKIND,N/A,"Pattern j pharma IR-conference catalyst - no pharma basket scan exists",+5.34%,UP,68.7,1.94x,true,MISS_ANALYZE
+2026-06-23,IGARASHI,N/A,"Auto-EV motors adjacency - no auto-EV basket exists",+14.30%,UP,75.7,6.20x,true,MISS_ANALYZE
+2026-06-23,TATACOMM,RR,"26e gate opened but R:R 0.78:1 fails; needs pullback to Rs1850",N/A,UP,66.2,0.01x,false,NARRATIVE_COMPLAINT
+2026-06-23,UNOMINDA,vol-trigger,"26e Tier-A gate opened, R:R 8.81:1, but vol trigger not fired due to thin market vol 0.01x",N/A,UP,55.1,0.01x,false,NARRATIVE_COMPLAINT
+2026-06-23,NOCIL,N/A,"Universe gap - force-added same day after +20% move",+20.00%,STRONG_UP,72.3,1.84x,true,MISS_ANALYZE
+2026-06-23,SUBROS,N/A,"Universe gap - STALE_SCREENING force-add after +14.82%",+14.82%,STRONG_UP,76.0,18.5x,true,MISS_ANALYZE
+2026-06-23,EMSLIMITED,N/A,"Universe gap - STALE_SCREENING force-add after +15.72%",+15.72%,STRONG_UP,74.3,6.57x,true,MISS_ANALYZE
+2026-06-23,KSCL,N/A,"Universe gap - STALE_SCREENING force-add after +11.48%",+11.48%,STRONG_UP,65.0,15.97x,true,MISS_ANALYZE
+2026-06-23,KIRLOSIND,N/A,"Universe gap - STALE_SCREENING force-add after +15.29%",+15.29%,STRONG_UP,N/A,N/A,true,MISS_ANALYZE
+2026-06-23,KIRLOSENG,RSI-ceiling,"RSI 81.5 near 85 cap single-day climax +20%; DC basket log-only",+20.00%,STRONG_UP,81.5,4.73x,true,NARRATIVE_COMPLAINT
+2026-06-23,DELHIVERY,26e,"26e 23/252 6/64 fails both gates - LEGITIMATE_EXCLUSION but Rs601 Cr value miss",+5.10%,UP,N/A,N/A,false,NARRATIVE_COMPLAINT
+2026-06-23,SCHNEIDER,RR/46b/MA5,"R:R 1.01:1 + dist vol 1.52x + MA5 extended +6.27%",N/A,UP,67.4,0.10x,false,NARRATIVE_COMPLAINT
+2026-06-24,NOCIL,dist-vol,"Dist vol 1.54x = FAIL Step 3.1 Condition C",-0.88%,SIDEWAYS,65.5,1.54x,false,NARRATIVE_COMPLAINT
+2026-06-24,BAJFINANCE,26e,"26e FAIL (6/64 6/252) - both thresholds fail; HARD BLOCK",+0.82%,UP,65.6,0.09x,false,NARRATIVE_COMPLAINT
+2026-06-24,ROTO,RSI-ceiling,"RM-9 REJECT - RSI 81.9 above cap",+10.26%,STRONG_UP,81.9,4.83x,true,NARRATIVE_COMPLAINT
+2026-06-24,SIS,news-priced-in,"NEWS_PRICED_IN - vol 8.47x institutional day",+8.88%,STRONG_UP,74.7,8.47x,true,NARRATIVE_COMPLAINT
+2026-06-24,ENTERO,N/A,"Universe gap - matches Rule 80 EXACTLY not in basestock",+6.62%,UP,52,0.94x,false,MISS_ANALYZE
+2026-06-24,RAMCOSYS,N/A,"Universe gap; also thin vol 0.62x",+9.47%,STRONG_UP,75.8,0.62x,true,MISS_ANALYZE
+2026-06-30,SAKSOFT,N/A,"Not in basestock.json universe; RM-11 Day-2 pattern identified but SCHNEIDER consumed analysis budget",+7.20%,STRONG_UP,69.4,114.93x,true,MISS_ANALYZE
+2026-07-01,PARAS,77,"LH=6/LL=4 from Jun 10 peak Rs1434 blocked entry; RM-4 escape (Rule 77d) proposal-only",+8.97%,UP,55,1.19x,false,MISS_ANALYZE
+2026-07-01,APOLLO,46c,"RM-4 V-recovery blocked by R:R 0.179:1",+4.32%,UP,58.6,1.07x,false,NARRATIVE_COMPLAINT
+2026-07-01,SUPREMEINF,N/A,"Not in basestock.json; Rule 80 PASS at T-1 EOD but never detected",+13.75%,STRONG_UP,55.3,22x,false,MISS_ANALYZE
+2026-07-01,DIVGIITTS,N/A,"UGD-added Jun 20 but no fresh cache; RM-8 Rule 80 coil not scanned",+15.07%,UP,57,N/A,false,MISS_ANALYZE
+2026-07-01,SAKSOFT,N/A,"Still not in basestock.json; RM-11 Day-2 continuation +12.53% missed again",+12.53%,STRONG_UP,N/A,N/A,true,MISS_ANALYZE
+2026-07-01,ATHERENERG,46c,"52wH Rs1147.4 wrongly used as nearest_unbroken_resistance on 4.01x vol EV-policy breakout; R:R 0.097",+0%,STRONG_UP,72.3,4.01x,true,MISS_ANALYZE
+2026-07-01,GOCOLORS,watchlist,"Rule 82 has no operational Step 2.2 text - silent drop after Jun 24 pullback zone",+15-20%,STRONG_UP,60.8,0.11x,false,MISS_ANALYZE

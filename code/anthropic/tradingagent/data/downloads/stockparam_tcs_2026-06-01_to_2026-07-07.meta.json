@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-07-08T10:07:16.283010",
+  "universe_tag": "tcs",
+  "from_date": "2026-06-01",
+  "to_date": "2026-07-07",
+  "symbol_count": 1,
+  "rows_written": 27,
+  "columns_written": 55,
+  "extended_indicators": true,
+  "source_attribution_counts": {
+    "yfinance": 1
+  },
+  "failed_symbols": [],
+  "kite_cache_dir": null,
+  "ohlc_cache_dir": "/var/folders/z9/gvhc_fnj69zbr13br8cw3zdc0000gn/T/downloader_ohlc_nocache_re5hc894"
+}

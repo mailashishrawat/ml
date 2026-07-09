@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-07-09T11:54:03.522506",
+  "universe_tag": "custom335",
+  "from_date": "2026-04-08",
+  "to_date": "2026-07-09",
+  "symbol_count": 335,
+  "rows_written": 21617,
+  "columns_written": 55,
+  "extended_indicators": true,
+  "source_attribution_counts": {
+    "yfinance": 334,
+    "FAIL": 1
+  },
+  "failed_symbols": [
+    "TRIL"
+  ],
+  "kite_cache_dir": null,
+  "ohlc_cache_dir": ".cache/downloader_ohlc"
+}

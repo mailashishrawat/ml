@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-07-09T13:58:48.678010",
+  "universe_tag": "custom3",
+  "from_date": "2026-06-01",
+  "to_date": "2026-07-08",
+  "symbol_count": 3,
+  "rows_written": 84,
+  "columns_written": 55,
+  "extended_indicators": true,
+  "source_attribution_counts": {
+    "cache": 3
+  },
+  "failed_symbols": [],
+  "kite_cache_dir": null,
+  "ohlc_cache_dir": ".cache/downloader_ohlc",
+  "flat_cache_path": "data/downloads/ohlc_cache.csv"
+}

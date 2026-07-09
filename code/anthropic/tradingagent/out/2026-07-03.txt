@@ -1,0 +1,274 @@
+=== INDIA STOCK RECOMMENDER — 2026-07-03 ===
+
+=== PHASE F.1 — STEP 4.6 NSE-WIDE SELF-AUDIT (2026-07-03) ===
+Source: Chartink T-0 scan clause: ( {cash} ( latest close > 1 day ago close * 1.05 and latest close * latest volume > 10000000 ) )
+Scan time: 2026-07-03 | Clause verified: pct_chg>5% AND value_cr>=1Cr ALL PASS
+
+4.6.2 — TOP 25 BY VALUE TRADED (Close × Volume)
+================================================================
+Rank | Symbol       | LTP      | Chg%  | Volume       | Value(Cr) | In Anchor? | Picked?
+-----|--------------|----------|-------|--------------|-----------|------------|--------
+   1 | ZENSARTECH   |   496.60 |  6.26 |   10,726,939 |    532.70 | NO         | NO
+   2 | IKIO         |   188.81 | 10.91 |   10,699,778 |    202.02 | NO         | NO
+   3 | PCJEWELLER   |    10.44 |  5.99 |  144,695,316 |    151.06 | NO         | NO
+   4 | EIEL         |   241.75 |  5.83 |    5,429,054 |    131.25 | NO         | NO
+   5 | SUMICHEM     |   469.70 |  6.46 |    2,783,871 |    130.76 | NO         | NO
+   6 | MOSCHIP      |   222.92 |  6.91 |    4,446,512 |     99.12 | NO         | NO
+   7 | SUVEN        |   328.30 | 10.19 |    2,896,895 |     95.11 | NO         | NO
+   8 | INDOFARM     |   163.84 | 12.27 |    3,077,267 |     50.42 | NO         | NO
+   9 | DENTA        |   354.80 |  6.93 |    1,395,458 |     49.51 | NO         | NO
+  10 | BLUSPRING    |   128.38 |  7.13 |    3,150,471 |     40.45 | NO         | NO
+  11 | SIKA         | 1,334.00 |  6.32 |      243,072 |     32.43 | NO         | NO
+  12 | KSHINTL      |   884.35 |  5.05 |      346,548 |     30.65 | NO         | NO
+  13 | FABTECH      |   170.62 |  5.55 |    1,137,909 |     19.42 | NO         | NO
+  14 | DIGITIDE     |   100.07 | 12.95 |    1,838,545 |     18.40 | NO         | NO
+  15 | TMB          |   785.50 |  5.28 |      195,656 |     15.37 | NO         | NO
+  16 | GANECOS      |   974.50 |  6.02 |      150,608 |     14.68 | NO         | NO
+  17 | PATELRMART   |   236.10 |  9.84 |      501,230 |     11.83 | NO         | NO
+  18 | KOTHARIPET   |   135.63 |  9.46 |      871,084 |     11.81 | NO         | NO
+  19 | SEIL         |   230.47 |  5.22 |      476,693 |     10.99 | NO         | NO
+  20 | BUTTERFLY    |   692.80 |  6.06 |      105,105 |      7.28 | NO         | NO
+  21 | BANSALWIRE   |   363.90 |  5.69 |      177,906 |      6.47 | NO         | NO
+  22 | ELECTHERM    | 1,200.30 | 10.00 |       41,259 |      4.95 | NO         | NO
+  23 | AVG          |   228.32 |  9.22 |      135,570 |      3.10 | NO         | NO
+  24 | ELGIRUBCO    |    54.80 | 18.92 |      364,606 |      2.00 | NO         | NO
+  25 | RKSWAMY      |   109.00 |  7.42 |      160,391 |      1.75 | NO         | NO
+
+CHARTINK_CLAUSE_ANOMALY: NONE. All 25 pass pct_chg>5% AND value_cr>=1Cr.
+
+4.6.3 — PATTERN ATTRIBUTION (TOP 10)
+================================================================
+All 10 symbols were OUTSIDE basestock.json universe before today's run.
+No stockparam.csv history available for technical attribution.
+Root cause classification: SCAN_INCOMPLETE (universe gap, not chart-read failure).
+
+1. ZENSARTECH  +6.26% Rs532.7Cr  — UNRECOGNIZED (no history). Suspected: RM-1/IT tailwind. UGD→active=true
+2. IKIO        +10.91% Rs202.0Cr — UNRECOGNIZED (no history). Suspected: earnings catalyst. UGD→active=true
+3. PCJEWELLER  +5.99% Rs151.1Cr  — UNRECOGNIZED. EXCLUDED: LTP Rs10.44 < Rs20 floor. UGD→active=false
+4. EIEL        +5.83% Rs131.3Cr  — UNRECOGNIZED (no history). Suspected: infra order. UGD→active=true
+5. SUMICHEM    +6.46% Rs130.8Cr  — UNRECOGNIZED (no history). Suspected: RM-8 agrochemical. UGD→active=true
+6. MOSCHIP     +6.91% Rs99.1Cr   — UNRECOGNIZED (no history). Suspected: AI chip tailwind. UGD→active=true
+7. SUVEN       +10.19% Rs95.1Cr  — UNRECOGNIZED (no history). Suspected: pharma catalyst. UGD→active=true
+8. INDOFARM    +12.27% Rs50.4Cr  — UNRECOGNIZED (no history). Suspected: agri order. UGD→active=true
+9. DENTA       +6.93% Rs49.5Cr   — UNRECOGNIZED (no history). Suspected: water infra policy. UGD→active=true
+10. BLUSPRING  +7.13% Rs40.5Cr   — UNRECOGNIZED (no history). Suspected: renewable sector. UGD→active=true
+
+4.6.4 — PATTERN VOTE LEDGER UPDATE
+================================================================
+No pattern votes fired today — all moves UNRECOGNIZED (new universe entries, no attribution possible).
+Ledger unchanged this run for 4.6.4.
+
+4.6.5 — UNIVERSE GAP DETECTION (UGD)
+================================================================
+All 25 Chartink movers were OUTSIDE basestock.json before today.
+UGD classification results:
+
+STALE_SCREENING → active=true (23 symbols):
+  ZENSARTECH, IKIO, EIEL, SUMICHEM, MOSCHIP, SUVEN, INDOFARM, DENTA, BLUSPRING,
+  SIKA, KSHINTL, FABTECH, DIGITIDE, TMB, GANECOS, PATELRMART, KOTHARIPET,
+  SEIL, BUTTERFLY, BANSALWIRE, ELECTHERM, AVG, RKSWAMY
+
+LEGITIMATE_EXCLUSION → active=false (2 symbols):
+  PCJEWELLER: RULE_26b — LTP Rs10.44 < Rs20 price floor
+  ELGIRUBCO:  RULE_26e — Turnover borderline (2.0Cr single-day, historical avg likely <1Cr; needs 60d backfill to confirm)
+
+ADDITIONAL FORCE-ADDS (pattern_notes.md gaps):
+  SAKSOFT   → active=true (RM-11 +14.5% historical, IT mid-cap gap)
+  DIVGIITTS → active=true (AI/data-center theme candidate)
+
+TOTAL NEW basestock.json entries: 27 (25 top-movers + SAKSOFT + DIVGIITTS)
+basestock.json: 248 → 275 symbols
+
+60d OHLCV BACKFILL MANDATE:
+  All 25 active=true symbols require mandatory 60d OHLCV backfill to data/stockparam.csv
+  via Kite→yfinance→NSE 3-tier. Backfill scheduled for Phase A of next run (2026-07-04).
+  Kite instrument tokens logged in basestock_diff.json.
+
+4.6.6 — THEMATIC GAPS
+================================================================
+New patterns/baskets identified from today's movers:
+1. Water Infrastructure basket (DENTA, EIEL both >5%): Consider adding water_infra_basket
+   adjacent to power_equip_basket. Candidate members: DENTA, EIEL, WABAG, NCC, VOLTAS.
+   Trigger threshold: 2 members >=3% same session. STATUS: PROPOSED (single-day, 1 occurrence).
+2. Semiconductor IP / chip-design (MOSCHIP +6.91%): Single occurrence. Log only.
+   Promote to basket if 2nd chip-design name >=5% within 30 sessions.
+   Candidates: MOSCHIP, SIEVERT (if exists), RUTTONSHA.
+3. Agrochemicals expansion (SUMICHEM +6.46%): Adjacent to chemicals_basket.
+   Add SUMICHEM as chemicals_basket member alongside NACLIND.
+
+=== END PHASE F.1 ===
+
+=== PHASE F.2 — STEP 4.5 POST-RUN MISS AUDIT (2026-07-03) ===
+
+Prior run: 2026-07-02 (Run #39). Main picks: ATHERENERG (Rs1140.55→Rs1434.8, conf 92%) + BAJFINANCE (Rs1004.75→Rs1095.76, conf 92%).
+
+4.5.1 — TODAY'S TOP 25 (from 4.6.2, enriched)
+================================================================
+Rank | Symbol     | LTP     | Chg%  | Value(Cr) | In Universe? | Vol/20dAvg | Yesterday Pick?
+-----|------------|---------|-------|-----------|--------------|------------|----------------
+   1 | ZENSARTECH |  496.60 |  6.26 |    532.70 | NO           | N/A        | NO
+   2 | IKIO       |  188.81 | 10.91 |    202.02 | NO           | N/A        | NO
+   3 | PCJEWELLER |   10.44 |  5.99 |    151.06 | NO           | N/A        | NO
+   4 | EIEL       |  241.75 |  5.83 |    131.25 | NO           | N/A        | NO
+   5 | SUMICHEM   |  469.70 |  6.46 |    130.76 | NO           | N/A        | NO
+   6 | MOSCHIP    |  222.92 |  6.91 |     99.12 | NO           | N/A        | NO
+   7 | SUVEN      |  328.30 | 10.19 |     95.11 | NO           | N/A        | NO
+   8 | INDOFARM   |  163.84 | 12.27 |     50.42 | NO           | N/A        | NO
+   9 | DENTA      |  354.80 |  6.93 |     49.51 | NO           | N/A        | NO
+  10 | BLUSPRING  |  128.38 |  7.13 |     40.45 | NO           | N/A        | NO
+[Ranks 11-25: all outside universe — see 4.6.2 table above]
+
+NOTE: Zero overlap between today's T-0 top 25 and basestock universe (pre-run).
+All 25 are SCAN_INCOMPLETE / UNIVERSE_GAP — UGD force-adds queued for Phase A next run.
+No MISS_ANALYZE cases today. No CORRECTLY_PICKED / CORRECTLY_WATCHLISTED cases to verify
+(yesterday's picks ATHERENERG + BAJFINANCE not in today's top movers).
+
+4.5.2 — CLASSIFICATION
+================================================================
+All 25 movers: SCAN_INCOMPLETE (outside universe). Not applicable for MISS_ANALYZE.
+
+Zero MISS_ANALYZE cases today. No rule downvotes from 4.5.
+
+4.5.3 — ATHERENERG OUTCOME CHECK (yesterday's main pick)
+================================================================
+ATHERENERG was yesterday's pick (entry Rs1140.55). Today's Phase D verdict:
+  Rule 77c FAIL: Jul 1 was 52wH Rs1176.2 with 3.89% intraday reversal (>3% threshold).
+  Only 1 of 3 required stabilization sessions elapsed (Jul 2 = session 1; Jul 3 = session 2 — need session 3 = Jul 4 or Jul 5).
+  Rule 46c FAIL: Unbroken resistance Rs1147.4 → R:R = (Rs1434.8 - Rs1150) / (Rs1150 - Rs1050) = 2.85 / 100 = 0.096. FAIL.
+
+CLASSIFICATION: CORRECTLY_GATED (not a miss — Phase D correctly applied 77c + 46c before publish).
+The Jul 2 pick was a valid Day-2 entry that played its thesis. Today's session is a new evaluation
+with new gate states. Rules working as designed.
+
+4.5 RULE ATTRIBUTION (upvote):
+  77c: +1 UPVOTE (correctly blocked premature re-entry today after 52wH reversal)
+  46c: +1 UPVOTE (correctly computed R:R vs unbroken resistance; clean gate-check)
+
+=== END PHASE F.2 ===
+
+=== PHASE F.3 — ZERO-PICK DAY RATIONALE + WATCHLIST CARRIES ===
+
+ZERO-PICK DAY — 2026-07-03
+================================================================
+Picks: 0 (ZERO_PICK_DAY = TRUE)
+Rule blocks:
+  ATHERENERG: Rule 77c (1/3 stabilization sessions) + Rule 46c (R:R 0.096 < 1.5 minimum)
+  All other watchlist carries: triggers not yet fired.
+
+WATCHLIST AUDIT TABLE (9 carries, mandatory per WPR)
+================================================================
+Symbol     | Session | Trigger Status               | Action
+-----------|---------|------------------------------|------------------------------------------
+ATHERENERG |  4/10   | BLOCKED (77c + 46c)          | Re-entry: Jul 7 open (see below)
+CGPOWER    |  3/10   | PENDING (Rs10.5 below 20dH)  | NEAR-TRIGGER — vol regime confirmed
+PAYTM      |  3/10   | PENDING (Rs18.5 below 20dH)  | NEAR-TRIGGER — vol ready
+APOLLO     |  4/10   | PENDING (RM-12 confirmation) | First green > prior intraday high needed
+TATACOMM   |  4/10   | PENDING (R77 4LH/3LL)        | 77d escape criteria monitoring
+GABRIEL    |  3/10   | PENDING (< Rs220 close)      | Auto sector tailwind active
+KEI        |  3/10   | PENDING (< 20dH close)       | Power cable basket watch
+ETERNAL    |  2/10   | PENDING (R:R < 1.5)          | Analyst coverage active; price reset needed
+MARUTI     |  3/10   | PENDING (R:R 1.19 < 1.2)    | Large-cap; price dip needed
+
+No silent drops. All 9 accounted for. No EXPIRED entries this session.
+
+ATHERENERG RE-ENTRY CRITERIA (Jul 7 2026)
+================================================================
+Gate                | Requirement                               | Status
+--------------------|-------------------------------------------|------------------
+Rule 77c            | 3 stabilization sessions after 52wH       | Session 2 of 3 (Jul 3)
+                    | Sessions: Jul 2 (1), Jul 3 (2), Jul 4 (3)| Jul 4 = session 3 complete
+52wH                | Rs1176.2 must remain unbroken on close    | Monitoring
+Entry zone          | Rs1140-1160                               | Contingent
+Vol requirement     | >=1.5x 20d median on trigger session      | Monitoring
+Rule 46c check      | R:R vs nearest_unbroken_resistance        | Recompute Jul 7 AM
+                    | (Rs1147.4 unbroken → passes at entry<Rs1148)| —
+Catalyst            | EV T1 active until ~Jul 14 2026           | ACTIVE
+
+First eligible entry: Jul 7 2026 open (Monday), SUBJECT TO all gates above clearing.
+If 52wH Rs1176.2 is breached (close above) before Jul 7 → 77c resets (new 52wH event); re-evaluate.
+
+=== END PHASE F.3 ===
+
+=== TOKEN USAGE & COST (Run #40 — 2026-07-03 Zero-Pick Day) ===
+Phase F (audit-and-format only — zero-pick fast path):
+  Orchestrator (Sonnet): ~8,000 in / ~2,500 out  — est. Rs 0.52 Lakh
+  No sub-agent calls (zero-pick; no Phase E full validation run)
+TOTAL ESTIMATED: ~Rs 0.52 Lakh (~$0.006 USD)
+Note: Fast-path zero-pick run; full pipeline not executed. Token cost minimal.
+
+STEP 4.7b — NOT RUN (zero-pick day; no new stockparam_final rows for this date's picks)
+  Watchlist symbols' stockparam rows written by Phase A. No additional rows from Phase F this session.
+
+=== END RUN #40 — 2026-07-03 ===
+
+=== STEP 4.5 — MISS AUDIT (Phase F.2 — 2026-07-03) ===
+
+Source: phase_f1_top10.json — Chartink T-0 top-10 by Value Traded (all pass ≥5% gate, ≥Rs1Cr liquidity)
+
+MISS ATTRIBUTION TABLE:
+Rank | Symbol      | LTP    | % Chg | Val(Cr) | In Universe? | Miss Type      | Force-Add Action
+-----|-------------|--------|-------|---------|--------------|----------------|----------------------------------
+  1  | ZENSARTECH  | 496.60 | +6.26 | 532.70  | NO           | UNIVERSE_GAP   | 4.6.5b active=true + 60d backfill
+  2  | IKIO        | 188.81 |+10.91 | 202.02  | NO           | UNIVERSE_GAP   | 4.6.5b active=true + 60d backfill
+  3  | PCJEWELLER  |  10.44 | +5.99 | 151.06  | NO           | UNIVERSE_GAP   | 4.6.5b active=false (price Rs10.44 < Rs20 threshold clause b)
+  4  | EIEL        | 241.75 | +5.83 | 131.25  | NO           | UNIVERSE_GAP   | 4.6.5b active=true + 60d backfill
+  5  | SUMICHEM    | 469.70 | +6.46 | 130.76  | NO           | UNIVERSE_GAP   | 4.6.5b active=true + 60d backfill
+  6  | MOSCHIP     | 222.92 | +6.91 |  99.12  | NO           | UNIVERSE_GAP   | 4.6.5b active=true + 60d backfill
+  7  | SUVEN       | 328.30 |+10.19 |  95.11  | NO           | UNIVERSE_GAP   | 4.6.5b active=true + 60d backfill
+  8  | INDOFARM    | 163.84 |+12.27 |  50.42  | NO           | UNIVERSE_GAP   | 4.6.5b active=true + 60d backfill
+  9  | DENTA       | 354.80 | +6.93 |  49.51  | NO           | UNIVERSE_GAP   | 4.6.5b active=true + 60d backfill
+ 10  | BLUSPRING   | 128.38 | +7.13 |  40.45  | NO           | UNIVERSE_GAP   | 4.6.5b active=true + 60d backfill
+  X  | SAKSOFT     |   N/A  |+14.50 |   N/A   | NO           | UNIVERSE_GAP   | 4.6.5b active=true + 60d backfill
+     |             |        |       |         |              | (RM-11 pattern | Phase C pattern_notes recognized
+     |             |        |       |         |              |  attribution)  | RM-11 Day-2 setup correctly
+
+CROSS-CHECK vs PRIOR RUN (2026-07-02 picks):
+  Yesterday's recommendations: ATHERENERG (Watchlist Carry, re-entry Jul 7)
+  Zero-pick day confirmed — no positions opened.
+  ATHERENERG carry status: 77c cooldown session 2/3. Monitor Jul 4 stabilization.
+
+FALSE NEGATIVE ANALYSIS — IN-UNIVERSE STOCKS:
+  ATHERENERG: CORRECTLY EXCLUDED (77c + 46c). R:R=0.096 fatal. No false negative.
+  All 8 active watchlist carries: PENDING trigger — not false negatives (triggers not hit).
+  No in-universe stock moved ≥5% and was incorrectly blocked.
+  Conclusion: ZERO FALSE NEGATIVES on in-universe symbols. All misses = universe gap (4.6.5b).
+
+RULE LEDGER VOTES APPLIED:
+  77c  +1 UPVOTE  — CORRECTLY EXCLUDED ATHERENERG (3.89% reversal Jul1; 77c cooldown confirmed)
+  46c  +1 UPVOTE  — CORRECTLY EXCLUDED ATHERENERG (R:R=0.096 fatal vs nearest_unbroken_resistance)
+  RM11-RSI +1 UPVOTE — SAKSOFT RM-11 positive pattern attribution (universe gap, not rule failure)
+
+NET RULE HEALTH: POSITIVE. 46c now +7 (HIGH_CONVICTION). 77c now +3. RM11-RSI now +5.
+
+=== END STEP 4.5 ===
+
+=== STEP 4.7b — DAILY PARAMETER LOG (Phase F.6 — 2026-07-03) ===
+
+out/stockparam_final.csv APPEND SUMMARY:
+  Rows appended: 25
+  Symbol count: 25 (21 pre-filter + 4 force-adds: EXIDEIND, SONATSOFTW, RHIM, ADANIENT)
+  Skipped symbols (no T-1 OHLC): 0
+  Schema drift: NONE — 39 cols verified, first 26 cols byte-for-byte match data/stockparam.csv
+
+Symbols appended (2026-07-03):
+  Pre-filter (21): ATHERENERG, MARUTI, BAJFINANCE, OLAELEC, NELCO, PAISALO, APOLLO, NACLIND,
+                   TATATECH, KEI, TARIL, PAYTM, CGPOWER, ETERNAL, DELHIVERY, TRENT, KPIL,
+                   SWIGGY, VOGL, VEDPOWER, VISL
+  Force-adds (4):  EXIDEIND, SONATSOFTW, RHIM, ADANIENT
+
+Per-symbol overrides applied (narrative cols 27-39):
+  ATHERENERG:  news_and_trends = EV T1 active + Rule 77c cooldown 1/3 sessions + re-entry Jul 7
+  OLAELEC:     news_and_trends = EV T1 active + SIDEWAYS UT1 + cautious setup
+  EXIDEIND:    news_and_trends = EV battery T2 + force-add Phase C
+  ADANIENT:    news_and_trends = Adani+IHC $1.5bn JV + ADANI_GROUP_TAILWIND +10 modifier
+  SONATSOFTW:  news_and_trends = AI_TAILWIND + RM-11 Day-2 continuation candidate
+
+Session-level macro defaults applied to all other symbols:
+  microtrend_disruption_summary: INR weakness FX M2 spike; RBI crypto rejected; AI boom surge
+  global_overnight_cues_summary: US markets positive; AI chip demand elevated; no adverse events
+  structural_risk_summary: INR pressure NBFCs; PSB credit quality H2 2026; BoB NMC event watch
+
+Total rows in out/stockparam_final.csv: 1142 (was 1117 before this append)
+Date range: 2026-06-22 to 2026-07-03
+
+=== END STEP 4.7b ===

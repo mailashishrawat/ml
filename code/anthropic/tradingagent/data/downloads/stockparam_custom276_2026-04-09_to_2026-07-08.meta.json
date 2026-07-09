@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-07-09T13:55:44.500513",
+  "universe_tag": "custom276",
+  "from_date": "2026-04-09",
+  "to_date": "2026-07-08",
+  "symbol_count": 276,
+  "rows_written": 17215,
+  "columns_written": 55,
+  "extended_indicators": true,
+  "source_attribution_counts": {
+    "cache": 269,
+    "yfinance": 5,
+    "FAIL": 2
+  },
+  "failed_symbols": [
+    "IDEAFORGE-BE",
+    "TRIL"
+  ],
+  "kite_cache_dir": null,
+  "ohlc_cache_dir": ".cache/downloader_ohlc",
+  "flat_cache_path": "data/downloads/ohlc_cache.csv"
+}

@@ -3007,5 +3007,645 @@
     ],
     "zero_pick_reason": "All candidates failed Fix 3 (R:R via nearest_unbroken_resistance). Market has run 15-25% in 3 weeks; 52wH resistance dense across all candidates.",
     "key_corrections": "SCHNEIDER prior pick VOIDED: Rule 77c 0/3 stabilization sessions; Rule 46c R:R 0.207:1 vs 2.70 claimed. Jun 30 intraday gap-down -4.24% confirms rolling-top thesis."
+  },
+  {
+    "date": "2026-07-01",
+    "recommendations": [],
+    "entry_prices": {},
+    "targets": {},
+    "stop_losses": {},
+    "t2_exit_date": "2026-07-03",
+    "t2_exit_prices": {},
+    "note_data_source": "Run #39 \u2014 Jun 30 EOD OHLCV baseline (yfinance). Zero picks: all failed R:R < 1.5 gate (46c). ATHERENERG trigger FIRED watchlist.",
+    "patterns": {},
+    "watchlist": {
+      "ATHERENERG": {
+        "tier": "P1",
+        "trigger": ">Rs1155 on 11M+ vol",
+        "entry": 1158.0,
+        "stop": 1070.0,
+        "target": 1380.0,
+        "rr": 2.52,
+        "wpr_session": 2
+      },
+      "MOTILALOFS": {
+        "tier": "P1",
+        "trigger": ">Rs968.2 on 696K+ vol",
+        "entry": 968.2,
+        "stop": 895.0,
+        "target": 1088.32,
+        "rr": 1.64,
+        "wpr_session": 9
+      },
+      "MARUTI": {
+        "tier": "P2",
+        "trigger": ">Rs14250 on 140K+ vol",
+        "entry": 14250.0,
+        "stop": 13200.0,
+        "target": 16000.0,
+        "rr": 1.67,
+        "wpr_session": 1
+      },
+      "BAJFINANCE": {
+        "tier": "P2",
+        "trigger": ">Rs1010 on 1.7M+ vol",
+        "entry": 1010.0,
+        "stop": 950.0,
+        "target": 1095.76,
+        "rr": 1.43,
+        "wpr_session": 1
+      }
+    }
+  },
+  {
+    "date": "2026-07-02",
+    "run_id": 39,
+    "picks": [
+      {
+        "symbol": "ATHERENERG",
+        "company": "Ather Energy Ltd",
+        "entry": 1140.55,
+        "target": 1434.8,
+        "stop": 1050.0,
+        "confidence": 92,
+        "pattern": "RM-2 Day-2 + WPR-P1-FIRED + Rule46d",
+        "exit_date": "2026-07-04",
+        "rr": 3.25,
+        "catalyst": "EV policy T1 (Delhi 2028 mandate)",
+        "ut1_state": "STRONG_UP"
+      }
+    ],
+    "watchlist": [
+      "TARIL",
+      "APOLLO",
+      "TATACOMM",
+      "GABRIEL",
+      "PAYTM",
+      "CGPOWER",
+      "KEI",
+      "MARUTI",
+      "ETERNAL"
+    ],
+    "excluded": [
+      "BAJFINANCE (26e fail)",
+      "MARUTI (R:R 1.19)",
+      "TARIL (R77 4LH/4LL)",
+      "ETERNAL (R:R 0.36)"
+    ],
+    "it_warning_session": 2,
+    "zero_picks": false
+  },
+  {
+    "date": "2026-07-03",
+    "run_id": 40,
+    "picks": [],
+    "zero_picks": true,
+    "zero_pick_reason": "ATHERENERG FAIL: Rule 77c (1/3 stabilization sessions complete after Jul 1 52wH Rs1176.2 with 3.89% reversal \u2014 need 3 sessions, only 1 elapsed) + Rule 46c (R:R=0.096 vs unbroken resistance Rs1147.4). publish_ready: FALSE.",
+    "watchlist": [
+      {
+        "symbol": "ATHERENERG",
+        "pattern": "RM-2 + WPR continuation",
+        "trigger": "Jul 7 open \u2014 after 2 more stabilization sessions (Jul 3 + Jul 4); 52wH Rs1176.2 must remain unbroken; entry Rs1140-1160 on vol >=1.5x median",
+        "entry": 1150.0,
+        "target": 1434.8,
+        "stop": 1050.0,
+        "rr": 2.71,
+        "confidence_pending": 90,
+        "catalyst": "EV T1 (Delhi 2028 mandate)",
+        "wpr_session": 4,
+        "expiry_session": 10,
+        "blocking_rules": [
+          "77c (2 sessions remain)",
+          "46c (R:R passes at Rs1147.4 breakout)"
+        ],
+        "re_entry_note": "77c clears Jul 5 (session 3); Jul 7 open is first eligible entry. 52wH Rs1176.2 must not be breached on close by any prior session."
+      },
+      {
+        "symbol": "CGPOWER",
+        "pattern": "Rule 80 coil",
+        "trigger": "Close > 20dH on vol >=1.5x median (Rs10.5 below trigger as of Jul 2)",
+        "entry": null,
+        "target": null,
+        "stop": null,
+        "rr": null,
+        "confidence_pending": 84,
+        "catalyst": "Power equipment basket tailwind (T2)",
+        "wpr_session": 3,
+        "expiry_session": 10,
+        "blocking_rules": [
+          "Trigger not yet fired"
+        ],
+        "re_entry_note": "Near-trigger: Rs10.5 below breakout level. Vol regime confirmed. Watch for breadth from power basket peers."
+      },
+      {
+        "symbol": "PAYTM",
+        "pattern": "Rule 80 coil",
+        "trigger": "Close > 20dH on vol >=1.2x median (Rs18.5 below trigger as of Jul 2)",
+        "entry": null,
+        "target": null,
+        "stop": null,
+        "rr": null,
+        "confidence_pending": 82,
+        "catalyst": "Fintech sector (no T1/T2 active)",
+        "wpr_session": 3,
+        "expiry_session": 10,
+        "blocking_rules": [
+          "Trigger not yet fired"
+        ],
+        "re_entry_note": "Rs18.5 below trigger. Vol ready. Needs price catalyst or sector follow-through."
+      },
+      {
+        "symbol": "APOLLO",
+        "pattern": "RM-12 Continuation Pullback",
+        "trigger": "Close > prior intraday high on vol >=0.8x median; RSI must recover above 55",
+        "entry": null,
+        "target": null,
+        "stop": null,
+        "rr": null,
+        "confidence_pending": 78,
+        "catalyst": "Healthcare sector recovery",
+        "wpr_session": 4,
+        "expiry_session": 10,
+        "blocking_rules": [
+          "RM-12 recovery confirmation pending"
+        ],
+        "re_entry_note": "Pullback 5-18% from 20d high. Watching for first green close above prior intraday high."
+      },
+      {
+        "symbol": "TATACOMM",
+        "pattern": "RM-4 / Rule 80 coil",
+        "trigger": "Entry zone Rs1970-2010; close above Rs2010 on vol >=0.8x",
+        "entry": 1990.0,
+        "target": 2200.0,
+        "stop": 1880.0,
+        "rr": 1.83,
+        "confidence_pending": 80,
+        "catalyst": "AI/cloud infra tailwind (Pattern O basket)",
+        "wpr_session": 4,
+        "expiry_session": 10,
+        "blocking_rules": [
+          "Rule 77 4LH/3LL in SIDEWAYS \u2014 monitoring for V-confirmation"
+        ],
+        "re_entry_note": "Rule 77d escape applies if drawdown from 20d peak >=15% and T-1 vol >=0.8x."
+      },
+      {
+        "symbol": "GABRIEL",
+        "pattern": "RM-1 breakout watch",
+        "trigger": "Close > Rs220 on vol >=1.3x median",
+        "entry": null,
+        "target": null,
+        "stop": null,
+        "rr": null,
+        "confidence_pending": 79,
+        "catalyst": "Auto sector tailwind (T2)",
+        "wpr_session": 3,
+        "expiry_session": 10,
+        "blocking_rules": [
+          "Trigger not yet fired"
+        ],
+        "re_entry_note": "Auto sector tailwind active. Watching breakout level."
+      },
+      {
+        "symbol": "KEI",
+        "pattern": "Rule 80 coil \u2014 power cable",
+        "trigger": "Close > 20dH on vol >=1.5x",
+        "entry": null,
+        "target": null,
+        "stop": null,
+        "rr": null,
+        "confidence_pending": 81,
+        "catalyst": "Power equipment capex cycle (T2)",
+        "wpr_session": 3,
+        "expiry_session": 10,
+        "blocking_rules": [
+          "Trigger not yet fired"
+        ],
+        "re_entry_note": "Adjacent to power_equip_basket. KEI benefits from transmission capex."
+      },
+      {
+        "symbol": "ETERNAL",
+        "pattern": "Rule 80 coil",
+        "trigger": "Close > 20dH on vol >=1.2x; R:R must reach >=1.5 from entry",
+        "entry": null,
+        "target": null,
+        "stop": null,
+        "rr": null,
+        "confidence_pending": 78,
+        "catalyst": "Analyst Buy coverage (31% upside, Jul 2 2026)",
+        "wpr_session": 2,
+        "expiry_session": 10,
+        "blocking_rules": [
+          "R:R was 0.36 at Jul 2 \u2014 needs price pullback or higher target confirmation"
+        ],
+        "re_entry_note": "Analyst coverage catalysts require price level to reset R:R. Monitor for pullback to entry zone."
+      },
+      {
+        "symbol": "MARUTI",
+        "pattern": "Large-cap momentum \u2014 Rule 80 proximity",
+        "trigger": "Close > prior resistance on vol >=1.5x with auto-sector breadth",
+        "entry": null,
+        "target": null,
+        "stop": null,
+        "rr": null,
+        "confidence_pending": 77,
+        "catalyst": "Auto sector Jun sales beat (T2)",
+        "wpr_session": 3,
+        "expiry_session": 10,
+        "blocking_rules": [
+          "R:R 1.19 at Jul 2 \u2014 below 1.2 UT-RELAX-1 floor"
+        ],
+        "re_entry_note": "Waiting for price dip to reset R:R above 1.2."
+      }
+    ],
+    "macro_context": {
+      "ev_sector": "T1 ACTIVE \u2014 Delhi 2028 EV-only 2W mandate (active until ~Jul 14 2026)",
+      "adani_group": "T2 \u2014 group monitoring active; no new catalyst today",
+      "ai_tailwind": "ACTIVE \u2014 NiftyIT reversal monitoring session 3/3; if NiftyIT underperforms Nifty50 by >2% today, AI_DISRUPTION_RISK hard exclusion activates",
+      "us_markets": "POSITIVE \u2014 US markets broadly positive heading into weekend",
+      "it_sector": "CAUTION \u2014 Hard excludes maintained: TCS, INFOSYS, WIPRO, HCLTECH, COFORGE, MPHASIS, KPIT, HEXAWARE, PERSISTENT, MASTEK, LTIMINDTREE",
+      "power_equipment": "T2 ACTIVE \u2014 India Rs9L Cr transmission capex cycle through 2032"
+    },
+    "atherenerg_reentry_note": "ATHERENERG re-entry eligibility: Jul 7 2026 open (Monday), provided: (1) 2 stabilization sessions (Jul 3 Thu + Jul 4 Fri) show closes within \u00b12% of Rs1100-1150 zone, range <2x avg, vol <1.5x; (2) 52wH Rs1176.2 unbroken on close in any interim session; (3) entry Rs1140-1160, vol >=1.5x median on trigger session. Rule 77c clears on session 3 = Jul 5 (if NSE trading). Rule 46c R:R recomputes vs unbroken resistance Rs1147.4 \u2014 passes at entry <Rs1148.",
+    "phase_d_verdict": "ATHERENERG: publish_ready=FALSE. Rule 77c: 1 of 3 stabilization sessions elapsed after Jul 1 52wH Rs1176.2 (3.89% intraday reversal > 3% threshold). Rule 46c: R:R=0.096 vs unbroken resistance Rs1147.4 \u2014 insufficient."
+  },
+  {
+    "date": "2026-07-06",
+    "recommendations": [],
+    "entry_prices": {},
+    "targets": {},
+    "stop_losses": {},
+    "t2_exit_date": null,
+    "patterns": {},
+    "confidence_scores": {},
+    "score_breakdowns": {},
+    "templates": {},
+    "rm_classifications": {},
+    "catalyst_tiers": {},
+    "uptrend_states": {},
+    "realized_return_pcts": {},
+    "hit_targets": {},
+    "days_to_outcomes": {},
+    "zero_pick_day": true,
+    "zero_pick_rationale": "All 5 Phase C candidates failed Phase D chart gates: 3 (ADANIPORTS/HYUNDAI/M&M) failed 26e volatility floor (large-cap smooth uptrends have HVD252<40 and HVD64<8 \u2014 Rule 26e HIGH_CONVICTION correctly blocks these); all 5 failed Rule 46c R:R gate (R:R 0.01\u20130.23 vs \u22651.5 required \u2014 Rule 46c HIGH_CONVICTION correctly blocks chase-at-extended entries). No candidate satisfied Rule 46d 6-condition exemption (no fresh 52wH breakout on catalyst). 12 Phase C watchlist candidates (78\u201385% conf) carried forward \u2014 none are eligible as main picks under the strict >85% publish threshold. Zero-pick day is expected and preferable to forcing a marginal trade with sub-1.5 R:R. USTR probe + IRDAI probe + Q1 earnings start add event-risk overlay this session.",
+    "watchlist_count": 17
+  },
+  {
+    "date": "2026-07-07",
+    "recommendations": [
+      "DIXON",
+      "PARAS"
+    ],
+    "entry_prices": {
+      "DIXON": 13304.0,
+      "PARAS": 1358.4
+    },
+    "targets": {
+      "DIXON": 15323.0,
+      "PARAS": 1519.0
+    },
+    "stop_losses": {
+      "DIXON": 12120.85,
+      "PARAS": 1282.68
+    },
+    "t2_exit_date": "2026-07-09",
+    "patterns": {
+      "DIXON": [
+        "template:RM-1",
+        "ut1:UP",
+        "rm_class:MOMENTUM_CONTINUATION",
+        "pattern_j:T1:+15",
+        "pattern_mc:+20",
+        "pattern_f:trending:+5",
+        "ledger:HIGH_CONVICTION:46d",
+        "ledger:HIGH_CONVICTION:26e"
+      ],
+      "PARAS": [
+        "template:80f",
+        "ut1:STRONG_UP",
+        "rm_class:RUNNING_BREAKOUT_CONTINUATION",
+        "pattern_80f:first_fire:+85",
+        "recent_mover_5d:+2",
+        "macro_boost:strong_up+10wk_high:+2",
+        "ledger:WPR:+1"
+      ]
+    },
+    "confidence_scores": {
+      "DIXON": 92,
+      "PARAS": 85
+    },
+    "score_breakdowns": {
+      "DIXON": {
+        "template": "RM-1",
+        "pattern_base": 88,
+        "recent_mover": 20,
+        "pattern_boost": 20,
+        "macro_boost": 0,
+        "ledger_boost": 2,
+        "penalty": 0,
+        "raw": 130,
+        "cap_applied": 92,
+        "floor_applied": 0,
+        "final": 92,
+        "signals_fired": [
+          "template:RM-1",
+          "ut1:UP",
+          "rm_class:MOMENTUM_CONTINUATION",
+          "pattern_j:T1:+15",
+          "pattern_mc:+20",
+          "pattern_f:trending:+5",
+          "ledger:HIGH_CONVICTION:46d",
+          "ledger:HIGH_CONVICTION:26e"
+        ]
+      },
+      "PARAS": {
+        "template": "80f",
+        "pattern_base": 85,
+        "recent_mover": 2,
+        "pattern_boost": 0,
+        "macro_boost": 2,
+        "ledger_boost": 1,
+        "penalty": 0,
+        "raw": 90,
+        "cap_applied": 85,
+        "floor_applied": 0,
+        "final": 85,
+        "signals_fired": [
+          "template:80f",
+          "ut1:STRONG_UP",
+          "80f-a:dist_20dH=-5.86_in_range",
+          "80f-b:ut1=STRONG_UP",
+          "80f-c:3_rising_closes",
+          "80f-d:vol_ratio=0.82_ge_0.6_median",
+          "80f-e:rsi=68_in_55_78",
+          "80f-f:chart_2.7_pass",
+          "80f-g:52wH_12_sess_ago",
+          "chart_read_pass:77+77c+78+26e+46c",
+          "26f_exempt:running_breakout"
+        ]
+      }
+    },
+    "templates": {
+      "DIXON": "RM-1",
+      "PARAS": "80f"
+    },
+    "rm_classifications": {
+      "DIXON": "MOMENTUM_CONTINUATION",
+      "PARAS": "RUNNING_BREAKOUT_CONTINUATION"
+    },
+    "catalyst_tiers": {
+      "DIXON": "T1",
+      "PARAS": "none"
+    },
+    "uptrend_states": {
+      "DIXON": "UP",
+      "PARAS": "STRONG_UP"
+    },
+    "realized_return_pcts": {
+      "DIXON": null,
+      "PARAS": null
+    },
+    "hit_targets": {
+      "DIXON": null,
+      "PARAS": null
+    },
+    "days_to_outcomes": {
+      "DIXON": null,
+      "PARAS": null
+    },
+    "share_sale_overhang": {
+      "ATHERENERG": {
+        "catalyst": "\u20b91,900cr share sale announced (Times Business Jul 7 2026)",
+        "tier": "T1_BEARISH",
+        "sub_tag": "SHARE_SALE_DILUTION",
+        "action": "do_not_enter_new_positions",
+        "re_evaluation_conditions": [
+          "share_sale_price_disclosed",
+          "placement_closed",
+          "close_reclaims_pre_announcement_high_on_vol_ge_1.5x"
+        ],
+        "expiry_sessions": 30
+      }
+    },
+    "rescore_note": "Re-scored 2026-07-07 evening after user provided ATHERENERG \u20b91,900cr share sale headline. Added Rule 80f (post-breakout continuation coil) \u2014 first fire on PARAS. Added SHARE_SALE_DILUTION NEWS-CAT sub-tag for ATHER supply overhang."
+  },
+  {
+    "date": "2026-07-08",
+    "final_picks": [],
+    "carry_positions": [
+      {
+        "symbol": "DIXON",
+        "company_name": "Dixon Technologies",
+        "template": "RM-1_CARRY",
+        "uptrend_state": "SIDEWAYS",
+        "rsi": 69.1,
+        "close": 13242.0,
+        "vol_ratio": 1.31,
+        "pct_change": -0.47,
+        "reason": "Jul 7 RM-1 main pick \u2014 CARRY existing position, stop Rs12121, target Rs15323, exit Jul 9",
+        "confidence_score": 92,
+        "score_breakdown": {
+          "template": "RM-1_CARRY",
+          "pattern_base": 92,
+          "recent_mover": 0,
+          "pattern_boost": 0,
+          "macro_boost": 0,
+          "ledger_boost": 0,
+          "penalty": 0,
+          "raw": 92,
+          "cap_applied": 92,
+          "floor_applied": 0,
+          "final": 92,
+          "signals_fired": [
+            "rm1_carry",
+            "wpr:day_2"
+          ]
+        },
+        "action": "CARRY_EXISTING_POSITION"
+      }
+    ],
+    "watchlist": [
+      {
+        "symbol": "LODHA",
+        "template": "RM-2",
+        "confidence_score": 92
+      },
+      {
+        "symbol": "SWIGGY",
+        "template": "Rule-80-Coil",
+        "confidence_score": 82
+      },
+      {
+        "symbol": "RITES",
+        "template": "RM-1",
+        "confidence_score": 82
+      },
+      {
+        "symbol": "63MOONS",
+        "template": "Rule-80-Coil",
+        "confidence_score": 78
+      },
+      {
+        "symbol": "ABDL",
+        "template": "Rule-80-Coil",
+        "confidence_score": 78
+      },
+      {
+        "symbol": "DIACABS",
+        "template": "Rule-80-Coil",
+        "confidence_score": 78
+      },
+      {
+        "symbol": "SWANCORP",
+        "template": "Rule-80-Coil",
+        "confidence_score": 78
+      },
+      {
+        "symbol": "TEXRAIL",
+        "template": "Rule-80-Coil",
+        "confidence_score": 78
+      },
+      {
+        "symbol": "WELCORP",
+        "template": "Rule-80-Coil",
+        "confidence_score": 78
+      },
+      {
+        "symbol": "TATAPOWER",
+        "template": "RM-5-Catalyst-Oversold-Bounce",
+        "confidence_score": null,
+        "add_source": "USER_MANUAL_ADD",
+        "catalyst_tier": "T2",
+        "catalyst_reason": "Tata Power FY30 guidance (Times Business Jul 8)",
+        "watchlist_trigger": "green close >Rs383 on >=1.2x vol + RSI reclaim >40",
+        "entry_zone": "Rs383-388",
+        "stop": 368.0,
+        "target": 410.0,
+        "sessions_carried": 0,
+        "expiry_sessions": 10
+      },
+      {
+        "symbol": "AEQUS",
+        "template": "RM-1-Coil-Break-Aerospace-Thematic",
+        "confidence_score": 85,
+        "add_source": "USER_MANUAL_ADD",
+        "sector_thesis": "Aerospace/Defense (precision mfg, Belagavi SEZ)",
+        "exchange": "NSE",
+        "isin": "INE947N01017",
+        "listing_date": "2025-12-10",
+        "action_required_next_run": "phase_a_ohlc_backfill",
+        "watchlist_trigger": "Breakout: green close >Rs248 on >=1.5x vol + RSI 60-75; Pullback: Rs228-232 MA5 hold + green",
+        "sessions_carried": 0,
+        "expiry_sessions": 20,
+        "status": "ACTIVE_OHLC_BACKFILLED",
+        "available_sessions": 142,
+        "hvd_last_64": 14,
+        "rule_26e_verdict": "PASS_TIER_D_ALSO_TIER_A",
+        "confidence_cap_reason": "Tier D recent-listing thematic",
+        "entry_zone": "Rs228-Rs248",
+        "stop": 215.0,
+        "target": 275.0,
+        "last_close_t1": 231.89,
+        "rsi_t1": 60.74,
+        "ut1_state_t1": "UP",
+        "jul_8_intraday_high": 266.59,
+        "news_monitor": true
+      },
+      {
+        "symbol": "ETERNAL",
+        "template": "RM-12-Post-Breakout-Pullback",
+        "confidence_score": 80,
+        "add_source": "USER_MANUAL_ADD",
+        "sector": "Quick Commerce / Food Delivery",
+        "watchlist_trigger": "Pullback to Rs 279-284 (MA5 + Jul3 breakout body) with green close + vol >=0.8x avg; OR breakout above Rs 296.55 (52w high) on vol >=1.5x + RSI staying <80",
+        "entry_zone": "Rs 279-284 (pullback) OR Rs 297-300 (52w high breakout)",
+        "stop": 276.0,
+        "target_1": 300.0,
+        "target_2": 329.0,
+        "rr_pullback": "9.4:1 (theoretical) / practical ~4:1 at mid-entry",
+        "sessions_carried": 0,
+        "expiry_sessions": 10,
+        "status": "ACTIVE",
+        "watchlist_added": "2026-07-09",
+        "technical_notes": {
+          "breakout_date": "2026-07-03",
+          "breakout_close": 281.65,
+          "breakout_pct": "+8.8%",
+          "jul8_warning": "SHOOTING STAR at 52w high Rs 296.55 on 2.06x vol \u2014 heavy supply signal; wait for pullback or clean 52wH reclaim, do NOT chase",
+          "rsi_t1": 71.5,
+          "ut1_state": "STRONG_UP",
+          "vol_regime_shift": "Elevated vol since Jul 3 (1.4x-2.1x avg); pre-breakout baseline was ~26-28M/day",
+          "distribution_risk": "Jul 8 intraday reversal (-3.3% from high to close on 58.6M vol) = Rule 77c / 46c flag; requires confirmation before entry"
+        }
+      }
+    ],
+    "score_breakdowns": {
+      "LODHA_blocked_at_phase_d": {
+        "template": "RM-2",
+        "pattern_base": 90,
+        "recent_mover": 0,
+        "pattern_boost": 0,
+        "macro_boost": 0,
+        "ledger_boost": 2,
+        "penalty": 0,
+        "raw": 92,
+        "cap_applied": 92,
+        "floor_applied": 0,
+        "final": 92,
+        "signals_fired": [
+          "template:RM-2",
+          "ut1:SIDEWAYS",
+          "rsi:78.97_under_cap_80",
+          "vol_thin_day2_digestion",
+          "ledger:HIGH_CONVICTION:WPR:+2",
+          "20dH_fresh_break_jul6"
+        ]
+      }
+    },
+    "templates": {
+      "LODHA": "RM-2"
+    },
+    "rm_classifications": {
+      "LODHA": "BREAKOUT_DAY_2"
+    },
+    "catalyst_tiers": {
+      "LODHA": null
+    },
+    "realized_return_pcts": {
+      "LODHA": null
+    },
+    "hit_targets": {
+      "LODHA": null
+    },
+    "days_to_outcomes": {
+      "LODHA": null
+    },
+    "zero_pick_day": true,
+    "zero_pick_rationale": "Only 1 candidate reached Phase D (LODHA, RM-2 Breakout Day-2, conf 92). Two hard downside gates failed: Rule 26e volatility floor (only 3 HVD@\u22655% in last 68 sessions vs 11 required under thin-history adjustment) and Rule 46c R:R 1.02 vs 1.5 floor (entry Rs1097 stop Rs1045 measured-move target Rs1150 \u2014 reward Rs53 vs risk Rs52). Rule 46d exemption not applicable (RM-2 template + no T1/T2 catalyst + vol 0.89x < 1.5x). UT-RELAX-1/2/5 relaxations not applicable (UT1=SIDEWAYS, vol 0.89x, no catalyst). Zero-pick day per doctrine: downside gates are never relaxed. LODHA routed to watchlist for pullback re-entry or fresh-break reclassification."
+  },
+  {
+    "date": "2026-07-09",
+    "recommendations": [],
+    "entry_prices": {},
+    "targets": {},
+    "stop_losses": {},
+    "t2_exit_date": null,
+    "patterns": {},
+    "confidence_scores": {},
+    "score_breakdowns": {},
+    "templates": {},
+    "rm_classifications": {},
+    "catalyst_tiers": {},
+    "uptrend_states": {},
+    "realized_return_pcts": {},
+    "hit_targets": {},
+    "days_to_outcomes": {},
+    "watchlist": [
+      "NAUKRI",
+      "AEQUS",
+      "IOLCP",
+      "ATHERENERG"
+    ],
+    "zero_pick_day": true,
+    "zero_pick_rationale_short": "NAUKRI (only Phase C candidate) failed 46c R:R (0.56 vs 1.2 floor) + 3.1C distribution vol on broad-market risk-off day"
   }
 ]

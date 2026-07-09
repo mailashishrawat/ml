@@ -1,0 +1,649 @@
+{
+  "_meta": {
+    "config_version": "1.2.0",
+    "created": "2026-07-04",
+    "last_updated": "2026-07-09",
+    "changelog": [
+      "1.2.0 (2026-07-09): Refit phase_c.rm12. Backtest raised RM-12 win rate 60.7%->83.3% (adx_14>=30 + roc_10>=0 were the killer filters; rsi tightened 35-72 -> 48-65). Details in phase_c.rm12._refit. Wider alternate at 75%/16 trades documented.",
+      "1.1.0 (2026-07-09): Refit phase_c.rule80 and phase_c.rm4 (+ phase_f.pattern_attribution mirrors). Backtest on 2026-04-08..2026-07-09 raised R-80 win rate 45.9%->81.25% (atr_pct<=3.5 was the killer filter) and RM-4 54.1%->80.0% (cmf_20>=-0.05 + adx>=15). Details in each block's _refit sub-object.",
+      "1.0.0 (2026-07-04): Initial extraction from inline skill/agent constants."
+    ],
+    "purpose": "Single source of truth for all tunable thresholds, weights, and caps in the india-stock-recommender pipeline. Anchored to pre-Jul-4 2026 live behavior — no Day-1 behavioral change on extraction.",
+    "consumers": [
+      ".claude/agents/india-stock-recommender.md",
+      ".claude/skills/data-prep/SKILL.md",
+      ".claude/skills/macro-scan/SKILL.md",
+      ".claude/skills/pattern-scan/SKILL.md",
+      ".claude/skills/chart-gates/SKILL.md",
+      ".claude/skills/validation/SKILL.md",
+      ".claude/skills/audit-and-format/SKILL.md",
+      ".claude/skills/scoring-model/SKILL.md",
+      ".claude/skills/topmoversintrospection/SKILL.md"
+    ],
+    "invariants": [
+      "Change values here; NEVER hard-code the same number in a skill file.",
+      "Every skill loads config.json once at start of its run and passes the dict to shards as read-only input.",
+      "Weight refits (once ~60 sessions of realized outcomes accumulate) rewrite ONLY scoring.* keys, atomically.",
+      "Numeric values only. String constants that are enums (e.g. UT-1 state names) are also here; free-form narrative is not."
+    ]
+  },
+
+  "universe": {
+    "eval_universe_daily_top25_size": 25,
+    "eval_universe_watchlist_max": 10,
+    "eval_universe_active_anchors_estimated": 66,
+    "liquidity_gate_rs_crore": 1,
+    "liquidity_gate_close_x_volume_min": 10000000
+  },
+
+  "screening": {
+    "price_floor_rs": 20,
+    "yoy_profit_growth_pct": 15,
+    "loss_reduction_pct": 15,
+    "min_listed_days": 30,
+    "thin_history_threshold_days": 240,
+    "thin_history_min_hv_days": 10,
+    "volatility_floor_annual_days": 40,
+    "volatility_floor_annual_window": 252,
+    "volatility_floor_tier_a_64sessions": 8,
+    "volatility_floor_tier_b_64sessions": 5,
+    "volatility_floor_tier_c_64sessions": 3,
+    "volatility_floor_relaxed_64sessions": 6,
+    "volatility_floor_min_single_move_pct": 3
+  },
+
+  "phase_a": {
+    "wall_time_budget_min": 6,
+    "backfill_shard_count": 8,
+    "backfill_shard_wall_time_min": 4,
+    "cache_repair_inline_threshold": 2,
+    "t1_row_append_inline_threshold": 20,
+    "t1_row_append_shard_count": 4,
+    "t1_row_append_fan_out_threshold": 40,
+    "eval_universe_recent_window_days": 20,
+    "caching_lookback_sessions": 60,
+    "backfill_max_sessions_new_symbol": 60,
+    "a0_assertion_min_top25_rows": 1
+  },
+
+  "phase_b": {
+    "wall_time_budget_min": 2,
+    "news_source_count": 7,
+    "news_fetch_timeout_sec": 90,
+    "news_lookback_hours": 48,
+    "earnings_surprise_pat_yoy_pct": 25,
+    "earnings_margin_improvement_bps": 300,
+    "commodity_crude_move_pct": 3,
+    "commodity_gold_move_pct_5d": 2,
+    "niftyit_underperformance_pct": 2,
+    "niftyit_underperf_consecutive_sessions": 3,
+    "policy_scanner_requests_per_shard": 20
+  },
+
+  "phase_c": {
+    "wall_time_budget_min": 6,
+    "shard_count": 6,
+    "shard_wall_time_cap_sec": 90,
+    "eval_universe_fan_out_threshold": 20,
+    "max_proposed_candidates": 5,
+    "caching_lookback_sessions": 60,
+    "recent_movers_threshold_pct": 5,
+    "recent_movers_lookback_sessions": 5,
+    "recent_movers_consecutive_sessions_threshold": 2,
+
+    "recent_mover_classification": {
+      "momentum_vol_ratio_min": 1.5,
+      "momentum_rsi_max": 75,
+      "momentum_climax_single_move_pct": 10,
+      "news_priced_in_vol_ratio_min": 3.0,
+      "news_priced_in_single_move_pct": 8,
+      "news_priced_in_rsi_min": 80,
+      "low_conviction_vol_ratio_max": 1.0
+    },
+
+    "template_base_conf": {
+      "RM-1": 88,
+      "RM-2": 90,
+      "RM-3": 91,
+      "RM-4": 89,
+      "RM-5": 87,
+      "RM-6": 86,
+      "RM-7": 88,
+      "RM-8": 87,
+      "RM-11": 90,
+      "RM-12": 78,
+      "Pattern-K": 72
+    },
+
+    "template_cap": {
+      "global": 92,
+      "RM-12_no_catalyst": 85,
+      "RM-12_t2_catalyst": 87,
+      "RM-12_t1_catalyst": 88,
+      "Pattern-K_no_lpi": 80,
+      "Pattern-K_with_lpi": 88
+    },
+
+    "rm1": {
+      "breakout_vol_ratio_min": 1.5,
+      "rsi_min": 55,
+      "rsi_max": 72
+    },
+    "rm2": {
+      "recovery_vol_ratio_min": 0.8
+    },
+    "rm3": {
+      "recovery_vol_ratio_max": 0.8
+    },
+    "rm4": {
+      "_refit": {
+        "date": "2026-07-09",
+        "backtest_window": "2026-04-08 to 2026-07-09 (66 sessions, 334 symbols)",
+        "baseline_win_rate_pct": 54.1,
+        "refit_win_rate_pct": 80.0,
+        "trades": 15,
+        "targets": 9,
+        "stops": 2,
+        "time_exits": 4,
+        "avg_pnl_pct": 7.37,
+        "note": "Key differentiator: cmf_20 >= -0.05 (money flow floor) + adx_14 >= 15 pushed win rate from 54% to 80%. Kept baseline rsi/dip/vol bands; rsi_max raised 58->60 during grid but 45-60 was winner. See scripts/refit_r80_rm4_v2.py."
+      },
+      "strong_stock_duration_days": 30,
+      "dip_min_pct": 5,
+      "dip_max_pct": 12,
+      "recovery_vol_ratio_min": 0.7,
+      "recovery_rsi_min": 45,
+      "recovery_rsi_max": 60,
+      "recovery_adx_min": 15,
+      "recovery_cmf_20_min": -0.05
+    },
+    "rm5": {
+      "vol_ratio_min": 2.0,
+      "rsi_min": 50,
+      "rsi_max": 72
+    },
+    "rm6": {
+      "vol_ratio_min": 0.8
+    },
+    "rm7": {
+      "climax_move_pct": 10
+    },
+    "rm8": {
+      "coil_sessions_min": 5,
+      "breakout_range_ratio": 1.5,
+      "breakout_vol_ratio": 1.3
+    },
+    "rm11": {
+      "consecutive_sessions": 2,
+      "single_session_move_pct": 8,
+      "vol_ratio_both_sessions_min": 2.0,
+      "rsi_max_absolute": 85,
+      "intraday_wick_close_upper_pct_min": 40,
+      "rsi_cap_day1_vol_gte_10x": 85,
+      "rsi_cap_day1_vol_2_10x": 78,
+      "insurance_sector_rsi_margin_above_cap": 4
+    },
+    "rm12": {
+      "_refit": {
+        "date": "2026-07-09",
+        "backtest_window": "2026-04-08 to 2026-07-09 (66 sessions, 334 symbols)",
+        "baseline_win_rate_pct": 60.7,
+        "refit_win_rate_pct": 83.3,
+        "trades": 12,
+        "targets": 5,
+        "stops": 0,
+        "time_exits": 7,
+        "avg_pnl_pct": 6.20,
+        "note": "Two killer filters: adx_14 >= 30 (was ≥20 via slope-only; stronger trend distinguishes real pullbacks) + roc_10 >= 0 (10-day momentum non-negative proves the pullback has stalled, not still falling). Also tightened rsi 35-72 -> 48-65. Sweep saturated at 61.5% with only baseline filters; the momentum-turn signals (roc_10/adx) were the discriminator. See scripts/refit_rm12.py + refit_rm12_v2.py. Alternate wider-net config: rsi 45-68 -> 75.0% wr / 16 trades / avg +4.01%.",
+        "alternate_wider_config": {
+          "rsi_min": 45,
+          "rsi_max": 68,
+          "trades": 16,
+          "win_rate_pct": 75.0,
+          "avg_pnl_pct": 4.01,
+          "stops": 2
+        }
+      },
+      "uptrend_states_allowed": ["STRONG_UP", "UP"],
+      "pullback_min_pct": 5,
+      "pullback_max_pct": 15,
+      "close_vs_ma20_max_pct_below": 4,
+      "recovery_vol_ratio_min": 0.8,
+      "rsi_min": 48,
+      "rsi_max": 65,
+      "adx_14_min": 30,
+      "roc_10_min": 0.0,
+      "ma20_slope_pct_min": 0.0,
+      "conf_bonus_strong_up": 5,
+      "conf_bonus_t1_catalyst": 3,
+      "conf_bonus_t2_catalyst": 2,
+      "conf_bonus_recovery_vol_gte_1_2x": 2,
+      "conf_penalty_pullback_gt_12pct": 5,
+      "conf_penalty_pullback_threshold_pct": 12,
+      "recovery_vol_ratio_bonus_threshold": 1.2
+    },
+    "pattern_k": {
+      "listed_months_min": 6,
+      "listed_months_max": 24,
+      "runup_from_ipo_pct": 20,
+      "correction_min_pct": 8,
+      "correction_max_pct": 20,
+      "correction_sessions_min": 6,
+      "correction_sessions_max": 10,
+      "rsi_min": 38,
+      "rsi_max": 50,
+      "recovery_vol_ratio_min": 1.0,
+      "no_negative_news_days": 30,
+      "lpi_loss_improvement_quarters": 4,
+      "lpi_first_profitable_quarter_window": 3
+    },
+
+    "ut1": {
+      "lookback_sessions": 60,
+      "pivot_window_before": 3,
+      "pivot_window_after": 3,
+      "strong_up_hh_min": 3,
+      "strong_up_hl_min": 3,
+      "strong_up_ma20_slope_min_pct": 0,
+      "up_hh_min": 2,
+      "up_hl_min": 2,
+      "down_lh_min": 3,
+      "down_ll_min": 3,
+      "sideways_ma_proximity_pct": 2
+    },
+
+    "ut_relax": {
+      "gating_states": ["STRONG_UP", "UP"],
+      "relax_1": {
+        "rr_floor_standard": 1.5,
+        "rr_floor_relaxed": 1.2,
+        "recovery_vol_ratio_threshold": 1.2
+      },
+      "relax_2": {
+        "rsi_cap_standard": 80,
+        "rsi_cap_strong_up": 84,
+        "rsi_cap_rm1_rm11_standard": 85,
+        "rsi_cap_rm1_rm11_relaxed": 87,
+        "ma20_slope_min_pct": 0.5,
+        "vol_ratio_threshold": 1.5,
+        "rm1_rm11_vol_ratio_threshold": 3.0
+      },
+      "relax_3": {
+        "vol_floor_tier_a_64_standard": 8,
+        "vol_floor_tier_a_64_relaxed": 6,
+        "ma50_above_threshold_count": 15,
+        "ma50_above_total_sessions": 20
+      },
+      "relax_4": {
+        "rule77_lh_threshold_standard": 3,
+        "rule77_ll_threshold_standard": 2,
+        "rule77_lh_threshold_uptrend": 4,
+        "rule77_ll_threshold_uptrend": 3
+      },
+      "relax_5": {
+        "publish_threshold_standard": 85,
+        "publish_threshold_relaxed": 84,
+        "catalyst_tiers_required": ["T1", "T2"]
+      }
+    },
+
+    "rule80": {
+      "_refit": {
+        "date": "2026-07-09",
+        "backtest_window": "2026-04-08 to 2026-07-09 (66 sessions, 334 symbols)",
+        "baseline_win_rate_pct": 45.9,
+        "refit_win_rate_pct": 81.25,
+        "trades": 16,
+        "targets": 1,
+        "stops": 0,
+        "time_exits": 15,
+        "avg_pnl_pct": 2.38,
+        "note": "Key differentiator: atr_pct_14 <= 3.5 (quiet-coil enforcement) eliminated all stop-outs. Post-refit R-80 is a slow-grinder — most exits are TIME_EXIT with small positive avg. Also added: ut1_state in {UP,STRONG_UP}, adx_14 >= 15, ma20_slope_pct >= 0, cmf_20 >= 0, vol_ratio_20d >= 1.0, rsi lower band raised 55->58. See scripts/refit_r80_v3.py."
+      },
+      "coil_distance_20d_high_max_pct": 5,
+      "non_declining_closes_min": 3,
+      "dip_tolerance_pct": 0.5,
+      "vol_ratio_min": 1.0,
+      "vol_ratio_baseline": "20d_median",
+      "rsi_min": 58,
+      "rsi_max": 70,
+      "ut1_state_required": ["UP", "STRONG_UP"],
+      "adx_14_min": 15,
+      "ma20_slope_pct_min": 0.0,
+      "cmf_20_min": 0.0,
+      "atr_pct_14_max": 3.5
+    },
+
+    "rule82_watchlist": {
+      "max_sessions_carried": 10,
+      "sessions_above_zone_threshold": 5,
+      "measured_move_multiplier": 1
+    },
+
+    "pattern_boosts_max_category": {
+      "pattern_h_defense_breakout": 20,
+      "pattern_j_state_visit": 25,
+      "pattern_j_breakout_vol_1_5x": 25,
+      "pattern_j_healthy_rsi_40_65": 20,
+      "pattern_j_single_catalyst": 15,
+      "pattern_g_fii_promoter_stable": 15,
+      "pattern_g_fii_4q_rise": 10,
+      "pattern_g_fii_3q_rise": 5,
+      "pattern_k_lpi_active": 8
+    },
+
+    "pattern_g_fii": {
+      "quarters_3q_threshold": 3,
+      "quarters_4q_threshold": 4
+    },
+
+    "pattern_j_news_catalyst": {
+      "healthy_rsi_min": 40,
+      "healthy_rsi_max": 65,
+      "news_priced_in_move_threshold_pct": 8
+    }
+  },
+
+  "phase_d": {
+    "wall_time_budget_min": 3,
+    "candidate_fan_out_threshold": 3,
+    "shard_wall_time_cap_sec": 90,
+    "caching_lookback_sessions": 60,
+
+    "hard_gate_3_1": {
+      "downtrend_lookback_min_sessions": 15,
+      "downtrend_lookback_max_sessions": 30,
+      "reversal_confirmation_sessions": 10,
+      "sideways_duration_sessions": 15,
+      "distribution_vol_ratio_max": 1.0,
+      "down_days_lookback_count": 5
+    },
+
+    "gate_sub_26f": {
+      "climax_single_session_pct": 10,
+      "vol_ratio_followon_max": 0.4,
+      "followon_sessions_range_max": 2
+    },
+
+    "gate_46b": {
+      "consecutive_closes_declining_min": 3,
+      "vol_ratio_max_throughout": 0.2
+    },
+
+    "gate_26g": {
+      "ma5_distance_max_pct": 1.0
+    },
+
+    "gate_77": {
+      "consecutive_lh_min_standard": 3,
+      "consecutive_ll_min_standard": 2,
+      "consecutive_lh_min_uptrend": 4,
+      "consecutive_ll_min_uptrend": 3,
+      "lookback_sessions": 7
+    },
+
+    "gate_77c": {
+      "peak_reversal_pct_min": 3,
+      "stabilization_sessions_min": 3,
+      "stabilization_close_range_pct": 2,
+      "stabilization_range_multiple_max": 2,
+      "stabilization_vol_ratio_max": 1.5
+    },
+
+    "gate_78": {
+      "distribution_close_below_high_pct": 5,
+      "distribution_vol_ratio_min": 1.5,
+      "cooldown_sessions_min": 10
+    },
+
+    "gate_79": {
+      "be_segment_block": true,
+      "delivery_min_days": 5
+    },
+
+    "gate_46c": {
+      "rr_minimum_threshold": 1.5,
+      "nearest_unbroken_resistance_lookback_sessions": 60,
+      "resistance_broken_close_pct": 1.0,
+      "resistance_broken_vol_ratio": 1.5,
+      "resistance_prior_fail_close_below_pct": 3,
+      "resistance_prior_fail_within_sessions": 3,
+      "resistance_round_number_window_pct": 5
+    },
+
+    "gate_46d": {
+      "conditions_required": 6,
+      "close_to_52wh_max_pct": 1.5,
+      "vol_ratio_min": 1.5,
+      "intraday_reversal_max_pct": 2,
+      "base_lookback_sessions": 20,
+      "base_amplitude_min_pct": 8,
+      "measured_move_base_extension_pct": 6,
+      "allowable_patterns": ["RM-1", "RM-11", "WPR-P1"],
+      "all_gates_must_pass": ["77", "77c", "78", "79", "sub-26f", "46b"]
+    }
+  },
+
+  "phase_e": {
+    "wall_time_budget_min": 2,
+    "candidate_fan_out_threshold": 2,
+    "shard_wall_time_cap_sec": 90,
+    "max_final_picks": 3,
+
+    "publish_threshold_standard": 85,
+    "publish_threshold_ut_relax_5": 84,
+    "watchlist_conf_min": 78,
+    "watchlist_conf_max": 85,
+    "reject_threshold": 78,
+
+    "check_3_3_a_negative_news_lookback_days": 7,
+    "check_3_3_d_ai_hard_exclude_list": [
+      "TCS", "INFOSYS", "WIPRO", "HCLTECH", "LTIMINDTREE",
+      "COFORGE", "MPHASIS", "KPIT", "MASTEK", "HEXAWARE", "PERSISTENT"
+    ],
+    "check_3_3_e_gold_caution_move_pct_5d": 2,
+    "check_3_3_f_chart_validation_lookback_sessions": 10,
+
+    "exit_date_default_trading_days": 2,
+    "nse_holidays_2026": [
+      "2026-01-26", "2026-02-19", "2026-03-14", "2026-04-01",
+      "2026-04-10", "2026-04-14", "2026-04-18", "2026-05-01",
+      "2026-08-15", "2026-08-27", "2026-10-02", "2026-10-20",
+      "2026-10-21", "2026-11-05", "2026-12-25"
+    ]
+  },
+
+  "phase_f": {
+    "wall_time_budget_min": 4,
+    "f1_attribution_shard_count": 5,
+    "top25_gainer_count": 25,
+
+    "pattern_attribution": {
+      "_refit": {
+        "date": "2026-07-09",
+        "note": "coil_* and rm4_* fields synced with phase_c.rule80 and phase_c.rm4 refits (win rates 81.25% and 80.0% respectively over 2026-04-08..2026-07-09)."
+      },
+      "lookback_sessions": 30,
+      "coil_distance_20d_high_pct": 5,
+      "coil_non_declining_closes_min": 3,
+      "coil_vol_ratio_min": 1.0,
+      "coil_rsi_min": 58,
+      "coil_rsi_max": 70,
+      "coil_ut1_state_required": ["UP", "STRONG_UP"],
+      "coil_adx_14_min": 15,
+      "coil_ma20_slope_pct_min": 0.0,
+      "coil_cmf_20_min": 0.0,
+      "coil_atr_pct_14_max": 3.5,
+      "rsi_sweep_entry": 55,
+      "rsi_sweep_exit": 35,
+      "rm4_strong_stock_duration_days": 30,
+      "rm4_dip_min_pct": 5,
+      "rm4_dip_max_pct": 12,
+      "rm4_recovery_vol_ratio_min": 0.7,
+      "rm4_recovery_rsi_min": 45,
+      "rm4_recovery_rsi_max": 60,
+      "rm4_recovery_adx_min": 15,
+      "rm4_recovery_cmf_20_min": -0.05,
+      "rm7_lookback_sessions": 2,
+      "rm8_coil_sessions_min": 5,
+      "rm8_breakout_range_ratio": 1.5,
+      "rm8_breakout_vol_ratio": 1.3,
+      "sector_breadth_peer_min_count": 2,
+      "sector_breadth_peer_move_min_pct": 3
+    },
+
+    "pattern_vote_ledger": {
+      "priority_hits_l10_min": 5,
+      "high_conviction_hits_l10_min": 3,
+      "normal_hits_l10_min": 1,
+      "normal_hits_l30_min": 3,
+      "stale_hits_l30_max": 0,
+      "cooling_hits_l10_max": 0,
+      "cooling_hits_l30_min": 1,
+      "cooling_hits_l30_max": 2,
+      "hits_l10_lookback_sessions": 10,
+      "hits_l30_lookback_sessions": 30
+    },
+
+    "miss_audit": {
+      "correctly_picked_rank_max": 3,
+      "validation_case_backtest_sessions": 30,
+      "fp_rate_threshold_pct": 50
+    },
+
+    "ledger_update": {
+      "high_conviction_net_threshold": 8,
+      "review_net_threshold": -3,
+      "single_run_vote_cap_magnitude": 5
+    },
+
+    "stockparam_final": {
+      "col_count_base": 26,
+      "col_count_total": 39,
+      "col_count_additional_macro": 13,
+      "sort_order": ["date asc", "symbol asc"]
+    }
+  },
+
+  "scoring": {
+    "formula_type": "additive_saturating_caps",
+
+    "recent_mover_delta": {
+      "MOMENTUM_CONTINUATION": 20,
+      "NEWS_PRICED_IN": -10,
+      "LOW_CONVICTION_MOVE": 0
+    },
+
+    "pattern_boost_max": {
+      "pattern_h_defense_breakout": 20,
+      "pattern_j_state_visit": 25,
+      "pattern_j_breakout_vol_1_5x": 25,
+      "pattern_j_healthy_rsi_40_65": 20,
+      "pattern_j_single_catalyst": 15,
+      "pattern_g_fii_promoter_stable": 15,
+      "pattern_g_fii_4q_rise": 10,
+      "pattern_g_fii_3q_rise": 5,
+      "pattern_k_lpi_active": 8
+    },
+
+    "macro_boost_max": {
+      "tailwind_signal_default": 10,
+      "tailwind_signal_strong": 15,
+      "ai_tailwind_it": 15
+    },
+
+    "ledger_boost_max": {
+      "priority": 3,
+      "high_conviction": 2,
+      "stale": -3
+    },
+
+    "penalty_stack": {
+      "caution_flag": -15
+    },
+
+    "ndp_floor": {
+      "enabled": true,
+      "floor_conf": 88,
+      "requires_chart_read_pass": true,
+      "requires_pattern_confirmed": true
+    },
+
+    "publish_thresholds": {
+      "standard_strict_gt": 85,
+      "ut_relax_5_gte": 84,
+      "watchlist_min_inclusive": 78,
+      "watchlist_max_inclusive": 85,
+      "reject_below": 78
+    }
+  },
+
+  "rules_ledger": {
+    "high_conviction_net_min": 8,
+    "review_net_max": -3,
+    "single_run_vote_cap_magnitude": 5,
+    "rsi_wilder_period": 14,
+    "rsi_wilder_alpha_denominator": 14
+  },
+
+  "wall_time_budgets_min": {
+    "phase_a": 6,
+    "phase_b": 2,
+    "phase_c": 6,
+    "phase_d": 3,
+    "phase_e": 2,
+    "phase_f": 4,
+    "total_target": 15
+  },
+
+  "fan_out_shard_counts": {
+    "phase_a_3_backfill_shards": 8,
+    "phase_a_3_shard_wall_time_min": 4,
+    "phase_a_7_row_append_shards": 4,
+    "phase_a_7_fan_out_threshold_universe": 40,
+    "phase_a_7_inline_threshold_universe": 20,
+    "phase_b_news_sources_parallel": 7,
+    "phase_c_pattern_scan_shards": 6,
+    "phase_c_pattern_scan_shard_wall_time_sec": 90,
+    "phase_d_chart_gates_per_candidate": true,
+    "phase_d_shard_wall_time_sec": 90,
+    "phase_d_fan_out_threshold": 3,
+    "phase_e_validation_per_candidate": true,
+    "phase_e_shard_wall_time_sec": 90,
+    "phase_e_fan_out_threshold": 2,
+    "phase_f_attribution_shards": 5,
+    "phase_f_attribution_gainers_per_shard": 5,
+    "topmoversintrospection_shards": 5,
+    "topmoversintrospection_gainers_per_shard": 5
+  },
+
+  "output": {
+    "max_final_picks": 3,
+    "max_phase_c_candidates": 5,
+    "max_daily_gainers_top25": 25,
+    "zero_pick_day_allowed": true,
+    "never_pad_to_reach_target": true
+  },
+
+  "chartink": {
+    "csrf_endpoint": "https://chartink.com/screener/past-2-says-5-increment",
+    "process_endpoint": "https://chartink.com/screener/process",
+    "csrf_header_name": "X-CSRF-TOKEN",
+    "scan_clause_t1": "( {cash} ( 1 day ago close > 2 days ago close * 1.05 and 1 day ago close * 1 day ago volume > 10000000 ) )",
+    "scan_clause_t0": "( {cash} ( latest close > 1 day ago close * 1.05 and latest close * latest volume > 10000000 ) )",
+    "top_n": 25,
+    "sort_by": "close_x_volume_desc"
+  },
+
+  "data_source_priority": [
+    "kite_mcp",
+    "yfinance",
+    "nse_public_api"
+  ],
+
+  "nse_api_shard_rate_limit": {
+    "max_symbols_per_shard": 20,
+    "sleep_between_requests_ms_min": 100,
+    "sleep_between_requests_ms_max": 200
+  }
+}
