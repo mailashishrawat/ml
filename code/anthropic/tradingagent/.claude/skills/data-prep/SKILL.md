@@ -53,11 +53,11 @@ eval_universe = daily_top25_T-1  ∪  active_anchors  ∪  active_watchlist_yest
 
 ## Tool budget (in order)
 
-1. **A.0 — Chartink T-1 top-25 fetch → `data/dailygainers.csv`.** Scan clause:
+1. **A.0 — Chartink top movers fetch → `data/dailygainers.csv`.** Scan clause (2026-07-10: same `latest close` clause as F.1 — the scanner decides the session):
    ```
-   ( {cash} ( 1 day ago close > 2 days ago close * 1.05 and 1 day ago close * 1 day ago volume > 10000000 ) )
+   ( {cash} ( latest close > 1 day ago close * 1.05 and latest close * latest volume > 10000000 ) )
    ```
-   CSRF handshake: GET `chartink.com/screener/past-2-says-5-increment` → capture `XSRF-TOKEN` cookie + `<meta csrf-token>`. POST `/screener/process` with `X-CSRF-TOKEN` header (never `X-XSRF-TOKEN` — 419). Compute `close_x_volume = close*volume`, sort desc, take 25. Append to CSV with `date=T-1, rank=1..25, tag="t1_5pct_liq1cr"` (MANDATORY — the tag is the sole discriminator between A.0's T-1 rows and F.1's T-0 rows in the same file; empty or wrong tag = pipeline error), `scan_clause="t1_5pct_liq1cr"`, idempotent on `(date, symbol)`. On non-200 or empty: log `CHARTINK_A0_GAP`, fall back to NSE `live-analysis-variations?index=gainers`, tag `t1_5pct_liq1cr_nse_fallback` (do NOT tag as clean `t1_5pct_liq1cr` — different clause poisons the series), set `daily_top25=[]` and continue.
+   Chartink `latest` resolves to the last completed session: **T-0 when the market is open, T-1 when closed** — so the qualifying ≥5% gain and the reported `pct_chg`/`close`/`ltp` are always the SAME session (this fixes the pre-Jul-10 artifact where a T-1 qualifier was written with a next-day T-0 quote, producing negative `pct_chg` values in a "gainers" list). Compute the resolved session date from the returned rows, not from the clock; write that as `date`. CSRF handshake: GET `chartink.com/screener/past-2-says-5-increment` → capture `XSRF-TOKEN` cookie + `<meta csrf-token>`. POST `/screener/process` with `X-CSRF-TOKEN` header (never `X-XSRF-TOKEN` — 419). Compute `close_x_volume = close*volume`, sort desc, take 25. Append to CSV with `date=<resolved session>, rank=1..25, tag="t1_5pct_liq1cr"` (MANDATORY — the tag is the sole discriminator between A.0's rows and F.1's T-0 rows in the same file; empty or wrong tag = pipeline error), `scan_clause="t1_5pct_liq1cr"`, idempotent on `(date, symbol)`. On non-200 or empty: log `CHARTINK_A0_GAP`, fall back to NSE `live-analysis-variations?index=gainers`, tag `t1_5pct_liq1cr_nse_fallback` (do NOT tag as clean `t1_5pct_liq1cr` — different clause poisons the series), set `daily_top25=[]` and continue.
 
    **A.0 exit assertion (HARD GATE — added 2026-07-03 after Jul 3 write-drift bug):** before proceeding to A.1, run:
    ```python

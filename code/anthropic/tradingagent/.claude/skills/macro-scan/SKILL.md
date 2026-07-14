@@ -1,6 +1,6 @@
 ---
 name: macro-scan
-description: Phase B of the india-stock-recommender pipeline. Opus sub-agent (extended thinking) that scans 7 mandatory news sources (ET/BS/Mint/MC/BT + Hindu BusinessLine RSS + Financial Express) for the last 48h, extracts corporate deals/MoUs, government orders, earnings surprises, world-leader/CEO statements (Modi/Trump/Xi/Powell/Huang/Altman/Nadella/Pichai/Jassy/Musk/Cook), evaluates AI_DISRUPTION_RISK vs AI_TAILWIND, geopolitics, commodities, policy, global macro. Emits the Trend Alert Report and `phase_b_macro.json` for downstream phases. Use when the india-stock-recommender agent enters Phase B, or when the user asks to "run macro scan", "scan today's news", "check AI disruption status", "check world leader statements".
+description: Phase B of the india-stock-recommender pipeline. Opus sub-agent (extended thinking) that scans 9 mandatory news sources (ET/BS/Mint/MC/BT + Hindu BusinessLine RSS + Financial Express + Google News India + MSN India) for the last 48h, extracts corporate deals/MoUs, government orders, earnings surprises, world-leader/CEO statements (Modi/Trump/Xi/Powell/Huang/Altman/Nadella/Pichai/Jassy/Musk/Cook), evaluates AI_DISRUPTION_RISK vs AI_TAILWIND, geopolitics, commodities, policy, global macro. Emits the Trend Alert Report and `phase_b_macro.json` for downstream phases. Use when the india-stock-recommender agent enters Phase B, or when the user asks to "run macro scan", "scan today's news", "check AI disruption status", "check world leader statements".
 allowed-tools: Read, Bash, WebFetch, Write, Grep, Glob
 ---
 
@@ -27,10 +27,21 @@ Pass the loaded config to every fetch-shard as read-only input.
 
 **Speed / parallelism (Jul 4 2026 expanded fan-out patch):**
 - Hard wall-time cap **2 min** (was 3 min).
-- **7-way Haiku fan-out for news sources:** spawn ONE Haiku sub-agent per source (ET / BS / Mint / MC / BT / Hindu BL / Financial Express) in a single Agent tool-block. Each sub-agent WebFetches its source, extracts relevant items to a compact JSON `{source, items[]}`, returns to parent. Per-shard cap 90 s — shards that miss are dropped and their source logged in `news_source_failures[]`.
-- **Cross-phase parallelism:** this skill runs in parallel with Phase A.0 Chartink T-1 fetch. Parent launches A.0 + all 7 macro-scan fetch shards in one tool-block at run start.
-- **Opus parent (synthesis only)** — receives the 7 shard JSONs, applies extended-thinking macro synthesis (AI disruption/tailwind, world-leader statements, sector maps, hard excludes, catalysts). Parent budget ≤2 tool calls after fan-out: (a) Write `phase_b_macro.json`, (b) sentinel `phase_b_done`.
-- **Inline-in-parent (skip fan-out):** if only 1–2 sources are needed (rare — e.g. explicit user override "only scan MC and ET today"), run inline. Full 7-source scan is the default.
+- **9-way Haiku fan-out for news sources:** spawn ONE Haiku sub-agent per source (ET / BS / Mint / MC / BT / Hindu BL / Financial Express / Google News India / MSN India) in a single Agent tool-block. Each sub-agent WebFetches its source, extracts relevant items to a compact JSON `{source, items[]}`, returns to parent. Per-shard cap 90 s — shards that miss are dropped and their source logged in `news_source_failures[]`. **Skip any source whose `status: "DEAD"` in `data/news_sources_health.json`** (see dead-source auto-removal below).
+- **Cross-phase parallelism:** this skill runs in parallel with Phase A.0 Chartink T-1 fetch. Parent launches A.0 + all active macro-scan fetch shards in one tool-block at run start.
+- **Opus parent (synthesis only)** — receives the shard JSONs, applies extended-thinking macro synthesis (AI disruption/tailwind, world-leader statements, sector maps, hard excludes, catalysts). Parent budget ≤2 tool calls after fan-out: (a) Write `phase_b_macro.json`, (b) sentinel `phase_b_done`.
+- **Inline-in-parent (skip fan-out):** if only 1–2 sources are needed (rare — e.g. explicit user override "only scan MC and ET today"), run inline. Full active-source scan is the default.
+
+### Dead-source auto-removal (added 2026-07-14, user request)
+
+A source that repeatedly rejects or fails feed access wastes a fetch slot every run. Track per-source health in `data/news_sources_health.json` and auto-deactivate persistent failures:
+
+- After each run, for every source: if the shard errored (non-200, timeout, empty items, or WebFetch access rejection), increment `consecutive_failures`; on any successful fetch with ≥1 item, reset it to 0 and stamp `last_success`.
+- **Auto-deactivate: `consecutive_failures >= 3` → set `status: "DEAD"`.** Log to `news_source_failures[]` as `"<SOURCE> — auto-removed after 3 consecutive access failures"` and STOP spawning a shard for it on subsequent runs (frees a slot). It is deactivated, never deleted — a source can recover.
+- **Auto-revive:** once a quarter (or on user request "re-test dead news sources"), re-probe DEAD sources once; a single success flips `status` back to `"ACTIVE"` and resets the counter.
+- **Never let source count drop below 4 active.** If auto-removal would leave <4, keep the least-stale DEAD source active and log `NEWS_SOURCE_FLOOR_HIT` — better a flaky source than a starved scan.
+- Environment-wide blocks (ALL sources fail, e.g. sandbox with no network) do NOT count toward per-source failure — detect via "≥80% of sources failed same run" and log `NEWS_ENV_BLOCKED` instead of penalizing each source. This prevents wiping the whole roster on one offline run.
+- MSN India (`/en-in/money/markets`) is a known-weak static-fetch source (JS-rendered headlines; returns 200 with market data but no scannable headlines) — starts at `consecutive_failures: 2` so one more empty run auto-deactivates it.
 
 Sentinel discipline unchanged — `phase_b_done` is still the last write, and downstream Phase C blocks on both `phase_a_done` AND `phase_b_done`.
 
@@ -64,6 +75,8 @@ Runs every session — no exceptions, even on 0-pick days.
 
 ## Mandatory news sources (last 48h)
 
+**Authoritative roster lives in `data/config.json → phase_b.news_sources`** (id / name / url / method / rss / status). Load it at run start; spawn one fetch shard per source whose `status != "DEAD"`. Health counters and thresholds: `phase_b.news_source_health` + `data/news_sources_health.json`. The list below is a human-readable mirror — on any disagreement, **config.json wins**.
+
 - **Economic Times Markets** — `economictimes.indiatimes.com/markets` (HTML) or RSS `.../rssfeeds/1977021501.cms`
 - **Business Standard** — `business-standard.com/markets`
 - **Mint** — `livemint.com/market` (HTML) or RSS `livemint.com/rss/markets`
@@ -71,6 +84,8 @@ Runs every session — no exceptions, even on 0-pick days.
 - **Business Today** — `businesstoday.in/markets`
 - **Hindu BusinessLine RSS** — `thehindubusinessline.com/markets/feeder/default.rss` (60 items/fetch, clean XML)
 - **Financial Express** — `financialexpress.com/market/` HTML (RSS empty; scrape HTML directly)
+- **Google News India (business)** — RSS `news.google.com/rss/search?q=india+stock+market+when:2d&hl=en-IN&gl=IN&ceid=IN:en` (topic-search RSS, clean XML, aggregates all Indian outlets; also usable per-stock: `q=<SYMBOL>+when:2d`). Broadest coverage — use to catch company-specific headlines the 7 primary outlets miss (HCLTECH 2026-07-14 class).
+- **MSN India (money/markets)** — `msn.com/en-in/money/` and `msn.com/en-in/money/markets` (HTML scrape; aggregates ET/Reuters/PTI/Mint syndicated feeds). NOTE: ignore any personalized MSN homepage URL with `cvid`/`cvpid`/`ei`/`ocid` session params — those are user-session tracking tokens, not scannable feeds; always hit the stable `/en-in/money/markets` path.
 
 ## Extract
 
@@ -79,6 +94,15 @@ Runs every session — no exceptions, even on 0-pick days.
 3. Earnings surprises: PAT +25% YoY OR margin +300 bps in last 48h.
 4. Guidance upgrades, export orders, USFDA/regulatory approvals, block deals, promoter buying, index inclusions.
 5. **World-leader / CEO statements** (last 48h) from: PM Modi, Trump, Xi, Powell, RBI Gov, Jensen Huang (Nvidia), Sam Altman (OpenAI), Satya Nadella (MS), Sundar Pichai (Google), Andy Jassy (AWS), Musk, Tim Cook. Map to sector impact → `NEWS_CATALYST` (tailwind) or `CAUTION_FLAG` (headwind).
+
+### MANDATORY force-add rule (company-specific news ≠ sector tailwind)
+
+**Any headline in categories 1–4 that NAMES a specific listed stock MUST emit that stock as a `news_catalysts[]` entry with `force_add_to_phase_c: true` — it may ADD a sector tailwind on top, but a sector tailwind NEVER substitutes for the company-specific catalyst.** A `tailwind_signal` is only a confidence *modifier* applied to stocks that already produced a technical signal; it cannot create a candidate. A `news_catalyst` with force-add is the ONLY mechanism that pulls a named stock into Phase C when it is outside `eval_universe` (not an anchor, not a T-1 gainer). Collapsing company news into the sector tailwind silently drops the stock from the scan.
+
+- Tier the catalyst: **T1** structural/large (major acquisition, big-ticket capex ≥₹1000cr, transformative order, USFDA/regulatory clearance, index inclusion); **T2** material (mid-size deal/order, earnings beat, guidance upgrade, meaningful capex); **T3** thematic/peer-adjacent (sector-framework beneficiary, small order).
+- Emit BOTH when applicable: e.g. HCLTech ₹3.5k cr AI data-centre push → `news_catalysts[{symbol:"HCLTECH", tier:"T2", force_add_to_phase_c:true}]` **AND** the `IT_SERVICES` AI_TAILWIND `tailwind_signal`. The force-add gets HCLTECH scanned; the tailwind boosts it if a signal fires.
+- **Origin case (2026-07-14 HCLTECH miss):** HCLTech's ₹3.5k cr AI data-centre headline was folded ONLY into the IT_SERVICES sector tailwind and never emitted as a `news_catalyst`. HCLTECH (not an anchor, not a Jul-13 ≥5% gainer) therefore never entered Phase C and was silently absent from the output — not rejected, just unscanned. This rule closes that blind-spot.
+- A force-added stock still must clear all downstream chart gates (Phase D) — force-add guarantees it is *evaluated and shown* (BUY / watchlist / documented reject), never that it is a pick.
 
 ## Scan categories
 
@@ -132,7 +156,7 @@ Surface any `REVIEW_rules` from `phase_a_context.json → rules_ledger_snapshot`
 ## Orchestrator rules from this report
 
 - **HARD EXCLUDES** — remove from Phase C candidates for today.
-- **NEWS CATALYSTS** — force-add named stock to Phase C even if outside eval_universe.
+- **NEWS CATALYSTS** — force-add named stock to Phase C even if outside eval_universe. Every company-specific headline (categories 1–4) that names a listed stock MUST appear here with `force_add_to_phase_c: true`; a sector `tailwind_signal` is never a valid substitute (see MANDATORY force-add rule above — HCLTECH 2026-07-14 origin).
 - **NEW STRUCTURAL RISK** — write to `pattern_notes.md`.
 
 ## Console Print Contract (parent renders after skill returns)

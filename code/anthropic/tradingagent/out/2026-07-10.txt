@@ -1,0 +1,253 @@
+========================================================================
+INDIA STOCK RECOMMENDER — DAILY OUTPUT — 2026-07-10 (session 2026-07-09)
+Reporting format: phase-wise A->F + inline per-rule/data tables (ledger internal)
+========================================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE A — data-prep · DONE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+eval_universe: 146  (25 daily-top-25  U  active anchors incl 43 RSI-REV  U  watchlist)
+backfill: 115 fresh · 30 stale->repaired (Kite) · 0 missing · 1 unrepairable (TRIL) · +207 rows
+A.0 assertion: PASS      source split: kite 30 / yf 0 / nse 0
+
+A.0 DAILY TOP-25 (Chartink T-1, by Close x Volume):
+Rank | Symbol      |    LTP  | Chg%  |  Val(Cr)
+-----+-------------+---------+-------+---------
+   1 | KALYANKJIL  |  443.00 | 18.40 |  5189.53
+   2 | CUPID       |  210.01 |  6.61 |  2189.73
+   3 | SWIGGY      |  280.95 |  7.47 |  1573.19
+   4 | KAYNES      | 3429.10 |  6.80 |  1217.12
+   5 | LODHA       | 1192.15 |  6.91 |   842.50
+   6 | MAPMYINDIA  | 1069.20 | 14.79 |   777.18
+   7 | CHOICEIN    |  830.45 |  7.98 |   722.21
+   8 | UNICHEMLAB  |  650.60 | 13.60 |   627.09
+   9 | AZAD        | 2476.10 | 11.07 |   611.22
+  10 | INA         |  118.56 |  9.27 |   502.52
+  11 | SYRMA       | 1441.00 |  5.48 |   501.76
+  12 | BORORENEW   |  651.65 |  9.59 |   379.24
+  13 | TBZ         |  231.55 | 14.80 |   338.10
+  14 | CNL         |  842.15 |  7.25 |   288.86
+  15 | KIRLOSENG   | 2424.80 |  6.49 |   265.31
+  16 | SENCO       |  348.65 |  5.09 |   255.35
+  17 | AETHER      | 1485.80 |  5.12 |   251.85
+  18 | BALAMINES   | 2364.00 |  7.62 |   246.76
+  19 | CGCL        |  252.64 |  6.57 |   242.41
+  20 | IIFL        |  544.70 |  5.20 |   228.40
+  21 | SKYGOLD     |  623.30 |  6.46 |   198.50
+  22 | IKIO        |  206.88 | 14.02 |   184.40
+  23 | MASTERTR    |   94.80 | 17.75 |   170.24
+  24 | INOXINDIA   | 2006.20 |  6.95 |   170.24
+  25 | TCIEXP      |  553.55 | 10.93 |   159.93
+
+STOCKS CARRIED FORWARD (A -> B):  IN: 146 -> OUT: 146
+  Phase A drops nothing; TRIL flagged unrepairable (not dropped).
+  dailygainers.csv reconciled to 25 clean same-session gainers, 0 negatives.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE B — macro-scan · (cached, resumed)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+HARD_EXCLUDES: 0 · CAUTION: 3 · TAILWINDS: 4 · NEWS_CATALYSTS: 8
+AI status: TAILWIND ACTIVE (IT exclusion lifted)  ·  US_MARKET: neutral  ·  GOLD: no caution
+WARNING: 7 live news feeds + WebSearch BLOCKED this env — synthesis from user newspaper context
+
+MACRO TREND & DISRUPTION ALERT (verbatim from Phase B):
+  ╔═══════════════════════════════════════════════════════════╗
+  ║  MACRO TREND & DISRUPTION ALERT — 2026-07-10 (T-1: 2026-07-09) ║
+  ╠═══════════════════════════════════════════════════════════╣
+  ║ HARD EXCLUDES:  (none)                                     ║
+  ║ CAUTION FLAGS:                                             ║
+  ║   ⚠️ ATHERENERG — Rs1900cr share-sale overhang (SHARE_SALE_DILUTION T1)
+  ║   ⚠️ TCS/IT — Q1 rev +2.7% but margin -24%, discretionary soft (AI_TAILWIND active, no exclude)
+  ║   ⚠️ IIFL — NBFC, monitor RBI/liquidity                    ║
+  ║ TAILWINDS:                                                 ║
+  ║   ✅ ELECTRONICS_MFG (T1) — Li-ion+electronics duty waiver: KAYNES/SYRMA/IKIO
+  ║   ✅ SOLAR/EV_MFG (T1)   — EV duty waiver + EV policy: INA/BORORENEW
+  ║   ✅ AI_CLOUD_INFRA (T2) — OpenAI Work + GCC: MAPMYINDIA/HFCL/TATACOMM
+  ║   ✅ JEWELLERY/GOLD      — KALYANKJIL/SENCO/TBZ/SKYGOLD momentum
+  ║ NEWS CATALYSTS: see news_catalysts[] (duty-waiver EMS/solar force-adds)
+  ║ AI STATUS: AI_TAILWIND ACTIVE (OpenAI ChatGPT Work; IT exclusion lifted)
+  ║ NEW STRUCTURAL RISK: Li-ion/electronics duty waiver = durable EMS/solar tailwind (save to pattern_notes)
+  ║ NEWS-SOURCE NOTE: all 7 live RSS/HTML feeds + WebSearch BLOCKED this env; synthesis from user-provided context
+  ╚═══════════════════════════════════════════════════════════╝
+
+STOCKS CARRIED FORWARD (B -> C):  IN: 146 -> OUT: 146
+  Universe unchanged; macro tags applied (0 hard-excludes so nothing dropped).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE C — pattern-scan · DONE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+eval_universe scanned: 146 · proceed_to_D: 4 · watchlist: 4 · watchlist_audit_pass: TRUE
+
+--- PER-RULE STOCK OUTPUT ---
+
+> RULE RSI-REV (cross-up-through-50 entry, exit RSI>=65) — 19 triggered -> 2 BUY / 17 REJECTED
+Symbol      | RSI14 | UT1      | R77 | Verdict  | Reject Reason               | Entry    | Tgt(RSI65) | EstGain
+------------+-------+----------+-----+----------+-----------------------------+----------+------------+--------
+SCI         |  33.2 | SIDEWAYS | ok  | BUY      | —                           |   277.65 |   308.51 |  11.1%
+MCX         |  46.0 | SIDEWAYS | ok  | BUY      | —                           |  2785.40 |  2970.66 |   6.7%
+GRAPHITE    |  24.9 | DOWN     | fl  | REJECTED | RSI-REV_REJECT_DOWNTREND    |    —     |     —    |    —  
+HEG         |  30.5 | DOWN     | fl  | REJECTED | RSI-REV_REJECT_DOWNTREND    |    —     |     —    |    —  
+JSWENERGY   |  35.4 | DOWN     | fl  | REJECTED | RSI-REV_REJECT_DOWNTREND    |    —     |     —    |    —  
+GOLDIAM     |  36.4 | DOWN     | fl  | REJECTED | RSI-REV_REJECT_DOWNTREND    |    —     |     —    |    —  
+COALINDIA   |  36.6 | DOWN     | fl  | REJECTED | RSI-REV_REJECT_DOWNTREND    |    —     |     —    |    —  
+ADVENZYMES  |  38.3 | DOWN     | ok  | REJECTED | RSI-REV_REJECT_UT1_DOWN     |    —     |     —    |    —  
+NMDC        |  39.1 | DOWN     | ok  | REJECTED | RSI-REV_REJECT_UT1_DOWN     |    —     |     —    |    —  
+NLCINDIA    |  41.3 | DOWN     | fl  | REJECTED | RSI-REV_REJECT_DOWNTREND    |    —     |     —    |    —  
+BIOCON      |  42.0 | SIDEWAYS | fl  | REJECTED | RSI-REV_REJECT_DOWNTREND    |    —     |     —    |    —  
+GMDCLTD     |  42.5 | DOWN     | ok  | REJECTED | RSI-REV_REJECT_UT1_DOWN     |    —     |     —    |    —  
+NATIONALUM  |  43.1 | DOWN     | ok  | REJECTED | RSI-REV_REJECT_UT1_DOWN     |    —     |     —    |    —  
+APARINDS    |  43.6 | UP       | ok  | REJECTED | RSI-REV_REJECT_DISTRIBUTION |    —     |     —    |    —  
+KEI         |  45.7 | UP       | fl  | REJECTED | RSI-REV_REJECT_DOWNTREND    |    —     |     —    |    —  
+FORCEMOT    |  46.3 | UP       | fl  | REJECTED | RSI-REV_REJECT_DOWNTREND    |    —     |     —    |    —  
+JAYNECOIND  |  46.8 | SIDEWAYS | fl  | REJECTED | RSI-REV_REJECT_DOWNTREND    |    —     |     —    |    —  
+BBOX        |  47.3 | DOWN     | fl  | REJECTED | RSI-REV_REJECT_DOWNTREND    |    —     |     —    |    —  
+TATACOMM    |  47.7 | SIDEWAYS | fl  | REJECTED | RSI-REV_REJECT_DOWNTREND    |    —     |     —    |    —  
+  => RSI-REV recommended: 2 (SCI, MCX)
+
+> RULE RM-12 (continuation pullback in uptrend) — 2 triggered -> 2 proceed_to_D
+Symbol   | Template   | UT1       | Catalyst | Conf | Target        | proceed_to_D
+---------+------------+-----------+----------+------+---------------+-------------
+KAYNES   | RM-12      | STRONG_UP | T1       |   88 | measured-move | Y
+SYRMA    | RM-12      | STRONG_UP | T1       |   88 | measured-move | Y
+
+> RULE WPR (watchlist persistence & framing audit) — 4 carries -> 0 fired, 0 silent drops
+Symbol      | Zone       | State   | Sess | Close   | RSI  | UT1       | Fired? / Note
+------------+------------+---------+------+---------+------+-----------+---------------------------
+NAUKRI      | 1180-1218  | IN_ZONE |    1 | 1207.50 | 79.1 | UP        | No — RM-2 Day-2, R:R 0.56 fail
+AEQUS       | unzoned    | UNZONED |    1 |  257.85 | 71.1 | STRONG_UP | No — aerospace thematic
+IOLCP       | unzoned    | UNZONED |    1 |  170.50 | 77.3 | STRONG_UP | No — chem
+ATHERENERG  | 1130-1176  | ABOVE   |    1 | 1233.90 | 77.1 | STRONG_UP | No — Rule 80f blocked, share-sale overhang
+
+STOCKS CARRIED FORWARD (C -> D):  IN: 146 -> OUT: 4  (SCI, MCX, KAYNES, SYRMA)
+  Dropped: 17 RSI-REV (reject-gate), 4 watchlist (no trigger), rest no-signal.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE D — chart-gates · DONE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+candidates_in: 4 · PASS: 0 · FAIL: 4   (histogram: {'FAIL_26e': 3, 'FAIL_46c': 1})
+
+Symbol   | Verdict | Fail | R:R   | NearResist | Note
+---------+---------+------+-------+------------+------------------------------------------
+SCI      | FAIL    | 26e  |  12.6 |      342.9 | 26e vol floor 3/64<8; RSI 33.2 SIDEWAYS
+MCX      | FAIL    | 26e  |  0.72 |     2934.5 | 26e 1/64 + 46c R:R 0.72 at resistance
+KAYNES   | FAIL    | 46c  |  0.01 |     3430.9 | 46c R:R 0.01 — +6.8% pop closing AT May-15 shelf; 55% below 52wH, 46d N/A. T1 EMS
+SYRMA    | FAIL    | 26e  |  0.09 |       1450 | 26e 5/64 + 46c R:R 0.09 at round-1450 (entered at resistance). T1 EMS
+
+STOCKS CARRIED FORWARD (D -> E):  IN: 4 -> OUT: 0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE E — validation · DONE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+final picks: 0 · publish threshold: 85 (UT-RELAX-5 not triggered) · ZERO-PICK DAY
+
+TRADE PARAMETERS (final_recommendation==true, conf >85, max 3):
+  (no rows — nothing cleared Phase D)
+
+PER-STOCK DETAIL:
+  (none published)
+
+WATCHLIST (7 carried):
+  NAUKRI     conf 92  IN_ZONE 1180-1218; re-entry >1218 on structural HH+HL (RM-2 Day-2, R:R 0.56 fail)
+  AEQUS      conf 85  aerospace thematic, STRONG_UP RSI 71.1; awaiting base
+  IOLCP      conf 85  chemicals, STRONG_UP RSI 77.3
+  ATHERENERG conf 78  share-sale overhang Rs1900cr; ABOVE 1130-1176 zone (2 closes), Rule 80f blocked
+  INOXINDIA  conf 78  RSI-REV basket / momentum; monitor cross-up
+  IIFL       conf 78  NBFC caution (RBI/liquidity); monitor
+  KIRLOSENG  conf 78  daily-top-25 mover; monitor for base
+
+STOCKS CARRIED FORWARD (E -> F):  0 picks; 7 watchlist carried (NAUKRI, AEQUS, IOLCP, ATHERENERG, INOXINDIA, IIFL, KIRLOSENG)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE F — audit-and-format · DONE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+--- F.1 (Step 4.6) — NSE-WIDE SELF-AUDIT (T-0 = 2026-07-10) ---
+4.6.2 TOP-25 BY CLOSE x VOLUME (>=5%, liq>=1Cr):
+Rank | Symbol      |    LTP  | Chg%  |  Val(Cr) | Anchor | Picked
+-----+-------------+---------+-------+----------+--------+-------
+   1 | KALYANKJIL  |  469.50 |  5.98 |  2238.04 | Y      | n
+   2 | ZENSARTECH  |  489.55 |  9.42 |   527.25 | Y      | n
+   3 | NEWGEN      |  511.00 |  7.99 |   277.69 | Y      | n
+   4 | HEG         |  556.10 |  8.14 |   172.20 | Y      | n
+   5 | MUTHOOTMF   |  230.01 |  9.38 |   161.25 | n      | n
+   6 | ATGL        |  736.15 |  5.07 |   158.54 | Y      | n
+   7 | INA         |  124.71 |  5.19 |   154.52 | n      | n
+   8 | BLUEJET     |  609.65 |  6.12 |   130.06 | Y      | n
+   9 | EMUDHRA     |  479.80 | 10.31 |   110.04 | n      | n
+  10 | GRAPHITE    |  612.45 |  5.42 |    62.95 | Y      | n
+  11 | STALLION    |  203.21 | 11.58 |    62.81 | n      | n
+  12 | IKIO        |  222.01 |  7.31 |    51.25 | Y      | n
+  13 | SUVEN       |  365.05 |  5.28 |    41.26 | Y      | n
+  14 | GANDHAR     |  205.01 |  6.03 |    27.99 | n      | n
+  15 | LUXIND      | 1303.60 |  6.66 |    27.80 | n      | n
+  16 | SOTL        |  612.35 |  5.25 |    22.55 | n      | n
+  17 | INDNIPPON   | 1164.80 |  5.14 |    18.43 | n      | n
+  18 | MARSONS     |  123.97 |  6.14 |    17.99 | n      | n
+  19 | HEXAGON     |   74.18 |  8.37 |    15.17 | n      | n
+  20 | KOTIC       |  191.89 | 11.55 |    13.28 | n      | n
+  21 | INDGN       |  521.85 |  5.22 |     9.77 | n      | n
+  22 | TURTLEMINT  |  138.00 |  6.24 |     7.96 | n      | n
+  23 | APOLLOPIPE  |  513.00 |  5.19 |     6.28 | n      | n
+  24 | NITTAGELA   | 2049.90 |  6.28 |     4.79 | n      | n
+  25 | NILE        | 1943.70 | 10.14 |     3.40 | n      | n
+4.6.3 PATTERN ATTRIBUTION: RSI-REV basket names GRAPHITE(+5.42) & HEG(+8.14) bounced today after
+      being REJECTED yesterday for confirmed downtrend — small dead-cat bounces, rejection stands.
+4.6.5 UGD: force-adds=[] — no STALE_SCREENING. All T-0 gainers anchors or news-priced-in/thin.
+
+--- F.2 (Step 4.5) — POST-RUN MISS AUDIT (vs 0 picks today) ---
+Histogram: CORRECTLY_EXCLUDED=18, NEWS_SHOCK_UNFLAGGABLE=7, MISS_ANALYZE=0
+No MISS_ANALYZE — clean audit. Every T-0 gainer was news-priced-in, an unflaggable external
+catalyst, or in the active universe but correctly held by chart-gates (26e/46c).
+
+--- F.3 — TOKEN USAGE & COST ---
+Kite MCP backfill = 30 historical fetches (Phase A). Chartink = 2 fetches (A.0 + F.1).
+Cached Phase B saved ~1 Opus macro synthesis. Metering not instrumented this run.
+
+--- F.6 (Step 4.7) — DAILY PARAMETER LOG ---
+STEP 4.7b — Appended 145 rows for 2026-07-09 to out/stockparam_final.csv (39 cols)
+
+F.1 / F.6 / tag-collision guards: PASS / PASS / PASS
+Rules re-weighted this run: 6 (internal ledger updated on disk — not shown here)
+
+========================================================================
+STOCK SCRIPT — 2026-07-10
+========================================================================
+*** ZERO-PICK DAY — 0 BUY RECOMMENDATIONS ***
+Publish threshold: >85%   |   Picks: 0   |   Watchlist carried: 7
+
+RSI-REV recommended: 2 (SCI, MCX) — both blocked at chart-gates (26e / 46c).
+Net published from RSI-REV: 0.
+No entry/target/stop rows — nothing cleared Phase D.
+
+ZERO-PICK RATIONALE:
+  ZERO-PICK DAY.
+  All 4 Phase-D candidates failed hard gates: SCI (26e vol floor 3/64<8), MCX (26e 1/64 + 46c R:R 0.72 at resistance), SYRMA (26e 5/64 + 46c R:R 0.09 at round-1450), KAYNES (46c R:R 0.01 — +6.8% pop closing AT intraday high into May-15 resistance shelf, 55% below 52wH so 46d N/A).
+  RSI-REV BUYs (SCI/MCX) correctly caught by 26e volatility floor — the intended safety net for RSI-REV's REVIEW-status selection-bias risk; RSI-REV does NOT bypass downside gates.
+  RM momentum names (KAYNES/SYRMA T1 EMS catalyst) blocked by HIGH_CONVICTION Rule 46c — catalyst cannot override R:R.
+  85% publish threshold applies universally; UT-RELAX-5 needs all chart-gates PASS which none achieved.
+  Padding forbidden.
+
+WATCHLIST (carry, monitor for triggers):
+  NAUKRI     conf 92  IN_ZONE 1180-1218; re-entry >1218 on structural HH+HL (RM-2 Day-2, R:R 0.56 fail)
+  AEQUS      conf 85  aerospace thematic, STRONG_UP RSI 71.1; awaiting base
+  IOLCP      conf 85  chemicals, STRONG_UP RSI 77.3
+  ATHERENERG conf 78  share-sale overhang Rs1900cr; ABOVE 1130-1176 zone (2 closes), Rule 80f blocked
+  INOXINDIA  conf 78  RSI-REV basket / momentum; monitor cross-up
+  IIFL       conf 78  NBFC caution (RBI/liquidity); monitor
+  KIRLOSENG  conf 78  daily-top-25 mover; monitor for base
+
+RSI-REV RE-ENTRY NOTE (cross-up rule active):
+  A basket name re-qualifies only when RSI CROSSES UP through 50 (prev <=50, today >50) AND
+  passes reject-gates (not confirmed downtrend / not UT1-DOWN). Sitting below 50 does not
+  re-trigger. Estimated exit at RSI>=65.
+
+========================================================================
+FINAL RUN RECAP
+========================================================================
+A · 146 eval_universe · +207 backfill rows · TRIL unrepairable · A.0 PASS
+B · CACHED · 0 excl / 3 caution / 4 tailwind · AI_TAILWIND active
+C · RSI-REV 19->2 BUY/17 rej · RM-12 2 · WPR 4 carries · ->4 to D
+D · 4 in -> 0 pass · {'FAIL_26e': 3, 'FAIL_46c': 1}
+E · 0 picks · ZERO-PICK · 7 watchlist
+F · T-0 top-25 written · guards PASS · 6 rules re-weighted (internal)
+========================================================================

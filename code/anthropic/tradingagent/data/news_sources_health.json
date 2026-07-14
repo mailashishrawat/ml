@@ -1,0 +1,61 @@
+{
+ "_note": "Per-source news-feed health for macro-scan Phase B. consecutive_failures>=3 -> status DEAD (auto-skip). Reset to 0 on any successful fetch. See .claude/skills/macro-scan/SKILL.md dead-source auto-removal.",
+ "updated": "2026-07-14",
+ "sources": {
+  "ET": {
+   "status": "ACTIVE",
+   "consecutive_failures": 0,
+   "last_success": null,
+   "url": "economictimes.indiatimes.com/markets"
+  },
+  "BS": {
+   "status": "ACTIVE",
+   "consecutive_failures": 0,
+   "last_success": null,
+   "url": "business-standard.com/markets"
+  },
+  "Mint": {
+   "status": "ACTIVE",
+   "consecutive_failures": 0,
+   "last_success": null,
+   "url": "livemint.com/market"
+  },
+  "MC": {
+   "status": "ACTIVE",
+   "consecutive_failures": 0,
+   "last_success": null,
+   "url": "moneycontrol.com/news/business/markets/"
+  },
+  "BT": {
+   "status": "ACTIVE",
+   "consecutive_failures": 0,
+   "last_success": null,
+   "url": "businesstoday.in/markets"
+  },
+  "HinduBL": {
+   "status": "ACTIVE",
+   "consecutive_failures": 0,
+   "last_success": null,
+   "url": "thehindubusinessline.com/markets/feeder/default.rss"
+  },
+  "FinExpress": {
+   "status": "ACTIVE",
+   "consecutive_failures": 0,
+   "last_success": null,
+   "url": "financialexpress.com/market/"
+  },
+  "GoogleNewsIN": {
+   "status": "ACTIVE",
+   "consecutive_failures": 0,
+   "last_success": "2026-07-14",
+   "url": "news.google.com/rss/search?q=india+stock+market+when:2d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "MSN-IN": {
+   "status": "ACTIVE",
+   "consecutive_failures": 2,
+   "last_success": null,
+   "url": "msn.com/en-in/money/markets",
+   "note": "JS-rendered headlines; static fetch returns market data only. 1 more empty run -> DEAD."
+  }
+ }
+}

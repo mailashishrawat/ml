@@ -1,14 +1,11 @@
 {
   "generated_date": "2026-07-02",
-  "next_regeneration_due": "2026-08-01",
-  "cadence": "monthly",
   "permanent_membership_rule": "PM-1: Stocks never leave basestock.json once added. Monthly regeneration refreshes data fields only.",
   "new_rules_added_2026-06-16": [
     "PM-1: Permanent membership",
     "CA-1: Post-corporate-action breakout rule",
     "CA-2: Large-cap CA scanner"
   ],
-  "universe_source": "NIFTY MIDCAP 150 + NIFTY SMALLCAP 250",
   "screening_rules_applied": [
     "26a (last close >= Rs 20)",
     "26b (avg daily turnover >= Rs 1 Cr / 100 lakh)",
@@ -16,20 +13,9 @@
     "26e (volatility floor: annual >=40/252 OR recency-rescue >=12/64 last quarter; OR-gate added 2026-06-17; proportional for recent IPOs)"
   ],
   "total_evaluated": 121,
-  "shard_breakdown": {
-    "KO": 58,
-    "PT": 54,
-    "FJ": 44,
-    "A": 16,
-    "UZ_recent": 9,
-    "B": 12,
-    "D": 2,
-    "C": 3,
-    "E": 5
-  },
   "unique_stocks_passed": 203,
   "after_turnover_filter": 153,
-  "final_count": 258,
+  "final_count": 229,
   "note": "No top-N cap \u2014 all stocks passing all rules are kept. Sorted by high_vol_day_rate descending.",
   "stocks": [
     {
@@ -45,7 +31,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "RPOWER",
@@ -60,7 +48,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "MOTILALOFS",
@@ -75,7 +65,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "OLAELEC",
@@ -90,7 +82,12 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": true,
+      "anchor_groups": [
+        "named_force_include"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (named_force_include)"
     },
     {
       "symbol": "ONESOURCE",
@@ -105,7 +102,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "NEWGEN",
@@ -120,7 +119,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "NEULANDLAB",
@@ -135,7 +136,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "JAYNECOIND",
@@ -150,7 +153,9 @@
       "52w_range_pct": 226.55,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "NETWEB",
@@ -165,7 +170,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "GMDCLTD",
@@ -180,7 +187,9 @@
       "52w_range_pct": 109.29,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "KEC",
@@ -195,7 +204,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "KAYNES",
@@ -210,7 +221,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "NBCC",
@@ -225,7 +238,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "NUVAMA",
@@ -240,7 +255,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "NTPCGREEN",
@@ -255,7 +272,12 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": true,
+      "anchor_groups": [
+        "named_force_include"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (named_force_include)"
     },
     {
       "symbol": "GRSE",
@@ -270,7 +292,9 @@
       "52w_range_pct": 77.04,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "NAVA",
@@ -285,7 +309,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "LTFOODS",
@@ -300,7 +326,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "NIACL",
@@ -315,7 +343,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "KALYANKJIL",
@@ -330,7 +360,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "AEROFLEX",
@@ -345,7 +377,9 @@
       "52w_range_pct": 176.67,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "A"
+      "shard": "A",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "OIL",
@@ -360,7 +394,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "MMTC",
@@ -375,7 +411,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "HCC",
@@ -390,7 +428,9 @@
       "52w_range_pct": 165.04,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "SCHNEIDER",
@@ -405,7 +445,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "JTLIND",
@@ -420,7 +462,9 @@
       "52w_range_pct": 108.04,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "GODFRYPHLP",
@@ -435,7 +479,9 @@
       "52w_range_pct": 101.36,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "PARADEEP",
@@ -450,7 +496,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "SYRMA",
@@ -465,7 +513,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "LLOYDSME",
@@ -480,7 +530,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "HFCL",
@@ -495,7 +547,12 @@
       "52w_range_pct": 176.96,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": true,
+      "anchor_groups": [
+        "pattern_o_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (pattern_o_basket)"
     },
     {
       "symbol": "JAIBALAJI",
@@ -510,7 +567,9 @@
       "52w_range_pct": 148.58,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "PGEL",
@@ -525,7 +584,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "HINDWAREAP",
@@ -540,7 +601,9 @@
       "52w_range_pct": 120.22,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "POLYMED",
@@ -555,7 +618,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "BLACKBUCK",
@@ -570,7 +635,12 @@
       "52w_range_pct": 71.78,
       "listed_within_1_year": true,
       "force_include": true,
-      "shard": "UZ_recent"
+      "shard": "UZ_recent",
+      "active": true,
+      "anchor_groups": [
+        "named_force_include"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (named_force_include)"
     },
     {
       "symbol": "BLUEJET",
@@ -585,7 +655,9 @@
       "52w_range_pct": 208.15,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "UZ_recent"
+      "shard": "UZ_recent",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "NATIONALUM",
@@ -600,7 +672,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "WANBURY",
@@ -615,7 +689,9 @@
       "52w_range_pct": 91.41,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "UZ_recent"
+      "shard": "UZ_recent",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "NLCINDIA",
@@ -630,7 +706,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "JMFINANCIL",
@@ -645,7 +723,9 @@
       "52w_range_pct": 69.9,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "KIRLOSENG",
@@ -660,7 +740,12 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": true,
+      "anchor_groups": [
+        "dc_proposed_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (dc_proposed_basket)"
     },
     {
       "symbol": "OLECTRA",
@@ -675,7 +760,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "GOLDIAM",
@@ -690,7 +777,9 @@
       "52w_range_pct": 62.27,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "NIVABUPA",
@@ -705,7 +794,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "BHARATRAS",
@@ -720,7 +811,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "B"
+      "shard": "B",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "MCX",
@@ -735,7 +828,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "JPPOWER",
@@ -750,7 +845,9 @@
       "52w_range_pct": 103.66,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "JAMNAAUTO",
@@ -765,7 +862,9 @@
       "52w_range_pct": 69.54,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "NAM-INDIA",
@@ -780,7 +879,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "NCC",
@@ -795,7 +896,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "INTELLECT",
@@ -810,7 +913,9 @@
       "52w_range_pct": 105.15,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "MRPL",
@@ -825,7 +930,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "JSWHL",
@@ -840,7 +947,9 @@
       "52w_range_pct": 108.28,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "JINDWORLD",
@@ -855,7 +964,9 @@
       "52w_range_pct": 238.51,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "RTNINDIA",
@@ -870,7 +981,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "TANLA",
@@ -885,7 +998,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "TEJASNET",
@@ -900,7 +1015,12 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": true,
+      "anchor_groups": [
+        "pattern_o_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (pattern_o_basket)"
     },
     {
       "symbol": "IFCI",
@@ -915,7 +1035,9 @@
       "52w_range_pct": 53.3,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "OBEROIRLTY",
@@ -930,7 +1052,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "KPIL",
@@ -945,7 +1069,12 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": true,
+      "anchor_groups": [
+        "power_equip_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (power_equip_basket)"
     },
     {
       "symbol": "NMDC",
@@ -960,7 +1089,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "BEML",
@@ -975,7 +1106,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "B"
+      "shard": "B",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "SCI",
@@ -990,7 +1123,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "OFSS",
@@ -1005,7 +1140,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "KPITTECH",
@@ -1020,7 +1157,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "RAILTEL",
@@ -1035,7 +1174,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "SAPPHIRE",
@@ -1050,7 +1191,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "BOMDYEING",
@@ -1065,7 +1208,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "B"
+      "shard": "B",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "DEEPAKFERT",
@@ -1080,7 +1225,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "D"
+      "shard": "D",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "JINDALPOLY",
@@ -1095,7 +1242,9 @@
       "52w_range_pct": 174.4,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "MANAPPURAM",
@@ -1110,7 +1259,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "MINDACORP",
@@ -1125,7 +1276,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "SAMMAANCAP",
@@ -1140,7 +1293,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "JYOTICNC",
@@ -1155,7 +1310,12 @@
       "52w_range_pct": 100.03,
       "listed_within_1_year": true,
       "force_include": true,
-      "shard": "UZ_recent"
+      "shard": "UZ_recent",
+      "active": true,
+      "anchor_groups": [
+        "named_force_include"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (named_force_include)"
     },
     {
       "symbol": "FSL",
@@ -1170,7 +1330,9 @@
       "52w_range_pct": 93.14,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "LTF",
@@ -1185,7 +1347,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "UNIPARTS",
@@ -1200,7 +1364,9 @@
       "52w_range_pct": 94.76,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "UZ_recent"
+      "shard": "UZ_recent",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "ASAHIINDIA",
@@ -1215,7 +1381,9 @@
       "52w_range_pct": 54.56,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "A"
+      "shard": "A",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "GRAPHITE",
@@ -1230,7 +1398,9 @@
       "52w_range_pct": 51.62,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "REDINGTON",
@@ -1245,7 +1415,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "SAGILITY",
@@ -1260,7 +1432,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "SONATSOFTW",
@@ -1275,7 +1449,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "TECHNOE",
@@ -1290,7 +1466,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "TVSSCS",
@@ -1305,7 +1483,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "MGL",
@@ -1320,7 +1500,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "LINDEINDIA",
@@ -1335,7 +1517,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "POWERMECH",
@@ -1350,7 +1534,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "PRINCEPIPE",
@@ -1365,7 +1551,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "HEG",
@@ -1380,7 +1568,9 @@
       "52w_range_pct": 44.68,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "IIFL",
@@ -1395,7 +1585,9 @@
       "52w_range_pct": 59.37,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "KEI",
@@ -1410,7 +1602,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "LEMONTREE",
@@ -1425,7 +1619,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "NATCOPHARM",
@@ -1440,7 +1636,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "HOMEFIRST",
@@ -1455,7 +1653,9 @@
       "52w_range_pct": 63.46,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "BDL",
@@ -1470,7 +1670,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "B"
+      "shard": "B",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "IRCON",
@@ -1485,7 +1687,9 @@
       "52w_range_pct": 91.31,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "SANSERA",
@@ -1500,7 +1704,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "TBOTEK",
@@ -1515,7 +1721,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "INOXWIND",
@@ -1530,7 +1738,9 @@
       "52w_range_pct": 158.31,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "UZ_recent"
+      "shard": "UZ_recent",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "PRIVISCL",
@@ -1545,7 +1755,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "RHIM",
@@ -1560,7 +1772,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "FIEMIND",
@@ -1575,7 +1789,9 @@
       "52w_range_pct": 59.78,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "JKCEMENT",
@@ -1590,7 +1806,9 @@
       "52w_range_pct": 54.54,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "IGIL",
@@ -1605,7 +1823,9 @@
       "52w_range_pct": 43.33,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "MAPMYINDIA",
@@ -1620,7 +1840,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "KPRMILL",
@@ -1635,7 +1857,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "MAHABANK",
@@ -1650,7 +1874,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "GOCOLORS",
@@ -1665,7 +1891,9 @@
       "52w_range_pct": 280.62,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "SAREGAMA",
@@ -1680,7 +1908,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "BSOFT",
@@ -1695,7 +1925,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "B"
+      "shard": "B",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "PCBL",
@@ -1710,7 +1942,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "NSLNISP",
@@ -1725,7 +1959,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": false,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "LATENTVIEW",
@@ -1740,7 +1976,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "POONAWALLA",
@@ -1755,7 +1993,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "SAILIFE",
@@ -1770,7 +2010,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "TITAGARH",
@@ -1785,7 +2027,9 @@
       "52w_range_pct": 0.0,
       "listed_within_1_year": true,
       "force_include": false,
-      "shard": "PT"
+      "shard": "PT",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "UNOMINDA",
@@ -1802,7 +2046,12 @@
       "force_include": true,
       "user_requested": true,
       "user_requested_date": "2026-06-16",
-      "shard": "UZ_recent"
+      "shard": "UZ_recent",
+      "active": true,
+      "anchor_groups": [
+        "user_requested"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (user_requested)"
     },
     {
       "symbol": "TRENT",
@@ -1820,7 +2069,12 @@
       "large_cap_trending": true,
       "large_cap_added_date": "2026-06-16",
       "nifty_index": "NIFTY50",
-      "shard": "PT"
+      "shard": "PT",
+      "active": true,
+      "anchor_groups": [
+        "large_cap_trending"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (large_cap_trending)"
     },
     {
       "symbol": "BAJFINANCE",
@@ -1838,7 +2092,12 @@
       "large_cap_trending": true,
       "large_cap_added_date": "2026-06-16",
       "nifty_index": "NIFTY50",
-      "shard": "B"
+      "shard": "B",
+      "active": true,
+      "anchor_groups": [
+        "large_cap_trending"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (large_cap_trending)"
     },
     {
       "symbol": "MARUTI",
@@ -1856,7 +2115,12 @@
       "large_cap_trending": true,
       "large_cap_added_date": "2026-06-16",
       "nifty_index": "NIFTY50",
-      "shard": "KO"
+      "shard": "KO",
+      "active": true,
+      "anchor_groups": [
+        "large_cap_trending"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (large_cap_trending)"
     },
     {
       "symbol": "M&M",
@@ -1874,7 +2138,12 @@
       "large_cap_trending": true,
       "large_cap_added_date": "2026-06-16",
       "nifty_index": "NIFTY50",
-      "shard": "KO"
+      "shard": "KO",
+      "active": true,
+      "anchor_groups": [
+        "large_cap_trending"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (large_cap_trending)"
     },
     {
       "symbol": "LT",
@@ -1892,7 +2161,12 @@
       "large_cap_trending": true,
       "large_cap_added_date": "2026-06-16",
       "nifty_index": "NIFTY50",
-      "shard": "KO"
+      "shard": "KO",
+      "active": true,
+      "anchor_groups": [
+        "large_cap_trending"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (large_cap_trending)"
     },
     {
       "symbol": "ADANIENT",
@@ -1911,7 +2185,12 @@
       "user_requested": true,
       "user_requested_date": "2026-06-16",
       "nifty_index": "NIFTY50",
-      "shard": "A"
+      "shard": "A",
+      "active": true,
+      "anchor_groups": [
+        "adani_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (adani_basket)"
     },
     {
       "symbol": "ADANIPORTS",
@@ -1930,7 +2209,12 @@
       "user_requested": true,
       "user_requested_date": "2026-06-16",
       "nifty_index": "NIFTY50",
-      "shard": "A"
+      "shard": "A",
+      "active": true,
+      "anchor_groups": [
+        "adani_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (adani_basket)"
     },
     {
       "symbol": "ADANIPOWER",
@@ -1948,7 +2232,12 @@
       "adani_group": true,
       "user_requested": true,
       "user_requested_date": "2026-06-16",
-      "shard": "A"
+      "shard": "A",
+      "active": true,
+      "anchor_groups": [
+        "adani_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (adani_basket)"
     },
     {
       "symbol": "ADANIGREEN",
@@ -1966,7 +2255,12 @@
       "adani_group": true,
       "user_requested": true,
       "user_requested_date": "2026-06-16",
-      "shard": "A"
+      "shard": "A",
+      "active": true,
+      "anchor_groups": [
+        "adani_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (adani_basket)"
     },
     {
       "symbol": "ADANIENSOL",
@@ -1984,7 +2278,12 @@
       "adani_group": true,
       "user_requested": true,
       "user_requested_date": "2026-06-16",
-      "shard": "A"
+      "shard": "A",
+      "active": true,
+      "anchor_groups": [
+        "adani_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (adani_basket)"
     },
     {
       "symbol": "ATGL",
@@ -2002,7 +2301,12 @@
       "adani_group": true,
       "user_requested": true,
       "user_requested_date": "2026-06-16",
-      "shard": "A"
+      "shard": "A",
+      "active": true,
+      "anchor_groups": [
+        "adani_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (adani_basket)"
     },
     {
       "symbol": "AWL",
@@ -2020,7 +2324,12 @@
       "adani_group": true,
       "user_requested": true,
       "user_requested_date": "2026-06-16",
-      "shard": "A"
+      "shard": "A",
+      "active": true,
+      "anchor_groups": [
+        "adani_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (adani_basket)"
     },
     {
       "symbol": "AMBUJACEM",
@@ -2039,7 +2348,12 @@
       "user_requested": true,
       "user_requested_date": "2026-06-16",
       "nifty_index": "NIFTY50",
-      "shard": "A"
+      "shard": "A",
+      "active": true,
+      "anchor_groups": [
+        "adani_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (adani_basket)"
     },
     {
       "symbol": "ACC",
@@ -2057,7 +2371,12 @@
       "adani_group": true,
       "user_requested": true,
       "user_requested_date": "2026-06-16",
-      "shard": "A"
+      "shard": "A",
+      "active": true,
+      "anchor_groups": [
+        "adani_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (adani_basket)"
     },
     {
       "symbol": "NDTV",
@@ -2075,7 +2394,12 @@
       "adani_group": true,
       "user_requested": true,
       "user_requested_date": "2026-06-16",
-      "shard": "KO"
+      "shard": "KO",
+      "active": true,
+      "anchor_groups": [
+        "adani_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (adani_basket)"
     },
     {
       "symbol": "TCS",
@@ -2094,7 +2418,12 @@
       "user_requested": true,
       "user_requested_date": "2026-06-16",
       "nifty_index": "NIFTY50",
-      "shard": "PT"
+      "shard": "PT",
+      "active": true,
+      "anchor_groups": [
+        "tata_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (tata_basket)"
     },
     {
       "symbol": "TMPV",
@@ -2114,7 +2443,12 @@
       "user_requested_date": "2026-06-16",
       "post_demerger_note": "Tata Motors split into TMCV + TMPV on 2025-11-12",
       "nifty_index": "NIFTY50",
-      "shard": "PT"
+      "shard": "PT",
+      "active": true,
+      "anchor_groups": [
+        "tata_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (tata_basket)"
     },
     {
       "symbol": "TMCV",
@@ -2133,7 +2467,12 @@
       "user_requested": true,
       "user_requested_date": "2026-06-16",
       "post_demerger_note": "Tata Motors split into TMCV + TMPV on 2025-11-12",
-      "shard": "PT"
+      "shard": "PT",
+      "active": true,
+      "anchor_groups": [
+        "tata_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (tata_basket)"
     },
     {
       "symbol": "TATASTEEL",
@@ -2152,7 +2491,12 @@
       "user_requested": true,
       "user_requested_date": "2026-06-16",
       "nifty_index": "NIFTY50",
-      "shard": "PT"
+      "shard": "PT",
+      "active": true,
+      "anchor_groups": [
+        "tata_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (tata_basket)"
     },
     {
       "symbol": "TATAPOWER",
@@ -2170,7 +2514,12 @@
       "tata_group": true,
       "user_requested": true,
       "user_requested_date": "2026-06-16",
-      "shard": "PT"
+      "shard": "PT",
+      "active": true,
+      "anchor_groups": [
+        "tata_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (tata_basket)"
     },
     {
       "symbol": "TATACONSUM",
@@ -2189,7 +2538,12 @@
       "user_requested": true,
       "user_requested_date": "2026-06-16",
       "nifty_index": "NIFTY50",
-      "shard": "PT"
+      "shard": "PT",
+      "active": true,
+      "anchor_groups": [
+        "tata_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (tata_basket)"
     },
     {
       "symbol": "TATACHEM",
@@ -2207,7 +2561,12 @@
       "tata_group": true,
       "user_requested": true,
       "user_requested_date": "2026-06-16",
-      "shard": "PT"
+      "shard": "PT",
+      "active": true,
+      "anchor_groups": [
+        "tata_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (tata_basket)"
     },
     {
       "symbol": "TATACOMM",
@@ -2225,7 +2584,13 @@
       "tata_group": true,
       "user_requested": true,
       "user_requested_date": "2026-06-16",
-      "shard": "PT"
+      "shard": "PT",
+      "active": true,
+      "anchor_groups": [
+        "tata_basket",
+        "pattern_o_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (tata_basket, pattern_o_basket)"
     },
     {
       "symbol": "TATAELXSI",
@@ -2243,7 +2608,12 @@
       "tata_group": true,
       "user_requested": true,
       "user_requested_date": "2026-06-16",
-      "shard": "PT"
+      "shard": "PT",
+      "active": true,
+      "anchor_groups": [
+        "tata_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (tata_basket)"
     },
     {
       "symbol": "TATATECH",
@@ -2261,7 +2631,12 @@
       "tata_group": true,
       "user_requested": true,
       "user_requested_date": "2026-06-16",
-      "shard": "PT"
+      "shard": "PT",
+      "active": true,
+      "anchor_groups": [
+        "tata_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (tata_basket)"
     },
     {
       "symbol": "TATAINVEST",
@@ -2279,7 +2654,12 @@
       "tata_group": true,
       "user_requested": true,
       "user_requested_date": "2026-06-16",
-      "shard": "PT"
+      "shard": "PT",
+      "active": true,
+      "anchor_groups": [
+        "tata_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (tata_basket)"
     },
     {
       "symbol": "TITAN",
@@ -2298,7 +2678,12 @@
       "user_requested": true,
       "user_requested_date": "2026-06-16",
       "nifty_index": "NIFTY50",
-      "shard": "PT"
+      "shard": "PT",
+      "active": true,
+      "anchor_groups": [
+        "tata_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (tata_basket)"
     },
     {
       "symbol": "VOLTAS",
@@ -2316,7 +2701,12 @@
       "tata_group": true,
       "user_requested": true,
       "user_requested_date": "2026-06-16",
-      "shard": "UZ_recent"
+      "shard": "UZ_recent",
+      "active": true,
+      "anchor_groups": [
+        "tata_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (tata_basket)"
     },
     {
       "symbol": "INDHOTEL",
@@ -2334,7 +2724,12 @@
       "tata_group": true,
       "user_requested": true,
       "user_requested_date": "2026-06-16",
-      "shard": "FJ"
+      "shard": "FJ",
+      "active": true,
+      "anchor_groups": [
+        "tata_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (tata_basket)"
     },
     {
       "symbol": "RALLIS",
@@ -2352,7 +2747,12 @@
       "tata_group": true,
       "user_requested": true,
       "user_requested_date": "2026-06-16",
-      "shard": "PT"
+      "shard": "PT",
+      "active": true,
+      "anchor_groups": [
+        "tata_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (tata_basket)"
     },
     {
       "symbol": "NELCO",
@@ -2370,7 +2770,12 @@
       "tata_group": true,
       "user_requested": true,
       "user_requested_date": "2026-06-16",
-      "shard": "KO"
+      "shard": "KO",
+      "active": true,
+      "anchor_groups": [
+        "tata_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (tata_basket)"
     },
     {
       "symbol": "ARTEMISMED",
@@ -2388,7 +2793,12 @@
       "tata_group": true,
       "user_requested": true,
       "user_requested_date": "2026-06-16",
-      "shard": "A"
+      "shard": "A",
+      "active": true,
+      "anchor_groups": [
+        "tata_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (tata_basket)"
     },
     {
       "symbol": "HERITGFOOD",
@@ -2405,7 +2815,9 @@
       "force_include": true,
       "shard": "FJ",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "JSWENERGY",
@@ -2422,7 +2834,9 @@
       "force_include": true,
       "shard": "FJ",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "SBFC",
@@ -2439,7 +2853,9 @@
       "force_include": true,
       "shard": "PT",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "FEDERALBNK",
@@ -2456,7 +2872,9 @@
       "force_include": true,
       "shard": "FJ",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "TORNTPHARM",
@@ -2473,7 +2891,9 @@
       "force_include": true,
       "shard": "PT",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "BAJAJ-AUTO",
@@ -2490,7 +2910,9 @@
       "force_include": true,
       "shard": "B",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "VBL",
@@ -2507,7 +2929,9 @@
       "force_include": true,
       "shard": "UZ_recent",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "PAYTM",
@@ -2524,7 +2948,9 @@
       "force_include": true,
       "shard": "KO",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "ASHOKLEY",
@@ -2541,7 +2967,9 @@
       "force_include": true,
       "shard": "A",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "LENSKART",
@@ -2558,7 +2986,9 @@
       "force_include": true,
       "shard": "KO",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "KERNEX",
@@ -2575,7 +3005,9 @@
       "force_include": true,
       "shard": "KO",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "INOXGREEN",
@@ -2592,7 +3024,9 @@
       "force_include": true,
       "shard": "FJ",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "MUTHOOTFIN",
@@ -2609,7 +3043,9 @@
       "force_include": true,
       "shard": "KO",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "AZAD",
@@ -2626,7 +3062,9 @@
       "force_include": true,
       "shard": "A",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "BAJAJFINSV",
@@ -2643,7 +3081,9 @@
       "force_include": true,
       "shard": "B",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "BHARTIARTL",
@@ -2660,7 +3100,9 @@
       "force_include": true,
       "shard": "B",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "BLS",
@@ -2677,7 +3119,9 @@
       "force_include": true,
       "shard": "B",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "BRIGADE",
@@ -2694,7 +3138,9 @@
       "force_include": true,
       "shard": "B",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "CDSL",
@@ -2711,7 +3157,9 @@
       "force_include": true,
       "shard": "C",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "CHENNPETRO",
@@ -2728,7 +3176,9 @@
       "force_include": true,
       "shard": "C",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "CIEINDIA",
@@ -2745,7 +3195,9 @@
       "force_include": true,
       "shard": "C",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "DATAPATTNS",
@@ -2762,7 +3214,9 @@
       "force_include": true,
       "shard": "D",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "EDELWEISS",
@@ -2779,7 +3233,9 @@
       "force_include": true,
       "shard": "E",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "EICHERMOT",
@@ -2796,7 +3252,9 @@
       "force_include": true,
       "shard": "E",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "EIHAHOTELS",
@@ -2813,7 +3271,9 @@
       "force_include": true,
       "shard": "E",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "ETERNAL",
@@ -2830,7 +3290,12 @@
       "force_include": true,
       "shard": "E",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": true,
+      "anchor_groups": [
+        "named_force_include"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (named_force_include)"
     },
     {
       "symbol": "EXIDEIND",
@@ -2847,7 +3312,9 @@
       "force_include": true,
       "shard": "E",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "FORTIS",
@@ -2864,7 +3331,9 @@
       "force_include": true,
       "shard": "FJ",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "GABRIEL",
@@ -2881,7 +3350,9 @@
       "force_include": true,
       "shard": "FJ",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "GODREJIND",
@@ -2898,7 +3369,9 @@
       "force_include": true,
       "shard": "FJ",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "GOKEX",
@@ -2915,7 +3388,9 @@
       "force_include": true,
       "shard": "FJ",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "HAL",
@@ -2932,7 +3407,9 @@
       "force_include": true,
       "shard": "FJ",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "HINDCOPPER",
@@ -2949,7 +3426,9 @@
       "force_include": true,
       "shard": "FJ",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "INDIGO",
@@ -2966,7 +3445,9 @@
       "force_include": true,
       "shard": "FJ",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "ITC",
@@ -2983,7 +3464,9 @@
       "force_include": true,
       "shard": "FJ",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "MAZDOCK",
@@ -3000,7 +3483,9 @@
       "force_include": true,
       "shard": "KO",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "NH",
@@ -3017,7 +3502,9 @@
       "force_include": true,
       "shard": "KO",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "NSDL",
@@ -3034,7 +3521,9 @@
       "force_include": true,
       "shard": "KO",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "PNB",
@@ -3051,7 +3540,9 @@
       "force_include": true,
       "shard": "PT",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "PRESTIGE",
@@ -3068,7 +3559,9 @@
       "force_include": true,
       "shard": "PT",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "RAYMOND",
@@ -3085,7 +3578,9 @@
       "force_include": true,
       "shard": "PT",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "REDTAPE",
@@ -3102,7 +3597,9 @@
       "force_include": true,
       "shard": "PT",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "SBIN",
@@ -3119,7 +3616,9 @@
       "force_include": true,
       "shard": "PT",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "SOBHA",
@@ -3136,7 +3635,9 @@
       "force_include": true,
       "shard": "PT",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "SOUTHBANK",
@@ -3153,7 +3654,9 @@
       "force_include": true,
       "shard": "PT",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "TVSHLTD",
@@ -3170,7 +3673,9 @@
       "force_include": true,
       "shard": "PT",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "TVSMOTOR",
@@ -3187,7 +3692,9 @@
       "force_include": true,
       "shard": "PT",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "FORCEMOT",
@@ -3204,7 +3711,9 @@
       "force_include": true,
       "shard": "FJ",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "APOLLO",
@@ -3221,7 +3730,9 @@
       "force_include": true,
       "shard": "A",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "ATHERENERG",
@@ -3238,7 +3749,12 @@
       "force_include": true,
       "shard": "A",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": true,
+      "anchor_groups": [
+        "named_force_include"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (named_force_include)"
     },
     {
       "symbol": "JSWSTEEL",
@@ -3255,7 +3771,9 @@
       "force_include": true,
       "shard": "FJ",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "IDEAFORGE-BE",
@@ -3272,7 +3790,9 @@
       "force_include": true,
       "shard": "FJ",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "BBOX",
@@ -3289,7 +3809,12 @@
       "force_include": true,
       "shard": "B",
       "source": "user_watchlist_2026-06-17",
-      "needs_data_refresh": true
+      "needs_data_refresh": true,
+      "active": true,
+      "anchor_groups": [
+        "pattern_o_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (pattern_o_basket)"
     },
     {
       "symbol": "CARTRADE",
@@ -3308,7 +3833,9 @@
       "source": "step_4_6_ugd_2026-06-17",
       "gap_added": true,
       "needs_data_refresh": true,
-      "note": "Added via Step 4.6 Universe Gap Detection \u2014 top-10 NSE gainer not previously in universe; data backfill due 2026-07-01"
+      "note": "Added via Step 4.6 Universe Gap Detection \u2014 top-10 NSE gainer not previously in universe; data backfill due 2026-07-01",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "IDBI",
@@ -3327,7 +3854,9 @@
       "source": "step_4_6_ugd_2026-06-17",
       "gap_added": true,
       "needs_data_refresh": true,
-      "note": "Added via Step 4.6 Universe Gap Detection \u2014 top-10 NSE gainer not previously in universe; data backfill due 2026-07-01"
+      "note": "Added via Step 4.6 Universe Gap Detection \u2014 top-10 NSE gainer not previously in universe; data backfill due 2026-07-01",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "COCHINSHIP",
@@ -3346,7 +3875,9 @@
       "source": "step_4_6_ugd_2026-06-17",
       "gap_added": true,
       "needs_data_refresh": true,
-      "note": "Added via Step 4.6 Universe Gap Detection \u2014 top-10 NSE gainer not previously in universe; data backfill due 2026-07-01"
+      "note": "Added via Step 4.6 Universe Gap Detection \u2014 top-10 NSE gainer not previously in universe; data backfill due 2026-07-01",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "LLOYDSENGG",
@@ -3365,7 +3896,9 @@
       "source": "step_4_6_ugd_2026-06-17",
       "gap_added": true,
       "needs_data_refresh": true,
-      "note": "Added via Step 4.6 Universe Gap Detection \u2014 top-10 NSE gainer not previously in universe; data backfill due 2026-07-01"
+      "note": "Added via Step 4.6 Universe Gap Detection \u2014 top-10 NSE gainer not previously in universe; data backfill due 2026-07-01",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "TARSONS",
@@ -3384,7 +3917,9 @@
       "source": "step_4_6_ugd_2026-06-17",
       "gap_added": true,
       "needs_data_refresh": true,
-      "note": "Added via Step 4.6 Universe Gap Detection \u2014 top-10 NSE gainer not previously in universe; data backfill due 2026-07-01"
+      "note": "Added via Step 4.6 Universe Gap Detection \u2014 top-10 NSE gainer not previously in universe; data backfill due 2026-07-01",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "GVT&D",
@@ -3403,7 +3938,12 @@
       "source": "step_4_6_ugd_2026-06-17",
       "gap_added": true,
       "needs_data_refresh": true,
-      "note": "Added via Step 4.6 Universe Gap Detection \u2014 top-10 NSE gainer not previously in universe; data backfill due 2026-07-01"
+      "note": "Added via Step 4.6 Universe Gap Detection \u2014 top-10 NSE gainer not previously in universe; data backfill due 2026-07-01",
+      "active": true,
+      "anchor_groups": [
+        "power_equip_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (power_equip_basket)"
     },
     {
       "symbol": "APARINDS",
@@ -3421,7 +3961,12 @@
       "gap_added": true,
       "gap_source": "UGD-2026-06-18",
       "gap_reason": "3m_gainers_csv: appeared 4 times, STALE_SCREENING \u2014 now passes all rules",
-      "shard": "A"
+      "shard": "A",
+      "active": true,
+      "anchor_groups": [
+        "power_equip_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (power_equip_basket)"
     },
     {
       "symbol": "COFORGE",
@@ -3439,7 +3984,9 @@
       "gap_added": true,
       "gap_source": "UGD-2026-06-18",
       "gap_reason": "3m_gainers_csv: appeared 3 times IT AI tailwind, STALE_SCREENING",
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "ICICIBANK",
@@ -3458,7 +4005,9 @@
       "gap_added": true,
       "gap_source": "UGD-2026-06-18",
       "gap_reason": "3m_gainers_csv: appeared 1 time Apr-08 +5.11% \u2014 large-cap bank trending sector",
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "MASTEK",
@@ -3476,7 +4025,9 @@
       "gap_added": true,
       "gap_source": "UGD-2026-06-18",
       "gap_reason": "3m_gainers_csv: appeared 2 times IT stock, AI_TAILWIND candidate",
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "PARAS",
@@ -3494,7 +4045,9 @@
       "gap_added": true,
       "gap_source": "UGD-2026-06-18",
       "gap_reason": "3m_gainers_csv: appeared 7 times \u2014 Pattern h defence breakout + RM-4 dip recovery, HIGH FREQUENCY WINNER",
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "STLTECH",
@@ -3512,7 +4065,12 @@
       "gap_added": true,
       "gap_source": "UGD-2026-06-18",
       "gap_reason": "3m_gainers_csv: appeared 3 times \u2014 Pattern O AI/Cloud Infra universe candidate; note Rule 77/78 downtrend gates apply",
-      "shard": "KO"
+      "shard": "KO",
+      "active": true,
+      "anchor_groups": [
+        "pattern_o_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (pattern_o_basket)"
     },
     {
       "symbol": "SUNPHARMA",
@@ -3531,7 +4089,9 @@
       "gap_added": true,
       "gap_source": "UGD-2026-06-18",
       "gap_reason": "3m_gainers_csv: appeared 1 time \u2014 pharma sector gainer alongside APOLLO basket, large-cap trending",
-      "shard": "KO"
+      "shard": "KO",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "SPAL",
@@ -3547,7 +4107,9 @@
       "listed_within_1_year": false,
       "force_include": true,
       "gap_added": true,
-      "ugd_date": "2026-06-18"
+      "ugd_date": "2026-06-18",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "AEROENTER",
@@ -3563,7 +4125,9 @@
       "listed_within_1_year": false,
       "force_include": true,
       "gap_added": true,
-      "ugd_date": "2026-06-18"
+      "ugd_date": "2026-06-18",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "DECNGOLD",
@@ -3579,7 +4143,9 @@
       "listed_within_1_year": false,
       "force_include": true,
       "gap_added": true,
-      "ugd_date": "2026-06-18"
+      "ugd_date": "2026-06-18",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "FINOPB",
@@ -3595,7 +4161,9 @@
       "listed_within_1_year": false,
       "force_include": true,
       "gap_added": true,
-      "ugd_date": "2026-06-18"
+      "ugd_date": "2026-06-18",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "SASKEN",
@@ -3611,7 +4179,9 @@
       "listed_within_1_year": false,
       "force_include": true,
       "gap_added": true,
-      "ugd_date": "2026-06-18"
+      "ugd_date": "2026-06-18",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "NITCO",
@@ -3627,7 +4197,9 @@
       "listed_within_1_year": false,
       "force_include": true,
       "gap_added": true,
-      "ugd_date": "2026-06-18"
+      "ugd_date": "2026-06-18",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "PANAMAPET",
@@ -3643,7 +4215,9 @@
       "listed_within_1_year": false,
       "force_include": true,
       "gap_added": true,
-      "ugd_date": "2026-06-18"
+      "ugd_date": "2026-06-18",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "EBGNG",
@@ -3662,8 +4236,9 @@
       "gap_added_date": "2026-06-19",
       "gap_source": "UGD-2026-06-19",
       "gap_reason": "STALE_SCREENING: Stock passes all Step 1 rules but was missed in May-2026 monthly screening",
-      "active": true,
-      "shard": "UGD"
+      "active": false,
+      "shard": "UGD",
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "NOCIL",
@@ -3678,7 +4253,9 @@
       "force_include": true,
       "gap_added": true,
       "gap_added_date": "2026-06-23",
-      "ugd_note": "UGD-2026-06-23 chemicals basket adjacent"
+      "ugd_note": "UGD-2026-06-23 chemicals basket adjacent",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "SUBROS",
@@ -3693,7 +4270,9 @@
       "force_include": true,
       "gap_added": true,
       "gap_added_date": "2026-06-23",
-      "ugd_note": "UGD-2026-06-23 auto AC compressor"
+      "ugd_note": "UGD-2026-06-23 auto AC compressor",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "EMSLIMITED",
@@ -3708,7 +4287,9 @@
       "force_include": true,
       "gap_added": true,
       "gap_added_date": "2026-06-23",
-      "ugd_note": "UGD-2026-06-23 EMS sector"
+      "ugd_note": "UGD-2026-06-23 EMS sector",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "KSCL",
@@ -3723,7 +4304,9 @@
       "force_include": true,
       "gap_added": true,
       "gap_added_date": "2026-06-23",
-      "ugd_note": "UGD-2026-06-23 agri seeds"
+      "ugd_note": "UGD-2026-06-23 agri seeds",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "KIRLOSIND",
@@ -3738,7 +4321,9 @@
       "force_include": true,
       "gap_added": true,
       "gap_added_date": "2026-06-23",
-      "ugd_note": "UGD-2026-06-23 Kirloskar group sibling"
+      "ugd_note": "UGD-2026-06-23 Kirloskar group sibling",
+      "active": false,
+      "active_reason": "not_in_anchor_list_2026-07-02"
     },
     {
       "symbol": "RITES",
@@ -3759,8 +4344,11 @@
       "gap_move_pct": 14.02,
       "gap_move_rank": 1,
       "active": true,
-      "active_reason": "Passes prima-facie liquidity + history checks",
-      "shard": "GAP-R"
+      "active_reason": "anchor_list_2026-07-02 (gap_added_2026_07_02)",
+      "shard": "GAP-R",
+      "anchor_groups": [
+        "gap_added_2026_07_02"
+      ]
     },
     {
       "symbol": "VEDPOWER",
@@ -3780,9 +4368,12 @@
       "gap_source": "chartink_topgainer_forceadd",
       "gap_move_pct": 9.76,
       "gap_move_rank": 4,
-      "active": false,
-      "active_reason": "Recent listing thin history, Anil-Ambani-group penny",
-      "shard": "GAP-V"
+      "active": true,
+      "active_reason": "anchor_list_2026-07-02 (gap_added_2026_07_02)",
+      "shard": "GAP-V",
+      "anchor_groups": [
+        "gap_added_2026_07_02"
+      ]
     },
     {
       "symbol": "DELHIVERY",
@@ -3803,8 +4394,11 @@
       "gap_move_pct": 7.55,
       "gap_move_rank": 5,
       "active": true,
-      "active_reason": "Passes prima-facie liquidity + history checks",
-      "shard": "GAP-D"
+      "active_reason": "anchor_list_2026-07-02 (gap_added_2026_07_02)",
+      "shard": "GAP-D",
+      "anchor_groups": [
+        "gap_added_2026_07_02"
+      ]
     },
     {
       "symbol": "VOGL",
@@ -3824,9 +4418,12 @@
       "gap_source": "chartink_topgainer_forceadd",
       "gap_move_pct": 19.98,
       "gap_move_rank": 7,
-      "active": false,
-      "active_reason": "Recent listing (~10 sessions), Rule 79 penny profile",
-      "shard": "GAP-V"
+      "active": true,
+      "active_reason": "anchor_list_2026-07-02 (gap_added_2026_07_02)",
+      "shard": "GAP-V",
+      "anchor_groups": [
+        "gap_added_2026_07_02"
+      ]
     },
     {
       "symbol": "PAISALO",
@@ -3847,8 +4444,11 @@
       "gap_move_pct": 19.86,
       "gap_move_rank": 8,
       "active": true,
-      "active_reason": "Passes prima-facie liquidity + history checks",
-      "shard": "GAP-P"
+      "active_reason": "anchor_list_2026-07-02 (gap_added_2026_07_02)",
+      "shard": "GAP-P",
+      "anchor_groups": [
+        "gap_added_2026_07_02"
+      ]
     },
     {
       "symbol": "VISL",
@@ -3868,423 +4468,796 @@
       "gap_source": "chartink_topgainer_forceadd",
       "gap_move_pct": 9.98,
       "gap_move_rank": 10,
-      "active": false,
-      "active_reason": "Recent listing ~13 sessions, Rule 79 penny + Rule 26e insufficient",
-      "shard": "GAP-V"
+      "active": true,
+      "active_reason": "anchor_list_2026-07-02 (gap_added_2026_07_02)",
+      "shard": "GAP-V",
+      "anchor_groups": [
+        "gap_added_2026_07_02"
+      ]
     },
     {
-      "symbol": "RAMCOSYS",
-      "company": "",
+      "symbol": "AFCONS",
+      "company": "Afcons Infrastructure Ltd",
       "sector": "Unknown",
-      "last_close": 0.0,
-      "avg_daily_turnover_lakh": 0.0,
-      "high_vol_day_count": 0,
-      "available_trading_days": 0,
-      "high_vol_day_rate": 0.0,
-      "1y_return_pct": 0.0,
-      "52w_range_pct": 0.0,
-      "listed_within_1_year": false,
+      "last_close": null,
+      "avg_daily_turnover_lakh": null,
+      "high_vol_day_count": null,
+      "available_trading_days": null,
+      "high_vol_day_rate": null,
+      "1y_return_pct": null,
+      "52w_range_pct": null,
+      "listed_within_1_year": null,
       "force_include": true,
+      "gap_added": true,
+      "gap_added_date": "2026-07-02",
+      "gap_source": "anchor_list_completion_2026-07-02",
       "active": true,
-      "shard": "RA",
-      "added_date": "2026-07-13",
-      "added_reason": "freq_top40_6m"
+      "anchor_groups": [
+        "named_force_include"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (named_force_include)",
+      "shard": "ANCHOR-A"
     },
     {
-      "symbol": "KSHINTL",
-      "company": "",
+      "symbol": "CELLO",
+      "company": "Cello World Ltd",
       "sector": "Unknown",
-      "last_close": 0.0,
-      "avg_daily_turnover_lakh": 0.0,
-      "high_vol_day_count": 0,
-      "available_trading_days": 0,
-      "high_vol_day_rate": 0.0,
-      "1y_return_pct": 0.0,
-      "52w_range_pct": 0.0,
-      "listed_within_1_year": false,
+      "last_close": null,
+      "avg_daily_turnover_lakh": null,
+      "high_vol_day_count": null,
+      "available_trading_days": null,
+      "high_vol_day_rate": null,
+      "1y_return_pct": null,
+      "52w_range_pct": null,
+      "listed_within_1_year": null,
       "force_include": true,
+      "gap_added": true,
+      "gap_added_date": "2026-07-02",
+      "gap_source": "anchor_list_completion_2026-07-02",
       "active": true,
-      "shard": "KS",
-      "added_date": "2026-07-13",
-      "added_reason": "freq_top40_6m"
+      "anchor_groups": [
+        "named_force_include"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (named_force_include)",
+      "shard": "ANCHOR-C"
     },
     {
-      "symbol": "AEQUS",
-      "company": "",
+      "symbol": "FIRSTCRY",
+      "company": "Brainbees Solutions Ltd (FirstCry)",
       "sector": "Unknown",
-      "last_close": 0.0,
-      "avg_daily_turnover_lakh": 0.0,
-      "high_vol_day_count": 0,
-      "available_trading_days": 0,
-      "high_vol_day_rate": 0.0,
-      "1y_return_pct": 0.0,
-      "52w_range_pct": 0.0,
-      "listed_within_1_year": false,
+      "last_close": null,
+      "avg_daily_turnover_lakh": null,
+      "high_vol_day_count": null,
+      "available_trading_days": null,
+      "high_vol_day_rate": null,
+      "1y_return_pct": null,
+      "52w_range_pct": null,
+      "listed_within_1_year": null,
       "force_include": true,
+      "gap_added": true,
+      "gap_added_date": "2026-07-02",
+      "gap_source": "anchor_list_completion_2026-07-02",
       "active": true,
-      "shard": "AE",
-      "added_date": "2026-07-13",
-      "added_reason": "freq_top40_6m"
+      "anchor_groups": [
+        "named_force_include"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (named_force_include)",
+      "shard": "ANCHOR-F"
     },
     {
-      "symbol": "SUVEN",
-      "company": "",
+      "symbol": "HYUNDAI",
+      "company": "Hyundai Motor India Ltd",
       "sector": "Unknown",
-      "last_close": 0.0,
-      "avg_daily_turnover_lakh": 0.0,
-      "high_vol_day_count": 0,
-      "available_trading_days": 0,
-      "high_vol_day_rate": 0.0,
-      "1y_return_pct": 0.0,
-      "52w_range_pct": 0.0,
-      "listed_within_1_year": false,
+      "last_close": null,
+      "avg_daily_turnover_lakh": null,
+      "high_vol_day_count": null,
+      "available_trading_days": null,
+      "high_vol_day_rate": null,
+      "1y_return_pct": null,
+      "52w_range_pct": null,
+      "listed_within_1_year": null,
       "force_include": true,
+      "gap_added": true,
+      "gap_added_date": "2026-07-02",
+      "gap_source": "anchor_list_completion_2026-07-02",
       "active": true,
-      "shard": "SU",
-      "added_date": "2026-07-13",
-      "added_reason": "freq_top40_6m"
+      "anchor_groups": [
+        "named_force_include"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (named_force_include)",
+      "shard": "ANCHOR-H"
     },
     {
-      "symbol": "BALAMINES",
-      "company": "",
+      "symbol": "IDEAFORGE",
+      "company": "ideaForge Technology Ltd",
       "sector": "Unknown",
-      "last_close": 0.0,
-      "avg_daily_turnover_lakh": 0.0,
-      "high_vol_day_count": 0,
-      "available_trading_days": 0,
-      "high_vol_day_rate": 0.0,
-      "1y_return_pct": 0.0,
-      "52w_range_pct": 0.0,
-      "listed_within_1_year": false,
+      "last_close": null,
+      "avg_daily_turnover_lakh": null,
+      "high_vol_day_count": null,
+      "available_trading_days": null,
+      "high_vol_day_rate": null,
+      "1y_return_pct": null,
+      "52w_range_pct": null,
+      "listed_within_1_year": null,
       "force_include": true,
+      "gap_added": true,
+      "gap_added_date": "2026-07-02",
+      "gap_source": "anchor_list_completion_2026-07-02",
       "active": true,
-      "shard": "BA",
-      "added_date": "2026-07-13",
-      "added_reason": "freq_top40_6m"
+      "anchor_groups": [
+        "pattern_o_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (pattern_o_basket)",
+      "shard": "ANCHOR-I"
     },
     {
-      "symbol": "JNKINDIA",
-      "company": "",
+      "symbol": "KECL",
+      "company": "KEC International Ltd",
       "sector": "Unknown",
-      "last_close": 0.0,
-      "avg_daily_turnover_lakh": 0.0,
-      "high_vol_day_count": 0,
-      "available_trading_days": 0,
-      "high_vol_day_rate": 0.0,
-      "1y_return_pct": 0.0,
-      "52w_range_pct": 0.0,
-      "listed_within_1_year": false,
+      "last_close": null,
+      "avg_daily_turnover_lakh": null,
+      "high_vol_day_count": null,
+      "available_trading_days": null,
+      "high_vol_day_rate": null,
+      "1y_return_pct": null,
+      "52w_range_pct": null,
+      "listed_within_1_year": null,
       "force_include": true,
+      "gap_added": true,
+      "gap_added_date": "2026-07-02",
+      "gap_source": "anchor_list_completion_2026-07-02",
       "active": true,
-      "shard": "JN",
-      "added_date": "2026-07-13",
-      "added_reason": "freq_top40_6m"
+      "anchor_groups": [
+        "power_equip_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (power_equip_basket)",
+      "shard": "ANCHOR-K"
     },
     {
-      "symbol": "THANGAMAYL",
-      "company": "",
+      "symbol": "NACLIND",
+      "company": "NACL Industries Ltd",
       "sector": "Unknown",
-      "last_close": 0.0,
-      "avg_daily_turnover_lakh": 0.0,
-      "high_vol_day_count": 0,
-      "available_trading_days": 0,
-      "high_vol_day_rate": 0.0,
-      "1y_return_pct": 0.0,
-      "52w_range_pct": 0.0,
-      "listed_within_1_year": false,
+      "last_close": null,
+      "avg_daily_turnover_lakh": null,
+      "high_vol_day_count": null,
+      "available_trading_days": null,
+      "high_vol_day_rate": null,
+      "1y_return_pct": null,
+      "52w_range_pct": null,
+      "listed_within_1_year": null,
       "force_include": true,
+      "gap_added": true,
+      "gap_added_date": "2026-07-02",
+      "gap_source": "anchor_list_completion_2026-07-02",
       "active": true,
-      "shard": "TH",
-      "added_date": "2026-07-13",
-      "added_reason": "freq_top40_6m"
+      "anchor_groups": [
+        "chemicals_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (chemicals_basket)",
+      "shard": "ANCHOR-N"
     },
     {
-      "symbol": "BLUSPRING",
-      "company": "",
+      "symbol": "POWERGRID",
+      "company": "Power Grid Corporation of India",
       "sector": "Unknown",
-      "last_close": 0.0,
-      "avg_daily_turnover_lakh": 0.0,
-      "high_vol_day_count": 0,
-      "available_trading_days": 0,
-      "high_vol_day_rate": 0.0,
-      "1y_return_pct": 0.0,
-      "52w_range_pct": 0.0,
-      "listed_within_1_year": false,
+      "last_close": null,
+      "avg_daily_turnover_lakh": null,
+      "high_vol_day_count": null,
+      "available_trading_days": null,
+      "high_vol_day_rate": null,
+      "1y_return_pct": null,
+      "52w_range_pct": null,
+      "listed_within_1_year": null,
       "force_include": true,
+      "gap_added": true,
+      "gap_added_date": "2026-07-02",
+      "gap_source": "anchor_list_completion_2026-07-02",
       "active": true,
-      "shard": "BL",
-      "added_date": "2026-07-13",
-      "added_reason": "freq_top40_6m"
+      "anchor_groups": [
+        "power_equip_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (power_equip_basket)",
+      "shard": "ANCHOR-P"
     },
     {
-      "symbol": "INA",
-      "company": "",
+      "symbol": "SUZLON",
+      "company": "Suzlon Energy Ltd",
       "sector": "Unknown",
-      "last_close": 0.0,
-      "avg_daily_turnover_lakh": 0.0,
-      "high_vol_day_count": 0,
-      "available_trading_days": 0,
-      "high_vol_day_rate": 0.0,
-      "1y_return_pct": 0.0,
-      "52w_range_pct": 0.0,
-      "listed_within_1_year": false,
+      "last_close": null,
+      "avg_daily_turnover_lakh": null,
+      "high_vol_day_count": null,
+      "available_trading_days": null,
+      "high_vol_day_rate": null,
+      "1y_return_pct": null,
+      "52w_range_pct": null,
+      "listed_within_1_year": null,
       "force_include": true,
+      "gap_added": true,
+      "gap_added_date": "2026-07-02",
+      "gap_source": "anchor_list_completion_2026-07-02",
       "active": true,
-      "shard": "IN",
-      "added_date": "2026-07-13",
-      "added_reason": "freq_top40_6m"
+      "anchor_groups": [
+        "power_equip_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (power_equip_basket)",
+      "shard": "ANCHOR-S"
     },
     {
-      "symbol": "SPECTRUM",
-      "company": "",
+      "symbol": "SWIGGY",
+      "company": "Swiggy Ltd",
       "sector": "Unknown",
-      "last_close": 0.0,
-      "avg_daily_turnover_lakh": 0.0,
-      "high_vol_day_count": 0,
-      "available_trading_days": 0,
-      "high_vol_day_rate": 0.0,
-      "1y_return_pct": 0.0,
-      "52w_range_pct": 0.0,
-      "listed_within_1_year": false,
+      "last_close": null,
+      "avg_daily_turnover_lakh": null,
+      "high_vol_day_count": null,
+      "available_trading_days": null,
+      "high_vol_day_rate": null,
+      "1y_return_pct": null,
+      "52w_range_pct": null,
+      "listed_within_1_year": null,
       "force_include": true,
+      "gap_added": true,
+      "gap_added_date": "2026-07-02",
+      "gap_source": "anchor_list_completion_2026-07-02",
       "active": true,
-      "shard": "SP",
-      "added_date": "2026-07-13",
-      "added_reason": "freq_top40_6m"
-    },
-    {
-      "symbol": "DIACABS",
-      "company": "",
-      "sector": "Unknown",
-      "last_close": 0.0,
-      "avg_daily_turnover_lakh": 0.0,
-      "high_vol_day_count": 0,
-      "available_trading_days": 0,
-      "high_vol_day_rate": 0.0,
-      "1y_return_pct": 0.0,
-      "52w_range_pct": 0.0,
-      "listed_within_1_year": false,
-      "force_include": true,
-      "active": true,
-      "shard": "DI",
-      "added_date": "2026-07-13",
-      "added_reason": "freq_top40_6m"
+      "anchor_groups": [
+        "named_force_include"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (named_force_include)",
+      "shard": "ANCHOR-S"
     },
     {
       "symbol": "TARIL",
-      "company": "",
+      "company": "Transformers and Rectifiers India",
       "sector": "Unknown",
-      "last_close": 0.0,
-      "avg_daily_turnover_lakh": 0.0,
-      "high_vol_day_count": 0,
-      "available_trading_days": 0,
-      "high_vol_day_rate": 0.0,
-      "1y_return_pct": 0.0,
-      "52w_range_pct": 0.0,
-      "listed_within_1_year": false,
+      "last_close": null,
+      "avg_daily_turnover_lakh": null,
+      "high_vol_day_count": null,
+      "available_trading_days": null,
+      "high_vol_day_rate": null,
+      "1y_return_pct": null,
+      "52w_range_pct": null,
+      "listed_within_1_year": null,
       "force_include": true,
+      "gap_added": true,
+      "gap_added_date": "2026-07-02",
+      "gap_source": "anchor_list_completion_2026-07-02",
       "active": true,
-      "shard": "TA",
-      "added_date": "2026-07-13",
-      "added_reason": "freq_top40_6m"
+      "anchor_groups": [
+        "power_equip_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (power_equip_basket)",
+      "shard": "ANCHOR-T"
     },
     {
-      "symbol": "DIGITIDE",
-      "company": "",
+      "symbol": "TATACAP",
+      "company": "Tata Capital Ltd",
       "sector": "Unknown",
-      "last_close": 0.0,
-      "avg_daily_turnover_lakh": 0.0,
-      "high_vol_day_count": 0,
-      "available_trading_days": 0,
-      "high_vol_day_rate": 0.0,
-      "1y_return_pct": 0.0,
-      "52w_range_pct": 0.0,
-      "listed_within_1_year": false,
+      "last_close": null,
+      "avg_daily_turnover_lakh": null,
+      "high_vol_day_count": null,
+      "available_trading_days": null,
+      "high_vol_day_rate": null,
+      "1y_return_pct": null,
+      "52w_range_pct": null,
+      "listed_within_1_year": null,
       "force_include": true,
+      "gap_added": true,
+      "gap_added_date": "2026-07-02",
+      "gap_source": "anchor_list_completion_2026-07-02",
       "active": true,
-      "shard": "DI",
-      "added_date": "2026-07-13",
-      "added_reason": "freq_top40_6m"
+      "anchor_groups": [
+        "tata_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (tata_basket)",
+      "shard": "ANCHOR-T"
     },
     {
-      "symbol": "SPARC",
-      "company": "",
+      "symbol": "TRIL",
+      "company": "Transrail Lighting Ltd",
       "sector": "Unknown",
-      "last_close": 0.0,
-      "avg_daily_turnover_lakh": 0.0,
-      "high_vol_day_count": 0,
-      "available_trading_days": 0,
-      "high_vol_day_rate": 0.0,
-      "1y_return_pct": 0.0,
-      "52w_range_pct": 0.0,
-      "listed_within_1_year": false,
+      "last_close": null,
+      "avg_daily_turnover_lakh": null,
+      "high_vol_day_count": null,
+      "available_trading_days": null,
+      "high_vol_day_rate": null,
+      "1y_return_pct": null,
+      "52w_range_pct": null,
+      "listed_within_1_year": null,
       "force_include": true,
+      "gap_added": true,
+      "gap_added_date": "2026-07-02",
+      "gap_source": "anchor_list_completion_2026-07-02",
       "active": true,
-      "shard": "SP",
-      "added_date": "2026-07-13",
-      "added_reason": "freq_top40_6m"
+      "anchor_groups": [
+        "power_equip_basket"
+      ],
+      "active_reason": "anchor_list_2026-07-02 (power_equip_basket)",
+      "shard": "ANCHOR-T"
     },
     {
-      "symbol": "TDPOWERSYS",
-      "company": "",
-      "sector": "Unknown",
-      "last_close": 0.0,
-      "avg_daily_turnover_lakh": 0.0,
-      "high_vol_day_count": 0,
-      "available_trading_days": 0,
-      "high_vol_day_rate": 0.0,
-      "1y_return_pct": 0.0,
-      "52w_range_pct": 0.0,
-      "listed_within_1_year": false,
-      "force_include": true,
+      "symbol": "ZENSARTECH",
+      "name": "Zensar Technologies Ltd",
       "active": true,
-      "shard": "TD",
-      "added_date": "2026-07-13",
-      "added_reason": "freq_top40_6m"
-    },
-    {
-      "symbol": "MASTERTR",
-      "company": "",
-      "sector": "Unknown",
-      "last_close": 0.0,
-      "avg_daily_turnover_lakh": 0.0,
-      "high_vol_day_count": 0,
-      "available_trading_days": 0,
-      "high_vol_day_rate": 0.0,
-      "1y_return_pct": 0.0,
-      "52w_range_pct": 0.0,
-      "listed_within_1_year": false,
-      "force_include": true,
-      "active": true,
-      "shard": "MA",
-      "added_date": "2026-07-13",
-      "added_reason": "freq_top40_6m"
-    },
-    {
-      "symbol": "GENESYS",
-      "company": "",
-      "sector": "Unknown",
-      "last_close": 0.0,
-      "avg_daily_turnover_lakh": 0.0,
-      "high_vol_day_count": 0,
-      "available_trading_days": 0,
-      "high_vol_day_rate": 0.0,
-      "1y_return_pct": 0.0,
-      "52w_range_pct": 0.0,
-      "listed_within_1_year": false,
-      "force_include": true,
-      "active": true,
-      "shard": "GE",
-      "added_date": "2026-07-13",
-      "added_reason": "freq_top40_6m"
-    },
-    {
-      "symbol": "ELECTHERM",
-      "company": "",
-      "sector": "Unknown",
-      "last_close": 0.0,
-      "avg_daily_turnover_lakh": 0.0,
-      "high_vol_day_count": 0,
-      "available_trading_days": 0,
-      "high_vol_day_rate": 0.0,
-      "1y_return_pct": 0.0,
-      "52w_range_pct": 0.0,
-      "listed_within_1_year": false,
-      "force_include": true,
-      "active": true,
-      "shard": "EL",
-      "added_date": "2026-07-13",
-      "added_reason": "freq_top40_6m"
-    },
-    {
-      "symbol": "EIEL",
-      "company": "",
-      "sector": "Unknown",
-      "last_close": 0.0,
-      "avg_daily_turnover_lakh": 0.0,
-      "high_vol_day_count": 0,
-      "available_trading_days": 0,
-      "high_vol_day_rate": 0.0,
-      "1y_return_pct": 0.0,
-      "52w_range_pct": 0.0,
-      "listed_within_1_year": false,
-      "force_include": true,
-      "active": true,
-      "shard": "EI",
-      "added_date": "2026-07-13",
-      "added_reason": "freq_top40_6m"
-    },
-    {
-      "symbol": "SKYGOLD",
-      "company": "",
-      "sector": "Unknown",
-      "last_close": 0.0,
-      "avg_daily_turnover_lakh": 0.0,
-      "high_vol_day_count": 0,
-      "available_trading_days": 0,
-      "high_vol_day_rate": 0.0,
-      "1y_return_pct": 0.0,
-      "52w_range_pct": 0.0,
-      "listed_within_1_year": false,
-      "force_include": true,
-      "active": true,
-      "shard": "SK",
-      "added_date": "2026-07-13",
-      "added_reason": "freq_top40_6m"
-    },
-    {
-      "symbol": "AEGISLOG",
-      "company": "",
-      "sector": "Unknown",
-      "last_close": 0.0,
-      "avg_daily_turnover_lakh": 0.0,
-      "high_vol_day_count": 0,
-      "available_trading_days": 0,
-      "high_vol_day_rate": 0.0,
-      "1y_return_pct": 0.0,
-      "52w_range_pct": 0.0,
-      "listed_within_1_year": false,
-      "force_include": true,
-      "active": true,
-      "shard": "AE",
-      "added_date": "2026-07-13",
-      "added_reason": "freq_top40_6m"
-    },
-    {
-      "symbol": "AETHER",
-      "company": "",
-      "sector": "Unknown",
-      "last_close": 0.0,
-      "avg_daily_turnover_lakh": 0.0,
-      "high_vol_day_count": 0,
-      "available_trading_days": 0,
-      "high_vol_day_rate": 0.0,
-      "1y_return_pct": 0.0,
-      "52w_range_pct": 0.0,
-      "listed_within_1_year": false,
-      "force_include": true,
-      "active": true,
-      "shard": "AE",
-      "added_date": "2026-07-13",
-      "added_reason": "freq_top40_6m"
+      "active_reason": "UGD-FORCE-ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "stale_screening"
+      ],
+      "last_close": 496.6,
+      "listing_date": "1995-02-08",
+      "instrument_token": 275457,
+      "source": "UGD-2026-07-03",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "STALE_SCREENING"
     },
     {
       "symbol": "IKIO",
-      "company": "",
-      "sector": "Unknown",
-      "last_close": 0.0,
-      "avg_daily_turnover_lakh": 0.0,
-      "high_vol_day_count": 0,
-      "available_trading_days": 0,
-      "high_vol_day_rate": 0.0,
-      "1y_return_pct": 0.0,
-      "52w_range_pct": 0.0,
-      "listed_within_1_year": false,
-      "force_include": true,
+      "name": "IKIO Technologies Ltd",
       "active": true,
-      "shard": "IK",
-      "added_date": "2026-07-13",
-      "added_reason": "freq_top40_6m"
+      "active_reason": "UGD-FORCE-ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "stale_screening"
+      ],
+      "last_close": 188.81,
+      "listing_date": "2023-06-16",
+      "instrument_token": 4306433,
+      "source": "UGD-2026-07-03",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "STALE_SCREENING"
+    },
+    {
+      "symbol": "PCJEWELLER",
+      "name": "PC Jeweller Ltd",
+      "active": false,
+      "active_reason": "inactive_LEGITIMATE_EXCLUSION",
+      "tags": [
+        "gap_added_2026_07_03",
+        "legitimate_exclusion"
+      ],
+      "last_close": 10.44,
+      "listing_date": "2012-12-27",
+      "instrument_token": 7455745,
+      "source": "RULE_26b_LTP_10.44<20",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "LEGITIMATE_EXCLUSION"
+    },
+    {
+      "symbol": "EIEL",
+      "name": "Enviro Infra Engineers Ltd",
+      "active": true,
+      "active_reason": "UGD-FORCE-ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "stale_screening"
+      ],
+      "last_close": 241.75,
+      "listing_date": "2024-11-29",
+      "instrument_token": 6966529,
+      "source": "UGD-2026-07-03",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "STALE_SCREENING"
+    },
+    {
+      "symbol": "SUMICHEM",
+      "name": "Sumitomo Chemical India Ltd",
+      "active": true,
+      "active_reason": "UGD-FORCE-ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "stale_screening"
+      ],
+      "last_close": 469.7,
+      "listing_date": "2020-01-27",
+      "instrument_token": 4378881,
+      "source": "UGD-2026-07-03",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "STALE_SCREENING"
+    },
+    {
+      "symbol": "MOSCHIP",
+      "name": "MosChip Technologies Ltd",
+      "active": true,
+      "active_reason": "UGD-FORCE-ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "stale_screening"
+      ],
+      "last_close": 222.92,
+      "listing_date": "2025-02-05",
+      "instrument_token": 7541505,
+      "source": "UGD-2026-07-03",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "STALE_SCREENING"
+    },
+    {
+      "symbol": "SUVEN",
+      "name": "Suven Life Sciences Ltd",
+      "active": true,
+      "active_reason": "UGD-FORCE-ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "stale_screening"
+      ],
+      "last_close": 328.3,
+      "listing_date": "2003-10-23",
+      "instrument_token": 2875649,
+      "source": "UGD-2026-07-03",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "STALE_SCREENING"
+    },
+    {
+      "symbol": "INDOFARM",
+      "name": "Indo Farm Equipment Ltd",
+      "active": true,
+      "active_reason": "UGD-FORCE-ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "stale_screening"
+      ],
+      "last_close": 163.84,
+      "listing_date": "2025-01-07",
+      "instrument_token": 7430401,
+      "source": "UGD-2026-07-03",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "STALE_SCREENING"
+    },
+    {
+      "symbol": "DENTA",
+      "name": "Denta Water & Infra Solutions Ltd",
+      "active": true,
+      "active_reason": "UGD-FORCE-ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "stale_screening"
+      ],
+      "last_close": 354.8,
+      "listing_date": "2025-01-29",
+      "instrument_token": 7489537,
+      "source": "UGD-2026-07-03",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "STALE_SCREENING"
+    },
+    {
+      "symbol": "BLUSPRING",
+      "name": "Bluspring Enterprises Ltd",
+      "active": true,
+      "active_reason": "UGD-FORCE-ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "stale_screening"
+      ],
+      "last_close": 128.38,
+      "listing_date": "2025-06-11",
+      "instrument_token": 193925121,
+      "source": "UGD-2026-07-03",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "STALE_SCREENING"
+    },
+    {
+      "symbol": "SIKA",
+      "name": "Sika Interplant Systems Ltd",
+      "active": true,
+      "active_reason": "UGD-FORCE-ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "stale_screening"
+      ],
+      "last_close": 1334.0,
+      "listing_date": "",
+      "instrument_token": null,
+      "source": "UGD-2026-07-03",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "STALE_SCREENING"
+    },
+    {
+      "symbol": "KSHINTL",
+      "name": "KSH International Ltd",
+      "active": true,
+      "active_reason": "UGD-FORCE-ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "stale_screening"
+      ],
+      "last_close": 884.35,
+      "listing_date": "",
+      "instrument_token": null,
+      "source": "UGD-2026-07-03",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "STALE_SCREENING"
+    },
+    {
+      "symbol": "FABTECH",
+      "name": "Fabtech Technologies Ltd",
+      "active": true,
+      "active_reason": "UGD-FORCE-ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "stale_screening"
+      ],
+      "last_close": 170.62,
+      "listing_date": "",
+      "instrument_token": null,
+      "source": "UGD-2026-07-03",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "STALE_SCREENING"
+    },
+    {
+      "symbol": "DIGITIDE",
+      "name": "Digitide Solutions Ltd",
+      "active": true,
+      "active_reason": "UGD-FORCE-ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "stale_screening"
+      ],
+      "last_close": 100.07,
+      "listing_date": "",
+      "instrument_token": null,
+      "source": "UGD-2026-07-03",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "STALE_SCREENING"
+    },
+    {
+      "symbol": "TMB",
+      "name": "Tamilnad Mercantile Bank Ltd",
+      "active": true,
+      "active_reason": "UGD-FORCE-ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "stale_screening"
+      ],
+      "last_close": 785.5,
+      "listing_date": "",
+      "instrument_token": null,
+      "source": "UGD-2026-07-03",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "STALE_SCREENING"
+    },
+    {
+      "symbol": "GANECOS",
+      "name": "Ganesha Ecosphere Ltd",
+      "active": true,
+      "active_reason": "UGD-FORCE-ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "stale_screening"
+      ],
+      "last_close": 974.5,
+      "listing_date": "",
+      "instrument_token": null,
+      "source": "UGD-2026-07-03",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "STALE_SCREENING"
+    },
+    {
+      "symbol": "PATELRMART",
+      "name": "Patel Retail Ltd",
+      "active": true,
+      "active_reason": "UGD-FORCE-ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "stale_screening"
+      ],
+      "last_close": 236.1,
+      "listing_date": "",
+      "instrument_token": null,
+      "source": "UGD-2026-07-03",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "STALE_SCREENING"
+    },
+    {
+      "symbol": "KOTHARIPET",
+      "name": "Kothari Petrochemicals Ltd",
+      "active": true,
+      "active_reason": "UGD-FORCE-ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "stale_screening"
+      ],
+      "last_close": 135.63,
+      "listing_date": "",
+      "instrument_token": null,
+      "source": "UGD-2026-07-03",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "STALE_SCREENING"
+    },
+    {
+      "symbol": "SEIL",
+      "name": "Shanti Educational Initiatives Ltd",
+      "active": true,
+      "active_reason": "UGD-FORCE-ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "stale_screening"
+      ],
+      "last_close": 230.47,
+      "listing_date": "",
+      "instrument_token": null,
+      "source": "UGD-2026-07-03",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "STALE_SCREENING"
+    },
+    {
+      "symbol": "BUTTERFLY",
+      "name": "Butterfly Gandhimathi Appliances Ltd",
+      "active": true,
+      "active_reason": "UGD-FORCE-ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "stale_screening"
+      ],
+      "last_close": 692.8,
+      "listing_date": "",
+      "instrument_token": null,
+      "source": "UGD-2026-07-03",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "STALE_SCREENING"
+    },
+    {
+      "symbol": "BANSALWIRE",
+      "name": "Bansal Wire Industries Ltd",
+      "active": true,
+      "active_reason": "UGD-FORCE-ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "stale_screening"
+      ],
+      "last_close": 363.9,
+      "listing_date": "",
+      "instrument_token": null,
+      "source": "UGD-2026-07-03",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "STALE_SCREENING"
+    },
+    {
+      "symbol": "ELECTHERM",
+      "name": "Electrotherm (India) Ltd",
+      "active": true,
+      "active_reason": "UGD-FORCE-ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "stale_screening"
+      ],
+      "last_close": 1200.3,
+      "listing_date": "",
+      "instrument_token": null,
+      "source": "UGD-2026-07-03",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "STALE_SCREENING"
+    },
+    {
+      "symbol": "AVG",
+      "name": "AVG Logistics Ltd",
+      "active": true,
+      "active_reason": "UGD-FORCE-ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "stale_screening"
+      ],
+      "last_close": 228.32,
+      "listing_date": "",
+      "instrument_token": null,
+      "source": "UGD-2026-07-03",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "STALE_SCREENING"
+    },
+    {
+      "symbol": "ELGIRUBCO",
+      "name": "Elgi Rubber Company Ltd",
+      "active": false,
+      "active_reason": "inactive_LEGITIMATE_EXCLUSION",
+      "tags": [
+        "gap_added_2026_07_03",
+        "legitimate_exclusion"
+      ],
+      "last_close": 54.8,
+      "listing_date": "",
+      "instrument_token": null,
+      "source": "RULE_26e_TURNOVER_BORDERLINE_<1Cr_avg",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "LEGITIMATE_EXCLUSION"
+    },
+    {
+      "symbol": "RKSWAMY",
+      "name": "R K Swamy Ltd",
+      "active": true,
+      "active_reason": "UGD-FORCE-ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "stale_screening"
+      ],
+      "last_close": 109.0,
+      "listing_date": "",
+      "instrument_token": null,
+      "source": "UGD-2026-07-03",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "STALE_SCREENING"
+    },
+    {
+      "symbol": "SAKSOFT",
+      "name": "SAKSOFT",
+      "active": true,
+      "active_reason": "PATTERN_NOTE_FORCE_ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "pattern_note_gap"
+      ],
+      "last_close": 0,
+      "listing_date": "2005-05-09",
+      "instrument_token": 3019265,
+      "source": "PATTERN_NOTE_GAP",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "PATTERN_NOTE_GAP"
+    },
+    {
+      "symbol": "DIVGIITTS",
+      "name": "DIVGIITTS",
+      "active": true,
+      "active_reason": "PATTERN_NOTE_FORCE_ADD",
+      "tags": [
+        "gap_added_2026_07_03",
+        "pattern_note_gap"
+      ],
+      "last_close": 0,
+      "listing_date": "2023-03-14",
+      "instrument_token": 3706625,
+      "source": "PATTERN_NOTE_GAP",
+      "gap_added": true,
+      "gap_added_date": "2026-07-03",
+      "ugd_class": "PATTERN_NOTE_GAP"
+    },
+    {
+      "symbol": "AEQUS",
+      "company": "Aequs Ltd",
+      "sector": "Aerospace/Defense",
+      "last_close": 231.89,
+      "avg_daily_turnover_lakh": null,
+      "high_vol_day_count": 14,
+      "available_trading_days": 142,
+      "high_vol_day_rate": 0.0986,
+      "1y_return_pct": null,
+      "52w_range_pct": null,
+      "listed_within_1_year": true,
+      "force_include": false,
+      "shard": "A",
+      "active": true,
+      "active_reason": "user_manual_add_2026-07-08_ohlc_backfilled_tier_d_26e",
+      "instrument_token": 194619905,
+      "isin": "INE947N01017",
+      "listing_date": "2025-12-10",
+      "user_thesis": "Vertical/precision aerospace theme \u2014 Boeing/Airbus supplier, Belagavi SEZ, defense vertical",
+      "add_source": "USER_MANUAL_ADD_2026-07-08",
+      "watchlist_ref": "phase_e_validated.json 2026-07-08",
+      "news_monitor": true,
+      "confidence_cap": 85,
+      "tier_d_26e": true
     }
   ],
   "watchlist_additions_2026-06-17": {
@@ -4379,7 +5352,7 @@
     "NITCO",
     "PANAMAPET"
   ],
-  "last_refresh_date": "2026-07-13",
+  "last_refresh_date": "2026-07-02",
   "refresh_notes": "Monthly regen Jul 2026: refreshed last_close/high_vol_day_count from OHLC cache. All prior symbols preserved per Rule PM-1.",
   "gap_additions_2026-07-02": {
     "added_count": 6,
@@ -4397,35 +5370,131 @@
     "note": "Added via Step 4.6.5b unconditional force-add. Top-10 movers by LTP*Vol (Chartink T-0 clause + Rs1cr liquidity gate). active:false for recent-listing pennies (VOGL, VEDPOWER, VISL); these satisfy PM-1 Permanent Membership but are skipped from picks until monthly regen re-evaluates.",
     "rule_reference": "Step 4.6.5b, PM-1 Permanent Membership"
   },
-  "freq_additions_2026-07-13": {
-    "added_count": 23,
-    "added_symbols": [
-      "RAMCOSYS",
-      "KSHINTL",
-      "AEQUS",
-      "SUVEN",
-      "BALAMINES",
-      "JNKINDIA",
-      "THANGAMAYL",
-      "BLUSPRING",
-      "INA",
-      "SPECTRUM",
-      "DIACABS",
-      "TARIL",
-      "DIGITIDE",
-      "SPARC",
-      "TDPOWERSYS",
-      "MASTERTR",
-      "GENESYS",
-      "ELECTHERM",
-      "EIEL",
-      "SKYGOLD",
-      "AEGISLOG",
-      "AETHER",
-      "IKIO"
+  "growth_mode": "incremental",
+  "growth_mechanisms": [
+    "Step 4.6.5b (Chartink top-10 unconditional force-add \u2014 daily)",
+    "user-requested (user_requested: true)",
+    "named force-includes (see FORCE-INCLUDE REGISTRY)",
+    "sector baskets (Adani, Tata, power_equip, chemicals, DC-proposed, Pattern-O)",
+    "CA-1 post-corporate-action / CA-2 large-cap CA scanner"
+  ],
+  "phase_0_removed_date": "2026-07-02",
+  "phase_0_removed_note": "Monthly wholesale regeneration retired on 2026-07-02. basestock.json now grows monotonically via daily 4.6.5b top-10 force-add + user/basket/CA rules. PM-1 Permanent Membership preserves all entries.",
+  "anchor_list_pruned_date": "2026-07-02",
+  "anchor_list_pruned_note": "Set active flags: ~63 anchor symbols (force-includes + baskets + user-requested + Jul-2 gap-added) = active:true; remaining = active:false with reason='not_in_anchor_list_2026-07-02'. Phase A now builds eval_universe = daily_top25 (from Chartink T-1) \u222a active_anchors \u222a active_watchlist. basestock.json is no longer the daily scan universe \u2014 it acts as the persistent anchor registry, read once at Phase A.1 to extract active symbols. See memory eval-universe-daily-plus-anchors.md.",
+  "anchor_groups_definition": {
+    "named_force_include": [
+      "ATHERENERG",
+      "OLAELEC",
+      "SWIGGY",
+      "ETERNAL",
+      "AFCONS",
+      "JYOTICNC",
+      "CELLO",
+      "FIRSTCRY",
+      "NTPCGREEN",
+      "HYUNDAI",
+      "BLACKBUCK"
     ],
-    "source": "6-month top-25 gainer frequency analysis (Jan 13 \u2013 Jul 13 2026, 119 trading days)",
-    "rationale": "Appeared in NSE top-25 gainers (>5% gain, value>1Cr sorted by close*volume) on 9-17 of 119 trading days. High recurrence = structural momentum candidates. Added per PM-1 permanent membership.",
-    "rule_reference": "PM-1, Step 4.6.5b"
-  }
+    "user_requested": [
+      "UNOMINDA"
+    ],
+    "large_cap_trending": [
+      "TRENT",
+      "BAJFINANCE",
+      "MARUTI",
+      "M&M",
+      "LT"
+    ],
+    "adani_basket": [
+      "ADANIENT",
+      "ADANIPORTS",
+      "ADANIPOWER",
+      "ADANIGREEN",
+      "ADANIENSOL",
+      "ATGL",
+      "AWL",
+      "AMBUJACEM",
+      "ACC",
+      "NDTV"
+    ],
+    "tata_basket": [
+      "TCS",
+      "TMPV",
+      "TMCV",
+      "TATASTEEL",
+      "TATAPOWER",
+      "TATACONSUM",
+      "TATACHEM",
+      "TATACOMM",
+      "TATAELXSI",
+      "TATATECH",
+      "TATAINVEST",
+      "TATACAP",
+      "TITAN",
+      "VOLTAS",
+      "INDHOTEL",
+      "RALLIS",
+      "NELCO",
+      "ARTEMISMED"
+    ],
+    "power_equip_basket": [
+      "TARIL",
+      "TRIL",
+      "KECL",
+      "KPIL",
+      "GVT&D",
+      "APARINDS",
+      "POWERGRID",
+      "SUZLON"
+    ],
+    "chemicals_basket": [
+      "NACLIND"
+    ],
+    "pattern_o_basket": [
+      "HFCL",
+      "STLTECH",
+      "TEJASNET",
+      "BBOX",
+      "IDEAFORGE",
+      "TATACOMM"
+    ],
+    "dc_proposed_basket": [
+      "KIRLOSENG"
+    ],
+    "gap_added_2026_07_02": [
+      "RITES",
+      "VEDPOWER",
+      "DELHIVERY",
+      "VOGL",
+      "PAISALO",
+      "VISL"
+    ]
+  },
+  "anchor_completion_2026-07-02": {
+    "added_count": 13,
+    "added_symbols": [
+      "AFCONS",
+      "CELLO",
+      "FIRSTCRY",
+      "HYUNDAI",
+      "IDEAFORGE",
+      "KECL",
+      "NACLIND",
+      "POWERGRID",
+      "SUZLON",
+      "SWIGGY",
+      "TARIL",
+      "TATACAP",
+      "TRIL"
+    ],
+    "source": "anchor_list_completion",
+    "note": "13 anchor symbols were referenced in force-include groups but missing from basestock.json. Added on 2026-07-02 with active:true so eval_universe includes them. OHLC backfill will happen at next Phase A.2 repair pass (or explicitly below)."
+  },
+  "user_manual_additions_2026-07-08": [
+    {
+      "symbol": "AEQUS",
+      "reason": "aerospace theme, recent listing, active=false pending OHLC backfill"
+    }
+  ]
 }

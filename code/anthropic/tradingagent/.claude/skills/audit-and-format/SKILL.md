@@ -38,19 +38,57 @@ Pass the loaded config to every fan-out shard (F.1, F.6, attribution shards, F.2
 
 **Sentinel:** `.cache/run/<DATE>/phase_f_done`
 **Inputs:** `phase_e_validated.json` + `phase_c_candidates.json` + draft `out/<DATE>.txt`
-**Outputs:** Final `out/<DATE>.txt` (Steps 4.5 + 4.6 + 4.7 + token cost appended) + updated `pattern_notes.md` + updated RULES LEDGER in `india-stock-recommender.md` + updated `daily_recommendations.json` + appended `out/stockparam_final.csv`
+**Outputs:** Final `out/<DATE>.txt` (PHASE F block with F.1/F.2/F.6 inline tables appended, then STOCK SCRIPT block, then FINAL RUN RECAP block — all after the Phase A→E blocks the validation skill wrote) + updated `pattern_notes.md` + updated RULES LEDGER in `india-stock-recommender.md` + updated `daily_recommendations.json` + appended `out/stockparam_final.csv`
+
+## Output structure of `out/<DATE>.txt` (PHASE-WISE — matches console contract)
+
+The validation skill (Phase E) already wrote the header + PHASE A→E blocks, each with its tables inline. This phase appends, in order:
+
+```
+━━━ PHASE F — audit-and-format · <status> ━━━
+  F.1 (was "Step 4.6") — NSE-WIDE SELF-AUDIT
+    4.6.2 top-25 by Close×Volume       [FULL 25-row inline table]
+    4.6.3 pattern attribution           [inline notes]
+    4.6.5 UGD force-adds                [inline]
+  F.2 (was "Step 4.5") — POST-RUN MISS AUDIT
+    histogram (CORRECTLY_EXCLUDED / NEWS_SHOCK / MISS_ANALYZE)   [inline]
+    per MISS_ANALYZE detail             [inline]
+  F.3 — TOKEN USAGE & COST             [inline block]
+  F.6 (was "Step 4.7") — DAILY PARAMETER LOG
+    STEP 4.7b — Appended N rows ...      [inline line]
+  Rules re-weighted this run: <N> (internal ledger updated on disk — NOT shown)
+
+========================================================================
+STOCK SCRIPT — <DATE>          ← the LAST extra block, after PHASE F
+========================================================================
+  <final BUY picks entry/target/stop table>  OR  *** ZERO-PICK DAY ***
+  RSI-REV recommended: <n> (<symbols>) — <disposition>
+  WATCHLIST (carry) ...
+  ZERO-PICK RATIONALE (if 0 picks)
+
+========================================================================
+FINAL RUN RECAP
+========================================================================
+  A · ...   B · ...   C · ...   D · ...   E · ...   F · ...   (last-3-lines per phase)
+```
+
+**Hard rules for this structure:**
+- The old standalone `STEP 4.6 / STEP 4.5 / STEP 4.7` top-level `=====` sections are RETIRED. Their content moves INSIDE the PHASE F block as F.1 / F.2 / F.6 sub-sections with tables inline.
+- STOCK SCRIPT is the **last extra block, printed AFTER the PHASE F block** (not inside any phase) — it is the headline recommendation.
+- FINAL RUN RECAP is the final block after STOCK SCRIPT.
+- RULES LEDGER is INTERNAL: never print the vote table; emit only the one-line "Rules re-weighted this run: N (internal)" note inside the PHASE F block.
 
 **Tool budget:**
 1. Read `phase_e_validated.json`.
 2. Chartink T-0 fetch (F.1).
 3. Fetch missing OHLCV for top-25 gainers not yet in `data/stockparam.csv` (compute 26-col row via Kite MCP → append; historical backfill only for symbols new to stockparam).
 4. Compute miss audit + pattern attribution.
-5–6. Append 4.5 + 4.6 blocks to `out/<DATE>.txt`.
+5–6. Append the F.1 (4.6) + F.2 (4.5) sub-sections INSIDE the PHASE F block of `out/<DATE>.txt` (tables inline).
 7. Update `pattern_notes.md` (PATTERN VOTE LEDGER + HIT DATES only).
 8. Read RULES LEDGER between markers in agent file.
 9. Write updated RULES LEDGER back (ONLY writes to agent file this phase).
 10. Step 4.7b Haiku sub-agent — write `out/stockparam_final.csv`.
-11. Append token cost + 4.7 log to `out/<DATE>.txt`.
+11. Append the F.3 TOKEN USAGE + F.6 (4.7) sub-sections inside the PHASE F block; then write the standalone STOCK SCRIPT block and FINAL RUN RECAP block after it.
 12. Sentinel `phase_f_done` + `daily_recommendations.json` update.
 
 ## Sub-step order (STRICT — 4.6 before 4.5 because 4.5.1 consumes 4.6.2's top-25)
@@ -125,7 +163,7 @@ Rank | Symbol | LTP | Chg% | Volume | Value(Cr) | In Anchor? | Picked?
 
 **4.6.6 — New pattern candidates:** log UNRECOGNIZED movers to `pattern_notes.md → UNRECOGNIZED_MOVERS`. 3+ shared-signature within 30 sessions → propose new RM template (conf base 75, promote to named RM-N only after human review).
 
-Append complete 4.6 block to `out/<DATE>.txt`.
+Append the complete 4.6 content as the **F.1 sub-section inside the PHASE F block** of `out/<DATE>.txt` (the full 25-row table stays inline). Do NOT emit a standalone `STEP 4.6` top-level section.
 
 ### F.2 — Step 4.5 Post-Run Miss Audit
 
@@ -160,11 +198,11 @@ If `out/<YESTERDAY>.txt` missing → log `PRIOR_RUN_NOT_FOUND` and run only 4.5.
 
 **Hard rules:** never lower thresholds without 30-session FP check; never contradict a memory without naming it; run on 0-pick days; never mutate yesterday's record.
 
-Append complete 4.5 block to `out/<DATE>.txt`.
+Append the complete 4.5 content as the **F.2 sub-section inside the PHASE F block** (histogram + MISS_ANALYZE detail inline). Do NOT emit a standalone `STEP 4.5` top-level section.
 
 ### F.3 — Token Cost Report
 
-Append `=== TOKEN USAGE & COST ===` block (Section 5). Tally tool calls from all phase JSONs. Format:
+Append `=== TOKEN USAGE & COST ===` as the **F.3 sub-section inside the PHASE F block**. Tally tool calls from all phase JSONs. Format:
 ```
 === TOKEN USAGE & COST ===
 Screener (Haiku):   X in / Y out / ₹Z
@@ -240,7 +278,7 @@ Runs AFTER F.4 so `ut_relax_applied` and `pipeline_decision` reflect finalized l
 5. Append 39-col rows to `out/stockparam_final.csv` in `(date asc, symbol asc)` order. Header only on creation. CSV-escape narrative cols per RFC 4180.
 6. **Consistency invariant:** first 26 cols must match `data/stockparam.csv` byte-for-byte. Mismatch → log `STEP_4_7_INTEGRITY_WARN` to `pattern_notes.md`, skip that row's `out/` write.
 
-Emit `STEP 4.7b — Appended N rows for {date} (total M)` to `out/<DATE>.txt`.
+Emit `STEP 4.7b — Appended N rows for {date} (total M)` as a line in the **F.6 sub-section inside the PHASE F block** of `out/<DATE>.txt`.
 
 ## Console Print Contract (parent renders after skill returns; parent also renders FINAL RUN RECAP)
 

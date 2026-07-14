@@ -1,9 +1,18 @@
 {
   "_meta": {
-    "config_version": "1.2.0",
+    "config_version": "1.11.0",
     "created": "2026-07-04",
-    "last_updated": "2026-07-09",
+    "last_updated": "2026-07-14",
     "changelog": [
+        "1.11.0 (2026-07-14): User relaxed Rule 46c R:R floors. Standard 1.5->1.2 (phase_d.gate_46c.rr_minimum_threshold + phase_c.ut_relax.relax_1.rr_floor_standard); uptrend/relaxed 1.2->1.1 (phase_d.gate_46c.rr_minimum_threshold_uptrend NEW + phase_c.ut_relax.relax_1.rr_floor_relaxed). LOOSENING — candidates pass 46c with less headroom to nearest_unbroken_resistance; more thin-reward setups become buyable. Downside gates (77/78/26e/77c) unchanged. Heuristic, not backtested.",
+        "1.10.0 (2026-07-14): User raised phase_d.gate_sub_26f.climax_single_session_pct 10->25. One-bar-climax exhaustion gate now fires only on a >=25% single-session spike + volume collapse. LOOSENING — 10-24% single-day pops no longer auto-fail Sub-26f at Phase D. Phase C RM-9 screen (momentum_climax_single_move_pct) and RM-7 (rm7.climax_move_pct) left at 10. Heuristic, not backtested.",
+        "1.9.0 (2026-07-14): Rule 46d fresh-high exemption basis lowered from 52-week high to 14-week high (~70 sessions) per user. New keys phase_d.gate_46d.fresh_high_basis='14week', fresh_high_lookback_sessions=70, close_to_fresh_high_max_pct=1.5. measured_move_target now projects from the 14wH. LOOSENING: more breakouts skip the 46c R:R gate; 46c nearest_unbroken_resistance still guards non-46d candidates and can still find supply between the 14wH and 52wH. Downside gate 77c UNCHANGED (still 52wH). close_to_52wh_max_pct retained for back-compat/77c reference. ALSO extracted remaining hardcoded gate literals to config: gate_46c.fifty_two_week_high_lookback_sessions=252 + resistance_round_number_multiples=[50,100,500] (were bare literals in chart-gates prose); added phase_d._fresh_high_bases central week->session mapping (52w=252, 14w=70). chart-gates SKILL.md resistance-builder + 46d prose now reference config keys, never hard-code.",
+        "1.8.0 (2026-07-14): Added phase_b.news_sources (9-source roster with id/name/url/method/rss/status) and phase_b.news_source_health (dead-source auto-removal thresholds). Sources 7->9: +Google News India RSS (verified) +MSN India (weak, JS-rendered). news_source_count 7->9. Dead-source policy: >=3 consecutive access failures -> DEAD/skip, floor of 4 active, env-block guard at 0.8 fraction. Runtime counters in data/news_sources_health.json. User request. Origin: HCLTECH 2026-07-14 company-news miss + 'remove channels that reject feed access multiple times'.",
+      "1.7.0 (2026-07-13): Added phase_c.rsi_reversion.reversal_pending_watchlist (RSI-REV trend-only rejects carried 3 sessions). ALSO added phase_b.share_sale_overhang — codifies the SHARE_SALE_OVERHANG lift condition and CORRECTS it: the original Jul 7 rule required reclaiming the pre-announcement high on 1.5x vol (too late — reversal already played out); corrected to lift on the FIRST confirmed trend reversal (UT-1 flips up OR Rule 77 clears), not on a high-reclaim. User correction 2026-07-13. Origin: ATHERENERG Rs1900cr share sale.",
+      "1.6.0 (2026-07-10): Removed Gate B (trend change confirmed) and Gate D (volatility floor) from phase_d.hard_gate_3_1. Eval universe is sourced from market movers so these gates are redundant. Removed keys: reversal_confirmation_sessions, sideways_duration_sessions from hard_gate_3_1.",
+      "1.5.0 (2026-07-10): RSI-REV entry changed from state (rsi<=50 any day) to CROSS-UP event (prev session <=50 AND current >50). Key renamed buy_rsi_max -> buy_rsi_cross, added entry_mode=cross_up_through_50. Re-backtest 1yr: state=100%/43-of-43 perfect vs cross_up=95.4%/35-of-43 perfect (175 trades, 167 wins; ATHER +58.9% vs +77.7%). User chose cross_up for safer entry (never buys deep at RSI 33 on the way down) despite lower win rate. Both backtests retained (_backtest_crossup + _backtest). Still REVIEW status.",
+      "1.4.0 (2026-07-10): Added phase_c.rsi_reversion (Rule RSI-REV). 43-symbol basket where RSI-14<=50 ALWAYS adds the stock to the candidate list as an RSI-Reversion buy (exit RSI>=65), then a downtrend gate (Rule 77 / UT-1 DOWN) may REJECT it — never a silent drop. Basket + 100%-win-rate backtest (1yr 2025-07-09..2026-07-09, no costs) derived from scripts scan; empirical caveat recorded (bull-year regime + selection bias + small trade counts). Also flipped the 43 basket symbols to active:true in basestock.json under anchor group rsi_reversion_basket_2026_07_10.",
+      "1.3.0 (2026-07-10): chartink.scan_clause_t1 (A.0) collapsed onto the `latest close` clause (identical to scan_clause_t0). Removes the two-day-lookback T-1 filter `1 day ago close > 2 days ago close * 1.05`. Chartink `latest` decides the session (T-0 open / T-1 closed), so qualifying gain and reported pct_chg are now the same day — fixes negative-pct_chg entries in dailygainers.csv. Tag/collision contracts unchanged.",
       "1.2.0 (2026-07-09): Refit phase_c.rm12. Backtest raised RM-12 win rate 60.7%->83.3% (adx_14>=30 + roc_10>=0 were the killer filters; rsi tightened 35-72 -> 48-65). Details in phase_c.rm12._refit. Wider alternate at 75%/16 trades documented.",
       "1.1.0 (2026-07-09): Refit phase_c.rule80 and phase_c.rm4 (+ phase_f.pattern_attribution mirrors). Backtest on 2026-04-08..2026-07-09 raised R-80 win rate 45.9%->81.25% (atr_pct<=3.5 was the killer filter) and RM-4 54.1%->80.0% (cmf_20>=-0.05 + adx>=15). Details in each block's _refit sub-object.",
       "1.0.0 (2026-07-04): Initial extraction from inline skill/agent constants."
@@ -68,16 +77,50 @@
 
   "phase_b": {
     "wall_time_budget_min": 2,
-    "news_source_count": 7,
+    "news_source_count": 9,
     "news_fetch_timeout_sec": 90,
     "news_lookback_hours": 48,
+    "news_sources": [
+      {"id": "ET", "name": "Economic Times Markets", "url": "https://economictimes.indiatimes.com/markets", "method": "HTML", "rss": "https://economictimes.indiatimes.com/rssfeeds/1977021501.cms", "status": "ACTIVE"},
+      {"id": "BS", "name": "Business Standard", "url": "https://www.business-standard.com/markets", "method": "HTML", "rss": null, "status": "ACTIVE"},
+      {"id": "Mint", "name": "Mint", "url": "https://www.livemint.com/market", "method": "HTML", "rss": "https://www.livemint.com/rss/markets", "status": "ACTIVE"},
+      {"id": "MC", "name": "Moneycontrol", "url": "https://www.moneycontrol.com/news/business/markets/", "method": "HTML", "rss": "https://www.moneycontrol.com/rss/latestnews.xml", "status": "ACTIVE"},
+      {"id": "BT", "name": "Business Today", "url": "https://www.businesstoday.in/markets", "method": "HTML", "rss": null, "status": "ACTIVE"},
+      {"id": "HinduBL", "name": "Hindu BusinessLine RSS", "url": "https://www.thehindubusinessline.com/markets/feeder/default.rss", "method": "RSS", "rss": "https://www.thehindubusinessline.com/markets/feeder/default.rss", "status": "ACTIVE"},
+      {"id": "FinExpress", "name": "Financial Express", "url": "https://www.financialexpress.com/market/", "method": "HTML", "rss": null, "status": "ACTIVE"},
+      {"id": "GoogleNewsIN", "name": "Google News India (business)", "url": "https://news.google.com/rss/search?q=india+stock+market+when:2d&hl=en-IN&gl=IN&ceid=IN:en", "method": "RSS", "rss": "https://news.google.com/rss/search?q=india+stock+market+when:2d&hl=en-IN&gl=IN&ceid=IN:en", "per_stock_query_template": "https://news.google.com/rss/search?q={SYMBOL}+when:2d&hl=en-IN&gl=IN&ceid=IN:en", "status": "ACTIVE", "note": "Verified 2026-07-14; broadest coverage, aggregates all Indian outlets, names companies. Added to catch company-specific headlines the 7 primary outlets miss (HCLTECH class)."},
+      {"id": "MSN-IN", "name": "MSN India (money/markets)", "url": "https://www.msn.com/en-in/money/markets", "method": "HTML", "rss": null, "status": "ACTIVE", "note": "Weak: JS-rendered headlines invisible to static fetch. Ignore personalized homepage URLs with cvid/cvpid/ei/ocid session params. Seeded consecutive_failures=2 in news_sources_health.json."}
+    ],
+    "news_source_health": {
+      "_note": "Dead-source auto-removal (2026-07-14, user request). Per-source runtime state lives in data/news_sources_health.json; these are the thresholds. A source failing (non-200/timeout/empty/access-rejection) consecutive_failures_to_dead times in a row is set DEAD and skipped; reset to 0 on any successful fetch with >=1 item.",
+      "health_file": "data/news_sources_health.json",
+      "consecutive_failures_to_dead": 3,
+      "min_active_sources_floor": 4,
+      "env_block_fraction_threshold": 0.8,
+      "auto_revive_on_user_request": true,
+      "msn_in_seed_consecutive_failures": 2
+    },
     "earnings_surprise_pat_yoy_pct": 25,
     "earnings_margin_improvement_bps": 300,
     "commodity_crude_move_pct": 3,
     "commodity_gold_move_pct_5d": 2,
     "niftyit_underperformance_pct": 2,
     "niftyit_underperf_consecutive_sessions": 3,
-    "policy_scanner_requests_per_shard": 20
+    "policy_scanner_requests_per_shard": 20,
+    "share_sale_overhang": {
+      "enabled": true,
+      "trigger_min_issue_cr": 500,
+      "sub_tag": "SHARE_SALE_DILUTION",
+      "bucket": "SHARE_SALE_OVERHANG",
+      "lift_conditions_all_required": [
+        "placement_priced_or_cleared",
+        "trend_reversal_confirmed"
+      ],
+      "trend_reversal_confirmed_def": "UT-1 flips from DOWN/SIDEWAYS to UP or STRONG_UP (pivot HL + MA5>MA20 turning up) OR Rule 77 confirmed-downtrend clears (LH/LL below threshold), on the FIRST such session — do NOT wait for a reclaim of the pre-announcement high.",
+      "placement_priced_or_cleared_def": "share-sale/QIP/OFS/block price disclosed AND placement window closed or block deal reported done (news-confirmed). If placement status is unknown, trend_reversal_confirmed alone MAY lift to REVERSAL_PENDING watchlist entry (not a full buy) so the turn is not missed.",
+      "reclaim_high_deprecated": true,
+      "note": "2026-07-13 user correction. ORIGINAL Jul 7 lift condition required 'close reclaims pre-announcement high on vol >=1.5x' — that is TOO LATE: by the time a stock reclaims its old high the reversal has already played out and the entry is missed (same class as the RSI-REV/GOCOLORS/STLTECH late-framing fixes). Corrected: buy on the FIRST trend reversal after the overhang, not after a fresh/old high is reclaimed. The 3-5 week supply-digestion window is context, NOT a wait-gate. Origin: ATHERENERG Rs1900cr share sale announced Jul 7 2026."
+    }
   },
 
   "phase_c": {
@@ -222,6 +265,56 @@
       "conf_penalty_pullback_threshold_pct": 12,
       "recovery_vol_ratio_bonus_threshold": 1.2
     },
+    "rsi_reversion": {
+      "_doc": "Rule RSI-REV (2026-07-10, user request; entry revised 2026-07-10 to cross-up). For symbols in `basket`, on the day daily rsi_wilder_14 CROSSES UP through 50 (prior session <= 50 AND current session > 50), ALWAYS add the stock to the candidate list as an RSI-Reversion BUY with exit target rsi_wilder_14 >= sell_rsi_min. This is a CROSS-UP EVENT, not a state — a stock that has been sitting below 50 for days does NOT re-trigger; it triggers only on the session RSI first pokes back above 50 (the bounce starting). The candidate is then subject to `reject_gates` — if any fires it is REJECTED (surfaced in STOCKS CARRIED FORWARD with the rejection reason), NEVER silently dropped. Signal is watchlist/aggressive tier — it does NOT bypass downside gates.",
+      "enabled": true,
+      "entry_mode": "cross_up_through_50",
+      "entry_mode_note": "cross_up_through_50 = trigger when prev_session_rsi <= buy_rsi_cross AND current_session_rsi > buy_rsi_cross. Deliberately NOT a `rsi <= 50` state trigger (that was the original 2026-07-10 spec, backtested at 100% win but it entered deep — e.g. SCI at RSI 33 — and buys on the way down). Cross-up waits for the bounce to actually begin. Re-backtest (below) showed state=100%/43-perfect vs cross_up=95.4%/35-perfect; user chose cross_up for the safer entry despite lower win rate/returns.",
+      "buy_rsi_cross": 50,
+      "sell_rsi_min": 65,
+      "tier": "aggressive_watchlist",
+      "base_conf": 78,
+      "conf_cap": 85,
+      "reject_gates": [
+        "rule_77_confirmed_downtrend",
+        "ut1_state_DOWN",
+        "rule_26f_one_bar_climax",
+        "rule_78_distribution_day",
+        "rule_79_BE_segment"
+      ],
+      "reject_gate_note": "RSI-REV can only be REJECTED by a downside gate, never upgraded past conf_cap. Rule 77 (3+LH/2+LL confirmed downtrend) and UT-1 DOWN are the primary rejecters — even after a cross-up through 50, if the stock is still in a confirmed downtrend the bounce is treated as a dead-cat and rejected.",
+      "reversal_pending_watchlist": {
+        "enabled": true,
+        "trigger_gates": ["rule_77_confirmed_downtrend", "ut1_state_DOWN"],
+        "max_sessions_carried": 3,
+        "drop_rsi": 45,
+        "reentry_trigger": "Rule 77 clears (LH/LL count below threshold) OR UT-1 flips to SIDEWAYS/UP, AND current close RSI still > 50",
+        "note": "2026-07-13 user-requested. A cross-up-through-50 RSI-REV name rejected ONLY by a trend-not-yet-confirmed gate (one of trigger_gates) has already turned its RSI up; it is blocked purely because the trend has not confirmed. Instead of dropping it, carry it on the published WATCHLIST as watchlist_status=REVERSAL_PENDING for up to max_sessions_carried sessions, with reentry_trigger. Auto-drop when sessions exceeded OR RSI closes < drop_rsi (bounce failed). Structural rejects (RSI-REV_REJECT_CLIMAX/_DISTRIBUTION/_BE) are NOT carried — those signal the bounce itself is unsafe, not merely unconfirmed. Origin: BIOCON/JAYNECOIND/KEI Jul 13 crossed RSI 50 up, all rejected by Rule 77, silently dropped from actionable watchlist."
+      },
+      "target_price_estimate_note": "Suggested target = the price at which rsi_wilder_14 would reach sell_rsi_min, estimated from current RSI, current close, and ATR-14 (approx: price move needed to lift 14-period Wilder RSI from current to 65). Report as an estimate, not a hard level.",
+      "basket": ["JAYNECOIND","THANGAMAYL","ATHERENERG","AETHER","SKYGOLD","HEG","SYRMA","NATIONALUM","GMDCLTD","SAILIFE","NAM-INDIA","GCSL","GOLDIAM","SONACOMS","J&KBANK","GRAPHITE","APARINDS","MAHABANK","SCI","TMB","NLCINDIA","COMSYN","MCX","KEI","NMDC","COALINDIA","FORCEMOT","CRAFTSMAN","BAJAJ-AUTO","TORNTPHARM","UNOMINDA","JAMNAAUTO","DIVGIITTS","JSWENERGY","INOXINDIA","ADANIPORTS","BBOX","TATACOMM","ADVENZYMES","BHARTIARTL","BAJFINANCE","SUNPHARMA","BIOCON"],
+      "_backtest_crossup": {
+        "rule": "buy on session rsi crosses UP through 50 (prev<=50 and today>50), sell rsi>=65",
+        "window": "2025-07-09 to 2026-07-09 (1yr)",
+        "costs": "none applied (gross)",
+        "basket_names_with_trades": 43,
+        "total_trades": 175,
+        "total_wins": 167,
+        "overall_win_rate_pct": 95.4,
+        "names_100pct_win": 35,
+        "atherenergy": "5 trades, 5 wins, +58.9% compounded",
+        "vs_state_entry": "state (rsi<=50 any day) scored 100.0% / 43-of-43 perfect / ATHER +77.7%. Cross-up is safer (no deep entries) but 8 trades flip to losers.",
+        "CAVEAT": "Still a bull-year + selection-bias result: basket chosen because it won in-sample under the state definition, most names have few trades. Cross-up is more realistic but 95.4% is NOT proven edge. Re-validate out-of-sample / non-bull regime before promoting from REVIEW."
+      },
+      "_backtest": {
+        "rule": "buy rsi_wilder_14<=50, sell rsi_wilder_14>=65",
+        "window": "2025-07-09 to 2026-07-09 (1yr)",
+        "costs": "none applied (gross)",
+        "selection": "43 symbols that showed 100% win-rate with >=3 completed trades in-window; scanned 425 symbols, 115 qualified",
+        "top_examples": {"JAYNECOIND": "5 trades +167.3% comp", "THANGAMAYL": "4 trades +91.3%", "ATHERENERG": "5 trades +77.7%"},
+        "CAVEAT": "100% win-rate is a BULL-YEAR + SELECTION-BIAS artifact: (1) the window was a broad up-market; (2) basket was chosen BECAUSE it won in-sample (survivorship); (3) most names have only 3-6 trades — statistically thin; (4) the rule UNDERPERFORMED buy&hold on strong trenders (ATHERENERG +262% held vs +78% traded). Treat as capital-efficiency signal, NOT proven edge. Do NOT re-affirm without out-of-sample / non-bull-regime validation."
+      }
+    },
     "pattern_k": {
       "listed_months_min": 6,
       "listed_months_max": 24,
@@ -255,9 +348,10 @@
     "ut_relax": {
       "gating_states": ["STRONG_UP", "UP"],
       "relax_1": {
-        "rr_floor_standard": 1.5,
-        "rr_floor_relaxed": 1.2,
-        "recovery_vol_ratio_threshold": 1.2
+        "rr_floor_standard": 1.2,
+        "rr_floor_relaxed": 1.1,
+        "recovery_vol_ratio_threshold": 1.2,
+        "_change_2026_07_14": "User relaxed R:R floors: standard 1.5->1.2, uptrend(relaxed) 1.2->1.1. Mirrors phase_d.gate_46c.rr_minimum_threshold (also ->1.2). LOOSENING — stocks now pass 46c with less headroom to nearest resistance; more thin-reward setups become buyable. Downside gates (77/78/26e) still guard."
       },
       "relax_2": {
         "rsi_cap_standard": 80,
@@ -351,18 +445,18 @@
     "caching_lookback_sessions": 60,
 
     "hard_gate_3_1": {
+      "_removed": "Gate B (trend change confirmed) and Gate D (volatility floor) removed 2026-07-10 — eval_universe is market movers, these gates are redundant",
       "downtrend_lookback_min_sessions": 15,
       "downtrend_lookback_max_sessions": 30,
-      "reversal_confirmation_sessions": 10,
-      "sideways_duration_sessions": 15,
       "distribution_vol_ratio_max": 1.0,
       "down_days_lookback_count": 5
     },
 
     "gate_sub_26f": {
-      "climax_single_session_pct": 10,
+      "climax_single_session_pct": 25,
       "vol_ratio_followon_max": 0.4,
-      "followon_sessions_range_max": 2
+      "followon_sessions_range_max": 2,
+      "_change_2026_07_14": "User raised climax_single_session_pct 10->25. Sub-26f one-bar-climax gate now fires only on a single-session spike >=25% (was >=10%) followed by volume collapse <0.4x. LOOSENING: stocks popping 10-24% in one bar are no longer auto-flagged as climax exhaustion at Phase D, so more single-day movers pass to R:R/trend evaluation. Only the Phase D gate changed; Phase C RM-9 coarse screen (momentum_climax_single_move_pct) and RM-7 (rm7.climax_move_pct) remain at 10 unless separately changed. Heuristic threshold — not backtested."
     },
 
     "gate_46b": {
@@ -402,17 +496,23 @@
     },
 
     "gate_46c": {
-      "rr_minimum_threshold": 1.5,
+      "rr_minimum_threshold": 1.2,
+      "rr_minimum_threshold_uptrend": 1.1,
       "nearest_unbroken_resistance_lookback_sessions": 60,
+      "fifty_two_week_high_lookback_sessions": 252,
       "resistance_broken_close_pct": 1.0,
       "resistance_broken_vol_ratio": 1.5,
       "resistance_prior_fail_close_below_pct": 3,
       "resistance_prior_fail_within_sessions": 3,
-      "resistance_round_number_window_pct": 5
+      "resistance_round_number_window_pct": 5,
+      "resistance_round_number_multiples": [50, 100, 500]
     },
 
     "gate_46d": {
       "conditions_required": 6,
+      "fresh_high_basis": "14week",
+      "fresh_high_lookback_sessions": 70,
+      "close_to_fresh_high_max_pct": 1.5,
       "close_to_52wh_max_pct": 1.5,
       "vol_ratio_min": 1.5,
       "intraday_reversal_max_pct": 2,
@@ -420,7 +520,19 @@
       "base_amplitude_min_pct": 8,
       "measured_move_base_extension_pct": 6,
       "allowable_patterns": ["RM-1", "RM-11", "WPR-P1"],
-      "all_gates_must_pass": ["77", "77c", "78", "79", "sub-26f", "46b"]
+      "all_gates_must_pass": ["77", "77c", "78", "79", "sub-26f", "46b"],
+      "_change_2026_07_14": "User lowered fresh-high exemption basis from 52-week high to 14-week high (~70 sessions). 46d now fires when T-1 close is within close_to_fresh_high_max_pct of the 14-week high (fresh_high_lookback_sessions=70) instead of the 52wH. measured_move_target now projects from the 14wH, not the 52wH. NOTE: this is a LOOSENING — a 14wH breakout may still have unbroken resistance from 4-12 months ago; 46c's nearest_unbroken_resistance still guards non-46d candidates. Downside gate 77c is UNCHANGED (still 52wH-based per 'downside gates never relaxed')."
+    },
+    "_fresh_high_bases": {
+      "_note": "Central week->trading-session mapping for every 'N-week high' reference in the pipeline. Skills must read the session count from here, never hard-code 252/70. 1 trading week ~= 5 sessions.",
+      "week_to_sessions_multiplier": 5,
+      "52week_sessions": 252,
+      "14week_sessions": 70,
+      "used_by": {
+        "gate_46d.fresh_high_lookback_sessions": 70,
+        "gate_46c.fifty_two_week_high_lookback_sessions": 252,
+        "gate_77c (downside, unchanged)": 252
+      }
     }
   },
 
@@ -629,8 +741,9 @@
     "csrf_endpoint": "https://chartink.com/screener/past-2-says-5-increment",
     "process_endpoint": "https://chartink.com/screener/process",
     "csrf_header_name": "X-CSRF-TOKEN",
-    "scan_clause_t1": "( {cash} ( 1 day ago close > 2 days ago close * 1.05 and 1 day ago close * 1 day ago volume > 10000000 ) )",
+    "scan_clause_t1": "( {cash} ( latest close > 1 day ago close * 1.05 and latest close * latest volume > 10000000 ) )",
     "scan_clause_t0": "( {cash} ( latest close > 1 day ago close * 1.05 and latest close * latest volume > 10000000 ) )",
+    "_scan_clause_note": "2026-07-10: A.0 (scan_clause_t1) switched from the two-day-lookback clause to the same `latest close` clause as F.1 (scan_clause_t0). Chartink `latest` resolves to the last completed session — T-0 when market open, T-1 when closed — so the scanner decides the date. This makes the qualifying gain and the reported pct_chg the SAME session (fixes the negative-pct_chg display artifact where a T-1 qualifier showed a T-0 quote). A.0 still tags its rows t1_5pct_liq1cr on the resolved date; F.1 still tags t0_5pct_liq1cr on T-0; collision guards unchanged.",
     "top_n": 25,
     "sort_by": "close_x_volume_desc"
   },

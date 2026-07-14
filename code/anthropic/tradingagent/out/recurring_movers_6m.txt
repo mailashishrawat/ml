@@ -1,0 +1,45 @@
+TOP 25 MOST RECURRING >=5% GAINERS — Chartink 'past-2-days-5-increment' clause
+Window: 2026-01-12 -> 2026-07-13 (last 6 months, 125 sessions; 120 had qualifying gainers)
+Clause: close > prev_close*1.05 AND close*volume > Rs1cr; top-25 by close*volume desc per session; counts recurrence.
+Computed: 2026-07-13 (fresh from data/stockparam.csv, 451 symbols)
+
+#   Symbol        Times  AvgGain%  AvgVal(Cr)  LastSeen    Anchor?   
+1   TEJASNET      16     9.1       1948        2026-07-10  ANCHOR    
+2   STLTECH       15     8.7       254         2026-07-10  ANCHOR    
+3   RAMCOSYS      15     10.1      459         2026-07-13  GAP       
+4   BALAMINES     14     8.6       296         2026-07-09  GAP       
+5   KSHINTL       14     7.3       57          2026-06-15  ANCHOR    
+6   AEQUS         14     8.5       306         2026-07-08  ANCHOR    
+7   AEROFLEX      14     7.6       251         2026-06-17  inactive  
+8   HFCL          13     7.0       1132        2026-05-27  ANCHOR    
+9   SUVEN         13     9.3       136         2026-07-10  ANCHOR    
+10  PARAS         13     8.2       1003        2026-06-30  inactive  
+11  JNKINDIA      13     7.8       126         2026-07-06  GAP       
+12  OLAELEC       13     8.7       1399        2026-06-30  ANCHOR    
+13  APOLLO        12     8.8       1440        2026-07-03  inactive  
+14  FORCEMOT      11     6.5       504         2026-07-02  ANCHOR    
+15  IDEAFORGE     11     9.4       402         2026-07-10  ANCHOR    
+16  THANGAMAYL    11     8.0       236         2026-07-08  ANCHOR    
+17  BLUSPRING     11     9.0       27          2026-07-10  ANCHOR    
+18  DATAPATTNS    11     7.0       1031        2026-06-17  inactive  
+19  SKMEGGPROD    10     8.6       77          2026-07-13  GAP       
+20  ATHERENERG    10     6.6       1114        2026-07-08  ANCHOR    
+21  TARIL         10     7.9       589         2026-06-30  ANCHOR    
+22  INA           10     7.7       86          2026-07-09  GAP       
+23  DIACABS       10     6.8       201         2026-07-06  GAP       
+24  SPECTRUM      10     7.5       23          2026-07-06  GAP       
+25  JINDALPOLY    9      8.4       130         2026-03-10  inactive  
+
+UNIVERSE CROSS-CHECK: 13/25 active anchors | 12 gap/inactive:
+  - RAMCOSYS (15x, GAP)
+  - BALAMINES (14x, GAP)
+  - AEROFLEX (14x, inactive)
+  - PARAS (13x, inactive)
+  - JNKINDIA (13x, GAP)
+  - APOLLO (12x, inactive)
+  - DATAPATTNS (11x, inactive)
+  - SKMEGGPROD (10x, GAP)
+  - INA (10x, GAP)
+  - DIACABS (10x, GAP)
+  - SPECTRUM (10x, GAP)
+  - JINDALPOLY (9x, inactive)

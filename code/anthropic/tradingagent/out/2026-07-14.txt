@@ -1,0 +1,168 @@
+INDIA STOCK RECOMMENDER — DAILY OUTPUT — 2026-07-14 (Tuesday, T-0 intraday run)
+  Publish threshold: >85% (≥84 under UT-RELAX-5 + T1/T2)  |  Model: opus (pipeline) + haiku/sonnet shards
+  Audited session (T-1 close): 2026-07-13
+
+━━━ PHASE A — data-prep · OK ━━━
+  eval_universe: 150 (125 active anchors ∪ 25 daily top-25 ∪ 9 active watchlist)
+  T-1 session: 2026-07-13 | daily_top25 fetched from Chartink (t1_5pct_liq1cr)
+  stockparam.csv repair: 0 unrepairable | 0 thin-history escalations
+  backfill: Kite→yfinance→NSE 3-tier — all active anchors fresh to T-1
+  A.0 assertion: PASS
+
+━━━ PHASE B — macro-scan · OK (feeds BLOCKED, carried state) ━━━
+  ⚠️ ALL 7 live news feeds (ET/BS/Mint/MC/BT/HinduBL/FinExpress) + WebSearch BLOCKED in run
+     environment → synthesis from user-provided Times Business front page (2026-07-14) +
+     T-1 price action + carried macro state. Live moneycontrol/tijori fetch NOT possible.
+  HARD EXCLUDES:  (none)
+  CAUTION FLAGS:  ⚠️ TCS — leadership rejig exec uncertainty; +5.44% Jul13 = positive
+                    digestion; AI_TAILWIND active → monitor, no exclude
+  TAILWINDS:      ✅ IT_SERVICES  +15  (AI_TAILWIND / Huang; Jul13 7-name IT cluster ≥5%)
+                  ✅ LARGE_CAP_BROAD  +10  (FII inflow reversal +$2.6bn July)
+                  ✅ IOT_NETWORKING_CYBERSEC  +10  (Govt IoT cybersec framework T2)
+                  ✅ FOOD_DELIVERY  +10  (Rs200 office-lunch push T2)
+                  ✅ PHARMA  +10  (volumes recover after 2 years)
+  NEWS CATALYSTS: 📰 HFCL/STLTECH/TEJASNET/TATACOMM — IoT cybersec (T2/T3)
+                  📰 ETERNAL/SWIGGY — food-delivery lunch push (T2)
+  FRONT-PAGE (carried, 2026-07-14): ABREL buys Shell Sprng Energy ₹17k cr (renewables);
+    India-US trade-pact FRAMEWORK ready (exporter/IT/pharma positive); Tata Capital → gold-loan
+    Yogakshemam ₹1.1k cr (NBFC consol); ITC Infotech leads HAPPSTMNDS stake race ₹2.7k cr;
+    HCLTech ₹3.5k cr AI data-centre push (IT AI capex tailwind); Trade deficit 5-mth high
+    ~$18.78bn (INR pressure, macro-neg); June CPI >4% food/fuel (rate-cut moderation).
+  AI STATUS:  AI_TAILWIND — IT exclusion LIFTED   GOLD: no caution   US MARKET: positive
+
+━━━ PHASE C — pattern-scan · OK ━━━
+  scanned: 150 | watchlist_audit: PASS (0 silent drops) | checksum: True
+  DISPOSITION: rsi_rev 2 (2BUY/0REJ pre-D) | recent_movers 41 | rm1/11/12 proposals→D 9
+               | watchlist 78-85: 4 | wpr_carries 9 (0 fired / 9 carry) | rm10_no_template 14
+               | no_signal 103
+  > RULE RSI-REV — 2 cross-ups thru 50: HEG (RSI 42.1→63.4), KEI (RSI 45.7→53.2) → both BUY pre-D
+  > RULE WPR watchlist — 9 carries → 0 fired, 0 silent drops (NAUKRI/AEQUS/IOLCP/ATHERENERG/
+    JUSTDIAL/SANGAMIND/NOVARTIND/63MOONS/PICCADIL)
+  proceed_to_D: 10 (9 RM proposals + 1 RSI-REV net after overlap) | watchlist (78-85): 4
+  Watchlist 78-85 (RM-12 continuation-pullback, cap 85):
+    SAKSOFT   RM-12  conf 85  RSI 62.2  STRONG_UP  (IT AI_TAILWIND +15)
+    ZENSARTECH RM-12 conf 85  RSI 64.5  STRONG_UP  (IT AI_TAILWIND +15)
+    PINELABS  RM-12  conf 85  RSI 52.6  UP
+    RRKABEL   RM-12  conf 85  RSI 60.6  UP
+
+━━━ PHASE D — chart-gates · OK (0 cleared) ━━━
+  stocks_evaluated: 10 | cleared: 0
+  FAILURE HISTOGRAM: FAIL_46c 7 | FAIL_77 2 | FAIL_78 1
+  Per-candidate:
+    NEWGEN    FAIL_46c  closed into resistance, R:R sub-1.5 (re-clear 600)
+    IKIO      FAIL_78   distribution day printed (re-clear 229.0)
+    BFINVEST  FAIL_46c  R:R sub-1.5 (re-clear 537.93)
+    SUMICHEM  FAIL_46c  R:R sub-1.5 (re-clear 534.25)
+    63MOONS   FAIL_46c  R:R sub-1.5 (re-clear 739.25)
+    EIEL      FAIL_46c  R:R sub-1.5 (re-clear 247.4)
+    JSWINFRA  FAIL_46c  R:R sub-1.5 (re-clear 352.96)
+    HEG       FAIL_77   confirmed downtrend, RSI-REV falling-knife (re-clear 597.45)
+    SHYAMMETL FAIL_46c  R:R sub-1.5 (re-clear 1034.5)
+    KEI       FAIL_77   confirmed downtrend; R:R 2.01 healthy but trend-not-confirmed → REVERSAL_PENDING
+  Note: IT_SERVICES AI_TAILWIND (+15) cannot rescue a sub-1.5 R:R — 46c hard gate not relaxable.
+
+━━━ PHASE E — validation · OK (ZERO-PICK) ━━━
+  final_picks: 0 | publish threshold applied: 85 | confidence range: n/a
+  cross-validation: US positive · no gold caution · AI_TAILWIND active · no negative-news blocks
+  ZERO-PICK RATIONALE: 0 of 10 chart-gate candidates cleared Phase D. All 9 RM candidates are
+    fresh Jul-13 top-25 gainers that popped +5-20% and closed AT/into nearest unbroken resistance
+    (R:R 0.03-0.33, 7x FAIL_46c) — entering after a single-session pop into resistance is exactly
+    what Rule 46c blocks. HEG confirmed downtrend (FAIL_77), IKIO distribution day (FAIL_78),
+    KEI RSI-REV healthy R:R 2.01 but confirmed-downtrend falling knife (FAIL_77) → REVERSAL_PENDING.
+    No 46d fresh-high exemption (none had a T1/T2 catalyst on the breakout candle). Zero-pick days
+    are expected and acceptable.
+  watchlist carried: 15 (4 Phase-C 78-85 + 10 Phase-D excluded + 1 RSI-REV reversal-pending)
+
+━━━ PHASE F — audit-and-format · OK ━━━
+  F.1 — NSE-WIDE SELF-AUDIT (T-0 audited session 2026-07-13)
+    4.6.2 top-25 by move% (audited session; T-0 fetch resolved to last-closed session — feeds blocked)
+      Rank Symbol       Chg%   RSI    UT-1        Classification        Attribution
+       1   JUSTDIAL     20.0   81.3   STRONG_UP   NEWS_PRICED_IN        RM-9 climax (reject class)
+       2   GOLDIAM      19.85  49.6   SIDEWAYS    NEWS_PRICED_IN        RM-9 climax (reject class)
+       3   FINOPB       19.15  68.8   SIDEWAYS    NEWS_PRICED_IN        RM-9 climax (reject class)
+       4   BFUTILITIE   16.2   65.3   SIDEWAYS    NEWS_PRICED_IN        RM-9 climax (reject class)
+       5   J&KBANK      14.39  83.7   STRONG_UP   NEWS_PRICED_IN        RM-9 climax (reject class)
+       6   NEWGEN       14.17  78.6   UP          NEWS_PRICED_IN        RM-11 continuation PREDICTED
+       7   IKIO         14.02  67.0   SIDEWAYS    NEWS_PRICED_IN        RM-1 breakout PREDICTED
+       8   SKMEGGPROD   12.31  77.0   STRONG_UP   NEWS_PRICED_IN        RM-9 climax (reject class)
+       9   SANGAMIND    11.42  79.0   STRONG_UP   NEWS_PRICED_IN        RM-9 climax (reject class)
+      10   PURVA        10.86  74.6   UP          NEWS_PRICED_IN        RM-9 climax (reject class)
+      11   CNL          10.77  86.8   STRONG_UP   NEWS_PRICED_IN        RM-9 climax (reject class)
+      12   SONATSOFTW   10.76  68.4   SIDEWAYS    NEWS_PRICED_IN        RM-9 climax (reject class)
+      13   RAMCOSYS     10.0   73.6   STRONG_UP   NEWS_PRICED_IN        RM-9 climax (reject class)
+      14   BFINVEST      9.85  76.9   UP          NEWS_PRICED_IN        RM-11 continuation PREDICTED
+      15   MAPMYINDIA    9.37  80.4   STRONG_UP   NEWS_PRICED_IN        RM-9 climax (reject class)
+      16   SUMICHEM      8.58  66.8   SIDEWAYS    NEWS_PRICED_IN        RM-1 breakout PREDICTED
+      17   BCLIND        8.53  59.6   SIDEWAYS    NEWS_PRICED_IN        UNRECOGNIZED (no clean template)
+      18   DENTA         8.53  73.9   SIDEWAYS    NEWS_PRICED_IN        RM-11 continuation PREDICTED
+      19   STLTECH       8.23  46.3   SIDEWAYS    NEWS_PRICED_IN        RM-11 (T3 IoT catalyst)
+      20   63MOONS       8.19  66.3   STRONG_UP   NEWS_PRICED_IN        RM-1 breakout PREDICTED
+      21   SAKSOFT        8.16 62.2   STRONG_UP   NEWS_PRICED_IN        RM-12 pullback PREDICTED
+      22   KALYANKJIL     7.25 78.9   STRONG_UP   NEWS_PRICED_IN        UNRECOGNIZED (no clean template)
+      23   PICCADIL       7.01 79.0   STRONG_UP   NEWS_PRICED_IN        UNRECOGNIZED (no clean template)
+      24   PINELABS       6.79 52.6   UP          NEWS_PRICED_IN        RM-12 pullback PREDICTED
+      25   EIEL           6.72 68.4   STRONG_UP   NEWS_PRICED_IN        RM-1 breakout PREDICTED
+    4.6.3 pattern attribution: RM-9(climax/reject) 12 · RM-1 4 · RM-11 4 · RM-12 2 · UNRECOGNIZED 3
+    4.6.4 PATTERN VOTE LEDGER: hit-dates + L10/L30 recomputed (pattern_notes.md)
+    4.6.5 UGD force-adds: 0 (A.0 daily-universe supersedes 4.6.5b; all top-25 already in eval_universe)
+    4.6.6 UNRECOGNIZED movers logged: BCLIND, KALYANKJIL, PICCADIL (no shared signature ≥3/30 yet)
+
+  F.2 — POST-RUN MISS AUDIT (vs 2026-07-13 zero-pick + 9-name watchlist)
+    histogram: CORRECTLY_WATCHLISTED 4 | CORRECTLY_EXCLUDED 37 | NEWS_SHOCK 0 | MISS_ANALYZE 0
+    CORRECTLY_WATCHLISTED: JUSTDIAL, SANGAMIND, NOVARTIND, 63MOONS (all in yesterday's watchlist)
+    CORRECTLY_EXCLUDED (37): RSI>80/climax rejects (12 RM-9), single-session news-priced-in pops,
+      low-conviction thin-vol, momentum-continuation that failed D-gate R:R/trend.
+    MISS_ANALYZE: NONE — no rule gaps. Every ≥5% mover was either watchlisted or excluded for a
+      documented sound reason. The 0-pick decision is validated by the audit.
+
+  F.3 — TOKEN USAGE & COST
+    === TOKEN USAGE & COST ===
+    Data-prep (Haiku shards):  ~120k in / ~18k out / ₹18
+    Macro (Opus):              ~45k in / ~8k out / ₹42
+    Pattern/Chart (Sonnet):    ~180k in / ~30k out / ₹48
+    Validation (Sonnet):       ~90k in / ~12k out / ₹22
+    Audit/Format (Haiku):      ~140k in / ~20k out / ₹20
+    TOTAL: ~₹150 (~$1.75 USD)  [estimate — socket dropped mid-run, tallied from phase JSONs]
+
+  F.6 — DAILY PARAMETER LOG
+    STEP 4.7b — Appended 102 rows for 2026-07-13 (total 2000) — first-26-col integrity: PASS
+
+  Rules re-weighted this run: 4 (46c +1→+16, 77 +1→+4, 78 +1→+8 HIGH_CONVICTION, WPR +1→+15)
+  (internal ledger updated on disk — NOT shown)
+
+========================================================================
+STOCK SCRIPT — 2026-07-14
+========================================================================
+  *** ZERO-PICK DAY — 0 BUY RECOMMENDATIONS ***
+  Publish threshold: >85%  |  Picks: 0  |  Watchlist carried: 15
+
+  RSI-REV recommended: 0
+    HEG  cross-up RSI 63.4 → BLOCKED by Rule 77 (confirmed downtrend) at Phase D
+    KEI  cross-up RSI 53.2, R:R 2.01 healthy → REVERSAL_PENDING watchlist (Rule 77 downtrend),
+         re-enter when Rule 77 clears OR UT-1 flips UP AND RSI>50; entry ~5149.5 target ~5561 (drop if RSI<45)
+
+  WATCHLIST (carry, monitor for triggers):
+    RM-12 continuation-pullback (re-enter on breakout of 3-day intraday high + R:R≥1.5):
+      SAKSOFT (RSI 62.2 STRONG_UP) · ZENSARTECH (64.5 STRONG_UP) · PINELABS (52.6 UP) · RRKABEL (60.6 UP)
+    Phase-D excluded (re-enter on re-clear resistance + R:R≥1.5):
+      NEWGEN>600 · IKIO>229 · BFINVEST>537.93 · SUMICHEM>534.25 · 63MOONS>739.25 · EIEL>247.4
+      · JSWINFRA>352.96 · HEG>597.45 · SHYAMMETL>1034.5
+    WPR carries: NAUKRI(1180-1218 IN_ZONE) · AEQUS(aerospace monitor) · IOLCP · ATHERENERG(share-sale
+      overhang ₹1900cr) · JUSTDIAL · SANGAMIND · NOVARTIND · 63MOONS · PICCADIL
+    RSI-REV reversal-pending: KEI (session 1 of 3)
+
+  ZERO-PICK RATIONALE:
+    Today's +5-20% movers are overwhelmingly single-session pops that closed AT/into their nearest
+    unbroken resistance (R:R 0.03-0.33) — chasing them is precisely what Rule 46c blocks. HEG/KEI
+    cross-ups sit inside confirmed downtrends. IT AI_TAILWIND is active but cannot relax a hard R:R
+    gate. No clean continuation setup for tomorrow. Zero-pick is expected and acceptable.
+
+========================================================================
+FINAL RUN RECAP
+========================================================================
+  A · eval_universe 150 (125 anchors ∪ 25 top-25 ∪ 9 watchlist) · 0 unrepairable · A.0 assertion PASS
+  B · AI_TAILWIND active (IT excl lifted) · 5 tailwinds · ⚠️ all 7 feeds+WebSearch BLOCKED, carried state
+  C · scanned 150 · RSI-REV 2 cross-ups (HEG/KEI) · 9 RM→D + 4 watchlist · WPR 9 carries 0 drops · checksum OK
+  D · 10 evaluated · 0 cleared · FAIL_46c 7 / FAIL_77 2 / FAIL_78 1 · AI_TAILWIND can't rescue sub-1.5 R:R
+  E · 0 picks · ZERO-PICK · 15 watchlist carried · KEI → REVERSAL_PENDING
+  F · miss-audit 0 MISS_ANALYZE (37 correctly-excluded / 4 watchlisted) · ledger +4 rules · 102 rows logged

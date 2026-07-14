@@ -1,0 +1,211 @@
+========================================================================
+INDIA STOCK RECOMMENDER — DAILY OUTPUT — 2026-07-13 (Monday, T-0 intraday run)
+Reporting format: phase-wise A->F + inline per-rule/data tables (ledger internal)
+========================================================================
+NOTE: 2026-07-11 = Saturday. Chartink `latest` resolved to T-0 = Jul 13 (market open).
+      Settled stockparam base = Jul 10. Today's gainers used to predict Jul 14 movers.
+
+━━━ PHASE A — data-prep · DONE ━━━
+  eval_universe: 150 (125 anchors ∪ 25 top-25 ∪ 4 watchlist)
+  backfill: 0 fresh / 130 stale / 20 missing -> 1478 rows appended, 0 unrepairable (100% yfinance)
+  A.0 assertion: PASS  | thin-history: FERMENTA, SEIL, SIKA, VEDPOWER, VISL, VOGL
+  T-0 TOP-25 (Close x Volume, Rs1cr gate):
+     1. KALYANKJIL   ltp    507.00  + 6.48%    2605.7cr
+     2. ZENSARTECH   ltp    542.75  + 6.79%     760.0cr
+     3. JUSTDIAL     ltp    636.35  +12.82%     498.9cr
+     4. PINELABS     ltp    153.00  + 5.32%     367.3cr
+     5. CANHLIFE     ltp    154.50  + 7.27%     245.0cr
+     6. BFUTILITIE   ltp    665.80  +15.03%     122.5cr
+     7. 63MOONS      ltp    769.60  +13.41%     117.0cr
+     8. FINOPB       ltp    147.99  + 9.30%     107.8cr
+     9. SAKSOFT      ltp    182.42  + 6.64%      80.1cr
+    10. HESTERBIO    ltp   2545.00  +20.00%      78.2cr
+    11. BFINVEST     ltp    520.25  + 6.77%      76.5cr
+    12. BUILDPRO     ltp   1313.40  + 5.03%      74.2cr
+    13. AFFLE        ltp   1581.20  + 6.81%      62.6cr
+    14. TFCILTD      ltp     79.96  + 6.40%      41.4cr
+    15. SKMEGGPROD   ltp    346.00  + 7.67%      34.1cr
+    16. SANGAMIND    ltp    630.30  +12.81%      32.8cr
+    17. SFL          ltp    804.40  + 5.11%      31.9cr
+    18. DAMCAPITAL   ltp    165.00  + 7.55%      30.5cr
+    19. PPAP         ltp    341.00  + 5.45%      29.8cr
+    20. EPIGRAL      ltp   1101.50  +12.67%      29.1cr
+    21. PICCADIL     ltp    710.25  + 5.72%      26.4cr
+    22. NOVARTIND    ltp   1667.00  +11.53%      22.6cr
+    23. FERMENTA     ltp    442.85  + 7.54%      22.3cr
+    24. BLKASHYAP    ltp     59.85  + 8.31%      14.6cr
+    25. GENESYS      ltp    349.20  + 7.07%      14.5cr
+  STOCKS CARRIED FORWARD (A -> B): IN: — -> OUT: 150  (0 dropped, 0 unrepairable)
+
+━━━ PHASE B — macro-scan · DONE ━━━
+  HARD_EXCLUDES: 0 | CAUTION: 1 | TAILWINDS: 5 | NEWS_CATALYSTS: 7 | AI: AI_TAILWIND
+  MACRO TREND & DISRUPTION ALERT:
+    ╔═══════════════════════════════════════════════════════════╗
+    ║  MACRO TREND & DISRUPTION ALERT — 2026-07-13                   ║
+    ╠═══════════════════════════════════════════════════════════╣
+    ║ HARD EXCLUDES:  (none today)                              ║
+    ║ CAUTION FLAGS:  ⚠️ TCS — leadership rejig, exec uncertainty║
+    ║ TAILWINDS:      ✅ LARGE-CAP BROAD — FII inflow reversal   ║
+    ║                 ✅ IoT/CYBERSEC — govt framework (HFCL...)  ║
+    ║                 ✅ IT SERVICES — AI_TAILWIND + TCS partner  ║
+    ║                 ✅ FOOD DELIVERY — Rs200 office-lunch push  ║
+    ║                 ✅ PHARMA — volume recovery after 2 yrs     ║
+    ║ NEWS CATALYSTS: 📰 HFCL (T2), ETERNAL (T2), SWIGGY (T2)     ║
+    ║                 📰 STLTECH/TEJASNET/TATACOMM (T3)           ║
+    ║ AI STATUS:      AI_TAILWIND ACTIVE (IT exclusion lifted)   ║
+    ║ FII:            NET INFLOW REVERSAL — bullish breadth       ║
+    ║ GOLD:           no >2%/5d caution                          ║
+    ║ US MARKET:      positive/stable                            ║
+    ║ NEWS FEEDS:     BLOCKED (env) — synthesized from frontpage ║
+    ╚═══════════════════════════════════════════════════════════╝
+  STOCKS CARRIED FORWARD (B -> C): IN: 150 -> OUT: 150 + 6 news force-adds (dedup)
+
+━━━ PHASE C — pattern-scan · DONE ━━━
+  scanned: 150 | proceed_to_D: 5 | watchlist: 4 | audit_pass: True
+  DISPOSITION: rsi_rev 3(0BUY/3REJ) | rm1/12 9 | wpr 4 | no_signal 97 | checksum True
+  --- PER-RULE STOCK OUTPUT ---
+  > RULE RSI-REV — 3 triggered (cross-up thru 50) -> 0 BUY / 3 REJECTED:
+      BIOCON      rsi 42.0->53.2 ut1=SIDEWAYS r77=True -> REJECTED RSI-REV_REJECT_DOWNTREND
+      JAYNECOIND  rsi 46.8->52.6 ut1=SIDEWAYS r77=True -> REJECTED RSI-REV_REJECT_DOWNTREND
+      KEI         rsi 45.7->53.2 ut1=SIDEWAYS r77=True -> REJECTED RSI-REV_REJECT_DOWNTREND
+      => RSI-REV recommended: 0 (all blocked by Rule 77 confirmed-downtrend)
+  > RULE RM-1 momentum breakout — 9 triggered -> 5 proceed_to_D:
+      SFL         RM-1 ut1=STRONG_UP rsi=68.2 conf=92 R:R=1.15 -> D
+      BFINVEST    RM-1 ut1=STRONG_UP rsi=68.4 conf=92 R:R=0.67 -> D
+      FERMENTA    RM-1 ut1=STRONG_UP rsi=68.6 conf=92 R:R=1.11 -> D
+      PICCADIL    RM-1 ut1=STRONG_UP rsi=72.8 conf=92 R:R=0.95 -> D
+      SKMEGGPROD  RM-1 ut1=STRONG_UP rsi=69.8 conf=92 R:R=1.33 -> D
+      JUSTDIAL    RM-1 conf=90 priced_in=True -> WATCHLIST
+      SANGAMIND   RM-1 conf=90 priced_in=True -> WATCHLIST
+      NOVARTIND   RM-1 conf=90 priced_in=True -> WATCHLIST
+      63MOONS     RM-1 conf=90 priced_in=True -> WATCHLIST
+  > RULE WPR watchlist — 4 carries -> 0 fired, 0 silent drops:
+      NAUKRI      IN_ZONE  carried=4 trig=WAITING -> CARRY
+      AEQUS       IN_ZONE  carried=3 trig=WAITING -> CARRY
+      IOLCP       IN_ZONE  carried=3 trig=WAITING -> CARRY
+      ATHERENERG  ABOVE    carried=5 trig=WAITING -> CARRY
+  STOCKS CARRIED FORWARD (C -> D): IN: 150 -> OUT: 5  (SFL, BFINVEST, FERMENTA, PICCADIL, SKMEGGPROD)
+
+━━━ PHASE D — chart-gates · DONE ━━━
+  candidates_in: 5 | PASS: 1 | FAIL: 4 | histogram: {'FAIL_78': 3, 'FAIL_46c': 1}
+    SFL         FAIL  46d=off    R:R=0.14  fail=78
+    BFINVEST    FAIL  46d=off    R:R=0.34  fail=78
+    FERMENTA    FAIL  46d=off    R:R=0.29  fail=78
+    PICCADIL    PASS  46d=ACTIVE R:R=2.39  fail=-
+    SKMEGGPROD  FAIL  46d=off    R:R=0.11  fail=46c
+  STOCKS CARRIED FORWARD (D -> E): IN: 5 -> OUT: 1  (PICCADIL)
+
+━━━ PHASE E — validation · DONE ━━━
+  final picks: 0 | publish threshold: 85
+  *** ZERO-PICK DAY ***
+  TRADE PARAMETERS: (no rows — nothing cleared Phase D + validation)
+  PICCADIL cross-validation (only Phase-D survivor):
+    chart_conflict = TRUE -> FAIL
+    REJECTED — chart_conflict: Phase D used 60-day 52wH (678) and fired 46d; validator full-year 52wH=805.5, close 11.7% below true high, 46d INVALID, R:R 0.45
+  ZERO-PICK RATIONALE:
+    All 5 Phase-C candidates blocked: SFL/BFINVEST/FERMENTA on Rule 78 distribution days, SKMEGGPROD on
+    Rule 46c R:R<1.5, PICCADIL on Phase-E chart_conflict (Phase D 46d exemption used a 60-day 52wH
+    window; true full-year 52wH is 805.5 — PICCADIL at 711 is 11.7% below it, so no fresh-high breakout,
+    46d invalid, R:R 0.45). Zero-pick day. Today's +5-20% movers are mostly single-session gaps already
+    near/at recent highs with distribution wicks or compressed R:R — no clean continuation setup for
+    tomorrow.
+  WATCHLIST (Phase C 78-85 + Phase D excluded + WPR carries):
+    -- Momentum priced-in (re-enter on 2-3 sess digestion, RSI<75):
+       JUSTDIAL    conf 90 | re-entry: dip to MA5, RSI<72, vol>=0.8x
+       SANGAMIND   conf 90 | re-entry: dip to MA5, RSI<72, vol>=0.8x
+       NOVARTIND   conf 90 | re-entry: dip to MA5, RSI<72, vol>=0.8x
+       63MOONS     conf 90 | re-entry: dip to MA5, RSI<72, vol>=0.8x
+    -- Phase D excluded (chart gate):
+       SFL         FAIL_78 | re-entry: R:R>=1.5 vs 52wH
+       BFINVEST    FAIL_78 | re-entry: R:R>=1.5 vs 52wH
+       FERMENTA    FAIL_78 | re-entry: R:R>=1.5 vs 52wH
+       SKMEGGPROD  FAIL_46c | re-entry: R:R>=1.5 vs 52wH
+       PICCADIL   FAIL_chart_conflict | re-entry: close > 744 (2025 peak) on >=1.5x vol
+    -- WPR carries:
+       NAUKRI      IN_ZONE carried 4/10 | 1180-1218
+       AEQUS       IN_ZONE carried 3/10 | aerospace monitor
+       IOLCP       IN_ZONE carried 3/10 | carry
+       ATHERENERG  ABOVE carried 5/10 | re-entry: FIRST trend reversal (UT-1->UP/STRONG_UP or Rule 77 clears) + placement priced/cleared — NOT reclaim-of-old-high
+  STOCKS CARRIED FORWARD (E -> F): 0 picks; 8 watchlist carried
+━━━ PHASE F — audit-and-format · DONE ━━━
+  F.1 — NSE-WIDE SELF-AUDIT (T-0 = Jul 13, tag t0_5pct_liq1cr)
+    4.6.2 TOP-25 by Close×Volume:
+    Rank Symbol       LTP      Chg%   Val(Cr)  Anchor Picked
+     1  KALYANKJIL    507.00 + 6.48   2605.7   Y      N
+     2  ZENSARTECH    542.75 + 6.79    760.0   Y      N
+     3  JUSTDIAL      636.35 +12.82    498.9   -      N
+     4  PINELABS      153.00 + 5.32    367.3   -      N
+     5  CANHLIFE      154.50 + 7.27    245.0   -      N
+     6  BFUTILITIE    665.80 +15.03    122.5   -      N
+     7  63MOONS       769.60 +13.41    117.0   -      N
+     8  FINOPB        147.99 + 9.30    107.8   Y      N
+     9  SAKSOFT       182.42 + 6.64     80.1   Y      N
+    10  HESTERBIO    2545.00 +20.00     78.2   -      N
+    11  BFINVEST      520.25 + 6.77     76.5   -      N
+    12  BUILDPRO     1313.40 + 5.03     74.2   -      N
+    13  AFFLE        1581.20 + 6.81     62.6   -      N
+    14  TFCILTD        79.96 + 6.40     41.4   -      N
+    15  SKMEGGPROD    346.00 + 7.67     34.1   -      N
+    16  SANGAMIND     630.30 +12.81     32.8   -      N
+    17  SFL           804.40 + 5.11     31.9   -      N
+    18  DAMCAPITAL    165.00 + 7.55     30.5   -      N
+    19  PPAP          341.00 + 5.45     29.8   -      N
+    20  EPIGRAL      1101.50 +12.67     29.1   -      N
+    21  PICCADIL      710.25 + 5.72     26.4   -      N
+    22  NOVARTIND    1667.00 +11.53     22.6   -      N
+    23  FERMENTA      442.85 + 7.54     22.3   -      N
+    24  BLKASHYAP      59.85 + 8.31     14.6   -      N
+    25  GENESYS       349.20 + 7.07     14.5   -      N
+    4.6.3 attribution: momentum breakouts at 52wH dominate; HESTERBIO +20% UNRECOGNIZED (biotech, log)
+    4.6.5 UGD force-adds: 0 (A.0 daily universe supersedes 4.6.5b)
+
+  F.2 — POST-RUN MISS AUDIT (vs Jul 10 zero-pick)
+    histogram: CORRECTLY_EXCLUDED 9 | CORRECTLY_WATCHLISTED 4 | NEWS_SHOCK_UNFLAGGABLE 12 | MISS_ANALYZE 0
+    MISS_ANALYZE: 0 — clean audit, no rule gaps surfaced
+
+  F.3 — TOKEN USAGE & COST
+    Data-prep (Sonnet+Haiku x8):  fan-out backfill 150 syms
+    Macro (synthesis):            frontpage context (live feeds blocked)
+    Pattern/Chart/Valid (Sonnet): 5 candidates gated, 1 independent-recompute conflict caught
+    Audit (Haiku):                25-mover attribution + ledger
+    TOTAL: ~Rs 55 (~$0.66 USD) est · Kite MCP calls: ~12
+
+  F.6 — DAILY PARAMETER LOG
+    STEP 4.7b — Appended 150 rows for 2026-07-13 (settled Jul 10 base; Jul 13 intraday deferred). integrity PASS
+  Rules re-weighted this run: 4 (internal ledger updated on disk — NOT shown)
+
+========================================================================
+STOCK SCRIPT — 2026-07-13
+========================================================================
+  *** ZERO-PICK DAY — 0 BUY RECOMMENDATIONS ***
+  Publish threshold: >85%  |  Picks: 0  |  Watchlist carried: 9
+  No entry/target/stop rows — nothing cleared Phase D + independent validation.
+
+  RSI-REV recommended: 0 (3 cross-ups BIOCON/JAYNECOIND/KEI all REJECTED by Rule 77 downtrend)
+
+  WATCHLIST (carry, monitor for triggers):
+    JUSTDIAL   +12.8% today, STRONG_UP RSI62 — re-enter on 2-3 sess digestion, dip to MA5, RSI<72
+    SANGAMIND  +12.8% at 52wH — re-enter on pullback hold
+    NOVARTIND  +11.5% near 52wH — re-enter on digestion
+    63MOONS    +13.4% STRONG_UP — re-enter on pullback
+    PICCADIL   blocked chart_conflict — re-enter only on close > 744 (2025 peak) on >=1.5x vol
+    NAUKRI     WPR carry 4/10, IN_ZONE 1180-1218, re-entry >1218 on structural HH+HL
+    AEQUS/IOLCP/ATHERENERG  WPR carries (ATHERENERG share-sale caution)
+
+  ZERO-PICK RATIONALE:
+    Today's +5-20% movers are single-session gaps near/at recent highs. Rule 78 (distribution
+    day, never relaxed) blocked SFL/BFINVEST/FERMENTA; Rule 46c R:R<1.5 blocked SKMEGGPROD;
+    Phase-E chart_conflict blocked PICCADIL (Phase-D 46d used a 60-day 52wH window — true
+    full-year 52wH is 805.5, so PICCADIL at 711 is NOT a fresh-high breakout; R:R 0.45).
+    No clean continuation setup for tomorrow. Zero-pick is expected and acceptable.
+
+========================================================================
+FINAL RUN RECAP
+========================================================================
+  A · eval_universe 150 · +1478 rows (100% yf, settled Jul 10) · A.0 assert PASS
+  B · 0 excludes · 5 tailwinds (FII/IoT/IT/food/pharma) · AI_TAILWIND · 6 news force-adds
+  C · RSI-REV 3->0 BUY/3 REJ · RM-1 9->5 to D · WPR 4 carries 0 drops · checksum OK
+  D · 5 in -> 1 PASS (PICCADIL 46d) · FAIL_78 x3, FAIL_46c x1
+  E · 0 picks · ZERO-PICK · PICCADIL chart_conflict (60d-52wH bug) caught
+  F · 25-mover audit: 0 MISS_ANALYZE · ledger +4 (46c/78/UT-1/WPR) · 150 final rows
+

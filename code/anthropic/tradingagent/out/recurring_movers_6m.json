@@ -1,0 +1,298 @@
+{
+ "computed": "2026-07-13",
+ "window": [
+  "2026-01-12",
+  "2026-07-13"
+ ],
+ "sessions": 125,
+ "clause": "close>prev_close*1.05 AND close*volume>1e7; top25 by cxv desc per session",
+ "top25": [
+  {
+   "rank": 1,
+   "symbol": "TEJASNET",
+   "times_in_top25": 16,
+   "avg_gain_pct": 9.1,
+   "avg_value_cr": 1948,
+   "last_seen": "2026-07-10",
+   "anchor_status": "ANCHOR"
+  },
+  {
+   "rank": 2,
+   "symbol": "STLTECH",
+   "times_in_top25": 15,
+   "avg_gain_pct": 8.7,
+   "avg_value_cr": 254,
+   "last_seen": "2026-07-10",
+   "anchor_status": "ANCHOR"
+  },
+  {
+   "rank": 3,
+   "symbol": "RAMCOSYS",
+   "times_in_top25": 15,
+   "avg_gain_pct": 10.1,
+   "avg_value_cr": 459,
+   "last_seen": "2026-07-13",
+   "anchor_status": "GAP"
+  },
+  {
+   "rank": 4,
+   "symbol": "BALAMINES",
+   "times_in_top25": 14,
+   "avg_gain_pct": 8.6,
+   "avg_value_cr": 296,
+   "last_seen": "2026-07-09",
+   "anchor_status": "GAP"
+  },
+  {
+   "rank": 5,
+   "symbol": "KSHINTL",
+   "times_in_top25": 14,
+   "avg_gain_pct": 7.3,
+   "avg_value_cr": 57,
+   "last_seen": "2026-06-15",
+   "anchor_status": "ANCHOR"
+  },
+  {
+   "rank": 6,
+   "symbol": "AEQUS",
+   "times_in_top25": 14,
+   "avg_gain_pct": 8.5,
+   "avg_value_cr": 306,
+   "last_seen": "2026-07-08",
+   "anchor_status": "ANCHOR"
+  },
+  {
+   "rank": 7,
+   "symbol": "AEROFLEX",
+   "times_in_top25": 14,
+   "avg_gain_pct": 7.6,
+   "avg_value_cr": 251,
+   "last_seen": "2026-06-17",
+   "anchor_status": "inactive"
+  },
+  {
+   "rank": 8,
+   "symbol": "HFCL",
+   "times_in_top25": 13,
+   "avg_gain_pct": 7.0,
+   "avg_value_cr": 1132,
+   "last_seen": "2026-05-27",
+   "anchor_status": "ANCHOR"
+  },
+  {
+   "rank": 9,
+   "symbol": "SUVEN",
+   "times_in_top25": 13,
+   "avg_gain_pct": 9.3,
+   "avg_value_cr": 136,
+   "last_seen": "2026-07-10",
+   "anchor_status": "ANCHOR"
+  },
+  {
+   "rank": 10,
+   "symbol": "PARAS",
+   "times_in_top25": 13,
+   "avg_gain_pct": 8.2,
+   "avg_value_cr": 1003,
+   "last_seen": "2026-06-30",
+   "anchor_status": "inactive"
+  },
+  {
+   "rank": 11,
+   "symbol": "JNKINDIA",
+   "times_in_top25": 13,
+   "avg_gain_pct": 7.8,
+   "avg_value_cr": 126,
+   "last_seen": "2026-07-06",
+   "anchor_status": "GAP"
+  },
+  {
+   "rank": 12,
+   "symbol": "OLAELEC",
+   "times_in_top25": 13,
+   "avg_gain_pct": 8.7,
+   "avg_value_cr": 1399,
+   "last_seen": "2026-06-30",
+   "anchor_status": "ANCHOR"
+  },
+  {
+   "rank": 13,
+   "symbol": "APOLLO",
+   "times_in_top25": 12,
+   "avg_gain_pct": 8.8,
+   "avg_value_cr": 1440,
+   "last_seen": "2026-07-03",
+   "anchor_status": "inactive"
+  },
+  {
+   "rank": 14,
+   "symbol": "FORCEMOT",
+   "times_in_top25": 11,
+   "avg_gain_pct": 6.5,
+   "avg_value_cr": 504,
+   "last_seen": "2026-07-02",
+   "anchor_status": "ANCHOR"
+  },
+  {
+   "rank": 15,
+   "symbol": "IDEAFORGE",
+   "times_in_top25": 11,
+   "avg_gain_pct": 9.4,
+   "avg_value_cr": 402,
+   "last_seen": "2026-07-10",
+   "anchor_status": "ANCHOR"
+  },
+  {
+   "rank": 16,
+   "symbol": "THANGAMAYL",
+   "times_in_top25": 11,
+   "avg_gain_pct": 8.0,
+   "avg_value_cr": 236,
+   "last_seen": "2026-07-08",
+   "anchor_status": "ANCHOR"
+  },
+  {
+   "rank": 17,
+   "symbol": "BLUSPRING",
+   "times_in_top25": 11,
+   "avg_gain_pct": 9.0,
+   "avg_value_cr": 27,
+   "last_seen": "2026-07-10",
+   "anchor_status": "ANCHOR"
+  },
+  {
+   "rank": 18,
+   "symbol": "DATAPATTNS",
+   "times_in_top25": 11,
+   "avg_gain_pct": 7.0,
+   "avg_value_cr": 1031,
+   "last_seen": "2026-06-17",
+   "anchor_status": "inactive"
+  },
+  {
+   "rank": 19,
+   "symbol": "SKMEGGPROD",
+   "times_in_top25": 10,
+   "avg_gain_pct": 8.6,
+   "avg_value_cr": 77,
+   "last_seen": "2026-07-13",
+   "anchor_status": "GAP"
+  },
+  {
+   "rank": 20,
+   "symbol": "ATHERENERG",
+   "times_in_top25": 10,
+   "avg_gain_pct": 6.6,
+   "avg_value_cr": 1114,
+   "last_seen": "2026-07-08",
+   "anchor_status": "ANCHOR"
+  },
+  {
+   "rank": 21,
+   "symbol": "TARIL",
+   "times_in_top25": 10,
+   "avg_gain_pct": 7.9,
+   "avg_value_cr": 589,
+   "last_seen": "2026-06-30",
+   "anchor_status": "ANCHOR"
+  },
+  {
+   "rank": 22,
+   "symbol": "INA",
+   "times_in_top25": 10,
+   "avg_gain_pct": 7.7,
+   "avg_value_cr": 86,
+   "last_seen": "2026-07-09",
+   "anchor_status": "GAP"
+  },
+  {
+   "rank": 23,
+   "symbol": "DIACABS",
+   "times_in_top25": 10,
+   "avg_gain_pct": 6.8,
+   "avg_value_cr": 201,
+   "last_seen": "2026-07-06",
+   "anchor_status": "GAP"
+  },
+  {
+   "rank": 24,
+   "symbol": "SPECTRUM",
+   "times_in_top25": 10,
+   "avg_gain_pct": 7.5,
+   "avg_value_cr": 23,
+   "last_seen": "2026-07-06",
+   "anchor_status": "GAP"
+  },
+  {
+   "rank": 25,
+   "symbol": "JINDALPOLY",
+   "times_in_top25": 9,
+   "avg_gain_pct": 8.4,
+   "avg_value_cr": 130,
+   "last_seen": "2026-03-10",
+   "anchor_status": "inactive"
+  }
+ ],
+ "gaps": [
+  {
+   "symbol": "RAMCOSYS",
+   "times": 15,
+   "status": "GAP"
+  },
+  {
+   "symbol": "BALAMINES",
+   "times": 14,
+   "status": "GAP"
+  },
+  {
+   "symbol": "AEROFLEX",
+   "times": 14,
+   "status": "inactive"
+  },
+  {
+   "symbol": "PARAS",
+   "times": 13,
+   "status": "inactive"
+  },
+  {
+   "symbol": "JNKINDIA",
+   "times": 13,
+   "status": "GAP"
+  },
+  {
+   "symbol": "APOLLO",
+   "times": 12,
+   "status": "inactive"
+  },
+  {
+   "symbol": "DATAPATTNS",
+   "times": 11,
+   "status": "inactive"
+  },
+  {
+   "symbol": "SKMEGGPROD",
+   "times": 10,
+   "status": "GAP"
+  },
+  {
+   "symbol": "INA",
+   "times": 10,
+   "status": "GAP"
+  },
+  {
+   "symbol": "DIACABS",
+   "times": 10,
+   "status": "GAP"
+  },
+  {
+   "symbol": "SPECTRUM",
+   "times": 10,
+   "status": "GAP"
+  },
+  {
+   "symbol": "JINDALPOLY",
+   "times": 9,
+   "status": "inactive"
+  }
+ ]
+}

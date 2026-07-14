@@ -1,6 +1,6 @@
 ---
 name: validation
-description: Phase E of the india-stock-recommender pipeline. Sonnet sub-agent that runs cross-validation (negative news last 7d, US market status, industry trend, AI disruption/tailwind, gold check) and INDEPENDENTLY re-derives every chart-gate `computed_values` from raw OHLCV — must NOT read chart-gates prose. If validator's `nearest_unbroken_resistance` or Rule 46d evaluation differs from chart-gates → `chart_conflict: true`, default to FAIL (SCHNEIDER Jun 30 origin). Emits `phase_e_validated.json` and writes draft `out/<DATE>.txt` (Sections 1-4). Use when the india-stock-recommender agent enters Phase E, or when the user asks to "run validation", "double-check chart read for X", "verify final_recommendation gate".
+description: Phase E of the india-stock-recommender pipeline. Sonnet sub-agent that runs cross-validation (negative news last 7d, US market status, industry trend, AI disruption/tailwind, gold check) and INDEPENDENTLY re-derives every chart-gate `computed_values` from raw OHLCV — must NOT read chart-gates prose. If validator's `nearest_unbroken_resistance` or Rule 46d evaluation differs from chart-gates → `chart_conflict: true`, default to FAIL (SCHNEIDER Jun 30 origin). Emits `phase_e_validated.json` and writes draft `out/<DATE>.txt` as phase-wise blocks (PHASE A→E, tables inline in each block; PHASE F + STOCK SCRIPT + FINAL RUN RECAP appended later by audit-and-format). Use when the india-stock-recommender agent enters Phase E, or when the user asks to "run validation", "double-check chart read for X", "verify final_recommendation gate".
 allowed-tools: Read, Bash, Edit, Write, Grep, Glob, WebSearch, WebFetch
 ---
 
@@ -33,7 +33,7 @@ Pass the loaded config to every per-candidate Haiku shard as read-only input.
 
 **Sentinel:** `.cache/run/<DATE>/phase_e_done`
 **Inputs:** `.cache/run/<DATE>/phase_b_macro.json` + `.cache/run/<DATE>/phase_d_chart.json`
-**Outputs:** `.cache/run/<DATE>/phase_e_validated.json` + draft `out/<DATE>.txt` (Sections 1–4)
+**Outputs:** `.cache/run/<DATE>/phase_e_validated.json` + draft `out/<DATE>.txt` (phase-wise blocks PHASE A→E, tables inline; Phase F block + STOCK SCRIPT appended later by audit-and-format)
 
 ## Scoring pass-through (unified — see `scoring-model` skill)
 
@@ -81,19 +81,63 @@ Cap 90 s.
 
 `final_recommendation: true` requires ALL of: no negative news, industry not fading, no AI disruption risk, `chart_validation_pass: true`, `chart_conflict: false` (or resolved to FAIL).
 
-## Draft `out/<DATE>.txt` (Sections 1–4)
+## Draft `out/<DATE>.txt` — PHASE-WISE blocks (PHASE A → E), tables inline in each block
 
-- **Section 1: Trend Alert Report** — paste Phase B `trend_alert_report` verbatim.
-- **Section 2: Trade Parameters Table** — `final_recommendation: true` stocks only, confidence strictly >85; max 3 picks sorted by confidence desc then volume desc.
-  - **UT-RELAX-5:** publish threshold relaxes to ≥84 when STRONG_UP + all chart-gates PASS + T1/T2 catalyst.
-  - **Never reduce position size** — remove marginal picks entirely.
-  - **0-pick day is expected on most days.** Do not pad. Do not lower confidence to fit.
-  - 85% threshold applies universally (standard, large-cap trending, Pattern O, all combinations). Event-driven notes surface as watchlist only if below 85%.
-- **Section 3: Per-stock details** — ✅/❌ screening checklist, ✅/❌ patterns matched, validation status, P/E, RSI, last close, volume, market cap, potential gain %, 10-day ASCII sparkline.
-- **Section 4: Watchlist** — Phase C `watchlist_candidates` (78–85 conf) + Phase D `excluded_price_action`, each with machine-readable re-entry trigger.
-- **Section 5: Token cost placeholder** — `Phase F will fill in`.
+**The file mirrors the console contract exactly: one block per phase (A→F), and WITHIN each phase, rule-wise / data tables printed INLINE inside that block.** No section/step layout. Phase E writes blocks A→E; Phase F (audit-and-format) appends the PHASE F block + the standalone STOCK SCRIPT + FINAL RUN RECAP.
 
-### Trade Parameters Table format
+Header + Phases A–E are written here. Each phase block is delimited by a `━━━` rule and carries its full data table inline (never a bare count, never deferred to an appendix). Structure:
+
+```
+========================================================================
+INDIA STOCK RECOMMENDER — DAILY OUTPUT — <DATE> (session <SESSION>)
+Reporting format: phase-wise A->F + inline per-rule/data tables (ledger internal)
+========================================================================
+
+━━━ PHASE A — data-prep · <status> ━━━
+  <eval_universe, backfill, A.0 assertion, source split>
+  STOCKS CARRIED FORWARD (A -> B):  IN: n -> OUT: m   [+ one-word drop reasons]
+
+━━━ PHASE B — macro-scan · <status> ━━━
+  HARD_EXCLUDES / CAUTION / TAILWINDS / NEWS_CATALYSTS counts + AI_TAILWIND flag
+  MACRO TREND & DISRUPTION ALERT  ← paste Phase B `trend_alert_report` verbatim (was "Section 1")
+  STOCKS CARRIED FORWARD (B -> C):  IN: n -> OUT: m
+
+━━━ PHASE C — pattern-scan · <status> ━━━
+  eval_universe scanned / proceed_to_D / watchlist / watchlist_audit_pass
+  --- PER-RULE STOCK OUTPUT ---  (one INLINE sub-table per rule that fired)
+    > RULE RSI-REV — <triggered> -> <buy>/<rejected>    [full inline table: Symbol|RSI14|UT1|Rule77|Verdict|Reason|Entry|Target|EstGain]
+       => RSI-REV recommended: <n> (<symbols>)
+    > RULE RM-12 / RM-x — <n> triggered -> <n> proceed_to_D    [full inline table]
+    > RULE 80 / WPR — <carries> -> <fired>, <silent drops>   [full inline table]
+  STOCKS CARRIED FORWARD (C -> D):  IN: n -> OUT: m   [+ drop reasons]
+
+━━━ PHASE D — chart-gates · <status> ━━━
+  candidates_in / PASS / FAIL (+ fail histogram)
+  [full inline table: Symbol|Verdict|Fail reason]
+  STOCKS CARRIED FORWARD (D -> E):  IN: n -> OUT: m
+
+━━━ PHASE E — validation · <status> ━━━
+  final picks / publish threshold / UT-RELAX flag / ZERO-PICK marker if 0
+  TRADE PARAMETERS  (final_recommendation==true only, conf strictly >85, max 3)   [inline table]
+  PER-STOCK DETAIL  (screening ✅/❌, patterns, validation, P/E, RSI, close, vol, mktcap, gain%, 10-day sparkline)   [inline per pick]
+  WATCHLIST  (Phase C 78–85 conf + Phase D excluded_price_action + RSI-REV REVERSAL_PENDING carries, each w/ machine-readable re-entry trigger)   [inline table]
+  STOCKS CARRIED FORWARD (E -> F):  <picks> picks; <n> watchlist carried
+```
+
+**Content mapping from the old section layout (content unchanged, only relocated):**
+- Old *Section 1 (Trend Alert Report)* → PHASE B block, "MACRO TREND & DISRUPTION ALERT" (paste `trend_alert_report` verbatim).
+- Old *Section 2 (Trade Parameters Table)* → PHASE E block, "TRADE PARAMETERS" inline table.
+- Old *Section 3 (Per-stock details)* → PHASE E block, "PER-STOCK DETAIL" inline.
+- Old *Section 4 (Watchlist)* → PHASE E block, "WATCHLIST" inline table.
+- Old *Section 5 (token cost placeholder)* → removed here; Phase F emits it inside the PHASE F block.
+
+**Phase A/C/D block content:** Phase E does NOT recompute A/C/D metrics — read them from `phase_a_*.json` / `phase_c_candidates.json` / `phase_d_chart.json` and render each phase's block (with its inline table) verbatim from those JSONs, so the draft is a faithful phase-wise trace even though this skill runs at Phase E. If a prior-phase JSON is missing, render that block as `(cached — see console)` rather than omitting it.
+
+**Trade-params rules (unchanged):**
+- **UT-RELAX-5:** publish threshold relaxes to ≥84 when STRONG_UP + all chart-gates PASS + T1/T2 catalyst.
+- **Never reduce position size** — remove marginal picks entirely.
+- **0-pick day is expected on most days.** Do not pad. Do not lower confidence to fit. On a 0-pick day the PHASE E block shows `*** ZERO-PICK DAY ***` and the TRADE PARAMETERS table reads "(no rows — nothing cleared Phase D)".
+- 85% threshold applies universally (standard, large-cap trending, Pattern O, all combinations). Event-driven notes surface as watchlist only if below 85%.
 
 ```
 Rank │ Symbol │  Entry  │  Target  │  Stop   │ Conf │ Exit Date

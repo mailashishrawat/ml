@@ -5771,3 +5771,27 @@ one-off news spikes. No rule modification needed.
 ### MISSED MOVE LOG — 2026-07-06
 - AVG +7.3%: RSI 77.1, vol 1.85x — ≥5% mover with MOMENTUM_CONTINUATION class matched no RM-1..12 template
 - GCSL +6.6%: RSI 78.5, vol 2.30x — ≥5% mover with MOMENTUM_CONTINUATION class matched no RM-1..12 template
+
+## 2026-07-10 — Rule RSI-REV first live fire
+- Basket 43 names, 19 triggered RSI<=50. Reject-gate pass: 2 BUY (SCI RSI33.2 SIDEWAYS, MCX RSI46.0 SIDEWAYS), 17 REJECTED.
+- Reject breakdown: 13 RSI-REV_REJECT_DOWNTREND (strict 3-consecutive-LH Rule 77), 4 RSI-REV_REJECT_UT1_DOWN (ADVENZYMES/NMDC/GMDCLTD/NATIONALUM), 1 RSI-REV_REJECT_DISTRIBUTION (APARINDS).
+- BBOX correctly REJECTED (UT1=DOWN falling-knife) as expected. Rule protected against 17 falling knives.
+- CAVEAT: RSI-REV is REVIEW-status; 100% backtest win-rate is bull-year + selection-bias artifact. SCI/MCX capped 85, must clear chart-gates. Do not over-trust.
+- RM momentum names (KAYNES/SYRMA T1 conf88; INOXINDIA/KIRLOSENG/IIFL watchlist) all entered at/above 20dH — expect 46c R:R fail at Phase D (matches Jul 10 ledger note).
+
+## MISSED MOVE / RUN LOG — 2026-07-13 (T-0 intraday run)
+- Calendar note: 2026-07-11 = Saturday. Chartink `latest` resolved to T-0 = Jul 13 (market open ~10:39 IST). Settled stockparam base = Jul 10.
+- HESTERBIO +20% (rank 10, 78cr) — SIDEWAYS ut1, RSI 53 settled, dist52wH -5.3%. Not in any anchor group; single-session +20% climax → NEWS_PRICED_IN, not chased. Log as RM-10 candidate (biotech/vaccine catalyst suspected).
+- BFUTILITIE +15% / EPIGRAL +12.7% (DOWN ut1, RSI 32) — dead-cat/oversold bounces inside downtrends; correctly not proposed.
+- RSI-REV cross-up: BIOCON/JAYNECOIND/KEI all crossed RSI 50 up but REJECTED by Rule 77 confirmed-downtrend (SIDEWAYS ut1 but 3+ consec lower highs). Guardrails working — none silently dropped.
+- Strong RM-1 continuations at 52wH on volume: SFL, BFINVEST, FERMENTA, PICCADIL, SKMEGGPROD — all conf 92 but low R:R (at/near 52wH after up-day) → Phase D 46c/46d gate is load-bearing.
+
+## PATTERN VOTE LEDGER — HIT DATES 2026-07-13
+- Run type: T-0 intraday (Jul 11 = Saturday; Chartink latest = Jul 13). ZERO-PICK day.
+- Miss audit: 25 top movers → 0 MISS_ANALYZE (9 CORRECTLY_EXCLUDED, 4 CORRECTLY_WATCHLISTED, 12 NEWS_SHOCK_UNFLAGGABLE). Clean.
+- Rules upvoted: 46c (+2, blocked SKMEGGPROD R:R 0.11 + PICCADIL post-conflict R:R 0.45), 78 (+1, blocked SFL/BFINVEST/FERMENTA distribution days), UT-1 (+1), WPR (+1, 4 carries 0 drops).
+
+## IMPLEMENTATION FINDING — Phase D 52wH window bug (2026-07-13, PICCADIL origin)
+- Phase D chart-gates computed nearest_unbroken_resistance / 52wH using a **60-day OHLC window**, which found 678/783 for PICCADIL and wrongly treated Jul 13 close 711 as a FRESH 52w-HIGH → activated Rule 46d exemption → R:R 2.39 PASS.
+- Phase E validation (independent full-year raw-OHLC recompute) found TRUE 52wH = 805.5 (Sept 2025). PICCADIL at 711 is 11.7% BELOW its real 52wH → NOT a fresh-high breakout → 46d INVALID → nearest unbroken resistance 744 → R:R 0.45 → FAIL. chart_conflict=TRUE caught it (SCHNEIDER Jun-30-class save).
+- ACTION ITEM: chart-gates 52wH / nearest_unbroken_resistance MUST use a full 252-session (1yr) lookback, not 60 sessions. The config caching_lookback_sessions=60 is fine for MA/RSI but 52wH resistance needs 252. Propose config split: `phase_d.resistance_lookback_sessions: 252`. Validation's independent recompute is the load-bearing guardrail until fixed.

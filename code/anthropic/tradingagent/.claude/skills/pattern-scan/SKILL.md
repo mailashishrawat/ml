@@ -14,6 +14,7 @@ Sub-paths this skill reads (heavily used — this is the most config-dense phase
 - **Wall-time / fan-out**: `config.wall_time_budgets_min.phase_c` (6 min), `config.fan_out_shard_counts.phase_c_pattern_scan_shards` (6), `.phase_c_pattern_scan_shard_wall_time_sec` (90 s), `config.phase_c.eval_universe_fan_out_threshold` (20), `.max_proposed_candidates` (5), `.caching_lookback_sessions` (60)
 - **2.1 Recent movers**: `config.phase_c.recent_movers_threshold_pct` (5), `.recent_movers_lookback_sessions` (5), `.recent_movers_consecutive_sessions_threshold` (2), `.recent_mover_classification.*` (momentum_vol_ratio_min, momentum_rsi_max, news_priced_in_vol_ratio_min, news_priced_in_single_move_pct, news_priced_in_rsi_min, low_conviction_vol_ratio_max, momentum_climax_single_move_pct)
 - **2.3 RM templates**: `config.phase_c.template_base_conf.{RM-1..12, Pattern-K}`, `config.phase_c.template_cap.*`, and per-template gates `config.phase_c.rm1.*` through `.rm12.*` plus `.pattern_k.*`
+- **2.3b Rule RSI-REV**: `config.phase_c.rsi_reversion.*` — `basket` (43 symbols), `entry_mode` (cross_up_through_50), `buy_rsi_cross` (50), `sell_rsi_min` (65), `reject_gates`, `base_conf`, `conf_cap`, `tier`
 - **UT-1 uptrend detector**: `config.phase_c.ut1.*` (lookback, pivot windows, HH/HL thresholds, MA slope, sideways proximity)
 - **UT-RELAX 1..5**: `config.phase_c.ut_relax.gating_states`, `.relax_1.*`, `.relax_2.*`, `.relax_3.*`, `.relax_4.*`, `.relax_5.*`
 - **Rule 80 pre-breakout**: `config.phase_c.rule80.*`
@@ -57,6 +58,13 @@ Each Haiku shard, after classifying a symbol, populates the `evidence` dict (Sec
 9. Write sentinel `phase_c_done`.
 
 Return ≤5 stocks conf >85 (78–85 → watchlist candidates, not pipeline picks).
+
+**STOCKS CARRIED FORWARD line (mandatory in console output):**
+```
+STOCKS CARRIED FORWARD (C -> D):  IN: 146 -> OUT: 4  (KAYNES, SYRMA, SCI, MCX)
+  See disposition summary above for full 146-stock breakdown.
+```
+The disposition summary MUST be printed before this line so the reader can reconcile 146 → 4 without apparent mismatch.
 
 **Mandatory pre-picks retrospective:** find stocks that moved +8%+ in last 2 sessions NOT in prior recommendations; for each: identify present signals (RSI/vol/sector news/breakout/earnings/defense order/state-visit MoU), the blocking rule, log "MISSED MOVE" to `pattern_notes.md`.
 
@@ -117,7 +125,28 @@ Map to ONE template:
 | **RM-11: Consec Catalyst Continuation** | Two CONSECUTIVE ≥8% sessions + vol ≥2× on BOTH + RSI <85 + no intraday dist wick (close in upper 40% both). RSI cap: Day-1 vol ≥10× → cap 85; Day-1 vol 2–10× → cap 78. Overrides NEWS_PRICED_IN. NIACL Jun 18–19 validated. | 90 | Entry today on 1–2% dip |
 | **RM-12: Continuation Pullback in Uptrend** | Rule UT-1 `∈ {STRONG_UP, UP}` + 5–18% pullback from 20d high + close within 4% below rising MA20 + recovery close > prior intraday high + vol ≥0.8× median + RSI 35–72 + Rules 77/78/26f/46c-or-46d PASS. ATHER/GOCOLORS/ADANIENT archetypes. Aggressive-tier; ~35–40% FP rate accepted, chart-gates R:R is safety net. | 78 base | Entry today. Cap 85 (no cat) / 87 (T2) / 88 (T1) |
 
-Route all propose-templates (RM-1..8, 11, 12) to chart-gates. Chart-gates R:R ≥1.5 + >85% conf gates apply. Step 2.3 only ensures the candidate is seen.
+Route all propose-templates (RM-1..8, 11, 12) to chart-gates. Chart-gates R:R ≥`config.phase_d.gate_46c.rr_minimum_threshold` (1.2; uptrend 1.1) + >85% conf gates apply. Step 2.3 only ensures the candidate is seen.
+
+## 2.3b — Rule RSI-REV: RSI Mean-Reversion Buy (43-stock basket, 2026-07-10)
+
+**Runs for EVERY eval_universe symbol that is in `config.phase_c.rsi_reversion.basket` — independent of the ≥5% recent-mover filter** (a basket stock at RSI 48 with no recent move still fires this). This is the user-requested rule of 2026-07-10.
+
+For each basket symbol, read its latest TWO stockparam.csv rows (current + prior session):
+1. **Trigger (CROSS-UP through 50, `entry_mode: cross_up_through_50`):** if `prev_session.rsi_wilder_14 ≤ config.phase_c.rsi_reversion.buy_rsi_cross` (50) **AND** `current_session.rsi_wilder_14 > 50` → RSI just crossed up through 50 (the bounce is starting) → the symbol is **ALWAYS added to `candidates[]`** with `pattern: "RSI-REV"`, `tier: "aggressive_watchlist"`, `base_conf: 78` (cap 85). **A basket stock that has been sitting below 50 for days does NOT trigger** — only the single session RSI first pokes back above 50 fires it. A stock still ≤50 today does NOT trigger. **When a symbol triggers, adding it is unconditional** so the user can see it flow through.
+2. **Reject-gate pass (can only REJECT, never upgrade):** evaluate `config.phase_c.rsi_reversion.reject_gates` against the same slice:
+   - `rule_77_confirmed_downtrend` (3+LH ∧ 2+LL, UT-RELAX-4 threshold if in uptrend) → REJECT reason `RSI-REV_REJECT_DOWNTREND`
+   - `ut1_state_DOWN` (Rule UT-1 == DOWN) → REJECT reason `RSI-REV_REJECT_UT1_DOWN`
+   - `rule_26f_one_bar_climax` → REJECT `RSI-REV_REJECT_CLIMAX`
+   - `rule_78_distribution_day` → REJECT `RSI-REV_REJECT_DISTRIBUTION`
+   - `rule_79_BE_segment` → REJECT `RSI-REV_REJECT_BE`
+   If any gate fires: set `proceed_to_phase_d: false`, `rsi_rev_verdict: "REJECTED"`, populate `reject_reason`. The candidate STILL APPEARS in the output and in the STOCKS CARRIED FORWARD table with its reject reason — **never silently dropped** (agent §1b-STOCKS). If all gates PASS: `proceed_to_phase_d: true`, `rsi_rev_verdict: "BUY"`.
+   - **REVERSAL_PENDING carry (`config.phase_c.rsi_reversion.reversal_pending_watchlist`, 2026-07-13 user-requested):** a cross-up-through-50 rejected **only** by a *trend-not-yet-confirmed* gate — `reject_reason ∈ {RSI-REV_REJECT_DOWNTREND, RSI-REV_REJECT_UT1_DOWN}` (i.e. gate ∈ `reversal_pending_watchlist.trigger_gates`) — has already turned its RSI up; it is blocked purely because the trend has not confirmed. Do NOT drop it: set `watchlist_status: "REVERSAL_PENDING"`, `sessions_carried: 1` (or prior +1 if already carried), and **add it to `watchlist_candidates[]`** so it reaches the published WATCHLIST with a machine-checkable re-entry trigger (`Rule 77 clears — LH/LL below threshold — OR UT-1 flips to SIDEWAYS/UP, AND RSI still > 50`). Auto-drop when `sessions_carried > reversal_pending_watchlist.max_sessions_carried` (3) OR RSI closes back below `reversal_pending_watchlist.drop_rsi` (45) — the bounce failed. **Structural rejects — `RSI-REV_REJECT_CLIMAX / _DISTRIBUTION / _BE` — are NOT carried** (those signal the bounce itself is unsafe, not merely unconfirmed); they stay in the disposition table only.
+3. **Estimated target (RSI≥65 exit):** compute the approximate close at which `rsi_wilder_14` would reach `sell_rsi_min` (65). Estimate via the price gain needed to lift the 14-period Wilder RSI from current to 65 (use recent avg up/down moves from the slice, or an ATR-14 proxy). Report as `target_est` with `target_basis: "rsi65_estimate"` — flag it an estimate, not a hard resistance level. Entry = latest close; stop = min(MA5, recent swing low) or −8% floor, whichever tighter.
+4. **Evidence:** emit `rsi_rev: {rsi14, prev_rsi14, entry_mode: "cross_up_through_50", buy_cross: 50, sell_target_rsi: 65, ut1_state, rule77_verdict, target_est, gates: [{gate, verdict}]}`.
+
+**Emit an RSI-REV table** before main picks: `Symbol | RSI-14 | UT1 | Rule77 | Verdict(BUY/REJECTED) | Reject Reason | Watchlist(—/REVERSAL_PENDING) | Entry | Target_est | proceed_to_D`. List every basket symbol that triggered RSI≤50, whether BUY or REJECTED. Trend-only rejects show `REVERSAL_PENDING` in the Watchlist column and MUST also appear in `watchlist_candidates[]`.
+
+**Caveat (carry into rationale):** RSI-REV is REVIEW-status — its cross-up backtest win-rate (95.4%, 35-of-43 names perfect over 1yr; `config.phase_c.rsi_reversion._backtest_crossup`) is a bull-year + selection-bias artifact (basket chosen because it won in-sample). It is an aggressive-watchlist signal capped at 85, does not auto-publish above cap, and must clear chart-gates like any other candidate.
 
 Emit `RECENT MOVER PROPOSALS: Symbol | Move% (2d) | Template | Pattern Logic | Entry | Stop | Target | R:R | Conf | Proposed?` BEFORE main picks.
 
@@ -143,7 +172,7 @@ Emit `uptrend_state, hh_count, hl_count, ma20, ma50, ma200, ma20_slope_pct` per 
 
 RM-12 conf formula: base 78 +5 (STRONG_UP) +3/+2/0 (T1/T2/none catalyst) +2 (recovery vol ≥1.2× median) −5 (pullback >12%). Cap 85/87/88 (no/T2/T1).
 
-RM-12 hard gates (all PASS required): UT-1 STRONG_UP or UP; pullback depth 5–18%; close > MA20 −4%; recovery close > prior intraday high; recovery vol ≥0.8× 20d median; RSI 35–72; Rule 77, 78, sub-26f, 46c/d PASS; R:R ≥1.5.
+RM-12 hard gates (all PASS required): UT-1 STRONG_UP or UP; pullback depth 5–18%; close > MA20 −4%; recovery close > prior intraday high; recovery vol ≥0.8× 20d median; RSI 35–72; Rule 77, 78, sub-26f, 46c/d PASS; R:R ≥ `config.phase_d.gate_46c.rr_minimum_threshold_uptrend` (1.1, uptrend by definition).
 
 Emit `rm12_gates[]` with `computed_values, threshold, verdict` per gate.
 
@@ -151,7 +180,7 @@ Emit `rm12_gates[]` with `computed_values, threshold, verdict` per gate.
 
 **Gating condition:** fire ONLY when `uptrend_state ∈ {STRONG_UP, UP}`. DOWN/SIDEWAYS → standard rules, no relaxation. Basis: 97% of pipeline misses May 21–Jul 1 were in an uptrend (89/92).
 
-- **Relax-1 (R:R floor)** — 1.5:1 → **1.2:1** when uptrend AND recovery vol ≥1.2× median.
+- **Relax-1 (R:R floor)** — standard `ut_relax.relax_1.rr_floor_standard` (1.2) → **`rr_floor_relaxed` (1.1)** when uptrend AND recovery vol ≥1.2× median. (Both lowered 2026-07-14: 1.5→1.2 standard, 1.2→1.1 uptrend.)
 - **Relax-2 (RSI ceiling)** — STRONG_UP + MA20 slope ≥+0.5% + T-1 vol ≥1.5×: standard cap 80 → **84**; RM-1/RM-11 cap 85 → **87** (only when T-1 vol ≥3× median). RSI 80–84 no longer auto-FAIL; proceeds to chart-gates. If all other gates PASS but RSI in 80–84, capped at conf 84 (watchlist, not main pick unless ≥85%).
 - **Relax-3 (26e recency)** — Tier-A default 8/64 → **6/64** when uptrend AND ≥15/20 closes above MA50. Annual 40/252 unchanged. Tiers B/C unchanged.
 - **Relax-4 (Rule 77 downtrend gate)** — 3+LH ∧ 2+LL threshold → **4+LH ∧ 3+LL** in uptrend. Narrows to genuine reversals, not retracements.
@@ -259,12 +288,44 @@ Parent renders a fixed-shape summary block after this skill returns, using the J
 | Metrics: proceed_to_phase_d count | count of `candidates[?proceed_to_phase_d==true]` | int |
 | Metrics: watchlist_candidates count | `watchlist_candidates` (len) | int |
 | Metrics: watchlist_audit_pass | `watchlist_audit_pass` | bool |
+| **Disposition summary** | `disposition_summary` | object (see below) |
 | Table: 2.1 RECENT MOVERS (ALL ≥5% movers, no truncation) | `recent_movers_table[]` — rows `{symbol, session, move_pct, vol_vs_avg, rsi, classification, action}` (top-level array — NEW top-level export from shard aggregation) | array |
 | Table: Watchlist audit (ALL prior symbols, Rule 82) | `watchlist_audit_table[]` — rows `{symbol, original_zone, zone_state, sessions_carried, sessions_above_zone_high, sessions_below_zone_low, trigger_state, action}` (top-level — NEW) | array |
 | Table: Main candidates + templates + one-line rationale | `candidates[]` filtered `proceed_to_phase_d==true` | array |
 | Warnings: RM-10 misses | `rm10_misses[]` (add — NEW) | list |
 | Warnings: universe gaps | `universe_gaps[]` (add — NEW) | list |
 | Warnings: silent-drop errors | If `watchlist_audit_pass==false` → emit `watchlist_drop_errors[]` | list |
+
+**Disposition summary (mandatory — closes the stock-count gap):**
+
+Every stock in `eval_universe` must appear in exactly one bucket. Sum of all buckets must equal `stocks_scanned`. Emit as `disposition_summary` object AND render as a printed block in the Phase C console output immediately after the metrics line:
+
+```
+C · STOCK DISPOSITION (146 in → 146 accounted)
+  rsi_rev_triggered    :  19  (2 BUY → D, 17 rejected)
+  rm12_triggered       :   2  (2 → D)
+  wpr_carries          :   4  (0 fired, 4 carry)
+  recent_movers_no_tmpl:   8  (≥5% move, no template match — logged RM-10)
+  no_signal            : 113  (scanned, no template threshold cleared)
+  ─────────────────────────────
+  total                : 146  ✓
+```
+
+JSON shape:
+```json
+"disposition_summary": {
+  "total": 146,
+  "rsi_rev_triggered": {"count": 19, "buy": 2, "rejected": 17},
+  "rm12_triggered": {"count": 2, "proceed_to_d": 2},
+  "wpr_carries": {"count": 4, "fired": 0, "carry": 4},
+  "other_templates_triggered": {"count": 0, "by_template": {}},
+  "recent_movers_no_template": {"count": 8},
+  "no_signal": {"count": 113},
+  "checksum_ok": true
+}
+```
+
+`checksum_ok` = true when `rsi_rev_triggered.count + rm12_triggered.count + wpr_carries.count + other_templates_triggered.count + recent_movers_no_template.count + no_signal.count == total`. If false → emit `DISPOSITION_CHECKSUM_FAIL` warning before publishing.
 
 **On sentinel-resume:** parent reads `phase_c_candidates.json` and renders `(cached)` block from these arrays — skill JSON must be self-sufficient for reprinting.
 

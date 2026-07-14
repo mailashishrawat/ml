@@ -47,9 +47,9 @@ Pass the loaded config to every per-candidate Haiku shard as read-only input.
 For each candidate, filter `data/stockparam.csv` on `symbol == sym AND date >= T-60`. Verify ALL:
 
 - **A — No active downtrend** — no LH+LL over last 15–30 sessions. Fail: `FAIL_DOWNTREND`.
-- **B — Trend change confirmed** — ANY of: close above prior swing high in last 10 sessions; OR 10–15d sideways above support with no new lows; OR 2 HL + 1 HH on daily. Fail: `FAIL_NO_REVERSAL_CONFIRMED`.
 - **C — No distribution volume** — avg vol on last 5 down-days < 20d avg. Above-avg red-day vol = institutional selling. Fail: `FAIL_DISTRIBUTION_VOLUME`.
-- **D — Volatility floor** — same as Step 1 Rule f. Fail: `FAIL_LOW_VOLATILITY(count=N,available=M,need≥K)`.
+
+Gate B (trend change confirmed) and Gate D (volatility floor) removed — eval_universe is sourced from market movers where these are redundant.
 
 Fail → remove; list in `excluded_price_action` with re-entry watch level (e.g. "BEL: close above Rs 436"). Excluded → watchlist only.
 
@@ -61,7 +61,7 @@ No exceptions — including news catalysts, large-caps, Pattern S/LPI, force-inc
 
 | Rule | Trigger | Threshold / verdict |
 |---|---|---|
-| **Sub-26f** | Single session +10%+ then 1–2 flat/down sessions | vol <0.4× 20d avg → CLIMAX EXHAUSTION, FAIL |
+| **Sub-26f** | Single session ≥`gate_sub_26f.climax_single_session_pct` (25%) then 1–2 flat/down sessions | vol <`gate_sub_26f.vol_ratio_followon_max` (0.4)× 20d avg → CLIMAX EXHAUSTION, FAIL |
 | **46b** | 3+ consecutive closes with shrinking daily increment | vol <0.2× throughout → DECELERATING-STAIRCASE EXHAUSTION, FAIL |
 | **Range trajectory** (last 3 closes) | EXPANDING / STEADY / COMPRESSING | Compressing after extended move → confirm vol before PASS |
 | **Volume trajectory** (last 3 sessions) | RISING / FLAT / DRYING UP | Drying near target = no buyers. Exempt: conf >85% → flag, don't auto-FAIL |
@@ -70,27 +70,29 @@ No exceptions — including news catalysts, large-caps, Pattern S/LPI, force-inc
 | **77c (post-52wH cooldown, SCHNEIDER Jun 30)** | Recent peak = fresh 52wH AND peak_close ≥3% below intraday high | Require **3 stabilization sessions** before RM-4 qualifies. Stabilization = trading session (holidays/circuit-days don't count) AND close within ±2.0% of T-1 AND range <2× 20d avg range AND vol <1.5× 20d avg. V-bounce (+5%+) or capitulation (−3%−) does NOT qualify. Emit `session_classifications[]`. |
 | **78 (distribution day, STLTECH Jun 16)** | Peak day closed ≥5% below intraday high on vol ≥1.5× | BLOW-OFF/DISTRIBUTION. Cooldown ≥10 sessions OR new closing high above dist-day high on vol ≥1.5× |
 | **79 (BE segment)** | `series: "BE"` OR `-BE` suffix | Auto-block from picks + morning-alerts. Delivery-only, ≥T+5 |
-| **46c (R:R, HARD GATE)** | `nearest_unbroken_resistance` algorithm (below) | `(target_for_rr − entry) / (entry − stop) ≥ 1.5` else FAIL |
-| **46d (fresh-high breakout exemption)** | ALL 6 conditions (below) | Replace resistance with `measured_move_target = 52wH + (52wH − base_low)` (or 6% extension floor if base <8%) |
+| **46c (R:R, HARD GATE)** | `nearest_unbroken_resistance` algorithm (below) | `(target_for_rr − entry) / (entry − stop) ≥ gate_46c.rr_minimum_threshold` (1.2; uptrend floor `rr_minimum_threshold_uptrend` = 1.1) else FAIL |
+| **46d (fresh-high breakout exemption)** | ALL 6 conditions (below) | Replace resistance with `measured_move_target = 14wH + (14wH − base_low)` (or `measured_move_base_extension_pct` = 6% extension floor if base <`base_amplitude_min_pct` = 8%) |
 
 ### `nearest_unbroken_resistance` algorithm
 
-Filter `data/stockparam.csv` on `symbol == sym AND date >= T-60`. Candidates: (a) 52wH (max of `high` col over last 252 sessions); (b) prior swing highs where intraday `high` was followed within 3 sessions by `close ≥3% below` (failed peaks); (c) round-number levels (multiples of 50/100/500 within ±5% of current). Filter to candidates **above** current price. **Broken** = subsequent close ≥1.0% above on `vol_ratio_20d ≥ 1.5`; otherwise unbroken. `nearest_unbroken_resistance` = lowest unbroken candidate. If proposed target > this, auto-revise target down to it for R:R (optimistic target may appear as narrative "stretch target"). Emit `nearest_unbroken_resistance` + `resistance_source`.
+Filter `data/stockparam.csv` on `symbol == sym AND date >= T-config.phase_d.gate_46c.nearest_unbroken_resistance_lookback_sessions` (60). Candidates: (a) 52wH (max of `high` col over last `gate_46c.fifty_two_week_high_lookback_sessions` = 252 sessions); (b) prior swing highs where intraday `high` was followed within `gate_46c.resistance_prior_fail_within_sessions` (3) sessions by `close ≥ gate_46c.resistance_prior_fail_close_below_pct` (3%) below (failed peaks); (c) round-number levels (multiples of `gate_46c.resistance_round_number_multiples` = [50,100,500] within ±`gate_46c.resistance_round_number_window_pct` = 5% of current). Filter to candidates **above** current price. **Broken** = subsequent close ≥`gate_46c.resistance_broken_close_pct` (1.0%) above on `vol_ratio_20d ≥ gate_46c.resistance_broken_vol_ratio` (1.5); otherwise unbroken. `nearest_unbroken_resistance` = lowest unbroken candidate. If proposed target > this, auto-revise target down to it for R:R (optimistic target may appear as narrative "stretch target"). Emit `nearest_unbroken_resistance` + `resistance_source`. **All numeric thresholds authoritative in `config.phase_d.gate_46c` — never hard-code.**
 
 ### Rule 46d — 6-condition fresh-high breakout exemption
 
-52wH is NOT valid resistance when a stock is breaking out to fresh highs on catalyst volume. All 6 must hold on entry candle T-1:
+**Fresh-high basis = 14-week high (~70 sessions), lowered from 52wH on 2026-07-14 (user).** The 14-week high (`14wH` = max of `high` col over last `config.phase_d.gate_46d.fresh_high_lookback_sessions` = 70 sessions) is NOT valid resistance when a stock is breaking out to a fresh 14-week high on catalyst volume. All 6 must hold on entry candle T-1:
 
-1. T-1 close within 1.5% of 52wH (or above).
+1. T-1 close within `close_to_fresh_high_max_pct` (1.5%) of the **14-week high** (or above).
 2. T-1 volume ≥1.5× 20d median.
 3. T-1 intraday reversal <2% (i.e. close near high).
 4. Pattern ∈ {RM-1 running breakout, RM-11 Day-2, WPR-P1 FIRED this session}.
 5. Active T1/T2 catalyst via macro-scan NEWS-CAT (structural policy / regulatory / group-level — NOT generic sector).
 6. Rules 77, 77c, 78, 79, sub-26f, 46b ALL PASS.
 
-When ALL 6 hold: `measured_move_target = 52wH + (52wH − base_low)` where `base_low` = min of `close` col in 20 sessions PRIOR to breakout leg (= last session where price crossed above base mid-point). If base amplitude <8%, fall back to `52wH * 1.06` (6% extension floor). Emit `rule_46d_exemption_active: true`, `measured_move_target`, `base_low`, `base_amplitude_pct`. R:R computed against `measured_move_target` (not 52wH).
+When ALL 6 hold: `measured_move_target = 14wH + (14wH − base_low)` where `base_low` = min of `close` col in 20 sessions PRIOR to breakout leg (= last session where price crossed above base mid-point). If base amplitude <8%, fall back to `14wH * 1.06` (6% extension floor). Emit `rule_46d_exemption_active: true`, `fresh_high_basis: "14week"`, `measured_move_target`, `base_low`, `base_amplitude_pct`. R:R computed against `measured_move_target` (not the 14wH).
 
-Guardrail: 46d never overrides 77c. If 77c requires stabilization sessions and they're not met, 46d does not fire.
+**IMPORTANT — this is a loosening.** A 14-week-high breakout can still sit below unbroken supply from 4–12 months ago. 46d only exempts the *stock breaking a 14wH*; for every non-46d candidate, Rule 46c's `nearest_unbroken_resistance` (60-session lookback) is unchanged and still finds that older resistance. So the R:R discipline is not removed globally — it is bypassed only for genuine 14wH breakouts meeting all 6 conditions.
+
+Guardrail: 46d never overrides 77c, and **77c's post-52wH cooldown remains 52wH-based** (downside gates are never relaxed). If 77c requires stabilization sessions and they're not met, 46d does not fire.
 
 ### Output — machine-checkable evidence JSON (mandatory)
 
